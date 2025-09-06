@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xG Stats - DataGaffer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    .tabs {
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      padding: 12px 20px;
+      margin: 0 6px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ffffff;
+      color: #003f2e;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .tab-button.active {
+      background-color: #003f2e;
+      color: #ffffff;
+    }
+
+    table {
+      width: 100%;
+      max-width: 960px;
+      margin: auto;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #003f2e;
+      color: white;
+      font-size: 16px;
+    }
+
+    .team-logo {
+      width: 28px;
+      height: 28px;
+    }
+
+    .table-section {
+      display: none;
+    }
+
+    .table-section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="switchTable('xg')">Expected Goals</button>
+    <button class="tab-button" onclick="switchTable('corners')">Expected Corners</button>
+    <button class="tab-button" onclick="switchTable('shots')">Expected Shots</button>
+  </div>
+
+  <!-- xG Table -->
+  <div id="xg" class="table-section active">
+    <table>
+      <tr>
+        <th></th>
+        <th>Team</th>
+        <th>xG</th>
+        <th>Total</th>
+        <th>xG</th>
+        <th>Team</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><img src="chelsea-logo.png" class="team-logo" /></td>
+        <td>Chelsea</td>
+        <td>1.82</td>
+        <td>3.20</td>
+        <td>1.38</td>
+        <td>Arsenal</td>
+        <td><img src="arsenal-logo.png" class="team-logo" /></td>
+      </tr>
+      <!-- Add more rows here -->
+    </table>
+  </div>
+
+  <!-- Corners Table -->
+  <div id="corners" class="table-section">
+    <table>
+      <tr>
+        <th></th>
+        <th>Team</th>
+        <th>Corners</th>
+        <th>Total</th>
+        <th>Corners</th>
+        <th>Team</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><img src="chelsea-logo.png" class="team-logo" /></td>
+        <td>Chelsea</td>
+        <td>5.4</td>
+        <td>10.2</td>
+        <td>4.8</td>
+        <td>Arsenal</td>
+        <td><img src="arsenal-logo.png" class="team-logo" /></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Shots Table -->
+  <div id="shots" class="table-section">
+    <table>
+      <tr>
+        <th></th>
+        <th>Team</th>
+        <th>Shots</th>
+        <th>Total</th>
+        <th>Shots</th>
+        <th>Team</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><img src="chelsea-logo.png" class="team-logo" /></td>
+        <td>Chelsea</td>
+        <td>13.2</td>
+        <td>25.0</td>
+        <td>11.8</td>
+        <td>Arsenal</td>
+        <td><img src="arsenal-logo.png" class="team-logo" /></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    function switchTable(stat) {
+      document.querySelectorAll('.table-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
+      document.getElementById(stat).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
