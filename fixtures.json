@@ -1,1 +1,135 @@
-[]
+[
+  {
+    "home": {
+      "id": 1111,
+      "name": "Kosovo",
+      "logo": "https://media.api-sports.io/football/teams/1111.png",
+      "winner": null
+    },
+    "away": {
+      "id": 5,
+      "name": "Sweden",
+      "logo": "https://media.api-sports.io/football/teams/5.png",
+      "winner": null
+    },
+    "home_id": 1111,
+    "away_id": 5,
+    "home_logo": "https://media.api-sports.io/football/teams/1111.png",
+    "away_logo": "https://media.api-sports.io/football/teams/5.png",
+    "date": "2025-09-08T18:45:00+00:00"
+  },
+  {
+    "home": {
+      "id": 15,
+      "name": "Switzerland",
+      "logo": "https://media.api-sports.io/football/teams/15.png",
+      "winner": null
+    },
+    "away": {
+      "id": 1091,
+      "name": "Slovenia",
+      "logo": "https://media.api-sports.io/football/teams/1091.png",
+      "winner": null
+    },
+    "home_id": 15,
+    "away_id": 1091,
+    "home_logo": "https://media.api-sports.io/football/teams/15.png",
+    "away_logo": "https://media.api-sports.io/football/teams/1091.png",
+    "date": "2025-09-08T18:45:00+00:00"
+  },
+  {
+    "home": {
+      "id": 1100,
+      "name": "Belarus",
+      "logo": "https://media.api-sports.io/football/teams/1100.png",
+      "winner": null
+    },
+    "away": {
+      "id": 1108,
+      "name": "Scotland",
+      "logo": "https://media.api-sports.io/football/teams/1108.png",
+      "winner": null
+    },
+    "home_id": 1100,
+    "away_id": 1108,
+    "home_logo": "https://media.api-sports.io/football/teams/1100.png",
+    "away_logo": "https://media.api-sports.io/football/teams/1108.png",
+    "date": "2025-09-08T18:45:00+00:00"
+  },
+  {
+    "home": {
+      "id": 1093,
+      "name": "Gibraltar",
+      "logo": "https://media.api-sports.io/football/teams/1093.png",
+      "winner": null
+    },
+    "away": {
+      "id": 1098,
+      "name": "Faroe Islands",
+      "logo": "https://media.api-sports.io/football/teams/1098.png",
+      "winner": null
+    },
+    "home_id": 1093,
+    "away_id": 1098,
+    "home_logo": "https://media.api-sports.io/football/teams/1093.png",
+    "away_logo": "https://media.api-sports.io/football/teams/1098.png",
+    "date": "2025-09-08T18:45:00+00:00"
+  },
+  {
+    "home": {
+      "id": 1117,
+      "name": "Greece",
+      "logo": "https://media.api-sports.io/football/teams/1117.png",
+      "winner": null
+    },
+    "away": {
+      "id": 21,
+      "name": "Denmark",
+      "logo": "https://media.api-sports.io/football/teams/21.png",
+      "winner": null
+    },
+    "home_id": 1117,
+    "away_id": 21,
+    "home_logo": "https://media.api-sports.io/football/teams/1117.png",
+    "away_logo": "https://media.api-sports.io/football/teams/21.png",
+    "date": "2025-09-08T18:45:00+00:00"
+  },
+  {
+    "home": {
+      "id": 1116,
+      "name": "Israel",
+      "logo": "https://media.api-sports.io/football/teams/1116.png",
+      "winner": null
+    },
+    "away": {
+      "id": 768,
+      "name": "Italy",
+      "logo": "https://media.api-sports.io/football/teams/768.png",
+      "winner": null
+    },
+    "home_id": 1116,
+    "away_id": 768,
+    "home_logo": "https://media.api-sports.io/football/teams/1116.png",
+    "away_logo": "https://media.api-sports.io/football/teams/768.png",
+    "date": "2025-09-08T18:45:00+00:00"
+  },
+  {
+    "home": {
+      "id": 3,
+      "name": "Croatia",
+      "logo": "https://media.api-sports.io/football/teams/3.png",
+      "winner": null
+    },
+    "away": {
+      "id": 1109,
+      "name": "Montenegro",
+      "logo": "https://media.api-sports.io/football/teams/1109.png",
+      "winner": null
+    },
+    "home_id": 3,
+    "away_id": 1109,
+    "home_logo": "https://media.api-sports.io/football/teams/3.png",
+    "away_logo": "https://media.api-sports.io/football/teams/1109.png",
+    "date": "2025-09-08T18:45:00+00:00"
+  }
+]

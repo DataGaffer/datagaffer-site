@@ -1,0 +1,399 @@
+[
+  {
+    "id": 108,
+    "name": "Auxerre",
+    "logo": "https://media-4.api-sports.io/football/teams/108.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 81,
+    "name": "Marseille",
+    "logo": "https://media-4.api-sports.io/football/teams/81.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 91,
+    "name": "Monaco",
+    "logo": "https://media-4.api-sports.io/football/teams/91.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 112,
+    "name": "Metz",
+    "logo": "https://media-4.api-sports.io/football/teams/112.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 77,
+    "name": "Angers",
+    "logo": "https://media-4.api-sports.io/football/teams/77.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 83,
+    "name": "Nantes",
+    "logo": "https://media-4.api-sports.io/football/teams/83.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 106,
+    "name": "Stade Brestois 29",
+    "logo": "https://media-4.api-sports.io/football/teams/106.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 84,
+    "name": "Nice",
+    "logo": "https://media-4.api-sports.io/football/teams/84.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 111,
+    "name": "Le Havre",
+    "logo": "https://media-4.api-sports.io/football/teams/111.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 114,
+    "name": "Paris FC",
+    "logo": "https://media-4.api-sports.io/football/teams/114.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+{
+    "id": 85,
+    "name": "Paris Saint Germain",
+    "logo": "https://media-4.api-sports.io/football/teams/85.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 116,
+    "name": "Lens",
+    "logo": "https://media-4.api-sports.io/football/teams/116.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 79,
+    "name": "Lille",
+    "logo": "https://media-4.api-sports.io/football/teams/79.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 94,
+    "name": "Rennes",
+    "logo": "https://media-4.api-sports.io/football/teams/94.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 97,
+    "name": "Lorient",
+    "logo": "https://media-4.api-sports.io/football/teams/97.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 95,
+    "name": "Strasbourg",
+    "logo": "https://media-4.api-sports.io/football/teams/95.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 96,
+    "name": "Toulouse",
+    "logo": "https://media-4.api-sports.io/football/teams/96.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 80,
+    "name": "Lyon",
+    "logo": "https://media-4.api-sports.io/football/teams/80.png",
+    "league": "Ligue 1",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  }
+]
+

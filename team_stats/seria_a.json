@@ -1,0 +1,443 @@
+ [
+  {
+    "id": 489,
+    "name": "AC Milan",
+    "logo": "https://media-4.api-sports.io/football/teams/489.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 505,
+    "name": "Inter",
+    "logo": "https://media-4.api-sports.io/football/teams/505.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 497,
+    "name": "AS Roma",
+    "logo": "https://media-4.api-sports.io/football/teams/497.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 496,
+    "name": "Juventus",
+    "logo": "https://media-4.api-sports.io/football/teams/496.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 499,
+    "name": "Atalanta",
+    "logo": "https://media-4.api-sports.io/football/teams/499.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 487,
+    "name": "Lazio",
+    "logo": "https://media-4.api-sports.io/football/teams/487.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 500,
+    "name": "Bologna",
+    "logo": "https://media-4.api-sports.io/football/teams/500.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 867,
+    "name": "Lecce",
+    "logo": "https://media-4.api-sports.io/football/teams/867.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 490,
+    "name": "Cagliari",
+    "logo": "https://media-4.api-sports.io/football/teams/490.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 492,
+    "name": "Napoli",
+    "logo": "https://media-4.api-sports.io/football/teams/492.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+{
+    "id": 895,
+    "name": "Como",
+    "logo": "https://media-4.api-sports.io/football/teams/895.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 523,
+    "name": "Parma",
+    "logo": "https://media-4.api-sports.io/football/teams/523.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 520,
+    "name": "Cremonese",
+    "logo": "https://media-4.api-sports.io/football/teams/520.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 801,
+    "name": "Pisa",
+    "logo": "https://media-4.api-sports.io/football/teams/801.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 502,
+    "name": "Fiorentina",
+    "logo": "https://media-4.api-sports.io/football/teams/502.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 488,
+    "name": "Sassuolo",
+    "logo": "https://media-4.api-sports.io/football/teams/488.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 495,
+    "name": "Genoa",
+    "logo": "https://media-4.api-sports.io/football/teams/495.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 503,
+    "name": "Torino",
+    "logo": "https://media-4.api-sports.io/football/teams/503.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 504,
+    "name": "Verona",
+    "logo": "https://media-4.api-sports.io/football/teams/504.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  },
+  {
+    "id": 494,
+    "name": "Udinese",
+    "logo": "https://media-4.api-sports.io/football/teams/494.png",
+    "league": "Serie A",
+    "home": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    },
+    "away": {
+      "goals_for": 0,
+      "goals_against": 0,
+      "corners": 0,
+      "corners_against": 0,
+      "shots": 0,
+      "shots_against": 0
+    }
+  }
+]
+
