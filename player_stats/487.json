@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1454,
+    "name": "Matteo Guendouzi",
+    "position": "Midfielder",
+    "appearances": 50,
+    "minutes": 4326,
+    "goals": 2,
+    "assists": 5,
+    "shots": 37,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/1454.png",
+   "team_id": 487
+  },
+  
+  {
+    "id": 22015,
+    "name": "Boulaye Dia",
+    "position": "Attacker",
+    "appearances": 51,
+    "minutes": 2985,
+    "goals": 15,
+    "assists": 4,
+    "shots": 57,
+    "shots_on_target": 32,
+    "photo": "https://media.api-sports.io/football/players/22015.png",
+   "team_id": 487
+  },
+  {
+    "id": 30784,
+    "name": "Nicolo Rovella",
+    "position": "Midfielder",
+    "appearances": 46,
+    "minutes": 3576,
+    "goals": 1,
+    "assists": 5,
+    "shots": 34,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/30784.png",
+   "team_id": 487
+  },
+ 
+  {
+    "id": 30937,
+    "name": "Mattia Zaccagni",
+    "position": "Midfielder",
+    "appearances": 48,
+    "minutes": 3455,
+    "goals": 11,
+    "assists": 9,
+    "shots": 63,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/30937.png",
+   "team_id": 487
+  },
+  {
+    "id": 50856,
+    "name": "Valentin Castellanos",
+    "position": "Attacker",
+    "appearances": 42,
+    "minutes": 3228,
+    "goals": 15,
+    "assists": 7,
+    "shots": 138,
+    "shots_on_target": 49,
+    "photo": "https://media.api-sports.io/football/players/50856.png",
+   "team_id": 487
+  }
+ 
+]

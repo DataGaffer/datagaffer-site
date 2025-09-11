@@ -1,0 +1,45 @@
+[
+  {
+    "id": 47348,
+    "name": "Borja Iglesias",
+    "position": "Attacker",
+    "appearances": 43,
+    "minutes": 2213,
+    "goals": 12,
+    "assists": 3,
+    "shots": 50,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/47348.png",
+   "team_id": 538
+  },
+  
+  {
+    "id": 47445,
+    "name": "Iago Aspas",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2045,
+    "goals": 10,
+    "assists": 5,
+    "shots": 60,
+    "shots_on_target": 27,
+    "photo": "https://media.api-sports.io/football/players/47445.png",
+   "team_id": 538
+  },
+  
+  {
+    "id": 286639,
+    "name": "Bryan Zaragoza",
+    "position": "Attacker",
+    "appearances": 32,
+    "minutes": 1999,
+    "goals": 2,
+    "assists": 6,
+    "shots": 46,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/286639.png",
+   "team_id": 538
+  }
+  
+
+]

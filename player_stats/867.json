@@ -1,0 +1,30 @@
+[
+  
+  {
+    "id": 47182,
+    "name": "Tete Morente",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2295,
+    "goals": 3,
+    "assists": 2,
+    "shots": 45,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/47182.png",
+   "team_id": 867
+  },
+  
+  {
+    "id": 436260,
+    "name": "Francesco Camarda",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2080,
+    "goals": 7,
+    "assists": 3,
+    "shots": 50,
+    "shots_on_target": 15,
+    "photo": "https://media.api-sports.io/football/players/436260.png",
+   "team_id": 867
+  }
+]

@@ -1,0 +1,33 @@
+[
+  
+  {
+    "id": 31552,
+    "name": "I. Chochev",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 207,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/31552.png",
+   "team_id": 566
+  },
+ 
+  
+ 
+  {
+    "id": 279797,
+    "name": "Caio Vidal",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 180,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/279797.png",
+   "team_id": 566
+  }
+  
+]

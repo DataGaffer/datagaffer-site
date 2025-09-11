@@ -1,0 +1,28 @@
+[
+  {
+    "id": 39141,
+    "name": "Lasse Johnsen",
+    "position": "Midfielder",
+    "appearances": 18,
+    "minutes": 1201,
+    "goals": 3,
+    "assists": 1,
+    "shots": 9,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/39141.png",
+   "team_id": 375
+  },
+  {
+    "id": 306955,
+    "name": "Otto Rosengren",
+    "position": "Midfielder",
+    "appearances": 19,
+    "minutes": 1226,
+    "goals": 0,
+    "assists": 4,
+    "shots": 12,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/306955.png",
+   "team_id": 375
+  }
+]

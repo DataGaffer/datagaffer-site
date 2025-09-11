@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1672,
+    "name": "Danel Sinani",
+    "position": "Attacker",
+    "appearances": 30,
+    "minutes": 1585,
+    "goals": 3,
+    "assists": 2,
+    "shots": 49,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/1672.png",
+   "team_id": 186
+  },
+  
+  {
+    "id": 8486,
+    "name": "Eric Smith",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 3331,
+    "goals": 3,
+    "assists": 1,
+    "shots": 26,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/8486.png",
+   "team_id": 186
+  },
+  
+  {
+    "id": 20780,
+    "name": "Mathias Pereira Lage",
+    "position": "Midfielder",
+    "appearances": 45,
+    "minutes": 2502,
+    "goals": 4,
+    "assists": 9,
+    "shots": 64,
+    "shots_on_target": 28,
+    "photo": "https://media.api-sports.io/football/players/20780.png",
+   "team_id": 186
+  },
+  
+  {
+    "id": 146586,
+    "name": "Joel Fujita",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 3242,
+    "goals": 1,
+    "assists": 5,
+    "shots": 26,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/146586.png",
+   "team_id": 186
+  },
+  {
+    "id": 178921,
+    "name": "Andreas Hountondji",
+    "position": "Attacker",
+    "appearances": 31,
+    "minutes": 1388,
+    "goals": 6,
+    "assists": 1,
+    "shots": 43,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/178921.png",
+   "team_id": 186
+  }
+  
+]

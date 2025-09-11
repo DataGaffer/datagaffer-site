@@ -1,0 +1,57 @@
+[
+  {
+    "id": 725,
+    "name": "Robin Hack",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 2478,
+    "goals": 6,
+    "assists": 7,
+    "shots": 70,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/725.png",
+   "team_id": 163
+  },
+  {
+    "id": 20784,
+    "name": "Franck Honorat",
+    "position": "Midfielder",
+    "appearances": 24,
+    "minutes": 1886,
+    "goals": 5,
+    "assists": 8,
+    "shots": 41,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/20784.png",
+   "team_id": 163
+  },
+ 
+  {
+    "id": 25461,
+    "name": "Kevin Stoger",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 1968,
+    "goals": 3,
+    "assists": 6,
+    "shots": 36,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/25461.png",
+   "team_id": 163
+  },
+
+  {
+    "id": 203007,
+    "name": "Rocco Reitz",
+    "position": "Midfielder",
+    "appearances": 31,
+    "minutes": 2176,
+    "goals": 4,
+    "assists": 2,
+    "shots": 24,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/203007.png",
+   "team_id": 163
+  }
+  
+]

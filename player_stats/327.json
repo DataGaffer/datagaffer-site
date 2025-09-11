@@ -1,0 +1,69 @@
+[
+  {
+    "id": 39064,
+    "name": "Patrick Berg",
+    "position": "Midfielder",
+    "appearances": 19,
+    "minutes": 1483,
+    "goals": 2,
+    "assists": 8,
+    "shots": 38,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/39064.png",
+   "team_id": 327
+  },
+  {
+    "id": 39065,
+    "name": "Hakon Evjen",
+    "position": "Midfielder",
+    "appearances": 21,
+    "minutes": 1663,
+    "goals": 2,
+    "assists": 3,
+    "shots": 28,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/39065.png",
+   "team_id": 327
+  },
+  {
+    "id": 39069,
+    "name": "Ulrik Saltnes",
+    "position": "Midfielder",
+    "appearances": 20,
+    "minutes": 1536,
+    "goals": 7,
+    "assists": 4,
+    "shots": 38,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/39069.png",
+   "team_id": 327
+  },
+
+  {
+    "id": 15704,
+    "name": "Kasper Hogh",
+    "position": "Attacker",
+    "appearances": 21,
+    "minutes": 1563,
+    "goals": 16,
+    "assists": 5,
+    "shots": 60,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/39069.png",
+   "team_id": 327
+  },
+
+  {
+    "id": 39073,
+    "name": "Jens Hauge",
+    "position": "Midfielder",
+    "appearances": 20,
+    "minutes": 1558,
+    "goals": 4,
+    "assists": 2,
+    "shots": 39,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/39073.png",
+   "team_id": 327
+  }
+]

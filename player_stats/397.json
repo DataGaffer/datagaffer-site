@@ -1,0 +1,71 @@
+[
+  
+  {
+    "id": 161790,
+    "name": "Aral Simsir",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 397,
+    "goals": 3,
+    "assists": 4,
+    "shots": 9,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/161790.png",
+   "team_id": 397
+  },
+  {
+    "id": 307117,
+    "name": "Dario Osorio",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 469,
+    "goals": 3,
+    "assists": 2,
+    "shots": 19,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/307117.png",
+   "team_id": 397
+  },
+ 
+  {
+    "id": 338045,
+    "name": "Denil Castillo",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 382,
+    "goals": 2,
+    "assists": 2,
+    "shots": 6,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/338045.png",
+   "team_id": 397
+  },
+  {
+    "id": 340625,
+    "name": "Franculino Dju",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 523,
+    "goals": 8,
+    "assists": 3,
+    "shots": 16,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/340625.png",
+   "team_id": 397
+  },
+  
+  {
+    "id": 371909,
+    "name": "Valdemar Byskov",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 153,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/371909.png",
+   "team_id": 397
+  }
+  
+]

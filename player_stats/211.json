@@ -1,0 +1,85 @@
+[
+  
+
+  {
+    "id": 25918,
+    "name": "L. Barreiro",
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 564,
+    "goals": 2,
+    "assists": 2,
+    "shots": 6,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/25918.png",
+   "team_id": 211
+  },
+  {
+    "id": 36798,
+    "name": "V. Pavlidis",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 852,
+    "goals": 2,
+    "assists": 1,
+    "shots": 15,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/36798.png",
+   "team_id": 211
+  },
+  
+  {
+    "id": 39043,
+    "name": "F. Aursnes",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 636,
+    "goals": 2,
+    "assists": 2,
+    "shots": 3,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/39043.png",
+   "team_id": 211
+  },
+  
+  {
+    "id": 195104,
+    "name": "R. Rios",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 621,
+    "goals": 0,
+    "assists": 0,
+    "shots": 10,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/195104.png",
+   "team_id": 211
+  },
+  {
+    "id": 202951,
+    "name": "F. Ivanovic",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 419,
+    "goals": 2,
+    "assists": 0,
+    "shots": 11,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/202951.png",
+   "team_id": 211
+  },
+  {
+    "id": 301528,
+    "name": "A. Schjelderup",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 481,
+    "goals": 3,
+    "assists": 2,
+    "shots": 6,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/301528.png",
+   "team_id": 211
+  }
+  
+]

@@ -1,0 +1,69 @@
+[
+  {
+    "id": 83,
+    "name": "Arnaut Danjuma",
+    "position": "Attacker",
+    "appearances": 40,
+    "minutes": 2240,
+    "goals": 6,
+    "assists": 2,
+    "shots": 57,
+    "shots_on_target": 22,
+    "photo": "https://media.api-sports.io/football/players/83.png",
+   "team_id": 532
+  },
+  
+  {
+    "id": 46933,
+    "name": "Luis Rioja",
+    "position": "Attacker",
+    "appearances": 42,
+    "minutes": 3148,
+    "goals": 5,
+    "assists": 4,
+    "shots": 32,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/46933.png",
+   "team_id": 532
+  },
+  {
+    "id": 47264,
+    "name": "Hugo Duro",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2399,
+    "goals": 12,
+    "assists": 2,
+    "shots": 55,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/47264.png",
+   "team_id": 532
+  },
+  
+  {
+    "id": 162127,
+    "name": "Diego Lopez",
+    "position": "Attacker",
+    "appearances": 44,
+    "minutes": 3140,
+    "goals": 10,
+    "assists": 6,
+    "shots": 50,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/162127.png",
+   "team_id": 532
+  },
+  {
+    "id": 315699,
+    "name": "Javi Guerra",
+    "position": "Midfielder",
+    "appearances": 41,
+    "minutes": 2875,
+    "goals": 3,
+    "assists": 4,
+    "shots": 49,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/315699.png",
+   "team_id": 532
+  }
+]

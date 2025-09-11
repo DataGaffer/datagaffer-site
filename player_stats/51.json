@@ -1,0 +1,72 @@
+[
+  {
+    "id": 328225,
+    "name": "Brajan Gruda",
+    "position": "Midfielder",
+    "appearances": 25,
+    "minutes": 841,
+    "goals": 3,
+    "assists": 5,
+    "shots": 18,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/328225.png",
+   "team_id": 51
+  },
+  
+
+  {
+    "id": 1469,
+    "name": "Danny Welbeck",
+    "position": "Attacker",
+    "appearances": 30,
+    "minutes": 2115,
+    "goals": 10,
+    "assists": 4,
+    "shots": 59,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/1469.png",
+   "team_id": 51
+  },
+
+  {
+    "id": 106835,
+    "name": "Kaoru Mitoma",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 2603,
+    "goals": 10,
+    "assists": 6,
+    "shots": 57,
+    "shots_on_target": 27,
+    "photo": "https://media.api-sports.io/football/players/106835.png",
+   "team_id": 51
+  },
+
+  {
+    "id": 383685,
+    "name": "Yankuba Minteh",
+    "position": "Attacker",
+    "appearances": 32,
+    "minutes": 1838,
+    "goals": 6,
+    "assists": 4,
+    "shots": 34,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/383685.png",
+   "team_id": 51
+  },
+
+  {
+    "id": 90590,
+    "name": "Georginio Rutter",
+    "position": "Attacker",
+    "appearances": 28,
+    "minutes": 1656,
+    "goals": 5,
+    "assists": 3,
+    "shots": 50,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/90590.png",
+   "team_id": 51
+  }
+]

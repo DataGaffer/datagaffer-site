@@ -1,0 +1,70 @@
+[
+  
+  {
+    "id": 8764,
+    "name": "Dylan Mbayo",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2400,
+    "goals": 4,
+    "assists": 9,
+    "shots": 31,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/8764.png",
+   "team_id": 193
+  },
+  
+  {
+    "id": 37647,
+    "name": "Kaj de Rooij",
+    "position": "Attacker",
+    "appearances": 25,
+    "minutes": 651,
+    "goals": 2,
+    "assists": 3,
+    "shots": 10,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/37647.png",
+   "team_id": 193
+  },
+  {
+    "id": 38780,
+    "name": "Koen Kostons",
+    "position": "Attacker",
+    "appearances": 31,
+    "minutes": 1558,
+    "goals": 5,
+    "assists": 1,
+    "shots": 27,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/38780.png",
+   "team_id": 193
+  },
+  {
+    "id": 38822,
+    "name": "Thijs Oosting",
+    "position": "Midfielder",
+    "appearances": 27,
+    "minutes": 1189,
+    "goals": 5,
+    "assists": 1,
+    "shots": 25,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/38822.png",
+   "team_id": 193
+  },
+  {
+    "id": 50745,
+    "name": "Jamiro Monteiro",
+    "position": "Midfielder",
+    "appearances": 32,
+    "minutes": 2302,
+    "goals": 3,
+    "assists": 2,
+    "shots": 24,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/50745.png",
+   "team_id": 193
+  }
+  
+]

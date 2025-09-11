@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1552,
+    "name": "A. Zoubir",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 174,
+    "goals": 1,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/1552.png",
+   "team_id": 556
+  },
+  
+  {
+    "id": 134320,
+    "name": "Leandro Andrade",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 127,
+    "goals": 1,
+    "assists": 2,
+    "shots": 1,
+    "shots_on_target": 1,
+    "photo": "https://media.api-sports.io/football/players/134320.png",
+   "team_id": 556
+  },
+  
+  {
+    "id": 375811,
+    "name": "N. Axundzade",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 171,
+    "goals": 1,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 1,
+    "photo": "https://media.api-sports.io/football/players/375811.png",
+   "team_id": 556
+  }
+]

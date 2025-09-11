@@ -1,0 +1,56 @@
+[
+
+  
+  {
+    "id": 349799,
+    "name": "Eliezer Mayenda",
+    "position": "Attacker",
+    "appearances": 44,
+    "minutes": 2768,
+    "goals": 11,
+    "assists": 5,
+    "shots": 68,
+    "shots_on_target": 32,
+    "photo": "https://media.api-sports.io/football/players/349799.png",
+   "team_id": 746
+  },
+   {
+    "id": 336659,
+    "name": "Chemsdine Talbi",
+    "position": "Attacker",
+    "appearances": 46,
+    "minutes": 2184,
+    "goals": 7,
+    "assists": 6,
+    "shots": 50,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/336659.png",
+   "team_id": 746
+  },
+  {
+    "id": 301771,
+    "name": "Simon Adingra",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 1629,
+    "goals": 5,
+    "assists": 2,
+    "shots": 42,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/301771.png",
+   "team_id": 746
+  },
+  {
+    "id": 1464,
+    "name": "Granit Xhaka",
+    "position": "Attacker",
+    "appearances": 52,
+    "minutes": 4456,
+    "goals": 2,
+    "assists": 8,
+    "shots": 38,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/1464.png",
+   "team_id": 746
+  }
+] 

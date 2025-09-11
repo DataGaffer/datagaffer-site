@@ -1,0 +1,43 @@
+[
+  {
+    "id": 875,
+    "name": "Paulo Dybala",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2182,
+    "goals": 8,
+    "assists": 4,
+    "shots": 83,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/875.png",
+   "team_id": 497
+  },
+  
+  {
+    "id": 22147,
+    "name": "Manu Kone",
+    "position": "Midfielder",
+    "appearances": 48,
+    "minutes": 3630,
+    "goals": 2,
+    "assists": 3,
+    "shots": 41,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/22147.png",
+   "team_id": 497
+  },
+  {
+    "id": 129643,
+    "name": "Evan Ferguson",
+    "position": "Attacker",
+    "appearances": 30,
+    "minutes": 1723,
+    "goals": 11,
+    "assists": 5,
+    "shots": 56,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/129643.png",
+   "team_id": 497
+  }
+  
+]

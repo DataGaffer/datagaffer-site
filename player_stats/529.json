@@ -1,0 +1,109 @@
+[
+  
+  {
+    "id": 909,
+    "name": "Marcus Rashford",
+    "position": "Attacker",
+    "appearances": 44,
+    "minutes": 2535,
+    "goals": 11,
+    "assists": 8,
+    "shots": 74,
+    "shots_on_target": 33,
+    "photo": "https://media.api-sports.io/football/players/909.png",
+   "team_id": 529
+  },
+  {
+    "id": 931,
+    "name": "Ferran Torres",
+    "position": "Attacker",
+    "appearances": 48,
+    "minutes": 2167,
+    "goals": 21,
+    "assists": 7,
+    "shots": 82,
+    "shots_on_target": 40,
+    "photo": "https://media.api-sports.io/football/players/931.png",
+   "team_id": 529
+  },
+  {
+    "id": 1323,
+    "name": "Dani Olmo",
+    "position": "Midfielder",
+    "appearances": 42,
+    "minutes": 2097,
+    "goals": 12,
+    "assists": 6,
+    "shots": 77,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/1323.png",
+   "team_id": 529
+  },
+  {
+    "id": 1496,
+    "name": "Raphinha",
+    "position": "Attacker",
+    "appearances": 60,
+    "minutes": 4890,
+    "goals": 35,
+    "assists": 23,
+    "shots": 202,
+    "shots_on_target": 79,
+    "photo": "https://media.api-sports.io/football/players/1496.png",
+   "team_id": 529
+  },
+  {
+    "id": 133609,
+    "name": "Pedri",
+    "position": "Midfielder",
+    "appearances": 62,
+    "minutes": 4914,
+    "goals": 7,
+    "assists": 8,
+    "shots": 44,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/133609.png",
+   "team_id": 529
+  },
+  
+  {
+    "id": 340626,
+    "name": "Fermin",
+    "position": "Midfielder",
+    "appearances": 48,
+    "minutes": 2121,
+    "goals": 8,
+    "assists": 9,
+    "shots": 64,
+    "shots_on_target": 27,
+    "photo": "https://media.api-sports.io/football/players/340626.png",
+   "team_id": 529
+  },
+  {
+    "id": 386828,
+    "name": "Lamine Yamal",
+    "position": "Attacker",
+    "appearances": 58,
+    "minutes": 4818,
+    "goals": 20,
+    "assists": 23,
+    "shots": 242,
+    "shots_on_target": 91,
+    "photo": "https://media.api-sports.io/football/players/386828.png",
+   "team_id": 529
+  },
+
+   {
+    "id": 521,
+    "name": "Robert Lewandsowski",
+    "position": "Attacker",
+    "appearances": 54,
+    "minutes": 3953,
+    "goals": 42,
+    "assists": 3,
+    "shots": 157,
+    "shots_on_target": 71,
+    "photo": "https://media.api-sports.io/football/players/521.png",
+   "team_id": 529
+  }
+]

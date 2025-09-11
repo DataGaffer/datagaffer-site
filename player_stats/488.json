@@ -1,0 +1,44 @@
+[
+  {
+    "id": 2215,
+    "name": "Armand Lauriente",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 2684,
+    "goals": 14,
+    "assists": 3,
+    "shots": 64,
+    "shots_on_target": 35,
+    "photo": "https://media.api-sports.io/football/players/2215.png",
+   "team_id": 488
+  },
+  {
+    "id": 30537,
+    "name": "Domenico Berardi",
+    "position": "Attacker",
+    "appearances": 32,
+    "minutes": 2521,
+    "goals": 7,
+    "assists": 14,
+    "shots": 76,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/30537.png",
+   "team_id": 488
+  },
+  
+  {
+    "id": 31094,
+    "name": "Andrea Pinamonti",
+    "position": "Attacker",
+    "appearances": 40,
+    "minutes": 3150,
+    "goals": 12,
+    "assists": 1,
+    "shots": 90,
+    "shots_on_target": 36,
+    "photo": "https://media.api-sports.io/football/players/31094.png",
+   "team_id": 488
+  }
+  
+  
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 19461,
+    "name": "Lukas Nmecha",
+    "position": "Attacker",
+    "appearances": 24,
+    "minutes": 662,
+    "goals": 4,
+    "assists": 0.50,
+    "shots": 26,
+    "shots_on_target": 11,
+     "photo": "https://media.api-sports.io/football/players/19461.png",
+   "team_id": 63
+  },
+  {
+    "id": 162128,
+    "name": "Wilfried Gnonto",
+    "position": "Attacker",
+    "appearances": 49,
+    "minutes": 2641,
+    "goals": 9,
+    "assists": 7,
+    "shots": 93,
+    "shots_on_target": 31,
+     "photo": "https://media.api-sports.io/football/players/162128.png",
+   "team_id": 63
+  },
+  {
+    "id": 19329,
+    "name": "Daniel James",
+    "position": "Midfielder",
+    "appearances": 41,
+    "minutes": 2925,
+    "goals": 12,
+    "assists": 9,
+    "shots": 61,
+    "shots_on_target": 21,
+     "photo": "https://media.api-sports.io/football/players/19329.png",
+   "team_id": 63
+  },
+  
+ {
+    "id": 250,
+    "name": "Joel Piroe",
+    "position": "Attacker",
+    "appearances": 51,
+    "minutes": 3429,
+    "goals": 12,
+    "assists": 4,
+    "shots": 58,
+    "shots_on_target": 19,
+     "photo": "https://media.api-sports.io/football/players/250.png",
+   "team_id": 63
+  }
+  
+
+]

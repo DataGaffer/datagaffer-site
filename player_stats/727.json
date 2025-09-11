@@ -1,0 +1,32 @@
+[
+
+  {
+    "id": 46746,
+    "name": "Ante Budimir",
+    "position": "Attacker",
+    "appearances": 45,
+    "minutes": 3518,
+    "goals": 25,
+    "assists": 4,
+    "shots": 117,
+    "shots_on_target": 50,
+    "photo": "https://media.api-sports.io/football/players/46746.png",
+   "team_id": 727
+  },
+
+  {
+    "id": 67939,
+    "name": "Aimar Oroz",
+    "position": "Midfielder",
+    "appearances": 44,
+    "minutes": 3497,
+    "goals": 6,
+    "assists": 4,
+    "shots": 57,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/67939.png",
+   "team_id": 727
+  }
+  
+  
+]

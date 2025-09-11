@@ -1,0 +1,96 @@
+[
+  {
+    "id": 153,
+    "name": "Ousmane Demebele",
+    "position": "Attacker",
+    "appearances": 57,
+    "minutes": 3752,
+    "goals": 37,
+    "assists": 16,
+    "shots": 206,
+    "shots_on_target": 93,
+    "photo": "https://media.api-sports.io/football/players/153.png",
+   "team_id": 85
+  },
+  {
+    "id": 328,
+    "name": "Fabian Ruiz",
+    "position": "Midfielder",
+    "appearances": 65,
+    "minutes": 4233,
+    "goals": 9,
+    "assists": 12,
+    "shots": 76,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/328.png",
+   "team_id": 85
+  },
+  {
+    "id": 483,
+    "name": "K. Kvaratskhelia",
+    "position": "Attacker",
+    "appearances": 54,
+    "minutes": 3714,
+    "goals": 13,
+    "assists": 10,
+    "shots": 150,
+    "shots_on_target": 55,
+    "photo": "https://media.api-sports.io/football/players/483.png",
+   "team_id": 85
+  },
+  
+  {
+    "id": 41585,
+    "name": "Goncalo Ramos",
+    "position": "Attacker",
+    "appearances": 50,
+    "minutes": 1859,
+    "goals": 20,
+    "assists": 6,
+    "shots": 94,
+    "shots_on_target": 53,
+    "photo": "https://media.api-sports.io/football/players/41585.png",
+   "team_id": 85
+  },
+  {
+    "id": 128384,
+    "name": "Vitinha",
+    "position": "Midfielder",
+    "appearances": 63,
+    "minutes": 4836,
+    "goals": 9,
+    "assists": 4,
+    "shots": 70,
+    "shots_on_target": 27,
+    "photo": "https://media.api-sports.io/football/players/128384.png",
+   "team_id": 85
+  },
+  {
+    "id": 161904,
+    "name": "Bradley Barcola",
+    "position": "Attacker",
+    "appearances": 68,
+    "minutes": 4224,
+    "goals": 22,
+    "assists": 20,
+    "shots": 129,
+    "shots_on_target": 64,
+    "photo": "https://media.api-sports.io/football/players/161904.png",
+   "team_id": 85
+  },
+  
+  {
+    "id": 343027,
+    "name": "Desire Doue",
+    "position": "Attacker",
+    "appearances": 65,
+    "minutes": 3811,
+    "goals": 16,
+    "assists": 14,
+    "shots": 135,
+    "shots_on_target": 53,
+    "photo": "https://media.api-sports.io/football/players/343027.png",
+   "team_id": 85
+  }
+  
+]

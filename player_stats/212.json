@@ -1,0 +1,86 @@
+[
+  {
+    "id": 246,
+    "name": "Luuk de Jong",
+    "position": "Attacker",
+    "appearances": 51,
+    "minutes": 3928,
+    "goals": 19,
+    "assists": 12,
+    "shots": 138,
+    "shots_on_target": 46,
+    "photo": "https://media.api-sports.io/football/players/246.png",
+   "team_id": 212
+  },
+ 
+
+  {
+    "id": 133453,
+    "name": "Borja Sainz",
+    "position": "Attacker",
+    "appearances": 47,
+    "minutes": 3987,
+    "goals": 21,
+    "assists": 5,
+    "shots": 129,
+    "shots_on_target": 57,
+    "photo": "https://media.api-sports.io/football/players/133453.png",
+   "team_id": 212
+  },
+
+  {
+    "id": 358628,
+    "name": "Samu",
+    "position": "Attacker",
+    "appearances": 47,
+    "minutes": 3495,
+    "goals": 29,
+    "assists": 3,
+    "shots": 121,
+    "shots_on_target": 53,
+    "photo": "https://media.api-sports.io/football/players/358628.png",
+   "team_id": 212
+  },
+  
+  {
+    "id": 388872,
+    "name": "Victor Mow Froholdt",
+    "position": "Midfielder",
+    "appearances": 58,
+    "minutes": 3912,
+    "goals": 7,
+    "assists": 4,
+    "shots": 37,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/388872.png",
+   "team_id": 212
+  },
+  
+  {
+    "id": 449243,
+    "name": "William",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 273,
+    "goals": 3,
+    "assists": 0,
+    "shots": 13,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/449243.png",
+   "team_id": 212
+  },
+
+  {
+    "id": 404097,
+    "name": "Rodrigo Mora",
+    "position": "Midfielder",
+    "appearances": 41,
+    "minutes": 2467,
+    "goals": 12,
+    "assists": 4,
+    "shots": 76,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/404097.png",
+   "team_id": 212
+  }
+]

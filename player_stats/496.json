@@ -1,0 +1,70 @@
+[
+  {
+    "id": 116,
+    "name": "Khephren Thuram",
+    "position": "Midfielder",
+    "appearances": 53,
+    "minutes": 3518,
+    "goals": 5,
+    "assists": 7,
+    "shots": 52,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/116.png",
+   "team_id": 496
+  },
+ 
+  {
+    "id": 8489,
+    "name": "Jonathan David",
+    "position": "Attacker",
+    "appearances": 51,
+    "minutes": 4078,
+    "goals": 26,
+    "assists": 12,
+    "shots": 117,
+    "shots_on_target": 53,
+    "photo": "https://media.api-sports.io/football/players/8489.png",
+   "team_id": 496
+  },
+  {
+    "id": 86,
+    "name": "Lois Openda",
+    "position": "Attacker",
+    "appearances": 48,
+    "minutes": 3647,
+    "goals": 16,
+    "assists": 7,
+    "shots": 127,
+    "shots_on_target": 48,
+    "photo": "https://media.api-sports.io/football/players/86.png",
+   "team_id": 496
+  },
+  
+  {
+    "id": 161585,
+    "name": "Francisco Conceicao",
+    "position": "Attacker",
+    "appearances": 42,
+    "minutes": 2444,
+    "goals": 7,
+    "assists": 4,
+    "shots": 72,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/161585.png",
+   "team_id": 496
+  },
+  
+  {
+    "id": 339883,
+    "name": "Kenan Yildiz",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 430,
+    "goals": 3,
+    "assists": 3,
+    "shots": 13,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/339883.png",
+   "team_id": 496
+  }
+]

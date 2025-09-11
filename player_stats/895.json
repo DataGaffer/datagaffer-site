@@ -1,0 +1,56 @@
+[
+  {
+    "id": 350037,
+    "name": "Nico Paz",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 2958,
+    "goals": 7,
+    "assists": 9,
+    "shots": 122,
+    "shots_on_target": 44,
+    "photo": "https://media.api-sports.io/football/players/350037.png",
+   "team_id": 895
+  },
+  
+  {
+    "id": 443162,
+    "name": "Jesus Rodriguez",
+    "position": "Attacker",
+    "appearances": 47,
+    "minutes": 2803,
+    "goals": 5,
+    "assists": 4,
+    "shots": 68,
+    "shots_on_target": 19,
+    "photo": "https://media.api-sports.io/football/players/443162.png",
+   "team_id": 895
+  },
+  {
+    "id": 26845,
+    "name": "Anastasios Douvikas",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 1553,
+    "goals": 10,
+    "assists": 3,
+    "shots": 43,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/26845.png",
+   "team_id": 895
+  },
+  
+  {
+    "id": 38753,
+    "name": "Nicolas Kuhn",
+    "position": "Midfielder",
+    "appearances": 44,
+    "minutes": 2702,
+    "goals": 8,
+    "assists": 5,
+    "shots": 50,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/38753.png",
+   "team_id": 895
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 631,
+    "name": "Phil Foden",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 1942,
+    "goals": 10,
+    "assists": 3,
+    "shots": 63,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/631.png",
+   "team_id": 50
+  },
+  {
+    "id": 636,
+    "name": "Bernardo Silva",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 2846,
+    "goals": 4,
+    "assists": 4,
+    "shots": 32,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/636.png",
+   "team_id": 50
+  },
+  {
+    "id": 1100,
+    "name": "Erling Haaland",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 3493,
+    "goals": 34,
+    "assists": 5,
+    "shots": 151,
+    "shots_on_target": 74,
+    "photo": "https://media.api-sports.io/football/players/1100.png",
+   "team_id": 50
+  },
+  {
+    "id": 1422,
+    "name": "Jeremy Doku",
+    "position": "Attacker",
+    "appearances": 32,
+    "minutes": 1646,
+    "goals": 3,
+    "assists": 6,
+    "shots": 29,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/1422.png",
+   "team_id": 50
+  },
+  {
+    "id": 36902,
+    "name": "Tijjani Reijnders",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 4311,
+    "goals": 11,
+    "assists": 5,
+    "shots": 81,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/36902.png",
+   "team_id": 50
+  },
+  
+  {
+    "id": 81573,
+    "name": "Omar Marmoush",
+    "position": "Attacker",
+    "appearances": 19,
+    "minutes": 1327,
+    "goals": 7,
+    "assists": 1,
+    "shots": 53,
+    "shots_on_target": 19,
+    "photo": "https://media.api-sports.io/football/players/81573.png",
+   "team_id": 50
+  },
+  
+  {
+    "id": 156477,
+    "name": "Rayan Cherki",
+    "position": "Midfielder",
+    "appearances": 32,
+    "minutes": 2124,
+    "goals": 9,
+    "assists": 11,
+    "shots": 46,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/156477.png",
+   "team_id": 50
+  },
+ 
+  {
+    "id": 278133,
+    "name": "Oscar Bobb",
+    "position": "Midfielder",
+    "appearances": 10,
+    "minutes": 482,
+    "goals": 1,
+    "assists": 2,
+    "shots": 3,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/278133.png",
+   "team_id": 50
+  }
+  
+]

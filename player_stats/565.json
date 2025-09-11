@@ -1,0 +1,33 @@
+[
+  
+  {
+    "id": 8625,
+    "name": "Chris Bedia",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 333,
+    "goals": 2,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/8625.png",
+   "team_id": 565
+  },
+  
+  {
+    "id": 30405,
+    "name": "Edimilson Fernandes",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 238,
+    "goals": 1,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/30405.png",
+   "team_id": 565
+  }
+  
+
+
+]

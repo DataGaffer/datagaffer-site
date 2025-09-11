@@ -1,0 +1,59 @@
+[
+  
+  
+  {
+    "id": 44439,
+    "name": "Nicolae Stanciu",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2917,
+    "goals": 6,
+    "assists": 7,
+    "shots": 79,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/44439.png",
+   "team_id": 495
+  },
+  
+  {
+    "id": 263177,
+    "name": "Albert Gronbeak",
+    "position": "Midfielder",
+    "appearances": 25,
+    "minutes": 1172,
+    "goals": 2,
+    "assists": 1,
+    "shots": 28,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/263177.png",
+   "team_id": 495
+  },
+  {
+    "id": 263481,
+    "name": "L. Colombo",
+    "position": "Attacker",
+    "appearances": 46,
+    "minutes": 2779,
+    "goals": 7,
+    "assists": 2,
+    "shots": 66,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/263481.png",
+   "team_id": 495
+  },
+  
+  {
+    "id": 341646,
+    "name": "V. Carboni",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 197,
+    "goals": 1,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/341646.png",
+   "team_id": 495
+  }
+  
+]

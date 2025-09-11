@@ -1,0 +1,73 @@
+[
+  
+  {
+    "id": 1129,
+    "name": "Callum McGregor",
+    "position": "Midfielder",
+    "appearances": 51,
+    "minutes": 4326,
+    "goals": 8,
+    "assists": 3,
+    "shots": 49,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/1129.png",
+   "team_id": 247
+  },
+
+  {
+    "id": 33224,
+    "name": "Daizen Maeda",
+    "position": "Attacker",
+    "appearances": 49,
+    "minutes": 3831,
+    "goals": 21,
+    "assists": 12,
+    "shots": 78,
+    "shots_on_target": 37,
+    "photo": "https://media.api-sports.io/football/players/33224.png",
+   "team_id": 247
+  },
+ 
+  {
+    "id": 48002,
+    "name": "Benjamin Nygren",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 3295,
+    "goals": 19,
+    "assists": 3,
+    "shots": 98,
+    "shots_on_target": 47,
+    "photo": "https://media.api-sports.io/football/players/48002.png",
+   "team_id": 247
+  },
+  
+  {
+    "id": 162210,
+    "name": "Arne Engels",
+    "position": "Midfielder",
+    "appearances": 52,
+    "minutes": 3284,
+    "goals": 10,
+    "assists": 9,
+    "shots": 81,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/162210.png",
+   "team_id": 247
+  },
+  {
+    "id": 180758,
+    "name": "Reo Hatate",
+    "position": "Midfielder",
+    "appearances": 52,
+    "minutes": 3626,
+    "goals": 12,
+    "assists": 6,
+    "shots": 98,
+    "shots_on_target": 30,
+    "photo": "https://media.api-sports.io/football/players/180758.png",
+   "team_id": 247
+  }
+  
+  
+]

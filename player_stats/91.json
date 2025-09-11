@@ -1,0 +1,95 @@
+[
+  {
+    "id": 109,
+    "name": "A. Golovin",
+    "position": "Midfielder",
+    "appearances": 32,
+    "minutes": 2056,
+    "goals": 3,
+    "assists": 1,
+    "shots": 36,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/109.png",
+   "team_id": 91
+  },
+  {
+    "id": 1101,
+    "name": "Takumi Minamino",
+    "position": "Midfielder",
+    "appearances": 46,
+    "minutes": 3234,
+    "goals": 10,
+    "assists": 5,
+    "shots": 80,
+    "shots_on_target": 32,
+    "photo": "https://media.api-sports.io/football/players/1101.png",
+   "team_id": 91
+  },
+  {
+    "id": 2810,
+    "name": "Denis Zakaria",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 3124,
+    "goals": 7,
+    "assists": 5,
+    "shots": 38,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/2810.png",
+   "team_id": 91
+  },
+  {
+    "id": 274300,
+    "name": "Maghnes Akliouche",
+    "position": "Midfielder",
+    "appearances": 46,
+    "minutes": 3572,
+    "goals": 9,
+    "assists": 13,
+    "shots": 94,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/274300.png",
+   "team_id": 91
+  },
+  {
+    "id": 283026,
+    "name": "Mika Biereth",
+    "position": "Attacker",
+    "appearances": 47,
+    "minutes": 3524,
+    "goals": 17,
+    "assists": 7,
+    "shots": 87,
+    "shots_on_target": 41,
+    "photo": "https://media.api-sports.io/football/players/283026.png",
+   "team_id": 91
+  },
+ 
+  {
+    "id": 374058,
+    "name": "Lamine Camara",
+    "position": "Midfielder",
+    "appearances": 43,
+    "minutes": 3011,
+    "goals": 2,
+    "assists": 9,
+    "shots": 36,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/374058.png",
+   "team_id": 91
+  },
+  {
+    "id": 138835,
+    "name": "Florian Balogun",
+    "position": "Attacker",
+    "appearances": 50,
+    "minutes": 2840,
+    "goals": 13,
+    "assists": 5,
+    "shots": 116,
+    "shots_on_target": 47,
+    "photo": "https://media.api-sports.io/football/players/138835.png",
+   "team_id": 91
+  }
+  
+]

@@ -1,0 +1,32 @@
+[
+  
+  {
+    "id": 30505,
+    "name": "M. Adopo",
+    "position": "Midfielder",
+    "appearances": 41,
+    "minutes": 2817,
+    "goals": 1,
+    "assists": 2,
+    "shots": 21,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/30505.png",
+   "team_id": 490
+  },
+  
+  {
+    "id": 56851,
+    "name": "Michael Folorunsho",
+    "position": "Midfielder",
+    "appearances": 29,
+    "minutes": 1269,
+    "goals": 1,
+    "assists": 1,
+    "shots": 19,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/56851.png",
+   "team_id": 490
+  }
+  
+
+]

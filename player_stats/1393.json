@@ -1,0 +1,70 @@
+[
+  
+  {
+    "id": 4408,
+    "name": "A. Zorgane",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 454,
+    "goals": 1,
+    "assists": 2,
+    "shots": 2,
+    "shots_on_target": 1,
+    "photo": "https://media.api-sports.io/football/players/4408.png",
+   "team_id": 1393
+  },
+  
+  {
+    "id": 127414,
+    "name": "Anouar Ait El Hadj",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 445,
+    "goals": 1,
+    "assists": 1,
+    "shots": 9,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/127414.png",
+   "team_id": 1393
+  },
+  {
+    "id": 203456,
+    "name": "Ousseynou Niang",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 477,
+    "goals": 1,
+    "assists": 1,
+    "shots": 8,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/203456.png",
+   "team_id": 1393
+  },
+  {
+    "id": 270201,
+    "name": "Raul Florucz",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 407,
+    "goals": 4,
+    "assists": 1,
+    "shots": 10,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/270201.png",
+   "team_id": 1393
+  },
+  
+  {
+    "id": 361966,
+    "name": "Kevin Rodriguez",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 425,
+    "goals": 3,
+    "assists": 0.50,
+    "shots": 15,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/361966.png",
+   "team_id": 1393
+  }
+]

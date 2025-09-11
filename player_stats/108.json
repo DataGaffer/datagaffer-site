@@ -1,0 +1,43 @@
+[
+  
+  {
+    "id": 90617,
+    "name": "Lassine Sinayoko",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2583,
+    "goals": 7,
+    "assists": 8,
+    "shots": 68,
+    "shots_on_target": 22,
+    "photo": "https://media.api-sports.io/football/players/90617.png",
+   "team_id": 108
+  },
+  {
+    "id": 174915,
+    "name": "Josue Casimir",
+    "position": "Attacker",
+    "appearances": 30,
+    "minutes": 2254,
+    "goals": 4,
+    "assists": 3,
+    "shots": 33,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/174915.png",
+   "team_id": 108
+  },
+  {
+    "id": 293643,
+    "name": "Ibrahim Osman",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 1534,
+    "goals": 4,
+    "assists": 5,
+    "shots": 34,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/293643.png",
+   "team_id": 108
+  }
+  
+]

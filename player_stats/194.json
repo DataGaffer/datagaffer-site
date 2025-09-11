@@ -1,0 +1,83 @@
+[
+  
+  {
+    "id": 25321,
+    "name": "Davy Klaassen",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 2510,
+    "goals": 9,
+    "assists": 3,
+    "shots": 26,
+    "shots_on_target": 15,
+    "photo": "https://media.api-sports.io/football/players/25321.png",
+   "team_id": 194
+  },
+  {
+    "id": 25416,
+    "name": "Wout Weghorst",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 1706,
+    "goals": 14,
+    "assists": 3,
+    "shots": 59,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/25416.png",
+   "team_id": 194
+  },
+  {
+    "id": 37160,
+    "name": "Steven Berghuis",
+    "position": "Midfielder",
+    "appearances": 41,
+    "minutes": 4278,
+    "goals": 11,
+    "assists": 18,
+    "shots": 135,
+    "shots_on_target": 50,
+    "photo": "https://media.api-sports.io/football/players/37160.png",
+   "team_id": 194
+  },
+  {
+    "id": 38749,
+    "name": "Kenneth Taylor",
+    "position": "Midfielder",
+    "appearances": 50,
+    "minutes": 3664,
+    "goals": 14,
+    "assists": 7,
+    "shots": 67,
+    "shots_on_target": 33,
+    "photo": "https://media.api-sports.io/football/players/38749.png",
+   "team_id": 194
+  },
+ 
+  {
+    "id": 264470,
+    "name": "Raul Moro",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2684,
+    "goals": 5,
+    "assists": 6,
+    "shots": 51,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/264470.png",
+   "team_id": 194
+  },
+  {
+    "id": 329715,
+    "name": "Oscar Gloukh",
+    "position": "Midfielder",
+    "appearances": 48,
+    "minutes": 3595,
+    "goals": 12,
+    "assists": 9,
+    "shots": 105,
+    "shots_on_target": 42,
+    "photo": "https://media.api-sports.io/football/players/329715.png",
+   "team_id": 194
+  }
+  
+]

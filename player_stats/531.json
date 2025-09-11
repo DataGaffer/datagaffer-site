@@ -1,0 +1,44 @@
+[
+  
+  {
+    "id": 47294,
+    "name": "Inaki Williams",
+    "position": "Attacker",
+    "appearances": 53,
+    "minutes": 4092,
+    "goals": 11,
+    "assists": 9,
+    "shots": 108,
+    "shots_on_target": 37,
+    "photo": "https://media.api-sports.io/football/players/47294.png",
+   "team_id": 531
+  },
+  
+  {
+    "id": 183799,
+    "name": "Nico Williams",
+    "position": "Attacker",
+    "appearances": 48,
+    "minutes": 3386,
+    "goals": 12,
+    "assists": 8,
+    "shots": 93,
+    "shots_on_target": 36,
+    "photo": "https://media.api-sports.io/football/players/183799.png",
+   "team_id": 531
+  },
+  {
+    "id": 287680,
+    "name": "Maroan Sannadi",
+    "position": "Attacker",
+    "appearances": 47,
+    "minutes": 3179,
+    "goals": 13,
+    "assists": 2,
+    "shots": 108,
+    "shots_on_target": 41,
+    "photo": "https://media.api-sports.io/football/players/287680.png",
+   "team_id": 531
+  }
+  
+]

@@ -1,0 +1,72 @@
+[
+ 
+  {
+    "id": 18592,
+    "name": "Iliman Ndiaye",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 2670,
+    "goals": 11,
+    "assists": 1,
+    "shots": 39,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/18592.png",
+   "team_id": 45
+  },
+
+  {
+    "id": 19187,
+    "name": "Jack Grealish",
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 977,
+    "goals": 1,
+    "assists": 5,
+    "shots": 18,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/19187.png",
+   "team_id": 45
+  },
+  {
+    "id": 125743,
+    "name": "Beto",
+    "position": "Attacker",
+    "appearances": 34,
+    "minutes": 1759,
+    "goals": 10,
+    "assists": 0.50,
+    "shots": 54,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/125743.png",
+   "team_id": 45
+  },
+
+  {
+    "id": 148099,
+    "name": "K. Dewsbury-Hall",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 575,
+    "goals": 1,
+    "assists": 2,
+    "shots": 2,
+    "shots_on_target": 1,
+    "photo": "https://media.api-sports.io/football/players/148099.png",
+   "team_id": 45
+  },
+  
+  {
+    "id": 304317,
+    "name": "T. Dibling",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 1911,
+    "goals": 2,
+    "assists": 1,
+    "shots": 28,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/304317.png",
+   "team_id": 45
+  }
+ 
+]

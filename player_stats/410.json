@@ -1,0 +1,58 @@
+[
+  {
+    "id": 36865,
+    "name": "Melle Meulensteen",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2357,
+    "goals": 6,
+    "assists": 1,
+    "shots": 28,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/36865.png",
+   "team_id": 410
+  },
+  
+  {
+    "id": 37124,
+    "name": "Richonell Margaret",
+    "position": "Attacker",
+    "appearances": 41,
+    "minutes": 2929,
+    "goals": 7,
+    "assists": 7,
+    "shots": 58,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/37124.png",
+   "team_id": 410
+  },
+  {
+    "id": 37781,
+    "name": "Evert Linthorst",
+    "position": "Midfielder",
+    "appearances": 43,
+    "minutes": 3386,
+    "goals": 4,
+    "assists": 4,
+    "shots": 23,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/37781.png",
+   "team_id": 410
+  },
+  
+  {
+    "id": 137837,
+    "name": "Victor Edvardsen",
+    "position": "Attacker",
+    "appearances": 43,
+    "minutes": 3549,
+    "goals": 9,
+    "assists": 6,
+    "shots": 87,
+    "shots_on_target": 33,
+    "photo": "https://media.api-sports.io/football/players/137837.png",
+   "team_id": 410
+  }
+  
+  
+]

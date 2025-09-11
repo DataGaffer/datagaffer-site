@@ -1,0 +1,57 @@
+[
+  
+  {
+    "id": 30438,
+    "name": "N. Cambiaghi",
+    "position": "Attacker",
+    "appearances": 22,
+    "minutes": 881,
+    "goals": 1,
+    "assists": 3,
+    "shots": 22,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/30438.png",
+   "team_id": 500
+  },
+  {
+    "id": 30488,
+    "name": "Riccardo Orsolini",
+    "position": "Attacker",
+    "appearances": 42,
+    "minutes": 2618,
+    "goals": 18,
+    "assists": 4,
+    "shots": 99,
+    "shots_on_target": 38,
+    "photo": "https://media.api-sports.io/football/players/30488.png",
+   "team_id": 500
+  },
+  {
+    "id": 30542,
+    "name": "Jens Odgaard",
+    "position": "Attacker",
+    "appearances": 39,
+    "minutes": 2325,
+    "goals": 6,
+    "assists": 3,
+    "shots": 54,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/30542.png",
+   "team_id": 500
+  },
+  
+  {
+    "id": 311067,
+    "name": "Santiago Castro",
+    "position": "Attacker",
+    "appearances": 48,
+    "minutes": 2956,
+    "goals": 10,
+    "assists": 8,
+    "shots": 79,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/311067.png",
+   "team_id": 500
+  }
+  
+]

@@ -1,0 +1,57 @@
+[
+  
+  {
+    "id": 46887,
+    "name": "Pedro Diaz",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 1701,
+    "goals": 4,
+    "assists": 1,
+    "shots": 45,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/46887.png",
+   "team_id": 728
+  },
+  
+  {
+    "id": 47543,
+    "name": "Alvaro Garcia",
+    "position": "Midfielder",
+    "appearances": 42,
+    "minutes": 2972,
+    "goals": 8,
+    "assists": 6,
+    "shots": 79,
+    "shots_on_target": 30,
+    "photo": "https://media.api-sports.io/football/players/47543.png",
+   "team_id": 728
+  },
+  
+  {
+    "id": 128582,
+    "name": "Jorge de Frutos",
+    "position": "Attacker",
+    "appearances": 44,
+    "minutes": 2958,
+    "goals": 10,
+    "assists": 6,
+    "shots": 62,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/128582.png",
+   "team_id": 728
+  },
+  {
+    "id": 131546,
+    "name": "Isi Palazon",
+    "position": "Midfielder",
+    "appearances": 43,
+    "minutes": 2562,
+    "goals": 5,
+    "assists": 7,
+    "shots": 65,
+    "shots_on_target": 19,
+    "photo": "https://media.api-sports.io/football/players/131546.png",
+   "team_id": 728
+  }
+]

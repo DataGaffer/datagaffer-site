@@ -1,0 +1,70 @@
+[
+  
+  {
+    "id": 25139,
+    "name": "Vasil Kusej",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 623,
+    "goals": 2,
+    "assists": 4,
+    "shots": 11,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/25139.png",
+   "team_id": 560
+  },
+  {
+    "id": 66042,
+    "name": "Oscar Dorley",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 457,
+    "goals": 0,
+    "assists": 1,
+    "shots": 7,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/66042.png",
+   "team_id": 560
+  },
+  
+  {
+    "id": 66275,
+    "name": "Mojmir Chytil",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 356,
+    "goals": 1,
+    "assists": 1,
+    "shots": 14,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/66275.png",
+   "team_id": 560
+  },
+  
+  {
+    "id": 66353,
+    "name": "Lukas Provod",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 597,
+    "goals": 2,
+    "assists": 3,
+    "shots": 12,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/66353.png",
+   "team_id": 560
+  },
+  {
+    "id": 216762,
+    "name": "Christos Zafeiris",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 410,
+    "goals": 2,
+    "assists": 1,
+    "shots": 9,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/216762.png",
+   "team_id": 560
+  }
+]

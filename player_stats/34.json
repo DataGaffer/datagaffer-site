@@ -1,0 +1,113 @@
+[
+  {
+    "id": 723,
+    "name": "Joelinton",
+    "position": "Midfielder",
+    "appearances": 29,
+    "minutes": 2393,
+    "goals": 4,
+    "assists": 3,
+    "shots": 45,
+    "shots_on_target": 13,
+     "photo": "https://media.api-sports.io/football/players/723.png",
+   "team_id": 34
+  },
+  
+  {
+    "id": 10135,
+    "name": "Bruno Guimaraes",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 3271,
+    "goals": 5,
+    "assists": 6,
+    "shots": 45,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/10135.png",
+   "team_id": 34
+  },
+  
+  {
+    "id": 18778,
+    "name": "Harvey Barnes",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 1755,
+    "goals": 9,
+    "assists": 4,
+    "shots": 63,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/18778.png",
+   "team_id": 34
+  },
+  
+  {
+    "id": 31146,
+    "name": "Sandro Tonali",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 2630,
+    "goals": 4,
+    "assists": 2,
+    "shots": 35,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/31146.png",
+   "team_id": 34
+  },
+  
+  {
+    "id": 138787,
+    "name": "Anthony Gordon",
+    "position": "Attacker",
+    "appearances": 34,
+    "minutes": 2434,
+    "goals": 6,
+    "assists": 5,
+    "shots": 57,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/138787.png",
+   "team_id": 34
+  },
+  
+  {
+    "id": 153430,
+    "name": "Anthony Elanga",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2501,
+    "goals": 6,
+    "assists": 11,
+    "shots": 44,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/153430.png",
+   "team_id": 34
+  },
+
+  {
+  "id": 158054,
+    "name": "Nick Woltemade",
+    "position": "Attacker",
+    "appearances": 28,
+    "minutes": 1622,
+    "goals": 12,
+    "assists": 2,
+    "shots": 46,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/158054.png",
+   "team_id": 34
+  },
+
+  {
+  "id": 20649,
+    "name": "Yoane Wissa",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2919,
+    "goals": 19,
+    "assists": 4,
+    "shots": 90,
+    "shots_on_target": 41,
+    "photo": "https://media.api-sports.io/football/players/20649.png",
+   "team_id": 34
+  }
+]

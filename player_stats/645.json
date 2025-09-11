@@ -1,0 +1,68 @@
+[
+  {
+    "id": 454,
+    "name": "Yunus Akgun",
+    "position": "Attacker",
+    "appearances": 46,
+    "minutes": 3357,
+    "goals": 12,
+    "assists": 13,
+    "shots": 83,
+    "shots_on_target": 32,
+    "photo": "https://media.api-sports.io/football/players/454.png",
+   "team_id": 645
+  },
+  {
+    "id": 644,
+    "name": "Leroy Sane",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 353,
+    "goals": 1,
+    "assists": 1,
+    "shots": 11,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/644.png",
+   "team_id": 645
+  },
+ 
+  {
+    "id": 63274,
+    "name": "Baris Yilmaz",
+    "position": "Attacker",
+    "appearances": 48,
+    "minutes": 3954,
+    "goals": 17,
+    "assists": 6,
+    "shots": 124,
+    "shots_on_target": 48,
+    "photo": "https://media.api-sports.io/football/players/63274.png",
+   "team_id": 645
+  },
+  {
+    "id": 80552,
+    "name": "Gabriel Sara",
+    "position": "Midfielder",
+    "appearances": 47,
+    "minutes": 3692,
+    "goals": 2,
+    "assists": 10,
+    "shots": 90,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/80552.png",
+   "team_id": 645
+  },
+  {
+    "id": 2780,
+    "name": "Victor Osimhen",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 3117,
+    "goals": 37,
+    "assists": 7,
+    "shots": 201,
+    "shots_on_target": 88,
+    "photo": "https://media.api-sports.io/football/players/2780.png",
+   "team_id": 645
+  }
+]

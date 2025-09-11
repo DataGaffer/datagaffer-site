@@ -1,0 +1,44 @@
+[
+  
+  {
+    "id": 47013,
+    "name": "Rafa Mir",
+    "position": "Attacker",
+    "appearances": 25,
+    "minutes": 920,
+    "goals": 4,
+    "assists": 2,
+    "shots": 32,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/47013.png",
+   "team_id": 797
+  },
+  
+ 
+  {
+    "id": 341371,
+    "name": "Rodrigo Mendoza",
+    "position": "Midfielder",
+    "appearances": 27,
+    "minutes": 1323,
+    "goals": 3,
+    "assists": 2,
+    "shots": 26,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/341371.png",
+   "team_id": 797
+  },
+  {
+    "id": 343202,
+    "name": "Alvaro Rodriguez",
+    "position": "Attacker",
+    "appearances": 29,
+    "minutes": 1311,
+    "goals": 3,
+    "assists": 3,
+    "shots": 39,
+    "shots_on_target": 15,
+    "photo": "https://media.api-sports.io/football/players/343202.png",
+   "team_id": 797
+  }
+]

@@ -1,0 +1,58 @@
+[
+  
+  {
+    "id": 1945,
+    "name": "Mbwana Samatta",
+    "position": "Attacker",
+    "appearances": 54,
+    "minutes": 2614,
+    "goals": 8,
+    "assists": 5,
+    "shots": 59,
+    "shots_on_target": 22,
+    "photo": "https://media.api-sports.io/football/players/1945.png",
+   "team_id": 111
+  },
+
+  {
+    "id": 128342,
+    "name": "Rassoul Ndiaye",
+    "position": "Midfielder",
+    "appearances": 31,
+    "minutes": 1357,
+    "goals": 3,
+    "assists": 1,
+    "shots": 23,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/128342.png",
+   "team_id": 111
+  },
+  {
+    "id": 156465,
+    "name": "Issa Soumare",
+    "position": "Attacker",
+    "appearances": 32,
+    "minutes": 2181,
+    "goals": 6,
+    "assists": 5,
+    "shots": 51,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/156465.png",
+   "team_id": 111
+  },
+  {
+    "id": 174937,
+    "name": "Yassine Kechta",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 2354,
+    "goals": 2,
+    "assists": 1,
+    "shots": 31,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/174937.png",
+   "team_id": 111
+  }
+
+
+]

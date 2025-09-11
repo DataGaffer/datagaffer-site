@@ -1,0 +1,57 @@
+[
+ 
+  {
+    "id": 7073,
+    "name": "Marco Grull",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 1609,
+    "goals": 6,
+    "assists": 2,
+    "shots": 38,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/7073.png",
+   "team_id": 162
+  },
+  {
+    "id": 7562,
+    "name": "Romano Schmid",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 3379,
+    "goals": 6,
+    "assists": 5,
+    "shots": 56,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/7562.png",
+   "team_id": 162
+  },
+  
+  {
+    "id": 177807,
+    "name": "Justin Njinmah",
+    "position": "Attacker",
+    "appearances": 33,
+    "minutes": 1327,
+    "goals": 4,
+    "assists": 2,
+    "shots": 40,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/177807.png",
+   "team_id": 162
+  },
+  
+  {
+    "id": 39071,
+    "name": "Victor Boniface",
+    "position": "Midfielder",
+    "appearances": 61,
+    "minutes": 3513,
+    "goals": 32,
+    "assists": 10,
+    "shots": 176,
+    "shots_on_target": 71,
+    "photo": "https://media.api-sports.io/football/players/39071.png",
+   "team_id": 162
+  }
+]

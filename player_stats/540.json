@@ -1,0 +1,58 @@
+[
+  
+  {
+    "id": 47349,
+    "name": "Javi Puado",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 3249,
+    "goals": 13,
+    "assists": 4,
+    "shots": 76,
+    "shots_on_target": 27,
+    "photo": "https://media.api-sports.io/football/players/47349.png",
+   "team_id": 540
+  },
+  {
+    "id": 47396,
+    "name": "Kike Garcia",
+    "position": "Attacker",
+    "appearances": 39,
+    "minutes": 2756,
+    "goals": 15,
+    "assists": 1,
+    "shots": 75,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/47396.png",
+   "team_id": 540
+  },
+  {
+    "id": 47398,
+    "name": "Pere Milla",
+    "position": "Midfielder",
+    "appearances": 25,
+    "minutes": 727,
+    "goals": 5,
+    "assists": 1,
+    "shots": 25,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/47398.png",
+   "team_id": 540
+  },
+  
+  
+  {
+    "id": 273732,
+    "name": "Tyrhys Dolan",
+    "position": "Midfielder",
+    "appearances": 49,
+    "minutes": 3474,
+    "goals": 7,
+    "assists": 6,
+    "shots": 54,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/273732.png",
+   "team_id": 540
+  }
+  
+]

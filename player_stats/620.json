@@ -1,0 +1,43 @@
+[
+  
+  {
+    "id": 182434,
+    "name": "Dion Beljo",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 286,
+    "goals": 3,
+    "assists": 0.25,
+    "shots": 8,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/182434.png",
+   "team_id": 620
+  },
+  {
+    "id": 265491,
+    "name": "Mateo Lisica",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 338,
+    "goals": 1,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 1,
+    "photo": "https://media.api-sports.io/football/players/265491.png",
+   "team_id": 620
+  },
+  
+  {
+    "id": 308814,
+    "name": "Luka Stojkovic",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 258,
+    "goals": 1,
+    "assists": 1,
+    "shots": 9,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/308814.png",
+   "team_id": 620
+  }
+]

@@ -1,0 +1,30 @@
+[
+  
+  {
+    "id": 162773,
+    "name": "Ransford Konigsdorffer",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 2079,
+    "goals": 11,
+    "assists": 2,
+    "shots": 71,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/162773.png",
+   "team_id": 175
+  },
+
+  {
+    "id": 470282,
+    "name": "Alexander Rossing-Lelesiit",
+    "position": "Attacker",
+    "appearances": 15,
+    "minutes": 729,
+    "goals": 1,
+    "assists": 1,
+    "shots": 16,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/470282.png",
+   "team_id": 175
+  }
+]

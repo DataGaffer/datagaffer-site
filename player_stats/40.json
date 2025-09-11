@@ -1,0 +1,112 @@
+[
+  {
+    "id": 247,
+    "name": "Cody Gakpo",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2306,
+    "goals": 11,
+    "assists": 6,
+    "shots": 60,
+    "shots_on_target": 25,
+     "photo": "https://media.api-sports.io/football/players/247.png",
+   "team_id": 40
+  },
+ 
+  {
+    "id": 306,
+    "name": "Mohamed Salah",
+    "position": "Attacker",
+    "appearances": 42,
+    "minutes": 3731,
+    "goals": 30,
+    "assists": 19,
+    "shots": 124,
+    "shots_on_target": 53,
+     "photo": "https://media.api-sports.io/football/players/306.png",
+   "team_id": 40
+  },
+
+  {
+    "id": 1096,
+    "name": "Dominik Szoboszlai",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 2842,
+    "goals": 7,
+    "assists": 7,
+    "shots": 73,
+    "shots_on_target": 26,
+     "photo": "https://media.api-sports.io/football/players/1096.png",
+   "team_id": 40
+  },
+  
+  {
+    "id": 6716,
+    "name": "A. Mac Allister",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 2757,
+    "goals": 5,
+    "assists": 6,
+    "shots": 39,
+    "shots_on_target": 14,
+     "photo": "https://media.api-sports.io/football/players/6716.png",
+   "team_id": 40
+  },
+
+  {
+    "id": 174565,
+    "name": "Hugo Ekitike",
+    "position": "Attacker",
+    "appearances": 33,
+    "minutes": 2923,
+    "goals": 18,
+    "assists": 9,
+    "shots": 122,
+    "shots_on_target": 48,
+     "photo": "https://media.api-sports.io/football/players/174565.png",
+   "team_id": 40
+  },
+
+  {
+    "id": 203224,
+    "name": "Florian Wirtz",
+    "position": "Midfielder",
+    "appearances": 35,
+    "minutes": 2686,
+    "goals": 10,
+    "assists": 13,
+    "shots": 76,
+    "shots_on_target": 37,
+     "photo": "https://media.api-sports.io/football/players/203224.png",
+   "team_id": 40
+  },
+  {
+    "id": 2864,
+    "name": "Alexander Isak",
+    "position": "Attacker",
+    "appearances": 34,
+    "minutes": 2756,
+    "goals": 23,
+    "assists": 6,
+    "shots": 95,
+    "shots_on_target": 41,
+     "photo": "https://media.api-sports.io/football/players/2864.png",
+   "team_id": 40
+  },
+
+  {
+    "id": 542,
+    "name": "Ryan Gravenberch",
+    "position": "Midfielder",
+    "appearances": 90,
+    "minutes": 6226,
+    "goals": 5,
+    "assists": 6,
+    "shots": 67,
+    "shots_on_target": 26,
+     "photo": "https://media.api-sports.io/football/players/542.png",
+   "team_id": 40
+  }
+]

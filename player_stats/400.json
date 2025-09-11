@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1274,
+    "name": "Andreas Cornelius",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 546,
+    "goals": 2,
+    "assists": 2,
+    "shots": 10,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/1274.png",
+   "team_id": 400
+  },
+  {
+    "id": 2080,
+    "name": "Viktor Claesson",
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 312,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0,
+    "photo": "https://media.api-sports.io/football/players/2080.png",
+   "team_id": 400
+  },
+  {
+    "id": 2736,
+    "name": "Lukas Lerager",
+    "position": "Midfielder",
+    "appearances": 13,
+    "minutes": 969,
+    "goals": 1,
+    "assists": 1,
+    "shots": 7,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/2736.png",
+   "team_id": 400
+  },
+  {
+    "id": 15935,
+    "name": "Magnus Mattsson",
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 656,
+    "goals": 5,
+    "assists": 1,
+    "shots": 13,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/15935.png",
+   "team_id": 400
+  },
+  {
+    "id": 18946,
+    "name": "Mohamed Elyounoussi",
+    "position": "Midfielder",
+    "appearances": 13,
+    "minutes": 952,
+    "goals": 3,
+    "assists": 6,
+    "shots": 18,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/18946.png",
+   "team_id": 400
+  },
+  {
+    "id": 42012,
+    "name": "Elias Achouri",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 606,
+    "goals": 3,
+    "assists": 1,
+    "shots": 15,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/42012.png",
+   "team_id": 400
+  },
+  {
+    "id": 48203,
+    "name": "Jordan Larsson",
+    "position": "Midfielder",
+    "appearances": 13,
+    "minutes": 908,
+    "goals": 3,
+    "assists": 2,
+    "shots": 18,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/48203.png",
+   "team_id": 400
+  },
+  {
+    "id": 161919,
+    "name": "Youssoufa Moukoko",
+    "position": "Attacker",
+    "appearances": 12,
+    "minutes": 638,
+    "goals": 3,
+    "assists": 1,
+    "shots": 17,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/161919.png",
+   "team_id": 400
+  }
+  
+
+]

@@ -1,0 +1,43 @@
+[
+  
+  {
+    "id": 84128,
+    "name": "Yann Gboho",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 2678,
+    "goals": 6,
+    "assists": 4,
+    "shots": 55,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/84128.png",
+   "team_id": 96
+  },
+  {
+    "id": 174724,
+    "name": "Frank Magri",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 2032,
+    "goals": 7,
+    "assists": 1,
+    "shots": 61,
+    "shots_on_target": 22,
+    "photo": "https://media.api-sports.io/football/players/174724.png",
+   "team_id": 96
+  },
+  {
+    "id": 304140,
+    "name": "Mario Sauer",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 2594,
+    "goals": 7,
+    "assists": 6,
+    "shots": 61,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/304140.png",
+   "team_id": 96
+  }
+  
+]

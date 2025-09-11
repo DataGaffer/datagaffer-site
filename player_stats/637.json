@@ -1,0 +1,57 @@
+[
+  {
+    "id": 7586,
+    "name": "Otar Kiteishvili",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 541,
+    "goals": 5,
+    "assists": 0.25,
+    "shots": 16,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/7586.png",
+   "team_id": 637
+  },
+  
+  {
+    "id": 109740,
+    "name": "Tomi Horvat",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 539,
+    "goals": 1,
+    "assists": 1,
+    "shots": 15,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/109740.png",
+   "team_id": 637
+  },
+  
+  {
+    "id": 216761,
+    "name": "Seedy Jatta",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 250,
+    "goals": 3,
+    "assists": 0.25,
+    "shots": 7,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/216761.png",
+   "team_id": 637
+  },
+  
+  {
+    "id": 372585,
+    "name": "Leon Grgic",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 383,
+    "goals": 1,
+    "assists": 1,
+    "shots": 13,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/372585.png",
+   "team_id": 637
+  }
+]

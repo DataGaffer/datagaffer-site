@@ -1,0 +1,58 @@
+[
+  {
+    "id": 519,
+    "name": "Corentin Tolisso",
+    "position": "Midfielder",
+    "appearances": 49,
+    "minutes": 3609,
+    "goals": 11,
+    "assists": 6,
+    "shots": 86,
+    "shots_on_target": 36,
+    "photo": "https://media.api-sports.io/football/players/519.png",
+   "team_id": 80
+  },
+  
+  {
+    "id": 66387,
+    "name": "Pavel Sulc",
+    "position": "Midfielder",
+    "appearances": 54,
+    "minutes": 4544,
+    "goals": 21,
+    "assists": 16,
+    "shots": 113,
+    "shots_on_target": 49,
+    "photo": "https://media.api-sports.io/football/players/66387.png",
+   "team_id": 80
+  },
+  
+  {
+    "id": 199871,
+    "name": "Adam Karabec",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 2229,
+    "goals": 4,
+    "assists": 5,
+    "shots": 44,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/199871.png",
+   "team_id": 80
+  },
+  
+  {
+    "id": 361348,
+    "name": "Malick Fofana",
+    "position": "Attacker",
+    "appearances": 44,
+    "minutes": 2574,
+    "goals": 12,
+    "assists": 6,
+    "shots": 54,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/361348.png",
+   "team_id": 80
+  }
+
+]

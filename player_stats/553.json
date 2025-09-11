@@ -1,0 +1,42 @@
+[
+  {
+    "id": 118,
+    "name": "Gelson Martins",
+    "position": "Midfielder",
+    "appearances": 35,
+    "minutes": 2633,
+    "goals": 7,
+    "assists": 10,
+    "shots": 73,
+    "shots_on_target": 19,
+    "photo": "https://media.api-sports.io/football/players/118.png",
+   "team_id": 553
+  },
+  {
+    "id": 2722,
+    "name": "Ayoub El Kaabi",
+    "position": "Attacker",
+    "appearances": 39,
+    "minutes": 3159,
+    "goals": 26,
+    "assists": 5,
+    "shots": 117,
+    "shots_on_target": 56,
+    "photo": "https://media.api-sports.io/football/players/2722.png",
+   "team_id": 553
+  },
+  {
+    "id": 41130,
+    "name": "Chiquinho",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 2831,
+    "goals": 9,
+    "assists": 6,
+    "shots": 75,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/41130.png",
+   "team_id": 553
+  }
+  
+]

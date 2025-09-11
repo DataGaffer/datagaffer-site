@@ -1,0 +1,83 @@
+[
+
+  {
+    "id": 217,
+    "name": "Lautaro Martinez",
+    "position": "Attacker",
+    "appearances": 55,
+    "minutes": 4242,
+    "goals": 25,
+    "assists": 4,
+    "shots": 162,
+    "shots_on_target": 64,
+    "photo": "https://media.api-sports.io/football/players/217.png",
+   "team_id": 505
+  },
+  
+  {
+    "id": 21509,
+    "name": "Marcus Thuram",
+    "position": "Attacker",
+    "appearances": 52,
+    "minutes": 3635,
+    "goals": 20,
+    "assists": 6,
+    "shots": 97,
+    "shots_on_target": 38,
+    "photo": "https://media.api-sports.io/football/players/21509.png",
+   "team_id": 505
+  },
+  {
+    "id": 30558,
+    "name": "Nicolo Barella",
+    "position": "Midfielder",
+    "appearances": 57,
+    "minutes": 4344,
+    "goals": 3,
+    "assists": 10,
+    "shots": 65,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/30558.png",
+   "team_id": 505
+  },
+  
+  {
+    "id": 31010,
+    "name": "Federico Dimarco",
+    "position": "Midfielder",
+    "appearances": 53,
+    "minutes": 3456,
+    "goals": 4,
+    "assists": 8,
+    "shots": 87,
+    "shots_on_target": 28,
+    "photo": "https://media.api-sports.io/football/players/31010.png",
+   "team_id": 505
+  },
+  {
+    "id": 226,
+    "name": "Denzel Dumfries",
+    "position": "Midfielder",
+    "appearances": 49,
+    "minutes": 3521,
+    "goals": 12,
+    "assists": 5,
+    "shots": 56,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/226.png",
+   "team_id": 505
+  },
+  {
+    "id": 1640,
+    "name": "Hakan Calhanoglu",
+    "position": "Midfielder",
+    "appearances": 48,
+    "minutes": 3148,
+    "goals": 11,
+    "assists": 8,
+    "shots": 73,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/1640.png",
+   "team_id": 505
+  }
+]

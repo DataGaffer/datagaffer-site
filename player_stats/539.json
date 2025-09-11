@@ -1,0 +1,43 @@
+[
+  {
+    "id": 47225,
+    "name": "Brugui",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 2723,
+    "goals": 8,
+    "assists": 3,
+    "shots": 50,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/47225.png",
+   "team_id": 539
+  },
+ 
+  {
+    "id": 104949,
+    "name": "Pablo Martinez",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 2859,
+    "goals": 3,
+    "assists": 2,
+    "shots": 44,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/104949.png",
+   "team_id": 539
+  },
+  
+  {
+    "id": 192032,
+    "name": "Ivan Romero",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2121,
+    "goals": 10,
+    "assists": 4,
+    "shots": 61,
+    "shots_on_target": 22,
+    "photo": "https://media.api-sports.io/football/players/192032.png",
+   "team_id": 539
+  }
+]

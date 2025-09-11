@@ -1,0 +1,110 @@
+[
+
+  {
+    "id": 1460,
+    "name": "Bukayo Saka",
+    "position": "Attacker",
+    "appearances": 27,
+    "minutes": 1885,
+    "goals": 7,
+    "assists": 10,
+    "shots": 67,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/1460.png",
+   "team_id": 42
+  },
+  {
+    "id": 2937,
+    "name": "Declan Rice",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 3089,
+    "goals": 4,
+    "assists": 8,
+    "shots": 48,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/2937.png",
+   "team_id": 42
+  },
+  {
+    "id": 18979,
+    "name": "Viktor Gyokeres",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 240,
+    "goals": 3,
+    "assists": 0.10,
+    "shots": 5,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/18979.png",
+   "team_id": 42
+  },
+  {
+    "id": 19586,
+    "name": "Eberechi Eze",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 2588,
+    "goals": 8,
+    "assists": 8,
+    "shots": 100,
+    "shots_on_target": 27,
+    "photo": "https://media.api-sports.io/football/players/19586.png",
+   "team_id": 42
+  },
+  {
+    "id": 37127,
+    "name": "Martin Odegaard",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2493,
+    "goals": 6,
+    "assists": 8,
+    "shots": 51,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/37127.png",
+   "team_id": 42
+  },
+  {
+    "id": 47311,
+    "name": "Mikel Merino",
+    "position": "Midfielder",
+    "appearances": 30,
+    "minutes": 1654,
+    "goals": 7,
+    "assists": 2,
+    "shots": 38,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/47311.png",
+   "team_id": 42
+  },
+
+  {
+    "id": 127769,
+    "name": "Gabriel Martinelli",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2420,
+    "goals": 8,
+    "assists": 4,
+    "shots": 56,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/127769.png",
+   "team_id": 42
+  },
+  
+  {
+    "id": 136723,
+    "name": "N. Madueke",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2214,
+    "goals": 7,
+    "assists": 3,
+    "shots": 82,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/136723.png",
+   "team_id": 42
+  }
+
+]

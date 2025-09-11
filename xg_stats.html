@@ -1,163 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>xG Stats - DataGaffer</title>
+  <title>xG Stats</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f0f0f0;
-      text-align: center;
-    }
-
-    .tabs {
-      margin-bottom: 20px;
-    }
-
-    .tab-button {
-      padding: 12px 20px;
-      margin: 0 6px;
-      border: none;
-      border-radius: 6px;
-      background-color: #ffffff;
-      color: #003f2e;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .tab-button.active {
-      background-color: #003f2e;
-      color: #ffffff;
-    }
-
-    table {
-      width: 100%;
-      max-width: 960px;
-      margin: auto;
-      border-collapse: collapse;
-      background-color: white;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    th, td {
-      padding: 12px;
-      border-bottom: 1px solid #eee;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    th {
-      background-color: #003f2e;
-      color: white;
-      font-size: 16px;
-    }
-
-    .team-logo {
-      width: 28px;
-      height: 28px;
-    }
-
-    .table-section {
-      display: none;
-    }
-
-    .table-section.active {
-      display: block;
-    }
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    h1 { text-align: center; }
+    .buttons { text-align: center; margin-bottom: 20px; }
+    .buttons button { margin: 0 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    table { width: 100%; max-width: 900px; margin: auto; border-collapse: collapse; background: white; }
+    th, td { padding: 10px; text-align: center; border: 1px solid #ccc; }
+    th { background: #222; color: white; }
+    img { width: 25px; height: 25px; vertical-align: middle; }
   </style>
 </head>
 <body>
+  <h1>xG, Corners & Shots Stats</h1>
 
-  <div class="tabs">
-    <button class="tab-button active" onclick="switchTable('xg')">Expected Goals</button>
-    <button class="tab-button" onclick="switchTable('corners')">Expected Corners</button>
-    <button class="tab-button" onclick="switchTable('shots')">Expected Shots</button>
+  <div class="buttons">
+    <button onclick="showTable('xg')">Expected Goals</button>
+    <button onclick="showTable('corners')">Expected Corners</button>
+    <button onclick="showTable('shots')">Expected Shots</button>
   </div>
 
-  <!-- xG Table -->
-  <div id="xg" class="table-section active">
+  <div id="xg" class="table-section">
     <table>
       <tr>
         <th></th>
-        <th>Team</th>
-        <th>xG</th>
-        <th>Total</th>
-        <th>xG</th>
-        <th>Team</th>
+        <th>Home Team</th>
+        <th>Home xG</th>
+        <th>Total xG</th>
+        <th>Away xG</th>
+        <th>Away Team</th>
         <th></th>
       </tr>
+
       <tr>
-        <td><img src="chelsea-logo.png" class="team-logo" /></td>
-        <td>Chelsea</td>
-        <td>1.82</td>
-        <td>3.20</td>
-        <td>1.38</td>
-        <td>Arsenal</td>
-        <td><img src="arsenal-logo.png" class="team-logo" /></td>
+        <td><img src="https://media.api-sports.io/football/teams/1111.png" alt="{'id': 1111, 'name': 'Kosovo', 'logo': 'https://media.api-sports.io/football/teams/1111.png', 'winner': None}"></td>
+        <td>{'id': 1111, 'name': 'Kosovo', 'logo': 'https://media.api-sports.io/football/teams/1111.png', 'winner': None}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>{'id': 5, 'name': 'Sweden', 'logo': 'https://media.api-sports.io/football/teams/5.png', 'winner': None}</td>
+        <td><img src="https://media.api-sports.io/football/teams/5.png" alt="{'id': 5, 'name': 'Sweden', 'logo': 'https://media.api-sports.io/football/teams/5.png', 'winner': None}"></td>
       </tr>
-      <!-- Add more rows here -->
+    
+      <tr>
+        <td><img src="https://media.api-sports.io/football/teams/15.png" alt="{'id': 15, 'name': 'Switzerland', 'logo': 'https://media.api-sports.io/football/teams/15.png', 'winner': None}"></td>
+        <td>{'id': 15, 'name': 'Switzerland', 'logo': 'https://media.api-sports.io/football/teams/15.png', 'winner': None}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>{'id': 1091, 'name': 'Slovenia', 'logo': 'https://media.api-sports.io/football/teams/1091.png', 'winner': None}</td>
+        <td><img src="https://media.api-sports.io/football/teams/1091.png" alt="{'id': 1091, 'name': 'Slovenia', 'logo': 'https://media.api-sports.io/football/teams/1091.png', 'winner': None}"></td>
+      </tr>
+    
+      <tr>
+        <td><img src="https://media.api-sports.io/football/teams/1100.png" alt="{'id': 1100, 'name': 'Belarus', 'logo': 'https://media.api-sports.io/football/teams/1100.png', 'winner': None}"></td>
+        <td>{'id': 1100, 'name': 'Belarus', 'logo': 'https://media.api-sports.io/football/teams/1100.png', 'winner': None}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>{'id': 1108, 'name': 'Scotland', 'logo': 'https://media.api-sports.io/football/teams/1108.png', 'winner': None}</td>
+        <td><img src="https://media.api-sports.io/football/teams/1108.png" alt="{'id': 1108, 'name': 'Scotland', 'logo': 'https://media.api-sports.io/football/teams/1108.png', 'winner': None}"></td>
+      </tr>
+    
+      <tr>
+        <td><img src="https://media.api-sports.io/football/teams/1093.png" alt="{'id': 1093, 'name': 'Gibraltar', 'logo': 'https://media.api-sports.io/football/teams/1093.png', 'winner': None}"></td>
+        <td>{'id': 1093, 'name': 'Gibraltar', 'logo': 'https://media.api-sports.io/football/teams/1093.png', 'winner': None}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>{'id': 1098, 'name': 'Faroe Islands', 'logo': 'https://media.api-sports.io/football/teams/1098.png', 'winner': None}</td>
+        <td><img src="https://media.api-sports.io/football/teams/1098.png" alt="{'id': 1098, 'name': 'Faroe Islands', 'logo': 'https://media.api-sports.io/football/teams/1098.png', 'winner': None}"></td>
+      </tr>
+    
+      <tr>
+        <td><img src="https://media.api-sports.io/football/teams/1117.png" alt="{'id': 1117, 'name': 'Greece', 'logo': 'https://media.api-sports.io/football/teams/1117.png', 'winner': None}"></td>
+        <td>{'id': 1117, 'name': 'Greece', 'logo': 'https://media.api-sports.io/football/teams/1117.png', 'winner': None}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>{'id': 21, 'name': 'Denmark', 'logo': 'https://media.api-sports.io/football/teams/21.png', 'winner': None}</td>
+        <td><img src="https://media.api-sports.io/football/teams/21.png" alt="{'id': 21, 'name': 'Denmark', 'logo': 'https://media.api-sports.io/football/teams/21.png', 'winner': None}"></td>
+      </tr>
+    
+      <tr>
+        <td><img src="https://media.api-sports.io/football/teams/1116.png" alt="{'id': 1116, 'name': 'Israel', 'logo': 'https://media.api-sports.io/football/teams/1116.png', 'winner': None}"></td>
+        <td>{'id': 1116, 'name': 'Israel', 'logo': 'https://media.api-sports.io/football/teams/1116.png', 'winner': None}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>{'id': 768, 'name': 'Italy', 'logo': 'https://media.api-sports.io/football/teams/768.png', 'winner': None}</td>
+        <td><img src="https://media.api-sports.io/football/teams/768.png" alt="{'id': 768, 'name': 'Italy', 'logo': 'https://media.api-sports.io/football/teams/768.png', 'winner': None}"></td>
+      </tr>
+    
+      <tr>
+        <td><img src="https://media.api-sports.io/football/teams/3.png" alt="{'id': 3, 'name': 'Croatia', 'logo': 'https://media.api-sports.io/football/teams/3.png', 'winner': None}"></td>
+        <td>{'id': 3, 'name': 'Croatia', 'logo': 'https://media.api-sports.io/football/teams/3.png', 'winner': None}</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>{'id': 1109, 'name': 'Montenegro', 'logo': 'https://media.api-sports.io/football/teams/1109.png', 'winner': None}</td>
+        <td><img src="https://media.api-sports.io/football/teams/1109.png" alt="{'id': 1109, 'name': 'Montenegro', 'logo': 'https://media.api-sports.io/football/teams/1109.png', 'winner': None}"></td>
+      </tr>
+    
     </table>
   </div>
 
-  <!-- Corners Table -->
-  <div id="corners" class="table-section">
-    <table>
-      <tr>
-        <th></th>
-        <th>Team</th>
-        <th>Corners</th>
-        <th>Total</th>
-        <th>Corners</th>
-        <th>Team</th>
-        <th></th>
-      </tr>
-      <tr>
-        <td><img src="chelsea-logo.png" class="team-logo" /></td>
-        <td>Chelsea</td>
-        <td>5.4</td>
-        <td>10.2</td>
-        <td>4.8</td>
-        <td>Arsenal</td>
-        <td><img src="arsenal-logo.png" class="team-logo" /></td>
-      </tr>
-    </table>
+  <div id="corners" class="table-section" style="display:none;">
+    <p style="text-align:center;">(Coming soon)</p>
   </div>
 
-  <!-- Shots Table -->
-  <div id="shots" class="table-section">
-    <table>
-      <tr>
-        <th></th>
-        <th>Team</th>
-        <th>Shots</th>
-        <th>Total</th>
-        <th>Shots</th>
-        <th>Team</th>
-        <th></th>
-      </tr>
-      <tr>
-        <td><img src="chelsea-logo.png" class="team-logo" /></td>
-        <td>Chelsea</td>
-        <td>13.2</td>
-        <td>25.0</td>
-        <td>11.8</td>
-        <td>Arsenal</td>
-        <td><img src="arsenal-logo.png" class="team-logo" /></td>
-      </tr>
-    </table>
+  <div id="shots" class="table-section" style="display:none;">
+    <p style="text-align:center;">(Coming soon)</p>
   </div>
 
   <script>
-    function switchTable(stat) {
-      document.querySelectorAll('.table-section').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
-      document.getElementById(stat).classList.add('active');
-      event.target.classList.add('active');
+    function showTable(id) {
+      document.getElementById('xg').style.display = 'none';
+      document.getElementById('corners').style.display = 'none';
+      document.getElementById('shots').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
     }
   </script>
 </body>

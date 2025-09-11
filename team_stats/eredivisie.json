@@ -5,20 +5,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/201.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 2.06,
+      "goals_against": 1.05,
+      "corners": 6.4,
+      "corners_against": 3.3,
+      "shots": 14.9,
+      "shots_against": 9.2
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.63,
+      "goals_against": 1.16,
+      "corners": 5.6,
+      "corners_against": 4.0,
+      "shots": 13.9,
+      "shots_against": 10.4
     }
   },
   {
@@ -27,20 +27,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/410.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.79,
+      "goals_against": 1.42,
+      "corners": 5.6,
+      "corners_against": 5.0,
+      "shots": 15.0,
+      "shots_against": 14.8
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.53,
+      "goals_against": 1.95,
+      "corners": 4.5,
+      "corners_against": 5.8,
+      "shots": 13.8,
+      "shots_against": 15.9
     }
   },
   {
@@ -49,20 +49,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/194.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 2.21,
+      "goals_against": 0.74,
+      "corners": 6.0,
+      "corners_against": 2.8,
+      "shots": 14.4,
+      "shots_against": 9.8
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.69,
+      "goals_against": 1.11,
+      "corners": 5.0,
+      "corners_against": 3.5,
+      "shots": 13.3,
+      "shots_against": 11.0
     }
   },
   {
@@ -71,20 +71,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/210.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.70,
+      "goals_against": 1.00,
+      "corners": 5.3,
+      "corners_against": 3.9,
+      "shots": 14.1,
+      "shots_against": 11.7
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 0.74,
+      "goals_against": 2.53,
+      "corners": 4.2,
+      "corners_against": 5.0,
+      "shots": 12.1,
+      "shots_against": 13.2
     }
   },
   {
@@ -93,20 +93,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/196.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.20,
+      "goals_against": 1.99,
+      "corners": 3.9,
+      "corners_against": 5.2,
+      "shots": 10.1,
+      "shots_against": 14.6
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 0.94,
+      "goals_against": 2.24,
+      "corners": 3.3,
+      "corners_against": 5.9,
+      "shots": 9.3,
+      "shots_against": 16.6
     }
   },
   {
@@ -115,20 +115,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/206.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.67,
+      "goals_against": 1.73,
+      "corners": 5.4,
+      "corners_against": 4.7,
+      "shots": 11.9,
+      "shots_against": 13.7
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 0.65,
+      "goals_against": 2.30,
+      "corners": 4.8,
+      "corners_against": 5.7,
+      "shots": 10.2,
+      "shots_against": 15.7
     }
   },
   {
@@ -137,20 +137,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/202.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.74,
+      "goals_against": 0.79,
+      "corners": 4.4,
+      "corners_against": 3.9,
+      "shots": 11.9,
+      "shots_against": 11.2
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 0.84,
+      "goals_against": 2.47,
+      "corners": 3.8,
+      "corners_against": 5.2,
+      "shots": 9.7,
+      "shots_against": 13.1
     }
   },
   {
@@ -159,20 +159,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/203.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.21,
+      "goals_against": 1.26,
+      "corners": 4.4,
+      "corners_against": 5.2,
+      "shots": 11.8,
+      "shots_against": 14.3
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 0.68,
+      "goals_against": 2.16,
+      "corners": 3.7,
+      "corners_against": 6.4,
+      "shots": 10.0,
+      "shots_against": 16.0
     }
   },
   {
@@ -181,20 +181,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/415.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 2.05,
+      "goals_against": 1.32,
+      "corners": 5.5,
+      "corners_against": 3.9,
+      "shots": 15.4,
+      "shots_against": 9.6
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.43,
+      "goals_against": 1.61,
+      "corners": 4.8,
+      "corners_against": 4.7,
+      "shots": 13.7,
+      "shots_against": 11.3
     }
   },
   {
@@ -203,20 +203,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/207.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.90,
+      "goals_against": 1.31,
+      "corners": 5.1,
+      "corners_against": 4.9,
+      "shots": 14.1,
+      "shots_against": 11.8
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.95,
+      "goals_against": 1.21,
+      "corners": 4.4,
+      "corners_against": 5.3,
+      "shots": 14.8,
+      "shots_against": 12.3
     }
   },
  {
@@ -225,20 +225,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/193.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.31,
+      "goals_against": 1.16,
+      "corners": 4.3,
+      "corners_against": 4.9,
+      "shots": 11.4,
+      "shots_against": 13.0
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.17,
+      "goals_against": 1.72,
+      "corners": 3.8,
+      "corners_against": 5.5,
+      "shots": 9.9,
+      "shots_against": 14.3
     }
   },
   {
@@ -247,20 +247,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/416.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.21,
+      "goals_against": 1.88,
+      "corners": 4.0,
+      "corners_against": 5.5,
+      "shots": 10.1,
+      "shots_against": 15.1
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 0.88,
+      "goals_against": 2.29,
+      "corners": 3.3,
+      "corners_against": 6.1,
+      "shots": 8.5,
+      "shots_against": 16.8
     }
   },
   {
@@ -269,20 +269,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/197.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 3.25,
+      "goals_against": 1.00,
+      "corners": 8.3,
+      "corners_against": 2.4,
+      "shots": 20.3,
+      "shots_against": 7.4
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 2.77,
+      "goals_against": 1.33,
+      "corners": 7.1,
+      "corners_against": 3.3,
+      "shots": 18.9,
+      "shots_against": 9.2
     }
   },
   {
@@ -291,20 +291,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/426.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.16,
+      "goals_against": 1.52,
+      "corners": 4.5,
+      "corners_against": 5.5,
+      "shots": 14.2,
+      "shots_against": 13.9
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.21,
+      "goals_against": 1.21,
+      "corners": 4.5,
+      "corners_against": 5.9,
+      "shots": 12.9,
+      "shots_against": 14.9
     }
   },
   {
@@ -313,20 +313,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/209.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 2.23,
+      "goals_against": 1.00,
+      "corners": 6.8,
+      "corners_against": 2.8,
+      "shots": 17.4,
+      "shots_against": 8.7
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 2.32,
+      "goals_against": 1.11,
+      "corners": 5.8,
+      "corners_against": 3.5,
+      "shots": 16.3,
+      "shots_against": 10.5
     }
   },
   {
@@ -335,20 +335,20 @@
     "logo": "https://media-4.api-sports.io/football/teams/205.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.16,
+      "goals_against": 1.47,
+      "corners": 4.5,
+      "corners_against": 5.2,
+      "shots": 10.9,
+      "shots_against": 12.5
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.17,
+      "goals_against": 1.77,
+      "corners": 4.0,
+      "corners_against": 6.0,
+      "shots": 9.8,
+      "shots_against": 13.9
     }
   },
   {
@@ -357,42 +357,42 @@
     "logo": "https://media-4.api-sports.io/football/teams/427.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.05,
+      "goals_against": 1.64,
+      "corners": 4.1,
+      "corners_against": 5.1,
+      "shots": 9.9,
+      "shots_against": 13.4
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.00,
+      "goals_against": 2.00,
+      "corners": 3.5,
+      "corners_against": 5.9,
+      "shots": 8.1,
+      "shots_against": 15.4
     }
   },
   {
-    "id": 99999,
+    "id": 413,
     "name": "NEC Nijmegen",
     "logo": "https://media-4.api-sports.io/football/teams/208.png",
     "league": "Eredivisie",
     "home": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 2.32,
+      "goals_against": 1.31,
+      "corners": 5.3,
+      "corners_against": 5.2,
+      "shots": 13.8,
+      "shots_against": 12.9
     },
     "away": {
-      "goals_for": 0,
-      "goals_against": 0,
-      "corners": 0,
-      "corners_against": 0,
-      "shots": 0,
-      "shots_against": 0
+      "goals_for": 1.20,
+      "goals_against": 1.45,
+      "corners": 4.5,
+      "corners_against": 6.3,
+      "shots": 11.4,
+      "shots_against": 14.1
     }
   }
 ]

@@ -1,0 +1,95 @@
+[
+  {
+    "id": 207,
+    "name": "Ivan Perisic",
+    "position": "Attacker",
+    "appearances": 41,
+    "minutes": 2944,
+    "goals": 17,
+    "assists": 13,
+    "shots": 76,
+    "shots_on_target": 32,
+    "photo": "https://media.api-sports.io/football/players/207.png",
+   "team_id": 197
+  },
+  {
+    "id": 25646,
+    "name": "Alassane Plea",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2195,
+    "goals": 12,
+    "assists": 6,
+    "shots": 51,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/25646.png",
+   "team_id": 197
+  },
+  {
+    "id": 36905,
+    "name": "Guus Til",
+    "position": "Midfielder",
+    "appearances": 54,
+    "minutes": 3434,
+    "goals": 15,
+    "assists": 13,
+    "shots": 103,
+    "shots_on_target": 54,
+    "photo": "https://media.api-sports.io/football/players/36905.png",
+   "team_id": 197
+  },
+  {
+    "id": 37749,
+    "name": "Joey Veerman",
+    "position": "Midfielder",
+    "appearances": 44,
+    "minutes": 3132,
+    "goals": 2,
+    "assists": 14,
+    "shots": 43,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/37749.png",
+   "team_id": 197
+  },
+  {
+    "id": 37890,
+    "name": "Jerdy Schouten",
+    "position": "Midfielder",
+    "appearances": 35,
+    "minutes": 2688,
+    "goals": 3,
+    "assists": 2,
+    "shots": 12,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/37890.png",
+   "team_id": 197
+  },
+  {
+    "id": 161897,
+    "name": "Ismael Saibari",
+    "position": "Midfielder",
+    "appearances": 49,
+    "minutes": 3199,
+    "goals": 15,
+    "assists": 14,
+    "shots": 132,
+    "shots_on_target": 54,
+    "photo": "https://media.api-sports.io/football/players/161897.png",
+   "team_id": 197
+  },
+  
+  {
+    "id": 365018,
+    "name": "Ruben van Bommel",
+    "position": "Attacker",
+    "appearances": 39,
+    "minutes": 2474,
+    "goals": 12,
+    "assists": 6,
+    "shots": 88,
+    "shots_on_target": 38,
+    "photo": "https://media.api-sports.io/football/players/365018.png",
+   "team_id": 197
+  }
+  
+]

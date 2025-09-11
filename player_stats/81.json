@@ -1,0 +1,71 @@
+[
+  
+  {
+    "id": 897,
+    "name": "Mason Greenwood",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 3195,
+    "goals": 23,
+    "assists": 7,
+    "shots": 133,
+    "shots_on_target": 61,
+    "photo": "https://media.api-sports.io/football/players/897.png",
+   "team_id": 81
+  },
+
+  {
+    "id": 1465,
+    "name": "P. Aubameyang",
+    "position": "Attacker",
+    "appearances": 54,
+    "minutes": 4190,
+    "goals": 32,
+    "assists": 11,
+    "shots": 171,
+    "shots_on_target": 77,
+    "photo": "https://media.api-sports.io/football/players/1465.png",
+   "team_id": 81
+  },
+  {
+    "id": 2735,
+    "name": "P. Hojbjerg",
+    "position": "Midfielder",
+    "appearances": 35,
+    "minutes": 3116,
+    "goals": 4,
+    "assists": 4,
+    "shots": 45,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/2735.png",
+   "team_id": 81
+  },
+  
+  {
+    "id": 283216,
+    "name": "Bilal Nadir",
+    "position": "Midfielder",
+    "appearances": 18,
+    "minutes": 470,
+    "goals": 1,
+    "assists": 2,
+    "shots": 14,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/283216.png",
+   "team_id": 81
+  },
+
+  {
+    "id": 31057,
+    "name": "Hamed Traore",
+    "position": "Attacker",
+    "appearances": 28,
+    "minutes": 2208,
+    "goals": 10,
+    "assists": 3,
+    "shots": 70,
+    "shots_on_target": 30,
+    "photo": "https://media.api-sports.io/football/players/31057.png",
+   "team_id": 81
+  }
+]

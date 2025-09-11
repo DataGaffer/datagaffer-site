@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1922,
+    "name": "Florian Thauvin",
+    "position": "Attacker",
+    "appearances": 29,
+    "minutes": 2217,
+    "goals": 10,
+    "assists": 5,
+    "shots": 59,
+    "shots_on_target": 30,
+    "photo": "https://media.api-sports.io/football/players/1922.png",
+   "team_id": 116
+  },
+
+  {
+    "id": 21715,
+    "name": "Wesley Said",
+    "position": "Attacker",
+    "appearances": 29,
+    "minutes": 1320,
+    "goals": 5,
+    "assists": 1,
+    "shots": 32,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/21715.png",
+   "team_id": 116
+  },
+  {
+    "id": 22261,
+    "name": "Adrien Thomasson",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 3161,
+    "goals": 4,
+    "assists": 7,
+    "shots": 51,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/22261.png",
+   "team_id": 116
+  },
+
+  {
+    "id": 443579,
+    "name": "Rayan Fofana",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 309,
+    "goals": 2,
+    "assists": 0.10,
+    "shots": 13,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/443579.png",
+   "team_id": 116
+  }
+]

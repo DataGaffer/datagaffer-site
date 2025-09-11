@@ -1,0 +1,95 @@
+[
+  {
+    "id": 17,
+    "name": "Christian Pulisic",
+    "position": "Midfielder",
+    "appearances": 53,
+    "minutes": 3844,
+    "goals": 19,
+    "assists": 10,
+    "shots": 85,
+    "shots_on_target": 41,
+    "photo": "https://media.api-sports.io/football/players/17.png",
+   "team_id": 489
+  },
+  {
+    "id": 754,
+    "name": "Luka Modric",
+    "position": "Midfielder",
+    "appearances": 60,
+    "minutes": 3067,
+    "goals": 4,
+    "assists": 10,
+    "shots": 34,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/754.png",
+   "team_id": 489
+  },
+  {
+    "id": 1417,
+    "name": "Alexis Saelemaekers",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2242,
+    "goals": 7,
+    "assists": 5,
+    "shots": 38,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/1417.png",
+   "team_id": 489
+  },
+  {
+    "id": 2292,
+    "name": "Ruben Loftus-Cheek",
+    "position": "Midfielder",
+    "appearances": 71,
+    "minutes": 4475,
+    "goals": 11,
+    "assists": 2,
+    "shots": 72,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/2292.png",
+   "team_id": 489
+  },
+  {
+    "id": 22236,
+    "name": "Rafael Leao",
+    "position": "Attacker",
+    "appearances": 51,
+    "minutes": 3517,
+    "goals": 13,
+    "assists": 11,
+    "shots": 91,
+    "shots_on_target": 43,
+    "photo": "https://media.api-sports.io/football/players/22236.png",
+   "team_id": 489
+  },
+  {
+    "id": 22254,
+    "name": "Youssouf Fofana",
+    "position": "Midfielder",
+    "appearances": 55,
+    "minutes": 4160,
+    "goals": 1,
+    "assists": 9,
+    "shots": 68,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/22254.png",
+   "team_id": 489
+  },
+  
+  {
+    "id": 94562,
+    "name": "Santiago Gimenez",
+    "position": "Attacker",
+    "appearances": 41,
+    "minutes": 2368,
+    "goals": 17,
+    "assists": 7,
+    "shots": 77,
+    "shots_on_target": 40,
+    "photo": "https://media.api-sports.io/football/players/94562.png",
+   "team_id": 489
+  }
+  
+]

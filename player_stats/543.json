@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1578,
+    "name": "G. Lo Celso",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 2359,
+    "goals": 10,
+    "assists": 4,
+    "shots": 59,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/1578.png",
+   "team_id": 543
+  },
+  {
+    "id": 1697,
+    "name": "Pablo Fornals",
+    "position": "Midfielder",
+    "appearances": 42,
+    "minutes": 3033,
+    "goals": 2,
+    "assists": 1,
+    "shots": 38,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/1697.png",
+   "team_id": 543
+  },
+  
+  {
+    "id": 47582,
+    "name": "Cucho Hernandez",
+    "position": "Attacker",
+    "appearances": 19,
+    "minutes": 1480,
+    "goals": 5,
+    "assists": 1,
+    "shots": 55,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/47582.png",
+   "team_id": 543
+  },
+  {
+    "id": 136117,
+    "name": "Rodrigo Riquelme",
+    "position": "Midfielder",
+    "appearances": 30,
+    "minutes": 1133,
+    "goals": 1,
+    "assists": 2,
+    "shots": 26,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/136117.png",
+   "team_id": 543
+  },
+  
+  {
+    "id": 9971,
+    "name": "Antony",
+    "position": "Attacker",
+    "appearances": 17,
+    "minutes": 1364,
+    "goals": 5,
+    "assists": 2,
+    "shots": 43,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/9971.png",
+   "team_id": 543
+  }
+]

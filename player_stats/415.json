@@ -1,0 +1,57 @@
+[
+  
+  {
+    "id": 48390,
+    "name": "Ricky van Wolfswinkel",
+    "position": "Attacker",
+    "appearances": 46,
+    "minutes": 3320,
+    "goals": 10,
+    "assists": 2,
+    "shots": 69,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/48390.png",
+   "team_id": 415
+  },
+  {
+    "id": 129047,
+    "name": "Ramiz Zerrouki",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 1795,
+    "goals": 1,
+    "assists": 2,
+    "shots": 11,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/129047.png",
+   "team_id": 415
+  },
+  
+  {
+    "id": 191879,
+    "name": "Kristian Hlynsson",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2174,
+    "goals": 4,
+    "assists": 5,
+    "shots": 58,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/191879.png",
+   "team_id": 415
+  },
+  {
+    "id": 272726,
+    "name": "Dann Rots",
+    "position": "Attacker",
+    "appearances": 51,
+    "minutes": 3426,
+    "goals": 6,
+    "assists": 6,
+    "shots": 77,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/272726.png",
+   "team_id": 415
+  }
+
+]

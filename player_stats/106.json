@@ -1,0 +1,70 @@
+[
+  {
+    "id": 2214,
+    "name": "R. Del Castillo",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 1871,
+    "goals": 6,
+    "assists": 5,
+    "shots": 28,
+    "shots_on_target": 15,
+    "photo": "https://media.api-sports.io/football/players/2214.png",
+   "team_id": 106
+  },
+  {
+    "id": 20558,
+    "name": "Hugo Magnetti",
+    "position": "Midfielder",
+    "appearances": 49,
+    "minutes": 3574,
+    "goals": 2,
+    "assists": 0.25,
+    "shots": 34,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/20558.png",
+   "team_id": 106
+  },
+
+  {
+    "id": 22264,
+    "name": "Ludovic Ajorque",
+    "position": "Attacker",
+    "appearances": 46,
+    "minutes": 3636,
+    "goals": 14,
+    "assists": 4,
+    "shots": 77,
+    "shots_on_target": 34,
+    "photo": "https://media.api-sports.io/football/players/22264.png",
+   "team_id": 106
+  },
+  {
+    "id": 41323,
+    "name": "Mama Balde",
+    "position": "Attacker",
+    "appearances": 45,
+    "minutes": 2001,
+    "goals": 3,
+    "assists": 5,
+    "shots": 59,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/41323.png",
+   "team_id": 106
+  },
+  {
+    "id": 326068,
+    "name": "Kamory Doumbia",
+    "position": "Midfielder",
+    "appearances": 47,
+    "minutes": 2194,
+    "goals": 5,
+    "assists": 3,
+    "shots": 43,
+    "shots_on_target": 19,
+    "photo": "https://media.api-sports.io/football/players/326068.png",
+   "team_id": 106
+  }
+ 
+ 
+]

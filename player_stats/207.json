@@ -1,0 +1,69 @@
+[
+  
+  {
+    "id": 38752,
+    "name": "Victor Jensen",
+    "position": "Midfielder",
+    "appearances": 35,
+    "minutes": 1486,
+    "goals": 7,
+    "assists": 3,
+    "shots": 33,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/38752.png",
+   "team_id": 207
+  },
+  {
+    "id": 93007,
+    "name": "David Min",
+    "position": "Attacker",
+    "appearances": 33,
+    "minutes": 1698,
+    "goals": 7,
+    "assists": 2,
+    "shots": 44,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/93007.png",
+   "team_id": 207
+  },
+  {
+    "id": 192434,
+    "name": "Miguel Rodriguez",
+    "position": "Attacker",
+    "appearances": 31,
+    "minutes": 1903,
+    "goals": 11,
+    "assists": 4,
+    "shots": 84,
+    "shots_on_target": 33,
+    "photo": "https://media.api-sports.io/football/players/192434.png",
+   "team_id": 207
+  },
+  
+  {
+    "id": 367472,
+    "name": "Adrian Blake",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 1847,
+    "goals": 7,
+    "assists": 3,
+    "shots": 62,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/367472.png",
+   "team_id": 207
+  },
+  {
+    "id": 425819,
+    "name": "Gjivai Zechiel",
+    "position": "Midfielder",
+    "appearances": 31,
+    "minutes": 1900,
+    "goals": 3,
+    "assists": 3,
+    "shots": 28,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/425819.png",
+   "team_id": 207
+  }
+]

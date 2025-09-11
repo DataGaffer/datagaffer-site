@@ -1,0 +1,55 @@
+[
+  {
+    "id": 47085,
+    "name": "Luis Milla",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 3409,
+    "goals": 1,
+    "assists": 6,
+    "shots": 37,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/47085.png",
+   "team_id": 546
+  },
+  {
+    "id": 47258,
+    "name": "Maouro Arambarri",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 3134,
+    "goals": 10,
+    "assists": 1,
+    "shots": 68,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/47258.png",
+   "team_id": 546
+  },
+  
+  {
+    "id": 394573,
+    "name": "Adrian Liso",
+    "position": "Attacker",
+    "appearances": 44,
+    "minutes": 2809,
+    "goals": 7,
+    "assists": 2,
+    "shots": 55,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/394573.png",
+   "team_id": 546
+  },
+  {
+    "id": 47472,
+    "name": "Borja Mayoral",
+    "position": "Attacker",
+    "appearances": 59,
+    "minutes": 3590,
+    "goals": 23,
+    "assists": 1,
+    "shots": 77,
+    "shots_on_target": 42,
+    "photo": "https://media.api-sports.io/football/players/47472.png",
+   "team_id": 546
+  }
+]

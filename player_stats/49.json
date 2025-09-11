@@ -1,0 +1,114 @@
+[
+ 
+  {
+    "id": 1864,
+    "name": "Pedro Neto",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 3121,
+    "goals": 10,
+    "assists": 8,
+    "shots": 60,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/1864.png",
+   "team_id": 49
+  },
+
+  {
+    "id": 5996,
+    "name": "Enzo Fernandez",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 3201,
+    "goals": 8,
+    "assists": 8,
+    "shots": 57,
+    "shots_on_target": 22,
+    "photo": "https://media.api-sports.io/football/players/5996.png",
+   "team_id": 49
+  },
+  {
+    "id": 10329,
+    "name": "Joao Pedro",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 416,
+    "goals": 5,
+    "assists": 2,
+    "shots": 12,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/10329.png",
+   "team_id": 49
+  },
+  
+  {
+    "id": 152982,
+    "name": "Cole Palmer",
+    "position": "Midfielder",
+    "appearances": 44,
+    "minutes": 3837,
+    "goals": 18,
+    "assists": 10,
+    "shots": 143,
+    "shots_on_target": 51,
+    "photo": "https://media.api-sports.io/football/players/152982.png",
+   "team_id": 49
+  },
+  
+  {
+    "id": 161948,
+    "name": "Liam Delap",
+    "position": "Attacker",
+    "appearances": 40,
+    "minutes": 2667,
+    "goals": 13,
+    "assists": 2,
+    "shots": 70,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/161948.png",
+   "team_id": 49
+  },
+ 
+  {
+    "id": 286894,
+    "name": "J. Bynoe-Gittens",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 1888,
+    "goals": 8,
+    "assists": 3,
+    "shots": 52,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/286894.png",
+   "team_id": 49
+  },
+  
+  {
+    "id": 425733,
+    "name": "Estavo",
+    "position": "Attacker",
+    "appearances": 40,
+    "minutes": 3026,
+    "goals": 12,
+    "assists": 6,
+    "shots": 82,
+    "shots_on_target": 35,
+    "photo": "https://media.api-sports.io/football/players/425733.png",
+   "team_id": 49
+  },
+
+  {
+    "id": 284324,
+    "name": "Alejandro Garnacho",
+    "position": "Attacker",
+    "appearances": 108,
+    "minutes": 7142,
+    "goals": 21,
+    "assists": 15,
+    "shots": 184,
+    "shots_on_target": 69,
+    "photo": "https://media.api-sports.io/football/players/284324.png",
+   "team_id": 49
+  }
+
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 407,
+    "name": "Benjamin Stambouli",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2695,
+    "goals": 1,
+    "assists": 3,
+    "shots": 18,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/407.png",
+   "team_id": 112
+  },
+  {
+    "id": 2181,
+    "name": "Georgiy Tsitaishvili",
+    "position": "Attacker",
+    "appearances": 42,
+    "minutes": 2950,
+    "goals": 7,
+    "assists": 5,
+    "shots": 64,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/2181.png",
+   "team_id": 112
+  },
+ 
+  {
+    "id": 157912,
+    "name": "Boubacar Traore",
+    "position": "Midfielder",
+    "appearances": 31,
+    "minutes": 2000,
+    "goals": 2,
+    "assists": 1,
+    "shots": 23,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/157912.png",
+   "team_id": 112
+  }
+
+  
+]

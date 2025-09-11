@@ -1,0 +1,58 @@
+[
+  
+  {
+    "id": 715,
+    "name": "Christoph Baumgartner",
+    "position": "Midfielder",
+    "appearances": 46,
+    "minutes": 2401,
+    "goals": 6,
+    "assists": 2,
+    "shots": 62,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/715.png",
+   "team_id": 173
+  },
+  
+  {
+    "id": 25917,
+    "name": "Ridle Baku",
+    "position": "Midfielder",
+    "appearances": 42,
+    "minutes": 3148,
+    "goals": 4,
+    "assists": 6,
+    "shots": 47,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/25917.png",
+   "team_id": 173
+  },
+  
+  {
+    "id": 290549,
+    "name": "Johan Bakayoko",
+    "position": "Attacker",
+    "appearances": 50,
+    "minutes": 3018,
+    "goals": 12,
+    "assists": 3,
+    "shots": 88,
+    "shots_on_target": 44,
+    "photo": "https://media.api-sports.io/football/players/290549.png",
+   "team_id": 173
+  },
+  {
+    "id": 314511,
+    "name": "Antonio Nusa",
+    "position": "Midfielder",
+    "appearances": 43,
+    "minutes": 2647,
+    "goals": 5,
+    "assists": 7,
+    "shots": 50,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/314511.png",
+   "team_id": 173
+  }
+  
+]

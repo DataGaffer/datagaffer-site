@@ -1,0 +1,58 @@
+[
+ 
+  {
+    "id": 182772,
+    "name": "Juanlu Sanchez",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 2192,
+    "goals": 5,
+    "assists": 6,
+    "shots": 19,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/182772.png",
+   "team_id": 536
+  },
+  
+  {
+    "id": 119213,
+    "name": "Alfon Gonzalez",
+    "position": "Midfielder",
+    "appearances": 30,
+    "minutes": 1720,
+    "goals": 9,
+    "assists": 5,
+    "shots": 62,
+    "shots_on_target": 30,
+    "photo": "https://media.api-sports.io/football/players/119213.png",
+   "team_id": 536
+  },
+
+  {
+    "id": 48471,
+    "name": "Ruben Vargas",
+    "position": "Midfielder",
+    "appearances": 23,
+    "minutes": 1182,
+    "goals": 3,
+    "assists": 3,
+    "shots": 33,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/48471.png",
+   "team_id": 536
+  },
+  
+  {
+    "id": 185398,
+    "name": "Isaac Romero",
+    "position": "Midfielder",
+    "appearances": 35,
+    "minutes": 2374,
+    "goals": 6,
+    "assists": 2,
+    "shots": 61,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/185398.png",
+   "team_id": 536
+  }
+]

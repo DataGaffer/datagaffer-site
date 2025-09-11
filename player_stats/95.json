@@ -1,0 +1,100 @@
+[
+  
+  {
+    "id": 203762,
+    "name": "Emanuel Emegha",
+    "position": "Attacker",
+    "appearances": 33,
+    "minutes": 2696,
+    "goals": 17,
+    "assists": 3,
+    "shots": 73,
+    "shots_on_target": 43,
+    "photo": "https://media.api-sports.io/football/players/203762.png",
+   "team_id": 95
+  },
+  
+  {
+    "id": 70747,
+    "name": "Julio Enciso",
+    "position": "Midfielder",
+    "appearances": 44,
+    "minutes": 2047,
+    "goals": 3,
+    "assists": 6,
+    "shots": 99,
+    "shots_on_target": 34,
+    "photo": "https://media.api-sports.io/football/players/70747.png",
+   "team_id": 95
+  },
+  
+  {
+    "id": 325594,
+    "name": "Felix Lemarechal",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 2382,
+    "goals": 5,
+    "assists": 5,
+    "shots": 37,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/325594.png",
+   "team_id": 95
+  },
+
+  {
+    "id": 319572,
+    "name": "Valentin Barco",
+    "position": "Midfielder",
+    "appearances": 29,
+    "minutes": 2078,
+    "goals": 1,
+    "assists": 2,
+    "shots": 24,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/319572.png",
+   "team_id": 95
+  },
+
+  {
+    "id": 358166,
+    "name": "Abdoul Ouattara",
+    "position": "Midfielder",
+    "appearances": 27,
+    "minutes": 1185,
+    "goals": 1,
+    "assists": 1,
+    "shots": 11,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/358166.png",
+   "team_id": 95
+  },
+
+  {
+    "id": 390742,
+    "name": "Joaquin Panichelli",
+    "position": "Attacker",
+    "appearances": 49,
+    "minutes": 4215,
+    "goals": 23,
+    "assists": 8,
+    "shots": 136,
+    "shots_on_target": 54,
+    "photo": "https://media.api-sports.io/football/players/390742.png",
+   "team_id": 95
+  },
+
+  {
+    "id": 406303,
+    "name": "Kendry Paez",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 2338,
+    "goals": 8,
+    "assists": 5,
+    "shots": 69,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/406303.png",
+   "team_id": 95
+  }
+]

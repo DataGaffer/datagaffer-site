@@ -1,0 +1,58 @@
+[
+  {
+    "id": 553,
+    "name": "Danilo",
+    "position": "Attacker",
+    "appearances": 33,
+    "minutes": 1397,
+    "goals": 6,
+    "assists": 5,
+    "shots": 61,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/553.png",
+   "team_id": 257
+  },
+  {
+    "id": 2120,
+    "name": "Nicolas Raskin",
+    "position": "Midfielder",
+    "appearances": 53,
+    "minutes": 4191,
+    "goals": 5,
+    "assists": 13,
+    "shots": 63,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/2120.png",
+   "team_id": 257
+  },
+  
+  {
+    "id": 199638,
+    "name": "Mohammed Diomande",
+    "position": "Midfielder",
+    "appearances": 55,
+    "minutes": 4024,
+    "goals": 5,
+    "assists": 10,
+    "shots": 71,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/199638.png",
+   "team_id": 257
+  },
+  
+  {
+    "id": 336563,
+    "name": "Djeidi Gassama",
+    "position": "Attacker",
+    "appearances": 55,
+    "minutes": 3744,
+    "goals": 10,
+    "assists": 2,
+    "shots": 86,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/336563.png",
+   "team_id": 257
+  }
+  
+  
+]

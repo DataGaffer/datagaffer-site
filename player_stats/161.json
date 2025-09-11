@@ -1,0 +1,86 @@
+[
+  
+
+  {
+    "id": 1321,
+    "name": "Lovro Majer",
+    "position": "Midfielder",
+    "appearances": 14,
+    "minutes": 683,
+    "goals": 3,
+    "assists": 4,
+    "shots": 14,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/1321.png",
+   "team_id": 161
+  },
+
+  {
+    "id": 15916,
+    "name": "Andreas Skov Olsen",
+    "position": "Attacker",
+    "appearances": 43,
+    "minutes": 2471,
+    "goals": 11,
+    "assists": 7,
+    "shots": 67,
+    "shots_on_target": 27,
+    "photo": "https://media.api-sports.io/football/players/15916.png",
+   "team_id": 161
+  },
+  
+  {
+    "id": 25408,
+    "name": "Maximilian Arnold",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2839,
+    "goals": 3,
+    "assists": 7,
+    "shots": 32,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/25408.png",
+   "team_id": 161
+  },
+
+  {
+    "id": 126642,
+    "name": "Patrick Wimmer",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 2358,
+    "goals": 4,
+    "assists": 7,
+    "shots": 60,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/126642.png",
+   "team_id": 161
+  },
+  {
+    "id": 200139,
+    "name": "Mohamed Amoura",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 2771,
+    "goals": 11,
+    "assists": 9,
+    "shots": 79,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/200139.png",
+   "team_id": 161
+  },
+  {
+    "id": 323951,
+    "name": "Aaron Zehnter",
+    "position": "Midfielder",
+    "appearances": 35,
+    "minutes": 3083,
+    "goals": 4,
+    "assists": 11,
+    "shots": 49,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/323951.png",
+   "team_id": 161
+  }
+ 
+]

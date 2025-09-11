@@ -1,0 +1,46 @@
+[
+  
+  {
+    "id": 7398,
+    "name": "Barnabas Varga",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 621,
+    "goals": 8,
+    "assists": 1,
+    "shots": 20,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/7398.png",
+   "team_id": 651
+  },
+ 
+  
+  {
+    "id": 21613,
+    "name": "Lenny Joseph",
+    "position": "Attacker",
+    "appearances": 10,
+    "minutes": 570,
+    "goals": 3,
+    "assists": 1,
+    "shots": 18,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/21613.png",
+   "team_id": 651
+  },
+  
+
+  {
+    "id": 361485,
+    "name": "Alex Toth",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 652,
+    "goals": 1,
+    "assists": 2,
+    "shots": 3,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/361485.png",
+   "team_id": 651
+  }
+]

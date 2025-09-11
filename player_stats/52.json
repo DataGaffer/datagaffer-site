@@ -1,0 +1,72 @@
+[
+  {
+    "id": 2218,
+    "name": "Ismaila Sarr",
+    "position": "Attacker",
+    "appearances": 44,
+    "minutes": 3257,
+    "goals": 11,
+    "assists": 6,
+    "shots": 64,
+    "shots_on_target": 33,
+    "photo": "https://media.api-sports.io/football/players/2218.png",
+   "team_id": 52
+  },
+  
+  {
+    "id": 2601,
+    "name": "Daichi Kamada",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 1768,
+    "goals": 1,
+    "assists": 1,
+    "shots": 20,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/2601.png",
+   "team_id": 52
+  },
+
+  {
+    "id": 25927,
+    "name": "Jean-Philippe Mateta",
+    "position": "Attacker",
+    "appearances": 43,
+    "minutes": 3211,
+    "goals": 17,
+    "assists": 2,
+    "shots": 80,
+    "shots_on_target": 38,
+    "photo": "https://media.api-sports.io/football/players/25927.png",
+   "team_id": 52
+  },
+  
+  {
+    "id": 288102,
+    "name": "Adam Wharton",
+    "position": "Midfielder",
+    "appearances": 26,
+    "minutes": 1815,
+    "goals": 1,
+    "assists": 3,
+    "shots": 16,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/288102.png",
+   "team_id": 52
+  },
+
+  {
+    "id": 184226,
+    "name": "Yeremy Pino",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 1934,
+    "goals": 4,
+    "assists": 7,
+    "shots": 29,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/184226.png",
+   "team_id": 52
+  }
+  
+]

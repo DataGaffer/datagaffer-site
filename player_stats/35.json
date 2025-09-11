@@ -1,0 +1,70 @@
+[
+  {
+    "id": 792,
+    "name": "Justin Kluivert",
+    "position": "Attacker",
+    "appearances": 34,
+    "minutes": 2340,
+    "goals": 12,
+    "assists": 6,
+    "shots": 57,
+    "shots_on_target": 23,
+     "photo": "https://media.api-sports.io/football/players/792.png",
+   "team_id": 35
+  },
+
+  {
+    "id": 18870,
+    "name": "David Brooks",
+    "position": "Midfielder",
+    "appearances": 29,
+    "minutes": 960,
+    "goals": 2,
+    "assists": 1,
+    "shots": 25,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/18870.png",
+   "team_id": 35
+  },
+  {
+    "id": 19245,
+    "name": "Marcus Tavernier",
+    "position": "Midfielder",
+    "appearances": 29,
+    "minutes": 1939,
+    "goals": 3,
+    "assists": 5,
+    "shots": 57,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/19245.png",
+   "team_id": 35
+  },
+  {
+    "id": 19281,
+    "name": "Antonie Semenyo",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 3203,
+    "goals": 11,
+    "assists": 5,
+    "shots": 125,
+    "shots_on_target": 40,
+    "photo": "https://media.api-sports.io/football/players/19281.png",
+   "team_id": 35
+  },
+ 
+  {
+    "id": 152856,
+    "name": "Evanilson",
+    "position": "Attacker",
+    "appearances": 31,
+    "minutes": 2319,
+    "goals": 10,
+    "assists": 1,
+    "shots": 72,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/152856.png",
+   "team_id": 35
+  }
+  
+]

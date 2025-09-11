@@ -1,0 +1,72 @@
+[
+  
+  {
+    "id": 15908,
+    "name": "Mikkel Damsgaard",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 3091,
+    "goals": 2,
+    "assists": 10,
+    "shots": 36,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/15908.png",
+   "team_id": 55
+  },
+  
+  {
+    "id": 106725,
+    "name": "K. Lewis-Potter",
+    "position": "Attacker",
+    "appearances": 41,
+    "minutes": 3323,
+    "goals": 1,
+    "assists": 3,
+    "shots": 30,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/106725.png",
+   "team_id": 55
+  },
+  
+  {
+    "id": 178077,
+    "name": "Kevin Schade",
+    "position": "Midfielder",
+    "appearances": 42,
+    "minutes": 2563,
+    "goals": 11,
+    "assists": 2,
+    "shots": 58,
+    "shots_on_target": 28,
+    "photo": "https://media.api-sports.io/football/players/178077.png",
+   "team_id": 55
+  },
+  {
+    "id": 196156,
+    "name": "Thiago",
+    "position": "Attacker",
+    "appearances": 12,
+    "minutes": 481,
+    "goals": 3,
+    "assists": 0.25,
+    "shots": 7,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/196156.png",
+   "team_id": 55
+  },
+
+  {
+    "id": 284797,
+    "name": "Dango Ouattara",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2216,
+    "goals": 8,
+    "assists": 4,
+    "shots": 66,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/284797.png",
+   "team_id": 55
+  }
+  
+]

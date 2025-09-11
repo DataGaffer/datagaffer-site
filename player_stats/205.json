@@ -1,0 +1,31 @@
+[
+  
+  {
+    "id": 37273,
+    "name": "Kristoffer Peterson",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2184,
+    "goals": 7,
+    "assists": 3,
+    "shots": 56,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/37273.png",
+   "team_id": 205
+  },
+  
+  {
+    "id": 326029,
+    "name": "Philip Brittijn",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 280,
+    "goals": 2,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/326029.png",
+   "team_id": 205
+  }
+  
+]

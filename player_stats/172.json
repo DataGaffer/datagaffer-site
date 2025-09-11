@@ -1,0 +1,83 @@
+[
+  {
+    "id": 24798,
+    "name": "Chris Fuhrich",
+    "position": "Midfielder",
+    "appearances": 50,
+    "minutes": 3131,
+    "goals": 4,
+    "assists": 4,
+    "shots": 55,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/24798.png",
+   "team_id": 172
+  },
+ 
+  {
+    "id": 24963,
+    "name": "Atakan Karazor",
+    "position": "Midfielder",
+    "appearances": 50,
+    "minutes": 4092,
+    "goals": 3,
+    "assists": 4,
+    "shots": 22,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/24963.png",
+   "team_id": 172
+  },
+  {
+    "id": 26475,
+    "name": "Deniz Undav",
+    "position": "Attacker",
+    "appearances": 42,
+    "minutes": 2686,
+    "goals": 13,
+    "assists": 6,
+    "shots": 116,
+    "shots_on_target": 41,
+    "photo": "https://media.api-sports.io/football/players/26475.png",
+   "team_id": 172
+  },
+  {
+    "id": 46930,
+    "name": "Ermedin Demirovic",
+    "position": "Attacker",
+    "appearances": 53,
+    "minutes": 3031,
+    "goals": 19,
+    "assists": 4,
+    "shots": 110,
+    "shots_on_target": 46,
+    "photo": "https://media.api-sports.io/football/players/46930.png",
+   "team_id": 172
+  },
+  {
+    "id": 128533,
+    "name": "Jamie Leweling",
+    "position": "Attacker",
+    "appearances": 41,
+    "minutes": 2612,
+    "goals": 5,
+    "assists": 5,
+    "shots": 62,
+    "shots_on_target": 30,
+    "photo": "https://media.api-sports.io/football/players/128533.png",
+   "team_id": 172
+  },
+  {
+    "id": 137210,
+    "name": "Angelo Stiller",
+    "position": "Midfielder",
+    "appearances": 51,
+    "minutes": 4299,
+    "goals": 4,
+    "assists": 12,
+    "shots": 36,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/137210.png",
+   "team_id": 172
+  }
+  
+  
+]

@@ -1,0 +1,72 @@
+[
+ 
+  {
+    "id": 2295,
+    "name": "Olivier Giroud",
+    "position": "Attacker",
+    "appearances": 49,
+    "minutes": 3522,
+    "goals": 19,
+    "assists": 8,
+    "shots": 111,
+    "shots_on_target": 51,
+    "photo": "https://media.api-sports.io/football/players/2295.png",
+   "team_id": 79
+  },
+
+  {
+    "id": 67889,
+    "name": "Hakon Haraldsson",
+    "position": "Midfielder",
+    "appearances": 41,
+    "minutes": 2879,
+    "goals": 10,
+    "assists": 4,
+    "shots": 61,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/67889.png",
+   "team_id": 79
+  },
+
+  {
+    "id": 135749,
+    "name": "Felix Correia",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 3233,
+    "goals": 9,
+    "assists": 6,
+    "shots": 50,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/135749.png",
+   "team_id": 79
+  },
+
+ 
+  {
+    "id": 340077,
+    "name": "Matias Fernandez",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 1665,
+    "goals": 7,
+    "assists": 4,
+    "shots": 38,
+    "shots_on_target": 19,
+    "photo": "https://media.api-sports.io/football/players/340077.png",
+   "team_id": 79
+  },
+  {
+    "id": 375598,
+    "name": "Ngalayel Mukau",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 2227,
+    "goals": 3,
+    "assists": 1,
+    "shots": 20,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/375598.png",
+   "team_id": 79
+  }
+]

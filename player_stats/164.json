@@ -1,0 +1,45 @@
+[
+  {
+    "id": 714,
+    "name": "Nadiem Amiri",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 3070,
+    "goals": 12,
+    "assists": 6,
+    "shots": 80,
+    "shots_on_target": 32,
+    "photo": "https://media.api-sports.io/football/players/714.png",
+   "team_id": 164
+  },
+  
+  {
+    "id": 2906,
+    "name": "Lee Jae-Sung",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 3187,
+    "goals": 8,
+    "assists": 7,
+    "shots": 51,
+    "shots_on_target": 19,
+    "photo": "https://media.api-sports.io/football/players/2906.png",
+   "team_id": 164
+  },
+
+{
+    "id": 202736,
+    "name": "Paul Nebel",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 2812,
+    "goals": 10,
+    "assists": 6,
+    "shots": 52,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/202736.png",
+   "team_id": 164
+  }
+  
+ 
+]

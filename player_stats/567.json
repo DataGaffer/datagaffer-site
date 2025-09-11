@@ -1,0 +1,68 @@
+[
+  {
+    "id": 18930,
+    "name": "Matej Vydra",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 744,
+    "goals": 6,
+    "assists": 1,
+    "shots": 26,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/18930.png",
+   "team_id": 567
+  },
+  {
+    "id": 66253,
+    "name": "Tomas Ladra",
+    "position": "Midfielder",
+    "appearances": 10,
+    "minutes": 530,
+    "goals": 1,
+    "assists": 3,
+    "shots": 10,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/66253.png",
+   "team_id": 567
+  },
+  
+  {
+    "id": 322101,
+    "name": "Amar Memic",
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 739,
+    "goals": 1,
+    "assists": 4,
+    "shots": 10,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/322101.png",
+   "team_id": 567
+  },
+  {
+    "id": 341226,
+    "name": "Rafiu Durosinmi",
+    "position": "Attacker",
+    "appearances": 10,
+    "minutes": 528,
+    "goals": 4,
+    "assists": 1,
+    "shots": 20,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/341226.png",
+   "team_id": 567
+  },
+  {
+    "id": 410016,
+    "name": "P. Adu",
+    "position": "Attacker",
+    "appearances": 10,
+    "minutes": 463,
+    "goals": 1,
+    "assists": 1,
+    "shots": 13,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/410016.png",
+   "team_id": 567
+  }
+]

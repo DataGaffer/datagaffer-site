@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1243,
+    "name": "Tomas Soucek",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 2843,
+    "goals": 10,
+    "assists": 1,
+    "shots": 59,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/1243.png",
+   "team_id": 48
+  },
+  {
+    "id": 1646,
+    "name": "Lucas Paqueta",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 2680,
+    "goals": 12,
+    "assists": 2,
+    "shots": 58,
+    "shots_on_target": 15,
+    "photo": "https://media.api-sports.io/football/players/1646.png",
+   "team_id": 48
+  },
+  
+  {
+    "id": 2939,
+    "name": "Callum Wilson",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 112,
+    "goals": 1,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/2939.png",
+   "team_id": 48
+  },
+
+  {
+    "id": 19428,
+    "name": "Jarrod Bowen",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 3343,
+    "goals": 14,
+    "assists": 9,
+    "shots": 90,
+    "shots_on_target": 40,
+    "photo": "https://media.api-sports.io/football/players/19428.png",
+   "team_id": 48
+  },
+  {
+    "id": 25391,
+    "name": "Niclas Fullkrug",
+    "position": "Attacker",
+    "appearances": 22,
+    "minutes": 1000,
+    "goals": 3,
+    "assists": 2,
+    "shots": 20,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/25391.png",
+   "team_id": 48
+  },
+  
+  {
+    "id": 37724,
+    "name": "Crysencio Summerville",
+    "position": "Attacker",
+    "appearances": 19,
+    "minutes": 786,
+    "goals": 1,
+    "assists": 1,
+    "shots": 14,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/37724.png",
+   "team_id": 48
+  },
+
+  {
+    "id": 409303,
+    "name": "Malick Diouf",
+    "position": "Attacker",
+    "appearances": 41,
+    "minutes": 2830,
+    "goals": 7,
+    "assists": 5,
+    "shots": 29,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/409303.png",
+   "team_id": 48
+  }
+
+]

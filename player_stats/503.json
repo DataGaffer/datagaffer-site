@@ -1,0 +1,73 @@
+[
+  {
+    "id": 85,
+    "name": "Cyril Ngonge",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 1838,
+    "goals": 7,
+    "assists": 2,
+    "shots": 62,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/85.png",
+   "team_id": 503
+  },
+
+  {
+    "id": 842,
+    "name": "Nikola Vlasic",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2365,
+    "goals": 6,
+    "assists": 4,
+    "shots": 35,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/842.png",
+   "team_id": 503
+  },
+  
+  {
+    "id": 30414,
+    "name": "Giovanni Simeone",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 775,
+    "goals": 2,
+    "assists": 2,
+    "shots": 23,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/30414.png",
+   "team_id": 503
+  },
+  
+  {
+    "id": 270507,
+    "name": "Cesare Casadei",
+    "position": "Midfielder",
+    "appearances": 24,
+    "minutes": 1717,
+    "goals": 1,
+    "assists": 1,
+    "shots": 23,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/270507.png",
+   "team_id": 503
+  },
+
+  {
+    "id": 46170,
+    "name": "Ivan Ilic",
+    "position": "Midfielder",
+    "appearances": 54,
+    "minutes": 3329,
+    "goals": 5,
+    "assists": 2,
+    "shots": 42,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/270507.png",
+   "team_id": 503
+  }
+  
+  
+]

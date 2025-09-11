@@ -1,0 +1,58 @@
+[
+  {
+    "id": 726,
+    "name": "Andrej Kramaric",
+    "position": "Attacker",
+    "appearances": 44,
+    "minutes": 3728,
+    "goals": 11,
+    "assists": 11,
+    "shots": 91,
+    "shots_on_target": 38,
+    "photo": "https://media.api-sports.io/football/players/726.png",
+   "team_id": 167
+  },
+  
+  {
+    "id": 202501,
+    "name": "Fisnik Asllani",
+    "position": "Attacker",
+    "appearances": 40,
+    "minutes": 3318,
+    "goals": 21,
+    "assists": 11,
+    "shots": 124,
+    "shots_on_target": 45,
+    "photo": "https://media.api-sports.io/football/players/202501.png",
+   "team_id": 167
+  },
+  {
+    "id": 203040,
+    "name": "Tim Lemperle",
+    "position": "Attacker",
+    "appearances": 31,
+    "minutes": 2324,
+    "goals": 12,
+    "assists": 6,
+    "shots": 89,
+    "shots_on_target": 39,
+    "photo": "https://media.api-sports.io/football/players/203040.png",
+   "team_id": 167
+  },
+
+  {
+    "id": 387643,
+    "name": "Bazoumana Toure",
+    "position": "Attacker",
+    "appearances": 16,
+    "minutes": 877,
+    "goals": 1,
+    "assists": 4,
+    "shots": 25,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/387643.png",
+   "team_id": 167
+  }
+
+  
+]

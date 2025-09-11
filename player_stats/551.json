@@ -1,0 +1,58 @@
+[
+  {
+    "id": 307,
+    "name": "Xherdan Shaqiri",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 609,
+    "goals": 3,
+    "assists": 2,
+    "shots": 8,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/307.png",
+   "team_id": 551
+  },
+  
+  {
+    "id": 20833,
+    "name": "Leo Leroy",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 586,
+    "goals": 0.50,
+    "assists": 0.50,
+    "shots": 10,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/20833.png",
+   "team_id": 551
+  },
+  
+  {
+    "id": 73879,
+    "name": "Philip Otele",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 540,
+    "goals": 2,
+    "assists": 1,
+    "shots": 11,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/73879.png",
+   "team_id": 551
+  },
+  
+  {
+    "id": 305816,
+    "name": "Metinho",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 545,
+    "goals": 1,
+    "assists": 0.25,
+    "shots": 4,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/305816.png",
+   "team_id": 551
+  }
+  
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "id": 278,
+    "name": "Kylian Mbappe",
+    "position": "Attacker",
+    "appearances": 62,
+    "minutes": 5008,
+    "goals": 47,
+    "assists": 5,
+    "shots": 261,
+    "shots_on_target": 131,
+    "photo": "https://media.api-sports.io/football/players/278.png",
+   "team_id": 541
+  },
+ 
+  {
+    "id": 756,
+    "name": "Federico Valverde",
+    "position": "Midfielder",
+    "appearances": 68,
+    "minutes": 5823,
+    "goals": 11,
+    "assists": 9,
+    "shots": 106,
+    "shots_on_target": 40,
+    "photo": "https://media.api-sports.io/football/players/756.png",
+   "team_id": 541
+  },
+  {
+    "id": 762,
+    "name": "Vini Junior",
+    "position": "Attacker",
+    "appearances": 61,
+    "minutes": 4806,
+    "goals": 24,
+    "assists": 17,
+    "shots": 174,
+    "shots_on_target": 73,
+    "photo": "https://media.api-sports.io/football/players/762.png",
+   "team_id": 541
+  },
+  
+  {
+    "id": 129718,
+    "name": "Jude Bellingham",
+    "position": "Midfielder",
+    "appearances": 58,
+    "minutes": 4793,
+    "goals": 15,
+    "assists": 14,
+    "shots": 108,
+    "shots_on_target": 43,
+    "photo": "https://media.api-sports.io/football/players/129718.png",
+   "team_id": 541
+  },
+  {
+    "id": 291964,
+    "name": "Ardq Guler",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 659,
+    "goals": 2,
+    "assists": 3,
+    "shots": 15,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/291964.png",
+   "team_id": 541
+  },
+  
+  {
+    "id": 449249,
+    "name": "Franco Mastantuono",
+    "position": "Midfielder",
+    "appearances": 25,
+    "minutes": 1897,
+    "goals": 4,
+    "assists": 3,
+    "shots": 67,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/449249.png",
+   "team_id": 541
+  },
+
+  {
+    "id": 10009,
+    "name": "Rodrygo",
+    "position": "Midfielder",
+    "appearances": 56,
+    "minutes": 3543,
+    "goals": 14,
+    "assists": 10,
+    "shots": 104,
+    "shots_on_target": 40,
+    "photo": "https://media.api-sports.io/football/players/10009.png",
+   "team_id": 541
+  }
+]

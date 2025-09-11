@@ -1,0 +1,70 @@
+[
+  
+  {
+    "id": 115587,
+    "name": "Maurits Kjaergaard",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 631,
+    "goals": 3,
+    "assists": 3,
+    "shots": 17,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/115587.png",
+   "team_id": 571
+  },
+  {
+    "id": 129072,
+    "name": "Yorbe Vertessen",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 536,
+    "goals": 4,
+    "assists": 1,
+    "shots": 13,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/129072.png",
+   "team_id": 571
+  },
+  
+  {
+    "id": 288073,
+    "name": "Sota Kitano",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 492,
+    "goals": 1,
+    "assists": 1,
+    "shots": 12,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/288073.png",
+   "team_id": 571
+  },
+  
+  {
+    "id": 395559,
+    "name": "Kerim Alajbegovic",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 336,
+    "goals": 1,
+    "assists": 1,
+    "shots": 12,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/395559.png",
+   "team_id": 571
+  },
+  {
+    "id": 464055,
+    "name": "Edmund Baidoo",
+    "position": "Attacker",
+    "appearances": 10,
+    "minutes": 380,
+    "goals": 2,
+    "assists": 1,
+    "shots": 9,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/464055.png",
+   "team_id": 571
+  }
+]

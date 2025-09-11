@@ -1,0 +1,44 @@
+[
+  
+  {
+    "id": 20925,
+    "name": "Vincent Marchetti",
+    "position": "Midfielder",
+    "appearances": 31,
+    "minutes": 2258,
+    "goals": 2,
+    "assists": 5,
+    "shots": 39,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/20925.png",
+   "team_id": 114
+  },
+  
+  {
+    "id": 83831,
+    "name": "Ilan Kebbal",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2591,
+    "goals": 8,
+    "assists": 8,
+    "shots": 57,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/83831.png",
+   "team_id": 114
+  },
+  {
+    "id": 84218,
+    "name": "Adama Camara",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2517,
+    "goals": 3,
+    "assists": 1,
+    "shots": 48,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/84218.png",
+   "team_id": 114
+  }
+  
+]

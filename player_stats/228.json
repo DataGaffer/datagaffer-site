@@ -1,0 +1,68 @@
+[
+  {
+    "id": 7712,
+    "name": "M. Hjulmand",
+    "position": "Midfielder",
+    "appearances": 49,
+    "minutes": 4082,
+    "goals": 4,
+    "assists": 2,
+    "shots": 35,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/7712.png",
+   "team_id": 228
+  },
+  {
+    "id": 18748,
+    "name": "Pedro Goncalves",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 336,
+    "goals": 3,
+    "assists": 2,
+    "shots": 14,
+    "shots_on_target": 7
+  },
+  
+  {
+    "id": 41112,
+    "name": "Trincao",
+    "position": "Midfielder",
+    "appearances": 56,
+    "minutes": 4857,
+    "goals": 13,
+    "assists": 17,
+    "shots": 155,
+    "shots_on_target": 49,
+    "photo": "https://media.api-sports.io/football/players/41112.png",
+   "team_id": 228
+  },
+  {
+    "id": 47237,
+    "name": "Luis Suarez",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 351,
+    "goals": 2,
+    "assists": 2,
+    "shots": 18,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/47237.png",
+   "team_id": 228
+  },
+  
+  {
+    "id": 419582,
+    "name": "Geovany Quenda",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 121,
+    "goals": 2,
+    "assists": 2,
+    "shots": 4,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/419582.png",
+   "team_id": 228
+  }
+]
+  

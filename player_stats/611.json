@@ -1,0 +1,57 @@
+[
+  
+  {
+    "id": 905,
+    "name": "Fred",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 558,
+    "goals": 1,
+    "assists": 0.50,
+    "shots": 3,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/905.png",
+   "team_id": 611
+  },
+  {
+    "id": 13489,
+    "name": "Jhon Duran",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 335,
+    "goals": 2,
+    "assists": 1,
+    "shots": 6,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/13489.png",
+   "team_id": 611
+  },
+  
+  {
+    "id": 40403,
+    "name": "Sebastian Szymanski",
+    "position": "Midfielder",
+    "appearances": 52,
+    "minutes": 3744,
+    "goals": 10,
+    "assists": 14,
+    "shots": 81,
+    "shots_on_target": 28,
+    "photo": "https://media.api-sports.io/football/players/40403.png",
+   "team_id": 611
+  },
+  {
+    "id": 47422,
+    "name": "Youssaf En-Nesyri",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 628,
+    "goals": 3,
+    "assists": 1,
+    "shots": 13,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/47422.png",
+   "team_id": 611
+  }
+  
+]

@@ -1,0 +1,59 @@
+[
+  
+  {
+    "id": 1298,
+    "name": "Robert Skov",
+    "position": "Midfielder",
+    "appearances": 19,
+    "minutes": 1124,
+    "goals": 3,
+    "assists": 2,
+    "shots": 21,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/1298.png",
+   "team_id": 182
+  },
+
+  {
+    "id": 25300,
+    "name": "Rani Khedira",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 3176,
+    "goals": 2,
+    "assists": 1,
+    "shots": 19,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/25300.png",
+   "team_id": 182
+  },
+
+
+  {
+    "id": 45892,
+    "name": "Andrej Ilic",
+    "position": "Attacker",
+    "appearances": 20,
+    "minutes": 1214,
+    "goals": 8,
+    "assists": 2,
+    "shots": 38,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/45892.png",
+   "team_id": 182
+  },
+  
+  {
+    "id": 380873,
+    "name": "Ilyas Ansah",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 1912,
+    "goals": 8,
+    "assists": 4,
+    "shots": 41,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/380873.png",
+   "team_id": 182
+  }
+]

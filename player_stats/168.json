@@ -1,0 +1,97 @@
+[
+  {
+    "id": 794,
+    "name": "Patrik Schick",
+    "position": "Attacker",
+    "appearances": 48,
+    "minutes": 2771,
+    "goals": 30,
+    "assists": 0.10,
+    "shots": 106,
+    "shots_on_target": 52,
+    "photo": "https://media.api-sports.io/football/players/794.png",
+   "team_id": 168
+  },
+  {
+    "id": 24903,
+    "name": "Robert Andrich",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 2350,
+    "goals": 2,
+    "assists": 2,
+    "shots": 26,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/24903.png",
+   "team_id": 168
+  },
+  {
+    "id": 47516,
+    "name": "Aleix Garciq",
+    "position": "Midfielder",
+    "appearances": 45,
+    "minutes": 2369,
+    "goals": 5,
+    "assists": 5,
+    "shots": 26,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/47516.png",
+   "team_id": 168
+  },
+  
+  {
+    "id": 231029,
+    "name": "Nathan Tella",
+    "position": "Attacker",
+    "appearances": 43,
+    "minutes": 2245,
+    "goals": 4,
+    "assists": 6,
+    "shots": 51,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/231029.png",
+   "team_id": 168
+  },
+  
+  {
+    "id": 505295,
+    "name": "Christian Kofane",
+    "position": "Attacker",
+    "appearances": 23,
+    "minutes": 1341,
+    "goals": 9,
+    "assists": 1,
+    "shots": 39,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/505295.png",
+   "team_id": 168
+  },
+
+  {
+    "id": 563,
+    "name": "Alejandro Grimaldo",
+    "position": "Midfielder",
+    "appearances": 51,
+    "minutes": 4195,
+    "goals": 5,
+    "assists": 13,
+    "shots": 76,
+    "shots_on_target": 28,
+    "photo": "https://media.api-sports.io/football/players/563.png",
+   "team_id": 168
+  },
+
+  {
+    "id": 162037,
+    "name": "Malik Tillman",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2664,
+    "goals": 17,
+    "assists": 5,
+    "shots": 74,
+    "shots_on_target": 33,
+    "photo": "https://media.api-sports.io/football/players/162037.png",
+   "team_id": 168
+  }
+]

@@ -1,0 +1,56 @@
+[
+  
+  {
+    "id": 7591,
+    "name": "Sandi Lovric",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 2603,
+    "goals": 2,
+    "assists": 4,
+    "shots": 54,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/7591.png",
+   "team_id": 494
+  },
+  {
+    "id": 19185,
+    "name": "Keinan Davis",
+    "position": "Attacker",
+    "appearances": 28,
+    "minutes": 1325,
+    "goals": 4,
+    "assists": 2,
+    "shots": 42,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/19185.png",
+   "team_id": 494
+  },
+  
+  {
+    "id": 347644,
+    "name": "Arthur Atta",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 1664,
+    "goals": 2,
+    "assists": 2,
+    "shots": 33,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/347644.png",
+   "team_id": 494
+  },
+  {
+    "id": 786,
+    "name": "Nicolo Zaniolo",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 1051,
+    "goals": 3,
+    "assists": 3,
+    "shots": 27,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/786.png",
+   "team_id": 494
+  }
+]

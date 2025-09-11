@@ -1,0 +1,56 @@
+[
+  {
+    "id": 607,
+    "name": "Anastasios Bakasetas",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 1992,
+    "goals": 2,
+    "assists": 3,
+    "shots": 60,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/607.png",
+   "team_id": 617
+  },
+  {
+    "id": 691,
+    "name": "Tete",
+    "position": "Attacker",
+    "appearances": 46,
+    "minutes": 3127,
+    "goals": 10,
+    "assists": 3,
+    "shots": 98,
+    "shots_on_target": 38,
+    "photo": "https://media.api-sports.io/football/players/691.png",
+   "team_id": 617
+  },
+  {
+    "id": 2385,
+    "name": "Karol Swiderski",
+    "position": "Attacker",
+    "appearances": 18,
+    "minutes": 1126,
+    "goals": 4,
+    "assists": 3,
+    "shots": 40,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/2385.png",
+   "team_id": 617
+  },
+  
+  {
+    "id": 30536,
+    "name": "Filip Duricic",
+    "position": "Midfielder",
+    "appearances": 43,
+    "minutes": 2574,
+    "goals": 11,
+    "assists": 3,
+    "shots": 70,
+    "shots_on_target": 32,
+    "photo": "https://media.api-sports.io/football/players/30536.png",
+   "team_id": 617
+  }
+  
+]

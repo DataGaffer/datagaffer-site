@@ -1,0 +1,33 @@
+[
+  
+  
+  {
+    "id": 34710,
+    "name": "Oh Hyeon-Gyu",
+    "position": "Attacker",
+    "appearances": 42,
+    "minutes": 1016,
+    "goals": 10,
+    "assists": 3,
+    "shots": 52,
+    "shots_on_target": 28,
+    "photo": "https://media.api-sports.io/football/players/34710.png",
+   "team_id": 742
+  },
+  
+  {
+    "id": 297581,
+    "name": "Jarne Steuckers",
+    "position": "Midfielder",
+    "appearances": 43,
+    "minutes": 3696,
+    "goals": 8,
+    "assists": 12,
+    "shots": 65,
+    "shots_on_target": 28,
+    "photo": "https://media.api-sports.io/football/players/297581.png",
+   "team_id": 742
+  }
+ 
+
+]

@@ -1,0 +1,72 @@
+[
+  
+  {
+    "id": 1455,
+    "name": "Alex Iwobi",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2981,
+    "goals": 9,
+    "assists": 6,
+    "shots": 68,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/1455.png",
+   "team_id": 36
+  },
+ 
+  {
+    "id": 2887,
+    "name": "Raul Jiminez",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2494,
+    "goals": 12,
+    "assists": 3,
+    "shots": 93,
+    "shots_on_target": 30,
+     "photo": "https://media.api-sports.io/football/players/2887.png",
+   "team_id": 36
+  },
+  
+  {
+    "id": 19221,
+    "name": "Harry Wilson",
+    "position": "Midfielder",
+    "appearances": 25,
+    "minutes": 1162,
+    "goals": 6,
+    "assists": 1,
+    "shots": 43,
+    "shots_on_target": 17,
+     "photo": "https://media.api-sports.io/football/players/19221.png",
+   "team_id": 36
+  },
+  
+  {
+    "id": 195106,
+    "name": "Rodrigo Muniz",
+    "position": "Attacker",
+    "appearances": 31,
+    "minutes": 964,
+    "goals": 8,
+    "assists": 1,
+    "shots": 39,
+    "shots_on_target": 19,
+     "photo": "https://media.api-sports.io/football/players/195106.png",
+   "team_id": 36
+  },
+  
+  {
+    "id": 389315,
+    "name": "Joshua King",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 130,
+    "goals": 0.5,
+    "assists": 0.5,
+    "shots": 7,
+    "shots_on_target": 4,
+     "photo": "https://media.api-sports.io/football/players/389315.png",
+   "team_id": 36
+  }
+]

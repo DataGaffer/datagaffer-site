@@ -1,0 +1,58 @@
+[
+  {
+    "id": 28733,
+    "name": "Brynjoflur Willumsson",
+    "position": "Attacker",
+    "appearances": 34,
+    "minutes": 1396,
+    "goals": 9,
+    "assists": 1,
+    "shots": 41,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/28733.png",
+   "team_id": 202
+  },
+  
+  {
+    "id": 291505,
+    "name": "Stije Resink",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 2820,
+    "goals": 6,
+    "assists": 4,
+    "shots": 50,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/291505.png",
+   "team_id": 202
+  },
+  
+  {
+    "id": 328670,
+    "name": "Younes Taha",
+    "position": "Attacker",
+    "appearances": 17,
+    "minutes": 660,
+    "goals": 2,
+    "assists": 2,
+    "shots": 13,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/328670.png",
+   "team_id": 202
+  },
+  {
+    "id": 392044,
+    "name": "Thom van Bergen",
+    "position": "Attacker",
+    "appearances": 40,
+    "minutes": 2866,
+    "goals": 5,
+    "assists": 3,
+    "shots": 48,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/392044.png",
+   "team_id": 202
+  }
+  
+  
+]

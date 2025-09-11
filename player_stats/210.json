@@ -1,0 +1,69 @@
+[
+  {
+    "id": 37163,
+    "name": "Dylan Vente",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 2974,
+    "goals": 14,
+    "assists": 1,
+    "shots": 59,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/37163.png",
+   "team_id": 210
+  },
+  
+  {
+    "id": 37460,
+    "name": "Luuk Brouwers",
+    "position": "Midfielder",
+    "appearances": 30,
+    "minutes": 2341,
+    "goals": 4,
+    "assists": 3,
+    "shots": 41,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/37460.png",
+   "team_id": 210
+  },
+  {
+    "id": 174797,
+    "name": "Maxence Rivera",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 2418,
+    "goals": 4,
+    "assists": 1,
+    "shots": 71,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/174797.png",
+   "team_id": 210
+  },
+  {
+    "id": 281662,
+    "name": "Jacob Trenskow",
+    "position": "Attacker",
+    "appearances": 31,
+    "minutes": 2208,
+    "goals": 9,
+    "assists": 3,
+    "shots": 69,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/281662.png",
+   "team_id": 210
+  },
+  
+  {
+    "id": 128311,
+    "name": "Ringo Meerveld",
+    "position": "Attacker",
+    "appearances": 42,
+    "minutes": 3650,
+    "goals": 7,
+    "assists": 4,
+    "shots": 49,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/128311.png",
+   "team_id": 210
+  }
+]

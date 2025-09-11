@@ -1,0 +1,71 @@
+[
+  
+  {
+    "id": 42500,
+    "name": "Adrian Sut",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 436,
+    "goals": 1,
+    "assists": 1,
+    "shots": 8,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/42500.png",
+   "team_id": 559
+  },
+  {
+    "id": 42687,
+    "name": "D. Miculescu",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 293,
+    "goals": 1,
+    "assists": 1,
+    "shots": 10,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/42687.png",
+   "team_id": 559
+  },
+  {
+    "id": 43038,
+    "name": "Florin Tanase",
+    "position": "Attacker",
+    "appearances": 8,
+    "minutes": 669,
+    "goals": 5,
+    "assists": 1,
+    "shots": 10,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/43038.png",
+   "team_id": 559
+  },
+  
+  {
+    "id": 91389,
+    "name": "Juri Cisotti",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 432,
+    "goals": 1,
+    "assists": 1,
+    "shots": 12,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/91389.png",
+   "team_id": 559
+  },
+  
+  {
+    "id": 322179,
+    "name": "Mihai Lixandru",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 366,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 2,
+    "photo": "https://media.api-sports.io/football/players/322179.png",
+   "team_id": 559
+  }
+  
+]

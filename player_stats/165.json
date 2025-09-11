@@ -1,0 +1,71 @@
+[
+ 
+  {
+    "id": 984,
+    "name": "Julian Brandt",
+    "position": "Midfielder",
+    "appearances": 53,
+    "minutes": 3825,
+    "goals": 7,
+    "assists": 16,
+    "shots": 69,
+    "shots_on_target": 22,
+    "photo": "https://media.api-sports.io/football/players/984.png",
+   "team_id": 165
+  },
+  {
+    "id": 1159,
+    "name": "Marcel Sabitzer",
+    "position": "Midfielder",
+    "appearances": 46,
+    "minutes": 3064,
+    "goals": 4,
+    "assists": 4,
+    "shots": 44,
+    "shots_on_target": 15,
+    "photo": "https://media.api-sports.io/football/players/1159.png",
+   "team_id": 165
+  },
+  
+  {
+    "id": 21393,
+    "name": "Serhou Guirassy",
+    "position": "Attacker",
+    "appearances": 53,
+    "minutes": 4518,
+    "goals": 42,
+    "assists": 6,
+    "shots": 168,
+    "shots_on_target": 85,
+    "photo": "https://media.api-sports.io/football/players/21393.png",
+   "team_id": 165
+  },
+
+  {
+    "id": 158644,
+    "name": "Maximilian Beier",
+    "position": "Attacker",
+    "appearances": 48,
+    "minutes": 2581,
+    "goals": 10,
+    "assists": 6,
+    "shots": 59,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/158644.png",
+   "team_id": 165
+  },
+
+  {
+    "id": 326757,
+    "name": "Jobe Bellingham",
+    "position": "Midfielder",
+    "appearances": 50,
+    "minutes": 4178,
+    "goals": 5,
+    "assists": 4,
+    "shots": 61,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/326757.png",
+   "team_id": 165
+  }
+]

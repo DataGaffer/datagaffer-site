@@ -1,0 +1,59 @@
+[
+  
+  {
+    "id": 15286,
+    "name": "Mousa Tamari",
+    "position": "Attacker",
+    "appearances": 29,
+    "minutes": 1927,
+    "goals": 3,
+    "assists": 1,
+    "shots": 48,
+    "shots_on_target": 18,
+    "photo": "https://media.api-sports.io/football/players/15286.png",
+   "team_id": 94
+  },
+  
+  {
+    "id": 21497,
+    "name": "Ludovic Blas",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 2628,
+    "goals": 7,
+    "assists": 8,
+    "shots": 66,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/21497.png",
+   "team_id": 94
+  },
+  
+  {
+    "id": 30807,
+    "name": "Seko Fofana",
+    "position": "Midfielder",
+    "appearances": 42,
+    "minutes": 3570,
+    "goals": 9,
+    "assists": 6,
+    "shots": 52,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/30807.png",
+   "team_id": 94
+  },
+  {
+    "id": 163004,
+    "name": "Esteban Lepaul",
+    "position": "Attacker",
+    "appearances": 34,
+    "minutes": 2131,
+    "goals": 15,
+    "assists": 0.25,
+    "shots": 59,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/163004.png",
+   "team_id": 94
+  }
+  
+  
+]

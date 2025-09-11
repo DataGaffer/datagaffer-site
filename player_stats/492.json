@@ -1,0 +1,83 @@
+[
+  {
+    "id": 219,
+    "name": "Matteo Politano",
+    "position": "Attacker",
+    "appearances": 41,
+    "minutes": 3098,
+    "goals": 3,
+    "assists": 5,
+    "shots": 70,
+    "shots_on_target": 15,
+    "photo": "https://media.api-sports.io/football/players/219.png",
+   "team_id": 492
+  },
+  
+  
+  {
+    "id": 629,
+    "name": "Kevin De Bruyne",
+    "position": "Midfielder",
+    "appearances": 42,
+    "minutes": 2579,
+    "goals": 7,
+    "assists": 8,
+    "shots": 88,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/629.png",
+   "team_id": 492
+  },
+  {
+    "id": 903,
+    "name": "Scott McTominay",
+    "position": "Midfielder",
+    "appearances": 41,
+    "minutes": 3205,
+    "goals": 14,
+    "assists": 4,
+    "shots": 89,
+    "shots_on_target": 38,
+    "photo": "https://media.api-sports.io/football/players/903.png",
+   "team_id": 492
+  },
+  {
+    "id": 3406,
+    "name": "Frank Anguissa",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 3160,
+    "goals": 7,
+    "assists": 4,
+    "shots": 53,
+    "shots_on_target": 15,
+    "photo": "https://media.api-sports.io/football/players/3406.png",
+   "team_id": 492
+  },
+  
+  {
+    "id": 199089,
+    "name": "Lorenzo Lucca",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 2728,
+    "goals": 14,
+    "assists": 1,
+    "shots": 75,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/199089.png",
+   "team_id": 492
+  },
+  {
+    "id": 288006,
+    "name": "Rasmus Hojlund",
+    "position": "Attacker",
+    "appearances": 41,
+    "minutes": 2460,
+    "goals": 14,
+    "assists": 4,
+    "shots": 72,
+    "shots_on_target": 38,
+    "photo": "https://media.api-sports.io/football/players/288006.png",
+   "team_id": 492
+  }
+]

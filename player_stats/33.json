@@ -1,0 +1,72 @@
+[
+ 
+  {
+    "id": 1165,
+    "name": "Matheus Cunha",
+    "position": "Attacker",
+    "appearances": 33,
+    "minutes": 2597,
+    "goals": 15,
+    "assists": 6,
+    "shots": 110,
+    "shots_on_target": 44,
+    "photo": "https://media.api-sports.io/football/players/1165.png",
+   "team_id": 33
+
+  },
+  {
+    "id": 1485,
+    "name": "Bruno Fernandes",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 3018,
+    "goals": 8,
+    "assists": 10,
+    "shots": 93,
+    "shots_on_target": 26,
+    "photo": "https://media.api-sports.io/football/players/1485.png",
+   "team_id": 33
+  },
+
+  {
+    "id": 20589,
+    "name": "Bryan Mbeumo",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 3414,
+    "goals": 20,
+    "assists": 7,
+    "shots": 79,
+    "shots_on_target": 34,
+    "photo": "https://media.api-sports.io/football/players/20589.png",
+   "team_id": 33
+  },
+  
+  {
+    "id": 157997,
+    "name": "Amad Diallo",
+    "position": "Attacker",
+    "appearances": 26,
+    "minutes": 1901,
+    "goals": 8,
+    "assists": 6,
+    "shots": 47,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/157997.png",
+   "team_id": 33
+  },
+
+  {
+    "id": 115589,
+    "name": "Benjamin Sesko",
+    "position": "Attacker",
+    "appearances": 33,
+    "minutes": 2380,
+    "goals": 13,
+    "assists": 5,
+    "shots": 66,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/115589.png",
+   "team_id": 33
+  }
+]

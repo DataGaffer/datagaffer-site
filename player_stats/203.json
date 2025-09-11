@@ -1,0 +1,31 @@
+[
+  
+  {
+    "id": 38713,
+    "name": "Sydney van Hooijdonk",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 1711,
+    "goals": 1,
+    "assists": 1,
+    "shots": 33,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/38713.png",
+   "team_id": 203
+  },
+  
+  {
+    "id": 314078,
+    "name": "Juho Talvitie",
+    "position": "Attacker",
+    "appearances": 40,
+    "minutes": 2180,
+    "goals": 5,
+    "assists": 1,
+    "shots": 49,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/314078.png",
+   "team_id": 203
+  }
+  
+]

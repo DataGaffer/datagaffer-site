@@ -1,0 +1,82 @@
+[
+
+  {
+    "id": 3246,
+    "name": "Nicolas Pepe",
+    "position": "Attacker",
+    "appearances": 31,
+    "minutes": 1725,
+    "goals": 5,
+    "assists": 7,
+    "shots": 47,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/3246.png",
+   "team_id": 533
+  },
+  {
+    "id": 20696,
+    "name": "Pape Gueye",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 2549,
+    "goals": 6,
+    "assists": 1,
+    "shots": 67,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/20696.png",
+   "team_id": 533
+  },
+  {
+    "id": 47541,
+    "name": "Santi Comesana",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 2841,
+    "goals": 4,
+    "assists": 2,
+    "shots": 43,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/47541.png",
+   "team_id": 533
+  },
+  {
+    "id": 51016,
+    "name": "Tajon Buchanan",
+    "position": "Attacker",
+    "appearances": 23,
+    "minutes": 802,
+    "goals": 4,
+    "assists": 2,
+    "shots": 12,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/51016.png",
+   "team_id": 533
+  },
+  {
+    "id": 182519,
+    "name": "Alberto Moleiro",
+    "position": "Midfielder",
+    "appearances": 39,
+    "minutes": 2879,
+    "goals": 6,
+    "assists": 2,
+    "shots": 71,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/182519.png",
+   "team_id": 533
+  },
+  
+  {
+    "id": 180496,
+    "name": "Georges Mikautadze",
+    "position": "Attacker",
+    "appearances": 49,
+    "minutes": 2379,
+    "goals": 18,
+    "assists": 9,
+    "shots": 99,
+    "shots_on_target": 41,
+    "photo": "https://media.api-sports.io/football/players/180496.png",
+   "team_id": 533
+  }
+]

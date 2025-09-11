@@ -1,0 +1,56 @@
+[
+  {
+    "id": 936,
+    "name": "Fran Navarro",
+    "position": "Attacker",
+    "appearances": 19,
+    "minutes": 1011,
+    "goals": 5,
+    "assists": 1,
+    "shots": 17,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/936.png",
+   "team_id": 217
+  },
+  
+  {
+    "id": 108563,
+    "name": "Rodrigo Zalazar",
+    "position": "Midfielder",
+    "appearances": 26,
+    "minutes": 1739,
+    "goals": 5,
+    "assists": 5,
+    "shots": 62,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/108563.png",
+   "team_id": 217
+  },
+  
+  {
+    "id": 263530,
+    "name": "Pau Victor",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 307,
+    "goals": 3,
+    "assists": 1,
+    "shots": 6,
+    "shots_on_target": 4,
+    "photo": "https://media.api-sports.io/football/players/263530.png",
+   "team_id": 217
+  },
+  
+  {
+    "id": 325165,
+    "name": "Roger Fernandes",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 327,
+    "goals": 1,
+    "assists": 1,
+    "shots": 11,
+    "shots_on_target": 8
+  }
+  
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "id": 24949,
+    "name": "Henk Veerman",
+    "position": "Attacker",
+    "appearances": 34,
+    "minutes": 1734,
+    "goals": 6,
+    "assists": 1,
+    "shots": 38,
+    "shots_on_target": 15,
+    "photo": "https://media.api-sports.io/football/players/24949.png",
+   "team_id": 416
+  },
+  {
+    "id": 37272,
+    "name": "Brandley Kuwas",
+    "position": "Attacker",
+    "appearances": 34,
+    "minutes": 2356,
+    "goals": 5,
+    "assists": 4,
+    "shots": 44,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/37272.png",
+   "team_id": 416
+  },
+  
+  {
+    "id": 38710,
+    "name": "Robert Muhren",
+    "position": "Attacker",
+    "appearances": 40,
+    "minutes": 3004,
+    "goals": 10,
+    "assists": 4,
+    "shots": 68,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/38710.png",
+   "team_id": 416
+  },
+  
+  {
+    "id": 296030,
+    "name": "Aurelio Oehlers",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 275,
+    "goals": 1,
+    "assists": 0.25,
+    "shots": 3,
+    "shots_on_target": 3,
+    "photo": "https://media.api-sports.io/football/players/296030.png",
+   "team_id": 416
+  },
+  {
+    "id": 296135,
+    "name": "Gibson Yah",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 309,
+    "goals": 0.25,
+    "assists": 2,
+    "shots": 1,
+    "shots_on_target": 1,
+    "photo": "https://media.api-sports.io/football/players/296135.png",
+   "team_id": 416
+  }
+  
+]

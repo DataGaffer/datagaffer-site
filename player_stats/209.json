@@ -1,0 +1,69 @@
+[
+  {
+    "id": 2901,
+    "name": "Hwang In-Beom",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 3129,
+    "goals": 3,
+    "assists": 8,
+    "shots": 54,
+    "shots_on_target": 19,
+    "photo": "https://media.api-sports.io/football/players/2901.png",
+   "team_id": 209
+  },
+  {
+    "id": 37784,
+    "name": "Sem Steijn",
+    "position": "Midfielder",
+    "appearances": 53,
+    "minutes": 4413,
+    "goals": 33,
+    "assists": 8,
+    "shots": 136,
+    "shots_on_target": 64,
+    "photo": "https://media.api-sports.io/football/players/37784.png",
+   "team_id": 209
+  },
+  {
+    "id": 38747,
+    "name": "Quinten Timber",
+    "position": "Midfielder",
+    "appearances": 75,
+    "minutes": 6062,
+    "goals": 15,
+    "assists": 11,
+    "shots": 137,
+    "shots_on_target": 49,
+    "photo": "https://media.api-sports.io/football/players/38747.png",
+   "team_id": 209
+  },
+  {
+    "id": 72155,
+    "name": "Ayase Ueda",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 2103,
+    "goals": 13,
+    "assists": 2,
+    "shots": 56,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/72155.png",
+   "team_id": 209
+  },
+  
+  {
+    "id": 342163,
+    "name": "Leo Sauer",
+    "position": "Attacker",
+    "appearances": 37,
+    "minutes": 2817,
+    "goals": 7,
+    "assists": 3,
+    "shots": 75,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/342163.png",
+   "team_id": 209
+  }
+  
+]

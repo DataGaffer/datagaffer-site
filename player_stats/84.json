@@ -1,0 +1,57 @@
+[
+ 
+  {
+    "id": 4399,
+    "name": "Hicham Boudaoui",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 3241,
+    "goals": 2,
+    "assists": 4,
+    "shots": 58,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/4399.png",
+   "team_id": 84
+  },
+  {
+    "id": 30531,
+    "name": "Jeremie Boga",
+    "position": "Attacker",
+    "appearances": 29,
+    "minutes": 1387,
+    "goals": 4,
+    "assists": 1,
+    "shots": 37,
+    "shots_on_target": 22,
+    "photo": "https://media.api-sports.io/football/players/30531.png",
+   "team_id": 84
+  },
+ 
+  {
+    "id": 105154,
+    "name": "Isak Jansson",
+    "position": "Attacker",
+    "appearances": 32,
+    "minutes": 2271,
+    "goals": 7,
+    "assists": 3,
+    "shots": 46,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/105154.png",
+   "team_id": 84
+  },
+  {
+    "id": 193617,
+    "name": "Tom Louchet",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 1854,
+    "goals": 2,
+    "assists": 2,
+    "shots": 36,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/193617.png",
+   "team_id": 84
+  }
+  
+]

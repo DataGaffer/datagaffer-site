@@ -1,0 +1,55 @@
+[
+  {
+    "id": 20917,
+    "name": "Laurent Abergel",
+    "position": "Midfielder",
+    "appearances": 35,
+    "minutes": 3125,
+    "goals": 1,
+    "assists": 7,
+    "shots": 36,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/20917.png",
+   "team_id": 97
+  },
+  {
+    "id": 72457,
+    "name": "Aiyegun Tosin",
+    "position": "Attacker",
+    "appearances": 29,
+    "minutes": 1464,
+    "goals": 5,
+    "assists": 8,
+    "shots": 52,
+    "shots_on_target": 19,
+    "photo": "https://media.api-sports.io/football/players/72457.png",
+   "team_id": 97
+  },
+  {
+    "id": 144319,
+    "name": "Sambou Soumano",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 1509,
+    "goals": 10,
+    "assists": 4,
+    "shots": 53,
+    "shots_on_target": 29,
+    "photo": "https://media.api-sports.io/football/players/144319.png",
+   "team_id": 97
+  },
+  
+  {
+    "id": 402265,
+    "name": "Arthur Avom",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 2710,
+    "goals": 2,
+    "assists": 5,
+    "shots": 38,
+    "shots_on_target": 8,
+    "photo": "https://media.api-sports.io/football/players/402265.png",
+   "team_id": 97
+  }
+]

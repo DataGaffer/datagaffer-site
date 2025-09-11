@@ -1,0 +1,58 @@
+[
+  
+  {
+    "id": 36925,
+    "name": "Pelle Clement",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 2083,
+    "goals": 3,
+    "assists": 7,
+    "shots": 22,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/36925.png",
+   "team_id": 426
+  },
+  {
+    "id": 37156,
+    "name": "Jens Toornstra",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 1802,
+    "goals": 2,
+    "assists": 4,
+    "shots": 33,
+    "shots_on_target": 11,
+    "photo": "https://media.api-sports.io/football/players/37156.png",
+   "team_id": 426
+  },
+  
+  {
+    "id": 39100,
+    "name": "Tobias Lauritsen",
+    "position": "Attacker",
+    "appearances": 38,
+    "minutes": 3130,
+    "goals": 12,
+    "assists": 3,
+    "shots": 107,
+    "shots_on_target": 40,
+    "photo": "https://media.api-sports.io/football/players/39100.png",
+   "team_id": 426
+  },
+  
+  {
+    "id": 264419,
+    "name": "Sayfallah Ltaief",
+    "position": "Attacker",
+    "appearances": 48,
+    "minutes": 2082,
+    "goals": 3,
+    "assists": 2,
+    "shots": 49,
+    "shots_on_target": 16,
+    "photo": "https://media.api-sports.io/football/players/264419.png",
+   "team_id": 426
+  }
+  
+]

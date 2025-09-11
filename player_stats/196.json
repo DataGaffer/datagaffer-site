@@ -1,0 +1,32 @@
+[
+  
+  {
+    "id": 272455,
+    "name": "Derensili Sanches Fernandes",
+    "position": "Attacker",
+    "appearances": 41,
+    "minutes": 2881,
+    "goals": 12,
+    "assists": 9,
+    "shots": 82,
+    "shots_on_target": 35,
+    "photo": "https://media.api-sports.io/football/players/272455.png",
+   "team_id": 196
+  },
+  
+  {
+    "id": 349595,
+    "name": "Gyan de Regt",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 2687,
+    "goals": 4,
+    "assists": 7,
+    "shots": 65,
+    "shots_on_target": 24,
+    "photo": "https://media.api-sports.io/football/players/349595.png",
+   "team_id": 196
+  }
+  
+
+]

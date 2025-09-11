@@ -1,0 +1,82 @@
+[
+
+  {
+    "id": 37438,
+    "name": "Sven Mijnans",
+    "position": "Midfielder",
+    "appearances": 52,
+    "minutes": 4039,
+    "goals": 13,
+    "assists": 12,
+    "shots": 113,
+    "shots_on_target": 46,
+    "photo": "https://media.api-sports.io/football/players/37438.png",
+   "team_id": 201
+  },
+  {
+    "id": 38820,
+    "name": "Peer Koopmeiners",
+    "position": "Midfielder",
+    "appearances": 62,
+    "minutes": 4984,
+    "goals": 2,
+    "assists": 7,
+    "shots": 45,
+    "shots_on_target": 9,
+    "photo": "https://media.api-sports.io/football/players/38820.png",
+   "team_id": 201
+  },
+  {
+    "id": 149551,
+    "name": "Troy Parrott",
+    "position": "Attacker",
+    "appearances": 54,
+    "minutes": 3923,
+    "goals": 30,
+    "assists": 5,
+    "shots": 131,
+    "shots_on_target": 67,
+    "photo": "https://media.api-sports.io/football/players/149551.png",
+   "team_id": 201
+  },
+
+  {
+    "id": 338840,
+    "name": "Ro-Zangelo Daal",
+    "position": "Attacker",
+    "appearances": 46,
+    "minutes": 3355,
+    "goals": 16,
+    "assists": 3,
+    "shots": 79,
+    "shots_on_target": 34,
+    "photo": "https://media.api-sports.io/football/players/338840.png",
+   "team_id": 201
+  },
+  {
+    "id": 342954,
+    "name": "Mexx Meerdink",
+    "position": "Attacker",
+    "appearances": 51,
+    "minutes": 1851,
+    "goals": 17,
+    "assists": 2,
+    "shots": 75,
+    "shots_on_target": 35,
+    "photo": "https://media.api-sports.io/football/players/342954.png",
+   "team_id": 201
+  },
+  {
+    "id": 388786,
+    "name": "Kees Smit",
+    "position": "Midfielder",
+    "appearances": 52,
+    "minutes": 3252,
+    "goals": 10,
+    "assists": 10,
+    "shots": 83,
+    "shots_on_target": 30,
+    "photo": "https://media.api-sports.io/football/players/388786.png",
+   "team_id": 201
+  }
+]

@@ -1,0 +1,81 @@
+[
+  {
+    "id": 184,
+    "name": "Harry Kane",
+    "position": "Attacker",
+    "appearances": 55,
+    "minutes": 4311,
+    "goals": 47,
+    "assists": 14,
+    "shots": 190,
+    "shots_on_target": 98,
+    "photo": "https://media.api-sports.io/football/players/184.png",
+   "team_id": 157
+  },
+  {
+    "id": 502,
+    "name": "Joshua Kimmich",
+    "position": "Midfielder",
+    "appearances": 59,
+    "minutes": 5142,
+    "goals": 3,
+    "assists": 10,
+    "shots": 60,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/502.png",
+   "team_id": 157
+  },
+  {
+    "id": 510,
+    "name": "Serge Gnabry",
+    "position": "Attacker",
+    "appearances": 51,
+    "minutes": 2305,
+    "goals": 8,
+    "assists": 12,
+    "shots": 81,
+    "shots_on_target": 31,
+    "photo": "https://media.api-sports.io/football/players/510.png",
+   "team_id": 157
+  },
+  {
+    "id": 511,
+    "name": "Leon Goretzka",
+    "position": "Midfielder",
+    "appearances": 47,
+    "minutes": 2647,
+    "goals": 6,
+    "assists": 2,
+    "shots": 58,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/511.png",
+   "team_id": 157
+  },
+  {
+    "id": 2489,
+    "name": "Luis Diaz",
+    "position": "Attacker",
+    "appearances": 54,
+    "minutes": 3696,
+    "goals": 20,
+    "assists": 7,
+    "shots": 104,
+    "shots_on_target": 46,
+    "photo": "https://media.api-sports.io/football/players/2489.png",
+   "team_id": 157
+  },
+  {
+    "id": 19617,
+    "name": "Michael Olise",
+    "position": "Midfielder",
+    "appearances": 59,
+    "minutes": 4199,
+    "goals": 24,
+    "assists": 20,
+    "shots": 162,
+    "shots_on_target": 66,
+    "photo": "https://media.api-sports.io/football/players/19617.png",
+   "team_id": 157
+  }
+  
+]

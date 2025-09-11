@@ -1,0 +1,110 @@
+[
+  {
+    "id": 863,
+    "name": "Rodrigo Bentancur",
+    "position": "Midfielder",
+    "appearances": 30,
+    "minutes": 1939,
+    "goals": 2,
+    "assists": 0.25,
+    "shots": 23,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/863.png",
+   "team_id": 47
+  },
+  {
+    "id": 2413,
+    "name": "Richarlison",
+    "position": "Attacker",
+    "appearances": 19,
+    "minutes": 815,
+    "goals": 6,
+    "assists": 2,
+    "shots": 25,
+    "shots_on_target": 12,
+    "photo": "https://media.api-sports.io/football/players/2413.png",
+   "team_id": 47
+  },
+  {
+    "id": 15911,
+    "name": "Mohammed Kudus",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 2930,
+    "goals": 5,
+    "assists": 5,
+    "shots": 77,
+    "shots_on_target": 21,
+    "photo": "https://media.api-sports.io/football/players/15911.png",
+   "team_id": 47
+  },
+  {
+    "id": 18883,
+    "name": "Dominic Solanke",
+    "position": "Attacker",
+    "appearances": 30,
+    "minutes": 2258,
+    "goals": 9,
+    "assists": 3,
+    "shots": 59,
+    "shots_on_target": 25,
+    "photo": "https://media.api-sports.io/football/players/18883.png",
+   "team_id": 47
+  },
+  
+  {
+    "id": 237129,
+    "name": "Pape Matar Sarr",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 2258,
+    "goals": 3,
+    "assists": 3,
+    "shots": 35,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/237129.png",
+   "team_id": 47
+  },
+
+  {
+    "id": 129711,
+    "name": "Brennan Johnson",
+    "position": "Midfielder",
+    "appearances": 33,
+    "minutes": 2177,
+    "goals": 11,
+    "assists": 3,
+    "shots": 54,
+    "shots_on_target": 20,
+    "photo": "https://media.api-sports.io/football/players/129711.png",
+   "team_id": 47
+  },
+
+  {
+    "id": 162016,
+    "name": "Xavi Simons",
+    "position": "Midfielder",
+    "appearances": 25,
+    "minutes": 2150,
+    "goals": 10,
+    "assists": 6,
+    "shots": 50,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/162016.png",
+   "team_id": 47
+  },
+
+  {
+    "id": 21104,
+    "name": "Kolo Muani",
+    "position": "Attacker",
+    "appearances": 16,
+    "minutes": 1160,
+    "goals": 8,
+    "assists": 1,
+    "shots": 25,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/21104.png",
+   "team_id": 47
+  }
+]

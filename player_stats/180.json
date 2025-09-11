@@ -1,0 +1,44 @@
+[
+
+  {
+    "id": 24955,
+    "name": "Mathias Honsak",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 1965,
+    "goals": 10,
+    "assists": 3,
+    "shots": 55,
+    "shots_on_target": 22,
+    "photo": "https://media.api-sports.io/football/players/24955.png",
+   "team_id": 180
+  },
+
+  {
+    "id": 327897,
+    "name": "Arijon Ibrahimovic",
+    "position": "Midfielder",
+    "appearances": 26,
+    "minutes": 877,
+    "goals": 2,
+    "assists": 2,
+    "shots": 23,
+    "shots_on_target": 7,
+    "photo": "https://media.api-sports.io/football/players/327897.png",
+   "team_id": 180
+  },
+
+  {
+    "id": 15732,
+    "name": "Mikkel Kaufmann",
+    "position": "Midfielder",
+    "appearances": 34,
+    "minutes": 1787,
+    "goals": 2,
+    "assists": 2,
+    "shots": 26,
+    "shots_on_target": 13,
+    "photo": "https://media.api-sports.io/football/players/15732.png",
+   "team_id": 180
+  }
+]

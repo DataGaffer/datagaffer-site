@@ -1,0 +1,82 @@
+[
+  {
+    "id": 2763,
+    "name": "Mario Pasalic",
+    "position": "Midfielder",
+    "appearances": 49,
+    "minutes": 2935,
+    "goals": 7,
+    "assists": 7,
+    "shots": 69,
+    "shots_on_target": 23,
+    "photo": "https://media.api-sports.io/football/players/2763.png",
+   "team_id": 499
+  },
+  {
+    "id": 10097,
+    "name": "Ederson",
+    "position": "Midfielder",
+    "appearances": 50,
+    "minutes": 3860,
+    "goals": 5,
+    "assists": 1,
+    "shots": 52,
+    "shots_on_target": 14,
+    "photo": "https://media.api-sports.io/football/players/10097.png",
+   "team_id": 499
+  },
+  {
+    "id": 30432,
+    "name": "Marten de Roon",
+    "position": "Midfielder",
+    "appearances": 52,
+    "minutes": 4472,
+    "goals": 4,
+    "assists": 5,
+    "shots": 22,
+    "shots_on_target": 5,
+    "photo": "https://media.api-sports.io/football/players/30432.png",
+   "team_id": 499
+  },
+  {
+    "id": 30544,
+    "name": "Gianluca Scamacca",
+    "position": "Attacker",
+    "appearances": 47,
+    "minutes": 2474,
+    "goals": 20,
+    "assists": 7,
+    "shots": 106,
+    "shots_on_target": 45,
+    "photo": "https://media.api-sports.io/football/players/30544.png",
+   "team_id": 499
+  },
+ 
+  {
+    "id": 147859,
+    "name": "Charles De Ketelaere",
+    "position": "Attacker",
+    "appearances": 52,
+    "minutes": 3171,
+    "goals": 13,
+    "assists": 12,
+    "shots": 74,
+    "shots_on_target": 34,
+    "photo": "https://media.api-sports.io/football/players/147859.png",
+   "team_id": 499
+  },
+  
+  {
+    "id": 203474,
+    "name": "Nicola Zalewski",
+    "position": "Midfielder",
+    "appearances": 32,
+    "minutes": 1374,
+    "goals": 2,
+    "assists": 2,
+    "shots": 17,
+    "shots_on_target": 6,
+    "photo": "https://media.api-sports.io/football/players/203474.png",
+   "team_id": 499
+  }
+]

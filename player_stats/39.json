@@ -1,0 +1,57 @@
+[
+  {
+    "id": 2032,
+    "name": "J. Strand Larsen",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 2587,
+    "goals": 14,
+    "assists": 4,
+    "shots": 54,
+    "shots_on_target": 33,
+     "photo": "https://media.api-sports.io/football/players/2032.png",
+   "team_id": 39
+  },
+  {
+    "id": 3080,
+    "name": "Marshall Munetsi",
+    "position": "Midfielder",
+    "appearances": 17,
+    "minutes": 1348,
+    "goals": 2,
+    "assists": 2,
+    "shots": 23,
+    "shots_on_target": 7,
+     "photo": "https://media.api-sports.io/football/players/3080.png",
+   "team_id": 39
+  },
+  {
+    "id": 13708,
+    "name": "Jhon Arias",
+    "position": "Midfielder",
+    "appearances": 16,
+    "minutes": 1313,
+    "goals": 1,
+    "assists": 4,
+    "shots": 21,
+    "shots_on_target": 7,
+     "photo": "https://media.api-sports.io/football/players/13708.png",
+   "team_id": 39
+  },
+  
+ {
+    "id": 20665,
+    "name": "J. Bellegarde",
+    "position": "Midfielder",
+    "appearances": 35,
+    "minutes": 1677,
+    "goals": 2,
+    "assists": 7,
+    "shots": 25,
+    "shots_on_target": 6,
+     "photo": "https://media.api-sports.io/football/players/20665.png",
+   "team_id": 39
+  }
+  
+
+]
