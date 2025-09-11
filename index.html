@@ -122,38 +122,47 @@
       border-radius: 2px;
     }
 
-    @media screen and (max-width: 600px) {
+    @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-    padding: 0 20px;
+    grid-template-columns: repeat(2, 1fr); /*  Keeps 2 columns on mobile */
+    gap: 16px;
+    padding: 0 10px;
+    justify-content: center;
   }
 
   .button {
-    font-size: 22px;
-    padding: 16px 20px;
-    width: 100%;
-    margin: 0 auto;
+    font-size: 18px;
+    padding: 14px 18px;
   }
 
   .play-button {
-    font-size: 26px;
-    padding: 16px 20px;
-    width: 100%;
-  }
-
-  .dg-site-name {
-    font-size: 40px;
+    font-size: 22px;
+    padding: 16px 40px;
   }
 
   .dg-logo-img {
-    height: 120px;
+    height: 100px;
+  }
+
+  .dg-site-name {
+    font-size: 32px;
+  }
+
+  .dg-tagline {
+    font-size: 16px;
+    padding: 10px;
   }
 
   .section-title {
     font-size: 22px;
-  } 
+    margin: 30px 0 10px;
+  }
+
+  .play-line {
+    width: 70%;
+  }
 }
+
 
   </style>
 </head>
