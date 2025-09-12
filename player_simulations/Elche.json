@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Rafa Mir",
+    "position": "Attacker",
+    "goals_per90_simulated": 0.081,
+    "appearances": 25,
+    "goals": 4,
+    "assists": 2,
+    "shots": 32,
+    "shots_on_target": 11
+  },
+  {
+    "name": "Rodrigo Mendoza",
+    "position": "Midfielder",
+    "goals_per90_simulated": 0.055,
+    "appearances": 27,
+    "goals": 3,
+    "assists": 2,
+    "shots": 26,
+    "shots_on_target": 7
+  },
+  {
+    "name": "Alvaro Rodriguez",
+    "position": "Attacker",
+    "goals_per90_simulated": 0.053,
+    "appearances": 29,
+    "goals": 3,
+    "assists": 3,
+    "shots": 39,
+    "shots_on_target": 15
+  }
+]

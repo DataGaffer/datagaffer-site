@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Laurent Abergel",
+    "position": "Midfielder",
+    "goals_per90_simulated": 0.014,
+    "appearances": 35,
+    "goals": 1,
+    "assists": 7,
+    "shots": 36,
+    "shots_on_target": 11
+  },
+  {
+    "name": "Aiyegun Tosin",
+    "position": "Attacker",
+    "goals_per90_simulated": 0.082,
+    "appearances": 29,
+    "goals": 5,
+    "assists": 8,
+    "shots": 52,
+    "shots_on_target": 19
+  },
+  {
+    "name": "Sambou Soumano",
+    "position": "Attacker",
+    "goals_per90_simulated": 0.144,
+    "appearances": 36,
+    "goals": 10,
+    "assists": 4,
+    "shots": 53,
+    "shots_on_target": 29
+  },
+  {
+    "name": "Arthur Avom",
+    "position": "Midfielder",
+    "goals_per90_simulated": 0.027,
+    "appearances": 36,
+    "goals": 2,
+    "assists": 5,
+    "shots": 38,
+    "shots_on_target": 8
+  }
+]

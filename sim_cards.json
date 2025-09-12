@@ -2,15 +2,15 @@
   {
     "home": "Bayer Leverkusen",
     "away": "Eintracht Frankfurt",
-    "home_logo": "https://media-4.api-sports.io/football/teams/168.png",
-    "away_logo": "https://media-4.api-sports.io/football/teams/169.png",
-    "projected_score": "2.09 vs 1.49",
+    "home_logo": "assets/logos/168.png",
+    "away_logo": "assets/logos/169.png",
+    "projected_score": "2.08 vs 1.49",
     "win": {
-      "sim": "50.8% (1.97)",
+      "sim": "49.7% (2.01)",
       "book": 2.25
     },
     "draw": {
-      "sim": "21.3% (4.69)",
+      "sim": "22.4% (4.46)",
       "book": 3.8
     },
     "away_win": {
@@ -18,15 +18,15 @@
       "book": 2.88
     },
     "home_o1_5": {
-      "sim": "61.5% (1.63)",
-      "book": null
+      "sim": "63.0% (1.59)",
+      "book": 1.92
     },
     "away_o1_5": {
-      "sim": "44.5% (2.25)",
+      "sim": "44.4% (2.25)",
       "book": null
     },
     "over_2_5": {
-      "sim": "69.3% (1.44)",
+      "sim": "70.1% (1.43)",
       "book": null
     },
     "btts": {
@@ -37,46 +37,46 @@
   {
     "home": "Marseille",
     "away": "Lorient",
-    "home_logo": "https://media-4.api-sports.io/football/teams/81.png",
-    "away_logo": "https://media-4.api-sports.io/football/teams/97.png",
-    "projected_score": "2.52 vs 1.21",
+    "home_logo": "assets/logos/81.png",
+    "away_logo": "assets/logos/97.png",
+    "projected_score": "2.52 vs 1.15",
     "win": {
       "sim": "66.6% (1.5)",
       "book": 1.3
     },
     "draw": {
-      "sim": "17.0% (5.88)",
+      "sim": "18.1% (5.52)",
       "book": 5.5
     },
     "away_win": {
-      "sim": "16.4% (6.1)",
+      "sim": "15.3% (6.54)",
       "book": 8.5
     },
     "home_o1_5": {
-      "sim": "71.1% (1.41)",
+      "sim": "69.3% (1.44)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "33.8% (2.96)",
+      "sim": "30.4% (3.29)",
       "book": null
     },
     "over_2_5": {
-      "sim": "70.6% (1.42)",
+      "sim": "71.5% (1.4)",
       "book": null
     },
     "btts": {
-      "sim": "63.8% (1.57)",
+      "sim": "63.5% (1.57)",
       "book": null
     }
   },
   {
     "home": "Sevilla",
     "away": "Elche",
-    "home_logo": "https://media-4.api-sports.io/football/teams/536.png",
-    "away_logo": "https://media-4.api-sports.io/football/teams/797.png",
-    "projected_score": "1.42 vs 0.99",
+    "home_logo": "assets/logos/536.png",
+    "away_logo": "assets/logos/797.png",
+    "projected_score": "1.46 vs 1.00",
     "win": {
-      "sim": "45.8% (2.18)",
+      "sim": "46.9% (2.13)",
       "book": 2.0
     },
     "draw": {
@@ -84,23 +84,23 @@
       "book": 3.3
     },
     "away_win": {
-      "sim": "26.6% (3.76)",
+      "sim": "25.5% (3.92)",
       "book": 4.0
     },
     "home_o1_5": {
-      "sim": "41.5% (2.41)",
+      "sim": "43.0% (2.33)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "26.2% (3.82)",
+      "sim": "24.7% (4.05)",
       "book": null
     },
     "over_2_5": {
-      "sim": "44.6% (2.24)",
+      "sim": "44.1% (2.27)",
       "book": null
     },
     "btts": {
-      "sim": "48.8% (2.05)",
+      "sim": "50.3% (1.99)",
       "book": null
     }
   }

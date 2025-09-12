@@ -1,127 +1,198 @@
-
 <html>
 <head>
-  <title>xG Stats</title>
+  <title>Expected Stats</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
-    h1 { text-align: center; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    header { background: #003f2e; color: white; padding: 15px; text-align: center; font-size: 22px; font-weight: bold; }
+
+    .banner {
+      text-align: center;
+      font-size: 20px;
+      margin: 20px auto;
+      color: #003f2e;
+      background: #e6f4ec;
+      padding: 10px;
+      border-left: 6px solid #003f2e;
+      width: 60%;
+      border-radius: 4px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+
+.container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
     .buttons { text-align: center; margin-bottom: 20px; }
-    .buttons button { margin: 0 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
-    table { width: 100%; max-width: 900px; margin: auto; border-collapse: collapse; background: white; }
-    th, td { padding: 10px; text-align: center; border: 1px solid #ccc; }
-    th { background: #222; color: white; }
-    img { width: 25px; height: 25px; vertical-align: middle; }
+    .buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: 2px solid #003f2e;
+      border-radius: 4px;
+      background: white;
+      color: #003f2e;
+    }
+    .buttons button.active {
+      background: #003f2e;
+      color: white;
+      font-weight: bold;
+    }
+
+    table {
+      width: 85%;
+      max-width: 950px;
+      margin: auto;
+      border-collapse: collapse;
+      background: white;
+      font-size: 18px;
+      line-height: 1.2;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 8px 10px;       /* slightly taller rows */
+      text-align: center;
+      border: 1px solid #ccc;
+      font-weight: normal;
+    }
+    th {
+      background: #003f2e;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    th.sortable:hover { background: #003f2e; }
+
+    th:first-child { border-top-left-radius: 10px; }
+    th:last-child { border-top-right-radius: 10px; }
+
+    img { width: 30px; height: 30px; vertical-align: middle; }
+    tr:nth-child(even) { background: #f2f2f2; }
+
+    .sorted-col { background: #fffacd !important; font-weight: bold; } /* light yellow */
+    .active-header { background: #fcff55 !important; color: black !important; border-bottom: 1px solid #ffffff; } /* bright yellow, black font */
   </style>
 </head>
 <body>
-  <h1>xG, Corners & Shots Stats</h1>
+  <div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
+  <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+       alt="DG Logo"
+       style="height: 90px; width: auto; position: absolute; left: 20px; top: 0px; z-index: 2;" />
+  <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
+</div>
+  <div class="banner">Expected goals, corners and shot stats after 5,000 match simulations</div>
 
   <div class="buttons">
-    <button onclick="showTable('xg')">Expected Goals</button>
-    <button onclick="showTable('corners')">Expected Corners</button>
-    <button onclick="showTable('shots')">Expected Shots</button>
+    <button id="btn-xg" onclick="showTable('xg', this)">Expected Goals</button>
+    <button id="btn-corners" onclick="showTable('corners', this)">Expected Corners</button>
+    <button id="btn-shots" onclick="showTable('shots', this)">Expected Shots</button>
   </div>
 
-  <div id="xg" class="table-section">
-    <table>
-      <tr>
-        <th></th>
-        <th>Home Team</th>
-        <th>Home xG</th>
-        <th>Total xG</th>
-        <th>Away xG</th>
-        <th>Away Team</th>
-        <th></th>
-      </tr>
-
-      <tr>
-        <td><img src="https://media.api-sports.io/football/teams/1111.png" alt="{'id': 1111, 'name': 'Kosovo', 'logo': 'https://media.api-sports.io/football/teams/1111.png', 'winner': None}"></td>
-        <td>{'id': 1111, 'name': 'Kosovo', 'logo': 'https://media.api-sports.io/football/teams/1111.png', 'winner': None}</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>{'id': 5, 'name': 'Sweden', 'logo': 'https://media.api-sports.io/football/teams/5.png', 'winner': None}</td>
-        <td><img src="https://media.api-sports.io/football/teams/5.png" alt="{'id': 5, 'name': 'Sweden', 'logo': 'https://media.api-sports.io/football/teams/5.png', 'winner': None}"></td>
-      </tr>
-    
-      <tr>
-        <td><img src="https://media.api-sports.io/football/teams/15.png" alt="{'id': 15, 'name': 'Switzerland', 'logo': 'https://media.api-sports.io/football/teams/15.png', 'winner': None}"></td>
-        <td>{'id': 15, 'name': 'Switzerland', 'logo': 'https://media.api-sports.io/football/teams/15.png', 'winner': None}</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>{'id': 1091, 'name': 'Slovenia', 'logo': 'https://media.api-sports.io/football/teams/1091.png', 'winner': None}</td>
-        <td><img src="https://media.api-sports.io/football/teams/1091.png" alt="{'id': 1091, 'name': 'Slovenia', 'logo': 'https://media.api-sports.io/football/teams/1091.png', 'winner': None}"></td>
-      </tr>
-    
-      <tr>
-        <td><img src="https://media.api-sports.io/football/teams/1100.png" alt="{'id': 1100, 'name': 'Belarus', 'logo': 'https://media.api-sports.io/football/teams/1100.png', 'winner': None}"></td>
-        <td>{'id': 1100, 'name': 'Belarus', 'logo': 'https://media.api-sports.io/football/teams/1100.png', 'winner': None}</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>{'id': 1108, 'name': 'Scotland', 'logo': 'https://media.api-sports.io/football/teams/1108.png', 'winner': None}</td>
-        <td><img src="https://media.api-sports.io/football/teams/1108.png" alt="{'id': 1108, 'name': 'Scotland', 'logo': 'https://media.api-sports.io/football/teams/1108.png', 'winner': None}"></td>
-      </tr>
-    
-      <tr>
-        <td><img src="https://media.api-sports.io/football/teams/1093.png" alt="{'id': 1093, 'name': 'Gibraltar', 'logo': 'https://media.api-sports.io/football/teams/1093.png', 'winner': None}"></td>
-        <td>{'id': 1093, 'name': 'Gibraltar', 'logo': 'https://media.api-sports.io/football/teams/1093.png', 'winner': None}</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>{'id': 1098, 'name': 'Faroe Islands', 'logo': 'https://media.api-sports.io/football/teams/1098.png', 'winner': None}</td>
-        <td><img src="https://media.api-sports.io/football/teams/1098.png" alt="{'id': 1098, 'name': 'Faroe Islands', 'logo': 'https://media.api-sports.io/football/teams/1098.png', 'winner': None}"></td>
-      </tr>
-    
-      <tr>
-        <td><img src="https://media.api-sports.io/football/teams/1117.png" alt="{'id': 1117, 'name': 'Greece', 'logo': 'https://media.api-sports.io/football/teams/1117.png', 'winner': None}"></td>
-        <td>{'id': 1117, 'name': 'Greece', 'logo': 'https://media.api-sports.io/football/teams/1117.png', 'winner': None}</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>{'id': 21, 'name': 'Denmark', 'logo': 'https://media.api-sports.io/football/teams/21.png', 'winner': None}</td>
-        <td><img src="https://media.api-sports.io/football/teams/21.png" alt="{'id': 21, 'name': 'Denmark', 'logo': 'https://media.api-sports.io/football/teams/21.png', 'winner': None}"></td>
-      </tr>
-    
-      <tr>
-        <td><img src="https://media.api-sports.io/football/teams/1116.png" alt="{'id': 1116, 'name': 'Israel', 'logo': 'https://media.api-sports.io/football/teams/1116.png', 'winner': None}"></td>
-        <td>{'id': 1116, 'name': 'Israel', 'logo': 'https://media.api-sports.io/football/teams/1116.png', 'winner': None}</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>{'id': 768, 'name': 'Italy', 'logo': 'https://media.api-sports.io/football/teams/768.png', 'winner': None}</td>
-        <td><img src="https://media.api-sports.io/football/teams/768.png" alt="{'id': 768, 'name': 'Italy', 'logo': 'https://media.api-sports.io/football/teams/768.png', 'winner': None}"></td>
-      </tr>
-    
-      <tr>
-        <td><img src="https://media.api-sports.io/football/teams/3.png" alt="{'id': 3, 'name': 'Croatia', 'logo': 'https://media.api-sports.io/football/teams/3.png', 'winner': None}"></td>
-        <td>{'id': 3, 'name': 'Croatia', 'logo': 'https://media.api-sports.io/football/teams/3.png', 'winner': None}</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>{'id': 1109, 'name': 'Montenegro', 'logo': 'https://media.api-sports.io/football/teams/1109.png', 'winner': None}</td>
-        <td><img src="https://media.api-sports.io/football/teams/1109.png" alt="{'id': 1109, 'name': 'Montenegro', 'logo': 'https://media.api-sports.io/football/teams/1109.png', 'winner': None}"></td>
-      </tr>
-    
-    </table>
-  </div>
-
-  <div id="corners" class="table-section" style="display:none;">
-    <p style="text-align:center;">(Coming soon)</p>
-  </div>
-
-  <div id="shots" class="table-section" style="display:none;">
-    <p style="text-align:center;">(Coming soon)</p>
-  </div>
+  <div id="tables"></div>
 
   <script>
-    function showTable(id) {
-      document.getElementById('xg').style.display = 'none';
-      document.getElementById('corners').style.display = 'none';
-      document.getElementById('shots').style.display = 'none';
-      document.getElementById(id).style.display = 'block';
+    let currentFixtures = [];
+    let currentType = "xg";
+    let sortConfig = { column: null, asc: false };
+
+    async function loadFixtures() {
+      const response = await fetch("fixtures.json");
+      const fixtures = await response.json();
+      return fixtures;
     }
+
+    function buildTable(fixtures, type) {
+      let table = `
+        <table id="statsTable">
+          <tr>
+            <th></th>
+            <th>Home Team</th>
+            <th class="sortable" onclick="sortTable(2, this)">Team</th>
+            <th class="sortable" onclick="sortTable(3, this)">Total</th>
+            <th class="sortable" onclick="sortTable(4, this)">Team</th>
+            <th>Away Team</th>
+            <th></th>
+          </tr>
+      `;
+
+      fixtures.forEach(f => {
+        const home = f.home.name;
+        const away = f.away.name;
+        const homeLogo = f.home.logo;
+        const awayLogo = f.away.logo;
+
+        const stats = f.sim_stats[type.toLowerCase()];
+        if (!stats) return;
+
+        table += `
+          <tr>
+            <td><img src="${homeLogo}" alt="${home}"></td>
+            <td>${home}</td>
+            <td>${stats.home}</td>
+            <td>${stats.total}</td>
+            <td>${stats.away}</td>
+            <td>${away}</td>
+            <td><img src="${awayLogo}" alt="${away}"></td>
+          </tr>
+        `;
+      });
+
+      table += `</table>`;
+      return table;
+    }
+
+    async function showTable(type, btn = null) {
+      currentFixtures = await loadFixtures();
+      currentType = type;
+      document.getElementById("tables").innerHTML = buildTable(currentFixtures, type);
+
+      // reset sort config
+      sortConfig = { column: null, asc: false };
+
+      // button active state
+      document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+    }
+
+    function sortTable(colIndex, header) {
+      const table = document.getElementById("statsTable");
+      let rows = Array.from(table.rows).slice(1); // skip header
+
+      // first click = descending
+      const asc = sortConfig.column === colIndex ? !sortConfig.asc : false;
+      sortConfig = { column: colIndex, asc };
+
+      rows.sort((a, b) => {
+        let valA = parseFloat(a.cells[colIndex].innerText) || 0;
+        let valB = parseFloat(b.cells[colIndex].innerText) || 0;
+        return asc ? valA - valB : valB - valA;
+      });
+
+      // rebuild table body
+      rows.forEach(row => table.appendChild(row));
+
+      // reset highlights
+      rows.forEach(row => {
+        for (let i = 2; i <= 4; i++) row.cells[i].classList.remove("sorted-col");
+      });
+      document.querySelectorAll("th.sortable").forEach(th => th.classList.remove("active-header"));
+
+      // highlight sorted column + header
+      rows.forEach(row => row.cells[colIndex].classList.add("sorted-col"));
+      header.classList.add("active-header");
+    }
+
+    // Load xG table by default
+    showTable("xg", document.getElementById("btn-xg"));
   </script>
 </body>
 </html>
+
+
+

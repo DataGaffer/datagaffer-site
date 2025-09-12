@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Juanlu Sanchez",
+    "position": "Midfielder",
+    "goals_per90_simulated": 0.06,
+    "appearances": 38,
+    "goals": 5,
+    "assists": 6,
+    "shots": 19,
+    "shots_on_target": 7
+  },
+  {
+    "name": "Alfon Gonzalez",
+    "position": "Midfielder",
+    "goals_per90_simulated": 0.158,
+    "appearances": 30,
+    "goals": 9,
+    "assists": 5,
+    "shots": 62,
+    "shots_on_target": 30
+  },
+  {
+    "name": "Ruben Vargas",
+    "position": "Midfielder",
+    "goals_per90_simulated": 0.062,
+    "appearances": 23,
+    "goals": 3,
+    "assists": 3,
+    "shots": 33,
+    "shots_on_target": 7
+  },
+  {
+    "name": "Isaac Romero",
+    "position": "Midfielder",
+    "goals_per90_simulated": 0.079,
+    "appearances": 35,
+    "goals": 6,
+    "assists": 2,
+    "shots": 61,
+    "shots_on_target": 23
+  }
+]

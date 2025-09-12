@@ -36,14 +36,14 @@ def simulate_player_goals(player, team_avg_goals):
 
 # Go through each fixture
 for fixture in fixtures:
-    if fixture["date"] != today:
+    fixture_date = fixture["date"].split("T")[0]
+    if fixture_date != today:
         continue
 
-    for side in ["home_team", "away_team"]:
-        team = fixture[side]
-        team_id = team["id"]
-        team_name = team["name"]
-        team_goals = fixture["home_score"] if side == "home_team" else fixture["away_score"]
+    for side in ["home", "away"]:
+        team_id = fixture[f"{side}_id"]
+        team_name = fixture[side]["name"]
+        team_goals = 2.0  # Default fallback if no score available — adjust if needed
 
         stats_path = os.path.join(PLAYER_STATS_FOLDER, f"{team_id}.json")
         if not os.path.exists(stats_path):
@@ -77,5 +77,6 @@ for fixture in fixtures:
             print(f"✅ Simulated {len(simulated_players)} players for {team_name}")
         else:
             print(f"❌ No valid players found for {team_name}")
+
 
 

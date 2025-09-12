@@ -25,8 +25,8 @@ for fixture in fixtures:
     sim_cards.append({
         "home": sim["home"],
         "away": sim["away"],
-        "home_logo": sim["home_logo"],
-        "away_logo": sim["away_logo"],
+        "home_logo": f"assets/logos/{home_id}.png",  # ← changed
+        "away_logo": f"assets/logos/{away_id}.png",  # ← changed
         "projected_score": f"{sim['home_score']} vs {sim['away_score']}",
         "win": {
             "sim": f"{sim['home_win_pct']}% ({pct_to_odds(sim['home_win_pct'])})",
@@ -63,5 +63,6 @@ with open("sim_cards.json", "w") as f:
     json.dump(sim_cards, f, indent=2)
 
 print(f"✅ {len(sim_cards)} sim card(s) saved to sim_cards.json")
+
 
 

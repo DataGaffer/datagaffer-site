@@ -1,16 +1,36 @@
-import os
 import subprocess
+import sys
+from datetime import datetime
 
-# Step 1: Run fetch_fixtures.py to get today's games
-print("🔄 Fetching today's fixtures...")
-subprocess.run(["python3", "fetch_fixtures.py"])
+LOG_FILE = "daily_log.txt"
 
-# Step 2: Run main.py to generate index.html with match projections
-print("⚙️ Generating updated projection cards...")
-subprocess.run(["python3", "main.py"])
+def log(message):
+    """Append timestamped message to daily_log.txt and print it."""
+    timestamp = datetime.utcnow().strftime("[%Y-%m-%d %H:%M:%S UTC]")
+    line = f"{timestamp} {message}\n"
+    print(line.strip())
+    with open(LOG_FILE, "a") as f:
+        f.write(line)
 
-# Step 3: Git add, commit, and push the updated index.html
-print("📦 Committing updated index.html to GitHub...")
-subprocess.run(["git", "add", "index.html"])
-subprocess.run(["git", "commit", "-m", "🔁 Daily auto-update of projection cards"])
-subprocess.run(["git", "push"])
+def run_script(script):
+    log(f"▶️ Running {script} ...")
+    try:
+        subprocess.run([sys.executable, script], check=True)
+        log(f"✅ {script} completed successfully.")
+    except subprocess.CalledProcessError as e:
+        log(f"❌ {script} failed: {e}")
+        sys.exit(1)
+
+def main():
+    log("🚀 Starting daily run...")
+
+    # Step 1: Fetch fixtures + simulations (xG, corners, shots)
+    run_script("fetch_fixtures.py")
+
+    # Step 2: Generate Sim Cards
+    run_script("sim_cards.py")
+
+    log("🎉 Daily run finished — fixtures.json and sim_cards.json updated.\n")
+
+if __name__ == "__main__":
+    main()

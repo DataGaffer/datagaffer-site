@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sim Cards | DataGaffer</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background: #f9f9f9;
       margin: 0;
       padding: 0;
       color: #003f2e;
@@ -30,20 +34,21 @@
     .match-box {
       background: white;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 18px 12px;
       text-align: center;
-      width: 140px;
+      width: 120px;
+      height: 70px;
     }
 
     .match-box img {
       height: 45px;
-      vertical-align: middle;
     }
 
     .match-box .score {
       font-weight: bold;
       margin-top: 8px;
+      font-size: 20px;
     }
 
     .explanation {
@@ -57,149 +62,219 @@
 
     .sim-card {
       background: white;
-      border-radius: 16px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 25px;
-      margin-bottom: 40px;
+      border: 2px solid black;
+      border-radius: 20px;
+      width: 600px;
+      margin: 0 auto 50px auto;
+      padding: 24px 20px 30px 20px;
+      text-align: center;
     }
 
-    .sim-header {
+    .team-row {
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
     }
 
-    .sim-header img {
-      height: 45px;
-    }
-
-    .sim-header .vs {
-      font-weight: bold;
-      font-size: 20px;
-      color: #007a33;
-    }
-
-    .sim-row {
+    .team-col {
+      width: 10%;
+      text-align: center;
+      white-space: nowrap;
       display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-top: 1px solid #eee;
-    }
-
-    .sim-row:first-of-type {
-      border-top: none;
-    }
-
-    .sim-label {
-      font-weight: bold;
-    }
-
-    .sim-value {
-      display: flex;
-      gap: 12px;
+      flex-direction: column;
+      align-items: center;
       font-size: 16px;
     }
 
-    @media (max-width: 768px) {
-      .match-grid {
-        justify-content: center;
-      }
+    .center-col {
+      width: 22%;
+      font-weight: bold;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.4;
+      margin-top: 20px;
+    }
 
-      .sim-row {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    .team-logo {
+      height: 60px;
+      margin-bottom: 6px;
+    }
 
-      .sim-value {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 5px;
-      }
+    .label {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .team-name {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 12px;
+      white-space: nowrap;
+    }
+
+    .odds-section {
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin: 20px 0 4px 0;
+    }
+
+    .score-box {
+      border: 2px solid black;
+      border-radius: 6px;
+      display: inline-block;
+      padding: 10px 16px;
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .score-box span {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 20px;
+      color: #000;
+      font-weight: bold;
+      border-bottom: 3px solid #14b36e;
+    }
+
+    .odds-value {
+      font-weight: bold;
+    }
+
+    .green {
+      color: #000;
     }
   </style>
 </head>
 <body>
-  <!-- Header Bar with Logo -->
-<div style="background-color: #014421; color: white; display: flex; align-items: center; padding: 12px 20px;">
-  <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DG Logo" style="height: 50px; margin-right: 15px;">
-  <h1 style="margin: 0; font-size: 24px;">DataGaffer.com</h1>
+
+<!-- Header -->
+<div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
+  <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+       alt="DG Logo"
+       style="height: 90px; position: absolute; left: 20px; top: 0px; z-index: 2;" />
+  <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
 </div>
 
-<!-- Today’s Slate Title -->
-<div style="text-align: center; font-size: 24px; font-weight: bold; color: #014421; margin-top: 25px; margin-bottom: 10px;">
+<!-- Title -->
+<div style="text-align: center; font-size: 24px; font-weight: bold; color: #014421; margin-top: 20px; margin-bottom: 0px;">
   <u>Today’s Slate</u>
 </div>
 
-  <div class="container">
-    <div class="match-grid" id="match-grid"></div>
-
-    <div class="explanation">
-      Each Sim Card below compares DataGaffer match predictions with live bookmaker odds.
-    </div>
-
-    <div id="sim-cards"></div>
+<div class="container">
+  <div class="match-grid" id="match-grid"></div>
+  <div class="explanation">
+    Each sim card below compares DataGaffer sim odds with live bookmaker odds.
   </div>
+  <div id="sim-cards"></div>
+</div>
 
-  <script>
-    fetch('sim_cards.json')
-      .then(response => response.json())
-      .then(data => {
-        const grid = document.getElementById('match-grid');
-        const simCards = document.getElementById('sim-cards');
+<script>
+function slugify(text) {
+  return text.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
 
-        data.forEach(match => {
-          // Add match to top grid
-          const box = document.createElement('div');
-          box.className = 'match-box';
-          box.innerHTML = `
-            <div><img src="${match.home_logo}" alt=""> vs <img src="${match.away_logo}" alt=""></div>
-            <div class="score">${match.projected_score}</div>
-          `;
-          grid.appendChild(box);
+fetch('sim_cards.json')
+.then(res => res.json())
+.then(data => {
+  const grid = document.getElementById('match-grid');
+  const simCards = document.getElementById('sim-cards');
 
-          // Create sim card
-          const card = document.createElement('div');
-          card.className = 'sim-card';
+  data.forEach(match => {
+    const slug = `simcard-${slugify(match.home)}-vs-${slugify(match.away)}`;
 
-          card.innerHTML = `
-            <div class="sim-header">
-              <img src="${match.home_logo}" alt="">
-              <div class="vs">${match.home} vs ${match.away}</div>
-              <img src="${match.away_logo}" alt="">
-            </div>
+    // Grid box with link
+    const box = document.createElement('div');
+    box.className = 'match-box';
+    box.innerHTML = `
+      <a href="#${slug}" style="text-decoration: none; color: inherit;">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 14px; margin-bottom: 10px;">
+          <img src="${match.home_logo}" alt="">
+          <img src="${match.away_logo}" alt="">
+        </div>
+        <div class="score">${match.projected_score}</div>
+      </a>
+    `;
+    grid.appendChild(box);
 
-            ${generateRow('Win', match.win.sim, match.win.book)}
-            ${generateRow('Draw', match.draw.sim, match.draw.book)}
-            ${generateRow('Team Total (o1.5)', match.home_o1_5.sim, match.home_o1_5.book)}
-            ${generateRow('Team Total (o1.5)', match.away_o1_5.sim, match.away_o1_5.book)}
-            ${generateRow('Game Total (o2.5)', match.over_2_5.sim, match.over_2_5.book)}
-            ${generateRow('Both Teams To Score', match.btts.sim, match.btts.book)}
+    // Sim card
+    const card = document.createElement('div');
+    card.className = 'sim-card';
+    card.id = slug;
+    card.innerHTML = `
+      <div class="team-row" style="margin-bottom: 12px;">
+        <div class="team-col"><div class="label">Home</div></div>
+        <div class="center-col"></div>
+        <div class="team-col"><div class="label">Away</div></div>
+      </div>
 
-            <div class="sim-row">
-              <div class="sim-label">Projected Score</div>
-              <div>${match.projected_score}</div>
-            </div>
-          `;
+      <div class="team-row">
+        <div class="team-col"><img src="${match.home_logo}" class="team-logo" /></div>
+        <div class="center-col">vs</div>
+        <div class="team-col"><img src="${match.away_logo}" class="team-logo" /></div>
+      </div>
 
-          simCards.appendChild(card);
-        });
+      <div class="team-row">
+        <div class="team-col"><div class="team-name">${match.home}</div></div>
+        <div class="center-col"></div>
+        <div class="team-col"><div class="team-name">${match.away}</div></div>
+      </div>
 
-        function generateRow(label, simVal, bookVal) {
-          return `
-            <div class="sim-row">
-              <div class="sim-label">${label}</div>
-              <div class="sim-value">
-                <span><strong>Sim:</strong> ${simVal}</span>
-                <span><strong>Bet365:</strong> ${bookVal ?? 'N/A'}</span>
-              </div>
-            </div>
-          `;
-        }
-      });
-  </script>
+      <div class="team-row odds-section">
+        <div class="team-col">
+          <div class="label">Win:</div>
+          <div><span class="odds-value">${match.win.sim}</span></div>
+          <div style="margin-top: 4px;">${match.win.book ?? 'N/A'}</div>
+        </div>
+        <div class="center-col">Sim<br>Bet365</div>
+        <div class="team-col">
+          <div class="label">Win:</div>
+          <div><span class="odds-value">${match.win.away_sim ?? 'N/A'}</span></div>
+          <div style="margin-top: 4px;">${match.win.away_book ?? 'N/A'}</div>
+        </div>
+      </div>
+
+      <div class="team-row odds-section">
+        <div class="team-col">
+          <div class="label">o1.5:</div>
+          <div><span class="odds-value">${match.home_o1_5.sim}</span></div>
+          <div style="margin-top: 4px;">${match.home_o1_5.book ?? 'N/A'}</div>
+        </div>
+        <div class="center-col">Sim<br>Bet365</div>
+        <div class="team-col">
+          <div class="label">o1.5:</div>
+          <div><span class="odds-value">${match.away_o1_5.sim}</span></div>
+          <div style="margin-top: 4px;">${match.away_o1_5.book ?? 'N/A'}</div>
+        </div>
+      </div>
+
+      <div class="section-title">Game Total (o2.5):</div>
+      <div style="margin-top: 6px;">Sim: ${match.over_2_5.sim}   Bet365: <span class="green">${match.over_2_5.book ?? 'N/A'}</span></div>
+
+      <div class="section-title">Both Teams To Score:</div>
+      <div style="margin-top: 6px;">Sim: ${match.btts.sim}   Bet365: <span class="green">${match.btts.book ?? 'N/A'}</span></div>
+
+      <div class="score-box">
+        Projected Match Score:<br />
+        <span>${match.projected_score}</span>
+      </div>
+    `;
+    simCards.appendChild(card);
+  });
+});
+</script>
 </body>
 </html>
+
 
 
 

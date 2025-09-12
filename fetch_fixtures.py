@@ -1,6 +1,7 @@
 import requests
 import json
 from datetime import datetime
+from match_simulator import simulate_match
 
 API_KEY = "3c2b2ba5c3a0ccad7f273e8ca96bba5f"
 
@@ -43,44 +44,31 @@ for fixture in data["response"]:
     except (IndexError, KeyError, ValueError):
         book_odds = {}
 
-    # --- Get H2H stats (last 5 meetings) ---
-    h2h_url = f"https://v3.football.api-sports.io/fixtures/headtohead?h2h={home_id}-{away_id}&last=5"
-    h2h_response = requests.get(h2h_url, headers=headers).json()
+       # --- Run our simulation (goals, corners, shots) ---
     try:
-        h2h_matches = h2h_response["response"]
-        home_wins = 0
-        away_wins = 0
-        draws = 0
-
-        for match in h2h_matches:
-            h_goals = match["goals"]["home"]
-            a_goals = match["goals"]["away"]
-
-            if h_goals is None or a_goals is None:
-                continue
-
-            if h_goals > a_goals:
-                if match["teams"]["home"]["id"] == home_id:
-                    home_wins += 1
-                else:
-                    away_wins += 1
-            elif a_goals > h_goals:
-                if match["teams"]["away"]["id"] == away_id:
-                    away_wins += 1
-                else:
-                    home_wins += 1
-            else:
-                draws += 1
-
-        h2h_stats = {
-            "home_wins": home_wins,
-            "away_wins": away_wins,
-            "draws": draws
+        sim = simulate_match(home_id, away_id)
+        sim_stats = {
+            "xg": {
+                "home": f"{sim['home_score']:.2f}",
+                "away": f"{sim['away_score']:.2f}",
+                "total": f"{(sim['home_score'] + sim['away_score']):.2f}"
+            },
+            "corners": {
+                "home": f"{sim['home_corners']:.1f}",
+                "away": f"{sim['away_corners']:.1f}",
+                "total": f"{sim['total_corners']:.1f}"
+            },
+            "shots": {
+                "home": f"{sim['home_shots']:.1f}",
+                "away": f"{sim['away_shots']:.1f}",
+                "total": f"{sim['total_shots']:.1f}"
+            }
         }
 
+
     except Exception as e:
-        print(f"⚠️ H2H error for {home['name']} vs {away['name']}: {e}")
-        h2h_stats = {}
+        print(f"⚠️ Simulation error for {home['name']} vs {away['name']}: {e}")
+        sim_stats = {"xg": {}, "corners": {}, "shots": {}}
 
     # --- Save this fixture ---
     valid_matches.append({
@@ -93,36 +81,12 @@ for fixture in data["response"]:
         "away_logo": away["logo"],
         "date": fixture["fixture"]["date"],
         "book_odds": book_odds,
-        "h2h_stats": h2h_stats
+        "sim_stats": sim_stats
     })
 
 # Save to fixtures.json
 with open("fixtures.json", "w") as f:
     json.dump(valid_matches, f, indent=2)
 
-# Save to h2h_and_odds.json
-h2h_data = {}
-for match in valid_matches:
-    key = f"{match['home_id']}_{match['away_id']}"
-    odds = match.get("book_odds", {})
-    h2h = match.get("h2h_stats", {})
-
-    h2h_data[key] = {
-        "book_home_win": odds.get("home_win", 0),
-        "book_draw": odds.get("draw", 0),
-        "book_away_win": odds.get("away_win", 0),
-        "h2h_home_wins": h2h.get("home_wins", 0),
-        "h2h_away_wins": h2h.get("away_wins", 0),
-        "h2h_draws": h2h.get("draws", 0)
-    }
-
-with open("h2h_and_odds.json", "w") as f:
-    json.dump(h2h_data, f, indent=2)
-
-print(f"✅ Saved {len(valid_matches)} fixture(s) to fixtures.json.")
-print("✅ Saved h2h_and_odds.json.")
-
-
-
-
+print(f"✅ Saved {len(valid_matches)} fixture(s) to fixtures.json with simulation stats.")
 

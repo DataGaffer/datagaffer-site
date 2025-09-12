@@ -1,26 +1,26 @@
 {
   "168_169": {
-    "book_home_win": 2.25,
-    "book_draw": 3.8,
-    "book_away_win": 2.88,
+    "book_home_win": 2.1,
+    "book_draw": 3.4,
+    "book_away_win": 2.9,
     "h2h_home_wins": 5,
     "h2h_away_wins": 0,
     "h2h_draws": 0
   },
   "81_97": {
-    "book_home_win": 1.3,
+    "book_home_win": 1.33,
     "book_draw": 5.5,
-    "book_away_win": 8.5,
+    "book_away_win": 8.0,
     "h2h_home_wins": 4,
     "h2h_away_wins": 0,
     "h2h_draws": 1
   },
   "536_797": {
-    "book_home_win": 2.0,
-    "book_draw": 3.3,
-    "book_away_win": 4.0,
-    "h2h_home_wins": 3,
+    "book_home_win": 1.75,
+    "book_draw": 3.5,
+    "book_away_win": 5.0,
+    "h2h_home_wins": 2,
     "h2h_away_wins": 0,
-    "h2h_draws": 2
+    "h2h_draws": 3
   }
 }
