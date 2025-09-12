@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "fixture_id": 1388326,
+    "home": {
+      "id": 168,
+      "name": "Bayer Leverkusen",
+      "logo": "https://media.api-sports.io/football/teams/168.png",
+      "winner": null
+    },
+    "away": {
+      "id": 169,
+      "name": "Eintracht Frankfurt",
+      "logo": "https://media.api-sports.io/football/teams/169.png",
+      "winner": null
+    },
+    "home_id": 168,
+    "away_id": 169,
+    "home_logo": "https://media.api-sports.io/football/teams/168.png",
+    "away_logo": "https://media.api-sports.io/football/teams/169.png",
+    "date": "2025-09-12T18:30:00+00:00",
+    "book_odds": {
+      "home_win": 2.25,
+      "draw": 3.8,
+      "away_win": 2.88
+    },
+    "h2h_stats": {
+      "home_wins": 5,
+      "away_wins": 0,
+      "draws": 0
+    }
+  },
+  {
+    "fixture_id": 1387728,
+    "home": {
+      "id": 81,
+      "name": "Marseille",
+      "logo": "https://media.api-sports.io/football/teams/81.png",
+      "winner": null
+    },
+    "away": {
+      "id": 97,
+      "name": "Lorient",
+      "logo": "https://media.api-sports.io/football/teams/97.png",
+      "winner": null
+    },
+    "home_id": 81,
+    "away_id": 97,
+    "home_logo": "https://media.api-sports.io/football/teams/81.png",
+    "away_logo": "https://media.api-sports.io/football/teams/97.png",
+    "date": "2025-09-12T18:45:00+00:00",
+    "book_odds": {
+      "home_win": 1.3,
+      "draw": 5.5,
+      "away_win": 8.5
+    },
+    "h2h_stats": {
+      "home_wins": 4,
+      "away_wins": 0,
+      "draws": 1
+    }
+  },
+  {
+    "fixture_id": 1390858,
+    "home": {
+      "id": 536,
+      "name": "Sevilla",
+      "logo": "https://media.api-sports.io/football/teams/536.png",
+      "winner": null
+    },
+    "away": {
+      "id": 797,
+      "name": "Elche",
+      "logo": "https://media.api-sports.io/football/teams/797.png",
+      "winner": null
+    },
+    "home_id": 536,
+    "away_id": 797,
+    "home_logo": "https://media.api-sports.io/football/teams/536.png",
+    "away_logo": "https://media.api-sports.io/football/teams/797.png",
+    "date": "2025-09-12T19:00:00+00:00",
+    "book_odds": {
+      "home_win": 2.0,
+      "draw": 3.3,
+      "away_win": 4.0
+    },
+    "h2h_stats": {
+      "home_wins": 3,
+      "away_wins": 0,
+      "draws": 2
+    }
+  }
+]

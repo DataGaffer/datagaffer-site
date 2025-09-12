@@ -1,0 +1,47 @@
+[
+  {
+    "home": "Bayer Leverkusen",
+    "away": "Eintracht Frankfurt",
+    "home_logo": "https://media-4.api-sports.io/football/teams/168.png",
+    "away_logo": "https://media-4.api-sports.io/football/teams/169.png",
+    "home_score": 2.04,
+    "away_score": 1.53,
+    "home_win_pct": 49.8,
+    "draw_pct": 20.7,
+    "away_win_pct": 29.5,
+    "over_2_5_pct": 69.1,
+    "btts_pct": 68.2,
+    "home_o1_5_pct": 60.4,
+    "away_o1_5_pct": 44.6
+  },
+  {
+    "home": "Marseille",
+    "away": "Lorient",
+    "home_logo": "https://media-4.api-sports.io/football/teams/81.png",
+    "away_logo": "https://media-4.api-sports.io/football/teams/97.png",
+    "home_score": 2.58,
+    "away_score": 1.11,
+    "home_win_pct": 68.0,
+    "draw_pct": 17.4,
+    "away_win_pct": 14.6,
+    "over_2_5_pct": 71.5,
+    "btts_pct": 60.1,
+    "home_o1_5_pct": 73.3,
+    "away_o1_5_pct": 29.8
+  },
+  {
+    "home": "Sevilla",
+    "away": "Elche",
+    "home_logo": "https://media-4.api-sports.io/football/teams/536.png",
+    "away_logo": "https://media-4.api-sports.io/football/teams/797.png",
+    "home_score": 1.53,
+    "away_score": 0.98,
+    "home_win_pct": 49.9,
+    "draw_pct": 25.6,
+    "away_win_pct": 24.5,
+    "over_2_5_pct": 46.1,
+    "btts_pct": 51.4,
+    "home_o1_5_pct": 45.3,
+    "away_o1_5_pct": 25.1
+  }
+]
