@@ -113,6 +113,16 @@ def simulate_match(home_id, away_id):
     exp_home_shots *= coef_ratio
     exp_away_shots /= coef_ratio
 
+    # ---- H2H goal averages influence (25%) ----
+    fixture_key = f"{home_id}_{away_id}"
+    h2h_data = h2h_and_odds.get(fixture_key, {})
+    h_avg = h2h_data.get("h2h_avg_home", None)
+    a_avg = h2h_data.get("h2h_avg_away", None)
+    if isinstance(h_avg, (int, float)) and isinstance(a_avg, (int, float)):
+        w = 0.15  # 15% weight from H2H goal averages
+        exp_home = exp_home * (1 - w) + h_avg * w
+        exp_away = exp_away * (1 - w) + a_avg * w
+
     # --- Poisson simulations ---
     sims = 5000
     home_goals = np.random.poisson(exp_home, sims)
@@ -159,6 +169,7 @@ def simulate_match(home_id, away_id):
         "away_shots": round(np.mean(away_shots), 2),
         "total_shots": round(np.mean(home_shots + away_shots), 2),
     }
+
 
 
 
