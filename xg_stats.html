@@ -91,49 +91,45 @@
     }
 
     /* --- Mobile adjustments --- */
-    @media (max-width: 925px) {
-      body { overflow-x: hidden; }
+@media (max-width: 925px) {
+  body {
+    overflow-x: hidden; /* prevent side scrolling */
+  }
 
-      .header-logo { height: 50px !important; width: auto !important; }
-      h1 { font-size: 20px !important; }
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 12px !important;
+  }
 
-      .banner {
-        width: 85% !important;
-        font-size: 13px !important;
-        padding: 6px !important;
-        margin-top: 25px;
-      }
+  th, td {
+    padding: 4px !important;
+    font-size: 12px !important;
+  }
 
-      .buttons { margin-bottom: 30px; margin-top: 25px; }
-      .buttons button {
-        padding: 6px 10px !important;
-        font-size: 12px !important;
-        margin: 0 4px !important;
-      }
+  /* Equal width for Home and Away team name columns */
+  td:nth-child(2), td:nth-child(6) {
+    width: 20% !important;
+    white-space: nowrap;
+  }
 
-      .container { max-width: 100%; padding: 0 5px; }
+  /* Equal width for logos */
+  td:first-child, td:last-child {
+    width: 8% !important;
+  }
 
-      table {
-        width: 100% !important;
-        max-width: 100%;
-        font-size: 12px !important;
-        margin: auto;
-        margin-bottom: 25px;
-      }
+  /* Stat columns stay flexible */
+  td:nth-child(3), td:nth-child(4), td:nth-child(5) {
+    width: auto !important;
+  }
 
-      th, td {
-        padding: 4px !important;
-        font-size: 12px !important;
-      }
+  img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
 
-      img { width: 20px !important; height: 20px !important; }
-
-      /* 🔹 smaller fixed widths for mobile */
-      td:nth-child(2), th:nth-child(2),
-      td:nth-child(6), th:nth-child(6) {
-        width: 100px;
-      }
-    }
+    
   </style>
 </head>
 <body>
