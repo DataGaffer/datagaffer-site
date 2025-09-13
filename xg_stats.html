@@ -90,44 +90,53 @@
       text-overflow: ellipsis;
     }
 
-    /* --- Mobile adjustments --- */
+  /* --- Mobile adjustments --- */
 @media (max-width: 925px) {
-  body {
-    overflow-x: hidden; /* prevent side scrolling */
+  body { overflow-x: hidden; }
+
+  .header-logo { height: 50px !important; width: auto !important; }
+  h1 { font-size: 20px !important; }
+
+  .banner {
+    width: 85% !important;
+    font-size: 13px !important;
+    padding: 6px !important;
+    margin-top: 25px;
   }
+
+  .buttons { margin-bottom: 30px; margin-top: 25px; }
+  .buttons button {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    margin: 0 4px !important;
+  }
+
+  .container { max-width: 100%; padding: 0 5px; }
 
   table {
     width: 100% !important;
     max-width: 100% !important;
     font-size: 12px !important;
+    margin: auto;
+    margin-bottom: 25px;
+    table-layout: fixed;   /* 🔹 force equal width distribution */
   }
 
   th, td {
     padding: 4px !important;
     font-size: 12px !important;
+    word-wrap: break-word;  /* 🔹 prevents overflow */
   }
 
-  /* Equal width for Home and Away team name columns */
-  td:nth-child(2), td:nth-child(6) {
-    width: 20% !important;
-    white-space: nowrap;
-  }
+  img { width: 20px !important; height: 20px !important; }
 
-  /* Equal width for logos */
-  td:first-child, td:last-child {
-    width: 8% !important;
-  }
-
-  /* Stat columns stay flexible */
-  td:nth-child(3), td:nth-child(4), td:nth-child(5) {
-    width: auto !important;
-  }
-
-  img {
-    width: 20px !important;
-    height: 20px !important;
+  /* 🔹 force equal widths for Home & Away team name columns */
+  td:nth-child(2), th:nth-child(2),
+  td:nth-child(6), th:nth-child(6) {
+    width: 22% !important;
   }
 }
+
 
     
   </style>
