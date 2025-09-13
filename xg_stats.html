@@ -19,7 +19,7 @@
       margin-top: 40px;
     }
 
-.container {
+    .container {
       max-width: 1200px;
       margin: auto;
       padding: 30px 20px;
@@ -53,10 +53,11 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
     }
 
     th, td {
-      padding: 8px 10px;       /* slightly taller rows */
+      padding: 8px 10px;
       text-align: center;
       border: 1px solid #ccc;
       font-weight: normal;
@@ -75,17 +76,41 @@
     img { width: 30px; height: 30px; vertical-align: middle; }
     tr:nth-child(even) { background: #f2f2f2; }
 
-    .sorted-col { background: #fffacd !important; font-weight: bold; } /* light yellow */
-    .active-header { background: #fcff55 !important; color: black !important; border-bottom: 1px solid #ffffff; } /* bright yellow, black font */
+    .sorted-col { background: #fffacd !important; font-weight: bold; }
+    .active-header { background: #fcff55 !important; color: black !important; border-bottom: 1px solid #ffffff; }
+
+    /* --- Mobile adjustments --- */
+    @media (max-width: 768px) {
+      .header-logo {
+        height: 55px !important;
+        width: auto !important;
+      }
+      h1 {
+        font-size: 22px !important;
+      }
+      .banner {
+        width: 90% !important;
+        font-size: 16px !important;
+      }
+      table {
+        width: 100% !important;
+        font-size: 14px !important;
+      }
+      th, td {
+        padding: 6px !important;
+      }
+    }
   </style>
 </head>
 <body>
   <div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
-  <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
-       alt="DG Logo"
-       style="height: 90px; width: auto; position: absolute; left: 20px; top: 0px; z-index: 2;" />
-  <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
-</div>
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo"
+         class="header-logo"
+         style="height: 90px; width: auto; position: absolute; left: 20px; top: 0px; z-index: 2;" />
+    <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
+  </div>
+
   <div class="banner">Expected goals, corners and shot stats after 5,000 match simulations</div>
 
   <div class="buttons">
@@ -193,6 +218,7 @@
   </script>
 </body>
 </html>
+
 
 
 
