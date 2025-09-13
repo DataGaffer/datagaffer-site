@@ -81,32 +81,42 @@
     .active-header { background: #fcff55 !important; color: black !important; border-bottom: 1px solid #ffffff; }
 
     /* --- Mobile adjustments --- */
-    @media (max-width: 925px) {
-      .header-logo {
-        height: 55px !important;
-        width: auto !important;
-      }
+@media (max-width: 925px) {
+  .header-logo {
+    height: 55px !important;
+    width: auto !important;
+  }
 
-      .container {
-        max-width: 100%;
-        padding: 0 5px;
-      }
-      h1 {
-        font-size: 22px !important;
-      }
-      .banner {
-        width: 95% !important;
-        font-size: 16px !important;
-      }
-      table {
-        width: 100% !important;   /* full width on mobile */
-        max-width: 100% !important;
-        font-size: 14px !important;
-      }
-      th, td {
-        padding: 6px !important;
-      }
-    }
+  h1 {
+    font-size: 22px !important;
+  }
+
+  .banner {
+    width: 95% !important;
+    font-size: 16px !important;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 10px;   /* give breathing room on sides */
+  }
+
+  table {
+    width: 80% !important;     /* slightly narrower than full width */
+    max-width: 100%;
+    font-size: 14px !important;
+    margin: auto;
+    display: block;
+    border-spacing: 0;
+  }
+
+  th, td {
+    padding: 8px 6px !important;  /* consistent spacing */
+    white-space: nowrap;          /* prevent text wrapping */
+  }
+}
+
+
   </style>
 </head>
 <body>

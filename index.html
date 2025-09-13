@@ -122,41 +122,92 @@
       border-radius: 2px;
     }
 
-  /* --- Mobile adjustments --- */
-@media (max-width: 800px) {
-  .header-logo {
-    height: 55px !important;
-    width: auto !important;
+  @media (max-width: 768px) {
+  .dg-logo-img {
+    height: 80px;
+    margin-right: 7px;
+
   }
 
-  .container {
-    max-width: 100%;
-    padding: 0 10px;
+.dg-logo-wrapper {
+      position: absolute;
+      left: 7px;
+      top: 20px;
+      z-index: 10;
+    }
+
+  .dg-site-name {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: -5px;
   }
 
-  h1 {
-    font-size: 22px !important;
-  }
-
-  .banner {
-    width: 95% !important;
-    font-size: 16px !important;
-  }
-
-  table {
-    width: 95% !important;        /* not fully edge-to-edge */
-    max-width: 95% !important;
-    font-size: 15px !important;   /* a little smaller */
-    
-    margin: 0 auto;               /* keep centered */
-  }
-
-  th, td {
-    padding: 8px !important;      /* lighter padding */
-    word-wrap: break-word;
+  .dg-tagline {
+    font-size: 14px;
+    padding: 8px 8px;
     text-align: center;
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 175px);
+    gap: 20px;
+    row-gap: 15px;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+
+  .button {
+    font-size: 22px;
+    white-space: nowrap;
+    padding: 25px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 38px;
+  }
+
+  .button-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .play-button {
+    font-size: 30px;
+    padding: 0px 15px;
+    width: 95%;
+  }
+
+.play-banner {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 5px 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -10px
+    }
+
+  .play-line {
+    width: 80%;
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 500px;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 }
+
 
   </style>
 </head>
