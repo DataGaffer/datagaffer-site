@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Expected Stats</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes mobile scaling correct -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
     header { background: #003f2e; color: white; padding: 15px; text-align: center; font-size: 22px; font-weight: bold; }
@@ -80,64 +80,60 @@
     .sorted-col { background: #fffacd !important; font-weight: bold; }
     .active-header { background: #fcff55 !important; color: black !important; border-bottom: 1px solid #ffffff; }
 
- /* --- Mobile adjustments --- */
-@media (max-width: 925px) {
-  body {
-    overflow-x: hidden;   /* remove right white space */
-  }
+    /* 🔹 Fix Home Team & Away Team column widths */
+    td:nth-child(2), th:nth-child(2),
+    td:nth-child(6), th:nth-child(6) {
+      width: 180px;   /* adjust width as needed */
+      white-space: nowrap;
+      max-width: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-  .header-logo {
-    height: 50px !important;
-    width: auto !important;
-  }
+    /* --- Mobile adjustments --- */
+    @media (max-width: 925px) {
+      body { overflow-x: hidden; }
 
-  h1 {
-    font-size: 20px !important;
-  }
+      .header-logo { height: 50px !important; width: auto !important; }
+      h1 { font-size: 20px !important; }
 
-  .banner {
-    width: 85% !important;       /* smaller box */
-    font-size: 13px !important;  /* smaller text */
-    padding: 6px !important;
-    margin-top: 25px;
-  }
+      .banner {
+        width: 85% !important;
+        font-size: 13px !important;
+        padding: 6px !important;
+        margin-top: 25px;
+      }
 
-  .buttons {
-    margin-bottom: 30px;
-    margin-top: 25px;
-  }
-  .buttons button {
-    padding: 6px 10px !important;   /* smaller buttons */
-    font-size: 12px !important;
-    margin: 0 4px !important;
-  }
+      .buttons { margin-bottom: 30px; margin-top: 25px; }
+      .buttons button {
+        padding: 6px 10px !important;
+        font-size: 12px !important;
+        margin: 0 4px !important;
+      }
 
-  .container {
-    max-width: 100%;
-    padding: 0 5px;
-  }
+      .container { max-width: 100%; padding: 0 5px; }
 
-  table {
-    width: 100% !important; 
-    max-width: 100%;
-    font-size: 12px !important;
-    margin: auto;
-  }
+      table {
+        width: 100% !important;
+        max-width: 100%;
+        font-size: 12px !important;
+        margin: auto;
+        margin-bottom: 25px;
+      }
 
-  th, td {
-    padding: 4px !important;
-    font-size: 12px !important;
-  }
+      th, td {
+        padding: 4px !important;
+        font-size: 12px !important;
+      }
 
-  img {
-    width: 20px !important;
-    height: 20px !important;
-  }
-}
+      img { width: 20px !important; height: 20px !important; }
 
-
-
-
+      /* 🔹 smaller fixed widths for mobile */
+      td:nth-child(2), th:nth-child(2),
+      td:nth-child(6), th:nth-child(6) {
+        width: 100px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -215,19 +211,16 @@
       currentType = type;
       document.getElementById("tables").innerHTML = buildTable(currentFixtures, type);
 
-      // reset sort config
       sortConfig = { column: null, asc: false };
 
-      // button active state
       document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
       if (btn) btn.classList.add("active");
     }
 
     function sortTable(colIndex, header) {
       const table = document.getElementById("statsTable");
-      let rows = Array.from(table.rows).slice(1); // skip header
+      let rows = Array.from(table.rows).slice(1);
 
-      // first click = descending
       const asc = sortConfig.column === colIndex ? !sortConfig.asc : false;
       sortConfig = { column: colIndex, asc };
 
@@ -237,21 +230,17 @@
         return asc ? valA - valB : valB - valA;
       });
 
-      // rebuild table body
       rows.forEach(row => table.appendChild(row));
 
-      // reset highlights
       rows.forEach(row => {
         for (let i = 2; i <= 4; i++) row.cells[i].classList.remove("sorted-col");
       });
       document.querySelectorAll("th.sortable").forEach(th => th.classList.remove("active-header"));
 
-      // highlight sorted column + header
       rows.forEach(row => row.cells[colIndex].classList.add("sorted-col"));
       header.classList.add("active-header");
     }
 
-    // Load xG table by default
     showTable("xg", document.getElementById("btn-xg"));
   </script>
 </body>

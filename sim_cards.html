@@ -5,154 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sim Cards | DataGaffer</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       font-family: Arial, sans-serif;
       background: #f9f9f9;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       color: #003f2e;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-
+    .container { max-width: 1200px; margin: auto; padding: 30px 20px; }
     .match-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 20px;
       margin-bottom: 40px;
     }
-
     .match-box {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      padding: 18px 12px;
-      text-align: center;
-      width: 120px;
-      height: 70px;
+      background: white; border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 18px 12px; text-align: center;
+      width: 120px; height: 70px;
     }
-
-    .match-box img {
-      height: 45px;
-    }
-
-    .match-box .score {
-      font-weight: bold;
-      margin-top: 8px;
-      font-size: 20px;
-    }
-
+    .match-box img { height: 45px; }
+    .match-box .score { font-weight: bold; margin-top: 8px; font-size: 20px; }
     .explanation {
-      text-align: center;
-      font-size: 18px;
-      margin-bottom: 40px;
-      padding: 10px 20px;
-      background-color: #e0f2ea;
-      border-left: 5px solid #007a33;
+      text-align: center; font-size: 18px;
+      margin-bottom: 40px; padding: 10px 20px;
+      background-color: #e0f2ea; border-left: 5px solid #007a33;
     }
-
     .sim-card {
-      background: white;
-      border: 2px solid black;
-      border-radius: 20px;
-      width: 600px;
-      margin: 0 auto 50px auto;
-      padding: 24px 20px 30px 20px;
-      text-align: center;
+      background: white; border: 2px solid black; border-radius: 20px;
+      width: 600px; margin: 0 auto 50px auto;
+      padding: 24px 20px 30px 20px; text-align: center;
     }
-
-    .team-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
+    .team-row { display: flex; justify-content: center; align-items: center; }
     .team-col {
-      width: 10%;
-      text-align: center;
-      white-space: nowrap;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 16px;
+      width: 10%; text-align: center; white-space: nowrap;
+      display: flex; flex-direction: column; align-items: center; font-size: 16px;
     }
-
     .center-col {
-      width: 22%;
-      font-weight: bold;
-      font-size: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      line-height: 1.4;
+      width: 22%; font-weight: bold; font-size: 16px;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center; line-height: 1.4;
       margin-top: 20px;
     }
-
-    .team-logo {
-      height: 60px;
-      margin-bottom: 6px;
-    }
-
-    .label {
-      font-weight: bold;
-      font-size: 14px;
-      margin-bottom: 4px;
-    }
-
-    .team-name {
-      font-weight: bold;
-      font-size: 14px;
-      margin-bottom: 12px;
-      white-space: nowrap;
-    }
-
-    .odds-section {
-      margin-bottom: 30px;
-      font-size: 15px;
-    }
-
-    .section-title {
-      font-weight: bold;
-      font-size: 16px;
-      margin: 20px 0 4px 0;
-    }
-
+    .team-logo { height: 60px; margin-bottom: 6px; }
+    .label { font-weight: bold; font-size: 14px; margin-bottom: 4px; }
+    .team-name { font-weight: bold; font-size: 14px; margin-bottom: 12px; white-space: nowrap; }
+    .odds-section { margin-bottom: 30px; font-size: 15px; }
+    .section-title { font-weight: bold; font-size: 16px; margin: 20px 0 4px 0; }
     .score-box {
-      border: 2px solid black;
-      border-radius: 6px;
-      display: inline-block;
-      padding: 10px 16px;
-      margin-top: 25px;
-      font-size: 18px;
-      font-weight: bold;
+      border: 2px solid black; border-radius: 6px;
+      display: inline-block; padding: 10px 16px;
+      margin-top: 25px; font-size: 18px; font-weight: bold;
     }
-
     .score-box span {
-      display: inline-block;
-      margin-top: 4px;
-      font-size: 20px;
-      color: #000;
-      font-weight: bold;
-      border-bottom: 3px solid #14b36e;
+      display: inline-block; margin-top: 4px; font-size: 20px;
+      color: #000; font-weight: bold; border-bottom: 3px solid #14b36e;
     }
-
-    .odds-value {
-      font-weight: bold;
-    }
-
-    .green {
-      color: #000;
-    }
+    .odds-value { font-weight: bold; }
   </style>
 </head>
 <body>
@@ -182,26 +91,32 @@
 function slugify(text) {
   return text.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
+function toOdds(pct) {
+  if (!pct || pct <= 0) return 'N/A';
+  return (100 / pct).toFixed(2);
+}
 
-fetch('sim_cards.json')
+fetch('fixtures.json')
 .then(res => res.json())
 .then(data => {
   const grid = document.getElementById('match-grid');
   const simCards = document.getElementById('sim-cards');
 
   data.forEach(match => {
-    const slug = `simcard-${slugify(match.home)}-vs-${slugify(match.away)}`;
+    const slug = `simcard-${slugify(match.home.name)}-vs-${slugify(match.away.name)}`;
+    const sim = match.sim_stats.percents || {};
+    const book = match.book_odds || {};
 
-    // Grid box with link
+    // Grid box
     const box = document.createElement('div');
     box.className = 'match-box';
     box.innerHTML = `
       <a href="#${slug}" style="text-decoration: none; color: inherit;">
         <div style="display: flex; justify-content: center; align-items: center; gap: 14px; margin-bottom: 10px;">
-          <img src="${match.home_logo}" alt="">
-          <img src="${match.away_logo}" alt="">
+          <img src="${match.home.logo}" alt="">
+          <img src="${match.away.logo}" alt="">
         </div>
-        <div class="score">${match.projected_score}</div>
+        <div class="score">${match.sim_stats.xg.home} - ${match.sim_stats.xg.away}</div>
       </a>
     `;
     grid.appendChild(box);
@@ -218,54 +133,60 @@ fetch('sim_cards.json')
       </div>
 
       <div class="team-row">
-        <div class="team-col"><img src="${match.home_logo}" class="team-logo" /></div>
+        <div class="team-col"><img src="${match.home.logo}" class="team-logo" /></div>
         <div class="center-col">vs</div>
-        <div class="team-col"><img src="${match.away_logo}" class="team-logo" /></div>
+        <div class="team-col"><img src="${match.away.logo}" class="team-logo" /></div>
       </div>
 
       <div class="team-row">
-        <div class="team-col"><div class="team-name">${match.home}</div></div>
+        <div class="team-col"><div class="team-name">${match.home.name}</div></div>
         <div class="center-col"></div>
-        <div class="team-col"><div class="team-name">${match.away}</div></div>
+        <div class="team-col"><div class="team-name">${match.away.name}</div></div>
       </div>
 
       <div class="team-row odds-section">
         <div class="team-col">
           <div class="label">Win:</div>
-          <div><span class="odds-value">${match.win.sim}</span></div>
-          <div style="margin-top: 4px;">${match.win.book ?? 'N/A'}</div>
+          <div><span class="odds-value">${sim.home_win_pct ?? 'N/A'}% (${toOdds(sim.home_win_pct)})</span></div>
+          <div style="margin-top: 4px;">${book.home_win ?? 'N/A'}</div>
         </div>
         <div class="center-col">Sim<br>Bet365</div>
         <div class="team-col">
           <div class="label">Win:</div>
-          <div><span class="odds-value">${match.win.away_sim ?? 'N/A'}</span></div>
-          <div style="margin-top: 4px;">${match.win.away_book ?? 'N/A'}</div>
+          <div><span class="odds-value">${sim.away_win_pct ?? 'N/A'}% (${toOdds(sim.away_win_pct)})</span></div>
+          <div style="margin-top: 4px;">${book.away_win ?? 'N/A'}</div>
         </div>
       </div>
 
       <div class="team-row odds-section">
         <div class="team-col">
           <div class="label">o1.5:</div>
-          <div><span class="odds-value">${match.home_o1_5.sim}</span></div>
-          <div style="margin-top: 4px;">${match.home_o1_5.book ?? 'N/A'}</div>
+          <div><span class="odds-value">${sim.home_o1_5_pct ?? 'N/A'}% (${toOdds(sim.home_o1_5_pct)})</span></div>
+          <div style="margin-top: 4px;">${book.home_o1_5 ?? 'N/A'}</div>
         </div>
         <div class="center-col">Sim<br>Bet365</div>
         <div class="team-col">
           <div class="label">o1.5:</div>
-          <div><span class="odds-value">${match.away_o1_5.sim}</span></div>
-          <div style="margin-top: 4px;">${match.away_o1_5.book ?? 'N/A'}</div>
+          <div><span class="odds-value">${sim.away_o1_5_pct ?? 'N/A'}% (${toOdds(sim.away_o1_5_pct)})</span></div>
+          <div style="margin-top: 4px;">${book.away_o1_5 ?? 'N/A'}</div>
         </div>
       </div>
 
       <div class="section-title">Game Total (o2.5):</div>
-      <div style="margin-top: 6px;">Sim: ${match.over_2_5.sim}   Bet365: <span class="green">${match.over_2_5.book ?? 'N/A'}</span></div>
+      <div style="margin-top: 6px;">
+        Sim: ${sim.over_2_5_pct ?? 'N/A'}% (${toOdds(sim.over_2_5_pct)}) <br>
+        Bet365: <span class="green">${book.over_2_5 ?? 'N/A'}</span>
+      </div>
 
       <div class="section-title">Both Teams To Score:</div>
-      <div style="margin-top: 6px;">Sim: ${match.btts.sim}   Bet365: <span class="green">${match.btts.book ?? 'N/A'}</span></div>
+      <div style="margin-top: 6px;">
+        Sim: ${sim.btts_pct ?? 'N/A'}% (${toOdds(sim.btts_pct)}) <br>
+        Bet365: <span class="green">${book.btts ?? 'N/A'}</span>
+      </div>
 
       <div class="score-box">
         Projected Match Score:<br />
-        <span>${match.projected_score}</span>
+        <span>${match.sim_stats.xg.home} - ${match.sim_stats.xg.away}</span>
       </div>
     `;
     simCards.appendChild(card);
@@ -274,6 +195,7 @@ fetch('sim_cards.json')
 </script>
 </body>
 </html>
+
 
 
 

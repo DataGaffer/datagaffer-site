@@ -119,7 +119,7 @@ def simulate_match(home_id, away_id):
     h_avg = h2h_data.get("h2h_avg_home", None)
     a_avg = h2h_data.get("h2h_avg_away", None)
     if isinstance(h_avg, (int, float)) and isinstance(a_avg, (int, float)):
-        w = 0.15  # 15% weight from H2H goal averages
+        w = 0.45  # 15% weight from H2H goal averages
         exp_home = exp_home * (1 - w) + h_avg * w
         exp_away = exp_away * (1 - w) + a_avg * w
 

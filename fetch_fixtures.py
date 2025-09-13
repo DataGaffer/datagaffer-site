@@ -120,12 +120,21 @@ for fixture in data["response"]:
                 "home": f"{sim['home_shots']:.1f}",
                 "away": f"{sim['away_shots']:.1f}",
                 "total": f"{sim['total_shots']:.1f}"
+            },
+            "percents": {
+                "home_win_pct": sim["home_win_pct"],
+                "draw_pct": sim["draw_pct"],
+                "away_win_pct": sim["away_win_pct"],
+                "over_2_5_pct": sim["over_2_5_pct"],
+                "btts_pct": sim["btts_pct"],
+                "home_o1_5_pct": sim["home_o1_5_pct"],
+                "away_o1_5_pct": sim["away_o1_5_pct"]
             }
         }
 
     except Exception as e:
         print(f"⚠️ Simulation error for {home['name']} vs {away['name']}: {e}")
-        sim_stats = {"xg": {}, "corners": {}, "shots": {}}
+        sim_stats = {"xg": {}, "corners": {}, "shots": {}, "percents": {}}
 
     # --- Save this fixture ---
     valid_matches.append({
@@ -162,7 +171,9 @@ with open("fixtures.json", "w") as f:
 with open("h2h_and_odds.json", "w") as f:
     json.dump(h2h_data, f, indent=2)
 
-print(f"✅ Saved {len(valid_matches)} fixture(s) to fixtures.json with simulation stats.")
+print(f"✅ Saved {len(valid_matches)} fixture(s) to fixtures.json with full simulation stats.")
 print("✅ Saved h2h_and_odds.json with goal averages.")
+
+
 
 

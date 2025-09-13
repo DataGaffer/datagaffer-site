@@ -1,382 +1,172 @@
 [
   {
-    "home": "Arsenal",
-    "away": "Nottingham Forest",
-    "home_logo": "assets/logos/42.png",
-    "away_logo": "assets/logos/65.png",
-    "projected_score": "1.91 vs 1.12",
+    "home": "Excelsior",
+    "away": "Sparta Rotterdam",
+    "home_logo": "assets/logos/196.png",
+    "away_logo": "assets/logos/426.png",
+    "projected_score": "1.32 vs 1.92",
     "win": {
-      "sim": "55.5% (1.8)",
-      "book": 1.36
+      "sim": "26.5% (3.77)",
+      "book": 3.2
     },
     "draw": {
-      "sim": "22.4% (4.46)",
-      "book": 5.0
-    },
-    "away_win": {
-      "sim": "22.1% (4.52)",
-      "book": 9.0
-    },
-    "home_o1_5": {
-      "sim": "56.7% (1.76)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "30.8% (3.25)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "58.2% (1.72)",
-      "book": null
-    },
-    "btts": {
-      "sim": "58.0% (1.72)",
-      "book": null
-    }
-  },
-  {
-    "home": "Getafe",
-    "away": "Oviedo",
-    "home_logo": "assets/logos/546.png",
-    "away_logo": "assets/logos/718.png",
-    "projected_score": "1.52 vs 0.89",
-    "win": {
-      "sim": "52.4% (1.91)",
-      "book": 1.95
-    },
-    "draw": {
-      "sim": "25.9% (3.86)",
-      "book": 3.0
-    },
-    "away_win": {
-      "sim": "21.6% (4.63)",
-      "book": 4.75
-    },
-    "home_o1_5": {
-      "sim": "44.7% (2.24)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "22.1% (4.52)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "43.2% (2.31)",
-      "book": null
-    },
-    "btts": {
-      "sim": "46.4% (2.16)",
-      "book": null
-    }
-  },
-  {
-    "home": "Cagliari",
-    "away": "Parma",
-    "home_logo": "assets/logos/490.png",
-    "away_logo": "assets/logos/523.png",
-    "projected_score": "1.7 vs 1.25",
-    "win": {
-      "sim": "47.1% (2.12)",
-      "book": 2.2
-    },
-    "draw": {
-      "sim": "24.5% (4.08)",
-      "book": 3.1
-    },
-    "away_win": {
-      "sim": "28.4% (3.52)",
-      "book": 3.5
-    },
-    "home_o1_5": {
-      "sim": "50.7% (1.97)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "35.3% (2.83)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "56.7% (1.76)",
-      "book": null
-    },
-    "btts": {
-      "sim": "59.2% (1.69)",
-      "book": null
-    }
-  },
-  {
-    "home": "SC Freiburg",
-    "away": "VfB Stuttgart",
-    "home_logo": "assets/logos/160.png",
-    "away_logo": "assets/logos/172.png",
-    "projected_score": "1.83 vs 1.81",
-    "win": {
-      "sim": "38.5% (2.6)",
-      "book": 2.75
-    },
-    "draw": {
-      "sim": "22.2% (4.5)",
+      "sim": "21.5% (4.65)",
       "book": 3.6
     },
     "away_win": {
-      "sim": "39.3% (2.54)",
-      "book": 2.45
+      "sim": "51.9% (1.93)",
+      "book": 2.15
     },
     "home_o1_5": {
-      "sim": "54.1% (1.85)",
+      "sim": "37.3% (2.68)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "54.3% (1.84)",
+      "sim": "57.4% (1.74)",
       "book": null
     },
     "over_2_5": {
-      "sim": "71.2% (1.4)",
+      "sim": "62.4% (1.6)",
       "book": null
     },
     "btts": {
-      "sim": "70.1% (1.43)",
+      "sim": "61.3% (1.63)",
       "book": null
     }
   },
   {
-    "home": "1. FC Heidenheim",
-    "away": "Borussia Dortmund",
-    "home_logo": "assets/logos/180.png",
-    "away_logo": "assets/logos/165.png",
-    "projected_score": "1.56 vs 1.86",
+    "home": "AS Roma",
+    "away": "Torino",
+    "home_logo": "assets/logos/497.png",
+    "away_logo": "assets/logos/503.png",
+    "projected_score": "1.91 vs 0.82",
     "win": {
-      "sim": "33.1% (3.02)",
-      "book": 5.25
+      "sim": "62.8% (1.59)",
+      "book": 1.5
     },
     "draw": {
       "sim": "21.6% (4.63)",
+      "book": 4.1
+    },
+    "away_win": {
+      "sim": "15.6% (6.41)",
+      "book": 7.0
+    },
+    "home_o1_5": {
+      "sim": "56.9% (1.76)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "19.6% (5.1)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "51.5% (1.94)",
+      "book": null
+    },
+    "btts": {
+      "sim": "48.0% (2.08)",
+      "book": null
+    }
+  },
+  {
+    "home": "Celta Vigo",
+    "away": "Girona",
+    "home_logo": "assets/logos/538.png",
+    "away_logo": "assets/logos/547.png",
+    "projected_score": "1.58 vs 1.09",
+    "win": {
+      "sim": "48.1% (2.08)",
+      "book": 1.65
+    },
+    "draw": {
+      "sim": "26.1% (3.83)",
+      "book": 4.1
+    },
+    "away_win": {
+      "sim": "25.8% (3.88)",
+      "book": 5.0
+    },
+    "home_o1_5": {
+      "sim": "46.5% (2.15)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "29.6% (3.38)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "50.4% (1.98)",
+      "book": null
+    },
+    "btts": {
+      "sim": "53.5% (1.87)",
+      "book": null
+    }
+  },
+  {
+    "home": "Heracles",
+    "away": "AZ Alkmaar",
+    "home_logo": "assets/logos/206.png",
+    "away_logo": "assets/logos/201.png",
+    "projected_score": "1.7 vs 1.45",
+    "win": {
+      "sim": "43.4% (2.3)",
+      "book": 6.0
+    },
+    "draw": {
+      "sim": "23.5% (4.26)",
       "book": 4.5
     },
     "away_win": {
-      "sim": "45.3% (2.21)",
-      "book": 1.57
+      "sim": "33.0% (3.03)",
+      "book": 1.5
     },
     "home_o1_5": {
-      "sim": "46.3% (2.16)",
+      "sim": "51.0% (1.96)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "55.3% (1.81)",
+      "sim": "41.4% (2.42)",
       "book": null
     },
     "over_2_5": {
-      "sim": "66.6% (1.5)",
+      "sim": "61.2% (1.63)",
       "book": null
     },
     "btts": {
-      "sim": "65.4% (1.53)",
+      "sim": "62.5% (1.6)",
       "book": null
     }
   },
   {
-    "home": "FSV Mainz 05",
-    "away": "RB Leipzig",
-    "home_logo": "assets/logos/164.png",
-    "away_logo": "assets/logos/173.png",
-    "projected_score": "1.74 vs 1.03",
+    "home": "Utrecht",
+    "away": "Groningen",
+    "home_logo": "assets/logos/207.png",
+    "away_logo": "assets/logos/202.png",
+    "projected_score": "2.35 vs 1.0",
     "win": {
-      "sim": "53.8% (1.86)",
-      "book": 2.55
+      "sim": "67.2% (1.49)",
+      "book": 1.75
     },
     "draw": {
-      "sim": "23.9% (4.18)",
-      "book": 3.6
+      "sim": "18.6% (5.38)",
+      "book": 4.0
     },
     "away_win": {
-      "sim": "22.2% (4.5)",
-      "book": 2.62
+      "sim": "14.2% (7.04)",
+      "book": 4.33
     },
     "home_o1_5": {
-      "sim": "52.1% (1.92)",
+      "sim": "67.8% (1.47)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "27.5% (3.64)",
+      "sim": "25.8% (3.88)",
       "book": null
     },
     "over_2_5": {
-      "sim": "52.2% (1.92)",
-      "book": null
-    },
-    "btts": {
-      "sim": "53.1% (1.88)",
-      "book": null
-    }
-  },
-  {
-    "home": "Union Berlin",
-    "away": "1899 Hoffenheim",
-    "home_logo": "assets/logos/182.png",
-    "away_logo": "assets/logos/167.png",
-    "projected_score": "1.78 vs 1.3",
-    "win": {
-      "sim": "48.9% (2.04)",
-      "book": 2.7
-    },
-    "draw": {
-      "sim": "22.8% (4.39)",
-      "book": 3.4
-    },
-    "away_win": {
-      "sim": "28.3% (3.53)",
-      "book": 2.62
-    },
-    "home_o1_5": {
-      "sim": "53.2% (1.88)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "37.6% (2.66)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "59.6% (1.68)",
-      "book": null
-    },
-    "btts": {
-      "sim": "60.3% (1.66)",
-      "book": null
-    }
-  },
-  {
-    "home": "VfL Wolfsburg",
-    "away": "1.FC K\u00f6ln",
-    "home_logo": "assets/logos/161.png",
-    "away_logo": "assets/logos/192.png",
-    "projected_score": "1.82 vs 1.27",
-    "win": {
-      "sim": "50.6% (1.98)",
-      "book": 1.95
-    },
-    "draw": {
-      "sim": "21.8% (4.59)",
-      "book": 3.6
-    },
-    "away_win": {
-      "sim": "27.6% (3.62)",
-      "book": 3.75
-    },
-    "home_o1_5": {
-      "sim": "54.0% (1.85)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "36.2% (2.76)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "59.6% (1.68)",
-      "book": null
-    },
-    "btts": {
-      "sim": "60.0% (1.67)",
-      "book": null
-    }
-  },
-  {
-    "home": "Bournemouth",
-    "away": "Brighton",
-    "home_logo": "assets/logos/35.png",
-    "away_logo": "assets/logos/51.png",
-    "projected_score": "1.65 vs 1.36",
-    "win": {
-      "sim": "43.8% (2.28)",
-      "book": 2.35
-    },
-    "draw": {
-      "sim": "24.8% (4.03)",
-      "book": 3.5
-    },
-    "away_win": {
-      "sim": "31.4% (3.18)",
-      "book": 2.9
-    },
-    "home_o1_5": {
-      "sim": "49.5% (2.02)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "40.0% (2.5)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "58.4% (1.71)",
-      "book": null
-    },
-    "btts": {
-      "sim": "60.6% (1.65)",
-      "book": null
-    }
-  },
-  {
-    "home": "Crystal Palace",
-    "away": "Sunderland",
-    "home_logo": "assets/logos/52.png",
-    "away_logo": "assets/logos/746.png",
-    "projected_score": "1.81 vs 1.33",
-    "win": {
-      "sim": "49.1% (2.04)",
-      "book": 1.67
-    },
-    "draw": {
-      "sim": "22.2% (4.5)",
-      "book": 3.7
-    },
-    "away_win": {
-      "sim": "28.7% (3.48)",
-      "book": 5.5
-    },
-    "home_o1_5": {
-      "sim": "54.2% (1.85)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "38.4% (2.6)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "61.0% (1.64)",
-      "book": null
-    },
-    "btts": {
-      "sim": "61.8% (1.62)",
-      "book": null
-    }
-  },
-  {
-    "home": "Everton",
-    "away": "Aston Villa",
-    "home_logo": "assets/logos/45.png",
-    "away_logo": "assets/logos/66.png",
-    "projected_score": "1.6 vs 1.28",
-    "win": {
-      "sim": "45.7% (2.19)",
-      "book": 2.35
-    },
-    "draw": {
-      "sim": "24.1% (4.15)",
-      "book": 3.4
-    },
-    "away_win": {
-      "sim": "30.2% (3.31)",
-      "book": 3.0
-    },
-    "home_o1_5": {
-      "sim": "47.5% (2.11)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "36.4% (2.75)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "54.7% (1.83)",
+      "sim": "65.3% (1.53)",
       "book": null
     },
     "btts": {
@@ -385,200 +175,165 @@
     }
   },
   {
-    "home": "Fulham",
-    "away": "Leeds",
-    "home_logo": "assets/logos/36.png",
-    "away_logo": "assets/logos/63.png",
-    "projected_score": "1.95 vs 1.28",
+    "home": "Atalanta",
+    "away": "Lecce",
+    "home_logo": "assets/logos/499.png",
+    "away_logo": "assets/logos/867.png",
+    "projected_score": "1.76 vs 0.85",
     "win": {
-      "sim": "52.6% (1.9)",
-      "book": 1.91
-    },
-    "draw": {
-      "sim": "22.0% (4.55)",
-      "book": 3.5
-    },
-    "away_win": {
-      "sim": "25.4% (3.94)",
-      "book": 4.0
-    },
-    "home_o1_5": {
-      "sim": "58.2% (1.72)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "37.0% (2.7)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "62.1% (1.61)",
-      "book": null
-    },
-    "btts": {
-      "sim": "62.1% (1.61)",
-      "book": null
-    }
-  },
-  {
-    "home": "Newcastle",
-    "away": "Wolves",
-    "home_logo": "assets/logos/34.png",
-    "away_logo": "assets/logos/39.png",
-    "projected_score": "2.26 vs 1.16",
-    "win": {
-      "sim": "62.0% (1.61)",
+      "sim": "58.6% (1.71)",
       "book": 1.4
     },
     "draw": {
+      "sim": "23.5% (4.26)",
+      "book": 4.5
+    },
+    "away_win": {
+      "sim": "17.8% (5.62)",
+      "book": 8.5
+    },
+    "home_o1_5": {
+      "sim": "52.6% (1.9)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "20.7% (4.83)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "48.5% (2.06)",
+      "book": null
+    },
+    "btts": {
+      "sim": "47.7% (2.1)",
+      "book": null
+    }
+  },
+  {
+    "home": "Pisa",
+    "away": "Udinese",
+    "home_logo": "assets/logos/801.png",
+    "away_logo": "assets/logos/494.png",
+    "projected_score": "1.02 vs 0.81",
+    "win": {
+      "sim": "39.4% (2.54)",
+      "book": 2.75
+    },
+    "draw": {
+      "sim": "33.0% (3.03)",
+      "book": 3.1
+    },
+    "away_win": {
+      "sim": "27.6% (3.62)",
+      "book": 2.75
+    },
+    "home_o1_5": {
+      "sim": "26.4% (3.79)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "19.1% (5.24)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "27.2% (3.68)",
+      "book": null
+    },
+    "btts": {
+      "sim": "36.2% (2.76)",
+      "book": null
+    }
+  },
+  {
+    "home": "Burnley",
+    "away": "Liverpool",
+    "home_logo": "assets/logos/44.png",
+    "away_logo": "assets/logos/40.png",
+    "projected_score": "1.08 vs 2.16",
+    "win": {
+      "sim": "18.2% (5.49)",
+      "book": 8.5
+    },
+    "draw": {
       "sim": "19.4% (5.15)",
-      "book": 4.75
-    },
-    "away_win": {
-      "sim": "18.6% (5.38)",
-      "book": 7.5
-    },
-    "home_o1_5": {
-      "sim": "65.6% (1.52)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "32.0% (3.12)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "66.2% (1.51)",
-      "book": null
-    },
-    "btts": {
-      "sim": "61.8% (1.62)",
-      "book": null
-    }
-  },
-  {
-    "home": "Real Sociedad",
-    "away": "Real Madrid",
-    "home_logo": "assets/logos/548.png",
-    "away_logo": "assets/logos/541.png",
-    "projected_score": "1.21 vs 1.55",
-    "win": {
-      "sim": "30.2% (3.31)",
-      "book": 5.25
-    },
-    "draw": {
-      "sim": "24.4% (4.1)",
-      "book": 4.2
-    },
-    "away_win": {
-      "sim": "45.4% (2.2)",
-      "book": 1.6
-    },
-    "home_o1_5": {
-      "sim": "33.8% (2.96)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "46.6% (2.15)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "52.7% (1.9)",
-      "book": null
-    },
-    "btts": {
-      "sim": "55.5% (1.8)",
-      "book": null
-    }
-  },
-  {
-    "home": "Ajax",
-    "away": "PEC Zwolle",
-    "home_logo": "assets/logos/194.png",
-    "away_logo": "assets/logos/193.png",
-    "projected_score": "2.07 vs 0.92",
-    "win": {
-      "sim": "63.0% (1.59)",
-      "book": 1.3
-    },
-    "draw": {
-      "sim": "21.5% (4.65)",
       "book": 5.75
     },
     "away_win": {
-      "sim": "15.5% (6.45)",
-      "book": 9.0
+      "sim": "62.3% (1.61)",
+      "book": 1.33
     },
     "home_o1_5": {
-      "sim": "60.6% (1.65)",
+      "sim": "28.6% (3.5)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "23.6% (4.24)",
+      "sim": "63.7% (1.57)",
       "book": null
     },
     "over_2_5": {
-      "sim": "57.1% (1.75)",
+      "sim": "63.1% (1.58)",
       "book": null
     },
     "btts": {
-      "sim": "53.2% (1.88)",
+      "sim": "58.3% (1.72)",
       "book": null
     }
   },
   {
-    "home": "Nice",
-    "away": "Nantes",
-    "home_logo": "assets/logos/84.png",
-    "away_logo": "assets/logos/83.png",
-    "projected_score": "2.07 vs 1.08",
+    "home": "Lille",
+    "away": "Toulouse",
+    "home_logo": "assets/logos/79.png",
+    "away_logo": "assets/logos/96.png",
+    "projected_score": "1.66 vs 1.2",
     "win": {
-      "sim": "61.1% (1.64)",
-      "book": 1.7
+      "sim": "48.5% (2.06)",
+      "book": 1.75
     },
     "draw": {
-      "sim": "19.7% (5.08)",
-      "book": 3.7
+      "sim": "23.7% (4.22)",
+      "book": 3.8
     },
     "away_win": {
-      "sim": "19.2% (5.21)",
-      "book": 5.0
+      "sim": "27.8% (3.6)",
+      "book": 4.5
     },
     "home_o1_5": {
-      "sim": "61.9% (1.62)",
+      "sim": "49.0% (2.04)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "28.7% (3.48)",
+      "sim": "34.1% (2.93)",
       "book": null
     },
     "over_2_5": {
-      "sim": "60.6% (1.65)",
+      "sim": "54.4% (1.84)",
       "book": null
     },
     "btts": {
-      "sim": "57.5% (1.74)",
+      "sim": "56.4% (1.77)",
       "book": null
     }
   },
   {
-    "home": "Juventus",
-    "away": "Inter",
-    "home_logo": "assets/logos/496.png",
-    "away_logo": "assets/logos/505.png",
-    "projected_score": "1.46 vs 1.42",
+    "home": "FC St. Pauli",
+    "away": "FC Augsburg",
+    "home_logo": "assets/logos/186.png",
+    "away_logo": "assets/logos/170.png",
+    "projected_score": "1.43 vs 1.44",
     "win": {
-      "sim": "38.6% (2.59)",
-      "book": 2.75
+      "sim": "37.6% (2.66)",
+      "book": 2.15
     },
     "draw": {
-      "sim": "24.3% (4.12)",
-      "book": 3.0
+      "sim": "24.5% (4.08)",
+      "book": 3.4
     },
     "away_win": {
-      "sim": "37.1% (2.7)",
-      "book": 2.75
+      "sim": "37.9% (2.64)",
+      "book": 3.4
     },
     "home_o1_5": {
-      "sim": "42.6% (2.35)",
+      "sim": "42.2% (2.37)",
       "book": null
     },
     "away_o1_5": {
@@ -586,396 +341,466 @@
       "book": null
     },
     "over_2_5": {
-      "sim": "55.1% (1.81)",
+      "sim": "54.6% (1.83)",
       "book": null
     },
     "btts": {
-      "sim": "57.7% (1.73)",
+      "sim": "58.1% (1.72)",
       "book": null
     }
   },
   {
-    "home": "West Ham",
-    "away": "Tottenham",
-    "home_logo": "assets/logos/48.png",
-    "away_logo": "assets/logos/47.png",
-    "projected_score": "1.55 vs 1.66",
+    "home": "Levante",
+    "away": "Real Betis",
+    "home_logo": "assets/logos/539.png",
+    "away_logo": "assets/logos/543.png",
+    "projected_score": "1.81 vs 1.95",
     "win": {
-      "sim": "36.2% (2.76)",
-      "book": 3.4
+      "sim": "36.8% (2.72)",
+      "book": 3.3
+    },
+    "draw": {
+      "sim": "21.1% (4.74)",
+      "book": 3.25
+    },
+    "away_win": {
+      "sim": "42.1% (2.38)",
+      "book": 2.25
+    },
+    "home_o1_5": {
+      "sim": "54.3% (1.84)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "58.8% (1.7)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "73.6% (1.36)",
+      "book": null
+    },
+    "btts": {
+      "sim": "72.5% (1.38)",
+      "book": null
+    }
+  },
+  {
+    "home": "Telstar",
+    "away": "Fortuna Sittard",
+    "home_logo": "assets/logos/427.png",
+    "away_logo": "assets/logos/205.png",
+    "projected_score": "1.4 vs 1.67",
+    "win": {
+      "sim": "32.0% (3.12)",
+      "book": 2.35
+    },
+    "draw": {
+      "sim": "23.2% (4.31)",
+      "book": 3.6
+    },
+    "away_win": {
+      "sim": "44.8% (2.23)",
+      "book": 2.88
+    },
+    "home_o1_5": {
+      "sim": "40.4% (2.48)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "50.0% (2.0)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "58.6% (1.71)",
+      "book": null
+    },
+    "btts": {
+      "sim": "60.5% (1.65)",
+      "book": null
+    }
+  },
+  {
+    "home": "Stade Brestois 29",
+    "away": "Paris FC",
+    "home_logo": "assets/logos/106.png",
+    "away_logo": "assets/logos/114.png",
+    "projected_score": "1.68 vs 0.94",
+    "win": {
+      "sim": "55.0% (1.82)",
+      "book": 2.25
     },
     "draw": {
       "sim": "23.8% (4.2)",
-      "book": 3.6
+      "book": 3.5
     },
     "away_win": {
-      "sim": "40.0% (2.5)",
-      "book": 2.05
+      "sim": "21.2% (4.72)",
+      "book": 3.1
     },
     "home_o1_5": {
-      "sim": "46.3% (2.16)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "49.7% (2.01)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "62.9% (1.59)",
-      "book": null
-    },
-    "btts": {
-      "sim": "64.2% (1.56)",
-      "book": null
-    }
-  },
-  {
-    "home": "Bayern M\u00fcnchen",
-    "away": "Hamburger SV",
-    "home_logo": "assets/logos/157.png",
-    "away_logo": "assets/logos/175.png",
-    "projected_score": "2.89 vs 0.75",
-    "win": {
-      "sim": "81.3% (1.23)",
-      "book": 1.06
-    },
-    "draw": {
-      "sim": "12.2% (8.2)",
-      "book": 12.0
-    },
-    "away_win": {
-      "sim": "6.5% (15.38)",
-      "book": 29.0
-    },
-    "home_o1_5": {
-      "sim": "78.9% (1.27)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "17.8% (5.62)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "70.8% (1.41)",
-      "book": null
-    },
-    "btts": {
-      "sim": "49.7% (2.01)",
-      "book": null
-    }
-  },
-  {
-    "home": "Athletic Club",
-    "away": "Alaves",
-    "home_logo": "assets/logos/531.png",
-    "away_logo": "assets/logos/542.png",
-    "projected_score": "1.81 vs 0.85",
-    "win": {
-      "sim": "60.4% (1.66)",
-      "book": 1.6
-    },
-    "draw": {
-      "sim": "22.4% (4.46)",
-      "book": 3.9
-    },
-    "away_win": {
-      "sim": "17.2% (5.81)",
-      "book": 5.75
-    },
-    "home_o1_5": {
-      "sim": "54.9% (1.82)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "21.1% (4.74)",
-      "book": null
-    },
-    "over_2_5": {
       "sim": "49.8% (2.01)",
       "book": null
     },
-    "btts": {
-      "sim": "47.5% (2.11)",
-      "book": null
-    }
-  },
-  {
-    "home": "GO Ahead Eagles",
-    "away": "FC Volendam",
-    "home_logo": "assets/logos/410.png",
-    "away_logo": "assets/logos/416.png",
-    "projected_score": "2.3 vs 1.19",
-    "win": {
-      "sim": "61.9% (1.62)",
-      "book": 1.53
-    },
-    "draw": {
-      "sim": "19.6% (5.1)",
-      "book": 4.5
-    },
-    "away_win": {
-      "sim": "18.5% (5.41)",
-      "book": 5.5
-    },
-    "home_o1_5": {
-      "sim": "66.5% (1.5)",
-      "book": null
-    },
     "away_o1_5": {
-      "sim": "33.3% (3.0)",
+      "sim": "24.4% (4.1)",
       "book": null
     },
     "over_2_5": {
-      "sim": "67.6% (1.48)",
+      "sim": "49.4% (2.02)",
       "book": null
     },
     "btts": {
-      "sim": "62.9% (1.59)",
+      "sim": "49.4% (2.02)",
       "book": null
     }
   },
   {
-    "home": "NEC Nijmegen",
-    "away": "PSV Eindhoven",
-    "home_logo": "assets/logos/413.png",
-    "away_logo": "assets/logos/197.png",
-    "projected_score": "2.04 vs 2.19",
-    "win": {
-      "sim": "37.2% (2.69)",
-      "book": 4.5
-    },
-    "draw": {
-      "sim": "19.7% (5.08)",
-      "book": 4.2
-    },
-    "away_win": {
-      "sim": "43.1% (2.32)",
-      "book": 1.67
-    },
-    "home_o1_5": {
-      "sim": "59.8% (1.67)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "64.3% (1.56)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "79.4% (1.26)",
-      "book": null
-    },
-    "btts": {
-      "sim": "77.2% (1.3)",
-      "book": null
-    }
-  },
-  {
-    "home": "Fiorentina",
-    "away": "Napoli",
-    "home_logo": "assets/logos/502.png",
-    "away_logo": "assets/logos/492.png",
-    "projected_score": "1.4 vs 1.36",
+    "home": "Metz",
+    "away": "Angers",
+    "home_logo": "assets/logos/112.png",
+    "away_logo": "assets/logos/77.png",
+    "projected_score": "1.26 vs 1.22",
     "win": {
       "sim": "37.7% (2.65)",
-      "book": 3.6
+      "book": 2.25
     },
     "draw": {
-      "sim": "24.9% (4.02)",
-      "book": 3.1
+      "sim": "26.5% (3.77)",
+      "book": 3.4
     },
     "away_win": {
-      "sim": "37.4% (2.67)",
-      "book": 2.2
+      "sim": "35.9% (2.79)",
+      "book": 3.2
     },
     "home_o1_5": {
-      "sim": "41.1% (2.43)",
+      "sim": "36.0% (2.78)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "39.8% (2.51)",
+      "sim": "34.6% (2.89)",
       "book": null
     },
     "over_2_5": {
-      "sim": "52.3% (1.91)",
+      "sim": "45.4% (2.2)",
       "book": null
     },
     "btts": {
-      "sim": "56.0% (1.79)",
+      "sim": "49.7% (2.01)",
       "book": null
     }
   },
   {
-    "home": "Brentford",
-    "away": "Chelsea",
-    "home_logo": "assets/logos/55.png",
-    "away_logo": "assets/logos/49.png",
-    "projected_score": "1.62 vs 1.48",
+    "home": "Paris Saint Germain",
+    "away": "Lens",
+    "home_logo": "assets/logos/85.png",
+    "away_logo": "assets/logos/116.png",
+    "projected_score": "1.97 vs 0.97",
     "win": {
-      "sim": "41.4% (2.42)",
-      "book": 4.5
-    },
-    "draw": {
-      "sim": "23.4% (4.27)",
-      "book": 3.9
-    },
-    "away_win": {
-      "sim": "35.2% (2.84)",
-      "book": 1.75
-    },
-    "home_o1_5": {
-      "sim": "48.7% (2.05)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "43.0% (2.33)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "59.9% (1.67)",
-      "book": null
-    },
-    "btts": {
-      "sim": "62.2% (1.61)",
-      "book": null
-    }
-  },
-  {
-    "home": "Feyenoord",
-    "away": "Heerenveen",
-    "home_logo": "assets/logos/209.png",
-    "away_logo": "assets/logos/210.png",
-    "projected_score": "2.62 vs 0.86",
-    "win": {
-      "sim": "74.8% (1.34)",
-      "book": 1.38
-    },
-    "draw": {
-      "sim": "14.6% (6.85)",
-      "book": 5.0
-    },
-    "away_win": {
-      "sim": "10.5% (9.52)",
-      "book": 7.5
-    },
-    "home_o1_5": {
-      "sim": "74.1% (1.35)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "20.8% (4.81)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "67.6% (1.48)",
-      "book": null
-    },
-    "btts": {
-      "sim": "53.1% (1.88)",
-      "book": null
-    }
-  },
-  {
-    "home": "Twente",
-    "away": "NAC Breda",
-    "home_logo": "assets/logos/415.png",
-    "away_logo": "assets/logos/203.png",
-    "projected_score": "2.2 vs 0.97",
-    "win": {
-      "sim": "65.4% (1.53)",
-      "book": 1.44
-    },
-    "draw": {
-      "sim": "19.7% (5.08)",
-      "book": 4.5
-    },
-    "away_win": {
-      "sim": "14.9% (6.71)",
-      "book": 7.0
-    },
-    "home_o1_5": {
-      "sim": "64.8% (1.54)",
-      "book": null
-    },
-    "away_o1_5": {
-      "sim": "25.3% (3.95)",
-      "book": null
-    },
-    "over_2_5": {
-      "sim": "61.9% (1.62)",
-      "book": null
-    },
-    "btts": {
-      "sim": "55.2% (1.81)",
-      "book": null
-    }
-  },
-  {
-    "home": "Atletico Madrid",
-    "away": "Villarreal",
-    "home_logo": "assets/logos/530.png",
-    "away_logo": "assets/logos/533.png",
-    "projected_score": "1.93 vs 1.16",
-    "win": {
-      "sim": "55.8% (1.79)",
-      "book": 1.8
+      "sim": "61.3% (1.63)",
+      "book": 1.33
     },
     "draw": {
       "sim": "21.0% (4.76)",
-      "book": 3.7
+      "book": 5.75
     },
     "away_win": {
-      "sim": "23.2% (4.31)",
-      "book": 4.33
+      "sim": "17.7% (5.65)",
+      "book": 7.5
     },
     "home_o1_5": {
-      "sim": "57.4% (1.74)",
+      "sim": "58.5% (1.71)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "32.4% (3.09)",
+      "sim": "24.8% (4.03)",
       "book": null
     },
     "over_2_5": {
-      "sim": "60.0% (1.67)",
+      "sim": "57.1% (1.75)",
       "book": null
     },
     "btts": {
-      "sim": "58.4% (1.71)",
+      "sim": "53.4% (1.87)",
       "book": null
     }
   },
   {
-    "home": "Auxerre",
-    "away": "Monaco",
-    "home_logo": "assets/logos/108.png",
-    "away_logo": "assets/logos/91.png",
-    "projected_score": "1.61 vs 1.46",
+    "home": "Strasbourg",
+    "away": "Le Havre",
+    "home_logo": "assets/logos/95.png",
+    "away_logo": "assets/logos/111.png",
+    "projected_score": "2.08 vs 1.33",
     "win": {
-      "sim": "41.4% (2.42)",
-      "book": 5.0
+      "sim": "55.0% (1.82)",
+      "book": 1.7
     },
     "draw": {
-      "sim": "23.5% (4.26)",
-      "book": 4.33
+      "sim": "20.7% (4.83)",
+      "book": 3.9
     },
     "away_win": {
-      "sim": "35.1% (2.85)",
-      "book": 1.6
+      "sim": "24.3% (4.12)",
+      "book": 5.0
     },
     "home_o1_5": {
-      "sim": "48.4% (2.07)",
+      "sim": "61.7% (1.62)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "43.0% (2.33)",
+      "sim": "38.7% (2.58)",
       "book": null
     },
     "over_2_5": {
-      "sim": "59.0% (1.69)",
+      "sim": "66.7% (1.5)",
       "book": null
     },
     "btts": {
-      "sim": "60.6% (1.65)",
+      "sim": "63.9% (1.56)",
+      "book": null
+    }
+  },
+  {
+    "home": "Manchester City",
+    "away": "Manchester United",
+    "home_logo": "assets/logos/50.png",
+    "away_logo": "assets/logos/33.png",
+    "projected_score": "1.76 vs 1.16",
+    "win": {
+      "sim": "51.4% (1.95)",
+      "book": 1.8
+    },
+    "draw": {
+      "sim": "23.5% (4.26)",
+      "book": 4.0
+    },
+    "away_win": {
+      "sim": "25.1% (3.98)",
+      "book": 4.0
+    },
+    "home_o1_5": {
+      "sim": "52.2% (1.92)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "32.0% (3.12)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "56.0% (1.79)",
+      "book": null
+    },
+    "btts": {
+      "sim": "57.1% (1.75)",
+      "book": null
+    }
+  },
+  {
+    "home": "Borussia M\u00f6nchengladbach",
+    "away": "Werder Bremen",
+    "home_logo": "assets/logos/163.png",
+    "away_logo": "assets/logos/162.png",
+    "projected_score": "2.15 vs 1.63",
+    "win": {
+      "sim": "50.1% (2.0)",
+      "book": 1.95
+    },
+    "draw": {
+      "sim": "20.3% (4.93)",
+      "book": 4.0
+    },
+    "away_win": {
+      "sim": "29.6% (3.38)",
+      "book": 3.4
+    },
+    "home_o1_5": {
+      "sim": "64.0% (1.56)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "48.2% (2.07)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "73.1% (1.37)",
+      "book": null
+    },
+    "btts": {
+      "sim": "71.1% (1.41)",
+      "book": null
+    }
+  },
+  {
+    "home": "Sassuolo",
+    "away": "Lazio",
+    "home_logo": "assets/logos/488.png",
+    "away_logo": "assets/logos/487.png",
+    "projected_score": "1.11 vs 1.69",
+    "win": {
+      "sim": "24.3% (4.12)",
+      "book": 3.6
+    },
+    "draw": {
+      "sim": "25.2% (3.97)",
+      "book": 3.6
+    },
+    "away_win": {
+      "sim": "50.5% (1.98)",
+      "book": 2.0
+    },
+    "home_o1_5": {
+      "sim": "30.3% (3.3)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "50.2% (1.99)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "52.2% (1.92)",
+      "book": null
+    },
+    "btts": {
+      "sim": "55.1% (1.81)",
+      "book": null
+    }
+  },
+  {
+    "home": "Osasuna",
+    "away": "Rayo Vallecano",
+    "home_logo": "assets/logos/727.png",
+    "away_logo": "assets/logos/728.png",
+    "projected_score": "1.43 vs 1.24",
+    "win": {
+      "sim": "41.4% (2.42)",
+      "book": 2.5
+    },
+    "draw": {
+      "sim": "26.2% (3.82)",
+      "book": 3.2
+    },
+    "away_win": {
+      "sim": "32.4% (3.09)",
+      "book": 2.9
+    },
+    "home_o1_5": {
+      "sim": "41.3% (2.42)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "35.9% (2.79)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "50.0% (2.0)",
+      "book": null
+    },
+    "btts": {
+      "sim": "55.0% (1.82)",
+      "book": null
+    }
+  },
+  {
+    "home": "AC Milan",
+    "away": "Bologna",
+    "home_logo": "assets/logos/489.png",
+    "away_logo": "assets/logos/500.png",
+    "projected_score": "1.71 vs 1.11",
+    "win": {
+      "sim": "51.2% (1.95)",
+      "book": 1.91
+    },
+    "draw": {
+      "sim": "24.2% (4.13)",
+      "book": 3.4
+    },
+    "away_win": {
+      "sim": "24.6% (4.07)",
+      "book": 4.2
+    },
+    "home_o1_5": {
+      "sim": "51.0% (1.96)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "30.5% (3.28)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "53.6% (1.87)",
+      "book": null
+    },
+    "btts": {
+      "sim": "55.7% (1.8)",
+      "book": null
+    }
+  },
+  {
+    "home": "Rennes",
+    "away": "Lyon",
+    "home_logo": "assets/logos/94.png",
+    "away_logo": "assets/logos/80.png",
+    "projected_score": "1.67 vs 1.51",
+    "win": {
+      "sim": "41.6% (2.4)",
+      "book": 2.6
+    },
+    "draw": {
+      "sim": "23.7% (4.22)",
+      "book": 3.6
+    },
+    "away_win": {
+      "sim": "34.7% (2.88)",
+      "book": 2.6
+    },
+    "home_o1_5": {
+      "sim": "49.8% (2.01)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "44.4% (2.25)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "61.9% (1.62)",
+      "book": null
+    },
+    "btts": {
+      "sim": "63.5% (1.57)",
+      "book": null
+    }
+  },
+  {
+    "home": "Barcelona",
+    "away": "Valencia",
+    "home_logo": "assets/logos/529.png",
+    "away_logo": "assets/logos/532.png",
+    "projected_score": "2.88 vs 0.96",
+    "win": {
+      "sim": "77.4% (1.29)",
+      "book": 1.28
+    },
+    "draw": {
+      "sim": "13.0% (7.69)",
+      "book": 6.25
+    },
+    "away_win": {
+      "sim": "9.7% (10.31)",
+      "book": 9.0
+    },
+    "home_o1_5": {
+      "sim": "79.0% (1.27)",
+      "book": null
+    },
+    "away_o1_5": {
+      "sim": "24.6% (4.07)",
+      "book": null
+    },
+    "over_2_5": {
+      "sim": "73.9% (1.35)",
+      "book": null
+    },
+    "btts": {
+      "sim": "57.5% (1.74)",
       "book": null
     }
   }
