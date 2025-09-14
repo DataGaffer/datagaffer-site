@@ -122,23 +122,31 @@
     font-size: 12px !important;
     margin: auto;
     margin-bottom: 25px;
-    table-layout: fixed;   /* 🔹 force equal width distribution */
+    table-layout: fixed;   /* 🔹 force equal distribution */
   }
 
   th, td {
     padding: 4px !important;
     font-size: 12px !important;
-    word-wrap: break-word;  /* 🔹 prevents overflow */
+    word-wrap: break-word;
   }
 
   img { width: 20px !important; height: 20px !important; }
 
-  /* 🔹 equal widths for specific columns */
-  td:nth-child(2), th:nth-child(2),
-  td:nth-child(4), th:nth-child(4) {
-    width: 22% !important;
+  /* 🔹 wider Matchup column for logos */
+  th:nth-child(1), td:nth-child(1) {
+    width: 35% !important;   /* give logos room */
+  }
+
+  /* 🔹 shrink the stat columns evenly */
+  th:nth-child(2), td:nth-child(2),
+  th:nth-child(3), td:nth-child(3),
+  th:nth-child(4), td:nth-child(4),
+  th:nth-child(5), td:nth-child(5) {
+    width: 16.25% !important;
   }
 }
+
 
   </style>
 </head>
