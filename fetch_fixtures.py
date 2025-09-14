@@ -45,20 +45,31 @@ for fixture in data["response"]:
         book_odds = {
             "home_win": float(odds_data[0]["odd"]),
             "draw": float(odds_data[1]["odd"]),
-            "away_win": float(odds_data[2]["odd"])
+            "away_win": float(odds_data[2]["odd"]),
+            # 🔹 Add placeholders for manual input later
+            "btts": None,
+            "over25": None,
+            "home_o1_5": None,
+            "away_o1_5": None
         }
     except (IndexError, KeyError, ValueError):
-        book_odds = {}
+        book_odds = {
+            "home_win": None,
+            "draw": None,
+            "away_win": None,
+            # 🔹 Placeholders still included even if odds missing
+            "btts": None,
+            "over25": None,
+            "home_o1_5": None,
+            "away_o1_5": None
+        }
 
     # --- Get H2H stats (last 5 meetings) ---
     h2h_url = f"https://v3.football.api-sports.io/fixtures/headtohead?h2h={home_id}-{away_id}&last=5"
     h2h_response = requests.get(h2h_url, headers=headers).json()
 
-    home_wins = 0
-    away_wins = 0
-    draws = 0
-    home_goals = []
-    away_goals = []
+    home_wins, away_wins, draws = 0, 0, 0
+    home_goals, away_goals = [], []
 
     try:
         for match in h2h_response["response"]:
@@ -102,7 +113,7 @@ for fixture in data["response"]:
         print(f"⚠️ H2H error for {home['name']} vs {away['name']}: {e}")
         h2h_stats = {}
 
-    # --- Run our simulation (goals, corners, shots) ---
+    # --- Run our simulation (goals, corners, shots + percents) ---
     try:
         sim = simulate_match(home_id, away_id)
         sim_stats = {
@@ -131,7 +142,6 @@ for fixture in data["response"]:
                 "away_o1_5_pct": sim["away_o1_5_pct"]
             }
         }
-
     except Exception as e:
         print(f"⚠️ Simulation error for {home['name']} vs {away['name']}: {e}")
         sim_stats = {"xg": {}, "corners": {}, "shots": {}, "percents": {}}
@@ -173,6 +183,7 @@ with open("h2h_and_odds.json", "w") as f:
 
 print(f"✅ Saved {len(valid_matches)} fixture(s) to fixtures.json with full simulation stats.")
 print("✅ Saved h2h_and_odds.json with goal averages.")
+
 
 
 
