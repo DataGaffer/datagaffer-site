@@ -4,33 +4,33 @@
     "away": "Sparta Rotterdam",
     "home_logo": "assets/logos/196.png",
     "away_logo": "assets/logos/426.png",
-    "projected_score": "1.32 vs 1.92",
+    "projected_score": "1.27 vs 2.06",
     "win": {
-      "sim": "26.5% (3.77)",
-      "book": 3.2
+      "sim": "23.2% (4.31)",
+      "book": 3.1
     },
     "draw": {
-      "sim": "21.5% (4.65)",
+      "sim": "21.4% (4.67)",
       "book": 3.6
     },
     "away_win": {
-      "sim": "51.9% (1.93)",
-      "book": 2.15
+      "sim": "55.4% (1.81)",
+      "book": 2.2
     },
     "home_o1_5": {
-      "sim": "37.3% (2.68)",
+      "sim": "36.9% (2.71)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "57.4% (1.74)",
+      "sim": "61.2% (1.63)",
       "book": null
     },
     "over_2_5": {
-      "sim": "62.4% (1.6)",
+      "sim": "64.5% (1.55)",
       "book": null
     },
     "btts": {
-      "sim": "61.3% (1.63)",
+      "sim": "61.9% (1.62)",
       "book": null
     }
   },
@@ -39,33 +39,33 @@
     "away": "Torino",
     "home_logo": "assets/logos/497.png",
     "away_logo": "assets/logos/503.png",
-    "projected_score": "1.91 vs 0.82",
+    "projected_score": "1.84 vs 0.77",
     "win": {
-      "sim": "62.8% (1.59)",
-      "book": 1.5
+      "sim": "62.9% (1.59)",
+      "book": 1.53
     },
     "draw": {
-      "sim": "21.6% (4.63)",
-      "book": 4.1
+      "sim": "21.9% (4.57)",
+      "book": 4.0
     },
     "away_win": {
-      "sim": "15.6% (6.41)",
-      "book": 7.0
+      "sim": "15.2% (6.58)",
+      "book": 6.5
     },
     "home_o1_5": {
-      "sim": "56.9% (1.76)",
+      "sim": "54.1% (1.85)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "19.6% (5.1)",
+      "sim": "18.3% (5.46)",
       "book": null
     },
     "over_2_5": {
-      "sim": "51.5% (1.94)",
+      "sim": "48.6% (2.06)",
       "book": null
     },
     "btts": {
-      "sim": "48.0% (2.08)",
+      "sim": "44.9% (2.23)",
       "book": null
     }
   },
@@ -74,33 +74,33 @@
     "away": "Girona",
     "home_logo": "assets/logos/538.png",
     "away_logo": "assets/logos/547.png",
-    "projected_score": "1.58 vs 1.09",
+    "projected_score": "1.44 vs 1.08",
     "win": {
-      "sim": "48.1% (2.08)",
+      "sim": "45.4% (2.2)",
       "book": 1.65
     },
     "draw": {
-      "sim": "26.1% (3.83)",
+      "sim": "27.1% (3.69)",
       "book": 4.1
     },
     "away_win": {
-      "sim": "25.8% (3.88)",
+      "sim": "27.5% (3.64)",
       "book": 5.0
     },
     "home_o1_5": {
-      "sim": "46.5% (2.15)",
+      "sim": "42.1% (2.38)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "29.6% (3.38)",
+      "sim": "29.2% (3.42)",
       "book": null
     },
     "over_2_5": {
-      "sim": "50.4% (1.98)",
+      "sim": "45.7% (2.19)",
       "book": null
     },
     "btts": {
-      "sim": "53.5% (1.87)",
+      "sim": "51.0% (1.96)",
       "book": null
     }
   },
@@ -109,33 +109,33 @@
     "away": "AZ Alkmaar",
     "home_logo": "assets/logos/206.png",
     "away_logo": "assets/logos/201.png",
-    "projected_score": "1.7 vs 1.45",
+    "projected_score": "1.74 vs 1.24",
     "win": {
-      "sim": "43.4% (2.3)",
-      "book": 6.0
+      "sim": "48.9% (2.04)",
+      "book": 6.25
     },
     "draw": {
-      "sim": "23.5% (4.26)",
+      "sim": "23.9% (4.18)",
       "book": 4.5
     },
     "away_win": {
-      "sim": "33.0% (3.03)",
-      "book": 1.5
+      "sim": "27.3% (3.66)",
+      "book": 1.48
     },
     "home_o1_5": {
-      "sim": "51.0% (1.96)",
+      "sim": "52.2% (1.92)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "41.4% (2.42)",
+      "sim": "34.9% (2.87)",
       "book": null
     },
     "over_2_5": {
-      "sim": "61.2% (1.63)",
+      "sim": "56.6% (1.77)",
       "book": null
     },
     "btts": {
-      "sim": "62.5% (1.6)",
+      "sim": "59.5% (1.68)",
       "book": null
     }
   },
@@ -144,33 +144,33 @@
     "away": "Groningen",
     "home_logo": "assets/logos/207.png",
     "away_logo": "assets/logos/202.png",
-    "projected_score": "2.35 vs 1.0",
+    "projected_score": "2.25 vs 0.91",
     "win": {
-      "sim": "67.2% (1.49)",
-      "book": 1.75
+      "sim": "67.7% (1.48)",
+      "book": 1.8
     },
     "draw": {
-      "sim": "18.6% (5.38)",
-      "book": 4.0
+      "sim": "19.0% (5.26)",
+      "book": 3.8
     },
     "away_win": {
-      "sim": "14.2% (7.04)",
+      "sim": "13.3% (7.52)",
       "book": 4.33
     },
     "home_o1_5": {
-      "sim": "67.8% (1.47)",
+      "sim": "65.9% (1.52)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "25.8% (3.88)",
+      "sim": "23.6% (4.24)",
       "book": null
     },
     "over_2_5": {
-      "sim": "65.3% (1.53)",
+      "sim": "61.2% (1.63)",
       "book": null
     },
     "btts": {
-      "sim": "57.4% (1.74)",
+      "sim": "53.6% (1.87)",
       "book": null
     }
   },
@@ -179,33 +179,33 @@
     "away": "Lecce",
     "home_logo": "assets/logos/499.png",
     "away_logo": "assets/logos/867.png",
-    "projected_score": "1.76 vs 0.85",
+    "projected_score": "1.71 vs 0.8",
     "win": {
-      "sim": "58.6% (1.71)",
+      "sim": "59.0% (1.69)",
       "book": 1.4
     },
     "draw": {
-      "sim": "23.5% (4.26)",
+      "sim": "23.8% (4.2)",
       "book": 4.5
     },
     "away_win": {
-      "sim": "17.8% (5.62)",
+      "sim": "17.3% (5.78)",
       "book": 8.5
     },
     "home_o1_5": {
-      "sim": "52.6% (1.9)",
+      "sim": "50.0% (2.0)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "20.7% (4.83)",
+      "sim": "18.9% (5.29)",
       "book": null
     },
     "over_2_5": {
-      "sim": "48.5% (2.06)",
+      "sim": "45.3% (2.21)",
       "book": null
     },
     "btts": {
-      "sim": "47.7% (2.1)",
+      "sim": "44.9% (2.23)",
       "book": null
     }
   },
@@ -214,33 +214,33 @@
     "away": "Udinese",
     "home_logo": "assets/logos/801.png",
     "away_logo": "assets/logos/494.png",
-    "projected_score": "1.02 vs 0.81",
+    "projected_score": "0.8 vs 0.66",
     "win": {
-      "sim": "39.4% (2.54)",
+      "sim": "35.5% (2.82)",
       "book": 2.75
     },
     "draw": {
-      "sim": "33.0% (3.03)",
+      "sim": "37.2% (2.69)",
       "book": 3.1
     },
     "away_win": {
-      "sim": "27.6% (3.62)",
+      "sim": "27.3% (3.66)",
       "book": 2.75
     },
     "home_o1_5": {
-      "sim": "26.4% (3.79)",
+      "sim": "19.4% (5.15)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "19.1% (5.24)",
+      "sim": "13.6% (7.35)",
       "book": null
     },
     "over_2_5": {
-      "sim": "27.2% (3.68)",
+      "sim": "17.9% (5.59)",
       "book": null
     },
     "btts": {
-      "sim": "36.2% (2.76)",
+      "sim": "26.8% (3.73)",
       "book": null
     }
   },
@@ -249,33 +249,33 @@
     "away": "Liverpool",
     "home_logo": "assets/logos/44.png",
     "away_logo": "assets/logos/40.png",
-    "projected_score": "1.08 vs 2.16",
+    "projected_score": "0.87 vs 2.16",
     "win": {
-      "sim": "18.2% (5.49)",
+      "sim": "13.1% (7.63)",
       "book": 8.5
     },
     "draw": {
-      "sim": "19.4% (5.15)",
+      "sim": "20.1% (4.98)",
       "book": 5.75
     },
     "away_win": {
-      "sim": "62.3% (1.61)",
-      "book": 1.33
+      "sim": "66.8% (1.5)",
+      "book": 1.3
     },
     "home_o1_5": {
-      "sim": "28.6% (3.5)",
+      "sim": "21.8% (4.59)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "63.7% (1.57)",
+      "sim": "64.0% (1.56)",
       "book": null
     },
     "over_2_5": {
-      "sim": "63.1% (1.58)",
+      "sim": "58.5% (1.71)",
       "book": null
     },
     "btts": {
-      "sim": "58.3% (1.72)",
+      "sim": "51.7% (1.93)",
       "book": null
     }
   },
@@ -284,33 +284,33 @@
     "away": "Toulouse",
     "home_logo": "assets/logos/79.png",
     "away_logo": "assets/logos/96.png",
-    "projected_score": "1.66 vs 1.2",
+    "projected_score": "1.65 vs 1.21",
     "win": {
-      "sim": "48.5% (2.06)",
+      "sim": "47.5% (2.11)",
       "book": 1.75
     },
     "draw": {
-      "sim": "23.7% (4.22)",
+      "sim": "24.2% (4.13)",
       "book": 3.8
     },
     "away_win": {
-      "sim": "27.8% (3.6)",
+      "sim": "28.3% (3.53)",
       "book": 4.5
     },
     "home_o1_5": {
-      "sim": "49.0% (2.04)",
+      "sim": "49.3% (2.03)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "34.1% (2.93)",
+      "sim": "34.3% (2.92)",
       "book": null
     },
     "over_2_5": {
-      "sim": "54.4% (1.84)",
+      "sim": "54.1% (1.85)",
       "book": null
     },
     "btts": {
-      "sim": "56.4% (1.77)",
+      "sim": "56.3% (1.78)",
       "book": null
     }
   },
@@ -319,33 +319,33 @@
     "away": "FC Augsburg",
     "home_logo": "assets/logos/186.png",
     "away_logo": "assets/logos/170.png",
-    "projected_score": "1.43 vs 1.44",
+    "projected_score": "1.36 vs 1.54",
     "win": {
-      "sim": "37.6% (2.66)",
+      "sim": "33.2% (3.01)",
       "book": 2.15
     },
     "draw": {
-      "sim": "24.5% (4.08)",
+      "sim": "24.1% (4.15)",
       "book": 3.4
     },
     "away_win": {
-      "sim": "37.9% (2.64)",
+      "sim": "42.7% (2.34)",
       "book": 3.4
     },
     "home_o1_5": {
-      "sim": "42.2% (2.37)",
+      "sim": "39.1% (2.56)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "41.9% (2.39)",
+      "sim": "45.4% (2.2)",
       "book": null
     },
     "over_2_5": {
-      "sim": "54.6% (1.83)",
+      "sim": "54.4% (1.84)",
       "book": null
     },
     "btts": {
-      "sim": "58.1% (1.72)",
+      "sim": "58.2% (1.72)",
       "book": null
     }
   },
@@ -354,33 +354,33 @@
     "away": "Real Betis",
     "home_logo": "assets/logos/539.png",
     "away_logo": "assets/logos/543.png",
-    "projected_score": "1.81 vs 1.95",
+    "projected_score": "1.89 vs 2.12",
     "win": {
-      "sim": "36.8% (2.72)",
+      "sim": "35.3% (2.83)",
       "book": 3.3
     },
     "draw": {
-      "sim": "21.1% (4.74)",
-      "book": 3.25
+      "sim": "21.0% (4.76)",
+      "book": 3.3
     },
     "away_win": {
-      "sim": "42.1% (2.38)",
-      "book": 2.25
+      "sim": "43.7% (2.29)",
+      "book": 2.2
     },
     "home_o1_5": {
-      "sim": "54.3% (1.84)",
+      "sim": "56.8% (1.76)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "58.8% (1.7)",
+      "sim": "62.3% (1.61)",
       "book": null
     },
     "over_2_5": {
-      "sim": "73.6% (1.36)",
+      "sim": "76.2% (1.31)",
       "book": null
     },
     "btts": {
-      "sim": "72.5% (1.38)",
+      "sim": "75.1% (1.33)",
       "book": null
     }
   },
@@ -389,25 +389,25 @@
     "away": "Fortuna Sittard",
     "home_logo": "assets/logos/427.png",
     "away_logo": "assets/logos/205.png",
-    "projected_score": "1.4 vs 1.67",
+    "projected_score": "1.27 vs 1.79",
     "win": {
-      "sim": "32.0% (3.12)",
+      "sim": "27.7% (3.61)",
       "book": 2.35
     },
     "draw": {
-      "sim": "23.2% (4.31)",
+      "sim": "23.7% (4.22)",
       "book": 3.6
     },
     "away_win": {
-      "sim": "44.8% (2.23)",
+      "sim": "48.6% (2.06)",
       "book": 2.88
     },
     "home_o1_5": {
-      "sim": "40.4% (2.48)",
+      "sim": "36.1% (2.77)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "50.0% (2.0)",
+      "sim": "52.5% (1.9)",
       "book": null
     },
     "over_2_5": {
@@ -415,7 +415,7 @@
       "book": null
     },
     "btts": {
-      "sim": "60.5% (1.65)",
+      "sim": "59.7% (1.68)",
       "book": null
     }
   },
@@ -424,33 +424,33 @@
     "away": "Paris FC",
     "home_logo": "assets/logos/106.png",
     "away_logo": "assets/logos/114.png",
-    "projected_score": "1.68 vs 0.94",
+    "projected_score": "1.49 vs 0.84",
     "win": {
-      "sim": "55.0% (1.82)",
+      "sim": "52.7% (1.9)",
       "book": 2.25
     },
     "draw": {
-      "sim": "23.8% (4.2)",
+      "sim": "26.2% (3.82)",
       "book": 3.5
     },
     "away_win": {
-      "sim": "21.2% (4.72)",
+      "sim": "21.0% (4.76)",
       "book": 3.1
     },
     "home_o1_5": {
-      "sim": "49.8% (2.01)",
+      "sim": "43.9% (2.28)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "24.4% (4.1)",
+      "sim": "20.5% (4.88)",
       "book": null
     },
     "over_2_5": {
-      "sim": "49.4% (2.02)",
+      "sim": "40.3% (2.48)",
       "book": null
     },
     "btts": {
-      "sim": "49.4% (2.02)",
+      "sim": "43.2% (2.31)",
       "book": null
     }
   },
@@ -459,33 +459,33 @@
     "away": "Angers",
     "home_logo": "assets/logos/112.png",
     "away_logo": "assets/logos/77.png",
-    "projected_score": "1.26 vs 1.22",
+    "projected_score": "1.24 vs 1.23",
     "win": {
-      "sim": "37.7% (2.65)",
-      "book": 2.25
+      "sim": "36.5% (2.74)",
+      "book": 2.35
     },
     "draw": {
-      "sim": "26.5% (3.77)",
+      "sim": "27.2% (3.68)",
       "book": 3.4
     },
     "away_win": {
-      "sim": "35.9% (2.79)",
-      "book": 3.2
+      "sim": "36.4% (2.75)",
+      "book": 3.1
     },
     "home_o1_5": {
-      "sim": "36.0% (2.78)",
+      "sim": "35.0% (2.86)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "34.6% (2.89)",
+      "sim": "34.8% (2.87)",
       "book": null
     },
     "over_2_5": {
-      "sim": "45.4% (2.2)",
+      "sim": "44.2% (2.26)",
       "book": null
     },
     "btts": {
-      "sim": "49.7% (2.01)",
+      "sim": "50.0% (2.0)",
       "book": null
     }
   },
@@ -494,33 +494,33 @@
     "away": "Lens",
     "home_logo": "assets/logos/85.png",
     "away_logo": "assets/logos/116.png",
-    "projected_score": "1.97 vs 0.97",
+    "projected_score": "1.93 vs 0.9",
     "win": {
-      "sim": "61.3% (1.63)",
+      "sim": "60.8% (1.64)",
       "book": 1.33
     },
     "draw": {
-      "sim": "21.0% (4.76)",
+      "sim": "21.9% (4.57)",
       "book": 5.75
     },
     "away_win": {
-      "sim": "17.7% (5.65)",
+      "sim": "17.2% (5.81)",
       "book": 7.5
     },
     "home_o1_5": {
-      "sim": "58.5% (1.71)",
+      "sim": "57.7% (1.73)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "24.8% (4.03)",
+      "sim": "23.0% (4.35)",
       "book": null
     },
     "over_2_5": {
-      "sim": "57.1% (1.75)",
+      "sim": "54.2% (1.85)",
       "book": null
     },
     "btts": {
-      "sim": "53.4% (1.87)",
+      "sim": "50.0% (2.0)",
       "book": null
     }
   },
@@ -529,33 +529,33 @@
     "away": "Le Havre",
     "home_logo": "assets/logos/95.png",
     "away_logo": "assets/logos/111.png",
-    "projected_score": "2.08 vs 1.33",
+    "projected_score": "2.13 vs 1.41",
     "win": {
-      "sim": "55.0% (1.82)",
-      "book": 1.7
+      "sim": "53.8% (1.86)",
+      "book": 1.73
     },
     "draw": {
-      "sim": "20.7% (4.83)",
-      "book": 3.9
+      "sim": "21.4% (4.67)",
+      "book": 3.8
     },
     "away_win": {
-      "sim": "24.3% (4.12)",
+      "sim": "24.8% (4.03)",
       "book": 5.0
     },
     "home_o1_5": {
-      "sim": "61.7% (1.62)",
+      "sim": "63.2% (1.58)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "38.7% (2.58)",
+      "sim": "41.0% (2.44)",
       "book": null
     },
     "over_2_5": {
-      "sim": "66.7% (1.5)",
+      "sim": "68.6% (1.46)",
       "book": null
     },
     "btts": {
-      "sim": "63.9% (1.56)",
+      "sim": "66.6% (1.5)",
       "book": null
     }
   },
@@ -564,33 +564,33 @@
     "away": "Manchester United",
     "home_logo": "assets/logos/50.png",
     "away_logo": "assets/logos/33.png",
-    "projected_score": "1.76 vs 1.16",
+    "projected_score": "1.62 vs 1.18",
     "win": {
-      "sim": "51.4% (1.95)",
-      "book": 1.8
+      "sim": "48.5% (2.06)",
+      "book": 1.75
     },
     "draw": {
-      "sim": "23.5% (4.26)",
-      "book": 4.0
+      "sim": "23.7% (4.22)",
+      "book": 3.9
     },
     "away_win": {
-      "sim": "25.1% (3.98)",
-      "book": 4.0
+      "sim": "27.8% (3.6)",
+      "book": 4.33
     },
     "home_o1_5": {
-      "sim": "52.2% (1.92)",
+      "sim": "47.4% (2.11)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "32.0% (3.12)",
+      "sim": "32.9% (3.04)",
       "book": null
     },
     "over_2_5": {
-      "sim": "56.0% (1.79)",
+      "sim": "52.8% (1.89)",
       "book": null
     },
     "btts": {
-      "sim": "57.1% (1.75)",
+      "sim": "55.6% (1.8)",
       "book": null
     }
   },
@@ -599,29 +599,29 @@
     "away": "Werder Bremen",
     "home_logo": "assets/logos/163.png",
     "away_logo": "assets/logos/162.png",
-    "projected_score": "2.15 vs 1.63",
+    "projected_score": "2.24 vs 1.64",
     "win": {
-      "sim": "50.1% (2.0)",
+      "sim": "51.6% (1.94)",
       "book": 1.95
     },
     "draw": {
-      "sim": "20.3% (4.93)",
+      "sim": "19.7% (5.08)",
       "book": 4.0
     },
     "away_win": {
-      "sim": "29.6% (3.38)",
+      "sim": "28.7% (3.48)",
       "book": 3.4
     },
     "home_o1_5": {
-      "sim": "64.0% (1.56)",
+      "sim": "65.2% (1.53)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "48.2% (2.07)",
+      "sim": "49.1% (2.04)",
       "book": null
     },
     "over_2_5": {
-      "sim": "73.1% (1.37)",
+      "sim": "74.0% (1.35)",
       "book": null
     },
     "btts": {
@@ -634,33 +634,33 @@
     "away": "Lazio",
     "home_logo": "assets/logos/488.png",
     "away_logo": "assets/logos/487.png",
-    "projected_score": "1.11 vs 1.69",
+    "projected_score": "0.95 vs 1.69",
     "win": {
-      "sim": "24.3% (4.12)",
-      "book": 3.6
+      "sim": "20.8% (4.81)",
+      "book": 3.7
     },
     "draw": {
-      "sim": "25.2% (3.97)",
-      "book": 3.6
+      "sim": "24.7% (4.05)",
+      "book": 3.4
     },
     "away_win": {
-      "sim": "50.5% (1.98)",
-      "book": 2.0
+      "sim": "54.5% (1.83)",
+      "book": 2.05
     },
     "home_o1_5": {
-      "sim": "30.3% (3.3)",
+      "sim": "24.2% (4.13)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "50.2% (1.99)",
+      "sim": "50.0% (2.0)",
       "book": null
     },
     "over_2_5": {
-      "sim": "52.2% (1.92)",
+      "sim": "48.5% (2.06)",
       "book": null
     },
     "btts": {
-      "sim": "55.1% (1.81)",
+      "sim": "49.5% (2.02)",
       "book": null
     }
   },
@@ -669,33 +669,33 @@
     "away": "Rayo Vallecano",
     "home_logo": "assets/logos/727.png",
     "away_logo": "assets/logos/728.png",
-    "projected_score": "1.43 vs 1.24",
+    "projected_score": "1.31 vs 1.28",
     "win": {
-      "sim": "41.4% (2.42)",
-      "book": 2.5
+      "sim": "37.2% (2.69)",
+      "book": 2.55
     },
     "draw": {
-      "sim": "26.2% (3.82)",
+      "sim": "26.8% (3.73)",
       "book": 3.2
     },
     "away_win": {
-      "sim": "32.4% (3.09)",
+      "sim": "36.0% (2.78)",
       "book": 2.9
     },
     "home_o1_5": {
-      "sim": "41.3% (2.42)",
+      "sim": "37.5% (2.67)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "35.9% (2.79)",
+      "sim": "36.8% (2.72)",
       "book": null
     },
     "over_2_5": {
-      "sim": "50.0% (2.0)",
+      "sim": "47.8% (2.09)",
       "book": null
     },
     "btts": {
-      "sim": "55.0% (1.82)",
+      "sim": "53.0% (1.89)",
       "book": null
     }
   },
@@ -704,33 +704,33 @@
     "away": "Bologna",
     "home_logo": "assets/logos/489.png",
     "away_logo": "assets/logos/500.png",
-    "projected_score": "1.71 vs 1.11",
+    "projected_score": "1.69 vs 1.15",
     "win": {
-      "sim": "51.2% (1.95)",
+      "sim": "50.5% (1.98)",
       "book": 1.91
     },
     "draw": {
-      "sim": "24.2% (4.13)",
+      "sim": "22.9% (4.37)",
       "book": 3.4
     },
     "away_win": {
-      "sim": "24.6% (4.07)",
+      "sim": "26.6% (3.76)",
       "book": 4.2
     },
     "home_o1_5": {
-      "sim": "51.0% (1.96)",
+      "sim": "49.8% (2.01)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "30.5% (3.28)",
+      "sim": "32.0% (3.12)",
       "book": null
     },
     "over_2_5": {
-      "sim": "53.6% (1.87)",
+      "sim": "54.6% (1.83)",
       "book": null
     },
     "btts": {
-      "sim": "55.7% (1.8)",
+      "sim": "56.1% (1.78)",
       "book": null
     }
   },
@@ -739,33 +739,33 @@
     "away": "Lyon",
     "home_logo": "assets/logos/94.png",
     "away_logo": "assets/logos/80.png",
-    "projected_score": "1.67 vs 1.51",
+    "projected_score": "1.66 vs 1.6",
     "win": {
-      "sim": "41.6% (2.4)",
+      "sim": "39.3% (2.54)",
       "book": 2.6
     },
     "draw": {
-      "sim": "23.7% (4.22)",
+      "sim": "23.3% (4.29)",
       "book": 3.6
     },
     "away_win": {
-      "sim": "34.7% (2.88)",
+      "sim": "37.3% (2.68)",
       "book": 2.6
     },
     "home_o1_5": {
-      "sim": "49.8% (2.01)",
+      "sim": "49.2% (2.03)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "44.4% (2.25)",
+      "sim": "47.6% (2.1)",
       "book": null
     },
     "over_2_5": {
-      "sim": "61.9% (1.62)",
+      "sim": "63.3% (1.58)",
       "book": null
     },
     "btts": {
-      "sim": "63.5% (1.57)",
+      "sim": "64.7% (1.55)",
       "book": null
     }
   },
@@ -774,33 +774,33 @@
     "away": "Valencia",
     "home_logo": "assets/logos/529.png",
     "away_logo": "assets/logos/532.png",
-    "projected_score": "2.88 vs 0.96",
+    "projected_score": "3.07 vs 0.96",
     "win": {
-      "sim": "77.4% (1.29)",
-      "book": 1.28
+      "sim": "78.8% (1.27)",
+      "book": 1.3
     },
     "draw": {
-      "sim": "13.0% (7.69)",
+      "sim": "12.6% (7.94)",
       "book": 6.25
     },
     "away_win": {
-      "sim": "9.7% (10.31)",
-      "book": 9.0
+      "sim": "8.6% (11.63)",
+      "book": 8.5
     },
     "home_o1_5": {
-      "sim": "79.0% (1.27)",
+      "sim": "80.4% (1.24)",
       "book": null
     },
     "away_o1_5": {
-      "sim": "24.6% (4.07)",
+      "sim": "24.7% (4.05)",
       "book": null
     },
     "over_2_5": {
-      "sim": "73.9% (1.35)",
+      "sim": "76.2% (1.31)",
       "book": null
     },
     "btts": {
-      "sim": "57.5% (1.74)",
+      "sim": "58.8% (1.7)",
       "book": null
     }
   }
