@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timedelta
 import pytz
 from match_simulator import simulate_match
+from importlib import reload   # 🔹 added for reloading
 
 API_KEY = "3c2b2ba5c3a0ccad7f273e8ca96bba5f"
 
@@ -11,7 +12,7 @@ with open("teams.json", "r") as f:
     known_teams = json.load(f)
 known_names = {team["name"] for team in known_teams}
 
-# --- Get tomorrow’s date based on EST, not UTC ---
+# --- Get tomorrow’s date based on EST ---
 est = pytz.timezone("US/Eastern")
 now_est = datetime.now(est)
 target_date = (now_est + timedelta(days=1)).strftime("%Y-%m-%d")
@@ -35,6 +36,7 @@ for fixture in data["response"]:
 
     # Skip teams not in teams.json
     if home["name"] not in known_names or away["name"] not in known_names:
+        print(f"⚠️ Skipping {home['name']} vs {away['name']} (not in teams.json)")
         continue
 
     # --- Get book odds (1X2) from Bet365 ---
@@ -46,7 +48,6 @@ for fixture in data["response"]:
             "home_win": float(odds_data[0]["odd"]),
             "draw": float(odds_data[1]["odd"]),
             "away_win": float(odds_data[2]["odd"]),
-            # 🔹 Add placeholders for manual input later
             "btts": None,
             "over25": None,
             "home_o1_5": None,
@@ -57,7 +58,6 @@ for fixture in data["response"]:
             "home_win": None,
             "draw": None,
             "away_win": None,
-            # 🔹 Placeholders still included even if odds missing
             "btts": None,
             "over25": None,
             "home_o1_5": None,
@@ -105,18 +105,59 @@ for fixture in data["response"]:
             "home_wins": home_wins,
             "away_wins": away_wins,
             "draws": draws,
-            "h2h_avg_home": round(sum(home_goals) / len(home_goals), 2) if home_goals else 0.0,
-            "h2h_avg_away": round(sum(away_goals) / len(away_goals), 2) if away_goals else 0.0
+            "h2h_avg_home": round(sum(home_goals) / len(home_goals), 2) if home_goals else None,
+            "h2h_avg_away": round(sum(away_goals) / len(away_goals), 2) if away_goals else None
         }
 
     except Exception as e:
         print(f"⚠️ H2H error for {home['name']} vs {away['name']}: {e}")
         h2h_stats = {}
 
-    # --- Run our simulation (goals, corners, shots + percents) ---
+    # --- Save fixture (sim_stats later) ---
+    valid_matches.append({
+        "fixture_id": fixture_id,
+        "home": home,
+        "away": away,
+        "home_id": home_id,
+        "away_id": away_id,
+        "home_logo": home["logo"],
+        "away_logo": away["logo"],
+        "date": fixture["fixture"]["date"],
+        "book_odds": book_odds,
+        "sim_stats": {}
+    })
+
+    # --- Save H2H + odds ---
+    key = f"{min(home_id, away_id)}_{max(home_id, away_id)}"
+    h2h_data[key] = {
+        "book_home_win": book_odds.get("home_win", 0),
+        "book_draw": book_odds.get("draw", 0),
+        "book_away_win": book_odds.get("away_win", 0),
+        "h2h_home_wins": h2h_stats.get("home_wins", 0),
+        "h2h_away_wins": h2h_stats.get("away_wins", 0),
+        "h2h_draws": h2h_stats.get("draws", 0),
+        "h2h_avg_home": h2h_stats.get("h2h_avg_home", 0.0),
+        "h2h_avg_away": h2h_stats.get("h2h_avg_away", 0.0)
+    }
+
+# --- Save H2H immediately ---
+with open("h2h_and_odds.json", "w") as f:
+    json.dump(h2h_data, f, indent=2)
+
+# --- Reload match_simulator so it picks up new H2H ---
+import match_simulator
+reload(match_simulator)
+simulate_match = match_simulator.simulate_match
+
+# --- Now run simulations with updated H2H ---
+for match in valid_matches:
+    home_id = match["home_id"]
+    away_id = match["away_id"]
+    fixture_id = match["fixture_id"]
+
     try:
-        sim = simulate_match(home_id, away_id)
-        sim_stats = {
+        sim = simulate_match(home_id, away_id, fixture_id)
+        match["sim_stats"] = {
             "xg": {
                 "home": f"{sim['home_score']:.2f}",
                 "away": f"{sim['away_score']:.2f}",
@@ -143,46 +184,16 @@ for fixture in data["response"]:
             }
         }
     except Exception as e:
-        print(f"⚠️ Simulation error for {home['name']} vs {away['name']}: {e}")
-        sim_stats = {"xg": {}, "corners": {}, "shots": {}, "percents": {}}
+        print(f"⚠️ Simulation error for {match['home']['name']} vs {match['away']['name']}: {e}")
+        match["sim_stats"] = {"xg": {}, "corners": {}, "shots": {}, "percents": {}}
 
-    # --- Save this fixture ---
-    valid_matches.append({
-        "fixture_id": fixture_id,
-        "home": home,
-        "away": away,
-        "home_id": home_id,
-        "away_id": away_id,
-        "home_logo": home["logo"],
-        "away_logo": away["logo"],
-        "date": fixture["fixture"]["date"],
-        "book_odds": book_odds,
-        "sim_stats": sim_stats
-    })
-
-    # --- Save H2H + odds data ---
-    key = f"{home_id}_{away_id}"
-    h2h_data[key] = {
-        "book_home_win": book_odds.get("home_win", 0),
-        "book_draw": book_odds.get("draw", 0),
-        "book_away_win": book_odds.get("away_win", 0),
-        "h2h_home_wins": h2h_stats.get("home_wins", 0),
-        "h2h_away_wins": h2h_stats.get("away_wins", 0),
-        "h2h_draws": h2h_stats.get("draws", 0),
-        "h2h_avg_home": h2h_stats.get("h2h_avg_home", 0.0),
-        "h2h_avg_away": h2h_stats.get("h2h_avg_away", 0.0)
-    }
-
-# Save to fixtures.json
+# --- Save fixtures.json ---
 with open("fixtures.json", "w") as f:
     json.dump(valid_matches, f, indent=2)
 
-# Save to h2h_and_odds.json
-with open("h2h_and_odds.json", "w") as f:
-    json.dump(h2h_data, f, indent=2)
-
 print(f"✅ Saved {len(valid_matches)} fixture(s) to fixtures.json with full simulation stats.")
 print("✅ Saved h2h_and_odds.json with goal averages.")
+
 
 
 

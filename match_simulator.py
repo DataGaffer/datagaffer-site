@@ -1,5 +1,3 @@
-# match_simulator.py
-
 import json
 import numpy as np
 
@@ -7,7 +5,15 @@ import numpy as np
 with open("league_coefficients.json") as f:
     league_coefficients = json.load(f)
 
-# Load team stats (across all leagues)
+# Load team-specific boosters (optional)
+try:
+    with open("team_boosters.json") as f:
+        team_boosters = json.load(f)
+except FileNotFoundError:
+    team_boosters = {}
+
+
+# Load team stats
 def load_team_stats():
     stats = {}
     leagues = [
@@ -28,21 +34,19 @@ def load_team_stats():
 
 team_stats = load_team_stats()
 
-# Load H2H and odds
+# Load H2H + odds
 try:
     with open("h2h_and_odds.json") as f:
         h2h_and_odds = json.load(f)
 except FileNotFoundError:
     h2h_and_odds = {}
 
-# Helper to safely get stat (works for both formats)
+# Helper
 def get_stat(team, side, stat_type):
     try:
-        # --- Format A (home/away split) ---
         if side in team and stat_type in team[side]:
             return team[side][stat_type]
 
-        # --- Format B (overall stats) ---
         if stat_type == "goals_for":
             return team.get("scored", 0)
         elif stat_type == "goals_against":
@@ -55,15 +59,31 @@ def get_stat(team, side, stat_type):
             return team.get("shots", 0)
         elif stat_type == "shots_against":
             return team.get("shots_conceded", 0)
-
         return 0
     except:
         return 0
 
 # Simulate one match
-def simulate_match(home_id, away_id):
-    home = team_stats[home_id]
-    away = team_stats[away_id]
+def simulate_match(home_id, away_id, fixture_id=None):
+    home = team_stats.get(home_id)
+    away = team_stats.get(away_id)
+
+    if not home or not away:
+        print(f"⚠️ Missing team stats for {home_id} vs {away_id}")
+        return {
+            "home_score": 0, "away_score": 0,
+            "home_win_pct": 0, "draw_pct": 0, "away_win_pct": 0,
+            "over_2_5_pct": 0, "btts_pct": 0,
+            "home_o1_5_pct": 0, "away_o1_5_pct": 0,
+            "home_corners": 0, "away_corners": 0, "total_corners": 0,
+            "home_shots": 0, "away_shots": 0, "total_shots": 0
+        }
+
+    # Seed random generator (reproducible per fixture)
+    if fixture_id:
+        np.random.seed(fixture_id % (2**32 - 1))
+    else:
+        np.random.seed(42)
 
     # --- Goals ---
     home_avg = get_stat(home, "home", "goals_for")
@@ -86,24 +106,24 @@ def simulate_match(home_id, away_id):
     # League coefficients
     home_coef = league_coefficients.get(home["league"], 1.0)
     away_coef = league_coefficients.get(away["league"], 1.0)
+
+# --- Apply team boosters ---
+    home_boost = team_boosters.get(str(home_id), 1.0)
+    away_boost = team_boosters.get(str(away_id), 1.0)
+
+    home_coef *= home_boost
+    away_coef *= away_boost
+
     coef_ratio = home_coef / away_coef
 
-    # Base expected goals
-    exp_home = (home_avg + away_conc) / 2
+
+    # Expected values
+    exp_home = (home_avg + away_conc) / 2 + 0.25
     exp_away = (away_avg + home_conc) / 2
-
-    # Base expected corners
-    exp_home_corners = (home_corners + away_corners_conc) / 2
+    exp_home_corners = (home_corners + away_corners_conc) / 2 + 0.3
     exp_away_corners = (away_corners + home_corners_conc) / 2
-
-    # Base expected shots
-    exp_home_shots = (home_shots + away_shots_conc) / 2
+    exp_home_shots = (home_shots + away_shots_conc) / 2 + 1.2
     exp_away_shots = (away_shots + home_shots_conc) / 2
-
-    # Home advantage
-    exp_home += 0.25
-    exp_home_corners += 0.3
-    exp_home_shots += 1.2
 
     # League strength boost
     exp_home *= coef_ratio
@@ -113,18 +133,22 @@ def simulate_match(home_id, away_id):
     exp_home_shots *= coef_ratio
     exp_away_shots /= coef_ratio
 
-    # ---- H2H goal averages influence (25%) ----
-    fixture_key = f"{home_id}_{away_id}"
-    h2h_data = h2h_and_odds.get(fixture_key, {})
+   # ---- H2H influence ----
+    key = f"{min(home_id, away_id)}_{max(home_id, away_id)}"
+    h2h_data = h2h_and_odds.get(key, {})
     h_avg = h2h_data.get("h2h_avg_home", None)
     a_avg = h2h_data.get("h2h_avg_away", None)
-    if isinstance(h_avg, (int, float)) and isinstance(a_avg, (int, float)):
-        w = 0.45  # 15% weight from H2H goal averages
+
+    # Apply only if H2H data exists (at least 1 match logged)
+    if h_avg is not None and a_avg is not None:
+        w = 0.40
         exp_home = exp_home * (1 - w) + h_avg * w
         exp_away = exp_away * (1 - w) + a_avg * w
 
+
+
     # --- Poisson simulations ---
-    sims = 5000
+    sims = 20000
     home_goals = np.random.poisson(exp_home, sims)
     away_goals = np.random.poisson(exp_away, sims)
     home_corners = np.random.poisson(exp_home_corners, sims)
@@ -132,43 +156,24 @@ def simulate_match(home_id, away_id):
     home_shots = np.random.poisson(exp_home_shots, sims)
     away_shots = np.random.poisson(exp_away_shots, sims)
 
-    # Outcome probabilities
-    home_wins = np.mean(home_goals > away_goals) * 100
-    draws = np.mean(home_goals == away_goals) * 100
-    away_wins = np.mean(home_goals < away_goals) * 100
-
-    over_2_5 = np.mean((home_goals + away_goals) > 2) * 100
-    btts = np.mean((home_goals > 0) & (away_goals > 0)) * 100
-    home_o1_5 = np.mean(home_goals > 1) * 100
-    away_o1_5 = np.mean(away_goals > 1) * 100
-
     return {
-        "home": home["name"],
-        "away": away["name"],
-        "home_logo": home["logo"],
-        "away_logo": away["logo"],
-
-        # --- Goals ---
         "home_score": round(np.mean(home_goals), 2),
         "away_score": round(np.mean(away_goals), 2),
-        "home_win_pct": round(home_wins, 1),
-        "draw_pct": round(draws, 1),
-        "away_win_pct": round(away_wins, 1),
-        "over_2_5_pct": round(over_2_5, 1),
-        "btts_pct": round(btts, 1),
-        "home_o1_5_pct": round(home_o1_5, 1),
-        "away_o1_5_pct": round(away_o1_5, 1),
-
-        # --- Corners ---
+        "home_win_pct": round(np.mean(home_goals > away_goals) * 100, 1),
+        "draw_pct": round(np.mean(home_goals == away_goals) * 100, 1),
+        "away_win_pct": round(np.mean(home_goals < away_goals) * 100, 1),
+        "over_2_5_pct": round(np.mean((home_goals + away_goals) > 2) * 100, 1),
+        "btts_pct": round(np.mean((home_goals > 0) & (away_goals > 0)) * 100, 1),
+        "home_o1_5_pct": round(np.mean(home_goals > 1) * 100, 1),
+        "away_o1_5_pct": round(np.mean(away_goals > 1) * 100, 1),
         "home_corners": round(np.mean(home_corners), 2),
         "away_corners": round(np.mean(away_corners), 2),
         "total_corners": round(np.mean(home_corners + away_corners), 2),
-
-        # --- Shots ---
         "home_shots": round(np.mean(home_shots), 2),
         "away_shots": round(np.mean(away_shots), 2),
         "total_shots": round(np.mean(home_shots + away_shots), 2),
     }
+
 
 
 
