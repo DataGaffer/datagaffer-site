@@ -1,13 +1,17 @@
 import os
 import json
 import numpy as np
-from datetime import datetime
+import pytz
+from datetime import datetime, timedelta
 
 # ----------- Load data -----------
 with open("fixtures.json", "r") as f:
     fixtures = json.load(f)
 
-today = datetime.today().strftime("%Y-%m-%d")
+# --- Get tomorrow’s date based on EST ---
+est = pytz.timezone("US/Eastern")
+now_est = datetime.now(est)
+target_date = (now_est + timedelta(days=1)).strftime("%Y-%m-%d")
 
 with open("teams.json", "r") as f:
     all_teams = json.load(f)
@@ -35,7 +39,7 @@ def clamp(x, lo, hi):
     return max(lo, min(hi, x))
 
 # ---------- Player simulation ----------
-def simulate_player(player, team_xg_today, team_avg_goals_per_match):
+def simulate_player(player, team_id, team_xg_today, team_avg_goals_per_match):
     # Baselines from player stats (use minutes if present)
     mins = float(player.get("minutes", 0) or 0)
     apps = float(player.get("appearances", 0) or 0)
@@ -117,7 +121,7 @@ def simulate_player(player, team_xg_today, team_avg_goals_per_match):
 # ---------- Run per fixture ----------
 for fixture in fixtures:
     fixture_date = (fixture.get("date") or "").split("T")[0]
-    if fixture_date != today:
+    if fixture_date != target_date:
         continue
 
     for side in ["home", "away"]:
@@ -142,7 +146,7 @@ for fixture in fixtures:
 
         simulated_players = []
         for player in players:
-            sim = simulate_player(player, team_xg_today, team_avg_goals_per_match)
+            sim = simulate_player(player, team_id, team_xg_today, team_avg_goals_per_match)
 
             # keep players who project anything non-trivial
             if (sim["goals_per90_simulated"] > 0) or (sim["assists_per90_simulated"] > 0) or (sim["shots_per90"] > 0):

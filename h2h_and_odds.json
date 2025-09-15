@@ -1,6 +1,6 @@
 {
   "197_1393": {
-    "book_home_win": 1.83,
+    "book_home_win": 1.8,
     "book_draw": 3.6,
     "book_away_win": 4.33,
     "h2h_home_wins": 0,
@@ -30,8 +30,8 @@
     "h2h_avg_away": 0.67
   },
   "47_533": {
-    "book_home_win": 1.83,
-    "book_draw": 3.7,
+    "book_home_win": 1.85,
+    "book_draw": 3.75,
     "book_away_win": 4.0,
     "h2h_home_wins": 0,
     "h2h_away_wins": 0,
@@ -50,9 +50,9 @@
     "h2h_avg_away": null
   },
   "211_556": {
-    "book_home_win": 1.18,
+    "book_home_win": 1.2,
     "book_draw": 7.0,
-    "book_away_win": 13.0,
+    "book_away_win": 15.0,
     "h2h_home_wins": 0,
     "h2h_away_wins": 0,
     "h2h_draws": 0,

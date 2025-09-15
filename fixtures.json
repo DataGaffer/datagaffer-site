@@ -19,7 +19,7 @@
     "away_logo": "https://media.api-sports.io/football/teams/1393.png",
     "date": "2025-09-16T16:45:00+00:00",
     "book_odds": {
-      "home_win": 1.83,
+      "home_win": 1.8,
       "draw": 3.6,
       "away_win": 4.33,
       "btts": null,
@@ -184,8 +184,8 @@
     "away_logo": "https://media.api-sports.io/football/teams/533.png",
     "date": "2025-09-16T19:00:00+00:00",
     "book_odds": {
-      "home_win": 1.83,
-      "draw": 3.7,
+      "home_win": 1.85,
+      "draw": 3.75,
       "away_win": 4.0,
       "btts": null,
       "over25": null,
@@ -294,9 +294,9 @@
     "away_logo": "https://media.api-sports.io/football/teams/556.png",
     "date": "2025-09-16T19:00:00+00:00",
     "book_odds": {
-      "home_win": 1.18,
+      "home_win": 1.2,
       "draw": 7.0,
-      "away_win": 13.0,
+      "away_win": 15.0,
       "btts": null,
       "over25": null,
       "home_o1_5": null,
