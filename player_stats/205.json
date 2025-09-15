@@ -18,12 +18,12 @@
     "id": 326029,
     "name": "Philip Brittijn",
     "position": "Midfielder",
-    "appearances": 3,
+    "appearances": 6,
     "minutes": 280,
     "goals": 2,
     "assists": 1,
-    "shots": 2,
-    "shots_on_target": 2,
+    "shots": 4,
+    "shots_on_target": 3,
     "photo": "https://media.api-sports.io/football/players/326029.png",
    "team_id": 205
   }

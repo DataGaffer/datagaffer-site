@@ -38,20 +38,6 @@
     "shots_on_target": 39,
     "photo": "https://media.api-sports.io/football/players/203040.png",
    "team_id": 167
-  },
-
-  {
-    "id": 387643,
-    "name": "Bazoumana Toure",
-    "position": "Attacker",
-    "appearances": 16,
-    "minutes": 877,
-    "goals": 1,
-    "assists": 4,
-    "shots": 25,
-    "shots_on_target": 7,
-    "photo": "https://media.api-sports.io/football/players/387643.png",
-   "team_id": 167
   }
 
   

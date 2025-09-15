@@ -1,20 +1,6 @@
 [
   
   {
-    "id": 47336,
-    "name": "Darder",
-    "position": "Midfielder",
-    "appearances": 43,
-    "minutes": 3126,
-    "goals": 2,
-    "assists": 6,
-    "shots": 37,
-    "shots_on_target": 9,
-    "photo": "https://media.api-sports.io/football/players/47336.png",
-   "team_id": 798
-  },
-  
-  {
     "id": 285909,
     "name": "Pablo Torre",
     "position": "Midfielder",
@@ -26,18 +12,6 @@
     "shots_on_target": 6,
     "photo": "https://media.api-sports.io/football/players/285900.png",
    "team_id": 798
-  },
-  {
-    "id": 313059,
-    "name": "Mateo Joseph",
-    "position": "Attacker",
-    "appearances": 43,
-    "minutes": 1576,
-    "goals": 3,
-    "assists": 3,
-    "shots": 44,
-    "shots_on_target": 18,
-    "photo": "https://media.api-sports.io/football/players/313059.png",
-   "team_id": 798
   }
+  
 ]

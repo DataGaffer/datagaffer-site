@@ -27,20 +27,6 @@
     "shots_on_target": 10,
     "photo": "https://media.api-sports.io/football/players/21613.png",
    "team_id": 651
-  },
-  
-
-  {
-    "id": 361485,
-    "name": "Alex Toth",
-    "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 652,
-    "goals": 1,
-    "assists": 2,
-    "shots": 3,
-    "shots_on_target": 2,
-    "photo": "https://media.api-sports.io/football/players/361485.png",
-   "team_id": 651
   }
+  
 ]

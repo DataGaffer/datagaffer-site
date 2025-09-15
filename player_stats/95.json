@@ -57,20 +57,6 @@
   },
 
   {
-    "id": 358166,
-    "name": "Abdoul Ouattara",
-    "position": "Midfielder",
-    "appearances": 27,
-    "minutes": 1185,
-    "goals": 1,
-    "assists": 1,
-    "shots": 11,
-    "shots_on_target": 4,
-    "photo": "https://media.api-sports.io/football/players/358166.png",
-   "team_id": 95
-  },
-
-  {
     "id": 390742,
     "name": "Joaquin Panichelli",
     "position": "Attacker",
@@ -82,19 +68,6 @@
     "shots_on_target": 54,
     "photo": "https://media.api-sports.io/football/players/390742.png",
    "team_id": 95
-  },
-
-  {
-    "id": 406303,
-    "name": "Kendry Paez",
-    "position": "Midfielder",
-    "appearances": 39,
-    "minutes": 2338,
-    "goals": 8,
-    "assists": 5,
-    "shots": 69,
-    "shots_on_target": 23,
-    "photo": "https://media.api-sports.io/football/players/406303.png",
-   "team_id": 95
   }
+  
 ]

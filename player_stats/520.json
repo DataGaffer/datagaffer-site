@@ -11,44 +11,6 @@
     "shots_on_target": 26,
     "photo": "https://media.api-sports.io/football/players/2057.png",
    "team_id": 520
-  },
-  
-  {
-    "id": 31211,
-    "name": "Jari Vandeputte",
-    "position": "Midfielder",
-    "appearances": 44,
-    "minutes": 2589,
-    "goals": 3,
-    "assists": 9,
-    "shots": 38,
-    "shots_on_target": 11,
-    "photo": "https://media.api-sports.io/football/players/31211.png",
-   "team_id": 520
-  },
-  {
-    "id": 31219,
-    "name": "A. Zerbin",
-    "position": "Attacker",
-    "appearances": 3,
-    "minutes": 245,
-    "goals": 0,
-    "assists": 1,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 31436,
-    "name": "F. Bonazzoli",
-    "position": "Attacker",
-    "appearances": 2,
-    "minutes": 143,
-    "goals": 1,
-    "assists": 0.15,
-    "shots": 2,
-    "shots_on_target": 2,
-    "photo": "https://media.api-sports.io/football/players/31436.png",
-   "team_id": 520
   }
   
 

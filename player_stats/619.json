@@ -11,20 +11,6 @@
     "shots_on_target": 20,
     "photo": "https://media.api-sports.io/football/players/619.png",
    "team_id": 619
-  },
-  
-  {
-    "id": 26902,
-    "name": "Giorgos Giakoumakis",
-    "position": "Attacker",
-    "appearances": 19,
-    "minutes": 750,
-    "goals": 2,
-    "assists": 3,
-    "shots": 32,
-    "shots_on_target": 8,
-    "photo": "https://media.api-sports.io/football/players/26902.png",
-   "team_id": 619
   }
   
 ]

@@ -39,32 +39,7 @@
     "shots_on_target": 24,
     "photo": "https://media.api-sports.io/football/players/48198.png",
    "team_id": 192
-  },
-  {
-    "id": 162480,
-    "name": "Eric Martel",
-    "position": "Midfielder",
-    "appearances": 37,
-    "minutes": 3341,
-    "goals": 4,
-    "assists": 1,
-    "shots": 43,
-    "shots_on_target": 12,
-    "photo": "https://media.api-sports.io/football/players/162480.png",
-   "team_id": 192
-  },
-  {
-    "id": 181908,
-    "name": "Jan Thielmann",
-    "position": "Midfielder",
-    "appearances": 37,
-    "minutes": 2621,
-    "goals": 3,
-    "assists": 5,
-    "shots": 33,
-    "shots_on_target": 9,
-    "photo": "https://media.api-sports.io/football/players/181908.png",
-   "team_id": 192
   }
+  
   
 ]

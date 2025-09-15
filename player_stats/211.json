@@ -3,7 +3,7 @@
 
   {
     "id": 25918,
-    "name": "L. Barreiro",
+    "name": "Leo Barreiro",
     "position": "Midfielder",
     "appearances": 11,
     "minutes": 564,
@@ -16,7 +16,7 @@
   },
   {
     "id": 36798,
-    "name": "V. Pavlidis",
+    "name": "Vangelis Pavlidis",
     "position": "Attacker",
     "appearances": 11,
     "minutes": 852,
@@ -30,7 +30,7 @@
   
   {
     "id": 39043,
-    "name": "F. Aursnes",
+    "name": "Fredrik Aursnes",
     "position": "Midfielder",
     "appearances": 7,
     "minutes": 636,
@@ -44,7 +44,7 @@
   
   {
     "id": 195104,
-    "name": "R. Rios",
+    "name": "Richard Rios",
     "position": "Midfielder",
     "appearances": 7,
     "minutes": 621,
@@ -57,12 +57,12 @@
   },
   {
     "id": 202951,
-    "name": "F. Ivanovic",
+    "name": "Franjo Ivanovic",
     "position": "Attacker",
     "appearances": 7,
     "minutes": 419,
     "goals": 2,
-    "assists": 0,
+    "assists": 0.25,
     "shots": 11,
     "shots_on_target": 7,
     "photo": "https://media.api-sports.io/football/players/202951.png",
@@ -70,7 +70,7 @@
   },
   {
     "id": 301528,
-    "name": "A. Schjelderup",
+    "name": "Andrea Schjelderup",
     "position": "Midfielder",
     "appearances": 9,
     "minutes": 481,

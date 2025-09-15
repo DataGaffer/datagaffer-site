@@ -3,7 +3,7 @@
     "id": 45,
     "name": "Thomas Lemar",
     "position": "Midfielder",
-    "appearances": 117,
+    "appearances": 87,
     "minutes": 5696,
     "goals": 7,
     "assists": 13,
@@ -25,33 +25,6 @@
     "shots_on_target": 30,
     "photo": "https://media.api-sports.io/football/players/2182.png",
    "team_id": 547
-  },
- 
-  {
-    "id": 281795,
-    "name": "Yaser Asprilla",
-    "position": "Midfielder",
-    "appearances": 36,
-    "minutes": 1814,
-    "goals": 3,
-    "assists": 1,
-    "shots": 49,
-    "shots_on_target": 15,
-    "photo": "https://media.api-sports.io/football/players/281795.png",
-   "team_id": 547
-  },
-  
-  {
-    "id": 339105,
-    "name": "Joel Roca",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 270,
-    "goals": 1,
-    "assists": 0.25,
-    "shots": 4,
-    "shots_on_target": 1,
-    "photo": "https://media.api-sports.io/football/players/339105.png",
-   "team_id": 547
   }
+  
 ]

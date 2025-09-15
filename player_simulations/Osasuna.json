@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 727,
+    "player_id": 46746,
+    "name": "Ante Budimir",
+    "position": "Attacker",
+    "appearances": 45,
+    "goals": 25,
+    "assists": 4,
+    "shots": 117,
+    "shots_on_target": 50,
+    "goals_per90_simulated": 0.97,
+    "assists_per90_simulated": 0.15,
+    "shots_per90": 4.41,
+    "sot_per90": 1.89,
+    "+1_goal_pct": 62.7,
+    "+1_assist_pct": 14.0,
+    "soa_pct": 67.9
+  },
+  {
+    "team_id": 727,
+    "player_id": 67939,
+    "name": "Aimar Oroz",
+    "position": "Midfielder",
+    "appearances": 44,
+    "goals": 6,
+    "assists": 4,
+    "shots": 57,
+    "shots_on_target": 17,
+    "goals_per90_simulated": 0.24,
+    "assists_per90_simulated": 0.15,
+    "shots_per90": 2.02,
+    "sot_per90": 0.59,
+    "+1_goal_pct": 20.3,
+    "+1_assist_pct": 14.7,
+    "soa_pct": 32.0
+  }
+]

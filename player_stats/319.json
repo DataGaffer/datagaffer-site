@@ -2,7 +2,7 @@
   
   {
     "id": 39066,
-    "name": "F. Myhre",
+    "name": "Felix Myhre",
     "position": "Midfielder",
     "appearances": 14,
     "minutes": 1290,
@@ -12,58 +12,6 @@
     "shots_on_target": 4,
     "photo": "https://media.api-sports.io/football/players/39066.png",
    "team_id": 319
-  },
-  {
-    "id": 57377,
-    "name": "M. Sande",
-    "position": "Midfielder",
-    "appearances": 11,
-    "minutes": 546,
-    "goals": 3,
-    "assists": 0,
-    "shots": 6,
-    "shots_on_target": 4,
-    "photo": "https://media.api-sports.io/football/players/57377.png",
-   "team_id": 319
-  },
-  {
-    "id": 61558,
-    "name": "S. Magn\u00fasson",
-    "position": "Attacker",
-    "appearances": 7,
-    "minutes": 453,
-    "goals": 5,
-    "assists": 0,
-    "shots": 13,
-    "shots_on_target": 11,
-    "photo": "https://media.api-sports.io/football/players/61558.png",
-   "team_id": 319
-  },
- 
-  {
-    "id": 145953,
-    "name": "E. Kornvig",
-    "position": "Midfielder",
-    "appearances": 14,
-    "minutes": 1260,
-    "goals": 3,
-    "assists": 1,
-    "shots": 18,
-    "shots_on_target": 7,
-    "photo": "https://media.api-sports.io/football/players/145953.png",
-   "team_id": 319
-  },
-  {
-    "id": 197625,
-    "name": "E. Gu\u00f0mundsson",
-    "position": "Midfielder",
-    "appearances": 14,
-    "minutes": 1050,
-    "goals": 2,
-    "assists": 2,
-    "shots": 9,
-    "shots_on_target": 7,
-    "photo": "https://media.api-sports.io/football/players/197625.png",
-   "team_id": 319
   }
+  
 ]

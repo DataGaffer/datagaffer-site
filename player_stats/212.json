@@ -43,27 +43,13 @@
   },
   
   {
-    "id": 388872,
-    "name": "Victor Mow Froholdt",
-    "position": "Midfielder",
-    "appearances": 58,
-    "minutes": 3912,
-    "goals": 7,
-    "assists": 4,
-    "shots": 37,
-    "shots_on_target": 14,
-    "photo": "https://media.api-sports.io/football/players/388872.png",
-   "team_id": 212
-  },
-  
-  {
     "id": 449243,
     "name": "William",
     "position": "Attacker",
     "appearances": 6,
     "minutes": 273,
     "goals": 3,
-    "assists": 0,
+    "assists": 1,
     "shots": 13,
     "shots_on_target": 7,
     "photo": "https://media.api-sports.io/football/players/449243.png",

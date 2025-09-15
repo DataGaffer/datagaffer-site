@@ -14,19 +14,7 @@
    "team_id": 206
   },
  
-  {
-    "id": 38122,
-    "name": "Thomas Bruns",
-    "position": "Midfielder",
-    "appearances": 30,
-    "minutes": 1643,
-    "goals": 4,
-    "assists": 4,
-    "shots": 32,
-    "shots_on_target": 8,
-    "photo": "https://media.api-sports.io/football/players/38122.png",
-   "team_id": 206
-  },
+  
   {
     "id": 144691,
     "name": "Luka Kulenovic",
@@ -38,20 +26,6 @@
     "shots": 52,
     "shots_on_target": 24,
     "photo": "https://media.api-sports.io/football/players/144691.png",
-   "team_id": 206
-  },
- 
-  {
-    "id": 358450,
-    "name": "Sem Scheperman",
-    "position": "Midfielder",
-    "appearances": 29,
-    "minutes": 2133,
-    "goals": 2,
-    "assists": 2,
-    "shots": 13,
-    "shots_on_target": 5,
-    "photo": "https://media.api-sports.io/football/players/358450.png",
    "team_id": 206
   }
   

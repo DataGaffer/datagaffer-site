@@ -1,7 +1,7 @@
 [
   {
     "id": 7712,
-    "name": "M. Hjulmand",
+    "name": "Morten Hjulmand",
     "position": "Midfielder",
     "appearances": 49,
     "minutes": 4082,
@@ -16,12 +16,12 @@
     "id": 18748,
     "name": "Pedro Goncalves",
     "position": "Midfielder",
-    "appearances": 4,
+    "appearances": 6,
     "minutes": 336,
     "goals": 3,
     "assists": 2,
     "shots": 14,
-    "shots_on_target": 7
+    "shots_on_target": 6
   },
   
   {
@@ -41,7 +41,7 @@
     "id": 47237,
     "name": "Luis Suarez",
     "position": "Attacker",
-    "appearances": 4,
+    "appearances": 8,
     "minutes": 351,
     "goals": 2,
     "assists": 2,

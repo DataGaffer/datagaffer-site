@@ -25,20 +25,6 @@
     "shots_on_target": 32,
     "photo": "https://media.api-sports.io/football/players/194815.png",
    "team_id": 427
-  },
-  
-  {
-    "id": 379487,
-    "name": "Soufiane Hetli",
-    "position": "Attacker",
-    "appearances": 39,
-    "minutes": 1899,
-    "goals": 7,
-    "assists": 4,
-    "shots": 61,
-    "shots_on_target": 18,
-    "photo": "https://media.api-sports.io/football/players/379487.png",
-   "team_id": 427
   }
   
 ]

@@ -11,46 +11,6 @@
     "shots_on_target": 3,
     "photo": "https://media.api-sports.io/football/players/26.png",
    "team_id": 170
-  },
-  
-  {
-    "id": 323974,
-    "name": "Elias Saad",
-    "position": "Attacker",
-    "appearances": 22,
-    "minutes": 1110,
-    "goals": 3,
-    "assists": 3,
-    "shots": 29,
-    "shots_on_target": 9,
-    "photo": "https://media.api-sports.io/football/players/323974.png",
-   "team_id": 170
-  },
-  {
-    "id": 348888,
-    "name": "Mert Ko,ur",
-    "position": "Midfielder",
-    "appearances": 26,
-    "minutes": 989,
-    "goals": 3,
-    "assists": 2,
-    "shots": 25,
-    "shots_on_target": 12,
-    "photo": "https://media.api-sports.io/football/players/348888.png",
-   "team_id": 170
-  },
-
-  {
-    "id": 143831,
-    "name": "Robin Fellhauer",
-    "position": "Midfielder",
-    "appearances": 31,
-    "minutes": 2522,
-    "goals": 7,
-    "assists": 5,
-    "shots": 32,
-    "shots_on_target": 12,
-    "photo": "https://media.api-sports.io/football/players/143831.png",
-   "team_id": 170
   }
+  
 ]

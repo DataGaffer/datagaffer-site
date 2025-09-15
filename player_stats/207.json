@@ -52,18 +52,6 @@
     "shots_on_target": 21,
     "photo": "https://media.api-sports.io/football/players/367472.png",
    "team_id": 207
-  },
-  {
-    "id": 425819,
-    "name": "Gjivai Zechiel",
-    "position": "Midfielder",
-    "appearances": 31,
-    "minutes": 1900,
-    "goals": 3,
-    "assists": 3,
-    "shots": 28,
-    "shots_on_target": 8,
-    "photo": "https://media.api-sports.io/football/players/425819.png",
-   "team_id": 207
   }
+  
 ]

@@ -24,20 +24,6 @@
     "shots_on_target": 20,
     "photo": "https://media.api-sports.io/football/players/2181.png",
    "team_id": 112
-  },
- 
-  {
-    "id": 157912,
-    "name": "Boubacar Traore",
-    "position": "Midfielder",
-    "appearances": 31,
-    "minutes": 2000,
-    "goals": 2,
-    "assists": 1,
-    "shots": 23,
-    "shots_on_target": 7,
-    "photo": "https://media.api-sports.io/football/players/157912.png",
-   "team_id": 112
   }
 
   

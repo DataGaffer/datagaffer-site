@@ -2,7 +2,7 @@
   
   {
     "id": 4408,
-    "name": "A. Zorgane",
+    "name": "Adem Zorgane",
     "position": "Midfielder",
     "appearances": 6,
     "minutes": 454,
@@ -27,19 +27,7 @@
     "photo": "https://media.api-sports.io/football/players/127414.png",
    "team_id": 1393
   },
-  {
-    "id": 203456,
-    "name": "Ousseynou Niang",
-    "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 477,
-    "goals": 1,
-    "assists": 1,
-    "shots": 8,
-    "shots_on_target": 5,
-    "photo": "https://media.api-sports.io/football/players/203456.png",
-   "team_id": 1393
-  },
+ 
   {
     "id": 270201,
     "name": "Raul Florucz",

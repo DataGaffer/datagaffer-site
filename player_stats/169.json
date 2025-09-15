@@ -66,18 +66,6 @@
     "shots_on_target": 16,
     "photo": "https://media.api-sports.io/football/players/339887.png",
    "team_id": 169
-  },
-  {
-    "id": 369674,
-    "name": "Jean_-Matteo Bahoya",
-    "position": "Attacker",
-    "appearances": 36,
-    "minutes": 1519,
-    "goals": 6,
-    "assists": 5,
-    "shots": 25,
-    "shots_on_target": 11,
-    "photo": "https://media.api-sports.io/football/players/369674.png",
-   "team_id": 169
   }
+  
 ]

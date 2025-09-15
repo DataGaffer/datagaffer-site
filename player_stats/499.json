@@ -64,19 +64,6 @@
     "shots_on_target": 34,
     "photo": "https://media.api-sports.io/football/players/147859.png",
    "team_id": 499
-  },
-  
-  {
-    "id": 203474,
-    "name": "Nicola Zalewski",
-    "position": "Midfielder",
-    "appearances": 32,
-    "minutes": 1374,
-    "goals": 2,
-    "assists": 2,
-    "shots": 17,
-    "shots_on_target": 6,
-    "photo": "https://media.api-sports.io/football/players/203474.png",
-   "team_id": 499
   }
+  
 ]

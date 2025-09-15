@@ -14,7 +14,7 @@
   },
   {
     "id": 22,
-    "name": "Jacob Bruun Larsen",
+    "name": "Bruun Larsen",
     "position": "Attacker",
     "appearances": 38,
     "minutes": 1464,
@@ -24,19 +24,6 @@
     "shots_on_target": 11,
      "photo": "https://media.api-sports.io/football/players/22.png",
    "team_id": 44
-  },
-  {
-    "id": 13708,
-    "name": "Jhon Arias",
-    "position": "Midfielder",
-    "appearances": 16,
-    "minutes": 1313,
-    "goals": 1,
-    "assists": 4,
-    "shots": 21,
-    "shots_on_target": 7,
-     "photo": "https://media.api-sports.io/football/players/13708.png",
-   "team_id": 39
   },
   
  {
