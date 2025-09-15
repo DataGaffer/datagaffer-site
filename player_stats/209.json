@@ -1,17 +1,5 @@
 [
-  {
-    "id": 2901,
-    "name": "Hwang In-Beom",
-    "position": "Midfielder",
-    "appearances": 40,
-    "minutes": 3129,
-    "goals": 3,
-    "assists": 8,
-    "shots": 54,
-    "shots_on_target": 19,
-    "photo": "https://media.api-sports.io/football/players/2901.png",
-   "team_id": 209
-  },
+  
   {
     "id": 37784,
     "name": "Sem Steijn",

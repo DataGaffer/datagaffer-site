@@ -12,20 +12,7 @@
     "photo": "https://media.api-sports.io/football/players/37163.png",
    "team_id": 210
   },
-  
-  {
-    "id": 37460,
-    "name": "Luuk Brouwers",
-    "position": "Midfielder",
-    "appearances": 30,
-    "minutes": 2341,
-    "goals": 4,
-    "assists": 3,
-    "shots": 41,
-    "shots_on_target": 14,
-    "photo": "https://media.api-sports.io/football/players/37460.png",
-   "team_id": 210
-  },
+ 
   {
     "id": 174797,
     "name": "Maxence Rivera",

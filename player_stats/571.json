@@ -40,20 +40,7 @@
     "photo": "https://media.api-sports.io/football/players/288073.png",
    "team_id": 571
   },
-  
-  {
-    "id": 395559,
-    "name": "Kerim Alajbegovic",
-    "position": "Attacker",
-    "appearances": 9,
-    "minutes": 336,
-    "goals": 1,
-    "assists": 1,
-    "shots": 12,
-    "shots_on_target": 6,
-    "photo": "https://media.api-sports.io/football/players/395559.png",
-   "team_id": 571
-  },
+ 
   {
     "id": 464055,
     "name": "Edmund Baidoo",

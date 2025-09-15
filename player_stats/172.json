@@ -13,19 +13,7 @@
    "team_id": 172
   },
  
-  {
-    "id": 24963,
-    "name": "Atakan Karazor",
-    "position": "Midfielder",
-    "appearances": 50,
-    "minutes": 4092,
-    "goals": 3,
-    "assists": 4,
-    "shots": 22,
-    "shots_on_target": 9,
-    "photo": "https://media.api-sports.io/football/players/24963.png",
-   "team_id": 172
-  },
+  
   {
     "id": 26475,
     "name": "Deniz Undav",

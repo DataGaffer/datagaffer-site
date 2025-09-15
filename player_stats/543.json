@@ -12,19 +12,6 @@
     "photo": "https://media.api-sports.io/football/players/1578.png",
    "team_id": 543
   },
-  {
-    "id": 1697,
-    "name": "Pablo Fornals",
-    "position": "Midfielder",
-    "appearances": 42,
-    "minutes": 3033,
-    "goals": 2,
-    "assists": 1,
-    "shots": 38,
-    "shots_on_target": 9,
-    "photo": "https://media.api-sports.io/football/players/1697.png",
-   "team_id": 543
-  },
   
   {
     "id": 47582,
@@ -37,19 +24,6 @@
     "shots": 55,
     "shots_on_target": 11,
     "photo": "https://media.api-sports.io/football/players/47582.png",
-   "team_id": 543
-  },
-  {
-    "id": 136117,
-    "name": "Rodrigo Riquelme",
-    "position": "Midfielder",
-    "appearances": 30,
-    "minutes": 1133,
-    "goals": 1,
-    "assists": 2,
-    "shots": 26,
-    "shots_on_target": 10,
-    "photo": "https://media.api-sports.io/football/players/136117.png",
    "team_id": 543
   },
   

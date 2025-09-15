@@ -1,20 +1,6 @@
 [
   
   {
-    "id": 46887,
-    "name": "Pedro Diaz",
-    "position": "Midfielder",
-    "appearances": 34,
-    "minutes": 1701,
-    "goals": 4,
-    "assists": 1,
-    "shots": 45,
-    "shots_on_target": 13,
-    "photo": "https://media.api-sports.io/football/players/46887.png",
-   "team_id": 728
-  },
-  
-  {
     "id": 47543,
     "name": "Alvaro Garcia",
     "position": "Midfielder",

@@ -13,19 +13,6 @@
     "photo": "https://media.api-sports.io/football/players/182434.png",
    "team_id": 620
   },
-  {
-    "id": 265491,
-    "name": "Mateo Lisica",
-    "position": "Attacker",
-    "appearances": 5,
-    "minutes": 338,
-    "goals": 1,
-    "assists": 1,
-    "shots": 4,
-    "shots_on_target": 1,
-    "photo": "https://media.api-sports.io/football/players/265491.png",
-   "team_id": 620
-  },
   
   {
     "id": 308814,

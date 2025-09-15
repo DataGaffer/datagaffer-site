@@ -12,19 +12,7 @@
     "photo": "https://media.api-sports.io/football/players/1274.png",
    "team_id": 400
   },
-  {
-    "id": 2080,
-    "name": "Viktor Claesson",
-    "position": "Midfielder",
-    "appearances": 11,
-    "minutes": 312,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0,
-    "photo": "https://media.api-sports.io/football/players/2080.png",
-   "team_id": 400
-  },
+  
   {
     "id": 2736,
     "name": "Lukas Lerager",

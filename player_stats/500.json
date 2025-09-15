@@ -1,19 +1,6 @@
 [
   
   {
-    "id": 30438,
-    "name": "N. Cambiaghi",
-    "position": "Attacker",
-    "appearances": 22,
-    "minutes": 881,
-    "goals": 1,
-    "assists": 3,
-    "shots": 22,
-    "shots_on_target": 4,
-    "photo": "https://media.api-sports.io/football/players/30438.png",
-   "team_id": 500
-  },
-  {
     "id": 30488,
     "name": "Riccardo Orsolini",
     "position": "Attacker",

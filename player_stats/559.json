@@ -52,20 +52,6 @@
     "shots_on_target": 5,
     "photo": "https://media.api-sports.io/football/players/91389.png",
    "team_id": 559
-  },
-  
-  {
-    "id": 322179,
-    "name": "Mihai Lixandru",
-    "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 366,
-    "goals": 1,
-    "assists": 1,
-    "shots": 5,
-    "shots_on_target": 2,
-    "photo": "https://media.api-sports.io/football/players/322179.png",
-   "team_id": 559
   }
   
 ]

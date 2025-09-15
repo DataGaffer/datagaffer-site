@@ -51,29 +51,17 @@
     "photo": "https://media.api-sports.io/football/players/37749.png",
    "team_id": 197
   },
-  {
-    "id": 37890,
-    "name": "Jerdy Schouten",
-    "position": "Midfielder",
-    "appearances": 35,
-    "minutes": 2688,
-    "goals": 3,
-    "assists": 2,
-    "shots": 12,
-    "shots_on_target": 7,
-    "photo": "https://media.api-sports.io/football/players/37890.png",
-   "team_id": 197
-  },
+  
   {
     "id": 161897,
     "name": "Ismael Saibari",
     "position": "Midfielder",
-    "appearances": 49,
-    "minutes": 3199,
-    "goals": 15,
-    "assists": 14,
-    "shots": 132,
-    "shots_on_target": 54,
+    "appearances": 81,
+    "minutes": 4896,
+    "goals": 23,
+    "assists": 19,
+    "shots": 189,
+    "shots_on_target": 86,
     "photo": "https://media.api-sports.io/football/players/161897.png",
    "team_id": 197
   },

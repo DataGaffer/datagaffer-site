@@ -27,7 +27,7 @@
   },
   {
     "id": 47516,
-    "name": "Aleix Garciq",
+    "name": "Aleix Garcia",
     "position": "Midfielder",
     "appearances": 45,
     "minutes": 2369,
@@ -53,19 +53,6 @@
    "team_id": 168
   },
   
-  {
-    "id": 505295,
-    "name": "Christian Kofane",
-    "position": "Attacker",
-    "appearances": 23,
-    "minutes": 1341,
-    "goals": 9,
-    "assists": 1,
-    "shots": 39,
-    "shots_on_target": 18,
-    "photo": "https://media.api-sports.io/football/players/505295.png",
-   "team_id": 168
-  },
 
   {
     "id": 563,

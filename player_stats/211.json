@@ -72,12 +72,12 @@
     "id": 301528,
     "name": "Andrea Schjelderup",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 481,
-    "goals": 3,
-    "assists": 2,
-    "shots": 6,
-    "shots_on_target": 3,
+    "appearances": 47,
+    "minutes": 2010,
+    "goals": 7,
+    "assists": 7,
+    "shots": 53,
+    "shots_on_target": 19,
     "photo": "https://media.api-sports.io/football/players/301528.png",
    "team_id": 211
   }

@@ -1,17 +1,5 @@
 [
-  {
-    "id": 47085,
-    "name": "Luis Milla",
-    "position": "Midfielder",
-    "appearances": 39,
-    "minutes": 3409,
-    "goals": 1,
-    "assists": 6,
-    "shots": 37,
-    "shots_on_target": 9,
-    "photo": "https://media.api-sports.io/football/players/47085.png",
-   "team_id": 546
-  },
+  
   {
     "id": 47258,
     "name": "Maouro Arambarri",

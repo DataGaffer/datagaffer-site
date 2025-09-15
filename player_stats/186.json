@@ -13,19 +13,6 @@
    "team_id": 186
   },
   
-  {
-    "id": 8486,
-    "name": "Eric Smith",
-    "position": "Midfielder",
-    "appearances": 37,
-    "minutes": 3331,
-    "goals": 3,
-    "assists": 1,
-    "shots": 26,
-    "shots_on_target": 11,
-    "photo": "https://media.api-sports.io/football/players/8486.png",
-   "team_id": 186
-  },
   
   {
     "id": 20780,
@@ -41,19 +28,7 @@
    "team_id": 186
   },
   
-  {
-    "id": 146586,
-    "name": "Joel Fujita",
-    "position": "Midfielder",
-    "appearances": 36,
-    "minutes": 3242,
-    "goals": 1,
-    "assists": 5,
-    "shots": 26,
-    "shots_on_target": 5,
-    "photo": "https://media.api-sports.io/football/players/146586.png",
-   "team_id": 186
-  },
+  
   {
     "id": 178921,
     "name": "Andreas Hountondji",

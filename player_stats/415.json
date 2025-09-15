@@ -13,20 +13,7 @@
     "photo": "https://media.api-sports.io/football/players/48390.png",
    "team_id": 415
   },
-  {
-    "id": 129047,
-    "name": "Ramiz Zerrouki",
-    "position": "Midfielder",
-    "appearances": 33,
-    "minutes": 1795,
-    "goals": 1,
-    "assists": 2,
-    "shots": 11,
-    "shots_on_target": 5,
-    "photo": "https://media.api-sports.io/football/players/129047.png",
-   "team_id": 415
-  },
-  
+   
   {
     "id": 191879,
     "name": "Kristian Hlynsson",

@@ -1,32 +1,5 @@
 [
   {
-    "id": 628,
-    "name": "Adrian Bernabe",
-    "position": "Midfielder",
-    "appearances": 24,
-    "minutes": 1702,
-    "goals": 1,
-    "assists": 1,
-    "shots": 32,
-    "shots_on_target": 7,
-    "photo": "https://media.api-sports.io/football/players/628.png",
-   "team_id": 523
-  },
-  
-  {
-    "id": 161569,
-    "name": "Oliver Sorensen",
-    "position": "Midfielder",
-    "appearances": 48,
-    "minutes": 3800,
-    "goals": 5,
-    "assists": 4,
-    "shots": 52,
-    "shots_on_target": 17,
-    "photo": "https://media.api-sports.io/football/players/161569.png",
-   "team_id": 523
-  },
-  {
     "id": 292172,
     "name": "Mateo Pellegrino",
     "position": "Attacker",

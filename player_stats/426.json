@@ -39,20 +39,6 @@
     "shots_on_target": 40,
     "photo": "https://media.api-sports.io/football/players/39100.png",
    "team_id": 426
-  },
-  
-  {
-    "id": 264419,
-    "name": "Sayfallah Ltaief",
-    "position": "Attacker",
-    "appearances": 48,
-    "minutes": 2082,
-    "goals": 3,
-    "assists": 2,
-    "shots": 49,
-    "shots_on_target": 16,
-    "photo": "https://media.api-sports.io/football/players/264419.png",
-   "team_id": 426
   }
   
 ]
