@@ -131,7 +131,7 @@
       font-size: 13px;
     }
 
-    /* --- Mobile adjustments --- */
+/* --- Mobile adjustments for player simulations --- */
 @media (max-width: 925px) {
   body { overflow-x: hidden; }
 
@@ -158,47 +158,34 @@
     padding: 6px !important;
   }
 
+  /* ✅ Make table horizontally scrollable on mobile */
+  #player-stats {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   table {
-    width: 100% !important;
-    max-width: 100% !important;
+    min-width: 700px;   /* ✅ force table to be wider */
     font-size: 12px !important;
-    margin: auto;
     margin-bottom: 25px;
-    table-layout: fixed;   /* 🔹 force equal width distribution */
   }
 
   th, td {
-    padding: 4px !important;
+    padding: 6px !important;
     font-size: 12px !important;
-    word-wrap: break-word;  /* 🔹 prevents overflow */
+    white-space: nowrap;   /* ✅ prevent stacking inside cells */
   }
 
   img { width: 20px !important; height: 20px !important; }
 
-  /* Player cards adjustments */
-  .card-grid {
-    gap: 12px !important;
-    margin: 10px auto !important;
-  }
-
-  .player-card {
-    width: 160px !important;
-    padding: 10px !important;
-  }
-
-  .player-card img {
-    width: 60px !important;
-    height: 60px !important;
-  }
-
-  .player-card h3 {
-    font-size: 14px !important;
-  }
-
-  .player-card p {
-    font-size: 11px !important;
-  }
+  /* Player cards already good */
+  .card-grid { gap: 12px !important; margin: 10px auto !important; }
+  .player-card { width: 160px !important; padding: 10px !important; }
+  .player-card img { width: 60px !important; height: 60px !important; }
+  .player-card h3 { font-size: 14px !important; }
+  .player-card p { font-size: 11px !important; }
 }
+
 
   </style>
 </head>
