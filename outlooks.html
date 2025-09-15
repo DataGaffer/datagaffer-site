@@ -184,21 +184,20 @@ h1, h2, h3, h4, h5, h6, p {
       margin-right: 8px;
     }
 
-    /* --- Mobile adjustments for Outlooks Page --- */
+ /* --- Mobile adjustments for Outlooks Page --- */
 @media (max-width: 925px) {
   body { overflow-x: hidden; }
 
-  .header-logo { height: 50px !important; width: auto !important; }
-  h1 { font-size: 20px !important; }
-
+  /* ✅ Banner */
   .banner {
-    width: 85% !important;
+    width: 90% !important;
     font-size: 13px !important;
     padding: 6px !important;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
+  /* ✅ TOC Buttons */
   .toc {
     margin: 15px auto !important;
   }
@@ -208,63 +207,66 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 3px !important;
   }
 
+  /* ✅ Section boxes */
   .outlook-page {
     max-width: 100% !important;
-    margin: 20px auto !important;
+    margin: 15px auto !important;
     border-width: 1px;
   }
 
+  /* ✅ Titles + description */
   .page-title {
     font-size: 16px !important;
     gap: 4px !important;
+    padding: 2px 0 !important;
   }
-
   .page-description {
     font-size: 12px !important;
     padding: 0 0 4px 0 !important;
   }
 
+  /* ✅ Tables */
   .outlook-table {
     width: 100% !important;
     max-width: 100% !important;
-    font-size: 12px !important;
-    margin-bottom: 20px;
-    table-layout: fixed;
+    font-size: 11px !important;
+    table-layout: fixed;   /* force equal distribution */
+    margin-bottom: 15px !important;
   }
-
   .outlook-table th, 
   .outlook-table td {
-    padding: 6px 4px !important;
-    font-size: 12px !important;
+    padding: 4px 2px !important;
+    font-size: 11px !important;
     word-wrap: break-word;
   }
-
   .team-logo {
-    height: 18px !important;
+    height: 16px !important;
+    width: auto !important;
   }
 
-  /* 🔹 wider first/last columns for logos */
-  .outlook-table th:first-child,
-  .outlook-table td:first-child,
-  .outlook-table th:last-child,
-  .outlook-table td:last-child {
-    width: 18% !important;
+  /* ✅ Player Grid */
+  .player-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 per row on mobile */
+    gap: 10px !important;
   }
-
-  /* 🔹 evenly shrink middle stat columns */
-  .outlook-table th:nth-child(2),
-  .outlook-table td:nth-child(2),
-  .outlook-table th:nth-child(3),
-  .outlook-table td:nth-child(3),
-  .outlook-table th:nth-child(4),
-  .outlook-table td:nth-child(4),
-  .outlook-table th:nth-child(5),
-  .outlook-table td:nth-child(5),
-  .outlook-table th:nth-child(6),
-  .outlook-table td:nth-child(6) {
-    width: 11% !important;
+  .leaderboard {
+    padding: 6px !important;
+    font-size: 11px !important;
+  }
+  .leaderboard h3 {
+    font-size: 12px !important;
+    margin-bottom: 4px !important;
+  }
+  .leaderboard li {
+    padding: 3px 0 !important;
+  }
+  .player-face {
+    height: 24px !important;
+    width: 24px !important;
+    margin-right: 6px !important;
   }
 }
+
 
   </style>
 </head>
