@@ -81,6 +81,12 @@
 
     }
 
+    a.button {
+  text-decoration: none; /* remove underline */
+  display: flex; /* keep same layout */
+};
+
+
     .button-icon {
       width: 40px;
       height: 40px;
@@ -212,6 +218,17 @@
   </style>
 </head>
 <body>
+
+  <script>
+  // Replace this with your actual bet of the day
+  const todaysPlay = "Benfica -1.5 corners vs Qarabag ✅";
+
+  const playButton = document.getElementById("play-button");
+  playButton.addEventListener("click", () => {
+    playButton.textContent = todaysPlay;
+  });
+</script>
+
   <!-- Header -->
   <div class="dg-header">
     <div class="dg-logo-wrapper">
@@ -225,30 +242,28 @@
     Football's most realistic match simulations - driven by data
   </div>
 
-  <!-- Match Simulations -->
   <div class="section-title">Match Simulations</div>
-  <div class="grid">
-    <button class="button"><img class="button-icon" src="gear.svg" alt="icon">Sim Cards</button>
-    <button class="button"><img class="button-icon" src="chart.svg" alt="icon">xG Stats</button>
-    <button class="button"><img class="button-icon" src="plus.svg" alt="icon">EV Plays</button>
-    <button class="button"><img class="button-icon" src="page.svg" alt="icon">Outlooks</button>
-  </div>
+<div class="grid">
+  <a href="sim_cards.html" class="button"><img class="button-icon" src="gear.svg" alt="icon">Sim Cards</a>
+  <a href="xg_stats.html" class="button"><img class="button-icon" src="chart.svg" alt="icon">xG Stats</a>
+  <a href="value_plays.html" class="button"><img class="button-icon" src="plus.svg" alt="icon">EV Plays</a>
+  <a href="outlooks.html" class="button"><img class="button-icon" src="page.svg" alt="icon">Outlooks</a>
+</div>
 
   <!-- Play of the Day -->
   <div class="play-banner">
     <div class="play-line"></div>
-    <button class="play-button">Play of the day ★</button>
+    <button class="play-button" id="play-button">Play of the day ★</button>
     <div class="play-line"></div>
   </div>
 
-  <!-- Player Simulations -->
   <div class="section-title">Player Simulations</div>
-  <div class="grid">
-    <button class="button"><img class="button-icon" src="ball.svg" alt="icon">Goals</button>
-    <button class="button"><img class="button-icon" src="cleat.svg" alt="icon">Assists</button>
-    <button class="button"><img class="button-icon" src="target.svg" alt="icon">Shots</button>
-    <button class="button"><img class="button-icon" src="player.svg" alt="icon">Player Cards</button>
-  </div>
+<div class="grid">
+  <a href="player_simulations.html" class="button"><img class="button-icon" src="ball.svg" alt="icon">Goals</a>
+  <a href="player_simulations.html" class="button"><img class="button-icon" src="cleat.svg" alt="icon">Assists</a>
+  <a href="player_simulations.html" class="button"><img class="button-icon" src="target.svg" alt="icon">Shots</a>
+  <a href="player_simulations.html" class="button"><img class="button-icon" src="player.svg" alt="icon">Player Cards</a>
+</div>
 </body>
 </html>
 
