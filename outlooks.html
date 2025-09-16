@@ -298,65 +298,91 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 3px !important;
   }
 
-    /* ✅ Section boxes */
+  /* Page sections */
   .outlook-page {
+    margin: 20px auto !important;
     max-width: 95% !important;
-    margin: 15px auto !important;
-    border-width: 1px;
-  }
-
-  /* ✅ Titles + description */
-  .page-title {
-    font-size: 16px !important;
-    gap: 4px !important;
-    padding: 2px 0 !important;
-  }
-  .page-description {
     font-size: 12px !important;
-    padding: 0 0 4px 0 !important;
   }
 
-  /* ✅ Tables */
+  /* Section titles + explanations */
+  .page-title {
+    font-size: 14px !important;
+    gap: 4px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .section-logo {
+    height: 24px !important;
+  }
+
+  .page-description {
+    font-size: 11px !important;
+    margin: 0 !important;
+    padding: 2px 0 6px 0 !important;
+  }
+
+  /* Tables */
   .outlook-table {
     width: 100% !important;
-    max-width: 100% !important;
-    font-size: 11px !important;
-    table-layout: fixed;   /* force equal distribution */
-    margin-bottom: 15px !important;
+    font-size: 12px !important;
+    margin: 0 auto 15px auto !important;
+    table-layout: fixed;
   }
-  .outlook-table th, 
+
+  .outlook-table th,
   .outlook-table td {
-    padding: 4px 2px !important;
+    padding: 4px !important;
     font-size: 11px !important;
-    word-wrap: break-word;
   }
+
+  /* Smaller header row */
+  .outlook-table th {
+    font-size: 11px !important;
+  }
+
+  /* Logos */
   .team-logo {
-    height: 16px !important;
+    height: 18px !important;
     width: auto !important;
   }
 
-  /* ✅ Player Grid */
-  .player-grid {
-    grid-template-columns: repeat(2, 1fr) !important; /* 2 per row on mobile */
-    gap: 10px !important;
+  /* Fixed team name width */
+  .outlook-table th:nth-child(2),
+  .outlook-table td:nth-child(2),
+  .outlook-table th:nth-child(6),
+  .outlook-table td:nth-child(6) {
+    width: 100px !important;
+    max-width: 100px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+
+  /* Player grid tweaks */
+  .player-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
   .leaderboard {
     padding: 6px !important;
     font-size: 11px !important;
   }
+
   .leaderboard h3 {
     font-size: 12px !important;
     margin-bottom: 4px !important;
   }
-  .leaderboard li {
-    padding: 3px 0 !important;
-  }
+
   .player-face {
-    height: 24px !important;
-    width: 24px !important;
-    margin-right: 6px !important;
+    height: 22px !important;
+    width: 22px !important;
+    margin-right: 5px !important;
   }
 }
+
 
 
   </style>
