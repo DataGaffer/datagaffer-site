@@ -218,12 +218,12 @@ h1, h2, h3, h4, h5, h6, p {
 
   /* ✅ Titles + description */
   .page-title {
-    font-size: 16px !important;
+    font-size: 14px !important;
     gap: 4px !important;
     padding: 2px 0 !important;
   }
   .page-description {
-    font-size: 12px !important;
+    font-size: 8px !important;
     padding: 0 0 4px 0 !important;
   }
 
@@ -248,33 +248,35 @@ h1, h2, h3, h4, h5, h6, p {
     width: auto !important;
   }
 
-  /* ✅ Narrow logo columns */
+  /* Narrow the logo columns */
   .outlook-table th:first-child,
   .outlook-table td:first-child,
   .outlook-table th:last-child,
   .outlook-table td:last-child {
-    width: 8% !important;   /* was too wide */
+    width: 12% !important;   /* logos narrower */
   }
 
-  /* ✅ Wider team name columns */
+  /* Home + Away team text */
   .outlook-table th:nth-child(2),
   .outlook-table td:nth-child(2),
   .outlook-table th:nth-last-child(2),
   .outlook-table td:nth-last-child(2) {
-    width: 28% !important;
+    width: 18% !important;   /* text column tighter */
+    white-space: nowrap;     /* ✅ stops stacking */
+    font-size: 11px !important;
   }
 
-  /* ✅ Slimmer number/stat columns */
+  /* All numeric/stat columns split evenly */
   .outlook-table th:nth-child(3),
   .outlook-table td:nth-child(3),
   .outlook-table th:nth-child(4),
   .outlook-table td:nth-child(4),
   .outlook-table th:nth-child(5),
-  .outlook-table td:nth-child(5),
-  .outlook-table th:nth-child(6),
-  .outlook-table td:nth-child(6) {
+  .outlook-table td:nth-child(5) {
     width: 12% !important;
+    font-size: 11px !important;
   }
+
 
 
 
