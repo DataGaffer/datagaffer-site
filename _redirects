@@ -1,1 +1,6 @@
-/* /index.html 200g
+# Redirect everything to the public home.html
+/*     /home.html   302
+
+# But allow login and signup pages to be accessed directly
+/login   /login.html   200
+/signup  /signup.html  200 
