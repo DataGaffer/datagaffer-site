@@ -133,6 +133,96 @@ h1, h2, h3, h4, h5, h6, p {
       background-color: #ffffff;
     }
 
+  /* --- Goals / Corners / Shots (7 columns) --- */
+#expected-goals .outlook-table th:nth-child(2),
+#expected-goals .outlook-table td:nth-child(2),
+#expected-goals .outlook-table th:nth-child(6),
+#expected-goals .outlook-table td:nth-child(6),
+#expected-corners .outlook-table th:nth-child(2),
+#expected-corners .outlook-table td:nth-child(2),
+#expected-corners .outlook-table th:nth-child(6),
+#expected-corners .outlook-table td:nth-child(6),
+#expected-shots .outlook-table th:nth-child(2),
+#expected-shots .outlook-table td:nth-child(2),
+#expected-shots .outlook-table th:nth-child(6),
+#expected-shots .outlook-table td:nth-child(6) {
+  width: 180px;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+#expected-goals .outlook-table th:nth-child(1),
+#expected-goals .outlook-table td:nth-child(1),
+#expected-goals .outlook-table th:nth-child(7),
+#expected-goals .outlook-table td:nth-child(7),
+#expected-corners .outlook-table th:nth-child(1),
+#expected-corners .outlook-table td:nth-child(1),
+#expected-corners .outlook-table th:nth-child(7),
+#expected-corners .outlook-table td:nth-child(7),
+#expected-shots .outlook-table th:nth-child(1),
+#expected-shots .outlook-table td:nth-child(1),
+#expected-shots .outlook-table th:nth-child(7),
+#expected-shots .outlook-table td:nth-child(7) {
+  width: 8%;
+}
+
+/* --- BTTS & Over 2.5 (5 columns) --- */
+#btts .outlook-table th:nth-child(2),
+#btts .outlook-table td:nth-child(2),
+#btts .outlook-table th:nth-child(4),
+#btts .outlook-table td:nth-child(4),
+#over25 .outlook-table th:nth-child(2),
+#over25 .outlook-table td:nth-child(2),
+#over25 .outlook-table th:nth-child(4),
+#over25 .outlook-table td:nth-child(4) {
+  width: 35%;
+}
+
+#btts .outlook-table th:nth-child(1),
+#btts .outlook-table td:nth-child(1),
+#btts .outlook-table th:nth-child(5),
+#btts .outlook-table td:nth-child(5),
+#over25 .outlook-table th:nth-child(1),
+#over25 .outlook-table td:nth-child(1),
+#over25 .outlook-table th:nth-child(5),
+#over25 .outlook-table td:nth-child(5) {
+  width: 8%;
+}
+
+/* --- Team Total (6 columns) --- */
+#team-total .outlook-table th:nth-child(2),
+#team-total .outlook-table td:nth-child(2),
+#team-total .outlook-table th:nth-child(5),
+#team-total .outlook-table td:nth-child(5) {
+  width: 25%;
+}
+
+#team-total .outlook-table th:nth-child(1),
+#team-total .outlook-table td:nth-child(1),
+#team-total .outlook-table th:nth-child(4),
+#team-total .outlook-table td:nth-child(4) {
+  width: 8%;
+}
+
+/* --- Win Outlook (7 columns) --- */
+#win-outlook .outlook-table th:nth-child(2),
+#win-outlook .outlook-table td:nth-child(2),
+#win-outlook .outlook-table th:nth-child(6),
+#win-outlook .outlook-table td:nth-child(6) {
+  width: 25%;
+}
+
+#win-outlook .outlook-table th:nth-child(1),
+#win-outlook .outlook-table td:nth-child(1),
+#win-outlook .outlook-table th:nth-child(7),
+#win-outlook .outlook-table td:nth-child(7) {
+  width: 6%;
+}
+
+
     .team-logo {
       height: 24px;
     }
@@ -208,65 +298,65 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 3px !important;
   }
 
-  /* ✅ All tables */
-  table {
+    /* ✅ Section boxes */
+  .outlook-page {
+    max-width: 100% !important;
+    margin: 15px auto !important;
+    border-width: 1px;
+  }
+
+  /* ✅ Titles + description */
+  .page-title {
+    font-size: 16px !important;
+    gap: 4px !important;
+    padding: 2px 0 !important;
+  }
+  .page-description {
+    font-size: 12px !important;
+    padding: 0 0 4px 0 !important;
+  }
+
+  /* ✅ Tables */
+  .outlook-table {
     width: 100% !important;
     max-width: 100% !important;
     font-size: 11px !important;
-    margin: 0 !important;
-    border-collapse: collapse;
-    table-layout: fixed;  /* keeps columns fixed width */
+    table-layout: fixed;   /* force equal distribution */
+    margin-bottom: 15px !important;
   }
-
-  th, td {
+  .outlook-table th, 
+  .outlook-table td {
+    padding: 4px 2px !important;
     font-size: 11px !important;
-    padding: 4px !important;
-    white-space: nowrap;       /* stop text wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis;   /* truncate if needed */
+    word-wrap: break-word;
+  }
+  .team-logo {
+    height: 16px !important;
+    width: auto !important;
   }
 
-  /* ✅ shrink logo columns (first & last) */
-  th:first-child, td:first-child,
-  th:last-child, td:last-child {
-    width: 8% !important;
-  }
-
-  /* ✅ numeric/stat columns smaller */
-  th:nth-child(3), td:nth-child(3),
-  th:nth-child(4), td:nth-child(4),
-  th:nth-child(5), td:nth-child(5) {
-    width: 12% !important;
-  }
-
-  /* ✅ team name columns get more space */
-  th:nth-child(2), td:nth-child(2),
-  th:nth-child(6), td:nth-child(6) {
-    width: 20% !important;
-  }
-
-  /* ✅ Player grid tweaks */
+  /* ✅ Player Grid */
   .player-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 per row on mobile */
     gap: 10px !important;
   }
   .leaderboard {
     padding: 6px !important;
+    font-size: 11px !important;
   }
   .leaderboard h3 {
-    font-size: 13px !important;
+    font-size: 12px !important;
     margin-bottom: 4px !important;
   }
   .leaderboard li {
     padding: 3px 0 !important;
-    font-size: 11px !important;
   }
   .player-face {
     height: 24px !important;
     width: 24px !important;
+    margin-right: 6px !important;
   }
 }
-
 
 
   </style>
@@ -309,7 +399,7 @@ h1, h2, h3, h4, h5, h6, p {
     </div>
     <div class="page-content">
       <table class="outlook-table">
-        <thead><tr><th>Home</th><th>Team</th><th>Home xG</th><th>Total xG</th><th>Away xG</th><th>Team</th><th>Away</th></tr></thead>
+        <thead><tr><th></th><th>Home Team</th><th>Team</th><th>Total</th><th>Team</th><th>Away Team</th><th></th></tr></thead>
         <tbody id="expected-goals-body"></tbody>
       </table>
     </div>
@@ -326,7 +416,7 @@ h1, h2, h3, h4, h5, h6, p {
     </div>
     <div class="page-content">
       <table class="outlook-table">
-        <thead><tr><th>Home</th><th>Team</th><th>Home Corners</th><th>Total Corners</th><th>Away Corners</th><th>Team</th><th>Away</th></tr></thead>
+        <thead><tr><th></th><th>Home Team</th><th>Team</th><th>Total</th><th>Team</th><th>Away Team</th><th></th></tr></thead>
         <tbody id="expected-corners-body"></tbody>
       </table>
     </div>
@@ -343,7 +433,7 @@ h1, h2, h3, h4, h5, h6, p {
     </div>
     <div class="page-content">
       <table class="outlook-table">
-        <thead><tr><th>Home</th><th>Team</th><th>Home Shots</th><th>Total Shots</th><th>Away Shots</th><th>Team</th><th>Away</th></tr></thead>
+        <thead><tr><th></th><th>Home Team</th><th>Team</th><th>Total</th><th>Team</th><th>Away Team</th><th></th></tr></thead>
         <tbody id="expected-shots-body"></tbody>
       </table>
     </div>
@@ -360,7 +450,7 @@ h1, h2, h3, h4, h5, h6, p {
     </div>
     <div class="page-content">
       <table class="outlook-table">
-        <thead><tr><th>Home</th><th>Team</th><th>BTTS %</th><th>Team</th><th>Away</th></tr></thead>
+        <thead><tr><th>Home</th><th>Team</th><th>Sim %</th><th>Team</th><th>Away</th></tr></thead>
         <tbody id="btts-body"></tbody>
       </table>
     </div>
@@ -377,7 +467,7 @@ h1, h2, h3, h4, h5, h6, p {
     </div>
     <div class="page-content">
       <table class="outlook-table">
-        <thead><tr><th>Home</th><th>Team</th><th>Over 2.5 %</th><th>Team</th><th>Away</th></tr></thead>
+        <thead><tr><th>Home</th><th>Team</th><th>Sim %</th><th>Team</th><th>Away</th></tr></thead>
         <tbody id="over25-body"></tbody>
       </table>
     </div>
@@ -394,7 +484,7 @@ h1, h2, h3, h4, h5, h6, p {
     </div>
     <div class="page-content">
       <table class="outlook-table">
-        <thead><tr><th>Home</th><th>Team</th><th>O1.5 %</th><th>Team</th><th>Away</th><th>O1.5 %</th></tr></thead>
+        <thead><tr><th>Home</th><th>Team</th><th>Sim %</th><th>Away</th><th>Team</th><th>Sim %</th></tr></thead>
         <tbody id="team-total-body"></tbody>
       </table>
     </div>
@@ -411,7 +501,7 @@ h1, h2, h3, h4, h5, h6, p {
     </div>
     <div class="page-content">
       <table class="outlook-table">
-        <thead><tr><th>Home</th><th>Team</th><th>Win %</th><th>Draw %</th><th>Away Win %</th><th>Team</th><th>Away</th></tr></thead>
+        <thead><tr><th>Home</th><th>Team</th><th>Win</th><th>Draw</th><th>Win</th><th>Team</th><th>Away</th></tr></thead>
         <tbody id="win-outlook-body"></tbody>
       </table>
     </div>
@@ -521,8 +611,8 @@ h1, h2, h3, h4, h5, h6, p {
                 <td><img src="${fix.home_logo}" class="team-logo"></td>
                 <td>${fix.home.name}</td>
                 <td>${stats.percents.home_o1_5_pct}%</td>
-                <td>${fix.away.name}</td>
                 <td><img src="${fix.away_logo}" class="team-logo"></td>
+                <td>${fix.away.name}</td>
                 <td>${stats.percents.away_o1_5_pct}%</td>
               </tr>`;
 
