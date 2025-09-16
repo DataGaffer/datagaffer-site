@@ -323,57 +323,98 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 2px 0 6px 0 !important;
   }
 
-  /* Tables */
+    /* General table tightening */
   .outlook-table {
+    table-layout: fixed;
     width: 100% !important;
-    font-size: 12px !important;
-    margin: 0 auto 15px auto !important;
-    table-layout: fixed; /* ✅ enforce equal widths */
-  }
-
-  .outlook-table th,
-  .outlook-table td {
-    padding: 4px !important;
     font-size: 11px !important;
   }
-
-  /* Smaller header row */
   .outlook-table th {
     font-size: 11px !important;
+    padding: 4px !important;
+  }
+  .outlook-table td {
+    padding: 4px !important;
   }
 
-  /* Logos */
-  .team-logo {
-    height: 18px !important;
-    width: auto !important;
+  /* ========== Table 1, 2, 3 (Expected Goals, Corners, Shots: 7 cols) ========== */
+  #expected-goals .outlook-table th,
+  #expected-goals .outlook-table td,
+  #expected-corners .outlook-table th,
+  #expected-corners .outlook-table td,
+  #expected-shots .outlook-table th,
+  #expected-shots .outlook-table td {
+    text-align: center;
   }
-
-  /* Fixed team name columns (equal for Home & Away) */
-  .outlook-table th:nth-child(2),
-  .outlook-table td:nth-child(2),
-  .outlook-table th:nth-child(6),
-  .outlook-table td:nth-child(6) {
-    width: 100px !important;
-    max-width: 100px !important;
+  #expected-goals .outlook-table th:nth-child(1),
+  #expected-corners .outlook-table th:nth-child(1),
+  #expected-shots .outlook-table th:nth-child(1),
+  #expected-goals .outlook-table th:nth-child(7),
+  #expected-corners .outlook-table th:nth-child(7),
+  #expected-shots .outlook-table th:nth-child(7) {
+    width: 30px;   /* logos */
+  }
+  #expected-goals .outlook-table th:nth-child(2),
+  #expected-corners .outlook-table th:nth-child(2),
+  #expected-shots .outlook-table th:nth-child(2),
+  #expected-goals .outlook-table th:nth-child(6),
+  #expected-corners .outlook-table th:nth-child(6),
+  #expected-shots .outlook-table th:nth-child(6) {
+    width: 85px;   /* team names */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
-  /* Fixed logo columns */
-  .outlook-table th:first-child,
-  .outlook-table td:first-child,
-  .outlook-table th:last-child,
-  .outlook-table td:last-child {
-    width: 40px !important;
+  #expected-goals .outlook-table th:nth-child(3),
+  #expected-goals .outlook-table th:nth-child(4),
+  #expected-goals .outlook-table th:nth-child(5),
+  #expected-corners .outlook-table th:nth-child(3),
+  #expected-corners .outlook-table th:nth-child(4),
+  #expected-corners .outlook-table th:nth-child(5),
+  #expected-shots .outlook-table th:nth-child(3),
+  #expected-shots .outlook-table th:nth-child(4),
+  #expected-shots .outlook-table th:nth-child(5) {
+    width: 55px;   /* stats */
   }
 
-  /* Let all stat columns share equal width automatically */
-  .outlook-table th,
-  .outlook-table td {
-    text-align: center;
+  /* ========== Table 4, 5 (BTTS, Over 2.5: 5 cols) ========== */
+  #btts .outlook-table th:nth-child(1),
+  #over25 .outlook-table th:nth-child(1),
+  #btts .outlook-table th:nth-child(5),
+  #over25 .outlook-table th:nth-child(5) {
+    width: 30px;   /* logos */
+  }
+  #btts .outlook-table th:nth-child(2),
+  #over25 .outlook-table th:nth-child(2),
+  #btts .outlook-table th:nth-child(4),
+  #over25 .outlook-table th:nth-child(4) {
+    width: 100px;  /* team names */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #btts .outlook-table th:nth-child(3),
+  #over25 .outlook-table th:nth-child(3) {
+    width: 60px;   /* Sim % */
   }
 
+  /* ========== Table 6 (Team Totals: 6 cols) ========== */
+  #team-total .outlook-table th:nth-child(1),
+  #team-total .outlook-table th:nth-child(5) {
+    width: 30px;   /* logos */
+  }
+  #team-total .outlook-table th:nth-child(2),
+  #team-total .outlook-table th:nth-child(4) {
+    width: 95px;   /* team names */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #team-total .outlook-table th:nth-child(3),
+  #team-total .outlook-table th:nth-child(6) {
+    width: 60px;   /* Sim % */
+
+  }
   /* Player grid tweaks */
   .player-grid {
     grid-template-columns: repeat(2, 1fr) !important;
