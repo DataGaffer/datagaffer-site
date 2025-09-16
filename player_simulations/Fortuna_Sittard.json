@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 205,
+    "player_id": 37273,
+    "name": "Kristoffer Peterson",
+    "position": "Attacker",
+    "appearances": 35,
+    "goals": 7,
+    "assists": 3,
+    "shots": 56,
+    "shots_on_target": 17,
+    "goals_per90_simulated": 0.43,
+    "assists_per90_simulated": 0.18,
+    "shots_per90": 3.36,
+    "sot_per90": 1.02,
+    "+1_goal_pct": 35.9,
+    "+1_assist_pct": 16.6,
+    "soa_pct": 46.5
+  },
+  {
+    "team_id": 205,
+    "player_id": 326029,
+    "name": "Philip Brittijn",
+    "position": "Midfielder",
+    "appearances": 6,
+    "goals": 2,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 3,
+    "goals_per90_simulated": 0.96,
+    "assists_per90_simulated": 0.5,
+    "shots_per90": 1.78,
+    "sot_per90": 1.36,
+    "+1_goal_pct": 61.1,
+    "+1_assist_pct": 39.0,
+    "soa_pct": 76.3
+  }
+]
