@@ -49,7 +49,7 @@ for fixture in data["response"]:
             "draw": float(odds_data[1]["odd"]),
             "away_win": float(odds_data[2]["odd"]),
             "btts": None,
-            "over25": None,
+            "over_2_5": None,
             "home_o1_5": None,
             "away_o1_5": None
         }
@@ -59,7 +59,7 @@ for fixture in data["response"]:
             "draw": None,
             "away_win": None,
             "btts": None,
-            "over25": None,
+            "over_2_5": None,
             "home_o1_5": None,
             "away_o1_5": None
         }

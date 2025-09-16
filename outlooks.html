@@ -730,12 +730,23 @@ h1, h2, h3, h4, h5, h6, p {
       });
 
     // Player Sims section
-    fetch("player_simulations/index.json")
-      .then(res => res.json())
-      .then(players => {
-        function top5(stat) {
-          return [...players].sort((a,b) => b[stat] - a[stat]).slice(0,5);
-        }
+fetch("player_simulations/index.json")
+  .then(res => res.json())
+  .then(async files => {
+    let allPlayers = [];
+    for (const file of files) {
+      const res = await fetch("player_simulations/" + file);
+      const teamPlayers = await res.json();
+      allPlayers.push(...teamPlayers);
+    }
+
+    function top5(stat) {
+      return [...allPlayers]
+        .filter(p => p[stat] !== undefined)  // skip players without that stat
+        .sort((a,b) => b[stat] - a[stat])
+        .slice(0,5);
+    }
+
 
         function renderList(stat, elementId, suffix="") {
           const list = document.getElementById(elementId);
