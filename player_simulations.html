@@ -92,11 +92,9 @@
    img { width: auto; height: 28px; vertical-align: middle; }
    .hidden { display: none; }
 
-   /* highlight styles */
    .highlight-header { background: #fcff55 !important; color: black !important; }
    .highlight-col { background: #fff9b2 !important; color: black !important; }
 
-   /* Player Cards */
    .card-grid {
      display: flex;
      flex-wrap: wrap;
@@ -133,49 +131,40 @@
 
 @media (max-width: 925px) {
  body { overflow-x: hidden; }
-
  .header-logo { height: 50px !important; width: auto !important; }
  h1 { font-size: 20px !important; }
-
  .banner {
    width: 85% !important;
    font-size: 13px !important;
    padding: 6px !important;
    margin-top: 25px;
  }
-
  .buttons { margin-bottom: 30px; margin-top: 25px; }
  .buttons button {
    padding: 6px 10px !important;
    font-size: 12px !important;
    margin: 0 4px !important;
  }
-
  .search-box input {
    width: 180px !important;
    font-size: 12px !important;
    padding: 6px !important;
  }
-
  #player-stats {
    overflow-x: auto;
    -webkit-overflow-scrolling: touch;
  }
-
  table {
    min-width: 700px;
    font-size: 12px !important;
    margin-bottom: 25px;
  }
-
  th, td {
    padding: 8px 4px!important;
    font-size: 12px !important;
    white-space: nowrap;
  }
-
  img { width: 20px !important; height: 20px !important; }
-
  .card-grid { gap: 12px !important; margin: 10px auto !important; }
  .player-card { width: 160px !important; padding: 10px !important; }
  .player-card img { width: 60px !important; height: 60px !important; }
@@ -186,7 +175,6 @@
 </head>
 <body>
 
-<!-- Header -->
 <div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
  <a href="index.html" style="text-decoration: none; color: inherit; display: contents;">
    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
@@ -196,21 +184,17 @@
  </a>
 </div>
 
-<!-- Banner -->
 <div class="banner">Top players after simulation results for today’s fixtures. /90 means average stat per simulation</div>
 
-<!-- Buttons -->
 <div class="buttons">
  <button onclick="showSection('stats', this)" id="btn-stats" class="active">Player Stats</button>
  <button onclick="showSection('cards', this)" id="btn-cards">Player Cards</button>
 </div>
 
-<!-- Search box -->
 <div class="search-box">
  <input type="text" id="searchInput" placeholder="Search player, team, or position..." onkeyup="applySearch()" />
 </div>
 
-<!-- Sections -->
 <div id="player-stats"></div>
 <div id="player-cards" class="hidden">
  <div id="cards-grid" class="card-grid"></div>
@@ -220,21 +204,31 @@
 let allPlayers = [];
 let sortConfig = { column: null, asc: false };
 
-// ✅ Updated: always show players from JSON files, don’t filter by fixtures.json
 async function loadPlayerData() {
+  const fixturesRes = await fetch("fixtures.json");
+  const fixtures = await fixturesRes.json();
+
+  const fixtureTeamIds = new Set();
+  fixtures.forEach(f => {
+    fixtureTeamIds.add(f.home.id);
+    fixtureTeamIds.add(f.away.id);
+  });
+
   const indexRes = await fetch("player_simulations/index.json");
   const files = await indexRes.json();
 
-  let players = [];
+  let allTeamsPlayers = [];
   for (const file of files) {
     const res = await fetch("player_simulations/" + file);
     const teamPlayers = await res.json();
+    allTeamsPlayers.push(...teamPlayers);
+  }
 
-    players.push(...teamPlayers.map(p => ({
-      ...p,
-      team: p.team || file.replace(".json", "").replace(/_/g, " "),
-      photo: `assets/faces/${p.player_id}.png`
-    })));
+  let players;
+  if (fixtureTeamIds.size > 0) {
+    players = allTeamsPlayers.filter(p => fixtureTeamIds.has(p.team_id));
+  } else {
+    players = allTeamsPlayers;
   }
 
   allPlayers = players;
@@ -255,7 +249,6 @@ function buildTable(players) {
      <th onclick="sortTable(8)">+1A %</th>
      <th onclick="sortTable(9)">SOA %</th>
    </tr>`;
-
  players.forEach(p => {
    const logoPath = `assets/logos/${p.team_id}.png`;
    table += `
@@ -272,7 +265,6 @@ function buildTable(players) {
        <td>${(p.soa_pct ?? 0).toFixed(1)}%</td>
      </tr>`;
  });
-
  table += "</table>";
  return table;
 }
@@ -280,9 +272,10 @@ function buildTable(players) {
 function buildCards(players) {
  let grid = "";
  players.forEach(p => {
+   const photoPath = `assets/faces/${p.player_id}.png`;
    grid += `
      <div class="player-card">
-       <img src="${p.photo}" alt="${p.name}" onerror="this.src='assets/faces/placeholder.png'">
+       <img src="${photoPath}" alt="${p.name}" onerror="this.src='assets/faces/placeholder.png'">
        <h3>${p.name}</h3>
        <p><b>Position:</b> ${p.position}</p>
        <p><b>Goals/90:</b> ${(p.goals_per90_simulated ?? 0).toFixed(2)}</p>
@@ -302,11 +295,16 @@ function applySearch() {
  const term = document.getElementById("searchInput").value.toLowerCase();
  const filtered = allPlayers.filter(p =>
    p.name.toLowerCase().includes(term) ||
-   p.team.toLowerCase().includes(term) ||
+   (p.team && p.team.toLowerCase().includes(term)) ||
    p.position.toLowerCase().includes(term)
  );
- document.getElementById("player-stats").innerHTML = buildTable(filtered);
- document.getElementById("cards-grid").innerHTML = buildCards(filtered);
+
+ if (!document.getElementById("player-stats").classList.contains("hidden")) {
+   document.getElementById("player-stats").innerHTML = buildTable(filtered);
+ }
+ if (!document.getElementById("player-cards").classList.contains("hidden")) {
+   document.getElementById("cards-grid").innerHTML = buildCards(filtered);
+ }
 }
 
 function sortTable(col) {
@@ -316,7 +314,6 @@ function sortTable(col) {
    sortConfig.asc = !sortConfig.asc;
  }
  sortConfig.column = col;
-
  let sorted = [...allPlayers];
  sorted.sort((a, b) => {
    let valA, valB;
@@ -338,38 +335,42 @@ function sortTable(col) {
    if (valA > valB) return sortConfig.asc ? 1 : -1;
    return 0;
  });
-
  document.getElementById("player-stats").innerHTML = buildTable(sorted);
-
- document.querySelectorAll("th, td").forEach(cell => {
-   cell.classList.remove("highlight-header", "highlight-col");
- });
- const headerCells = document.querySelectorAll("#player-stats table tr:first-child th");
- if (headerCells[col]) headerCells[col].classList.add("highlight-header");
- const rows = document.querySelectorAll("#player-stats table tr");
- rows.forEach((row, i) => {
-   if (i === 0) return;
-   const cells = row.querySelectorAll("td");
-   if (cells[col]) cells[col].classList.add("highlight-col");
- });
 }
 
 async function init() {
  const players = await loadPlayerData();
  document.getElementById("player-stats").innerHTML = buildTable(players);
- document.getElementById("cards-grid").innerHTML = buildCards(players);
 }
 
 function showSection(section, btn) {
  document.getElementById("player-stats").classList.add("hidden");
  document.getElementById("player-cards").classList.add("hidden");
  document.getElementById("player-" + section).classList.remove("hidden");
-
  document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
  btn.classList.add("active");
+
+ if (section === "cards") {
+   const term = document.getElementById("searchInput").value.toLowerCase();
+   if (term) {
+     const filtered = allPlayers.filter(p =>
+       p.name.toLowerCase().includes(term) ||
+       (p.team && p.team.toLowerCase().includes(term)) ||
+       p.position.toLowerCase().includes(term)
+     );
+     document.getElementById("cards-grid").innerHTML = buildCards(filtered);
+   } else {
+     document.getElementById("cards-grid").innerHTML = "<p style='text-align:center;color:#666;'>Search for a player above to see cards</p>";
+   }
+ }
 }
 
 init();
 </script>
 </body>
 </html>
+
+
+
+
+
