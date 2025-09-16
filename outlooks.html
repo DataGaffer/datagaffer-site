@@ -208,100 +208,65 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 3px !important;
   }
 
-  /* ✅ Section boxes */
-  .outlook-page {
-    max-width: 95% !important;
-    margin: 15px auto !important;
-    border-width: 1px;
-    padding: 0;
-  }
-
-  /* ✅ Titles + description */
-  .page-title {
-    font-size: 14px !important;
-    gap: 4px !important;
-    padding: 2px 0 !important;
-  }
-  .page-description {
-    font-size: 8px !important;
-    padding: 0 0 4px 0 !important;
-  }
-
-  /* ✅ Tables */
-  .outlook-table {
+  /* ✅ All tables */
+  table {
     width: 100% !important;
-    table-layout: fixed;
+    max-width: 100% !important;
     font-size: 11px !important;
-    margin: 0;
+    margin: 0 !important;
+    border-collapse: collapse;
+    table-layout: fixed;  /* keeps columns fixed width */
   }
 
-  .outlook-table th,
-  .outlook-table td {
-    padding: 4px 2px !important;
-    font-size: 6px !important;
-    word-wrap: break-word;
+  th, td {
+    font-size: 11px !important;
+    padding: 4px !important;
+    white-space: nowrap;       /* stop text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;   /* truncate if needed */
   }
 
-  /* ✅ Logos smaller */
-  .team-logo {
-    height: 14px !important;
-    width: auto !important;
+  /* ✅ shrink logo columns (first & last) */
+  th:first-child, td:first-child,
+  th:last-child, td:last-child {
+    width: 8% !important;
   }
 
-  /* Narrow the logo columns */
-  .outlook-table th:first-child,
-  .outlook-table td:first-child,
-  .outlook-table th:last-child,
-  .outlook-table td:last-child {
-    width: 12% !important;   /* logos narrower */
-  }
-
-  /* Home + Away team text */
-  .outlook-table th:nth-child(2),
-  .outlook-table td:nth-child(2),
-  .outlook-table th:nth-last-child(2),
-  .outlook-table td:nth-last-child(2) {
-    width: 18% !important;   /* text column tighter */
-    white-space: nowrap;     /* ✅ stops stacking */
-    font-size: 6px !important;
-  }
-
-  /* All numeric/stat columns split evenly */
-  .outlook-table th:nth-child(3),
-  .outlook-table td:nth-child(3),
-  .outlook-table th:nth-child(4),
-  .outlook-table td:nth-child(4),
-  .outlook-table th:nth-child(5),
-  .outlook-table td:nth-child(5) {
+  /* ✅ numeric/stat columns smaller */
+  th:nth-child(3), td:nth-child(3),
+  th:nth-child(4), td:nth-child(4),
+  th:nth-child(5), td:nth-child(5) {
     width: 12% !important;
-    font-size: 11px !important;
   }
 
+  /* ✅ team name columns get more space */
+  th:nth-child(2), td:nth-child(2),
+  th:nth-child(6), td:nth-child(6) {
+    width: 20% !important;
+  }
 
-
-
-  /* ✅ Player Grid */
+  /* ✅ Player grid tweaks */
   .player-grid {
-    grid-template-columns: repeat(2, 1fr) !important; /* 2 per row on mobile */
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px !important;
   }
   .leaderboard {
     padding: 6px !important;
-    font-size: 11px !important;
   }
   .leaderboard h3 {
-    font-size: 12px !important;
+    font-size: 13px !important;
     margin-bottom: 4px !important;
   }
   .leaderboard li {
     padding: 3px 0 !important;
+    font-size: 11px !important;
   }
   .player-face {
     height: 24px !important;
     width: 24px !important;
-    margin-right: 6px !important;
   }
 }
+
 
 
   </style>
