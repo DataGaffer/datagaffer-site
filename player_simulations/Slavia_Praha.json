@@ -17,24 +17,7 @@
     "+1_assist_pct": 57.2,
     "soa_pct": 72.6
   },
-  {
-    "team_id": 560,
-    "player_id": 66275,
-    "name": "Mojmir Chytil",
-    "position": "Attacker",
-    "appearances": 7,
-    "goals": 1,
-    "assists": 1,
-    "shots": 14,
-    "shots_on_target": 8,
-    "goals_per90_simulated": 0.4,
-    "assists_per90_simulated": 0.37,
-    "shots_per90": 5.21,
-    "sot_per90": 2.94,
-    "+1_goal_pct": 32.2,
-    "+1_assist_pct": 31.0,
-    "soa_pct": 53.3
-  },
+ 
   {
     "team_id": 560,
     "player_id": 66353,
