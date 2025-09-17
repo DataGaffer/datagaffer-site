@@ -1,22 +1,5 @@
 [
-  {
-    "team_id": 85,
-    "player_id": 153,
-    "name": "Ousmane Demebele",
-    "position": "Attacker",
-    "appearances": 57,
-    "goals": 37,
-    "assists": 16,
-    "shots": 206,
-    "shots_on_target": 93,
-    "goals_per90_simulated": 1.14,
-    "assists_per90_simulated": 0.47,
-    "shots_per90": 6.06,
-    "sot_per90": 2.78,
-    "+1_goal_pct": 68.1,
-    "+1_assist_pct": 37.6,
-    "soa_pct": 80.1
-  },
+  
   {
     "team_id": 85,
     "player_id": 328,

@@ -116,6 +116,10 @@ for fixture in data["response"]:
     # --- Save fixture (sim_stats later) ---
     valid_matches.append({
         "fixture_id": fixture_id,
+        "league": {
+            "id": fixture["league"]["id"],
+            "name": fixture["league"]["name"]
+        },
         "home": home,
         "away": away,
         "home_id": home_id,

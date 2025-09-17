@@ -107,24 +107,7 @@
     "+1_assist_pct": 48.9,
     "soa_pct": 68.8
   },
-  {
-    "team_id": 40,
-    "player_id": 2864,
-    "name": "Alexander Isak",
-    "position": "Attacker",
-    "appearances": 34,
-    "goals": 23,
-    "assists": 6,
-    "shots": 95,
-    "shots_on_target": 41,
-    "goals_per90_simulated": 1.18,
-    "assists_per90_simulated": 0.29,
-    "shots_per90": 4.6,
-    "sot_per90": 1.97,
-    "+1_goal_pct": 68.5,
-    "+1_assist_pct": 25.0,
-    "soa_pct": 76.4
-  },
+  
   {
     "team_id": 40,
     "player_id": 542,

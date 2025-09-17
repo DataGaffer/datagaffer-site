@@ -31,7 +31,7 @@
   },
   "194_505": {
     "book_home_win": 4.2,
-    "book_draw": 3.9,
+    "book_draw": 3.8,
     "book_away_win": 1.8,
     "h2h_home_wins": 0,
     "h2h_away_wins": 0,
@@ -50,9 +50,9 @@
     "h2h_avg_away": 1.0
   },
   "40_530": {
-    "book_home_win": 1.5,
-    "book_draw": 4.33,
-    "book_away_win": 6.25,
+    "book_home_win": 1.45,
+    "book_draw": 4.5,
+    "book_away_win": 7.0,
     "h2h_home_wins": 2,
     "h2h_away_wins": 2,
     "h2h_draws": 0,

@@ -1,6 +1,10 @@
 [
   {
     "fixture_id": 1451026,
+    "league": {
+      "id": 2,
+      "name": "UEFA Champions League"
+    },
     "home": {
       "id": 553,
       "name": "Olympiakos Piraeus",
@@ -29,33 +33,37 @@
     },
     "sim_stats": {
       "xg": {
-        "home": "1.77",
-        "away": "1.24",
-        "total": "3.01"
+        "home": "1.83",
+        "away": "1.21",
+        "total": "3.04"
       },
       "corners": {
-        "home": "5.4",
-        "away": "3.8",
+        "home": "5.6",
+        "away": "3.6",
         "total": "9.2"
       },
       "shots": {
-        "home": "12.5",
-        "away": "8.5",
-        "total": "21.1"
+        "home": "13.0",
+        "away": "8.3",
+        "total": "21.3"
       },
       "percents": {
-        "home_win_pct": 49.8,
-        "draw_pct": 23.2,
-        "away_win_pct": 27.0,
-        "over_2_5_pct": 58.0,
-        "btts_pct": 58.9,
-        "home_o1_5_pct": 52.8,
-        "away_o1_5_pct": 35.3
+        "home_win_pct": 51.8,
+        "draw_pct": 22.9,
+        "away_win_pct": 25.2,
+        "over_2_5_pct": 58.4,
+        "btts_pct": 58.6,
+        "home_o1_5_pct": 54.7,
+        "away_o1_5_pct": 34.1
       }
     }
   },
   {
     "fixture_id": 1451027,
+    "league": {
+      "id": 2,
+      "name": "UEFA Champions League"
+    },
     "home": {
       "id": 560,
       "name": "Slavia Praha",
@@ -111,6 +119,10 @@
   },
   {
     "fixture_id": 1380911,
+    "league": {
+      "id": 88,
+      "name": "Eredivisie"
+    },
     "home": {
       "id": 209,
       "name": "Feyenoord",
@@ -166,6 +178,10 @@
   },
   {
     "fixture_id": 1451028,
+    "league": {
+      "id": 2,
+      "name": "UEFA Champions League"
+    },
     "home": {
       "id": 194,
       "name": "Ajax",
@@ -185,7 +201,7 @@
     "date": "2025-09-17T19:00:00+00:00",
     "book_odds": {
       "home_win": 4.2,
-      "draw": 3.9,
+      "draw": 3.8,
       "away_win": 1.8,
       "btts": null,
       "over_2_5": null,
@@ -194,33 +210,37 @@
     },
     "sim_stats": {
       "xg": {
-        "home": "1.52",
-        "away": "1.61",
+        "home": "1.46",
+        "away": "1.67",
         "total": "3.13"
       },
       "corners": {
-        "home": "4.5",
-        "away": "4.8",
+        "home": "4.3",
+        "away": "5.0",
         "total": "9.3"
       },
       "shots": {
-        "home": "11.8",
-        "away": "14.0",
-        "total": "25.9"
+        "home": "11.4",
+        "away": "14.6",
+        "total": "26.0"
       },
       "percents": {
-        "home_win_pct": 36.0,
-        "draw_pct": 23.6,
-        "away_win_pct": 40.5,
-        "over_2_5_pct": 60.6,
+        "home_win_pct": 33.7,
+        "draw_pct": 23.5,
+        "away_win_pct": 42.8,
+        "over_2_5_pct": 60.5,
         "btts_pct": 62.3,
-        "home_o1_5_pct": 45.1,
-        "away_o1_5_pct": 48.1
+        "home_o1_5_pct": 43.1,
+        "away_o1_5_pct": 49.9
       }
     }
   },
   {
     "fixture_id": 1451029,
+    "league": {
+      "id": 2,
+      "name": "UEFA Champions League"
+    },
     "home": {
       "id": 85,
       "name": "Paris Saint Germain",
@@ -276,6 +296,10 @@
   },
   {
     "fixture_id": 1451030,
+    "league": {
+      "id": 2,
+      "name": "UEFA Champions League"
+    },
     "home": {
       "id": 40,
       "name": "Liverpool",
@@ -294,9 +318,9 @@
     "away_logo": "https://media.api-sports.io/football/teams/530.png",
     "date": "2025-09-17T19:00:00+00:00",
     "book_odds": {
-      "home_win": 1.5,
-      "draw": 4.33,
-      "away_win": 6.25,
+      "home_win": 1.45,
+      "draw": 4.5,
+      "away_win": 7.0,
       "btts": null,
       "over_2_5": null,
       "home_o1_5": null,
@@ -331,6 +355,10 @@
   },
   {
     "fixture_id": 1451031,
+    "league": {
+      "id": 2,
+      "name": "UEFA Champions League"
+    },
     "home": {
       "id": 157,
       "name": "Bayern M\u00fcnchen",
