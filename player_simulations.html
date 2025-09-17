@@ -112,7 +112,7 @@
     padding: 15px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
-  .player-card img {
+  .player-card img:not(.team-logo) {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -128,6 +128,14 @@
     margin: 3px 0;
     font-size: 13px;
   }
+
+  .player-card .team-logo {
+  height: 20px;
+  width: auto;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
 
 @media (max-width: 925px) {
 body { overflow-x: hidden; }
@@ -165,17 +173,16 @@ th, td {
   white-space: nowrap;
 }
 
-.player-card .team-logo {
-height: 14px;
-width: auto;
-vertical-align: middle;
-margin-right: 4px
-}
+  .player-card .team-logo {
+    height: 12px !important;
+    margin-left: 4px !important;
+  }
+
 
 img { width: 20px !important; height: 20px !important; }
 .card-grid { gap: 12px !important; margin: 10px auto !important; }
 .player-card { width: 160px !important; padding: 10px !important; }
-.player-card img { width: 60px !important; height: 60px !important; }
+.player-card img:not(.team-logo){ width: 60px !important; height: 60px !important; }
 .player-card h3 { font-size: 14px !important; }
 .player-card p { font-size: 11px !important; }
 }
@@ -299,10 +306,9 @@ function buildCards(players) {
              onerror="this.src='assets/faces/placeholder.png'">
         <h3>
           ${p.name} 
-          <img src="${logoPath}" alt="${p.team}" 
-               style="height:18px;width:auto;margin-left:6px;vertical-align:middle"
+          <img src="${logoPath}" alt="${p.team}" class="team-logo"
                onerror="this.onerror=null;this.src='assets/logos/${p.team_id}.svg';">
-        </h3>
+         </h3>
         <p><b>Position:</b> ${p.position}</p>
         <p><b>Goals/90:</b> ${(p.goals_per90_simulated ?? 0).toFixed(2)}</p>
         <p><b>Assists/90:</b> ${(p.assists_per90_simulated ?? 0).toFixed(2)}</p>
