@@ -380,7 +380,7 @@
     "league": "Premier League",
     "home": {
       "goals_for": 1.81,
-      "goals_against": 1.71,
+      "goals_against": 0.98,
       "corners": 6.2,
       "corners_against": 5.3,
       "shots": 14.0,
