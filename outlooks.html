@@ -622,7 +622,7 @@ h1, h2, h3, h4, h5, h6, p {
         <div class="leaderboard"><h3>Shots/90</h3><ul id="top-shots"></ul></div>
         <div class="leaderboard"><h3>SOT/90</h3><ul id="top-sot"></ul></div>
         <div class="leaderboard"><h3>+1 Goal %</h3><ul id="top-goal-pct"></ul></div>
-        <div class="leaderboard"><h3>+1 Assist %</h3><ul id="top-assist-pct"></ul></div>
+        <div class="leaderboard"><h3>Score or Assist</h3><ul id="top-soa"></ul></div>
       </div>
     </div>
   </section>
@@ -766,7 +766,7 @@ fetch("player_simulations/index.json")
         renderList("shots_per90", "top-shots");
         renderList("sot_per90", "top-sot");
         renderList("+1_goal_pct", "top-goal-pct", "%");
-        renderList("+1_assist_pct", "top-assist-pct", "%");
+        renderList("soa_pct", "top-soa", "%");
       });
   </script>
 </body>
