@@ -112,7 +112,7 @@
     padding: 15px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
-  .player-card img:not(.team-logo) {
+  .player-card > img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -132,7 +132,6 @@
   .player-card .team-logo {
   height: 20px;
   width: auto;
-  max-width: 32px;
   margin-left: 6px;
   vertical-align: middle;
 }
@@ -181,11 +180,9 @@ th, td {
     margin-left: 4px !important;
   }
 
-
-img { width: 20px !important; height: 20px !important; }
 .card-grid { gap: 12px !important; margin: 10px auto !important; }
 .player-card { width: 160px !important; padding: 10px !important; }
-.player-card img:not(.team-logo){ width: 60px !important; height: 60px !important; }
+.player-card > img { width: 60px !important; height: 60px !important; }
 .player-card h3 { font-size: 14px !important; }
 .player-card p { font-size: 11px !important; }
 }
