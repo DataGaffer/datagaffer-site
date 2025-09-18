@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pitchproj/datagaffer-site#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
     "stripe": "^18.5.0"
   }
 }
