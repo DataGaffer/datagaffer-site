@@ -85,10 +85,10 @@
       "home_win": 3.3,
       "draw": 3.5,
       "away_win": 2.15,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.66,
+      "over_2_5": 1.80,
+      "home_o1_5": 2.62,
+      "away_o1_5": 2.00
     },
     "sim_stats": {
       "xg": {
@@ -144,10 +144,10 @@
       "home_win": 2.1,
       "draw": 3.9,
       "away_win": 3.1,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.44,
+      "over_2_5": 1.50,
+      "home_o1_5": 1.72,
+      "away_o1_5": 2.10
     },
     "sim_stats": {
       "xg": {
@@ -203,10 +203,10 @@
       "home_win": 1.08,
       "draw": 11.0,
       "away_win": 26.0,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 2.37,
+      "over_2_5": 1.33,
+      "home_o1_5": 1.14,
+      "away_o1_5": 9.00
     },
     "sim_stats": {
       "xg": {
@@ -262,10 +262,10 @@
       "home_win": 2.8,
       "draw": 3.7,
       "away_win": 2.35,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.44,
+      "over_2_5": 1.50,
+      "home_o1_5": 2.00,
+      "away_o1_5": 1.80
     },
     "sim_stats": {
       "xg": {
@@ -321,10 +321,10 @@
       "home_win": 1.65,
       "draw": 4.0,
       "away_win": 5.0,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.75,
+      "over_2_5": 1.72,
+      "home_o1_5": 1.66,
+      "away_o1_5": 3.50
     },
     "sim_stats": {
       "xg": {

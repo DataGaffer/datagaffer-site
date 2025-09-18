@@ -231,7 +231,7 @@
       fixtures.forEach(f => {
         if (type === "btts" || type === "over25") {
           let simVal = type === "btts" ? f.sim_stats?.percents?.btts_pct : f.sim_stats?.percents?.over_2_5_pct;
-          let bookVal = type === "btts" ? f.book_odds?.btts : f.book_odds?.over25;
+          let bookVal = type === "btts" ? f.book_odds?.btts : f.book_odds?.over_2_5;
           const simOdds = toDecimalOdds(simVal);
           rows.push({
             matchup: `${f.home.name} vs ${f.away.name}`,
