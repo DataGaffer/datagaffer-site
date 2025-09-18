@@ -33,13 +33,14 @@
     }
     button {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       background-color: #1a8a39;
       color: white;
       border: none;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: 18px;
       cursor: pointer;
+      margin-top: 20px;
     }
     button:hover { background-color: #14722f; }
     p { margin-top: 15px; font-size: 14px; }
@@ -55,56 +56,37 @@
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Login</button>
     </form>
-    <p><a href="signup.html">Don’t have an account? Sign up</a></p>
+    <p><a href="signup.html">Don't have an account? Sign Up</a></p>
   </div>
 
   <!-- Supabase SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
+    // ✅ Use your real Supabase project details
     const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // replace with anon public key
-    const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
     document.getElementById("login-form").addEventListener("submit", async (e) => {
       e.preventDefault();
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
-      // Try logging in
-      const { data, error } = await supabase.auth.signInWithPassword({
+      const { data, error } = await supabaseClient.auth.signInWithPassword({
         email,
         password
       });
 
       if (error) {
-        alert("Login failed: " + error.message);
-        return;
-      }
-
-      const user = data.user;
-
-      // Check subscription status from profiles table
-      const { data: profile, error: profileError } = await supabase
-        .from("profiles")
-        .select("is_subscribed")
-        .eq("id", user.id)
-        .single();
-
-      if (profileError) {
-        alert("Could not check subscription: " + profileError.message);
-        return;
-      }
-
-      if (!profile?.is_subscribed) {
-        alert("You must subscribe before accessing DataGaffer.");
-        await supabase.auth.signOut();
-        window.location.href = "signup.html";
+        alert("Login error: " + error.message);
       } else {
         alert("Login successful!");
-        window.location.href = "index.html"; // grant access
+        // Redirect to homepage (or protected area)
+        window.location.href = "home.html";
       }
     });
   </script>
 </body>
 </html>
+
 
