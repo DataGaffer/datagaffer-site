@@ -769,6 +769,47 @@ fetch("player_simulations/index.json")
         renderList("soa_pct", "top-soa", "%");
       });
   </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ keep anon, never service key
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+  async function checkSession() {
+    const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+
+    if (sessionError || !session) {
+      window.location.href = "login.html";
+      return;
+    }
+
+    // ✅ Get user profile
+    let { data: profile, error } = await supabase
+      .from("profiles")
+      .select("is_subscribed")
+      .eq("id", session.user.id)
+      .single();
+
+    if (error || !profile || !profile.is_subscribed) {
+      window.location.href = "home.html"; // not subscribed → redirect
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    checkSession();
+  });
+
+  // Auto-logout listener
+  supabase.auth.onAuthStateChange((event, session) => {
+    if (event === "SIGNED_OUT" || !session) {
+      window.location.href = "login.html";
+    }
+  });
+</script>
+
+
+
 </body>
 </html>
 

@@ -22,9 +22,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       width: 300px;
     }
-    h1 {
-      margin-bottom: 20px;
-    }
+    h1 { margin-bottom: 20px; }
     input {
       display: block;
       width: 100%;
@@ -35,29 +33,59 @@
     }
     button {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       background-color: #1a8a39;
       color: white;
       border: none;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: 18px;
       cursor: pointer;
+      margin-top: 20px;
     }
-    button:hover {
-      background-color: #14722f;
-    }
+    button:hover { background-color: #14722f; }
+    p { margin-top: 15px; font-size: 14px; }
+    a { color: #003f2e; text-decoration: none; font-weight: bold; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <div class="box">
     <h1>Sign Up</h1>
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
+    <form id="signup-form">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Sign Up</button>
     </form>
     <p><a href="login.html">Already have an account? Login</a></p>
   </div>
+
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const supabaseUrl = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // replace with your Supabase project URL
+    const supabaseKey = "YOUR_ANON_KEY";   // replace with your anon public key
+    const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+    document.getElementById("signup-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password
+      });
+
+      if (error) {
+        alert("Signup error: " + error.message);
+      } else {
+        alert("Signup successful! Check your email to confirm.");
+        // Redirect to subscription (Stripe checkout)
+        window.location.href = "subscribe.html";
+      }
+    });
+  </script>
 </body>
 </html>
+
+

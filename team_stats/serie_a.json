@@ -71,8 +71,8 @@
     "logo": "https://media-4.api-sports.io/football/teams/496.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.65,
-      "goals_against": 0.75,
+      "goals_for": 1.99,
+      "goals_against": 0.99,
       "corners": 5.3,
       "corners_against": 3.8,
       "shots": 14.1,

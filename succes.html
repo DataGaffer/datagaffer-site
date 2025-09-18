@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success - DataGaffer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #003f2e;
+    }
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    h1 { color: #1a8a39; margin-bottom: 20px; }
+    p { font-size: 16px; margin-bottom: 20px; }
+    .redirect { font-size: 14px; color: #555; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>✅ Subscription Successful!</h1>
+    <p>Welcome to DataGaffer — your subscription is active.</p>
+    <p class="redirect">Redirecting you to the dashboard...</p>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "index.html"; // redirect after 3 seconds
+    }, 3000);
+  </script>
+</body>
+</html>
+
