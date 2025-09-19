@@ -171,17 +171,17 @@
 }
 
 @media (max-width: 768px) {
+  /* ✅ HEADER FIX */
   .dg-header {
     display: flex;
+    justify-content: space-between; /* logo left, button right */
     align-items: center;
-    justify-content: space-between;
-    padding: 8px 12px;
-    background-color: white;
+    padding: 10px;
+    position: relative;
   }
 
-  /* Logo left */
   .dg-logo-wrapper {
-    position: static;
+    position: static; /* allow logo to sit naturally on left */
     margin: 0;
   }
 
@@ -189,81 +189,95 @@
     height: 60px;
   }
 
-  /* Site name centered */
   .dg-site-name {
-    font-size: 28px;
-    font-weight: 700;
-    color: #003f2e;
-    text-align: center;
-    flex: 1;
+    font-size: 26px;
+    flex: 1;              /* expand center space */
+    text-align: center;   /* center the site name */
   }
 
-  /* Manage button right */
   .dg-auth-links {
-    position: static;
+    position: static;  /* keep Manage button on right */
     display: flex;
     justify-content: flex-end;
   }
 
   .dg-auth-links .manage-btn {
-    background-color: #1a8a39;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 6px;
     font-size: 14px;
-    cursor: pointer;
+    padding: 5px 10px;
   }
 
-  .dg-auth-links .manage-btn:hover {
-    background-color: #14722f;
-  }
+  /* ✅ LEAVE REST UNCHANGED */
 
-  /* Tagline */
   .dg-tagline {
     font-size: 14px;
-    padding: 6px;
+    padding: 8px;
     text-align: center;
     margin-top: 5px;
   }
 
-  /* Grid */
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-bottom: 30px;
+    grid-template-columns: repeat(2, 175px);
+    gap: 20px;
+    row-gap: 15px;
+    margin-bottom: 40px;
     justify-content: center;
   }
 
-  /* Buttons */
   .button {
-    font-size: 18px;
-    padding: 15px;
+    font-size: 20px;
+    white-space: nowrap;
+    padding: 25px 20px;
     border-radius: 5px;
+    width: 100%;
+    margin-bottom: -5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    height: 42px;
+    gap: 10px;
+    height: 38px;
+    text-decoration: none;
   }
 
   .button-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
 
-  /* Play banner */
   .play-button {
-    font-size: 22px;
-    padding: 12px;
-    width: 90%;
+    font-size: 30px;
+    padding: 0px 15px;
+    width: 95%;
+  }
+
+  .play-banner {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;
+  }
+
+  .play-line {
+    width: 80%;
   }
 
   .section-title {
-    font-size: 22px;
-    margin: 20px 0 10px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .bet-text {
+    font-size: 20px;
+    font-weight: normal;
   }
 }
+
 
 
 
