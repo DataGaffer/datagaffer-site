@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 427,
+    "player_id": 149225,
+    "name": "Tyrone Owusu",
+    "position": "Midfielder",
+    "appearances": 38,
+    "goals": 4,
+    "assists": 5,
+    "shots": 25,
+    "shots_on_target": 6,
+    "goals_per90_simulated": 0.2,
+    "assists_per90_simulated": 0.26,
+    "shots_per90": 1.22,
+    "sot_per90": 0.27,
+    "+1_goal_pct": 18.4,
+    "+1_assist_pct": 23.4,
+    "soa_pct": 37.6
+  },
+  {
+    "team_id": 427,
+    "player_id": 194815,
+    "name": "Patrick Brouwer",
+    "position": "Attacker",
+    "appearances": 39,
+    "goals": 14,
+    "assists": 4,
+    "shots": 66,
+    "shots_on_target": 32,
+    "goals_per90_simulated": 0.61,
+    "assists_per90_simulated": 0.16,
+    "shots_per90": 2.72,
+    "sot_per90": 1.31,
+    "+1_goal_pct": 45.4,
+    "+1_assist_pct": 15.2,
+    "soa_pct": 53.7
+  }
+]

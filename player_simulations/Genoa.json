@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 495,
+    "player_id": 44439,
+    "name": "Nicolae Stanciu",
+    "position": "Midfielder",
+    "appearances": 33,
+    "goals": 6,
+    "assists": 7,
+    "shots": 79,
+    "shots_on_target": 29,
+    "goals_per90_simulated": 0.27,
+    "assists_per90_simulated": 0.34,
+    "shots_per90": 3.4,
+    "sot_per90": 1.25,
+    "+1_goal_pct": 23.8,
+    "+1_assist_pct": 28.3,
+    "soa_pct": 45.4
+  },
+  {
+    "team_id": 495,
+    "player_id": 263177,
+    "name": "Albert Gronbeak",
+    "position": "Midfielder",
+    "appearances": 25,
+    "goals": 2,
+    "assists": 1,
+    "shots": 28,
+    "shots_on_target": 11,
+    "goals_per90_simulated": 0.23,
+    "assists_per90_simulated": 0.11,
+    "shots_per90": 3.03,
+    "sot_per90": 1.15,
+    "+1_goal_pct": 20.2,
+    "+1_assist_pct": 11.2,
+    "soa_pct": 29.1
+  }
+]

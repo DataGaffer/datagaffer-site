@@ -1,0 +1,17 @@
+[
+
+  {
+    "id": 418,
+    "name": "Suat Serder",
+    "position": "Midfielder",
+    "appearances": 26,
+    "minutes": 1745,
+    "goals": 3,
+    "assists": 1,
+    "shots": 37,
+    "shots_on_target": 10,
+    "photo": "https://media.api-sports.io/football/players/418.png",
+   "team_id": 504
+  }
+
+]

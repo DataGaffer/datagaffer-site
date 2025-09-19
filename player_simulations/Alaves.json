@@ -1,0 +1,20 @@
+[
+  {
+    "team_id": 542,
+    "player_id": 47181,
+    "name": "Toni Martinez",
+    "position": "Attacker",
+    "appearances": 34,
+    "goals": 5,
+    "assists": 0,
+    "shots": 57,
+    "shots_on_target": 16,
+    "goals_per90_simulated": 0.53,
+    "assists_per90_simulated": 0.01,
+    "shots_per90": 5.57,
+    "sot_per90": 1.59,
+    "+1_goal_pct": 40.1,
+    "+1_assist_pct": 1.0,
+    "soa_pct": 40.7
+  }
+]
