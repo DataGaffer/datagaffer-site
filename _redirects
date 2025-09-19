@@ -1,2 +1,16 @@
-/      /home.html   200
-/*     /index.html  200
+# Public
+/          /home.html    200
+/login     /login.html   200
+/signup    /signup.html  200
+/subscribe /subscribe.html 200
+
+# Private pages
+/index              /index.html            200
+/sim_cards          /sim_cards.html        200
+/xg_stats           /xg_stats.html         200
+/value_stats        /value_stats.html      200
+/outlooks           /outlooks.html         200
+/player_simulations /player_simulations.html 200
+
+# Fallback (everything else goes to home)
+ /* /home.html 200
