@@ -792,7 +792,7 @@ fetch("player_simulations/index.json")
       .single();
 
     if (error || !profile || !profile.is_subscribed) {
-      window.location.href = "home.html"; // not subscribed → redirect
+      window.location.href = "subscribe.html"; // not subscribed → redirect
     }
   }
 
