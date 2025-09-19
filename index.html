@@ -14,29 +14,29 @@
   }
 
   .dg-header {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background-color: white;
   }
 
   .dg-logo-wrapper {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
+    position: absolute;
+    left: 20px;
+    top: -5px;
+    z-index: 10;
   }
 
   .dg-logo-img {
-    height: 80px;
-    margin-right: 12px;
+    height: 200px;
+    margin-right: 20px;
   }
 
   .dg-site-name {
-    font-size: 40px;
+    font-size: 70px;
     font-weight: 700;
     color: #003f2e;
+    text-align: center;
+    width: 100%;
   }
 
   .dg-tagline {
@@ -64,8 +64,8 @@
 
   /* ✅ Unified button styles for <a> and <button> */
   .button {
-    box-sizing: border-box;
-    background-color: #1a8a39;
+   box-sizing: border-box;
+   background-color: #1a8a39;
     color: white;
     padding: 20px 40px;
     border: none;
@@ -80,7 +80,7 @@
     justify-content: center;
     gap: 15px;
     height: 68px;
-    text-decoration: none;
+    text-decoration: none; /* prevent underline on <a> */
   }
 
   .button-icon {
@@ -125,127 +125,151 @@
   }
 
   .bet-text {
+   font-size: 30px;
+   font-weight: normal;
+  }
+
+  .dg-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 20px;
+}
+
+.dg-header-right {
+ margin-left: auto;
+}
+
+.manage-btn {
+ background-color: #1a8a39;
+ color: white;
+ border: none;
+ padding: 8px 14px;
+ border-radius: 6px;
+ font-size: 14px;
+ cursor: pointer;
+}
+
+.manage-btn:hover {
+ background-color: #14722f;
+}
+
+
+@media (max-width: 768px) {
+  .dg-logo-img {
+    height: 80px;
+    margin-right: 7px;
+  }
+
+  .dg-logo-wrapper {
+    position: absolute;
+    left: 7px;
+    top: 20px;
+    z-index: 10;
+  }
+
+  .dg-site-name {
     font-size: 30px;
-    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: -5px;
   }
 
-  .dg-header-right {
-    margin-left: auto;
-  }
-
-  .manage-btn {
-    background-color: #1a8a39;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
+  .dg-tagline {
     font-size: 14px;
-    cursor: pointer;
+    padding: 8px 8px;
+    text-align: center;
+    padding-left: 65px;
+    padding-right: 65px;
   }
 
-  .manage-btn:hover {
-    background-color: #14722f;
+  .grid {
+    grid-template-columns: repeat(2, 175px);
+    gap: 20px;
+    row-gap: 15px;
+    margin-bottom: 40px;
+    justify-content: center;
   }
 
-  /* 📱 Mobile adjustments */
-  @media (max-width: 768px) {
-    .dg-logo-img {
-      height: 50px;
-      margin-right: 8px;
-    }
-
-    .dg-site-name {
-      font-size: 22px;
-      font-weight: 700;
-    }
-
-    .manage-btn {
-      font-size: 12px;
-      padding: 6px 10px;
-    }
-
-    .dg-tagline {
-      font-size: 14px;
-      padding: 8px 8px;
-      text-align: center;
-    }
-
-    .grid {
-      grid-template-columns: repeat(2, 175px);
-      gap: 20px;
-      row-gap: 15px;
-      margin-bottom: 40px;
-      justify-content: center;
-    }
-
-    .button {
-      font-size: 20px;
-      white-space: nowrap;
-      padding: 25px 20px;
-      border-radius: 5px;
-      width: 100%;
-      margin-bottom: -5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      height: 38px;
-      text-decoration: none;
-    }
-
-    .button-icon {
-      width: 32px;
-      height: 32px;
-    }
-
-    .play-button {
-      font-size: 30px;
-      padding: 0px 15px;
-      width: 95%;
-    }
-
-    .play-banner {
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 5px 0;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      margin-top: -10px
-    }
-
-    .play-line {
-      width: 80%;
-    }
-
-    .section-title {
-      font-size: 24px;
-      font-weight: 500px;
-      margin-top: 20px;
-      margin-bottom: 15px;
-    }
-
-    .bet-text {
-      font-size: 20px;
-      font-weight: normal;
-    }
+  .button {
+    font-size: 20px;
+    white-space: nowrap;
+    padding: 25px 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 38px;
+    text-decoration: none;
   }
+
+  .button-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .play-button {
+    font-size: 30px;
+    padding: 0px 15px;
+    width: 95%;
+  }
+
+  .play-banner {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px
+  }
+
+  .play-line {
+    width: 80%;
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 500px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .bet-text {
+   font-size: 20px;
+   font-weight: normal;
+  }
+}
 </style>
 </head>
 <body>
 
-<!-- Header -->
-<div class="dg-header">
-  <a href="index.html" class="dg-logo-wrapper">
-    <img class="dg-logo-img" src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DataGaffer Logo">
-    <div class="dg-site-name">DataGaffer.com</div>
-  </a>
-  <div class="dg-header-right">
-    <button id="manage-button" class="manage-btn">Manage Subscription</button>
+<div class="dg-header" style="display: flex; align-items: center; justify-content: center; position: relative;">
+  <!-- Left: Logo -->
+  <div class="dg-logo-wrapper" style="position: absolute; left: 20px; top: -5px; z-index: 10;">
+    <a href="index.html">
+      <img class="dg-logo-img" src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DataGaffer Logo" style="height: 200px;">
+    </a>
+  </div>
+
+  <!-- Center: Site name -->
+  <div class="dg-site-name" style="font-size: 70px; font-weight: 700; color: #003f2e; text-align: center; width: 100%;">
+    DataGaffer.com
+  </div>
+
+  <!-- Right: Manage Subscription -->
+  <div class="dg-auth-links" style="position: absolute; right: 20px; top: 20px;">
+    <button id="manage-subscription" class="manage-btn" style="background-color: #1a8a39; color: white; padding: 6px 14px; border: none; border-radius: 6px; cursor: pointer;">
+      Manage Subscription
+    </button>
   </div>
 </div>
+
+
 
 <!-- Tagline -->
 <div class="dg-tagline">
@@ -277,86 +301,93 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const todaysPlay = "Benfica -1.5 corners vs Qarabag";
-  const playButton = document.getElementById("play-button");
+ const todaysPlay = "Benfica -1.5 corners vs Qarabag";
+ const playButton = document.getElementById("play-button");
 
-  playButton.addEventListener("click", () => {
-    playButton.innerHTML = `<span class="bet-text">${todaysPlay}</span>`;
-  });
+ playButton.addEventListener("click", () => {
+   playButton.innerHTML = `<span class="bet-text">${todaysPlay}</span>`;
+ });
 });
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-  const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // anon only
-  const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+ const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
+ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ anon only
+ const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
-  async function checkSession() {
-    const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
+ async function checkSession() {
+   const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
 
-    if (sessionError || !session) {
-      window.location.href = "login.html";
-      return;
-    }
+   if (sessionError || !session) {
+     window.location.href = "login.html";
+     return;
+   }
 
-    const user = session.user;
+   const user = session.user;
 
-    // ✅ Try lookup by ID first
-    let { data: profile, error } = await supabaseClient
-      .from("profiles")
-      .select("is_subscribed")
-      .eq("id", user.id)
-      .single();
+   // ✅ Try lookup by ID first
+   let { data: profile, error } = await supabaseClient
+     .from("profiles")
+     .select("is_subscribed")
+     .eq("id", user.id)
+     .single();
 
-    // ✅ Fallback: if no row by ID, try email
-    if (error && error.code === "PGRST116") {
-      let { data: profileByEmail, error: emailError } = await supabaseClient
-        .from("profiles")
-        .select("is_subscribed")
-        .eq("email", user.email)
-        .single();
+   // ✅ Fallback: if no row by ID, try email
+   if (error && error.code === "PGRST116") {
+     let { data: profileByEmail, error: emailError } = await supabaseClient
+       .from("profiles")
+       .select("is_subscribed")
+       .eq("email", user.email)
+       .single();
 
-      profile = profileByEmail;
-      error = emailError;
-    }
+     profile = profileByEmail;
+     error = emailError;
+   }
 
-    if (error || !profile || !profile.is_subscribed) {
-      window.location.href = "subscribe.html"; // not subscribed → redirect
-    }
-  }
+   if (error || !profile || !profile.is_subscribed) {
+     window.location.href = "subscribe.html"; // not subscribed → redirect
+   }
+ }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    checkSession();
-  });
+ document.addEventListener("DOMContentLoaded", () => {
+   checkSession();
+ });
 
-  // Auto-logout listener
-  supabaseClient.auth.onAuthStateChange((event, session) => {
-    if (event === "SIGNED_OUT" || !session) {
-      window.location.href = "login.html";
-    }
-  });
+ // Auto-logout listener
+ supabaseClient.auth.onAuthStateChange((event, session) => {
+   if (event === "SIGNED_OUT" || !session) {
+     window.location.href = "login.html";
+   }
+ });
 </script>
+
 
 <script>
 document.getElementById("manage-button").addEventListener("click", async () => {
-  try {
-    const response = await fetch("/.netlify/functions/create-portal-session", { method: "POST" });
-    const { url } = await response.json();
-    if (url) {
-      window.location.href = url; // redirect to Stripe Billing Portal
-    } else {
-      alert("Error opening billing portal");
-    }
-  } catch (err) {
-    console.error("Portal error:", err);
-    alert("Something went wrong. Please try again.");
-  }
+ try {
+   const response = await fetch("/.netlify/functions/create-portal-session", { method: "POST" });
+   const { url } = await response.json();
+   if (url) {
+     window.location.href = url; // redirect to Stripe Billing Portal
+   } else {
+     alert("Error opening billing portal");
+   }
+ } catch (err) {
+   console.error("Portal error:", err);
+   alert("Something went wrong. Please try again.");
+ }
 });
 </script>
 
+
+
+
+
 </body>
 </html>
+
+
 
 
 
