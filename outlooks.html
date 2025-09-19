@@ -771,57 +771,82 @@ fetch("player_simulations/index.json")
   </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 <script>
-const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // anon key only
-const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey, {
-  auth: { persistSession: true, storage: window.localStorage }
-});
+  // ---- CONFIG ----
+  const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+  const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+  const PROJECT_REF = "qgniftwopmhhcwiatkku"; // from your Supabase URL
 
-async function checkAuthKeepSession() {
-  let { data: { session } } = await supabaseClient.auth.getSession();
+  // Create client with persistent session
+  const supabaseClient = (() => {
+    // supabase is available because script is "defer"
+    return supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+      auth: { persistSession: true, storage: window.localStorage }
+    });
+  })();
 
-  // 🔁 Retry if session isn’t ready yet
-  if (!session) {
-    console.log("No session, retrying...");
-    await new Promise(r => setTimeout(r, 800)); // wait 0.8s
-    ({ data: { session } } = await supabaseClient.auth.getSession());
+  // Fast token check (no race): if token key exists, treat as signed-in initially
+  function hasStoredToken() {
+    const key = `sb-${PROJECT_REF}-auth-token`;
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return false;
+      const obj = JSON.parse(raw);
+      return !!(obj?.currentSession?.access_token);
+    } catch (_) {
+      return false;
+    }
   }
 
-  if (!session) {
-    console.log("No valid session → go login");
-    window.location.href = "login.html";
-  } else {
-    console.log("✅ Logged in as:", session.user.email);
-    window.currentUser = session.user;
+  async function ensureSignedIn() {
+    // 1) Fast path: if token exists, let the page render and validate in background
+    const optimistic = hasStoredToken();
+
+    // 2) Validate the session (with a retry) without instantly bouncing the user
+    let { data: { session } } = await supabaseClient.auth.getSession();
+    if (!session) {
+      // small retry to cover Safari restore lag
+      await new Promise(r => setTimeout(r, 700));
+      ({ data: { session } } = await supabaseClient.auth.getSession());
+    }
+
+    if (session) {
+      // Valid session -> keep user here
+      window.currentUser = session.user;
+      return;
+    }
+
+    // No session after validation:
+    if (!optimistic) {
+      // we never had a stored token either, so it's truly signed out
+      window.location.href = "login.html";
+    } else {
+      // Edge case: token existed but session couldn’t be restored → treat as signed out
+      window.location.href = "login.html";
+    }
   }
-}
 
-supabaseClient.auth.onAuthStateChange((event, session) => {
-  console.log("Auth event:", event);
-  if (event === "SIGNED_OUT") {
-    window.location.href = "login.html";
-  }
-});
-
-function wireLogoToIndex() {
-  const logoAnchor = document.querySelector('a[href="index.html"]');
-  if (!logoAnchor) return;
-
-  logoAnchor.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log("Logo clicked → index.html");
-    window.location.href = "index.html";
+  // Only redirect on explicit sign-out; do nothing on page load
+  supabaseClient.auth.onAuthStateChange((event) => {
+    if (event === "SIGNED_OUT") window.location.href = "login.html";
   });
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-  checkAuthKeepSession();
-  wireLogoToIndex();
-});
+  // Make sure logo always goes to index.html (no other logic)
+  function wireLogo() {
+    const logoA = document.querySelector('.dg-logo-wrapper a') || document.querySelector('a[href="index.html"]');
+    if (!logoA) return;
+    logoA.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = "index.html";
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    wireLogo();
+    ensureSignedIn();
+  });
 </script>
-
 
 
 
@@ -833,19 +858,30 @@ let inactivityTimer;
 function resetInactivityTimer() {
   clearTimeout(inactivityTimer);
   inactivityTimer = setTimeout(async () => {
-    await supabase.auth.signOut();
-    window.location.href = "login.html"; // redirect after auto-logout
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        console.log("Auto-logout after inactivity");
+        await supabase.auth.signOut();
+        window.location.href = "login.html"; // redirect after auto-logout
+      } else {
+        console.log("No active session, skip auto-logout");
+      }
+    } catch (err) {
+      console.error("Error during inactivity check:", err);
+    }
   }, INACTIVITY_LIMIT);
 }
 
-// Reset timer on activity
+// Reset timer on user activity
 ["click", "mousemove", "keydown", "scroll", "touchstart"].forEach(evt => {
   document.addEventListener(evt, resetInactivityTimer);
 });
 
-// Start timer when page loads
+// Start timer on page load
 resetInactivityTimer();
 </script>
+
 
 
 </body>
