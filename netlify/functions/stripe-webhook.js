@@ -2,14 +2,14 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const { createClient } = require("@supabase/supabase-js");
 
-// 🚨 Important: tell Netlify to pass raw body (not JSON-parsed)
+// ✅ Tell Netlify not to parse JSON body
 exports.config = {
   bodyParser: false,
 };
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY // ⚠️ must be service role key
+  process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
 exports.handler = async (event) => {
@@ -17,9 +17,9 @@ exports.handler = async (event) => {
   let stripeEvent;
 
   try {
-    // Verify Stripe webhook signature with raw body
+    // ✅ Construct event using raw body buffer
     stripeEvent = stripe.webhooks.constructEvent(
-      event.body, // raw payload
+      Buffer.from(event.body), // raw body buffer
       sig,
       process.env.STRIPE_WEBHOOK_SECRET
     );
@@ -40,7 +40,6 @@ exports.handler = async (event) => {
       return { statusCode: 400, body: "No email found" };
     }
 
-    // Update Supabase profile
     const { error } = await supabase
       .from("profiles")
       .update({ is_subscribed: true })
@@ -59,7 +58,6 @@ exports.handler = async (event) => {
     const subscription = stripeEvent.data.object;
 
     try {
-      // Fetch customer to get email
       const customer = await stripe.customers.retrieve(subscription.customer);
       const email = customer.email;
 
