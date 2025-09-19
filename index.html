@@ -1,431 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DataGaffer - Homepage</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #003f2e;
-  }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>DataGaffer - Homepage</title>
+ <style>
+   body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f9f9f9;
+     color: #003f2e;
+   }
 
-  .dg-header {
-    align-items: center;
-    padding: 10px 10px;
-    background-color: white;
-  }
+   .dg-header {
+     align-items: center;
+     padding: 10px 10px;
+     background-color: white;
+   }
 
-  .dg-logo-wrapper {
-    position: absolute;
-    left: 20px;
-    top: -5px;
-    z-index: 10;
-  }
+   .dg-logo-wrapper {
+     position: absolute;
+     left: 20px;
+     top: -5px;
+     z-index: 10;
+   }
 
-  .dg-logo-img {
-    height: 200px;
-    margin-right: 20px;
-  }
+   .dg-logo-img {
+     height: 200px;
+     margin-right: 20px;
+   }
 
-  .dg-site-name {
-    font-size: 70px;
-    font-weight: 700;
-    color: #003f2e;
-    text-align: center;
-    width: 100%;
-  }
+   .dg-site-name {
+     font-size: 70px;
+     font-weight: 700;
+     color: #003f2e;
+     text-align: center;
+     width: 100%;
+   }
 
-  .dg-tagline {
-    background-color: #003f2e;
-    color: white;
-    text-align: center;
-    padding: 16px 12px;
-    font-size: 18px;
-    font-weight: 600;
-  }
+   .dg-tagline {
+     background-color: #003f2e;
+     color: white;
+     text-align: center;
+     padding: 16px 12px;
+     font-size: 18px;
+     font-weight: 600;
+   }
 
-  .section-title {
-    text-align: center;
-    font-size: 36px;
-    margin: 40px 0 20px;
-  }
+   .section-title {
+     text-align: center;
+     font-size: 36px;
+     margin: 40px 0 20px;
+   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 320px);
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 80px;
-  }
+   .grid {
+     display: grid;
+     grid-template-columns: repeat(2, 320px);
+     gap: 30px;
+     justify-content: center;
+     margin-bottom: 80px;
+   }
 
-  /* ✅ Unified button styles for <a> and <button> */
-  .button {
-   box-sizing: border-box;
-   background-color: #1a8a39;
-    color: white;
-    padding: 20px 40px;
-    border: none;
-    border-radius: 10px;
-    font-size: 32px;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-    margin-bottom: -15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    height: 68px;
-    text-decoration: none; /* prevent underline on <a> */
-  }
-
-  .button-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .play-banner {
-    text-align: center;
-    margin: 40px 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -20px
-  }
-
-  .play-button {
+   /* ✅ Unified button styles for <a> and <button> */
+   .button {
+    box-sizing: border-box;
     background-color: #1a8a39;
-    color: white;
-    font-size: 48px;
-    padding: 20px 40px;
-    border: none;
-    border-radius: 10px;
-    margin: 10px 0;
-    cursor: pointer;
-    width: 46%;
-    height: 80px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+     color: white;
+     padding: 20px 40px;
+     border: none;
+     border-radius: 10px;
+     font-size: 32px;
+     cursor: pointer;
+     width: 100%;
+     text-align: center;
+     margin-bottom: -15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+     height: 68px;
+     text-decoration: none; /* prevent underline on <a> */
+   }
 
-  .play-line {
-    border: none;
-    height: 3px;
-    width: 500px;
-    background-color: #ccc;
-    margin: 0px auto;
-    border-radius: 2px;
-  }
+   .button-icon {
+     width: 40px;
+     height: 40px;
+   }
 
-  .bet-text {
-   font-size: 30px;
-   font-weight: normal;
-  }
+   .play-banner {
+     text-align: center;
+     margin: 40px 0;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     margin-top: -20px
+   }
 
-  .dg-header {
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 10px 20px;
-}
+   .play-button {
+     background-color: #1a8a39;
+     color: white;
+     font-size: 48px;
+     padding: 20px 40px;
+     border: none;
+     border-radius: 10px;
+     margin: 10px 0;
+     cursor: pointer;
+     width: 46%;
+     height: 80px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
 
-.dg-header-right {
- margin-left: auto;
-}
+   .play-line {
+     border: none;
+     height: 3px;
+     width: 500px;
+     background-color: #ccc;
+     margin: 0px auto;
+     border-radius: 2px;
+   }
 
-.manage-btn {
- background-color: #1a8a39;
- color: white;
- border: none;
- padding: 8px 14px;
- border-radius: 6px;
- font-size: 14px;
- cursor: pointer;
-}
+   .bet-text {
+    font-size: 30px;
+    font-weight: normal;
+   }
 
-.manage-btn:hover {
- background-color: #14722f;
-}
-
-.dg-auth-links {
+   .dg-auth-links {
   position: absolute;
   right: 20px;
   top: 20px;
+  display: flex;
+  gap: 15px;
 }
 
-.dg-auth-links .manage-btn {
+.dg-auth-links a {
+  color: #003f2e;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+  
+}
+
+.dg-auth-links a.signup {
   background-color: #1a8a39;
   color: white;
   padding: 6px 14px;
-  border: none;
   border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
 }
+
 
 @media (max-width: 768px) {
-  .dg-logo-img {
-    height: 80px;
-    margin-right: 7px;
-  }
+   .dg-logo-img {
+     height: 80px;
+     margin-right: 7px;
+   }
 
-  .dg-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
+   .dg-logo-wrapper {
+     position: absolute;
+     left: 7px;
+     top: 20px;
+     z-index: 10;
+   }
 
-  .dg-logo-wrapper {
-    position: absolute;
-    left: 10px;
-    top: 10px
-  }
+   .dg-site-name {
+     font-size: 30px;
+     margin-top: 10px;
+     margin-bottom: -5px;
+   }
 
-  .dg-site-name {
-   flex: 1;
-   text-align: center;
-   font-size: 30px;
-   margin: 0
-  }
+   .dg-tagline {
+     font-size: 14px;
+     padding: 8px 8px;
+     text-align: center;
+     padding-left: 65px;
+     padding-right: 65px;
+   }
 
-  .dg-tagline {
-    font-size: 14px;
-    padding: 8px 8px;
-    text-align: center;
-    padding-left: 65px;
-    padding-right: 65px;
-  }
+   .grid {
+     grid-template-columns: repeat(2, 175px);
+     gap: 20px;
+     row-gap: 15px;
+     margin-bottom: 40px;
+     justify-content: center;
+   }
 
-  /* ✅ Stack manage button below the header */
-  .dg-auth-links {
-    position: absolute;   /* no absolute */
-    right: 10px;
-    top: 30px
-  }
+   .button {
+     font-size: 20px;
+     white-space: nowrap;
+     padding: 25px 20px;
+     border-radius: 5px;
+     width: 100%;
+     margin-bottom: -5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     height: 38px;
+     text-decoration: none;
+   }
 
-  .dg-auth-links .manage-btn {
-    font-size: 10px;    /* smaller font */
-    padding: 2px 6px;  /* smaller padding */
-    border-radius: 4px;
-  }
+   .button-icon {
+     width: 32px;
+     height: 32px;
+   }
 
-  .grid {
-    grid-template-columns: repeat(2, 175px);
-    gap: 20px;
-    row-gap: 15px;
-    margin-bottom: 40px;
-    justify-content: center;
-  }
+   .play-button {
+     font-size: 30px;
+     padding: 0px 15px;
+     width: 95%;
+   }
 
-  .button {
-    font-size: 20px;
-    white-space: nowrap;
-    padding: 25px 20px;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: -5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 38px;
-    text-decoration: none;
-  }
+   .play-banner {
+     text-align: center;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     padding: 5px 0;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     margin-top: -10px
+   }
 
-  .button-icon {
-    width: 32px;
-    height: 32px;
-  }
+   .play-line {
+     width: 80%;
+   }
 
-  .play-button {
-    font-size: 30px;
-    padding: 0px 15px;
-    width: 95%;
-  }
+   .section-title {
+     font-size: 24px;
+     font-weight: 500px;
+     margin-top: 20px;
+     margin-bottom: 15px;
+   }
 
-  .play-banner {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 5px 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -10px;
-  }
-
-  .play-line {
-    width: 80%;
-  }
-
-  .section-title {
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
-
-  .bet-text {
+   .bet-text {
     font-size: 20px;
     font-weight: normal;
+   }
+
+    .dg-auth-links {
+    position: static;   /* remove absolute */
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .dg-auth-links a {
+    font-size: 16px;
+  }
+
+  .dg-auth-links a.signup {
+    padding: 5px 12px;
   }
 }
 
 
-
-</style>
+ 
+ </style>
 </head>
 <body>
 
-<div class="dg-header">
-  <!-- Left: Logo -->
-  <div class="dg-logo-wrapper">
-    <a href="index.html">
-      <img class="dg-logo-img" src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DataGaffer Logo">
-    </a>
-  </div>
+ <!-- Header -->
+ <div class="dg-header">
+   <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; justify-content: center; position: relative;">
+   <div class="dg-logo-wrapper">
+     <img class="dg-logo-img" src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DataGaffer Logo">
+   </div>
+   <div class="dg-site-name">DataGaffer.com</div>
+   <div class="dg-auth-links">
+    <a href="login.html">Login</a>
+    <a href="signup.html" class="signup">Sign Up</a>
+   </div>
+  </a>
+ </div>
 
-  <!-- Center: Site name -->
-  <div class="dg-site-name">
-    <a href="index.html" style="text-decoration: none; color: inherit;">DataGaffer.com</a></div>
+ <!-- Tagline -->
+ <div class="dg-tagline">
+   Football's most realistic match simulations - driven by data
+ </div>
 
-  <!-- Right: Manage Subscription -->
-  <div class="dg-auth-links">
-    <button id="manage-subscription" class="manage-btn">
-      Manage
-    </button>
-  </div>
-</div>
+ <div class="section-title">Match Simulations</div>
+ <div class="grid">
+   <a href="signup.html" class="button"><img class="button-icon" src="gear.svg" alt="icon">Sim Cards</a>
+   <a href="signup.html" class="button"><img class="button-icon" src="chart.svg" alt="icon">xG Stats</a>
+   <a href="signup.html" class="button"><img class="button-icon" src="plus.svg" alt="icon">EV Plays</a>
+   <a href="signup.html" class="button"><img class="button-icon" src="page.svg" alt="icon">Outlooks</a>
+ </div>
 
+ <!-- Play of the Day -->
+ <div class="play-banner">
+   <div class="play-line"></div>
+   <button class="play-button" id="play-button">Play of the day ★</button>
+   <div class="play-line"></div>
+ </div>
 
-
-
-<!-- Tagline -->
-<div class="dg-tagline">
-  Football's most realistic match simulations - driven by data
-</div>
-
-<div class="section-title">Match Simulations</div>
-<div class="grid">
-  <a href="sim_cards.html" class="button"><img class="button-icon" src="gear.svg" alt="icon">Sim Cards</a>
-  <a href="xg_stats.html" class="button"><img class="button-icon" src="chart.svg" alt="icon">xG Stats</a>
-  <a href="value_stats.html" class="button"><img class="button-icon" src="plus.svg" alt="icon">EV Plays</a>
-  <a href="outlooks.html" class="button"><img class="button-icon" src="page.svg" alt="icon">Outlooks</a>
-</div>
-
-<!-- Play of the Day -->
-<div class="play-banner">
-  <div class="play-line"></div>
-  <button class="play-button" id="play-button">Play of the day ★</button>
-  <div class="play-line"></div>
-</div>
-
-<div class="section-title">Player Simulations</div>
-<div class="grid">
-  <a href="player_simulations.html" class="button"><img class="button-icon" src="ball.svg" alt="icon">Goals</a>
-  <a href="player_simulations.html" class="button"><img class="button-icon" src="cleat.svg" alt="icon">Assists</a>
-  <a href="player_simulations.html" class="button"><img class="button-icon" src="target.svg" alt="icon">Shots</a>
-  <a href="player_simulations.html" class="button"><img class="button-icon" src="player.svg" alt="icon">Player Cards</a>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
- const todaysPlay = "Benfica -1.5 corners vs Qarabag";
- const playButton = document.getElementById("play-button");
-
- playButton.addEventListener("click", () => {
-   playButton.innerHTML = `<span class="bet-text">${todaysPlay}</span>`;
- });
-});
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-/* --- Supabase setup --- */
-const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";  // replace with your anon key
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
-
-/* --- Inactivity logout (15 minutes) --- */
-const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
-let inactivityTimer;
-
-function resetInactivityTimer() {
-  clearTimeout(inactivityTimer);
-  inactivityTimer = setTimeout(async () => {
-    console.log("Auto-logout after inactivity");
-    await supabaseClient.auth.signOut();
-    window.location.href = "login.html";
-  }, INACTIVITY_LIMIT);
-}
-
-// Reset timer on user activity
-["click","mousemove","keydown","scroll","touchstart"].forEach(evt =>
-  document.addEventListener(evt, resetInactivityTimer)
-);
-
-// Start timer when page loads
-resetInactivityTimer();
-
-/* --- Explicit logout handling --- */
-supabaseClient.auth.onAuthStateChange((event) => {
-  if (event === "SIGNED_OUT") {
-    console.log("User signed out → redirecting to login");
-    window.location.href = "login.html";
-  }
-});
-</script>
-
-
-
-
-<!-- ✅ Keep this Stripe manage subscription script -->
-<script>
-document.getElementById("manage-subscription").addEventListener("click", async () => {
-  try {
-    const response = await fetch("/.netlify/functions/create-portal-session", { method: "POST" });
-    const { url } = await response.json();
-    if (url) {
-      window.location.href = url; // redirect to Stripe Billing Portal
-    } else {
-      alert("Error opening billing portal");
-    }
-  } catch (err) {
-    console.error("Portal error:", err);
-    alert("Something went wrong. Please try again.");
-  }
-});
-</script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", async () => {
-  const { data, error } = await supabaseClient.auth.getSession();
-  console.log("DEBUG session:", data?.session);
-  console.log("DEBUG error:", error);
-
-  supabaseClient.auth.onAuthStateChange((event, session) => {
-    console.log("DEBUG auth event:", event, session);
-  });
-});
-</script>
-
-
+ <div class="section-title">Player Simulations</div>
+ <div class="grid">
+   <a href="signup.html" class="button"><img class="button-icon" src="ball.svg" alt="icon">Goals</a>
+   <a href="signup.html" class="button"><img class="button-icon" src="cleat.svg" alt="icon">Assists</a>
+   <a href="signup.html" class="button"><img class="button-icon" src="target.svg" alt="icon">Shots</a>
+   <a href="signup.html" class="button"><img class="button-icon" src="player.svg" alt="icon">Player Cards</a>
+ </div>
 
 
 </body>
 </html>
-
-
 
 
 
