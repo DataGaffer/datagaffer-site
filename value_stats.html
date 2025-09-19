@@ -359,62 +359,39 @@
 
     showTable("btts", document.getElementById("btn-btts"));
   </script>
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // your anon key
+const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
-// ✅ Disable persistent sessions + auto refresh
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
-  auth: {
-    persistSession: false,
-    autoRefreshToken: false
+async function checkAuthKeepSession() {
+  let { data: { session } } = await supabaseClient.auth.getSession();
+
+  // 🔁 Retry once if session not ready yet
+  if (!session) {
+    await new Promise(r => setTimeout(r, 500)); // wait 0.5 sec
+    ({ data: { session } } = await supabaseClient.auth.getSession());
   }
-});
 
-async function checkAuthKeepSession(){
-  try {
-    const { data, error } = await supabase.auth.getSession();
-    if (error) console.warn("supabase.getSession error:", error);
-
-    const session = data?.session ?? null;
-    console.log("AUTH CHECK — session:", session);
-
-    if (!session) {
-      window.location.href = "login.html"; // not logged in
-      return;
-    }
-
-    window.currentUser = session.user; // expose if needed
-  } catch (err) {
-    console.error("auth guard unexpected error:", err);
-    window.location.href = "login.html";
+  if (!session) {
+    window.location.href = "login.html"; // still no session → go login
+  } else {
+    console.log("Logged in as:", session.user.email);
+    window.currentUser = session.user;
   }
 }
 
-supabase.auth.onAuthStateChange((event, session) => {
-  console.log("auth state change:", event, session);
+document.addEventListener("DOMContentLoaded", checkAuthKeepSession);
+
+// Logout listener
+supabaseClient.auth.onAuthStateChange((event, session) => {
   if (event === "SIGNED_OUT") {
     window.location.href = "login.html";
   }
 });
-
-function wireLogoToIndex() {
-  const logoAnchor = document.querySelector('.dg-logo-wrapper a') || document.querySelector('a[href="index.html"]');
-  if (!logoAnchor) return;
-  logoAnchor.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log("Logo clicked -> navigating to index.html");
-    window.location.href = "index.html";
-  });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  checkAuthKeepSession();
-  wireLogoToIndex();
-});
 </script>
+
 
 
 <script>
