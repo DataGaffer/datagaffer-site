@@ -65,13 +65,14 @@
     const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
     const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
 
-    // ✅ No persistent sessions
     const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
-      auth: {
-        persistSession: false,
-        autoRefreshToken: false
-      }
-    });
+  auth: {
+    persistSession: true,         // ✅ keep session saved across pages
+    autoRefreshToken: true,       // ✅ refresh before it expires
+    detectSessionInUrl: true      // ✅ handle login callbacks
+  }
+});
+
 
     document.getElementById("login-form").addEventListener("submit", async (e) => {
       e.preventDefault();
