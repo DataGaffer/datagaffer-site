@@ -28,15 +28,20 @@ exports.handler = async (event) => {
     const session = stripeEvent.data.object;
 
     const email = session.customer_details?.email;
+    const customerId = session.customer; // 🔹 store this for later "Manage Subscription"
+
     if (!email) {
       console.error("⚠️ No email found in session");
       return { statusCode: 400, body: "No email found" };
     }
 
-    // Update Supabase profile
+    // Update Supabase profile with subscription + customer_id
     const { error } = await supabase
       .from("profiles")
-      .update({ is_subscribed: true })
+      .update({ 
+        is_subscribed: true,
+        customer_id: customerId 
+      })
       .eq("email", email);
 
     if (error) {
@@ -57,7 +62,10 @@ exports.handler = async (event) => {
 
     const { error } = await supabase
       .from("profiles")
-      .update({ is_subscribed: false })
+      .update({ 
+        is_subscribed: false,
+        customer_id: null // clear Stripe customer_id
+      })
       .eq("email", email);
 
     if (error) {
@@ -70,3 +78,4 @@ exports.handler = async (event) => {
 
   return { statusCode: 200, body: "success" };
 };
+

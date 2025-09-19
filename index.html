@@ -129,6 +129,32 @@
     font-weight: normal;
    }
 
+   .dg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.dg-header-right {
+  margin-left: auto;
+}
+
+.manage-btn {
+  background-color: #1a8a39;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.manage-btn:hover {
+  background-color: #14722f;
+}
+
+
  @media (max-width: 768px) {
    .dg-logo-img {
      height: 80px;
@@ -230,7 +256,11 @@
    </div>
    <div class="dg-site-name">DataGaffer.com</div>
   </a>
+  <div class="dg-header-right">
+  <button id="manage-button" class="manage-btn">Manage Subscription</button>
+</div>
  </div>
+
 
  <!-- Tagline -->
  <div class="dg-tagline">
@@ -308,6 +338,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 </script>
+
+<script>
+document.getElementById("manage-button").addEventListener("click", async () => {
+  try {
+    const response = await fetch("/.netlify/functions/create-portal-session", { method: "POST" });
+    const { url } = await response.json();
+    if (url) {
+      window.location.href = url; // redirect to Stripe Billing Portal
+    } else {
+      alert("Error opening billing portal");
+    }
+  } catch (err) {
+    console.error("Portal error:", err);
+    alert("Something went wrong. Please try again.");
+  }
+});
+</script>
+
+
 
 
 
