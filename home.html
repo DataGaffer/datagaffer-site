@@ -153,104 +153,106 @@
 }
 
 
- @media (max-width: 768px) {
-  .dg-logo-img {
-    height: 80px;
-    margin-right: 7px;
-  }
+@media (max-width: 768px) {
+   .dg-logo-img {
+     height: 80px;
+     margin-right: 7px;
+   }
 
-  .dg-logo-wrapper {
-    position: absolute;
-    left: 7px;
-    top: 20px;
-    z-index: 10;
-  }
+   .dg-logo-wrapper {
+     position: absolute;
+     left: 7px;
+     top: 20px;
+     z-index: 10;
+   }
 
-  .dg-site-name {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: -5px;
-  }
+   .dg-site-name {
+     font-size: 30px;
+     margin-top: 10px;
+     margin-bottom: -5px;
+   }
 
-  .dg-tagline {
-    font-size: 14px;
-    padding: 8px 8px;
-    text-align: center;
-    padding-left: 65px;
-    padding-right: 65px;
-  }
+   .dg-tagline {
+     font-size: 14px;
+     padding: 8px 8px;
+     text-align: center;
+     padding-left: 65px;
+     padding-right: 65px;
+   }
 
-  .grid {
-    grid-template-columns: repeat(2, 175px);
-    gap: 20px;
-    row-gap: 15px;
-    margin-bottom: 40px;
-    justify-content: center;
-  }
+   .grid {
+     grid-template-columns: repeat(2, 175px);
+     gap: 20px;
+     row-gap: 15px;
+     margin-bottom: 40px;
+     justify-content: center;
+   }
 
-  .button {
-    font-size: 20px;
-    white-space: nowrap;
-    padding: 25px 20px;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: -5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 38px;
-    text-decoration: none;
-  }
+   .button {
+     font-size: 20px;
+     white-space: nowrap;
+     padding: 25px 20px;
+     border-radius: 5px;
+     width: 100%;
+     margin-bottom: -5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     height: 38px;
+     text-decoration: none;
+   }
 
-  .button-icon {
-    width: 32px;
-    height: 32px;
-  }
+   .button-icon {
+     width: 32px;
+     height: 32px;
+   }
 
-  .play-button {
-    font-size: 30px;
-    padding: 0px 15px;
-    width: 95%;
-  }
+   .play-button {
+     font-size: 30px;
+     padding: 0px 15px;
+     width: 95%;
+   }
 
-  .play-banner {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 5px 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -10px;
-  }
+   .play-banner {
+     text-align: center;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     padding: 5px 0;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     margin-top: -10px
+   }
 
-  .play-line {
-    width: 80%;
-  }
+   .play-line {
+     width: 80%;
+   }
 
-  .section-title {
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
+   .section-title {
+     font-size: 24px;
+     font-weight: 500px;
+     margin-top: 20px;
+     margin-bottom: 15px;
+   }
 
-  .bet-text {
+   .bet-text {
     font-size: 20px;
     font-weight: normal;
-  }
+   }
 
-  .dg-auth-links {
-    position: static;   /* no absolute */
-    display: flex;
+    .dg-auth-links {
+    position: static;   /* remove absolute */
     justify-content: center;
     margin-top: 10px;
   }
 
-  .dg-auth-links .manage-btn {
+  .dg-auth-links a {
     font-size: 16px;
+  }
+
+  .dg-auth-links a.signup {
     padding: 5px 12px;
   }
 }

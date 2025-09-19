@@ -170,50 +170,32 @@
   font-size: 16px;
 }
 
-/* 📱 Mobile fix */
 @media (max-width: 768px) {
-  .dg-header {
-    display: flex;
-    flex-direction: row;   /* horizontal layout */
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: white;
+  .dg-logo-img {
+    height: 80px;
+    margin-right: 7px;
   }
 
   .dg-logo-wrapper {
-    position: static;
-    flex-shrink: 0;
-  }
-
-  .dg-logo-img {
-    height: 60px;
+    position: absolute;
+    left: 7px;
+    top: 20px;
+    z-index: 10;
   }
 
   .dg-site-name {
-    font-size: 22px;
-    text-align: center;
-    flex-grow: 1;   /* keeps it centered */
-    margin: 0 10px;
-  }
-
-  .dg-auth-links {
-    position: static;
-    flex-shrink: 0;
-  }
-
-  .dg-auth-links .manage-btn {
-    font-size: 12px;
-    padding: 6px 10px;
-    white-space: nowrap;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: -5px;
   }
 
   .dg-tagline {
     font-size: 14px;
-    padding: 8px 12px;
+    padding: 8px 8px;
     text-align: center;
+    padding-left: 65px;
+    padding-right: 65px;
   }
-
 
   .grid {
     grid-template-columns: repeat(2, 175px);
@@ -276,7 +258,20 @@
     font-size: 20px;
     font-weight: normal;
   }
+
+  .dg-auth-links {
+    position: static;   /* no absolute */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .dg-auth-links .manage-btn {
+    font-size: 16px;
+    padding: 5px 12px;
+  }
 }
+
 
 </style>
 </head>
