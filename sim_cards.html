@@ -262,34 +262,26 @@ fetch('fixtures.json')
 });
 </script>
 
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-  // ✅ Your Supabase project details
   const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ anon key only
-  const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+  const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+  const supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
 
-  // ✅ Check if logged in
   async function checkSession() {
-    const { data: { session }, error } = await supabaseClient.auth.getSession();
-
-    if (error || !session) {
-      // Not logged in → redirect to login
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session) {
+      // Only redirect if not logged in at all
       window.location.href = "login.html";
-      return;
     }
-
-    // Logged in → allow page access
-    console.log("✅ Logged in as:", session.user.email);
+    // ✅ If logged in, stay on page. No subscription check here.
   }
 
-  // Run check when page loads
-  document.addEventListener("DOMContentLoaded", () => {
-    checkSession();
-  });
+  document.addEventListener("DOMContentLoaded", checkSession);
 
-  // ✅ Auto-logout → back to login
-  supabaseClient.auth.onAuthStateChange((event, session) => {
+  // Auto-logout listener
+  supabase.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_OUT" || !session) {
       window.location.href = "login.html";
     }
