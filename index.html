@@ -154,8 +154,41 @@
  background-color: #14722f;
 }
 
+.dg-auth-links {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
 
+.dg-auth-links .manage-btn {
+  background-color: #1a8a39;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* 📱 Mobile fix */
 @media (max-width: 768px) {
+  .dg-auth-links {
+    position: static;      /* stop absolute positioning */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .dg-auth-links .manage-btn {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+
+  .dg-site-name {
+    margin-top: 10px;  /* prevent overlap */
+  }
+
+
   .dg-logo-img {
     height: 80px;
     margin-right: 7px;
