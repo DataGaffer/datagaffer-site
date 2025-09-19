@@ -26,19 +26,6 @@
     "photo": "https://media.api-sports.io/football/players/93007.png",
    "team_id": 207
   },
-  {
-    "id": 192434,
-    "name": "Miguel Rodriguez",
-    "position": "Attacker",
-    "appearances": 31,
-    "minutes": 1903,
-    "goals": 11,
-    "assists": 4,
-    "shots": 84,
-    "shots_on_target": 33,
-    "photo": "https://media.api-sports.io/football/players/192434.png",
-   "team_id": 207
-  },
   
   {
     "id": 367472,

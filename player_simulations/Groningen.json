@@ -9,10 +9,10 @@
     "assists": 7,
     "shots": 48,
     "shots_on_target": 20,
-    "goals_per90_simulated": 0.39,
+    "goals_per90_simulated": 0.41,
     "assists_per90_simulated": 0.32,
-    "shots_per90": 2.15,
-    "sot_per90": 0.89,
+    "shots_per90": 2.13,
+    "sot_per90": 0.9,
     "+1_goal_pct": 34.4,
     "+1_assist_pct": 26.9,
     "soa_pct": 52.1

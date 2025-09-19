@@ -5,10 +5,10 @@
     "position": "Attacker",
     "appearances": 24,
     "minutes": 662,
-    "goals": 4,
+    "goals": 3,
     "assists": 0.50,
-    "shots": 26,
-    "shots_on_target": 11,
+    "shots": 15,
+    "shots_on_target": 7,
      "photo": "https://media.api-sports.io/football/players/19461.png",
    "team_id": 63
   },

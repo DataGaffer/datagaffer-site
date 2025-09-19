@@ -38,19 +38,6 @@
     "shots_on_target": 17,
     "photo": "https://media.api-sports.io/football/players/22261.png",
    "team_id": 116
-  },
-
-  {
-    "id": 443579,
-    "name": "Rayan Fofana",
-    "position": "Attacker",
-    "appearances": 6,
-    "minutes": 309,
-    "goals": 2,
-    "assists": 0.10,
-    "shots": 13,
-    "shots_on_target": 5,
-    "photo": "https://media.api-sports.io/football/players/443579.png",
-   "team_id": 116
   }
+  
 ]

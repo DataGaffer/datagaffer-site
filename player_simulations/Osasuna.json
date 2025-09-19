@@ -11,8 +11,8 @@
     "shots_on_target": 50,
     "goals_per90_simulated": 0.98,
     "assists_per90_simulated": 0.15,
-    "shots_per90": 4.43,
-    "sot_per90": 1.9,
+    "shots_per90": 4.45,
+    "sot_per90": 1.85,
     "+1_goal_pct": 62.7,
     "+1_assist_pct": 14.0,
     "soa_pct": 67.9
@@ -29,8 +29,8 @@
     "shots_on_target": 17,
     "goals_per90_simulated": 0.23,
     "assists_per90_simulated": 0.15,
-    "shots_per90": 2.04,
-    "sot_per90": 0.61,
+    "shots_per90": 2.03,
+    "sot_per90": 0.63,
     "+1_goal_pct": 20.3,
     "+1_assist_pct": 14.7,
     "soa_pct": 32.0

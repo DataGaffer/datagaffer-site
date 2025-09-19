@@ -825,65 +825,7 @@
       }
     }
   },
-  {
-    "fixture_id": 1390066,
-    "league": {
-      "id": 218,
-      "name": "Bundesliga"
-    },
-    "home": {
-      "id": 571,
-      "name": "Red Bull Salzburg",
-      "logo": "https://media.api-sports.io/football/teams/571.png",
-      "winner": null
-    },
-    "away": {
-      "id": 637,
-      "name": "Sturm Graz",
-      "logo": "https://media.api-sports.io/football/teams/637.png",
-      "winner": null
-    },
-    "home_id": 571,
-    "away_id": 637,
-    "home_logo": "https://media.api-sports.io/football/teams/571.png",
-    "away_logo": "https://media.api-sports.io/football/teams/637.png",
-    "date": "2025-09-20T15:00:00+00:00",
-    "book_odds": {
-      "home_win": 1.73,
-      "draw": 4.0,
-      "away_win": 4.2,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
-    },
-    "sim_stats": {
-      "xg": {
-        "home": "0.79",
-        "away": "1.13",
-        "total": "1.92"
-      },
-      "corners": {
-        "home": "5.9",
-        "away": "4.8",
-        "total": "10.7"
-      },
-      "shots": {
-        "home": "12.5",
-        "away": "9.9",
-        "total": "22.4"
-      },
-      "percents": {
-        "home_win_pct": 25.6,
-        "draw_pct": 31.0,
-        "away_win_pct": 43.4,
-        "over_2_5_pct": 30.4,
-        "btts_pct": 37.3,
-        "home_o1_5_pct": 19.1,
-        "away_o1_5_pct": 31.3
-      }
-    }
-  },
+  
   {
     "fixture_id": 1377903,
     "league": {
