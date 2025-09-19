@@ -65,7 +65,6 @@
     const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
     const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
 
-    // ✅ No persistent sessions
     const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
       auth: {
         persistSession: false,
@@ -90,6 +89,20 @@
         alert("Signup error: " + error.message);
         console.error(error);
       } else {
+        const user = data.user;
+        if (user) {
+          // 👇 Create profile row in Supabase
+          const { error: profileError } = await supabaseClient
+            .from("profiles")
+            .insert([{ id: user.id, email: user.email, is_subscribed: false }]);
+
+          if (profileError) {
+            console.error("Profile insert error:", profileError.message);
+          } else {
+            console.log("✅ Profile row created for", user.email);
+          }
+        }
+
         alert("Signup successful! Check your email to confirm.");
         window.location.href = "subscribe.html"; // 🚀 go straight to subscribe
       }
