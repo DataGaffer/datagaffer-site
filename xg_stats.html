@@ -280,56 +280,54 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
-
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // anon key only
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey, {
-  auth: {
-    persistSession: true,   // ✅ don’t lose session on reload
-    storage: localStorage,  // ✅ force localStorage instead of memory
-    autoRefreshToken: true, // ✅ refresh before expiry
-    detectSessionInUrl: true
-  }
+  auth: { persistSession: true, storage: window.localStorage }
 });
 
 async function checkAuthKeepSession() {
   let { data: { session } } = await supabaseClient.auth.getSession();
 
-  // retry once if session isn’t ready
+  // 🔁 Retry if session isn’t ready yet
   if (!session) {
-    await new Promise(r => setTimeout(r, 500));
+    console.log("No session, retrying...");
+    await new Promise(r => setTimeout(r, 800)); // wait 0.8s
     ({ data: { session } } = await supabaseClient.auth.getSession());
   }
 
   if (!session) {
-    window.location.href = "login.html"; // still no session → login
+    console.log("No valid session → go login");
+    window.location.href = "login.html";
   } else {
-    console.log("Logged in as:", session.user.email);
+    console.log("✅ Logged in as:", session.user.email);
     window.currentUser = session.user;
   }
 }
 
-document.addEventListener("DOMContentLoaded", checkAuthKeepSession);
-
-// Only redirect on real logout
 supabaseClient.auth.onAuthStateChange((event, session) => {
+  console.log("Auth event:", event);
   if (event === "SIGNED_OUT") {
     window.location.href = "login.html";
   }
 });
 
-// ✅ Make sure logo click just reloads index without breaking session
 function wireLogoToIndex() {
   const logoAnchor = document.querySelector('a[href="index.html"]');
   if (!logoAnchor) return;
 
   logoAnchor.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("Logo clicked → go to index.html");
+    console.log("Logo clicked → index.html");
     window.location.href = "index.html";
   });
 }
-document.addEventListener("DOMContentLoaded", wireLogoToIndex);
+
+document.addEventListener("DOMContentLoaded", () => {
+  checkAuthKeepSession();
+  wireLogoToIndex();
+});
 </script>
+
 
 
 
