@@ -59,33 +59,43 @@
     <p><a href="login.html">Already have an account? Login</a></p>
   </div>
 
-  <!-- Supabase SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    // ✅ Use your real Supabase project details here
-    const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
-    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+  const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+  const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
-    document.getElementById("signup-form").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+  document.getElementById("signup-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-      const { data, error } = await supabaseClient.auth.signUp({
-        email,
-        password
-      });
-
-      if (error) {
-        alert("Signup error: " + error.message);
-      } else {
-        alert("Signup successful! Check your email to confirm.");
-        // Redirect to subscription page (Stripe checkout)
-        window.location.href = "subscribe.html";
-      }
+    // 1. Sign up user
+    const { data, error } = await supabaseClient.auth.signUp({
+      email,
+      password
     });
-  </script>
+
+    if (error) {
+      alert("Signup error: " + error.message);
+    } else {
+      // 2. Insert into profiles table
+      const user = data.user;
+      if (user) {
+        const { error: insertError } = await supabaseClient
+          .from("profiles")
+          .insert([{ id: user.id, email: user.email }]);
+
+        if (insertError) {
+          console.error("Error inserting profile:", insertError.message);
+        } else {
+          alert("Signup successful! Check your email to confirm.");
+          window.location.href = "subscribe.html";
+        }
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
 
