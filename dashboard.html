@@ -392,31 +392,46 @@ supabaseClient.auth.onAuthStateChange((event) => {
 /* --- Manage subscription button --- */
 document.getElementById("manage-subscription").addEventListener("click", async () => {
   try {
-    const { data: { session }, error } = await supabaseClient.auth.getSession();
+    // First try to get current session
+    let { data: { session }, error } = await supabaseClient.auth.getSession();
+
+    // If no session, fall back to getUser()
+    if (!session) {
+      console.warn("No session from getSession, trying getUser...");
+      const { data: userData, error: userError } = await supabaseClient.auth.getUser();
+      if (userError) {
+        console.error("getUser error:", userError);
+      }
+      if (userData?.user) {
+        session = { user: userData.user };
+      }
+    }
+
     console.log("Manage subscription session:", session);
 
-    if (error || !session) {
+    if (!session) {
       alert("You must be logged in to manage your subscription.");
       return;
     }
 
+    console.log("Logged in as:", session.user.email);
+
     const user_id = session.user.id;
 
+    // Call Netlify function with user_id
     const response = await fetch("/.netlify/functions/create-portal-session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user_id })
     });
 
-    const { url, error: portalError } = await response.json();
-    if (portalError) {
-      console.error("Portal error:", portalError);
-      alert("Error: " + portalError);
-      return;
-    }
+    const result = await response.json();
+    console.log("Portal response:", result);
 
-    if (url) {
-      window.location.href = url; // Redirect to Stripe Billing Portal
+    if (result.url) {
+      window.location.href = result.url; // Redirect to Stripe Billing Portal
+    } else if (result.redirect) {
+      window.location.href = result.redirect;
     } else {
       alert("Could not open billing portal.");
     }
@@ -427,20 +442,6 @@ document.getElementById("manage-subscription").addEventListener("click", async (
 });
 </script>
 
-
-
-
-<script>
-document.addEventListener("DOMContentLoaded", async () => {
-  const { data, error } = await supabaseClient.auth.getSession();
-  console.log("DEBUG session:", data?.session);
-  console.log("DEBUG error:", error);
-
-  supabaseClient.auth.onAuthStateChange((event, session) => {
-    console.log("DEBUG auth event:", event, session);
-  });
-});
-</script>
 
 
 
