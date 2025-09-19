@@ -62,12 +62,9 @@
   <!-- Supabase SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    // ✅ Correct v2 syntax
     const { createClient } = supabase;
-
-    const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
-
+    const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co"; // ✅ your project URL
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ✅ replace with anon key from settings
     const supabaseClient = createClient(supabaseUrl, supabaseKey);
 
     document.getElementById("signup-form").addEventListener("submit", async (e) => {
@@ -75,31 +72,23 @@
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
-      const { data, error } = await supabase.auth.signUp({
-  email,
-  password
-});
+      const { data, error } = await supabaseClient.auth.signUp({
+        email,
+        password
+      });
 
-if (error) {
-  alert("Signup error: " + error.message);
-} else {
-  // Add profile row manually
-  const { error: profileError } = await supabaseClient
-    .from("profiles")
-    .insert([{ id: data.user.id, email }]);
-
-  if (profileError) {
-    console.error("Profile insert error:", profileError);
-  }
-
-  alert("Signup successful!");
-  window.location.href = "subscribe.html";
-}
-
+      if (error) {
+        alert("Signup error: " + error.message);
+        console.error(error);
+      } else {
+        alert("Signup successful! Check your email to confirm.");
+        window.location.href = "subscribe.html";
+      }
     });
   </script>
 </body>
 </html>
+
 
 
 

@@ -56,16 +56,16 @@
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Login</button>
     </form>
-    <p><a href="signup.html">Don't have an account? Sign Up</a></p>
+    <p><a href="signup.html">Don’t have an account? Sign Up</a></p>
   </div>
 
   <!-- Supabase SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    // ✅ Use your real Supabase project details
-    const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
-    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+    const { createClient } = supabase;
+    const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co"; // ✅ your project URL
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ✅ replace with anon key
+    const supabaseClient = createClient(supabaseUrl, supabaseKey);
 
     document.getElementById("login-form").addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -79,14 +79,16 @@
 
       if (error) {
         alert("Login error: " + error.message);
+        console.error(error);
       } else {
         alert("Login successful!");
-        // Redirect to homepage (or protected area)
-        window.location.href = "home.html";
+        // redirect to dashboard or protected page
+        window.location.href = "dashboard.html";
       }
     });
   </script>
 </body>
 </html>
+
 
 
