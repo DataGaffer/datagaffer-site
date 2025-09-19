@@ -347,6 +347,28 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+<script>
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes in ms
+let inactivityTimer;
+
+// Reset inactivity timer
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(async () => {
+    await supabase.auth.signOut();
+    window.location.href = "login.html"; // redirect after auto-logout
+  }, INACTIVITY_LIMIT);
+}
+
+// Reset timer on activity
+["click", "mousemove", "keydown", "scroll", "touchstart"].forEach(evt => {
+  document.addEventListener(evt, resetInactivityTimer);
+});
+
+// Start timer when page loads
+resetInactivityTimer();
+</script>
+
 
 </body>
 </html>
