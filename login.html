@@ -63,8 +63,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
     const { createClient } = supabase;
-    const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co"; // ✅ your project URL
-    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ✅ anon key
+    const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co"; 
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; 
     const supabaseClient = createClient(supabaseUrl, supabaseKey);
 
     document.getElementById("login-form").addEventListener("submit", async (e) => {
@@ -82,41 +82,14 @@
         console.error(error);
       } else {
         alert("Login successful!");
-
-        const user = data.user;
-
-        // ✅ Check subscription in profiles table
-        let { data: profile, error: profileError } = await supabaseClient
-          .from("profiles")
-          .select("is_subscribed")
-          .eq("id", user.id)   // first try with auth.uid()
-          .single();
-
-        // ✅ If no row found, fallback to email
-        if (profileError && profileError.code === "PGRST116") {
-          let { data: profileByEmail, error: emailError } = await supabaseClient
-            .from("profiles")
-            .select("is_subscribed")
-            .eq("email", user.email)
-            .single();
-
-          profile = profileByEmail;
-          profileError = emailError;
-        }
-
-        if (profileError || !profile || !profile.is_subscribed) {
-          alert("Subscription required. Please subscribe first.");
-          window.location.href = "subscribe.html";
-          return;
-        }
-
-        // ✅ If subscribed, send to dashboard
+        // 🚀 Straight to index.html (no subscription re-check)
         window.location.href = "index.html";
       }
     });
   </script>
 </body>
 </html>
+
 
 
 
