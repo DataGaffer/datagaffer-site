@@ -12,7 +12,7 @@ exports.handler = async (event) => {
         },
       ],
       // Redirects
-      success_url: `${process.env.SITE_URL}/index.html?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${process.env.SITE_URL}/dashboard.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.SITE_URL}/subscribe.html`,
     });
 

@@ -390,23 +390,49 @@ supabaseClient.auth.onAuthStateChange((event) => {
 
 
 
-<!-- ✅ Keep this Stripe manage subscription script -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ anon key only
+
+
 document.getElementById("manage-subscription").addEventListener("click", async () => {
   try {
-    const response = await fetch("/.netlify/functions/create-portal-session", { method: "POST" });
-    const { url } = await response.json();
+    // Get current user
+    const { data: { session }, error } = await supabaseClient.auth.getSession();
+    if (error || !session) {
+      alert("You must be logged in to manage your subscription.");
+      return;
+    }
+
+    const user_id = session.user.id;
+
+    // Call Netlify function with user_id
+    const response = await fetch("/.netlify/functions/create-portal-session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user_id })
+    });
+
+    const { url, error: portalError } = await response.json();
+    if (portalError) {
+      console.error("Portal error:", portalError);
+      alert("Error: " + portalError);
+      return;
+    }
+
     if (url) {
-      window.location.href = url; // redirect to Stripe Billing Portal
+      window.location.href = url; // Redirect to Stripe Billing Portal
     } else {
-      alert("Error opening billing portal");
+      alert("Could not open billing portal.");
     }
   } catch (err) {
-    console.error("Portal error:", err);
+    console.error("Portal exception:", err);
     alert("Something went wrong. Please try again.");
   }
 });
 </script>
+
 
 
 <script>
