@@ -1,10 +1,14 @@
 // netlify/functions/stripe-webhook.js
+exports.config = {
+  rawBody: true, // ✅ ensure Netlify sends raw body to Stripe
+};
+
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const { createClient } = require("@supabase/supabase-js");
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY // service role key, NOT anon
+  process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
 exports.handler = async (event) => {
@@ -14,9 +18,8 @@ exports.handler = async (event) => {
   let stripeEvent;
 
   try {
-    // Use raw body string (NOT parsed JSON)
     stripeEvent = stripe.webhooks.constructEvent(
-      event.body,
+      event.body, // ✅ raw string
       sig,
       process.env.STRIPE_WEBHOOK_SECRET
     );
@@ -29,8 +32,8 @@ exports.handler = async (event) => {
 
   if (stripeEvent.type === "checkout.session.completed") {
     const session = stripeEvent.data.object;
-
     const email = session.customer_details?.email;
+
     if (email) {
       const { error } = await supabase
         .from("profiles")
