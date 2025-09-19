@@ -172,47 +172,46 @@
 
 /* 📱 Mobile fix */
 @media (max-width: 768px) {
+  .dg-header {
+    display: flex;
+    flex-direction: column;   /* stack logo, title, button */
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .dg-logo-wrapper {
+    position: static;   /* stop absolute positioning */
+    margin-bottom: 5px;
+  }
+
+  .dg-logo-img {
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  .dg-site-name {
+    font-size: 28px;
+    margin: 5px 0;
+    text-align: center;
+  }
+
   .dg-auth-links {
-    position: static;      /* stop absolute positioning */
+    position: static;         /* remove absolute */
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .dg-auth-links .manage-btn {
     font-size: 14px;
-    padding: 5px 12px;
-  }
-
-  .dg-site-name {
-    margin-top: 10px;  /* prevent overlap */
-  }
-
-
-  .dg-logo-img {
-    height: 80px;
-    margin-right: 7px;
-  }
-
-  .dg-logo-wrapper {
-    position: absolute;
-    left: 7px;
-    top: 20px;
-    z-index: 10;
-  }
-
-  .dg-site-name {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: -5px;
+    padding: 6px 12px;
   }
 
   .dg-tagline {
     font-size: 14px;
-    padding: 8px 8px;
+    padding: 8px 12px;
     text-align: center;
-    padding-left: 65px;
-    padding-right: 65px;
   }
 
   .grid {
@@ -258,7 +257,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: -10px
+    margin-top: -10px;
   }
 
   .play-line {
@@ -267,16 +266,17 @@
 
   .section-title {
     font-size: 24px;
-    font-weight: 500px;
+    font-weight: 500;
     margin-top: 20px;
     margin-bottom: 15px;
   }
 
   .bet-text {
-   font-size: 20px;
-   font-weight: normal;
+    font-size: 20px;
+    font-weight: normal;
   }
 }
+
 </style>
 </head>
 <body>
