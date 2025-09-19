@@ -360,49 +360,39 @@
     showTable("btts", document.getElementById("btn-btts"));
   </script>
 
-<!-- put this near the bottom of each private page, before the closing </body> -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-/* ---------- CONFIG - update these two with your values ---------- */
 const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
-/* ---------------------------------------------------------------- */
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // your anon key
 
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+// ✅ Disable persistent sessions + auto refresh
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: {
+    persistSession: false,
+    autoRefreshToken: false
+  }
+});
 
-/**
- * Minimal auth guard for private pages:
- *  - Only ensures there's a valid session (signed in).
- *  - DOES NOT check subscription status.
- *  - On transient errors it logs them and only redirects if there's no session.
- */
 async function checkAuthKeepSession(){
   try {
     const { data, error } = await supabase.auth.getSession();
-    if (error) {
-      console.warn("supabase.getSession error (non-fatal):", error);
-    }
+    if (error) console.warn("supabase.getSession error:", error);
+
     const session = data?.session ?? null;
     console.log("AUTH CHECK — session:", session);
+
     if (!session) {
-      // not signed in -> go to login
-      window.location.href = "login.html";
+      window.location.href = "login.html"; // not logged in
       return;
     }
-    // signed in — keep page and expose the user object if you need it
-    window.currentUser = session.user;
+
+    window.currentUser = session.user; // expose if needed
   } catch (err) {
     console.error("auth guard unexpected error:", err);
-    // only redirect if there is definitively no session
-    // (prevents bouncing on temporary network errors)
     window.location.href = "login.html";
   }
 }
 
-/**
- * Only redirect on explicit sign out.
- * Avoid any aggressive redirection for other auth events.
- */
 supabase.auth.onAuthStateChange((event, session) => {
   console.log("auth state change:", event, session);
   if (event === "SIGNED_OUT") {
@@ -410,14 +400,11 @@ supabase.auth.onAuthStateChange((event, session) => {
   }
 });
 
-/* make sure the logo click always goes back to index.html without any weird behaviour */
 function wireLogoToIndex() {
-  // try common selectors: adjust if your markup differs
   const logoAnchor = document.querySelector('.dg-logo-wrapper a') || document.querySelector('a[href="index.html"]');
   if (!logoAnchor) return;
   logoAnchor.addEventListener('click', (e) => {
     e.preventDefault();
-    // optional debug
     console.log("Logo clicked -> navigating to index.html");
     window.location.href = "index.html";
   });
@@ -428,6 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
   wireLogoToIndex();
 });
 </script>
+
 
 <script>
 const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes in ms

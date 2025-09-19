@@ -62,10 +62,16 @@
   <!-- Supabase SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    const { createClient } = supabase;
-    const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co"; 
-    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; 
-    const supabaseClient = createClient(supabaseUrl, supabaseKey);
+    const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+    const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+
+    // ✅ No persistent sessions
+    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false
+      }
+    });
 
     document.getElementById("login-form").addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -82,7 +88,7 @@
         console.error(error);
       } else {
         alert("Login successful!");
-        // 🚀 Straight to index.html (no subscription re-check)
+        // 🚀 Straight to index.html
         window.location.href = "index.html";
       }
     });
