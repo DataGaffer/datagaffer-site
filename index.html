@@ -199,6 +199,20 @@
     padding-right: 65px;
   }
 
+  /* ✅ Stack manage button below the header */
+  .dg-auth-links {
+    position: static;   /* no absolute */
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .dg-auth-links .manage-btn {
+    font-size: 14px;    /* smaller font */
+    padding: 4px 10px;  /* smaller padding */
+    border-radius: 5px;
+  }
+
   .grid {
     grid-template-columns: repeat(2, 175px);
     gap: 20px;
@@ -260,23 +274,7 @@
     font-size: 20px;
     font-weight: normal;
   }
-
-  .dg-auth-links {
-    position: static;   /* remove absolute */
-    justify-content: center;
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-  }
-
-  .dg-auth-links a,
-  .dg-auth-links .manage-btn {
-    font-size: 16px;
-    padding: 5px 12px;
-  }
 }
-
-
 
 
 
