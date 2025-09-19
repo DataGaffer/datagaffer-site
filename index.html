@@ -380,6 +380,21 @@ supabaseClient.auth.onAuthStateChange((event, session) => {
 });
 </script>
 
+<script>
+function wireLogoToIndex() {
+  // Find the logo link
+  const logoAnchor = document.querySelector('a[href="index.html"]');
+  if (!logoAnchor) return;
+
+  logoAnchor.addEventListener("click", (e) => {
+    e.preventDefault(); // stop the normal navigation
+    console.log("Logo clicked → go to index.html");
+    window.location.href = "index.html"; // force go to index
+  });
+}
+
+document.addEventListener("DOMContentLoaded", wireLogoToIndex);
+</script>
 
 
 
