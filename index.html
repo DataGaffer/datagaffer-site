@@ -176,19 +176,24 @@
     margin-right: 7px;
   }
 
+  .dg-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
   .dg-logo-wrapper {
     position: absolute;
-    left: 7px;
-    top: 20px;
-    z-index: 10;
+    left: 10px;
+    top: 10px
   }
 
   .dg-site-name {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: -5px;
-    text-align: center;
-    width: 100%;
+   flex: 1;
+   text-align: center;
+   font-size: 30px;
+   margin: 0
   }
 
   .dg-tagline {
@@ -201,17 +206,15 @@
 
   /* ✅ Stack manage button below the header */
   .dg-auth-links {
-    position: static;   /* no absolute */
-    display: flex;
-    justify-content: center;
-    margin-top: 8px;
+    position: absolute;   /* no absolute */
+    right: 10px;
+    left: 10px
   }
 
   .dg-auth-links .manage-btn {
     font-size: 10px;    /* smaller font */
     padding: 2px 6px;  /* smaller padding */
     border-radius: 4px;
-    white-space: nowrap;
   }
 
   .grid {
