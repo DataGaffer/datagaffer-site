@@ -19,7 +19,7 @@ exports.handler = async (event) => {
 
   try {
     stripeEvent = stripe.webhooks.constructEvent(
-      event.body, // ✅ raw string
+      event.body, // raw string
       sig,
       process.env.STRIPE_WEBHOOK_SECRET
     );
@@ -33,11 +33,15 @@ exports.handler = async (event) => {
   if (stripeEvent.type === "checkout.session.completed") {
     const session = stripeEvent.data.object;
     const email = session.customer_details?.email;
+    const customerId = session.customer; // 👈 Stripe customer ID
 
-    if (email) {
+    if (email && customerId) {
       const { error } = await supabase
         .from("profiles")
-        .update({ is_subscribed: true })
+        .update({
+          is_subscribed: true,
+          customer_id: customerId, // ✅ store Stripe customer_id
+        })
         .eq("email", email);
 
       if (error) {
@@ -45,19 +49,25 @@ exports.handler = async (event) => {
         return { statusCode: 500, body: "Supabase update failed" };
       }
 
-      console.log(`✅ Subscription activated for ${email}`);
+      console.log(`✅ Subscription activated for ${email}, customer ${customerId}`);
     }
   }
 
   if (stripeEvent.type === "customer.subscription.deleted") {
     const subscription = stripeEvent.data.object;
-    const customer = await stripe.customers.retrieve(subscription.customer);
+    const customerId = subscription.customer;
+
+    // Retrieve customer email
+    const customer = await stripe.customers.retrieve(customerId);
     const email = customer.email;
 
     if (email) {
       const { error } = await supabase
         .from("profiles")
-        .update({ is_subscribed: false })
+        .update({
+          is_subscribed: false,
+          customer_id: null, // clear customer_id on cancel
+        })
         .eq("email", email);
 
       if (error) {
@@ -71,5 +81,6 @@ exports.handler = async (event) => {
 
   return { statusCode: 200, body: "success" };
 };
+
 
 
