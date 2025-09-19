@@ -299,6 +299,17 @@ supabaseClient.auth.onAuthStateChange((event) => {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const { data, error } = await supabaseClient.auth.getSession();
+  console.log("DEBUG session:", data?.session);
+  console.log("DEBUG error:", error);
+
+  supabaseClient.auth.onAuthStateChange((event, session) => {
+    console.log("DEBUG auth event:", event, session);
+  });
+});
+</script>
 
 
 
