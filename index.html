@@ -351,19 +351,27 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
 const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
-const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey, {
+  auth: {
+    persistSession: true,   // ✅ don’t lose session on reload
+    storage: localStorage,  // ✅ force localStorage instead of memory
+    autoRefreshToken: true, // ✅ refresh before expiry
+    detectSessionInUrl: true
+  }
+});
 
 async function checkAuthKeepSession() {
   let { data: { session } } = await supabaseClient.auth.getSession();
 
-  // 🔁 Retry once if session not ready yet
+  // retry once if session isn’t ready
   if (!session) {
-    await new Promise(r => setTimeout(r, 500)); // wait 0.5 sec
+    await new Promise(r => setTimeout(r, 500));
     ({ data: { session } } = await supabaseClient.auth.getSession());
   }
 
   if (!session) {
-    window.location.href = "login.html"; // still no session → go login
+    window.location.href = "login.html"; // still no session → login
   } else {
     console.log("Logged in as:", session.user.email);
     window.currentUser = session.user;
@@ -372,29 +380,27 @@ async function checkAuthKeepSession() {
 
 document.addEventListener("DOMContentLoaded", checkAuthKeepSession);
 
-// Logout listener
+// Only redirect on real logout
 supabaseClient.auth.onAuthStateChange((event, session) => {
   if (event === "SIGNED_OUT") {
     window.location.href = "login.html";
   }
 });
-</script>
 
-<script>
+// ✅ Make sure logo click just reloads index without breaking session
 function wireLogoToIndex() {
-  // Find the logo link
   const logoAnchor = document.querySelector('a[href="index.html"]');
   if (!logoAnchor) return;
 
   logoAnchor.addEventListener("click", (e) => {
-    e.preventDefault(); // stop the normal navigation
+    e.preventDefault();
     console.log("Logo clicked → go to index.html");
-    window.location.href = "index.html"; // force go to index
+    window.location.href = "index.html";
   });
 }
-
 document.addEventListener("DOMContentLoaded", wireLogoToIndex);
 </script>
+
 
 
 
