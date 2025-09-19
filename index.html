@@ -347,75 +347,54 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<!-- ✅ Universal login check -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
- const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
- const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ anon only
- const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+  const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // anon only
+  const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
- async function checkSession() {
-   const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
+  async function checkSession() {
+    const { data: { session }, error } = await supabaseClient.auth.getSession();
 
-   if (sessionError || !session) {
-     window.location.href = "login.html";
-     return;
-   }
+    if (error || !session) {
+      window.location.href = "login.html"; // not logged in → login
+      return;
+    }
 
-   const user = session.user;
+    console.log("✅ Logged in as:", session.user.email);
+  }
 
-   // ✅ Try lookup by ID first
-   let { data: profile, error } = await supabaseClient
-     .from("profiles")
-     .select("is_subscribed")
-     .eq("id", user.id)
-     .single();
+  document.addEventListener("DOMContentLoaded", () => {
+    checkSession();
+  });
 
-   // ✅ Fallback: if no row by ID, try email
-   if (error && error.code === "PGRST116") {
-     let { data: profileByEmail, error: emailError } = await supabaseClient
-       .from("profiles")
-       .select("is_subscribed")
-       .eq("email", user.email)
-       .single();
-
-     profile = profileByEmail;
-     error = emailError;
-   }
-
-   if (error || !profile || !profile.is_subscribed) {
-     window.location.href = "subscribe.html"; // not subscribed → redirect
-   }
- }
-
- document.addEventListener("DOMContentLoaded", () => {
-   checkSession();
- });
-
- // Auto-logout listener
- supabaseClient.auth.onAuthStateChange((event, session) => {
-   if (event === "SIGNED_OUT" || !session) {
-     window.location.href = "login.html";
-   }
- });
+  // Auto-logout → back to login
+  supabaseClient.auth.onAuthStateChange((event, session) => {
+    if (event === "SIGNED_OUT" || !session) {
+      window.location.href = "login.html";
+    }
+  });
 </script>
 
-
+<!-- ✅ Keep this Stripe manage subscription script -->
 <script>
 document.getElementById("manage-subscription").addEventListener("click", async () => {
- try {
-   const response = await fetch("/.netlify/functions/create-portal-session", { method: "POST" });
-   const { url } = await response.json();
-   if (url) {
-     window.location.href = url; // redirect to Stripe Billing Portal
-   } else {
-     alert("Error opening billing portal");
-   }
- } catch (err) {
-   console.error("Portal error:", err);
-   alert("Something went wrong. Please try again.");
- }
+  try {
+    const response = await fetch("/.netlify/functions/create-portal-session", { method: "POST" });
+    const { url } = await response.json();
+    if (url) {
+      window.location.href = url; // redirect to Stripe Billing Portal
+    } else {
+      alert("Error opening billing portal");
+    }
+  } catch (err) {
+    console.error("Portal error:", err);
+    alert("Something went wrong. Please try again.");
+  }
 });
 </script>
+
 
 
 
