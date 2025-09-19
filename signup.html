@@ -64,7 +64,7 @@
   <script>
     const { createClient } = supabase;
     const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co"; // ✅ your project URL
-    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ✅ replace with anon key from settings
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ✅ your anon key
     const supabaseClient = createClient(supabaseUrl, supabaseKey);
 
     document.getElementById("signup-form").addEventListener("submit", async (e) => {
@@ -81,6 +81,7 @@
         alert("Signup error: " + error.message);
         console.error(error);
       } else {
+        // ✅ Redirect new users straight to subscribe.html
         alert("Signup successful! Check your email to confirm.");
         window.location.href = "subscribe.html";
       }
@@ -88,6 +89,7 @@
   </script>
 </body>
 </html>
+
 
 
 
