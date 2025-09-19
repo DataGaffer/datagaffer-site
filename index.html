@@ -174,38 +174,38 @@
 @media (max-width: 768px) {
   .dg-header {
     display: flex;
-    flex-direction: column;   /* stack logo, title, button */
+    flex-direction: row;   /* horizontal layout */
     align-items: center;
-    padding: 10px 0;
-    position: relative;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
   }
 
   .dg-logo-wrapper {
-    position: static;   /* stop absolute positioning */
-    margin-bottom: 5px;
+    position: static;
+    flex-shrink: 0;
   }
 
   .dg-logo-img {
-    height: 80px;
-    margin: 0 auto;
+    height: 60px;
   }
 
   .dg-site-name {
-    font-size: 28px;
-    margin: 5px 0;
+    font-size: 22px;
     text-align: center;
+    flex-grow: 1;   /* keeps it centered */
+    margin: 0 10px;
   }
 
   .dg-auth-links {
-    position: static;         /* remove absolute */
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
+    position: static;
+    flex-shrink: 0;
   }
 
   .dg-auth-links .manage-btn {
-    font-size: 14px;
-    padding: 6px 12px;
+    font-size: 12px;
+    padding: 6px 10px;
+    white-space: nowrap;
   }
 
   .dg-tagline {
@@ -213,6 +213,7 @@
     padding: 8px 12px;
     text-align: center;
   }
+
 
   .grid {
     grid-template-columns: repeat(2, 175px);
