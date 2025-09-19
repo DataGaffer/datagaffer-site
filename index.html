@@ -304,26 +304,40 @@ document.addEventListener("DOMContentLoaded", () => {
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ keep anon, never service key
-  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ anon only
+  const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
   async function checkSession() {
-    const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+    const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
 
     if (sessionError || !session) {
       window.location.href = "login.html";
       return;
     }
 
-    // ✅ Get user profile
-    let { data: profile, error } = await supabase
+    const user = session.user;
+
+    // ✅ Try lookup by ID first
+    let { data: profile, error } = await supabaseClient
       .from("profiles")
       .select("is_subscribed")
-      .eq("id", session.user.id)
+      .eq("id", user.id)
       .single();
 
+    // ✅ Fallback: if no row by ID, try email
+    if (error && error.code === "PGRST116") {
+      let { data: profileByEmail, error: emailError } = await supabaseClient
+        .from("profiles")
+        .select("is_subscribed")
+        .eq("email", user.email)
+        .single();
+
+      profile = profileByEmail;
+      error = emailError;
+    }
+
     if (error || !profile || !profile.is_subscribed) {
-      window.location.href = "home.html"; // not subscribed → redirect
+      window.location.href = "subscribe.html"; // not subscribed → redirect
     }
   }
 
@@ -332,12 +346,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Auto-logout listener
-  supabase.auth.onAuthStateChange((event, session) => {
+  supabaseClient.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_OUT" || !session) {
       window.location.href = "login.html";
     }
   });
 </script>
+
 
 <script>
 document.getElementById("manage-button").addEventListener("click", async () => {

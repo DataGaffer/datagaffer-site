@@ -1,113 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Login - DataGaffer</title>
- <style>
-   body {
-     font-family: Arial, sans-serif;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
-     background-color: #f9f9f9;
-     color: #003f2e;
-   }
-   .box {
-     background: white;
-     padding: 30px;
-     border-radius: 10px;
-     text-align: center;
-     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-     width: 300px;
-   }
-   h1 { margin-bottom: 20px; }
-   input {
-     display: block;
-     width: 100%;
-     padding: 10px;
-     margin: 10px 0;
-     border: 1px solid #ccc;
-     border-radius: 5px;
-   }
-   button {
-     width: 100%;
-     padding: 12px;
-     background-color: #1a8a39;
-     color: white;
-     border: none;
-     border-radius: 5px;
-     font-size: 18px;
-     cursor: pointer;
-     margin-top: 20px;
-   }
-   button:hover { background-color: #14722f; }
-   p { margin-top: 15px; font-size: 14px; }
-   a { color: #003f2e; text-decoration: none; font-weight: bold; }
-   a:hover { text-decoration: underline; }
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - DataGaffer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+      color: #003f2e;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    h1 { margin-bottom: 20px; }
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1a8a39;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover { background-color: #14722f; }
+    p { margin-top: 15px; font-size: 14px; }
+    a { color: #003f2e; text-decoration: none; font-weight: bold; }
+    a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
- <div class="box">
-   <h1>Login</h1>
-   <form id="login-form">
-     <input type="email" id="email" placeholder="Email" required>
-     <input type="password" id="password" placeholder="Password" required>
-     <button type="submit">Login</button>
-   </form>
-   <p><a href="signup.html">Don’t have an account? Sign Up</a></p>
- </div>
+  <div class="box">
+    <h1>Login</h1>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p><a href="signup.html">Don’t have an account? Sign Up</a></p>
+  </div>
 
- <!-- Supabase SDK -->
- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
- <script>
-   const { createClient } = supabase;
-   const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co"; // ✅ your project URL
-   const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ✅ anon key
-   const supabaseClient = createClient(supabaseUrl, supabaseKey);
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const { createClient } = supabase;
+    const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co"; // ✅ your project URL
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ✅ anon key
+    const supabaseClient = createClient(supabaseUrl, supabaseKey);
 
-   document.getElementById("login-form").addEventListener("submit", async (e) => {
-     e.preventDefault();
-     const email = document.getElementById("email").value;
-     const password = document.getElementById("password").value;
+    document.getElementById("login-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
 
-     const { data, error } = await supabaseClient.auth.signInWithPassword({
-       email,
-       password
-     });
+      const { data, error } = await supabaseClient.auth.signInWithPassword({
+        email,
+        password
+      });
 
-     if (error) {
-       alert("Login error: " + error.message);
-       console.error(error);
-     } else {
-       // ✅ enforce subscription
-       const user = data.user;
-       let { data: profile, error: profileError } = await supabaseClient
-         .from("profiles")
-         .select("is_subscribed")
-         .eq("id", user.id)
-         .single();
+      if (error) {
+        alert("Login error: " + error.message);
+        console.error(error);
+      } else {
+        alert("Login successful!");
 
-       if (profileError) {
-         alert("Error checking subscription. Please try again.");
-         console.error(profileError);
-         return;
-       }
+        const user = data.user;
 
-       if (!profile || !profile.is_subscribed) {
-         alert("You must have an active subscription to access.");
-         window.location.href = "subscribe.html"; // send to payment
-         return;
-       }
+        // ✅ Check subscription in profiles table
+        let { data: profile, error: profileError } = await supabaseClient
+          .from("profiles")
+          .select("is_subscribed")
+          .eq("id", user.id)   // first try with auth.uid()
+          .single();
 
-       alert("Login successful!");
-       window.location.href = "dashboard.html"; // ✅ only subscribed users get here
-     }
-   });
- </script>
+        // ✅ If no row found, fallback to email
+        if (profileError && profileError.code === "PGRST116") {
+          let { data: profileByEmail, error: emailError } = await supabaseClient
+            .from("profiles")
+            .select("is_subscribed")
+            .eq("email", user.email)
+            .single();
+
+          profile = profileByEmail;
+          profileError = emailError;
+        }
+
+        if (profileError || !profile || !profile.is_subscribed) {
+          alert("Subscription required. Please subscribe first.");
+          window.location.href = "subscribe.html";
+          return;
+        }
+
+        // ✅ If subscribed, send to dashboard
+        window.location.href = "dashboard.html";
+      }
+    });
+  </script>
 </body>
 </html>
+
 
 
 
