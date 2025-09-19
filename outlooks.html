@@ -772,53 +772,38 @@ fetch("player_simulations/index.json")
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+  // ✅ Your Supabase project details
   const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // anon key only
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ anon key only
   const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
+  // ✅ Check if logged in
   async function checkSession() {
-    const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
+    const { data: { session }, error } = await supabaseClient.auth.getSession();
 
-    if (sessionError || !session) {
-      window.location.href = "login.html"; // not logged in → login
+    if (error || !session) {
+      // Not logged in → redirect to login
+      window.location.href = "login.html";
       return;
     }
 
-    const user = session.user;
-
-    // ✅ Try lookup by ID first
-    let { data: profile, error } = await supabaseClient
-      .from("profiles")
-      .select("is_subscribed")
-      .eq("id", user.id)
-      .single();
-
-    // ✅ Fallback: lookup by email if no row by ID
-    if (error && error.code === "PGRST116") {
-      let { data: profileByEmail } = await supabaseClient
-        .from("profiles")
-        .select("is_subscribed")
-        .eq("email", user.email)
-        .single();
-      profile = profileByEmail;
-    }
-
-    if (!profile || !profile.is_subscribed) {
-      window.location.href = "index.html"; // logged in but unsubscribed → subscribe
-    }
+    // Logged in → allow page access
+    console.log("✅ Logged in as:", session.user.email);
   }
 
+  // Run check when page loads
   document.addEventListener("DOMContentLoaded", () => {
     checkSession();
   });
 
-  // Auto-logout listener
+  // ✅ Auto-logout → back to login
   supabaseClient.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_OUT" || !session) {
       window.location.href = "login.html";
     }
   });
 </script>
+
 
 
 
