@@ -177,16 +177,19 @@
   }
 
   .dg-logo-wrapper {
-    position: absolute;
-    left: 7px;
-    top: 20px;
-    z-index: 10;
+    position: static;
+    margin-bottom: 5px;
+  }
+
+  .dg-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .dg-site-name {
     font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: -5px;
+    margin: 5px 0;
   }
 
   .dg-tagline {
@@ -263,7 +266,7 @@
     position: static;   /* no absolute */
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .dg-auth-links .manage-btn {
