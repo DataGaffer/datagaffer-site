@@ -305,32 +305,6 @@
    <a href="signup.html" class="button"><img class="button-icon" src="player.svg" alt="icon">Player Cards</a>
  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-  const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ anon only
-  const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
-
-  async function checkRedirect() {
-    const { data: { session }, error } = await supabaseClient.auth.getSession();
-
-    if (error) {
-      console.error("Session check error:", error);
-      return; // don’t redirect, just show home.html
-    }
-
-    if (session && session.user) {
-      // ✅ logged in → redirect to index.html
-      window.location.href = "index.html";
-    } else {
-      // ❌ not logged in → stay here on home.html
-      console.log("No active session, staying on home.html");
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", checkRedirect);
-</script>
-
 
 
 
