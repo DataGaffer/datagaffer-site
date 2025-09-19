@@ -171,48 +171,32 @@
 }
 
 @media (max-width: 768px) {
-  /* ✅ HEADER FIX */
-  .dg-header {
-    display: flex;
-    justify-content: space-between; /* logo left, button right */
-    align-items: center;
-    padding: 10px;
-    position: relative;
+  .dg-logo-img {
+    height: 80px;
+    margin-right: 7px;
   }
 
   .dg-logo-wrapper {
-    position: static; /* allow logo to sit naturally on left */
-    margin: 0;
-  }
-
-  .dg-logo-img {
-    height: 60px;
+    position: absolute;
+    left: 7px;
+    top: 20px;
+    z-index: 10;
   }
 
   .dg-site-name {
-    font-size: 26px;
-    flex: 1;              /* expand center space */
-    text-align: center;   /* center the site name */
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    text-align: center;
+    width: 100%;
   }
-
-  .dg-auth-links {
-    position: static;  /* keep Manage button on right */
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .dg-auth-links .manage-btn {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-
-  /* ✅ LEAVE REST UNCHANGED */
 
   .dg-tagline {
     font-size: 14px;
-    padding: 8px;
+    padding: 8px 8px;
     text-align: center;
-    margin-top: 5px;
+    padding-left: 65px;
+    padding-right: 65px;
   }
 
   .grid {
@@ -276,7 +260,22 @@
     font-size: 20px;
     font-weight: normal;
   }
+
+  .dg-auth-links {
+    position: static;   /* remove absolute */
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .dg-auth-links a,
+  .dg-auth-links .manage-btn {
+    font-size: 16px;
+    padding: 5px 12px;
+  }
 }
+
 
 
 
