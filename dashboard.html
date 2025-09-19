@@ -354,8 +354,11 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
 /* --- Supabase setup --- */
 const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";  // replace with your anon key
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";  // anon key only
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: { persistSession: true, detectSessionInUrl: true }
+});
 
 /* --- Inactivity logout (15 minutes) --- */
 const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
@@ -385,21 +388,13 @@ supabaseClient.auth.onAuthStateChange((event) => {
     window.location.href = "login.html";
   }
 });
-</script>
 
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-const supabaseUrl = "https://qgniftwopmhhcwiatkku.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // ⚠️ anon key only
-
-
+/* --- Manage subscription button --- */
 document.getElementById("manage-subscription").addEventListener("click", async () => {
   try {
-    // Get current user
     const { data: { session }, error } = await supabaseClient.auth.getSession();
+    console.log("Manage subscription session:", session);
+
     if (error || !session) {
       alert("You must be logged in to manage your subscription.");
       return;
@@ -407,7 +402,6 @@ document.getElementById("manage-subscription").addEventListener("click", async (
 
     const user_id = session.user.id;
 
-    // Call Netlify function with user_id
     const response = await fetch("/.netlify/functions/create-portal-session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -432,6 +426,7 @@ document.getElementById("manage-subscription").addEventListener("click", async (
   }
 });
 </script>
+
 
 
 
