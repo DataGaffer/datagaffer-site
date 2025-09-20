@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 112,
+    "player_id": 407,
+    "name": "Benjamin Stambouli",
+    "position": "Midfielder",
+    "appearances": 33,
+    "goals": 1,
+    "assists": 3,
+    "shots": 18,
+    "shots_on_target": 6,
+    "goals_per90_simulated": 0.06,
+    "assists_per90_simulated": 0.16,
+    "shots_per90": 0.84,
+    "sot_per90": 0.27,
+    "+1_goal_pct": 4.8,
+    "+1_assist_pct": 14.3,
+    "soa_pct": 18.4
+  },
+  {
+    "team_id": 112,
+    "player_id": 2181,
+    "name": "Georgiy Tsitaishvili",
+    "position": "Attacker",
+    "appearances": 42,
+    "goals": 7,
+    "assists": 5,
+    "shots": 64,
+    "shots_on_target": 20,
+    "goals_per90_simulated": 0.33,
+    "assists_per90_simulated": 0.22,
+    "shots_per90": 2.88,
+    "sot_per90": 0.88,
+    "+1_goal_pct": 28.0,
+    "+1_assist_pct": 20.1,
+    "soa_pct": 42.5
+  }
+]

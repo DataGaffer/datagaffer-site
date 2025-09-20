@@ -134,7 +134,7 @@
   {
     "id": 173,
     "name": "RB Leipzig",
-    "logo": "https://media-4.api-sports.io/football/teams/173.png",
+    "logo": "assets/logos/173.png",
     "league": "Bundesliga",
     "home": {
       "goals_for": 1.94,

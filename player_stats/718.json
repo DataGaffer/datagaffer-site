@@ -1,0 +1,17 @@
+[
+  
+  {
+    "id": 2461,
+    "name": "Salomon Rondon",
+    "position": "Forward",
+    "appearances": 23,
+    "minutes": 2206,
+    "goals": 5,
+    "assists": 1,
+    "shots": 43,
+    "shots_on_target": 17,
+    "photo": "https://media.api-sports.io/football/players/2461.png",
+   "team_id": 718
+  }
+  
+]
