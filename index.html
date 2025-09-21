@@ -1,316 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>DataGaffer - Homepage</title>
- <style>
-   body {
-     font-family: Arial, sans-serif;
-     margin: 0;
-     padding: 0;
-     background-color: #f9f9f9;
-     color: #003f2e;
-   }
-
-   .dg-header {
-     align-items: center;
-     padding: 10px 10px;
-     background-color: white;
-   }
-
-   .dg-logo-wrapper {
-     position: absolute;
-     left: 20px;
-     top: -5px;
-     z-index: 10;
-   }
-
-   .dg-logo-img {
-     height: 200px;
-     margin-right: 20px;
-   }
-
-   .dg-site-name {
-     font-size: 70px;
-     font-weight: 700;
-     color: #003f2e;
-     text-align: center;
-     width: 100%;
-   }
-
-   .dg-tagline {
-     background-color: #003f2e;
-     color: white;
-     text-align: center;
-     padding: 16px 12px;
-     font-size: 18px;
-     font-weight: 600;
-   }
-
-   .section-title {
-     text-align: center;
-     font-size: 36px;
-     margin: 40px 0 20px;
-   }
-
-   .grid {
-     display: grid;
-     grid-template-columns: repeat(2, 320px);
-     gap: 30px;
-     justify-content: center;
-     margin-bottom: 80px;
-   }
-
-   /* ✅ Unified button styles for <a> and <button> */
-   .button {
-    box-sizing: border-box;
-    background-color: #1a8a39;
-     color: white;
-     padding: 20px 40px;
-     border: none;
-     border-radius: 10px;
-     font-size: 32px;
-     cursor: pointer;
-     width: 100%;
-     text-align: center;
-     margin-bottom: -15px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 15px;
-     height: 68px;
-     text-decoration: none; /* prevent underline on <a> */
-   }
-
-   .button-icon {
-     width: 40px;
-     height: 40px;
-   }
-
-   .play-banner {
-     text-align: center;
-     margin: 40px 0;
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     align-items: center;
-     margin-top: -20px
-   }
-
-   .play-button {
-     background-color: #1a8a39;
-     color: white;
-     font-size: 48px;
-     padding: 20px 40px;
-     border: none;
-     border-radius: 10px;
-     margin: 10px 0;
-     cursor: pointer;
-     width: 46%;
-     height: 80px;
-     text-align: center;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-   }
-
-   .play-line {
-     border: none;
-     height: 3px;
-     width: 500px;
-     background-color: #ccc;
-     margin: 0px auto;
-     border-radius: 2px;
-   }
-
-   .bet-text {
-    font-size: 30px;
-    font-weight: normal;
-   }
-
-   .dg-auth-links {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  display: flex;
-  gap: 15px;
-}
-
-.dg-auth-links a {
-  color: #003f2e;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 18px;
-  
-}
-
-.dg-auth-links a.signup {
-  background-color: #1a8a39;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 6px;
-}
-
-
-@media (max-width: 768px) {
-   .dg-logo-img {
-     height: 80px;
-     margin-right: 7px;
-   }
-
-   .dg-logo-wrapper {
-     position: absolute;
-     left: 7px;
-     top: 20px;
-     z-index: 10;
-   }
-
-   .dg-site-name {
-     font-size: 30px;
-     margin-top: 10px;
-     margin-bottom: -5px;
-   }
-
-   .dg-tagline {
-     font-size: 14px;
-     padding: 8px 8px;
-     text-align: center;
-     padding-left: 65px;
-     padding-right: 65px;
-   }
-
-   .grid {
-     grid-template-columns: repeat(2, 175px);
-     gap: 20px;
-     row-gap: 15px;
-     margin-bottom: 40px;
-     justify-content: center;
-   }
-
-   .button {
-     font-size: 20px;
-     white-space: nowrap;
-     padding: 25px 20px;
-     border-radius: 5px;
-     width: 100%;
-     margin-bottom: -5px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 10px;
-     height: 38px;
-     text-decoration: none;
-   }
-
-   .button-icon {
-     width: 32px;
-     height: 32px;
-   }
-
-   .play-button {
-     font-size: 30px;
-     padding: 0px 15px;
-     width: 95%;
-   }
-
-   .play-banner {
-     text-align: center;
-     margin-top: 20px;
-     margin-bottom: 20px;
-     padding: 5px 0;
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     align-items: center;
-     margin-top: -10px
-   }
-
-   .play-line {
-     width: 80%;
-   }
-
-   .section-title {
-     font-size: 24px;
-     font-weight: 500px;
-     margin-top: 20px;
-     margin-bottom: 15px;
-   }
-
-   .bet-text {
-    font-size: 20px;
-    font-weight: normal;
-   }
-
-    .dg-auth-links {
-    position: static;   /* remove absolute */
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .dg-auth-links a {
-    font-size: 16px;
-  }
-
-  .dg-auth-links a.signup {
-    padding: 5px 12px;
-  }
-}
-
-
- 
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataGaffer - Maintenance</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #003f2e;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .box {
+      max-width: 500px;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
-
- <!-- Header -->
- <div class="dg-header">
-   <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; justify-content: center; position: relative;">
-   <div class="dg-logo-wrapper">
-     <img class="dg-logo-img" src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DataGaffer Logo">
-   </div>
-   <div class="dg-site-name">DataGaffer.com</div>
-   <div class="dg-auth-links">
-    <a href="login.html">Login</a>
-    <a href="signup.html" class="signup">Sign Up</a>
-   </div>
-  </a>
- </div>
-
- <!-- Tagline -->
- <div class="dg-tagline">
-   Football's most realistic match simulations - driven by data
- </div>
-
- <div class="section-title">Match Simulations</div>
- <div class="grid">
-   <a href="signup.html" class="button"><img class="button-icon" src="gear.svg" alt="icon">Sim Cards</a>
-   <a href="signup.html" class="button"><img class="button-icon" src="chart.svg" alt="icon">xG Stats</a>
-   <a href="signup.html" class="button"><img class="button-icon" src="plus.svg" alt="icon">EV Plays</a>
-   <a href="signup.html" class="button"><img class="button-icon" src="page.svg" alt="icon">Outlooks</a>
- </div>
-
- <!-- Play of the Day -->
- <div class="play-banner">
-   <div class="play-line"></div>
-   <button class="play-button" id="play-button">Play of the day ★</button>
-   <div class="play-line"></div>
- </div>
-
- <div class="section-title">Player Simulations</div>
- <div class="grid">
-   <a href="signup.html" class="button"><img class="button-icon" src="ball.svg" alt="icon">Goals</a>
-   <a href="signup.html" class="button"><img class="button-icon" src="cleat.svg" alt="icon">Assists</a>
-   <a href="signup.html" class="button"><img class="button-icon" src="target.svg" alt="icon">Shots</a>
-   <a href="signup.html" class="button"><img class="button-icon" src="player.svg" alt="icon">Player Cards</a>
- </div>
-
-
+  <div class="box">
+    <h1>⚡ DataGaffer is in Maintenance</h1>
+    <p>Our team is making improvements to bring you the most realistic football simulations.</p>
+    <p>🔒 The site will return on <strong>Tuesday[09/23/2025]</strong>.</p>
+    <p>Thank you for your patience!</p>
+  </div>
 </body>
 </html>
-
-
-
-
-
-

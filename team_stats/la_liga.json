@@ -5,16 +5,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/531.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.71,
-      "goals_against": 0.71,
+      "goals_for": 1.64,
+      "goals_against": 0.73,
       "corners": 5.5,
       "corners_against": 3.7,
       "shots": 13.9,
       "shots_against": 7.5
     },
     "away": {
-      "goals_for": 1.20,
-      "goals_against": 0.85,
+      "goals_for": 1.26,
+      "goals_against": 0.94,
       "corners": 4.5,
       "corners_against": 4.3,
       "shots": 11.2,
@@ -27,16 +27,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/530.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 2.15,
-      "goals_against": 0.80,
+      "goals_for": 2.14,
+      "goals_against": 0.76,
       "corners": 5.8,
       "corners_against": 3.0,
       "shots": 13.2,
       "shots_against": 9.0
     },
     "away": {
-      "goals_for": 1.34,
-      "goals_against": 0.86,
+      "goals_for": 1.35,
+      "goals_against": 0.97,
       "corners": 4.2,
       "corners_against": 4.4,
       "shots": 11.2,
@@ -49,8 +49,8 @@
     "logo": "https://media-4.api-sports.io/football/teams/727.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.70,
-      "goals_against": 1.15,
+      "goals_for": 1.71,
+      "goals_against": 1.09,
       "corners": 5.0,
       "corners_against": 4.5,
       "shots": 12.1,
@@ -58,7 +58,7 @@
     },
     "away": {
       "goals_for": 0.71,
-      "goals_against": 1.48,
+      "goals_against": 1.05,
       "corners": 4.0,
       "corners_against": 5.5,
       "shots": 9.1,
@@ -71,16 +71,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/538.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.59,
-      "goals_against": 1.14,
+      "goals_for": 1.52,
+      "goals_against": 1.13,
       "corners": 4.0,
       "corners_against": 3.8,
       "shots": 12.6,
       "shots_against": 10.0
     },
     "away": {
-      "goals_for": 1.40,
-      "goals_against": 1.85,
+      "goals_for": 1.38,
+      "goals_against": 1.81,
       "corners": 3.8,
       "corners_against": 4.4,
       "shots": 10.6,
@@ -93,16 +93,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/542.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 0.81,
-      "goals_against": 0.90,
+      "goals_for": 0.91,
+      "goals_against": 0.95,
       "corners": 5.0,
       "corners_against": 4.2,
       "shots": 11.3,
       "shots_against": 10.0
     },
     "away": {
-      "goals_for": 1.20,
-      "goals_against": 1.60,
+      "goals_for": 1.19,
+      "goals_against": 1.52,
       "corners": 4.5,
       "corners_against": 5.2,
       "shots": 9.3,
@@ -115,16 +115,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/797.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.25,
-      "goals_against": 1.25,
+      "goals_for": 1.33,
+      "goals_against": 1.02,
       "corners": 2.5,
       "corners_against": 4.9,
       "shots": 10.3,
       "shots_against": 11
     },
     "away": {
-      "goals_for": 0.75,
-      "goals_against": 1.42,
+      "goals_for": 1.13,
+      "goals_against": 1.50,
       "corners": 2.5,
       "corners_against": 5.8,
       "shots": 8.3,
@@ -137,15 +137,15 @@
     "logo": "https://media-4.api-sports.io/football/teams/529.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 2.74,
-      "goals_against": 1.05,
+      "goals_for": 2.81,
+      "goals_against": 0.95,
       "corners": 7.2,
       "corners_against": 3.3,
       "shots": 18.3,
       "shots_against": 6.6
     },
     "away": {
-      "goals_for": 2.59,
+      "goals_for": 2.57,
       "goals_against": 1.00,
       "corners": 6.5,
       "corners_against": 4.2,
@@ -159,8 +159,8 @@
     "logo": "https://media-4.api-sports.io/football/teams/546.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 0.79,
-      "goals_against": 1.00,
+      "goals_for": 1.09,
+      "goals_against": 0.95,
       "corners": 3.9,
       "corners_against": 3.5,
       "shots": 11.3,
@@ -168,7 +168,7 @@
     },
     "away": {
       "goals_for": 1.05,
-      "goals_against": 1.09,
+      "goals_against": 1.10,
       "corners": 3.9,
       "corners_against": 4.2,
       "shots": 11.3,
@@ -181,16 +181,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/547.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.33,
-      "goals_against": 1.67,
+      "goals_for": 1.27,
+      "goals_against": 1.77,
       "corners": 5.5,
       "corners_against": 4.5,
       "shots": 11.0,
       "shots_against": 11.8
     },
     "away": {
-      "goals_for": 0.85,
-      "goals_against": 1.75,
+      "goals_for": 0.86,
+      "goals_against": 1.71,
       "corners": 4.0,
       "corners_against": 4.5,
       "shots": 9.5,
@@ -204,15 +204,15 @@
     "league": "La Liga",
     "home": {
       "goals_for": 1.33,
-      "goals_against": 1.89,
+      "goals_against": 2.20,
       "corners": 3.5,
       "corners_against": 6.3,
       "shots": 9.7,
       "shots_against": 15.8
     },
     "away": {
-      "goals_for": 0.78,
-      "goals_against": 2.17,
+      "goals_for": 1.22,
+      "goals_against": 1.97,
       "corners": 2.9,
       "corners_against": 7.0,
       "shots": 8.0,
@@ -225,7 +225,7 @@
     "logo": "https://media-4.api-sports.io/football/teams/728.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.25,
+      "goals_for": 1.23,
       "goals_against": 1.35,
       "corners": 5.9,
       "corners_against": 5.5,
@@ -233,8 +233,8 @@
       "shots_against": 13.1
     },
     "away": {
-      "goals_for": 0.94,
-      "goals_against": 1.00,
+      "goals_for": 0.91,
+      "goals_against": 1.05,
       "corners": 4.5,
       "corners_against": 4.6,
       "shots": 12.9,
@@ -247,16 +247,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/540.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.24,
-      "goals_against": 1.00,
+      "goals_for": 1.32,
+      "goals_against": 1.05,
       "corners": 4.0,
       "corners_against": 5.3,
       "shots": 10.4,
       "shots_against": 13.8
     },
     "away": {
-      "goals_for": 0.95,
-      "goals_against": 1.65,
+      "goals_for": 0.90,
+      "goals_against": 1.67,
       "corners": 3.6,
       "corners_against": 6.7,
       "shots": 8.6,
@@ -269,16 +269,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/798.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.05,
-      "goals_against": 1.11,
+      "goals_for": 1.00,
+      "goals_against": 1.19,
       "corners": 4.1,
       "corners_against": 6.0,
       "shots": 10.4,
       "shots_against": 14.6
     },
     "away": {
-      "goals_for": 0.83,
-      "goals_against": 1.25,
+      "goals_for": 0.90,
+      "goals_against": 1.33,
       "corners": 3.4,
       "corners_against": 6.6,
       "shots": 9.2,
@@ -291,7 +291,7 @@
     "logo": "https://media-4.api-sports.io/football/teams/543.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.62,
+      "goals_for": 1.68,
       "goals_against": 1.10,
       "corners": 5.4,
       "corners_against": 3.9,
@@ -299,8 +299,8 @@
       "shots_against": 10.0
     },
     "away": {
-      "goals_for": 1.29,
-      "goals_against": 1.48,
+      "goals_for": 1.32,
+      "goals_against": 1.50,
       "corners": 4.9,
       "corners_against": 4.6,
       "shots": 12.6,
@@ -313,15 +313,15 @@
     "logo": "https://media-4.api-sports.io/football/teams/541.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 2.29,
-      "goals_against": 0.95,
+      "goals_for": 2.26,
+      "goals_against": 0.91,
       "corners": 6.9,
       "corners_against": 3.5,
       "shots": 17.3,
       "shots_against": 8.9
     },
     "away": {
-      "goals_for": 1.80,
+      "goals_for": 1.81,
       "goals_against": 0.95,
       "corners": 6.0,
       "corners_against": 4.0,
@@ -335,16 +335,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/718.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.00,
-      "goals_against": 1.67,
+      "goals_for": 0.78,
+      "goals_against": 1.50,
       "corners": 3.0,
       "corners_against": 6.6,
       "shots": 9.3,
       "shots_against": 17.5
     },
     "away": {
-      "goals_for": 0.65,
-      "goals_against": 1.83,
+      "goals_for": 0.49,
+      "goals_against": 1.67,
       "corners": 2.5,
       "corners_against": 7.6,
       "shots": 7.3,
@@ -357,8 +357,8 @@
     "logo": "https://media-4.api-sports.io/football/teams/548.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.10,
-      "goals_against": 1.10,
+      "goals_for": 1.28,
+      "goals_against": 1.33,
       "corners": 6.1,
       "corners_against": 4.0,
       "shots": 11.1,
@@ -366,7 +366,7 @@
     },
     "away": {
       "goals_for": 0.76,
-      "goals_against": 1.33,
+      "goals_against": 1.41,
       "corners": 5.4,
       "corners_against": 5.3,
       "shots": 9.6,
@@ -379,16 +379,16 @@
     "logo": "",
     "league": "La Liga",
     "home": {
-      "goals_for": 0.90,
-      "goals_against": 1.25,
+      "goals_for": 1.20,
+      "goals_against": 1.29,
       "corners": 4.9,
       "corners_against": 4.0,
       "shots": 12.4,
       "shots_against": 10.0
     },
     "away": {
-      "goals_for": 1.38,
-      "goals_against": 1.66,
+      "goals_for": 1.41,
+      "goals_against": 1.63,
       "corners": 4.9,
       "corners_against": 4.9,
       "shots": 12.4,
@@ -401,16 +401,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/532.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 1.43,
-      "goals_against": 1.00,
+      "goals_for": 1.45,
+      "goals_against": 0.94,
       "corners": 5.4,
       "corners_against": 4.0,
       "shots": 11.1,
       "shots_against": 9.9
     },
     "away": {
-      "goals_for": 0.90,
-      "goals_against": 1.75,
+      "goals_for": 0.86,
+      "goals_against": 1.79,
       "corners": 4.4,
       "corners_against": 6.0,
       "shots": 9.1,
@@ -423,16 +423,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/533.png",
     "league": "La Liga",
     "home": {
-      "goals_for": 2.38,
-      "goals_against": 1.30,
+      "goals_for": 2.36,
+      "goals_against": 1.27,
       "corners": 5.4,
       "corners_against": 4.9,
       "shots": 15.1,
       "shots_against": 12.5
     },
     "away": {
-      "goals_for": 1.45,
-      "goals_against": 1.25,
+      "goals_for": 1.38,
+      "goals_against": 1.29,
       "corners": 4.3,
       "corners_against": 4.5,
       "shots": 13.8,
