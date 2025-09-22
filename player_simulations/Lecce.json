@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 867,
+    "player_id": 47182,
+    "name": "Tete Morente",
+    "position": "Attacker",
+    "appearances": 35,
+    "goals": 3,
+    "assists": 2,
+    "shots": 45,
+    "shots_on_target": 13,
+    "goals_per90_simulated": 0.19,
+    "assists_per90_simulated": 0.1,
+    "shots_per90": 2.56,
+    "sot_per90": 0.76,
+    "+1_goal_pct": 16.6,
+    "+1_assist_pct": 10.9,
+    "soa_pct": 25.7
+  },
+  {
+    "team_id": 867,
+    "player_id": 436260,
+    "name": "Francesco Camarda",
+    "position": "Attacker",
+    "appearances": 38,
+    "goals": 7,
+    "assists": 3,
+    "shots": 50,
+    "shots_on_target": 15,
+    "goals_per90_simulated": 0.46,
+    "assists_per90_simulated": 0.18,
+    "shots_per90": 3.18,
+    "sot_per90": 0.96,
+    "+1_goal_pct": 37.3,
+    "+1_assist_pct": 17.4,
+    "soa_pct": 48.2
+  }
+]
