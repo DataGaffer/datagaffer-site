@@ -5,196 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Player Simulations | DataGaffer</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    margin: 0; padding: 0;
-    color: #003f2e;
-  }
-  header {
-    background: #003f2e;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-  }
-  .banner {
-    text-align: center;
-    font-size: 20px;
-    margin: 20px auto;
-    color: #003f2e;
-    background: #e6f4ec;
-    padding: 10px;
-    border-left: 6px solid #003f2e;
-    width: 60%;
-    border-radius: 4px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
-  .buttons { text-align: center; margin-bottom: 20px; }
-  .buttons button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 2px solid #003f2e;
-    border-radius: 4px;
-    background: white;
-    color: #003f2e;
-  }
-  .buttons button.active {
-    background: #003f2e;
-    color: white;
-    font-weight: bold;
-  }
-  .search-box {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .search-box input {
-    width: 250px;
-    padding: 8px;
-    font-size: 14px;
-    border: 2px solid #003f2e;
-    border-radius: 6px;
-  }
-  table {
-    width: 95%;
-    max-width: 1100px;
-    margin: auto;
-    border-collapse: collapse;
-    background: white;
-    font-size: 14px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
-    table-layout: fixed;
-  }
-  th, td {
-    padding: 6px;
-    text-align: center;
-    border: 1px solid #ccc;
-    font-weight: normal;
-    word-wrap: break-word;
-  }
-  th {
-    background: #003f2e;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  td:first-child, th:first-child { width: 6%; }
-  td:nth-child(2), th:nth-child(2) { width: 22%; font-weight: bold; }
-  td:nth-child(n+3), th:nth-child(n+3) { width: 8%; }
-  tr:nth-child(even) { background: #f2f2f2; }
-  img { width: auto; height: 28px; vertical-align: middle; }
-  .hidden { display: none; }
+ body {
+   font-family: Arial, sans-serif;
+   background: #f9f9f9;
+   margin: 0; padding: 0;
+   color: #003f2e;
+ }
+ header {
+   background: #003f2e;
+   color: white;
+   padding: 15px;
+   text-align: center;
+   font-size: 22px;
+   font-weight: bold;
+ }
+ .banner {
+   text-align: center;
+   font-size: 20px;
+   margin: 20px auto;
+   color: #003f2e;
+   background: #e6f4ec;
+   padding: 10px;
+   border-left: 6px solid #003f2e;
+   width: 60%;
+   border-radius: 4px;
+   margin-bottom: 40px;
+   margin-top: 40px;
+ }
+ .buttons { text-align: center; margin-bottom: 20px; }
+ .buttons button {
+   margin: 0 10px;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   border: 2px solid #003f2e;
+   border-radius: 4px;
+   background: white;
+   color: #003f2e;
+ }
+ .buttons button.active {
+   background: #003f2e;
+   color: white;
+   font-weight: bold;
+ }
+ .search-box {
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ .search-box input {
+   width: 250px;
+   padding: 8px;
+   font-size: 14px;
+   border: 2px solid #003f2e;
+   border-radius: 6px;
+ }
+ table {
+   width: 60%;
+   max-width: 700px;
+   margin: auto;
+   border-collapse: collapse;
+   background: white;
+   font-size: 13px;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   margin-bottom: 40px;
+   table-layout: fixed;
+ }
+ th, td {
+   padding: 4px 6px;
+   text-align: center;
+   border: 1px solid #ccc;
+   font-weight: normal;
+   word-wrap: break-word;
+ }
+ th {
+   background: #003f2e;
+   color: white;
+   font-size: 14px;
+   cursor: pointer;
+ }
+ td:first-child, th:first-child { width: 8%; }   /* Team */
+ td:nth-child(2), th:nth-child(2) { width: 25%; font-weight: bold; } /* Player */
+ td:nth-child(3), th:nth-child(3) { width: 12%; }  /* Pos */
+ td:nth-child(n+4), th:nth-child(n+4) { width: 12%; } /* Stats */
+ tr:nth-child(even) { background: #f2f2f2; }
+ img { width: auto; height: 28px; vertical-align: middle; }
+ .hidden { display: none; }
 
-  .highlight-header { background: #fcff55 !important; color: black !important; }
-  .highlight-col { background: #fff9b2 !important; color: black !important; }
+ .highlight-header { background: #fcff55 !important; color: black !important; }
+ .highlight-col { background: #fff9b2 !important; color: black !important; }
 
-  .card-grid {
+/* ✅ Mobile version for Player Simulations */
+@media (max-width: 768px) {
+   .header-logo { height: 50px !important; width: auto !important; }
+ h1 { font-size: 20px !important; }
+
+ .banner {
+   width: 85% !important;
+   font-size: 13px !important;
+   padding: 6px !important;
+   margin-top: 25px;
+ }
+
+  .buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-  }
-  .player-card {
-    background: white;
-    border: 2px solid #003f2e;
-    border-radius: 12px;
-    width: 220px;
-    text-align: center;
-    padding: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  }
-  .player-card > img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    object-fit: cover;
-  }
-  .player-card h3 {
-    margin: 5px 0;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .player-card p {
-    margin: 3px 0;
-    font-size: 13px;
+    gap: 6px;
+    margin-bottom: 15px;
   }
 
-  .player-card .team-logo {
-  height: 20px;
-  width: auto;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-
-
-@media (max-width: 925px) {
-body { overflow-x: hidden; }
-.header-logo { height: 50px !important; width: auto !important; }
-h1 { font-size: 20px !important; }
-.banner {
-  width: 95% !important;
-  font-size: 13px !important;
-  padding: 6px !important;
-  margin-top: 25px;
-}
-.buttons { margin-bottom: 30px; margin-top: 25px; }
-.buttons button {
-  padding: 6px 10px !important;
-  font-size: 12px !important;
-  margin: 0 4px !important;
-}
-.search-box input {
-  width: 180px !important;
-  font-size: 12px !important;
-  padding: 6px !important;
-}
-#player-stats {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-table {
-  min-width: 700px;
-  font-size: 12px !important;
-  margin-bottom: 25px;
-}
-th, td {
-  padding: 8px 4px!important;
-  font-size: 12px !important;
-  white-space: nowrap;
-}
-
-  .player-card .team-logo {
-    height: 18px !important;
-    width: auto;
-    max-width: 28px;
-    margin-left: 4px !important;
+  .buttons button {
+    font-size: 14px;
+    padding: 6px 10px;
+    height: 34px;
+    margin: 0;
   }
 
-.card-grid { gap: 12px !important; margin: 10px auto !important; }
-.player-card { width: 160px !important; padding: 10px !important; }
-.player-card > img { width: 60px !important; height: 60px !important; }
-.player-card h3 { font-size: 14px !important; }
-.player-card p { font-size: 11px !important; }
+  .search-box input {
+    width: 90%;
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  table {
+    width: 95%;
+    font-size: 11px;
+  }
+
+  th, td {
+    padding: 3px 4px;
+    font-size: 11px;
+  }
+
+  img {
+    height: 20px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin: 15px 0 10px;
+  }
 }
+
+
+
 </style>
 </head>
 <body>
 
 <div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
 <a href="dashboard.html" style="text-decoration: none; color: inherit; display: contents;">
-  <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
-     alt="DG Logo" class="header-logo"
-     style="height: 90px; width: auto; position: absolute; left: 20px; top: 0px; z-index: 2;" />
+ <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+    alt="DG Logo" class="header-logo"
+    style="height: 90px; width: auto; position: absolute; left: 20px; top: 0px; z-index: 2;" />
 <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
 </a>
 </div>
@@ -202,219 +167,280 @@ th, td {
 <div class="banner">Today's top players after simulation results. /90 means average per90 stat after 20000 match simulations. G= Goal A= Assist SOT= Shots on target SOA= Score or Assist</div>
 
 <div class="buttons">
-<button onclick="showSection('stats', this)" id="btn-stats" class="active">Player Stats</button>
-<button onclick="showSection('cards', this)" id="btn-cards">Player Cards</button>
+<button onclick="showSection('goals', this)" id="btn-goals" class="active">Goals</button>
+<button onclick="showSection('assists', this)" id="btn-assists">Assists</button>
+<button onclick="showSection('shots', this)" id="btn-shots">Shots/SOT</button>
+<button onclick="showSection('soa', this)" id="btn-soa">Score or Assist</button>
 </div>
 
 <div class="search-box">
 <input type="text" id="searchInput" placeholder="Search player, team, or position..." onkeyup="applySearch()" />
 </div>
 
-<div id="player-stats"></div>
-<div id="player-cards" class="hidden">
-<div id="cards-grid" class="card-grid"></div>
-</div>
+<div id="goals-section"></div>
+<div id="assists-section" class="hidden"></div>
+<div id="shots-section" class="hidden"></div>
+<div id="soa-section" class="hidden"></div>
 
 <script>
 let allPlayers = [];
-let sortConfig = { column: null, asc: false };
+let sortConfig = { table: null, column: null, asc: false };
 let teamLookup = {};
 
 async function loadPlayerData() {
-  const fixturesRes = await fetch("fixtures.json");
-  const fixtures = await fixturesRes.json();
+ const fixturesRes = await fetch("fixtures.json");
+ const fixtures = await fixturesRes.json();
+ const teamsRes = await fetch("teams.json");
+ const teams = await teamsRes.json();
+ teamLookup = Object.fromEntries(teams.map(t => [t.id, t.name]));
 
-  // load teams.json so we can map team_id → team name
-  const teamsRes = await fetch("teams.json");
-  const teams = await teamsRes.json();
-  teamLookup = Object.fromEntries(teams.map(t => [t.id, t.name]));
+ const fixtureTeamIds = new Set();
+ fixtures.forEach(f => {
+   fixtureTeamIds.add(f.home.id);
+   fixtureTeamIds.add(f.away.id);
+ });
 
-  const fixtureTeamIds = new Set();
-  fixtures.forEach(f => {
-    fixtureTeamIds.add(f.home.id);
-    fixtureTeamIds.add(f.away.id);
-  });
+ const indexRes = await fetch("player_simulations/index.json");
+ const files = await indexRes.json();
 
-  const indexRes = await fetch("player_simulations/index.json");
-  const files = await indexRes.json();
+ let allTeamsPlayers = [];
+ for (const file of files) {
+   const res = await fetch("player_simulations/" + file);
+   const teamPlayers = await res.json();
+   teamPlayers.forEach(p => p.team = teamLookup[p.team_id] || "Unknown");
+   allTeamsPlayers.push(...teamPlayers);
+ }
 
-  let allTeamsPlayers = [];
-  for (const file of files) {
-    const res = await fetch("player_simulations/" + file);
-    const teamPlayers = await res.json();
-
-    // attach team name to each player
-    teamPlayers.forEach(p => p.team = teamLookup[p.team_id] || "Unknown");
-
-    allTeamsPlayers.push(...teamPlayers);
-  }
-
-  let players;
-  if (fixtureTeamIds.size > 0) {
-    players = allTeamsPlayers.filter(p => fixtureTeamIds.has(p.team_id));
-  } else {
-    players = allTeamsPlayers;
-  }
-
-  allPlayers = players;
-  return players;
+ let players;
+ if (fixtureTeamIds.size > 0) {
+   players = allTeamsPlayers.filter(p => fixtureTeamIds.has(p.team_id));
+ } else {
+   players = allTeamsPlayers;
+ }
+ allPlayers = players;
+ return players;
 }
 
-function buildTable(players) {
-let table = `<table>
-  <tr id="header-row">
-    <th onclick="sortTable(0)">Team</th>
-    <th onclick="sortTable(1)">Player</th>
-    <th onclick="sortTable(2)">Pos</th>
-    <th onclick="sortTable(3)">G/90</th>
-    <th onclick="sortTable(4)">A/90</th>
-    <th onclick="sortTable(5)">Sht/90</th>
-    <th onclick="sortTable(6)">SOT/90</th>
-    <th onclick="sortTable(7)">+1G %</th>
-    <th onclick="sortTable(8)">+1A %</th>
-    <th onclick="sortTable(9)">SOA %</th>
-  </tr>`;
-players.forEach(p => {
-  const logoPath = `assets/logos/${p.team_id}.png`;
-  table += `
-    <tr>
-      <td><img src="${logoPath}" onerror="this.onerror=null;this.src='assets/logos/${p.team_id}.svg';" alt="${p.team}"></td>
-      <td>${p.name}</td>
-      <td>${p.position}</td>
-      <td>${(p.goals_per90_simulated ?? 0).toFixed(2)}</td>
-      <td>${(p.assists_per90_simulated ?? 0).toFixed(2)}</td>
-      <td>${(p.shots_per90 ?? 0).toFixed(2)}</td>
-      <td>${(p.sot_per90 ?? 0).toFixed(2)}</td>
-      <td>${(p["+1_goal_pct"] ?? 0).toFixed(1)}%</td>
-      <td>${(p["+1_assist_pct"] ?? 0).toFixed(1)}%</td>
-      <td>${(p.soa_pct ?? 0).toFixed(1)}%</td>
-    </tr>`;
-});
-table += "</table>";
-return table;
+// ---------- Table builders ----------
+function buildGoals(players) {
+ let table = `<table><tr id="goals-header">
+   <th onclick="sortTable('goals',0)">Team</th>
+   <th onclick="sortTable('goals',1)">Player</th>
+   <th onclick="sortTable('goals',2)">Pos</th>
+   <th onclick="sortTable('goals',3)">Goals/90</th>
+   <th onclick="sortTable('goals',4)">+1 Goal %</th>
+ </tr>`;
+ players.forEach(p => {
+   const logoPath = `assets/logos/${p.team_id}.png`;
+   table += `<tr>
+     <td><img src="${logoPath}" alt="${p.team}" onerror="this.onerror=null;this.src='assets/logos/${p.team_id}.svg';"></td>
+     <td>${p.name}</td><td>${p.position}</td>
+     <td>${(p.goals_per90_simulated ?? 0).toFixed(2)}</td>
+     <td>${(p["+1_goal_pct"] ?? 0).toFixed(1)}%</td>
+   </tr>`;
+ });
+ return table + "</table>";
 }
 
-function buildCards(players) {
-  let grid = "";
-  players.forEach(p => {
-    const photoPath = `assets/faces/${p.player_id}.png`;
-    const logoPath = `assets/logos/${p.team_id}.png`;
-
-    grid += `
-      <div class="player-card">
-        <img src="${photoPath}" alt="${p.name}" 
-             onerror="this.src='assets/faces/placeholder.png'">
-        <h3>
-          ${p.name} 
-          <img src="${logoPath}" alt="${p.team}" class="team-logo"
-               onerror="this.onerror=null;this.src='assets/logos/${p.team_id}.svg';">
-         </h3>
-        <p><b>Position:</b> ${p.position}</p>
-        <p><b>Goals/90:</b> ${(p.goals_per90_simulated ?? 0).toFixed(2)}</p>
-        <p><b>Assists/90:</b> ${(p.assists_per90_simulated ?? 0).toFixed(2)}</p>
-        <p><b>Shots/90:</b> ${(p.shots_per90 ?? 0).toFixed(2)}</p>
-        <p><b>SOT/90:</b> ${(p.sot_per90 ?? 0).toFixed(2)}</p>
-        <p><b>+1 Goal %:</b> ${(p["+1_goal_pct"] ?? 0).toFixed(1)}%</p>
-        <p><b>+1 Assist %:</b> ${(p["+1_assist_pct"] ?? 0).toFixed(1)}%</p>
-        <p><b>SOA %:</b> ${(p.soa_pct ?? 0).toFixed(1)}%</p>
-      </div>
-    `;
-  });
-  return grid;
+function buildAssists(players) {
+ let table = `<table><tr id="assists-header">
+   <th onclick="sortTable('assists',0)">Team</th>
+   <th onclick="sortTable('assists',1)">Player</th>
+   <th onclick="sortTable('assists',2)">Pos</th>
+   <th onclick="sortTable('assists',3)">Assists/90</th>
+   <th onclick="sortTable('assists',4)">+1 A%</th>
+ </tr>`;
+ players.forEach(p => {
+   const logoPath = `assets/logos/${p.team_id}.png`;
+   table += `<tr>
+     <td><img src="${logoPath}" alt="${p.team}" onerror="this.onerror=null;this.src='assets/logos/${p.team_id}.svg';"></td>
+     <td>${p.name}</td><td>${p.position}</td>
+     <td>${(p.assists_per90_simulated ?? 0).toFixed(2)}</td>
+     <td>${(p["+1_assist_pct"] ?? 0).toFixed(1)}%</td>
+   </tr>`;
+ });
+ return table + "</table>";
 }
 
+function buildShots(players) {
+ let table = `<table><tr id="shots-header">
+   <th onclick="sortTable('shots',0)">Team</th>
+   <th onclick="sortTable('shots',1)">Player</th>
+   <th onclick="sortTable('shots',2)">Pos</th>
+   <th onclick="sortTable('shots',3)">Shots/90</th>
+   <th onclick="sortTable('shots',4)">SOT/90</th>
+ </tr>`;
+ players.forEach(p => {
+   const logoPath = `assets/logos/${p.team_id}.png`;
+   table += `<tr>
+     <td><img src="${logoPath}" alt="${p.team}" onerror="this.onerror=null;this.src='assets/logos/${p.team_id}.svg';"></td>
+     <td>${p.name}</td><td>${p.position}</td>
+     <td>${(p.shots_per90 ?? 0).toFixed(2)}</td>
+     <td>${(p.sot_per90 ?? 0).toFixed(2)}</td>
+   </tr>`;
+ });
+ return table + "</table>";
+}
 
+function buildSOA(players) {
+ let table = `<table><tr id="soa-header">
+   <th onclick="sortTable('soa',0)">Team</th>
+   <th onclick="sortTable('soa',1)">Player</th>
+   <th onclick="sortTable('soa',2)">Pos</th>
+   <th onclick="sortTable('soa',3)">SOA %</th>
+ </tr>`;
+ players.forEach(p => {
+   const logoPath = `assets/logos/${p.team_id}.png`;
+   table += `<tr>
+     <td><img src="${logoPath}" alt="${p.team}" onerror="this.onerror=null;this.src='assets/logos/${p.team_id}.svg';"></td>
+     <td>${p.name}</td><td>${p.position}</td>
+     <td>${(p.soa_pct ?? 0).toFixed(1)}%</td>
+   </tr>`;
+ });
+ return table + "</table>";
+}
+
+// ---------- Sorting + Highlight ----------
+function sortTable(section, col) {
+ if (sortConfig.table !== section || sortConfig.column !== col) {
+   sortConfig.asc = false;
+ } else {
+   sortConfig.asc = !sortConfig.asc;
+ }
+ sortConfig.table = section;
+ sortConfig.column = col;
+
+ let sorted = [...allPlayers];
+ sorted.sort((a, b) => {
+   let valA, valB;
+   switch(section) {
+     case 'goals':
+       if (col===0) {valA=a.team; valB=b.team;}
+       if (col===1) {valA=a.name; valB=b.name;}
+       if (col===2) {valA=a.position; valB=b.position;}
+       if (col===3) {valA=a.goals_per90_simulated; valB=b.goals_per90_simulated;}
+       if (col===4) {valA=a["+1_goal_pct"]; valB=b["+1_goal_pct"];}
+       break;
+     case 'assists':
+       if (col===0) {valA=a.team; valB=b.team;}
+       if (col===1) {valA=a.name; valB=b.name;}
+       if (col===2) {valA=a.position; valB=b.position;}
+       if (col===3) {valA=a.assists_per90_simulated; valB=b.assists_per90_simulated;}
+       if (col===4) {valA=a["+1_assist_pct"]; valB=b["+1_assist_pct"];}
+       break;
+     case 'shots':
+       if (col===0) {valA=a.team; valB=b.team;}
+       if (col===1) {valA=a.name; valB=b.name;}
+       if (col===2) {valA=a.position; valB=b.position;}
+       if (col===3) {valA=a.shots_per90; valB=b.shots_per90;}
+       if (col===4) {valA=a.sot_per90; valB=b.sot_per90;}
+       break;
+     case 'soa':
+       if (col===0) {valA=a.team; valB=b.team;}
+       if (col===1) {valA=a.name; valB=b.name;}
+       if (col===2) {valA=a.position; valB=b.position;}
+       if (col===3) {valA=a.soa_pct; valB=b.soa_pct;}
+       break;
+   }
+   if (typeof valA==="string") valA = valA.toLowerCase();
+   if (typeof valB==="string") valB = valB.toLowerCase();
+   if (valA < valB) return sortConfig.asc ? -1 : 1;
+   if (valA > valB) return sortConfig.asc ? 1 : -1;
+   return 0;
+ });
+
+ if (section==='goals') document.getElementById("goals-section").innerHTML = buildGoals(sorted);
+ if (section==='assists') document.getElementById("assists-section").innerHTML = buildAssists(sorted);
+ if (section==='shots') document.getElementById("shots-section").innerHTML = buildShots(sorted);
+ if (section==='soa') document.getElementById("soa-section").innerHTML = buildSOA(sorted);
+
+ // reset highlights
+ document.querySelectorAll("th, td").forEach(cell => {
+   cell.classList.remove("highlight-header", "highlight-col");
+ });
+
+ // highlight clicked header + col
+ const tableId = section+"-section";
+ const headerRow = document.querySelector("#"+tableId+" table tr:first-child");
+ if (headerRow) {
+   const headerCells = headerRow.querySelectorAll("th");
+   if (headerCells[col]) headerCells[col].classList.add("highlight-header");
+ }
+ const rows = document.querySelectorAll("#"+tableId+" table tr");
+ rows.forEach((row, i) => {
+   if (i === 0) return;
+   const cells = row.querySelectorAll("td");
+   if (cells[col]) cells[col].classList.add("highlight-col");
+ });
+}
+
+// ---------- Search ----------
 function applySearch() {
-const term = document.getElementById("searchInput").value.toLowerCase();
-const filtered = allPlayers.filter(p =>
-  p.name.toLowerCase().includes(term) ||
-  (p.team && p.team.toLowerCase().includes(term)) ||
-  p.position.toLowerCase().includes(term)
-);
-
-if (!document.getElementById("player-stats").classList.contains("hidden")) {
-  document.getElementById("player-stats").innerHTML = buildTable(filtered);
-}
-if (!document.getElementById("player-cards").classList.contains("hidden")) {
-  document.getElementById("cards-grid").innerHTML = buildCards(filtered);
-}
-}
-
-function sortTable(col) {
-if (sortConfig.column !== col) {
-  sortConfig.asc = false;
-} else {
-  sortConfig.asc = !sortConfig.asc;
-}
-sortConfig.column = col;
-let sorted = [...allPlayers];
-sorted.sort((a, b) => {
-  let valA, valB;
-  switch(col) {
-    case 0: valA = a.team; valB = b.team; break;
-    case 1: valA = a.name; valB = b.name; break;
-    case 2: valA = a.position; valB = b.position; break;
-    case 3: valA = a.goals_per90_simulated; valB = b.goals_per90_simulated; break;
-    case 4: valA = a.assists_per90_simulated; valB = b.assists_per90_simulated; break;
-    case 5: valA = a.shots_per90; valB = b.shots_per90; break;
-    case 6: valA = a.sot_per90; valB = b.sot_per90; break;
-    case 7: valA = a["+1_goal_pct"]; valB = b["+1_goal_pct"]; break;
-    case 8: valA = a["+1_assist_pct"]; valB = b["+1_assist_pct"]; break;
-    case 9: valA = a.soa_pct; valB = b.soa_pct; break;
-  }
-  if (typeof valA === "string") valA = valA.toLowerCase();
-  if (typeof valB === "string") valB = valB.toLowerCase();
-  if (valA < valB) return sortConfig.asc ? -1 : 1;
-  if (valA > valB) return sortConfig.asc ? 1 : -1;
-  return 0;
-});
-document.getElementById("player-stats").innerHTML = buildTable(sorted);
-
-// reset highlights
-document.querySelectorAll("th, td").forEach(cell => {
-  cell.classList.remove("highlight-header", "highlight-col");
-});
-// highlight clicked header cell
-const headerCells = document.querySelectorAll("#player-stats table tr:first-child th");
-if (headerCells[col]) headerCells[col].classList.add("highlight-header");
-// highlight column cells
-const rows = document.querySelectorAll("#player-stats table tr");
-rows.forEach((row, i) => {
-  if (i === 0) return;
-  const cells = row.querySelectorAll("td");
-  if (cells[col]) cells[col].classList.add("highlight-col");
-});
+ const term = document.getElementById("searchInput").value.toLowerCase();
+ const filtered = allPlayers.filter(p =>
+   p.name.toLowerCase().includes(term) ||
+   (p.team && p.team.toLowerCase().includes(term)) ||
+   p.position.toLowerCase().includes(term)
+ );
+ if (!document.getElementById("goals-section").classList.contains("hidden")) document.getElementById("goals-section").innerHTML = buildGoals(filtered);
+ if (!document.getElementById("assists-section").classList.contains("hidden")) document.getElementById("assists-section").innerHTML = buildAssists(filtered);
+ if (!document.getElementById("shots-section").classList.contains("hidden")) document.getElementById("shots-section").innerHTML = buildShots(filtered);
+ if (!document.getElementById("soa-section").classList.contains("hidden")) document.getElementById("soa-section").innerHTML = buildSOA(filtered);
 }
 
 async function init() {
-const players = await loadPlayerData();
-document.getElementById("player-stats").innerHTML = buildTable(players);
+  const players = await loadPlayerData();
+  document.getElementById("goals-section").innerHTML = buildGoals(players);
+  document.getElementById("assists-section").innerHTML = buildAssists(players);
+  document.getElementById("shots-section").innerHTML = buildShots(players);
+  document.getElementById("soa-section").innerHTML = buildSOA(players);
 }
+init();
 
-function showSection(section, btn) {
-document.getElementById("player-stats").classList.add("hidden");
-document.getElementById("player-cards").classList.add("hidden");
-document.getElementById("player-" + section).classList.remove("hidden");
-document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
-btn.classList.add("active");
 
-if (section === "cards") {
-  const term = document.getElementById("searchInput").value.toLowerCase();
-  if (term) {
-    const filtered = allPlayers.filter(p =>
-      p.name.toLowerCase().includes(term) ||
-      (p.team && p.team.toLowerCase().includes(term)) ||
-      p.position.toLowerCase().includes(term)
-    );
-    document.getElementById("cards-grid").innerHTML = buildCards(filtered);
-  } else {
-    document.getElementById("cards-grid").innerHTML = "<p style='text-align:center;color:#666;'>Search for a player above to see cards</p>";
+// Auto-select section if ?section= is in the URL
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const section = urlParams.get("section") || "goals";
+
+  // find the right button and trigger
+  const btn = document.getElementById("btn-" + section);
+  if (btn) {
+    showSection(section, btn);
   }
-}
-}
+});
 
 init();
+
+function showSection(section, btn) {
+  // hide all
+  document.querySelectorAll("#goals-section, #assists-section, #shots-section, #soa-section")
+    .forEach(el => el.classList.add("hidden"));
+  document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
+
+  // show selected
+  document.getElementById(section + "-section").classList.remove("hidden");
+  btn.classList.add("active");
+
+  // rebuild the right table
+  switch(section) {
+    case "goals":
+      document.getElementById("goals-section").innerHTML = buildGoals(allPlayers);
+      break;
+    case "assists":
+      document.getElementById("assists-section").innerHTML = buildAssists(allPlayers);
+      break;
+    case "shots":
+      document.getElementById("shots-section").innerHTML = buildShots(allPlayers);
+      break;
+    case "soa":
+      document.getElementById("soa-section").innerHTML = buildSOA(allPlayers);
+      break;
+  }
+}
+
 </script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
@@ -466,9 +492,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 </script>
 
-
 </body>
 </html>
+
+
 
 
 

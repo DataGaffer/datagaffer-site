@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DataGaffer - Match Cards</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
+
+    /* Header */
+    .header-bar {
+      background-color: #003f2e;
+      color: white;
+      padding: 10px 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header-logo {
+      height: 90px;
+      width: auto;
+      position: absolute;
+      left: 20px;
+      top: 0;
+      z-index: 2;
+    }
+    .header-bar h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    /* Banner */
+    .banner {
+      text-align: center;
+      font-size: 20px;
+      margin: 20px auto 40px auto;
+      color: #003f2e;
+      background: #e6f4ec;
+      padding: 10px;
+      border-left: 6px solid #003f2e;
+      width: 60%;
+      border-radius: 4px;
+    }
+
+    /* Search */
+    .search-box { text-align: center; margin-bottom: 20px; }
+    .search-box input {
+      width: 250px;
+      padding: 8px;
+      font-size: 14px;
+      border: 2px solid #003f2e;
+      border-radius: 6px;
+    }
+
+    /* Card Grid */
+    .container { display:grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:16px; padding:16px; }
+
+    .card { background:#fff; border-radius:10px; padding:14px; box-shadow:0 2px 6px rgba(0,0,0,.1); }
+    .card h3 { margin:0 0 10px; font-size:20px; color:#003f2e; text-align:center; display:flex; align-items:center; justify-content:center; gap:6px; }
+    .club-logo { height:22px; width:auto; vertical-align:middle; }
+
+    .row { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    .section { background:#eef7f1; border:1px solid #dfe9e3; border-radius:8px; padding:10px; }
+    .section h4 { margin:0 0 6px; font-size:15px; color:#1a1a1a; text-align:center; }
+
+    ul { list-style:none; padding:0; margin:0; }
+    li { display:flex; justify-content:space-between; align-items:center; font-size:14px; padding:4px 0; }
+
+    .badge { padding:2px 6px; border-radius:6px; border:1px solid transparent; font-weight:bold; }
+    .badge.green { background:#76f79f; border-color:#7fd59f; }
+    .badge.red   { background:#fb6d6d; border-color:#e08a8a; }
+
+    .h2h { background:#fff6e8; border:1px solid #f2e0c5; border-radius:8px; padding:10px; margin-top:12px; }
+    .h2h h4 { margin:0 0 6px; text-align:left; }
+
+    .player-face { width:22px; height:22px; border-radius:50%; vertical-align:middle; margin-right:6px; }
+  
+  /* 🔹 Mobile adjustments for Match Cards */
+@media (max-width: 768px) {
+  .header-logo { height: 50px !important; }
+  .header-bar h1 { font-size: 20px !important; }
+  .banner { width: 85% !important; font-size: 13px !important; padding: 6px !important; margin-top: 20px; }
+
+  .search-box input {
+    width: 180px !important;
+    font-size: 12px !important;
+    padding: 5px !important;
+  }
+
+  .container {
+    gap: 12px !important;
+    margin: 10px auto !important;
+    grid-template-columns: 1fr !important; /* one card per row */
+  }
+
+  .card {
+    padding: 10px !important;
+    font-size: 12px !important;
+  }
+
+  .card h3 {
+    font-size: 14px !important;
+    flex-wrap: wrap; /* allow logos + names to break nicely */
+  }
+
+  .club-logo {
+    height: 18px !important;
+    max-width: 28px;
+    margin: 0 2px !important;
+  }
+
+  .section h4 { font-size: 12px !important; }
+  li { font-size: 11px !important; }
+  .player-face { width: 18px !important; height: 18px !important; }
+}
+
+  
+  </style>
+</head>
+<body>
+
+<!-- 🔹 Header -->
+<div class="header-bar">
+  <a href="dashboard.html" style="text-decoration:none; color:inherit; display:contents;">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo" class="header-logo" />
+    <h1>DataGaffer.com</h1>
+  </a>
+</div>
+
+<!-- 🔹 Banner -->
+<div class="banner">Full match cards with xG, corners, shots, odds value & player simulations</div>
+
+<!-- 🔹 Search -->
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search team, matchup, or league..." onkeyup="applySearch()" />
+</div>
+
+<!-- 🔹 Cards -->
+<div class="container" id="cards"></div>
+
+<script>
+  async function loadData() {
+    const fixtures = await fetch("fixtures.json").then(r => r.json());
+    const h2hData  = await fetch("h2h_and_odds.json").then(r => r.json());
+
+    const index = await fetch("player_simulations/index.json").then(r => r.json());
+    const playersByTeamFile = {};
+    for (const file of index) {
+      try {
+        playersByTeamFile[file.replace(".json","")] =
+          await fetch("player_simulations/" + file).then(r => r.json());
+      } catch (_) {}
+    }
+    return { fixtures, h2hData, playersByTeamFile };
+  }
+
+  function toDecimalOdds(prob) {
+    if (!prob || prob <= 0 || prob >= 100) return null;
+    return +(100 / prob).toFixed(2);
+  }
+
+  function wrapHighlight(value, values, suffix = "%") {
+    const nums = values.filter(v => typeof v === "number");
+    if (!nums.length || typeof value !== "number") return (value ?? "N/A") + suffix;
+    const max = Math.max(...nums), min = Math.min(...nums);
+    const display = value + suffix;
+    if (value === max) return `<span class="badge green">${display}</span>`;
+    if (value === min) return `<span class="badge red">${display}</span>`;
+    return display;
+  }
+
+  function wrapValueHighlight(value, values, suffix = "") {
+    const nums = values.filter(v => typeof v === "number");
+    if (!nums.length || typeof value !== "number") return (value ?? "N/A") + suffix;
+    const max = Math.max(...nums), min = Math.min(...nums);
+    const display = (value > 0 ? "+" + value : value) + suffix;
+    if (value === max) return `<span class="badge green">${display}</span>`;
+    if (value === min) return `<span class="badge red">${display}</span>`;
+    return display;
+  }
+
+  function buildCard(f, h2hMap, playersByTeamFile) {
+    const sim = f.sim_stats || {};
+    const simStats = `
+      <div class="section">
+        <h4>Simulated Match Stats</h4>
+        <ul>
+          <li><span>xG</span><span>${sim.xg?.home ?? "–"} - ${sim.xg?.away ?? "–"}</span></li>
+          <li><span>Corners</span><span>${sim.corners?.home ?? "–"} - ${sim.corners?.away ?? "–"}</span></li>
+          <li><span>Shots</span><span>${sim.shots?.home ?? "–"} - ${sim.shots?.away ?? "–"}</span></li>
+        </ul>
+      </div>`;
+
+    const p = sim.percents || {};
+    const outcomeVals = [p.home_win_pct, p.draw_pct, p.away_win_pct];
+    const outcome = `
+      <div class="section">
+        <h4>Simulation Outcome</h4>
+        <ul>
+          <li><span>Home Win</span><span>${wrapHighlight(p.home_win_pct, outcomeVals)}</span></li>
+          <li><span>Draw</span><span>${wrapHighlight(p.draw_pct, outcomeVals)}</span></li>
+          <li><span>Away Win</span><span>${wrapHighlight(p.away_win_pct, outcomeVals)}</span></li>
+        </ul>
+      </div>`;
+
+    const book = f.book_odds || {};
+    const valueRows = [];
+    for (const [k, simPct] of Object.entries(p)) {
+      const market = k.replace("_pct", "");
+      const bookOdds = book[market];
+      const simOdds = toDecimalOdds(simPct);
+      if (simOdds && bookOdds) {
+        valueRows.push({ label: market, diff: +(bookOdds - simOdds).toFixed(2) });
+      }
+    }
+    valueRows.sort((a,b) => b.diff - a.diff);
+    const topValues = valueRows.slice(0,3);
+    const diffs = topValues.map(r => r.diff);
+    const bestValue = `
+      <div class="section">
+        <h4>Top 3 Best Value</h4>
+        <ul>
+          ${topValues.map(r => `<li><span>${r.label}</span><span>${wrapValueHighlight(r.diff, diffs, "")}</span></li>`).join("") || "<li>No markets</li>"}
+        </ul>
+      </div>`;
+
+    const homeKey = f.home.name.replace(/ /g, "_");
+    const awayKey = f.away.name.replace(/ /g, "_");
+    const allPlayers = [
+      ...(playersByTeamFile[homeKey] || []),
+      ...(playersByTeamFile[awayKey] || [])
+    ];
+    allPlayers.sort((a,b) => (b.soa_pct ?? 0) - (a.soa_pct ?? 0));
+    const topSOA = allPlayers.slice(0,3);
+    const soaVals = topSOA.map(p => p.soa_pct ?? 0);
+    const soa = `
+      <div class="section">
+        <h4>Top 3 SOA%</h4>
+        <ul>
+          ${topSOA.map(pl => `
+            <li>
+              <span>
+                <img class="player-face" src="assets/faces/${pl.player_id}.png" onerror="this.style.display='none'"/>
+                ${pl.name}
+              </span>
+              <span>${wrapHighlight(pl.soa_pct, soaVals)}</span>
+            </li>`).join("") || "<li>No players</li>"}
+        </ul>
+      </div>`;
+
+    const key = `${Math.min(f.home.id, f.away.id)}_${Math.max(f.home.id, f.away.id)}`;
+    const h2h = h2hMap[key] || {};
+    const recHome = h2h.h2h_home_wins ?? 0;
+    const recDraw = h2h.h2h_draws ?? 0;
+    const recAway = h2h.h2h_away_wins ?? 0;
+    const avgHome = (h2h.h2h_avg_home ?? "–");
+    const avgAway = (h2h.h2h_avg_away ?? "–");
+
+    const h2hSection = `
+      <div class="h2h">
+        <h4>Head-to-Head (last 5)</h4>
+        <ul>
+          <li><span>Record</span><span>${f.home.name} ${recHome}W - ${recDraw}D - ${recAway}W ${f.away.name}</span></li>
+          <li><span>Avg Goals</span><span>${f.home.name}: ${avgHome} &nbsp; | &nbsp; ${f.away.name}: ${avgAway}</span></li>
+        </ul>
+      </div>`;
+
+    return `
+      <div class="card">
+        <h3>
+          <img class="club-logo" src="${f.home_logo}" alt="${f.home.name}">
+          ${f.home.name} &nbsp;vs&nbsp; ${f.away.name}
+          <img class="club-logo" src="${f.away_logo}" alt="${f.away.name}">
+        </h3>
+        <div class="row">
+          ${simStats}
+          ${outcome}
+        </div>
+        <div class="row">
+          ${bestValue}
+          ${soa}
+        </div>
+        ${h2hSection}
+      </div>`;
+  }
+
+  let allFixtures = [];
+  function applySearch() {
+    const term = document.getElementById("searchInput").value.toLowerCase();
+    const filtered = allFixtures.filter(f =>
+      f.home.name.toLowerCase().includes(term) ||
+      f.away.name.toLowerCase().includes(term) ||
+      (f.league && f.league.name.toLowerCase().includes(term))
+    );
+    const { h2hData, playersByTeamFile } = window._loaded;
+    document.getElementById("cards").innerHTML =
+      filtered.map(f => buildCard(f, h2hData, playersByTeamFile)).join("");
+  }
+
+  (async () => {
+    const { fixtures, h2hData, playersByTeamFile } = await loadData();
+    window._loaded = { h2hData, playersByTeamFile };
+    allFixtures = fixtures;
+    document.getElementById("cards").innerHTML =
+      fixtures.map(f => buildCard(f, h2hData, playersByTeamFile)).join("");
+  })();
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* --- Supabase setup --- */
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";  // replace with your anon key
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+/* --- Inactivity logout (15 minutes) --- */
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+let inactivityTimer;
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(async () => {
+    console.log("Auto-logout after inactivity");
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+  }, INACTIVITY_LIMIT);
+}
+
+// Reset timer on user activity
+["click","mousemove","keydown","scroll","touchstart"].forEach(evt =>
+  document.addEventListener(evt, resetInactivityTimer)
+);
+
+// Start timer when page loads
+resetInactivityTimer();
+
+/* --- Explicit logout handling --- */
+supabaseClient.auth.onAuthStateChange((event) => {
+  if (event === "SIGNED_OUT") {
+    console.log("User signed out → redirecting to login");
+    window.location.href = "login.html";
+  }
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const { data, error } = await supabaseClient.auth.getSession();
+  console.log("DEBUG session:", data?.session);
+  console.log("DEBUG error:", error);
+
+  supabaseClient.auth.onAuthStateChange((event, session) => {
+    console.log("DEBUG auth event:", event, session);
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+

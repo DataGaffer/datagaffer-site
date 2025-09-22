@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Player Cards</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+
+  /* Header bar */
+  .header-bar {
+    background-color: #003f2e;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-logo {
+    height: 90px;
+    width: auto;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    z-index: 2;
+  }
+  .header-bar h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  /* Banner under header */
+  .banner {
+    text-align: center;
+    font-size: 18px;
+    margin: 30px auto 20px auto;
+    color: #003f2e;
+    background: #e6f4ec;
+    padding: 10px;
+    border-left: 6px solid #003f2e;
+    width: 60%;
+    border-radius: 4px;
+  }
+
+  /* Search box */
+  .search-box {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .search-box input {
+    width: 250px;
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #003f2e;
+    border-radius: 6px;
+  }
+
+  /* Card grid */
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  .player-card {
+    background: white;
+    border: 2px solid #003f2e;
+    border-radius: 12px;
+    width: 220px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  .player-card > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+  .player-card h3 {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .player-card p {
+    margin: 3px 0;
+    font-size: 13px;
+  }
+  .player-card .team-logo {
+    height: 20px;
+    width: auto;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .header-logo { height: 50px !important; }
+    .header-bar h1 { font-size: 20px !important; }
+    .banner { width: 85% !important; font-size: 13px !important; padding: 6px !important; margin-top: 20px; }
+    .search-box input { width: 180px !important; font-size: 12px !important; padding: 5px !important; }
+    .card-grid { gap: 12px !important; margin: 10px auto !important; }
+    .player-card { width: 160px !important; padding: 10px !important; }
+    .player-card > img { width: 60px !important; height: 60px !important; }
+    .player-card h3 { font-size: 14px !important; }
+    .player-card p { font-size: 11px !important; }
+    .player-card .team-logo { height: 18px !important; max-width: 28px; margin-left: 4px !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header-bar">
+  <a href="dashboard.html" style="text-decoration: none; color: inherit; display: contents;">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo"
+         class="header-logo" />
+    <h1>DataGaffer.com</h1>
+  </a>
+</div>
+
+<!-- Banner -->
+<div class="banner">Player cards from today’s simulations (per 90 stats)</div>
+
+<!-- Search -->
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search player, team, or position..." onkeyup="applySearch()" />
+</div>
+
+<!-- Player cards -->
+<div id="cards-grid" class="card-grid"></div>
+
+<script>
+let allPlayers = [];
+let teamLookup = {};
+
+async function loadPlayerData() {
+  const fixturesRes = await fetch("fixtures.json");
+  const fixtures = await fixturesRes.json();
+
+  const teamsRes = await fetch("teams.json");
+  const teams = await teamsRes.json();
+  teamLookup = Object.fromEntries(teams.map(t => [t.id, t.name]));
+
+  const fixtureTeamIds = new Set();
+  fixtures.forEach(f => {
+    fixtureTeamIds.add(f.home.id);
+    fixtureTeamIds.add(f.away.id);
+  });
+
+  const indexRes = await fetch("player_simulations/index.json");
+  const files = await indexRes.json();
+
+  let allTeamsPlayers = [];
+  for (const file of files) {
+    const res = await fetch("player_simulations/" + file);
+    const teamPlayers = await res.json();
+    teamPlayers.forEach(p => p.team = teamLookup[p.team_id] || "Unknown");
+    allTeamsPlayers.push(...teamPlayers);
+  }
+
+  let players;
+  if (fixtureTeamIds.size > 0) {
+    players = allTeamsPlayers.filter(p => fixtureTeamIds.has(p.team_id));
+  } else {
+    players = allTeamsPlayers;
+  }
+
+  allPlayers = players;
+  return players;
+}
+
+function buildCards(players) {
+  let grid = "";
+  players.forEach(p => {
+    const photoPath = `assets/faces/${p.player_id}.png`;
+    const logoPath = `assets/logos/${p.team_id}.png`;
+
+    grid += `
+      <div class="player-card">
+        <img src="${photoPath}" alt="${p.name}" onerror="this.src='assets/faces/placeholder.png'">
+        <h3>
+          ${p.name}
+          <img src="${logoPath}" alt="${p.team}" class="team-logo"
+               onerror="this.onerror=null;this.src='assets/logos/${p.team_id}.svg';">
+        </h3>
+        <p><b>Position:</b> ${p.position}</p>
+        <p><b>Goals/90:</b> ${(p.goals_per90_simulated ?? 0).toFixed(2)}</p>
+        <p><b>Assists/90:</b> ${(p.assists_per90_simulated ?? 0).toFixed(2)}</p>
+        <p><b>Shots/90:</b> ${(p.shots_per90 ?? 0).toFixed(2)}</p>
+        <p><b>SOT/90:</b> ${(p.sot_per90 ?? 0).toFixed(2)}</p>
+        <p><b>+1 Goal %:</b> ${(p["+1_goal_pct"] ?? 0).toFixed(1)}%</p>
+        <p><b>+1 Assist %:</b> ${(p["+1_assist_pct"] ?? 0).toFixed(1)}%</p>
+        <p><b>SOA %:</b> ${(p.soa_pct ?? 0).toFixed(1)}%</p>
+      </div>
+    `;
+  });
+  return grid;
+}
+
+function applySearch() {
+  const term = document.getElementById("searchInput").value.toLowerCase();
+  const filtered = allPlayers.filter(p =>
+    p.name.toLowerCase().includes(term) ||
+    p.team.toLowerCase().includes(term) ||
+    (p.position && p.position.toLowerCase().includes(term))
+  );
+  document.getElementById("cards-grid").innerHTML = buildCards(filtered);
+}
+
+async function init() {
+  const players = await loadPlayerData();
+  document.getElementById("cards-grid").innerHTML = buildCards(players);
+}
+init();
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* --- Supabase setup --- */
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";  // replace with your anon key
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+/* --- Inactivity logout (15 minutes) --- */
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+let inactivityTimer;
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(async () => {
+    console.log("Auto-logout after inactivity");
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+  }, INACTIVITY_LIMIT);
+}
+
+// Reset timer on user activity
+["click","mousemove","keydown","scroll","touchstart"].forEach(evt =>
+  document.addEventListener(evt, resetInactivityTimer)
+);
+
+// Start timer when page loads
+resetInactivityTimer();
+
+/* --- Explicit logout handling --- */
+supabaseClient.auth.onAuthStateChange((event) => {
+  if (event === "SIGNED_OUT") {
+    console.log("User signed out → redirecting to login");
+    window.location.href = "login.html";
+  }
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const { data, error } = await supabaseClient.auth.getSession();
+  console.log("DEBUG session:", data?.session);
+  console.log("DEBUG error:", error);
+
+  supabaseClient.auth.onAuthStateChange((event, session) => {
+    console.log("DEBUG auth event:", event, session);
+  });
+});
+</script>
+
+</body>
+</html>
+

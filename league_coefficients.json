@@ -25,5 +25,8 @@
   "Polish Ekstraklasa": 0.20,
   "Azerbaijan Premier League": 0.40,
   "Kazakhstan Premier League": 0.25,
-  "National Teams": 1.0
+  "National Teams": 1.0,
+  "Championship": 0.65,
+  "League One": 0.45,
+  "League Two": 0.40
 }

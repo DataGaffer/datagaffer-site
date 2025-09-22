@@ -24,7 +24,8 @@ def load_team_stats():
         "ligue_1.json",
         "eredivisie.json",
         "champions_league.json",
-        "europa_league.json"
+        "europa_league.json",
+        "carabao.json"
     ]
     for file in leagues:
         with open(f"team_stats/{file}") as f:
