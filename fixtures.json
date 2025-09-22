@@ -26,10 +26,10 @@
       "home_win": 1.45,
       "draw": 4.5,
       "away_win": 7.0,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 2.00,
+      "over_2_5": 1.80,
+      "home_o1_5": 1.57,
+      "away_o1_5": 5.00
     },
     "sim_stats": {
       "xg": {
@@ -85,10 +85,10 @@
       "home_win": 2.35,
       "draw": 3.1,
       "away_win": 3.2,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.95,
+      "over_2_5": 2.20,
+      "home_o1_5": 2.50,
+      "away_o1_5": 3.25
     },
     "sim_stats": {
       "xg": {
@@ -144,10 +144,10 @@
       "home_win": 2.8,
       "draw": 3.5,
       "away_win": 2.38,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.80,
+      "over_2_5": 2.00,
+      "home_o1_5": 2.62,
+      "away_o1_5": 2.25
     },
     "sim_stats": {
       "xg": {
@@ -203,10 +203,10 @@
       "home_win": 8.5,
       "draw": 6.0,
       "away_win": 1.28,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.95,
+      "over_2_5": 1.53,
+      "home_o1_5": 5.00,
+      "away_o1_5": 1.33
     },
     "sim_stats": {
       "xg": {
@@ -215,14 +215,14 @@
         "total": "2.65"
       },
       "corners": {
-        "home": "1.7",
-        "away": "16.7",
-        "total": "18.3"
+        "home": "4.7",
+        "away": "6.7",
+        "total": "11.4"
       },
       "shots": {
-        "home": "3.9",
-        "away": "43.1",
-        "total": "47.1"
+        "home": "11.9",
+        "away": "17.1",
+        "total": "28.0"
       },
       "percents": {
         "home_win_pct": 8.0,
@@ -262,10 +262,10 @@
       "home_win": 17.0,
       "draw": 7.5,
       "away_win": 1.14,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 2.05,
+      "over_2_5": 1.44,
+      "home_o1_5": 6.00,
+      "away_o1_5": 1.25
     },
     "sim_stats": {
       "xg": {
@@ -274,14 +274,14 @@
         "total": "3.17"
       },
       "corners": {
-        "home": "1.4",
-        "away": "19.6",
-        "total": "21.0"
+        "home": "3.3",
+        "away": "7.1",
+        "total": "10.4"
       },
       "shots": {
-        "home": "3.3",
-        "away": "50.1",
-        "total": "53.4"
+        "home": "6.4",
+        "away": "18.7",
+        "total": "25.1"
       },
       "percents": {
         "home_win_pct": 1.9,
@@ -321,10 +321,10 @@
       "home_win": 1.28,
       "draw": 5.0,
       "away_win": 12.0,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 2.05,
+      "over_2_5": 1.61,
+      "home_o1_5": 1.36,
+      "away_o1_5": 6.00
     },
     "sim_stats": {
       "xg": {
@@ -380,10 +380,10 @@
       "home_win": 1.17,
       "draw": 7.5,
       "away_win": 13.0,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.95,
+      "over_2_5": 1.33,
+      "home_o1_5": 1.18,
+      "away_o1_5": 5.50
     },
     "sim_stats": {
       "xg": {
@@ -392,14 +392,14 @@
         "total": "3.43"
       },
       "corners": {
-        "home": "11.0",
-        "away": "2.6",
+        "home": "7.0",
+        "away": "3.6",
         "total": "13.6"
       },
       "shots": {
-        "home": "29.1",
+        "home": "22.1",
         "away": "6.7",
-        "total": "35.7"
+        "total": "28.8"
       },
       "percents": {
         "home_win_pct": 76.6,
@@ -439,10 +439,10 @@
       "home_win": 7.0,
       "draw": 5.5,
       "away_win": 1.36,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.70,
+      "over_2_5": 1.44,
+      "home_o1_5": 3.75,
+      "away_o1_5": 1.33
     },
     "sim_stats": {
       "xg": {
@@ -498,10 +498,10 @@
       "home_win": 3.1,
       "draw": 3.4,
       "away_win": 2.25,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.70,
+      "over_2_5": 1.90,
+      "home_o1_5": 2.62,
+      "away_o1_5": 2.10
     },
     "sim_stats": {
       "xg": {

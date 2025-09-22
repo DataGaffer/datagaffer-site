@@ -57,7 +57,7 @@
     /* Card Grid */
     .container { display:grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:16px; padding:16px; }
 
-    .card { background:#fff; border-radius:10px; padding:14px; box-shadow:0 2px 6px rgba(0,0,0,.1); }
+    .card { background:#ffffff; border-radius:10px; padding:14px; box-shadow:0 2px 6px rgba(0,0,0,.1); }
     .card h3 { margin:0 0 10px; font-size:20px; color:#003f2e; text-align:center; display:flex; align-items:center; justify-content:center; gap:6px; }
     .club-logo { height:22px; width:auto; vertical-align:middle; }
 
@@ -251,7 +251,9 @@
         </ul>
       </div>`;
 
-    const key = `${Math.min(f.home.id, f.away.id)}_${Math.max(f.home.id, f.away.id)}`;
+    console.log("Fixture IDs:", f.home_id, f.away_id);
+const key = `${Math.min(f.home_id, f.away_id)}_${Math.max(f.home_id, f.away_id)}`;
+console.log("Looking for key:", key, "→ Found:", h2hMap[key]);
     const h2h = h2hMap[key] || {};
     const recHome = h2h.h2h_home_wins ?? 0;
     const recDraw = h2h.h2h_draws ?? 0;
@@ -259,14 +261,21 @@
     const avgHome = (h2h.h2h_avg_home ?? "–");
     const avgAway = (h2h.h2h_avg_away ?? "–");
 
-    const h2hSection = `
-      <div class="h2h">
-        <h4>Head-to-Head (last 5)</h4>
-        <ul>
-          <li><span>Record</span><span>${f.home.name} ${recHome}W - ${recDraw}D - ${recAway}W ${f.away.name}</span></li>
-          <li><span>Avg Goals</span><span>${f.home.name}: ${avgHome} &nbsp; | &nbsp; ${f.away.name}: ${avgAway}</span></li>
-        </ul>
-      </div>`;
+    const h2hSection = h2h && Object.keys(h2h).length > 0
+  ? `
+    <div class="h2h">
+      <h4>Head-to-Head (last 5)</h4>
+      <ul>
+        <li><span>Record</span><span>${f.home.name} ${recHome}W - ${recDraw}D - ${recAway}W ${f.away.name}</span></li>
+        <li><span>Avg Goals</span><span>${f.home.name}: ${avgHome ?? "–"} &nbsp; | &nbsp; ${f.away.name}: ${avgAway ?? "–"}</span></li>
+      </ul>
+    </div>`
+  : `
+    <div class="h2h">
+      <h4>Head-to-Head (last 5)</h4>
+      <p style="font-size:14px; color:#555; margin:0;">No recent meetings</p>
+    </div>`;
+
 
     return `
       <div class="card">
