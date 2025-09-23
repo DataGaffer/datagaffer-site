@@ -1,0 +1,20 @@
+[
+  {
+    "team_id": 193,
+    "player_id": 8764,
+    "name": "Dylan Mbayo",
+    "position": "Attacker",
+    "appearances": 38,
+    "goals": 4,
+    "assists": 9,
+    "shots": 31,
+    "shots_on_target": 14,
+    "goals_per90_simulated": 0.24,
+    "assists_per90_simulated": 0.5,
+    "shots_per90": 1.69,
+    "sot_per90": 0.77,
+    "+1_goal_pct": 20.6,
+    "+1_assist_pct": 39.1,
+    "soa_pct": 51.7
+  }
+]

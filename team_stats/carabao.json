@@ -1,47 +1,11 @@
 [
 
-{
-    "name": "Barnsley",
-    "id": 747,
-    "league": "League One",
-    "goals_scored": 1.50,
-    "goals_conceded": 1.59,
-    "corners": 5.7,
-    "corners_conceded": 5.0,
-    "shots": 13.1,
-    "shots_conceded": 12.1
-  },
-
-   {
-    "name": "Lincoln",
-    "id": 1379,
-    "league": "League One",
-    "goals_scored": 1.39,
-    "goals_conceded": 1.22,
-    "corners": 5.2,
-    "corners_conceded": 5.0,
-    "shots": 10.7,
-    "shots_conceded": 13.1
-  },
-
-   {
-    "name": "Southampton",
-    "id": 41,
-    "league": "Championship",
-    "goals_scored": 1.17,
-    "goals_conceded": 1.50,
-    "corners": 6.2,
-    "corners_conceded": 5.2,
-    "shots": 15.2,
-    "shots_conceded": 13.0
-  },
-
    {
     "name": "Huddersfield",
     "id": 37,
     "league": "League One",
-    "goals_scored": 1.67,
-    "goals_conceded": 1.22,
+    "scored": 1.67,
+    "conceded": 1.22,
     "corners": 6.5,
     "corners_conceded": 5.0,
     "shots": 11.9,
@@ -52,8 +16,8 @@
     "name": "Bradford",
     "id": 1343,
     "league": "League One",
-    "goals_scored": 1.89,
-    "goals_conceded": 1.22,
+    "scored": 1.89,
+    "conceded": 1.22,
     "corners": 5.2,
     "corners_conceded": 5.2,
     "shots": 13.2,
@@ -64,8 +28,8 @@
     "name": "Doncaster",
     "id": 1354,
     "league": "League One",
-    "goals_scored": 1.11,
-    "goals_conceded": 1.11,
+    "scored": 1.11,
+    "conceded": 1.11,
     "corners": 5.2,
     "corners_conceded": 6.0,
     "shots": 11.7,
@@ -76,8 +40,8 @@
     "name": "Port Vale",
     "id": 1351,
     "league": "League One",
-    "goals_scored": 0.89,
-    "goals_conceded": 1.11,
+    "scored": 0.89,
+    "conceded": 1.11,
     "corners": 4.7,
     "corners_conceded": 6.5,
     "shots": 14.3,

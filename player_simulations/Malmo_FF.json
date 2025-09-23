@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 375,
+    "player_id": 39141,
+    "name": "Lasse Johnsen",
+    "position": "Midfielder",
+    "appearances": 18,
+    "goals": 3,
+    "assists": 1,
+    "shots": 9,
+    "shots_on_target": 6,
+    "goals_per90_simulated": 0.33,
+    "assists_per90_simulated": 0.12,
+    "shots_per90": 0.93,
+    "sot_per90": 0.63,
+    "+1_goal_pct": 28.1,
+    "+1_assist_pct": 10.9,
+    "soa_pct": 36.0
+  },
+  {
+    "team_id": 375,
+    "player_id": 306955,
+    "name": "Otto Rosengren",
+    "position": "Midfielder",
+    "appearances": 19,
+    "goals": 1,
+    "assists": 4,
+    "shots": 12,
+    "shots_on_target": 4,
+    "goals_per90_simulated": 0.11,
+    "assists_per90_simulated": 0.45,
+    "shots_per90": 1.24,
+    "sot_per90": 0.43,
+    "+1_goal_pct": 10.2,
+    "+1_assist_pct": 36.4,
+    "soa_pct": 42.9
+  }
+]

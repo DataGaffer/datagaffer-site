@@ -1,0 +1,20 @@
+[
+  {
+    "team_id": 566,
+    "player_id": 279797,
+    "name": "Caio Vidal",
+    "position": "Midfielder",
+    "appearances": 6,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 2,
+    "goals_per90_simulated": 0.21,
+    "assists_per90_simulated": 0.48,
+    "shots_per90": 3.51,
+    "sot_per90": 1.38,
+    "+1_goal_pct": 19.0,
+    "+1_assist_pct": 32.7,
+    "soa_pct": 51.7
+  }
+]
