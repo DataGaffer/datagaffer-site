@@ -1,0 +1,20 @@
+[
+  {
+    "team_id": 801,
+    "player_id": 56293,
+    "name": "Idrissa Toure",
+    "position": "Midfielder",
+    "appearances": 38,
+    "goals": 6,
+    "assists": 4,
+    "shots": 42,
+    "shots_on_target": 13,
+    "goals_per90_simulated": 0.26,
+    "assists_per90_simulated": 0.2,
+    "shots_per90": 1.83,
+    "sot_per90": 0.56,
+    "+1_goal_pct": 23.7,
+    "+1_assist_pct": 17.2,
+    "soa_pct": 36.9
+  }
+]

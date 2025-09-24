@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataGaffer Rankings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background: #003f2e;
+      color: white;
+      padding: 10px 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header-logo {
+      height: 90px;
+      width: auto;
+      position: absolute;
+      left: 20px;
+      top: 0;
+      z-index: 2;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .banner {
+      text-align: center;
+      font-size: 20px;
+      margin: 20px auto;
+      color: #003f2e;
+      background: #e6f4ec;
+      padding: 10px;
+      border-left: 6px solid #003f2e;
+      width: 60%;
+      border-radius: 4px;
+    }
+
+    .toc {
+      text-align: center;
+      margin: 10px auto 30px auto;
+    }
+    .toc-btn {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 18px;
+      background: #003f2e;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+    .toc-btn:hover {
+      background: #003f2e;
+    }
+
+    .outlook-page {
+      background: #ffffff;
+      margin: 40px auto;
+      padding: 0;
+      max-width: 700px;
+      border-radius: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border: 1.8px solid #000;
+      display: none; /* hidden by default */
+    }
+    .outlook-page.active {
+      display: block; /* only active one shows */
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      margin: 0;
+      padding: 0;
+    }
+    .page-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #00783c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin: 0;
+      padding: 4px 0 0 0;
+    }
+    .section-logo {
+      height: 38px;
+      width: auto;
+    }
+    .page-description {
+      text-align: center;
+      font-size: 14px;
+      color: #303030;
+      margin: 0;
+      padding: 0 0 6px 0;
+    }
+
+    .outlook-table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    .outlook-table th {
+      background: #454545;
+      color: #fff;
+      padding: 10px;
+      font-size: 14px;
+      border-bottom: 1px solid #ffffff;
+    }
+    .outlook-table th:not(:last-child),
+    .outlook-table td:not(:last-child) {
+      border-right: 1px solid #ffffff;
+    }
+    .outlook-table td {
+      padding: 10px 7px;
+      text-align: center;
+      line-height: 1.1;
+      border-bottom: 1px solid #ddd;
+    }
+    .outlook-table tr:nth-child(even) { background-color: #edecec; }
+    .outlook-table tr:nth-child(odd)  { background-color: #d4d3d3; }
+
+    .outlook-table th:nth-child(1), .outlook-table td:nth-child(1),
+    .outlook-table th:nth-child(4), .outlook-table td:nth-child(4) {
+      width: 8%;
+    }
+    .outlook-table tbody th:nth-child(1), .outlook-table td:nth-child(1),
+    .outlook-table tbody th:nth-child(4), .outlook-table td:nth-child(4) {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #000;
+    }
+    .outlook-table th:nth-child(2), .outlook-table td:nth-child(2),
+    .outlook-table th:nth-child(5), .outlook-table td:nth-child(5) {
+      width: 10%;
+    }
+    .outlook-table th:nth-child(3), .outlook-table td:nth-child(3),
+    .outlook-table th:nth-child(6), .outlook-table td:nth-child(6) {
+      width: 26%;
+    }
+    .outlook-table tbody th:nth-child(3), .outlook-table td:nth-child(3),
+    .outlook-table tbody th:nth-child(6), .outlook-table td:nth-child(6) {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .team-logo {
+      height: 40px;
+    }
+
+    /* --- Mobile adjustments for Rankings Page --- */
+@media (max-width: 925px) {
+  body { overflow-x: hidden; }
+
+  .header-logo { height: 50px !important; width: auto !important; }
+  h1 { font-size: 20px !important; }
+
+  .banner {
+    width: 85% !important;
+    font-size: 13px !important;
+    padding: 6px !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.toc {
+    margin: 15px auto !important;
+  }
+  .toc-btn {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    margin: 4px !important;
+  }
+
+  /* Page sections */
+  .outlook-page {
+    margin: 20px auto !important;
+    max-width: 85% !important;
+    font-size: 12px !important;
+  }
+
+  /* Section titles + explanations */
+  .page-title {
+    font-size: 11px !important;
+    gap: 5px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .section-logo {
+    height: 22px !important;
+  }
+
+  .page-description {
+    font-size: 9px !important;
+    margin: 0 !important;
+    padding: 1px 0 1px 0 !important;
+  }
+
+  /* General table tightening */
+  .outlook-table {
+    table-layout: fixed;
+    width: 100% !important;
+    font-size: 10px !important;
+  }
+  .outlook-table th {
+    font-size: 8px !important;
+    padding: 3px 2px !important;
+    line-height: 1.5;
+  }
+  .outlook-table td {
+    padding: 3px 2px !important;
+    font-size: 12px !important;
+    line-height: 1.2;
+  }
+
+  .team-logo {
+    height: 22px !important;
+  }
+
+  /* Narrower rank columns */
+  .outlook-table td:nth-child(1),
+  .outlook-table td:nth-child(4) {
+    font-size: 14px !important;
+    width: 8% !important;
+  }
+
+  /* Narrower name columns with ellipsis */
+  .outlook-table td:nth-child(3),
+  .outlook-table td:nth-child(6) {
+    font-size: 9px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <a href="dashboard.html" style="text-decoration:none; color:inherit; display:contents;">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo" class="header-logo" />
+    <h1>DataGaffer.com</h1>
+  </a>
+</div>
+
+<!-- Banner -->
+<div class="banner">Top 20 teams ranked for every bet. *Top 6 leagues only, updated every monday*</div>
+
+<!-- Buttons -->
+<div class="toc">
+  <span class="toc-btn" onclick="showPage('btts')">BTTS</span>
+  <span class="toc-btn" onclick="showPage('over25')">Over 2.5</span>
+  <span class="toc-btn" onclick="showPage('team_total')">Team Total</span>
+  <span class="toc-btn" onclick="showPage('win')">Win %</span>
+</div>
+
+<!-- BTTS Rankings -->
+<section id="btts" class="outlook-page active">
+  <div class="page-title">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo" class="section-logo">
+    <h2>BTTS Rankings</h2>
+  </div>
+  <div class="page-description">
+    Teams ranked to hit Both Teams To Score by there performance & stat history.
+  </div>
+  <div class="page-content">
+    <table class="outlook-table">
+      <thead>
+        <tr>
+          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th></th><th>Team</th>
+        </tr>
+      </thead>
+      <tbody id="btts-rankings-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Over 2.5 Rankings -->
+<section id="over25" class="outlook-page">
+  <div class="page-title">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo" class="section-logo">
+    <h2>Over 2.5 Rankings</h2>
+  </div>
+  <div class="page-description">
+    Teams ranked to hit Over 2.5 goals by there performance & stat history.
+  </div>
+  <div class="page-content">
+    <table class="outlook-table">
+      <thead>
+        <tr>
+          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th></th><th>Team</th>
+        </tr>
+      </thead>
+      <tbody id="over25-rankings-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Team Total Rankings -->
+<section id="team_total" class="outlook-page">
+  <div class="page-title">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo" class="section-logo">
+    <h2>Team Total Rankings</h2>
+  </div>
+  <div class="page-description">
+    Teams ranked to hit over 1.5 team goals by there performance & stat history.
+  </div>
+  <div class="page-content">
+    <table class="outlook-table">
+      <thead>
+        <tr>
+          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th></th><th>Team</th>
+        </tr>
+      </thead>
+      <tbody id="team-total-rankings-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Win Rankings -->
+<section id="win" class="outlook-page">
+  <div class="page-title">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo" class="section-logo">
+    <h2>Win Rankings</h2>
+  </div>
+  <div class="page-description">
+    Teams ranked by how likely to win in there specific league by performance history.
+  </div>
+  <div class="page-content">
+    <table class="outlook-table">
+      <thead>
+        <tr>
+          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th></th><th>Team</th>
+        </tr>
+      </thead>
+      <tbody id="win-rankings-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+function renderRankings(rankings, tbodyId) {
+  const tbody = document.getElementById(tbodyId);
+  tbody.innerHTML = "";
+  for (let i = 0; i < 10; i++) {
+    const left = rankings[i];
+    const right = rankings[i + 10];
+    let row = "<tr>";
+
+    if (left) {
+      row += `
+        <td>${left.rank}</td>
+        <td><img src="assets/logos/${left.id}.png"
+                 class="team-logo"
+                 onerror="this.onerror=null; this.src='assets/logos/${left.id}.svg'"></td>
+        <td>${left.team}</td>`;
+    } else {
+      row += "<td></td><td></td><td></td>";
+    }
+
+    if (right) {
+      row += `
+        <td>${right.rank}</td>
+        <td><img src="assets/logos/${right.id}.png"
+                 class="team-logo"
+                 onerror="this.onerror=null; this.src='assets/logos/${right.id}.svg'"></td>
+        <td>${right.team}</td>`;
+    } else {
+      row += "<td></td><td></td><td></td>";
+    }
+
+    row += "</tr>";
+    tbody.innerHTML += row;
+  }
+}
+
+fetch("rankings/rankings.json")
+  .then(res => res.json())
+  .then(data => {
+    renderRankings(data.btts, "btts-rankings-body");
+    renderRankings(data.over25, "over25-rankings-body");
+    renderRankings(data.team_total, "team-total-rankings-body");
+    renderRankings(data.win, "win-rankings-body");
+  });
+
+function showPage(pageId) {
+  document.querySelectorAll(".outlook-page").forEach(sec => sec.classList.remove("active"));
+  document.getElementById(pageId).classList.add("active");
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* --- Supabase setup --- */
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";  // replace with your anon key
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+/* --- Inactivity logout (15 minutes) --- */
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+let inactivityTimer;
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(async () => {
+    console.log("Auto-logout after inactivity");
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+  }, INACTIVITY_LIMIT);
+}
+
+// Reset timer on user activity
+["click","mousemove","keydown","scroll","touchstart"].forEach(evt =>
+  document.addEventListener(evt, resetInactivityTimer)
+);
+
+// Start timer when page loads
+resetInactivityTimer();
+
+/* --- Explicit logout handling --- */
+supabaseClient.auth.onAuthStateChange((event) => {
+  if (event === "SIGNED_OUT") {
+    console.log("User signed out → redirecting to login");
+    window.location.href = "login.html";
+  }
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const { data, error } = await supabaseClient.auth.getSession();
+  console.log("DEBUG session:", data?.session);
+  console.log("DEBUG error:", error);
+
+  supabaseClient.auth.onAuthStateChange((event, session) => {
+    console.log("DEBUG auth event:", event, session);
+  });
+});
+</script>
+
+</body>
+</html>
