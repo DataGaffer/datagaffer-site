@@ -55,7 +55,7 @@ def calculate_rankings(teams):
     # Sort each category high → low and assign ranks
     for key in rankings:
         rankings[key].sort(key=lambda x: x["rate"], reverse=True)
-        for i, entry in enumerate(rankings[key][:20], start=1):  # 🔹 Top 20 only
+        for i, entry in enumerate(rankings[key][:30], start=1):  # 🔹 Top 20 only
             entry["rank"] = i
             entry["value"] = f"{entry['rate']*100:.1f}%"
             del entry["rate"]

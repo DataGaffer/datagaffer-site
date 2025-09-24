@@ -2,7 +2,7 @@
   {
     "id": 201,
     "name": "AZ Alkmaar",
-    "logo": "https://media-4.api-sports.io/football/teams/201.png",
+    "logo": "assets/logos/201.png",
     "league": "Eredivisie",
     "home": {
       "goals_for": 1.95,
