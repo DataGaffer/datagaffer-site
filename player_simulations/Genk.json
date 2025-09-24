@@ -9,13 +9,13 @@
     "assists": 3,
     "shots": 52,
     "shots_on_target": 28,
-    "goals_per90_simulated": 1.21,
-    "assists_per90_simulated": 0.38,
-    "shots_per90": 6.72,
-    "sot_per90": 3.5,
-    "+1_goal_pct": 69.9,
-    "+1_assist_pct": 32.3,
-    "soa_pct": 79.6
+    "goals_per90_simulated": 0.64,
+    "assists_per90_simulated": 0.18,
+    "shots_per90": 3.1,
+    "sot_per90": 1.69,
+    "+1_goal_pct": 46.5,
+    "+1_assist_pct": 16.4,
+    "soa_pct": 55.3
   },
   {
     "team_id": 742,
@@ -29,8 +29,8 @@
     "shots_on_target": 28,
     "goals_per90_simulated": 0.29,
     "assists_per90_simulated": 0.45,
-    "shots_per90": 2.18,
-    "sot_per90": 0.96,
+    "shots_per90": 2.22,
+    "sot_per90": 0.93,
     "+1_goal_pct": 24.9,
     "+1_assist_pct": 36.2,
     "soa_pct": 52.1
