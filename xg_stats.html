@@ -103,6 +103,19 @@
      text-overflow: ellipsis;
    }
 
+   .search-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.search-box input {
+  width: 250px;
+  padding: 8px;
+  font-size: 14px;
+  border: 2px solid #003f2e;
+  border-radius: 6px;
+}
+
+
  /* --- Mobile adjustments --- */
 @media (max-width: 925px) {
  body { overflow-x: hidden; }
@@ -175,6 +188,17 @@
  </div>
 
  <div id="tables"></div>
+
+ <!-- 🔍 Search Box -->
+<div class="search-box">
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Search team, matchup, or league..." 
+    onkeyup="applySearch()" 
+  />
+</div>
+
 
  <script>
    let allFixtures = [];
@@ -275,6 +299,29 @@
    }
 
    showTable("xg", document.getElementById("btn-xg"));
+
+function applySearch() {
+  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+
+  // Filter fixtures
+  const filtered = allFixtures.filter(f =>
+    f.home.name.toLowerCase().includes(searchTerm) ||
+    f.away.name.toLowerCase().includes(searchTerm) ||
+    `${f.home.name} vs ${f.away.name}`.toLowerCase().includes(searchTerm) ||
+    (f.league && f.league.name.toLowerCase().includes(searchTerm))
+  );
+
+  // 🔁 Rebuild the tables dynamically based on active tab
+  if (document.getElementById("totals-section").classList.contains("active")) {
+    renderTotals(filtered);
+  } else if (document.getElementById("match-section").classList.contains("active")) {
+    renderMatch(filtered);
+  } else if (document.getElementById("team-section").classList.contains("active")) {
+    renderTeam(filtered);
+  }
+}
+
+
  </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
