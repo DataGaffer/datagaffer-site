@@ -1,0 +1,20 @@
+[
+  {
+    "team_id": 170,
+    "player_id": 26,
+    "name": "Marius Wolf",
+    "position": "Midfielder",
+    "appearances": 39,
+    "goals": 2,
+    "assists": 3,
+    "shots": 18,
+    "shots_on_target": 3,
+    "goals_per90_simulated": 0.1,
+    "assists_per90_simulated": 0.16,
+    "shots_per90": 0.87,
+    "sot_per90": 0.14,
+    "+1_goal_pct": 9.4,
+    "+1_assist_pct": 14.4,
+    "soa_pct": 22.5
+  }
+]

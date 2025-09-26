@@ -25,7 +25,6 @@ def load_team_stats():
         "eredivisie.json",
         "champions_league.json",
         "europa_league.json",
-        "carabao.json"
     ]
     for file in leagues:
         with open(f"team_stats/{file}") as f:
@@ -135,14 +134,19 @@ def simulate_match(home_id, away_id, fixture_id=None):
     exp_away_shots /= coef_ratio
 
    # ---- H2H influence ----
-    key = f"{min(home_id, away_id)}_{max(home_id, away_id)}"
+    with open("h2h_and_odds.json") as f:
+     h2h_and_odds = json.load(f)
+   
+    key = f"home_{home_id}_{away_id}"
     h2h_data = h2h_and_odds.get(key, {})
-    h_avg = h2h_data.get("h2h_avg_home", None)
-    a_avg = h2h_data.get("h2h_avg_away", None)
+    h_avg = h2h_data.get("avg_home", None)
+    a_avg = h2h_data.get("avg_away", None)
 
-    # Apply only if H2H data exists (at least 1 match logged)
-    if h_avg is not None and a_avg is not None:
-        w = 0.40
+    num_matches = h2h_data.get("num_matches", 0)
+
+    if h_avg is not None and a_avg is not None and num_matches > 0:
+        max_weight = 0.40
+        w = min(max_weight, 0.10 * num_matches)
         exp_home = exp_home * (1 - w) + h_avg * w
         exp_away = exp_away * (1 - w) + a_avg * w
 

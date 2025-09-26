@@ -1,0 +1,20 @@
+[
+  {
+    "team_id": 520,
+    "player_id": 2057,
+    "name": "Franco Vazquez",
+    "position": "Attacker",
+    "appearances": 35,
+    "goals": 10,
+    "assists": 4,
+    "shots": 66,
+    "shots_on_target": 26,
+    "goals_per90_simulated": 0.61,
+    "assists_per90_simulated": 0.23,
+    "shots_per90": 3.76,
+    "sot_per90": 1.49,
+    "+1_goal_pct": 45.1,
+    "+1_assist_pct": 20.5,
+    "soa_pct": 56.4
+  }
+]

@@ -254,14 +254,14 @@
       </div>`;
 
     console.log("Fixture IDs:", f.home_id, f.away_id);
-const key = `${Math.min(f.home_id, f.away_id)}_${Math.max(f.home_id, f.away_id)}`;
+const key = `home_${f.home_id}_${f.away_id}`;
 console.log("Looking for key:", key, "→ Found:", h2hMap[key]);
     const h2h = h2hMap[key] || {};
-    const recHome = h2h.h2h_home_wins ?? 0;
-    const recDraw = h2h.h2h_draws ?? 0;
-    const recAway = h2h.h2h_away_wins ?? 0;
-    const avgHome = (h2h.h2h_avg_home ?? "–");
-    const avgAway = (h2h.h2h_avg_away ?? "–");
+    const recHome = h2h.home_wins ?? 0;
+    const recDraw = h2h.draws ?? 0;
+    const recAway = h2h.away_wins ?? 0;
+    const avgHome = (h2h.avg_home ?? "–");
+    const avgAway = (h2h.avg_away ?? "–");
 
     const h2hSection = h2h && Object.keys(h2h).length > 0
   ? `

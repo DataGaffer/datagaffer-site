@@ -36,7 +36,6 @@ for fixture in data["response"]:
 
     # Skip teams not in teams.json
     if home["name"] not in known_names or away["name"] not in known_names:
-        print(f"⚠️ Skipping {home['name']} vs {away['name']} (not in teams.json)")
         continue
 
     # --- Get book odds (1X2) from Bet365 ---
@@ -64,8 +63,8 @@ for fixture in data["response"]:
             "away_o1_5": None
         }
 
-    # --- Get H2H stats (last 5 meetings) ---
-    h2h_url = f"https://v3.football.api-sports.io/fixtures/headtohead?h2h={home_id}-{away_id}&last=5"
+       # --- Get H2H stats (last 5 meetings, venue-specific) ---
+    h2h_url = f"https://v3.football.api-sports.io/fixtures/headtohead?h2h={home_id}-{away_id}&last=10"
     h2h_response = requests.get(h2h_url, headers=headers).json()
 
     home_wins, away_wins, draws = 0, 0, 0
@@ -73,6 +72,10 @@ for fixture in data["response"]:
 
     try:
         for match in h2h_response["response"]:
+            # ✅ Only include games where the current home_id was actually the home team
+            if match["teams"]["home"]["id"] != home_id:
+                continue  
+
             h_goals = match["goals"]["home"]
             a_goals = match["goals"]["away"]
 
@@ -81,37 +84,29 @@ for fixture in data["response"]:
 
             # Wins/draws
             if h_goals > a_goals:
-                if match["teams"]["home"]["id"] == home_id:
-                    home_wins += 1
-                else:
-                    away_wins += 1
+                home_wins += 1
             elif a_goals > h_goals:
-                if match["teams"]["away"]["id"] == away_id:
-                    away_wins += 1
-                else:
-                    home_wins += 1
+                away_wins += 1
             else:
                 draws += 1
 
             # Goals
-            if match["teams"]["home"]["id"] == home_id:
-                home_goals.append(h_goals)
-                away_goals.append(a_goals)
-            else:
-                home_goals.append(a_goals)
-                away_goals.append(h_goals)
+            home_goals.append(h_goals)
+            away_goals.append(a_goals)
 
         h2h_stats = {
             "home_wins": home_wins,
             "away_wins": away_wins,
             "draws": draws,
             "h2h_avg_home": round(sum(home_goals) / len(home_goals), 2) if home_goals else None,
-            "h2h_avg_away": round(sum(away_goals) / len(away_goals), 2) if away_goals else None
+            "h2h_avg_away": round(sum(away_goals) / len(away_goals), 2) if away_goals else None,
+            "num_matches": len(home_goals)
         }
 
     except Exception as e:
         print(f"⚠️ H2H error for {home['name']} vs {away['name']}: {e}")
         h2h_stats = {}
+
 
     # --- Save fixture (sim_stats later) ---
     valid_matches.append({
@@ -131,18 +126,20 @@ for fixture in data["response"]:
         "sim_stats": {}
     })
 
-    # --- Save H2H + odds ---
-    key = f"{min(home_id, away_id)}_{max(home_id, away_id)}"
+       # --- Save H2H + odds (aligned with match_simulator) ---
+    key = f"home_{home_id}_{away_id}"
     h2h_data[key] = {
         "book_home_win": book_odds.get("home_win", 0),
         "book_draw": book_odds.get("draw", 0),
         "book_away_win": book_odds.get("away_win", 0),
-        "h2h_home_wins": h2h_stats.get("home_wins", 0),
-        "h2h_away_wins": h2h_stats.get("away_wins", 0),
-        "h2h_draws": h2h_stats.get("draws", 0),
-        "h2h_avg_home": h2h_stats.get("h2h_avg_home", 0.0),
-        "h2h_avg_away": h2h_stats.get("h2h_avg_away", 0.0)
+        "home_wins": h2h_stats.get("home_wins", 0),
+        "away_wins": h2h_stats.get("away_wins", 0),
+        "draws": h2h_stats.get("draws", 0),
+        "avg_home": h2h_stats.get("h2h_avg_home", 0.0),
+        "avg_away": h2h_stats.get("h2h_avg_away", 0.0),
+        "num_matches": h2h_stats.get("num_matches", 0)
     }
+
 
 # --- Save H2H immediately ---
 with open("h2h_and_odds.json", "w") as f:
