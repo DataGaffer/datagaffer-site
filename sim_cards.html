@@ -24,6 +24,27 @@
       padding: 18px 12px; text-align: center;
       width: 120px; height: 70px;
     }
+
+/* Hover effect for grid buttons */
+.match-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 18px 12px;
+  text-align: center;
+  width: 120px;
+  height: 70px;
+  transition: all 0.25s ease; /* 👈 smooth hover animation */
+  cursor: pointer; /* 👈 shows clickable hand */
+}
+
+.match-box:hover {
+  transform: translateY(-5px); /* 👈 lifts up slightly */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25); /* 👈 stronger shadow */
+  background: #e0f2ea; /* 👈 light green background */
+}
+
+
     .match-box img { height: 45px; }
     .match-box .score { font-weight: bold; margin-top: 8px; font-size: 20px; }
     .explanation {
@@ -65,13 +86,15 @@
   
     /* --- Mobile adjustments --- */
   @media (max-width: 925px) {
-    body { overflow-x: hidden; }
+    .header-logo { height: 50px !important; width: auto !important; }
+ h1 { font-size: 20px !important; }
 
-    /* header */
-   .header-logo { height: 50px !important; width: auto !important; }
-    h1 { font-size: 20px !important; }
-    
-
+ .banner {
+   width: 85% !important;
+   font-size: 13px !important;
+   padding: 6px !important;
+   margin-top: 25px;
+ }
     /* match grid */
     .match-grid { gap: 10px; margin-bottom: 25px; }
     .match-box {
