@@ -158,14 +158,78 @@
     border-radius: 6px;
   }
 
+  .bottom-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 175px);
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.bottom-btn {
+  box-sizing: border-box;
+  background-color: #836953;
+  color: white;
+  padding: 20px 40px;
+  border: none;
+  display: flex;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: -15px;
+  text-align: center;
+  font-size: 32px;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  gap: 10px;
+  height: 68px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.bottom-btn:hover {
+  background-color: #493e26;
+}
+
+.bottom-line {
+    border: none;
+    height: 3px;
+    width: 300px;
+    background-color: #ccc;
+    margin: 15px auto;
+    border-radius: 2px;
+    margin-top: 60px;
+  }
+
 @media (max-width: 768px) {
  .dg-logo-img {
    height: 80px;
    margin-right: 7px;
  }
 
+.bottom-buttons {
+    grid-template-columns: repeat(2, 100px);
+    justify-content: center;
+    gap: 15px;                    /* smaller gap between them */
+    margin-bottom: 20px;          /* reduce bottom spacing */
+  }
 
+  .bottom-btn {
+    font-size: 18px;              /* smaller text */
+    padding: 12px 20px;           /* smaller padding */
+    width: 95%;                   /* shrink width compared to screen */
+    max-width: 100px;             /* don’t let it stretch too wide */
+    margin: 0 auto;               /* center the button horizontally */
+    height: 40px;                 /* let height adjust naturally */
+  }
  
+.bottom-line {
+    width: 40%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
   .dg-logo-wrapper {
     position: absolute;
     left: 7px;
@@ -326,6 +390,12 @@
   <a href="signup.html" class="button button-dead"><img class="button-icon" src="shot.svg" alt="icon">xG Stats</a>
   <a href="signup.html" class="button button-focus"><img class="button-icon" src="idcard.svg" alt="icon">Player Cards</a>
   <a href="signup.html" class="button button-focus"><img class="button-icon" src="field.svg" alt="icon">Match Cards</a>
+</div>
+
+<div class="bottom-line"></div>
+<div class="bottom-buttons">
+  <a href="model_home.html" class="bottom-btn">Model</a>
+  <a href="potd_home.html" class="bottom-btn">POTD</a>
 </div>
 
 </body>

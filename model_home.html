@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DataGaffer – Model & Methods</title>
+  <style>
+    :root{
+      --dg-green:#003f2e;
+      --dg-green-2:#0c5a40;
+      --dg-mint:#e6f4ec;
+      --dg-gray:#f8f9fa;
+      --dg-dark:#1a1a1a;
+      --dg-card:#ffffff;
+      --dg-border:#dcdcdc;
+      --dg-brown:#003f2e; /* earthy brown */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--dg-gray);color:var(--dg-dark)}
+    /* Header */
+    .header{background:var(--dg-green);color:#fff;padding:10px 20px;position:relative;display:flex;align-items:center;justify-content:center}
+    .header-logo{height:90px;width:auto;position:absolute;left:20px;top:0;z-index:2}
+    .header h1{margin:0;font-size:32px;font-weight:700}
+    /* Banner */
+    .banner{max-width:980px;margin:20px auto;color:var(--dg-green);background:var(--dg-mint);padding:12px;border-left:6px solid var(--dg-green);border-radius:4px;font-size:18px; font-weight: 600;}
+    /* Container */
+    .wrap{max-width:980px;margin:0 auto;padding:0 14px 40px}
+    /* Brown buttons (TOC) */
+    .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin:18px 0 26px}
+    .toc a{display:flex;align-items:center;justify-content:center;background:var(--dg-brown);color:#fff;text-decoration:none;border-radius:12px;padding:16px 18px;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+    .toc a:hover{filter:brightness(1.05)}
+    /* Cards/sections */
+    .card{background:var(--dg-card);border:2px solid #000;border-radius:0;box-shadow:0 2px 6px rgba(0,0,0,.1);margin:22px 0}
+    .card-header{background:#454545;color:#fff;padding:12px 14px;font-weight:700}
+    .card-body{padding:16px 16px 18px;line-height:1.6}
+    .card-body h3{margin:14px 0 6px;color:var(--dg-green)}
+    .list{margin:8px 0 0 18px;padding:0}
+    .list li{margin:6px 0}
+    code{background:#f1f1f1;border:1px solid #e5e5e5;padding:0 4px;border-radius:3px}
+    .small{color:#666;font-size:12px}
+   /* --- Mobile adjustments for Model Page --- */
+@media (max-width: 925px) {
+  body { overflow-x: hidden; }
+
+  .header-logo { height: 50px !important; width: auto !important; }
+  .header h1 { font-size: 20px !important; }
+
+  .banner {
+    width: 85% !important;
+    font-size: 13px !important;
+    padding: 6px !important;
+    margin: 20px auto !important;
+  }
+
+  /* TOC buttons smaller + stacked */
+  .toc {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+    gap: 10px !important;
+    margin: 15px auto !important;
+  }
+  .toc a {
+    padding: 8px 6px !important;
+    font-size: 12px !important;
+  }
+
+  /* Cards tightened */
+  .card {
+    margin: 14px 0 !important;
+    font-size: 13px !important;
+  }
+  .card-header {
+    font-size: 13px !important;
+    padding: 8px !important;
+  }
+  .card-body {
+    padding: 10px !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Lists inside cards */
+  .card-body h3 {
+    font-size: 13px !important;
+    margin: 10px 0 4px !important;
+  }
+  .list li {
+    margin: 4px 0 !important;
+    font-size: 12px !important;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <a href="index.html" style="text-decoration:none;color:inherit;display:contents;">
+    <img class="header-logo" alt="DG" src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png">
+    <h1>DataGaffer.com</h1>
+  </a>
+</div>
+
+<!-- Banner -->
+<div class="banner">
+  How the DataGaffer engine works — from data ingestion to match simulations, rankings, outlooks, and value identification.
+</div>
+
+<div class="wrap">
+
+  <!-- TOC -->
+  <nav class="toc">
+    <a href="#pipeline">Pipeline</a>
+    <a href="#data">Data Inputs</a>
+    <a href="#features">Features & Adjustments</a>
+    <a href="#sims">Simulation Engine</a>
+    <a href="#outputs">Site Outputs</a>
+    <a href="#h2h">H2H Logic</a>
+    <a href="#rankings">Rankings Builder</a>
+    <a href="#goalzone">Goal Zone</a>
+    <a href="#value">EV/Value</a>
+    <a href="#limits">Assumptions & Limits</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <!-- Pipeline -->
+  <section id="pipeline" class="card">
+    <div class="card-header">1) High-Level Pipeline</div>
+    <div class="card-body">
+      <ol class="list">
+        <li><b>Fetch fixtures & odds</b> → <code>fetch_fixtures.py</code> builds <code>fixtures.json</code> and <code>h2h_and_odds.json</code>.</li>
+        <li><b>Assemble team stats</b> → season/home/away splits in <code>team_stats/*.json</code>.</li>
+        <li><b>Compute features</b> → league strength, optional team boosters, H2H venue means.</li>
+        <li><b>Simulate</b> → <code>match_simulator.py</code> runs Poisson draws (20k) to estimate xG, corners, shots & probabilities.</li>
+        <li><b>Publish</b> → UI pages read JSON and render tables/cards with fixed columns and gradients.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Data Inputs -->
+  <section id="data" class="card">
+    <div class="card-header">2) Data Inputs</div>
+    <div class="card-body">
+      <h3>Fixtures & Odds</h3>
+      <ul class="list">
+        <li>Daily fixtures (by EST) and Bet365 1X2 odds.</li>
+        <li>Stored in <code>fixtures.json</code> with team IDs, names, and logos (prefer <code>assets/logos/{id}.png|.svg</code>).</li>
+      </ul>
+      <h3>Team Stats</h3>
+      <ul class="list">
+        <li>Per-league files (EPL, La Liga, Bundesliga, Serie A, Ligue 1, Eredivisie, UCL, UEL).</li>
+        <li>Home/away splits for <i>goals for/against, corners, shots</i>. Overall-only teams fall back to season means.</li>
+      </ul>
+      <h3>Head-to-Head (Venue-Specific)</h3>
+      <ul class="list">
+        <li>Last N meetings (currently 10), filtered so the <b>current home</b> was actually home.</li>
+        <li>Saved as <code>h2h_and_odds.json</code> with <code>home_{homeId}_{awayId}</code> keys.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Features & Adjustments -->
+  <section id="features" class="card">
+    <div class="card-header">3) Features & Adjustments</div>
+    <div class="card-body">
+      <h3>League Strength</h3>
+      <p>Each team inherits a coefficient from <code>league_coefficients.json</code>. We apply a ratio
+         <code>home_coef / away_coef</code> to nudge expected values.</p>
+
+      <h3>Optional Team Boosters</h3>
+      <p>Per-team multipliers (e.g., form/injuries) via <code>team_boosters.json</code>.</p>
+
+      <h3>Venue-Specific H2H Blend</h3>
+      <p>Weighted average with cap. Example: <code>w = min(0.40, 0.10 * num_matches)</code>. Then:
+        <code>exp_home = exp_home*(1-w) + h_avg*w</code>, <code>exp_away = exp_away*(1-w) + a_avg*w</code>.</p>
+    </div>
+  </section>
+
+  <!-- Simulation Engine -->
+  <section id="sims" class="card">
+    <div class="card-header">4) Simulation Engine (Poisson)</div>
+    <div class="card-body">
+      <ul class="list">
+        <li>Expected values seeded per category:
+          <ul class="list">
+            <li><b>Goals</b>: averages from home/away GF/GA plus venue/H2H and league adjustments.</li>
+            <li><b>Corners / Shots</b>: analogous construction with small home uplift.</li>
+          </ul>
+        </li>
+        <li>20,000 draws per fixture ⇒ means & probabilities:
+          <ul class="list">
+            <li>Home/away mean goals (xG), corners, shots</li>
+            <li>Home/Draw/Away win %, Over 2.5 %, BTTS %, O1.5 per-team %</li>
+          </ul>
+        </li>
+      </ul>
+      <p class="small">Reproducibility: Poisson RNG is seeded by <code>fixture_id</code>.</p>
+    </div>
+  </section>
+
+  <!-- Outputs -->
+  <section id="outputs" class="card">
+    <div class="card-header">5) Site Outputs</div>
+    <div class="card-body">
+      <h3>Match Cards</h3>
+      <ul class="list">
+        <li>Shows simulated xG/corners/shots, outcome %, top value markets, SOA% leaders, and H2H (venue-specific).</li>
+      </ul>
+      <h3>Outlooks</h3>
+      <ul class="list">
+        <li>Fixture tables (BTTS, Over 2.5, etc.) — fixed column widths, white column separators.</li>
+      </ul>
+      <h3>Rankings</h3>
+      <ul class="list">
+        <li>Top N lists (BTTS, Over 2.5, Team Totals, Win%) with two-column layout and logo fallbacks.</li>
+      </ul>
+      <h3>Goal Zone</h3>
+      <ul class="list">
+        <li>Three synchronized tables (Match Total xG, Away xG, Home xG) with independent green→white→red gradients.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- H2H -->
+  <section id="h2h" class="card">
+    <div class="card-header">6) Head-to-Head Logic</div>
+    <div class="card-body">
+      <ul class="list">
+        <li>Only matches where the current home team played at home are used.</li>
+        <li>We store wins/draws/losses and mean goals for the venue sample.</li>
+        <li>Blend weight grows with sample size and caps at the configured maximum.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rankings Builder -->
+  <section id="rankings" class="card">
+    <div class="card-header">7) Rankings Builder</div>
+    <div class="card-body">
+      <p><code>build.py</code> aggregates chosen leagues and derives per-team rates:</p>
+      <ul class="list">
+        <li><b>BTTS rate</b> (proxy from GF/GA), <b>Over 2.5</b> proxy, <b>Team total</b> proxy, <b>Win share</b>.</li>
+        <li>Sort high→low, assign rank, keep top N (20 or 30), format values as percents.</li>
+        <li>Logos resolved via <code>assets/logos/{id}.png</code> with SVG fallback on <code>onerror</code>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Goal Zone -->
+  <section id="goalzone" class="card">
+    <div class="card-header">8) Goal Zone (per-fixture xG)</div>
+    <div class="card-body">
+      <ul class="list">
+        <li>Reads <code>fixtures.json → sim_stats.xg</code>.</li>
+        <li>Three tables:
+          <ul class="list">
+            <li><b>Match</b>: fixture label + total xG (sorted high→low).</li>
+            <li><b>Away</b> and <b>Home</b>: logo, team name, team xG.</li>
+          </ul>
+        </li>
+        <li>Each table uses its own min/max to color cells green→white→red.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Value -->
+  <section id="value" class="card">
+    <div class="card-header">9) Value / EV Plays</div>
+    <div class="card-body">
+      <ul class="list">
+        <li>Convert sim % → decimal odds via <code>100 / pct</code>.</li>
+        <li>Compare to bookmaker odds; show top positive gaps and highlight best/worst with badges.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Assumptions & Limits -->
+  <section id="limits" class="card">
+    <div class="card-header">10) Assumptions & Limitations</div>
+    <div class="card-body">
+      <ul class="list">
+        <li>Poisson assumes independent goal processes; real matches have state/tempo effects.</li>
+        <li>Injuries, rotations, travel, weather, and tactical shifts are only reflected if encoded via boosters or data.</li>
+        <li>H2H is venue-specific and capped to avoid overfitting small samples.</li>
+        <li>Odds snapshots are from the fetch time; lines move.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="card">
+    <div class="card-header">11) FAQ</div>
+    <div class="card-body">
+      <h3>How often is data refreshed?</h3>
+      <p>Fixtures and odds daily (EST). Simulations re-run at fetch. Rankings are rebuilt when team stats update.</p>
+      <h3>Why doesn’t a team logo show?</h3>
+      <p>We use <code>assets/logos/{id}.png</code> with an <code>onerror</code> switch to <code>.svg</code>. Add either format to fix.</p>
+      <h3>Can I change the H2H weight?</h3>
+      <p>Yes — edit <code>match_simulator.py</code> and adjust the <code>max_weight</code> and per-match slope.</p>
+    </div>
+  </section>
+
+  <p class="small">© DataGaffer. For feedback or methods questions, ping us via the dashboard.</p>
+</div>
+</body>
+</html>
