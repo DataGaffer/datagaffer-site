@@ -276,6 +276,10 @@ h1, h2, h3, h4, h5, h6, p {
       margin-right: 8px;
     }
 
+    .green-gradient {
+      color: #000;
+    }
+
  /* --- Mobile adjustments for Outlooks Page --- */
 @media (max-width: 925px) {
   body { overflow-x: hidden; }
@@ -629,6 +633,59 @@ h1, h2, h3, h4, h5, h6, p {
   </section>
 
   <script>
+function parseNum(txt) {
+  if (!txt) return NaN;
+  return parseFloat(String(txt).replace("%","").trim());
+}
+
+function colorForRatio(ratio) {
+  // light → dark green
+  // start: rgb(230, 253, 230), end: rgb(0, 155, 0)
+  const r = Math.round(230 + (0 - 230) * ratio);
+  const g = Math.round(253 + (155 - 253) * ratio);
+  const b = Math.round(230 + (0 - 230) * ratio);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+/**
+ * Apply green gradient to the TOP N values in specific columns for ONE table.
+ * - tableSectionId: the section id (e.g. "expected-goals")
+ * - colsOneBased: array of column numbers (1-based, as you see them)
+ * - topN: how many to highlight (10 requested)
+ */
+function applyTopGreenGradient(tableSectionId, colsOneBased, topN = 10) {
+  const tbody = document.querySelector(`#${tableSectionId} .outlook-table tbody`);
+  if (!tbody) return;
+
+  const rows = Array.from(tbody.rows);
+
+  colsOneBased.forEach(col1 => {
+    const colIdx = col1 - 1; // to 0-based
+    const vals = rows
+      .map(r => parseNum(r.cells[colIdx]?.innerText))
+      .filter(v => !isNaN(v));
+
+    if (!vals.length) return;
+
+    const sortedDesc = [...vals].sort((a,b) => b - a);
+    const cutoff = sortedDesc[Math.min(topN, sortedDesc.length) - 1]; // Nth largest
+    const max = sortedDesc[0];
+    const denom = Math.max(1e-9, max - cutoff);
+
+    rows.forEach(r => {
+      const cell = r.cells[colIdx];
+      if (!cell) return;
+      const v = parseNum(cell.innerText);
+      if (isNaN(v) || v < cutoff) return;
+
+      const ratio = (v - cutoff) / denom; // 0 → light, 1 → dark
+      cell.style.backgroundColor = colorForRatio(ratio);
+    });
+  });
+}
+</script>
+
+  <script>
     // Fixtures-based sections
     fetch("fixtures.json")
       .then(res => res.json())
@@ -643,6 +700,7 @@ h1, h2, h3, h4, h5, h6, p {
 
         data.forEach(fix => {
           const stats = fix.sim_stats;
+
 
           if (stats.xg) {
             goalsBody.innerHTML += `
@@ -728,6 +786,18 @@ h1, h2, h3, h4, h5, h6, p {
               </tr>`;
           }
         });
+
+        
+   // after you've appended all rows:
+    applyTopGreenGradient("expected-goals",   [3,4,5], 15);  // home xG, total xG, away xG
+    applyTopGreenGradient("expected-corners", [3,4,5], 15);  // home, total, away
+    applyTopGreenGradient("expected-shots",   [3,4,5], 15);  // home, total, away
+    applyTopGreenGradient("btts",             [3],     15);  // BTTS %
+    applyTopGreenGradient("over25",           [3],     15);  // Over 2.5 %
+    applyTopGreenGradient("team-total",       [3,6],   15);  // home o1.5 %, away o1.5 %
+    applyTopGreenGradient("win-outlook",      [3,4,5], 15);  // home win %, draw %, away win %
+
+
       });
 
     // Player Sims section
