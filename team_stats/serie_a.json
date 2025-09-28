@@ -5,16 +5,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/489.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.55,
-      "goals_against": 0.90,
+      "goals_for": 1.67,
+      "goals_against": 0.80,
       "corners": 5.7,
       "corners_against": 3.8,
       "shots": 14.6,
       "shots_against": 10.3
     },
     "away": {
-      "goals_for": 1.65,
-      "goals_against": 1.35,
+      "goals_for": 1.85,
+      "goals_against": 1.07,
       "corners": 5.7,
       "corners_against": 4.6,
       "shots": 14.6,
@@ -27,16 +27,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/505.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 2.20,
-      "goals_against": 1.10,
+      "goals_for": 2.38,
+      "goals_against": 1.06,
       "corners": 6.0,
       "corners_against": 3.7,
       "shots": 15.0,
       "shots_against": 10.4
     },
     "away": {
-      "goals_for": 2.05,
-      "goals_against": 0.74,
+      "goals_for": 2.19,
+      "goals_against": 0.90,
       "corners": 5.5,
       "corners_against": 3.7,
       "shots": 14.6,
@@ -49,16 +49,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/497.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.90,
-      "goals_against": 0.75,
+      "goals_for": 1.48,
+      "goals_against": 0.67,
       "corners": 5.1,
       "corners_against": 3.8,
       "shots": 14.5,
       "shots_against": 10.6
     },
     "away": {
-      "goals_for": 1.00,
-      "goals_against": 1.00,
+      "goals_for": 1.17,
+      "goals_against": 0.87,
       "corners": 4.1,
       "corners_against": 4.2,
       "shots": 12.8,
@@ -71,15 +71,15 @@
     "logo": "https://media-4.api-sports.io/football/teams/496.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.99,
-      "goals_against": 0.99,
+      "goals_for": 2.19,
+      "goals_against": 1.10,
       "corners": 5.3,
       "corners_against": 3.8,
       "shots": 14.1,
       "shots_against": 9.8
     },
     "away": {
-      "goals_for": 1.40,
+      "goals_for": 1.32,
       "goals_against": 1.00,
       "corners": 4.7,
       "corners_against": 4.9,
@@ -93,16 +93,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/499.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.56,
-      "goals_against": 1.25,
+      "goals_for": 2.09,
+      "goals_against": 1.13,
       "corners": 5.1,
       "corners_against": 3.5,
       "shots": 14.2,
       "shots_against": 10.8
     },
     "away": {
-      "goals_for": 1.67,
-      "goals_against": 0.70,
+      "goals_for": 1.73,
+      "goals_against": 1.09,
       "corners": 5.1,
       "corners_against": 3.5,
       "shots": 14.2,
@@ -115,16 +115,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/487.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.85,
-      "goals_against": 1.30,
+      "goals_for": 1.77,
+      "goals_against": 1.15,
       "corners": 6.3,
       "corners_against": 4.2,
       "shots": 14.3,
       "shots_against": 9.8
     },
     "away": {
-      "goals_for": 1.40,
-      "goals_against": 1.25,
+      "goals_for": 1.19,
+      "goals_against": 1.36,
       "corners": 5.6,
       "corners_against": 4.6,
       "shots": 13.4,
@@ -137,7 +137,7 @@
     "logo": "https://media-4.api-sports.io/football/teams/500.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.70,
+      "goals_for": 1.62,
       "goals_against": 0.90,
       "corners": 5.4,
       "corners_against": 2.8,
@@ -145,8 +145,8 @@
       "shots_against": 7.9
     },
     "away": {
-      "goals_for": 1.20,
-      "goals_against": 1.50,
+      "goals_for": 1.07,
+      "goals_against": 1.43,
       "corners": 4.4,
       "corners_against": 3.6,
       "shots": 12.7,
@@ -159,8 +159,8 @@
     "logo": "https://media-4.api-sports.io/football/teams/867.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 0.65,
-      "goals_against": 1.65,
+      "goals_for": 0.84,
+      "goals_against": 1.82,
       "corners": 4.3,
       "corners_against": 6.1,
       "shots": 11.9,
@@ -168,7 +168,7 @@
     },
     "away": {
       "goals_for": 0.70,
-      "goals_against": 1.35,
+      "goals_against": 1.88,
       "corners": 4.3,
       "corners_against": 6.0,
       "shots": 11.8,
@@ -181,16 +181,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/490.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.25,
-      "goals_against": 1.45,
+      "goals_for": 1.17,
+      "goals_against": 1.24,
       "corners": 5.0,
       "corners_against": 4.9,
       "shots": 11.6,
       "shots_against": 12.9
     },
     "away": {
-      "goals_for": 0.80,
-      "goals_against": 1.45,
+      "goals_for": 0.92,
+      "goals_against": 1.31,
       "corners": 4.3,
       "corners_against": 5.1,
       "shots": 10.6,
@@ -203,16 +203,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/492.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.65,
-      "goals_against": 0.65,
+      "goals_for": 1.74,
+      "goals_against": 0.79,
       "corners": 5.9,
       "corners_against": 3.6,
       "shots": 13.7,
       "shots_against": 8.9
     },
     "away": {
-      "goals_for": 1.45,
-      "goals_against": 0.70,
+      "goals_for": 1.41,
+      "goals_against": 0.97,
       "corners": 5.0,
       "corners_against": 4.2,
       "shots": 12.6,
@@ -225,16 +225,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/895.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.50,
-      "goals_against": 1.30,
+      "goals_for": 1.61,
+      "goals_against": 1.00,
       "corners": 5.0,
       "corners_against": 3.6,
       "shots": 14.1,
       "shots_against": 9.2
     },
     "away": {
-      "goals_for": 1.11,
-      "goals_against": 1.35,
+      "goals_for": 1.20,
+      "goals_against": 1.20,
       "corners": 3.9,
       "corners_against": 4.3,
       "shots": 13.1,
@@ -247,16 +247,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/523.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.30,
-      "goals_against": 1.45,
+      "goals_for": 1.19,
+      "goals_against": 1.48,
       "corners": 4.8,
       "corners_against": 5.6,
       "shots": 11.8,
       "shots_against": 13.8
     },
     "away": {
-      "goals_for": 0.95,
-      "goals_against": 1.60,
+      "goals_for": 0.80,
+      "goals_against": 1.44,
       "corners": 3.9,
       "corners_against": 6.2,
       "shots": 10.1,
@@ -269,16 +269,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/520.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.42,
-      "goals_against": 1.24,
+      "goals_for": 1.25,
+      "goals_against": 1.12,
       "corners": 4.6,
       "corners_against": 5.2,
       "shots": 11.8,
       "shots_against": 12.6
     },
     "away": {
-      "goals_for": 1.10,
-      "goals_against": 1.37,
+      "goals_for": 1.00,
+      "goals_against": 1.02,
       "corners": 4.6,
       "corners_against": 5.2,
       "shots": 11.8,
@@ -291,16 +291,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/801.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 0.96,
-      "goals_against": 1.28,
+      "goals_for": 0.77,
+      "goals_against": 1.07,
       "corners": 4.6,
       "corners_against": 5.0,
       "shots": 10.5,
       "shots_against": 12.1
     },
     "away": {
-      "goals_for": 0.89,
-      "goals_against": 1.42,
+      "goals_for": 1.00,
+      "goals_against": 1.67,
       "corners": 3.9,
       "corners_against": 5.4,
       "shots": 9.7,
@@ -313,16 +313,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/502.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.68,
-      "goals_against": 0.95,
+      "goals_for": 1.41,
+      "goals_against": 1.21,
       "corners": 4.2,
       "corners_against": 3.8,
       "shots": 11.9,
       "shots_against": 10.6
     },
     "away": {
-      "goals_for": 1.38,
-      "goals_against": 1.14,
+      "goals_for": 1.12,
+      "goals_against": 1.01,
       "corners": 3.6,
       "corners_against": 4.3,
       "shots": 10.7,
@@ -335,16 +335,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/488.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 1.10,
-      "goals_against": 1.75,
+      "goals_for": 1.33,
+      "goals_against": 1.31,
       "corners": 4.5,
       "corners_against": 5.6,
       "shots": 10.9,
       "shots_against": 13.2
     },
     "away": {
-      "goals_for": 0.90,
-      "goals_against": 2.00,
+      "goals_for": 1.00,
+      "goals_against": 2.33,
       "corners": 3.9,
       "corners_against": 5.9,
       "shots": 9.7,
@@ -358,7 +358,7 @@
     "league": "Serie A",
     "home": {
       "goals_for": 1.00,
-      "goals_against": 1.25,
+      "goals_against": 0.99,
       "corners": 4.2,
       "corners_against": 5.1,
       "shots": 10.4,
@@ -366,7 +366,7 @@
     },
     "away": {
       "goals_for": 0.80,
-      "goals_against": 1.26,
+      "goals_against": 1.32,
       "corners": 3.7,
       "corners_against": 5.5,
       "shots": 9.6,
@@ -379,15 +379,15 @@
     "logo": "https://media-4.api-sports.io/football/teams/503.png",
     "league": "Serie A",
     "home": {
-      "goals_for": 0.85,
-      "goals_against": 0.90,
+      "goals_for": 1.00,
+      "goals_against": 1.00,
       "corners": 4.0,
       "corners_against": 4.7,
       "shots": 10.1,
       "shots_against": 13.1
     },
     "away": {
-      "goals_for": 1.10,
+      "goals_for": 0.90,
       "goals_against": 1.60,
       "corners": 4.4,
       "corners_against": 5.4,

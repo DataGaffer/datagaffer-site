@@ -5,16 +5,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/42.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 2.00,
-      "goals_against": 0.82,
+      "goals_for": 2.13,
+      "goals_against": 0.75,
       "corners": 6.6,
       "corners_against": 3.1,
       "shots": 14.3,
       "shots_against": 9.5
     },
     "away": {
-      "goals_for": 1.68,
-      "goals_against": 0.82,
+      "goals_for": 1.66,
+      "goals_against": 0.79,
       "corners": 6.6,
       "corners_against": 3.1,
       "shots": 14.3,
@@ -27,7 +27,7 @@
     "logo": "https://media-4.api-sports.io/football/teams/66.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 1.52,
+      "goals_for": 1.59,
       "goals_against": 1.00,
       "corners": 5.8,
       "corners_against": 4.4,
@@ -35,8 +35,8 @@
       "shots_against": 12.1
     },
     "away": {
-      "goals_for": 1.13,
-      "goals_against": 1.42,
+      "goals_for": 1.07,
+      "goals_against": 1.25,
       "corners": 5.8,
       "corners_against": 4.4,
       "shots": 12.6,
@@ -49,16 +49,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/35.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 1.18,
-      "goals_against": 0.77,
+      "goals_for": 1.10,
+      "goals_against": 0.71,
       "corners": 6.0,
       "corners_against": 4.4,
       "shots": 15.1,
       "shots_against": 12.7
     },
     "away": {
-      "goals_for": 1.81,
-      "goals_against": 1.62,
+      "goals_for": 1.75,
+      "goals_against": 1.69,
       "corners": 6.0,
       "corners_against": 4.4,
       "shots": 15.1,
@@ -72,15 +72,15 @@
     "league": "Premier League",
     "home": {
       "goals_for": 2.00,
-      "goals_against": 1.73,
+      "goals_against": 1.63,
       "corners": 4.6,
       "corners_against": 6.3,
       "shots": 11.4,
       "shots_against": 17.0
     },
     "away": {
-      "goals_for": 1.32,
-      "goals_against": 1.86,
+      "goals_for": 1.19,
+      "goals_against": 1.91,
       "corners": 4.6,
       "corners_against": 6.3,
       "shots": 11.4,
@@ -93,16 +93,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/51.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 1.59,
-      "goals_against": 1.36,
+      "goals_for": 1.62,
+      "goals_against": 1.35,
       "corners": 5.0,
       "corners_against": 4.8,
       "shots": 13.8,
       "shots_against": 11.0
     },
     "away": {
-      "goals_for": 1.66,
-      "goals_against": 1.76,
+      "goals_for": 1.62,
+      "goals_against": 1.65,
       "corners": 5.0,
       "corners_against": 4.8,
       "shots": 13.8,
@@ -116,7 +116,7 @@
     "league": "Premier League",
     "home": {
       "goals_for": 1.00,
-      "goals_against": 1.21,
+      "goals_against": 1.07,
       "corners": 4.7,
       "corners_against": 6.3,
       "shots": 11.3,
@@ -124,7 +124,7 @@
     },
     "away": {
       "goals_for": 1.00,
-      "goals_against": 2.25,
+      "goals_against": 2.42,
       "corners": 4.7,
       "corners_against": 6.3,
       "shots": 11.3,
@@ -137,16 +137,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/49.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 1.84,
-      "goals_against": 0.86,
+      "goals_for": 1.70,
+      "goals_against": 0.97,
       "corners": 6.2,
       "corners_against": 3.7,
       "shots": 15.5,
       "shots_against": 10.3
     },
     "away": {
-      "goals_for": 1.65,
-      "goals_against": 1.44,
+      "goals_for": 1.76,
+      "goals_against": 1.32,
       "corners": 6.2,
       "corners_against": 3.7,
       "shots": 15.5,
@@ -159,16 +159,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/52.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 1.19,
-      "goals_against": 1.13,
+      "goals_for": 1.25,
+      "goals_against": 1.01,
       "corners": 4.5,
       "corners_against": 5.6,
       "shots": 13.5,
       "shots_against": 12.7
     },
     "away": {
-      "goals_for": 1.45,
-      "goals_against": 1.18,
+      "goals_for": 1.54,
+      "goals_against": 1.07,
       "corners": 4.5,
       "corners_against": 5.6,
       "shots": 12.5,
@@ -226,15 +226,15 @@
     "league": "Premier League",
     "home": {
       "goals_for": 1.00,
-      "goals_against": 1.10,
+      "goals_against": 1.00,
       "corners": 5.3,
       "corners_against": 5.0,
       "shots": 12.1,
       "shots_against": 13.2
     },
     "away": {
-      "goals_for": 0.85,
-      "goals_against": 2.07,
+      "goals_for": 1.00,
+      "goals_against": 1.92,
       "corners": 4.1,
       "corners_against": 5.8,
       "shots": 10.4,
@@ -247,15 +247,15 @@
     "logo": "assets/logos/40.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 2.26,
-      "goals_against": 0.91,
+      "goals_for": 2.31,
+      "goals_against": 1.02,
       "corners": 6.7,
       "corners_against": 3.0,
       "shots": 17.8,
       "shots_against": 8.1
     },
     "away": {
-      "goals_for": 2.29,
+      "goals_for": 2.04,
       "goals_against": 1.33,
       "corners": 5.7,
       "corners_against": 4.0,
@@ -269,15 +269,15 @@
     "logo": "https://media-4.api-sports.io/football/teams/50.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 2.18,
-      "goals_against": 1.14,
+      "goals_for": 2.26,
+      "goals_against": 1.11,
       "corners": 6.9,
       "corners_against": 2.9,
       "shots": 16.9,
       "shots_against": 7.2
     },
     "away": {
-      "goals_for": 1.59,
+      "goals_for": 1.77,
       "goals_against": 1.09,
       "corners": 6.2,
       "corners_against": 3.6,
@@ -291,8 +291,8 @@
     "logo": "https://media-4.api-sports.io/football/teams/33.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 1.27,
-      "goals_against": 1.46,
+      "goals_for": 1.44,
+      "goals_against": 1.40,
       "corners": 5.8,
       "corners_against": 4.2,
       "shots": 14.6,
@@ -300,7 +300,7 @@
     },
     "away": {
       "goals_for": 1.05,
-      "goals_against": 1.43,
+      "goals_against": 1.61,
       "corners": 4.8,
       "corners_against": 5.2,
       "shots": 12.0,
@@ -313,16 +313,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/34.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 2.00,
-      "goals_against": 1.10,
+      "goals_for": 1.89,
+      "goals_against": 1.20,
       "corners": 6.2,
       "corners_against": 4.8,
       "shots": 14.2,
       "shots_against": 10.4
     },
     "away": {
-      "goals_for": 1.27,
-      "goals_against": 1.22,
+      "goals_for": 1.14,
+      "goals_against": 1.07,
       "corners": 4.9,
       "corners_against": 5.6,
       "shots": 12.3,
@@ -335,7 +335,7 @@
     "logo": "https://media-4.api-sports.io/football/teams/65.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 1.65,
+      "goals_for": 1.55,
       "goals_against": 1.38,
       "corners": 4.5,
       "corners_against": 5.6,
@@ -343,7 +343,7 @@
       "shots_against": 12.5
     },
     "away": {
-      "goals_for": 1.65,
+      "goals_for": 1.45,
       "goals_against": 1.62,
       "corners": 3.2,
       "corners_against": 7.1,
@@ -357,16 +357,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/746.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 1.53,
-      "goals_against": 1.12,
+      "goals_for": 1.60,
+      "goals_against": 1.15,
       "corners": 5.0,
       "corners_against": 4.6,
       "shots": 11.8,
       "shots_against": 10.2
     },
     "away": {
-      "goals_for": 0.78,
-      "goals_against": 1.75,
+      "goals_for": 0.89,
+      "goals_against": 1.38,
       "corners": 3.9,
       "corners_against": 6.3,
       "shots": 10.1,
@@ -379,16 +379,16 @@
     "logo": "assets/logos/47.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 2.03,
-      "goals_against": 1.16,
+      "goals_for": 1.81,
+      "goals_against": 1.08,
       "corners": 6.2,
       "corners_against": 5.3,
       "shots": 14.0,
       "shots_against": 12.4
     },
     "away": {
-      "goals_for": 1.45,
-      "goals_against": 1.23,
+      "goals_for": 1.67,
+      "goals_against": 1.10,
       "corners": 4.8,
       "corners_against": 6.3,
       "shots": 12.0,
@@ -423,16 +423,16 @@
     "logo": "https://media-4.api-sports.io/football/teams/39.png",
     "league": "Premier League",
     "home": {
-      "goals_for": 1.36,
-      "goals_against": 1.91,
+      "goals_for": 1.51,
+      "goals_against": 2.16,
       "corners": 4.2,
       "corners_against": 5.2,
       "shots": 11.4,
       "shots_against": 11.8
     },
     "away": {
-      "goals_for": 1.28,
-      "goals_against": 1.85,
+      "goals_for": 1.21,
+      "goals_against": 1.71,
       "corners": 3.4,
       "corners_against": 6.2,
       "shots": 9.8,
