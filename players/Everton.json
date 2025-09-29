@@ -1,0 +1,122 @@
+[
+  {
+    "id": 895,
+    "team_id": 45,
+    "name": "J. Garner",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 2934,
+    "team_id": 45,
+    "name": "M. Keane",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 1
+  },
+  {
+    "id": 2936,
+    "team_id": 45,
+    "name": "J. Tarkowski",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 18592,
+    "team_id": 45,
+    "name": "I. Ndiaye",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 419,
+    "goals": 2,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 3
+  },
+  {
+    "id": 19187,
+    "team_id": 45,
+    "name": "J. Grealish",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 377,
+    "goals": 0,
+    "assists": 4,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 125743,
+    "team_id": 45,
+    "name": "Beto",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 313,
+    "goals": 1,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 1
+  },
+  {
+    "id": 148099,
+    "team_id": 45,
+    "name": "K. Dewsbury-Hall",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 1,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 270139,
+    "team_id": 45,
+    "name": "J. O&apos;Brien",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 284500,
+    "team_id": 45,
+    "name": "T. Iroegbunam",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 222,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 343684,
+    "team_id": 45,
+    "name": "T. Barry",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 150,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 0
+  }
+]

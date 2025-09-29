@@ -1,0 +1,26 @@
+[
+  {
+    "id": 37935,
+    "team_id": 427,
+    "name": "Dion Omar Rudchell Malone",
+    "position": "Defender",
+    "appearances": 25,
+    "minutes": 1915,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 345155,
+    "team_id": 427,
+    "name": "Jochem Ritmeester van de Kamp",
+    "position": "Midfielder",
+    "appearances": 26,
+    "minutes": 2005,
+    "goals": 0,
+    "assists": 1,
+    "shots": 11,
+    "shots_on_target": 3
+  }
+]

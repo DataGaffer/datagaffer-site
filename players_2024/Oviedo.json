@@ -1,0 +1,98 @@
+[
+  {
+    "id": 46657,
+    "team_id": 718,
+    "name": "Nacho Vidal",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 120,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 182668,
+    "team_id": 718,
+    "name": "\u00c1lex Mill\u00e1n",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 402,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 38699,
+    "team_id": 718,
+    "name": "Luka Ili\u0107",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 155,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 1
+  },
+  {
+    "id": 2922,
+    "team_id": 718,
+    "name": "Leander Dendoncker",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 3329,
+    "goals": 2,
+    "assists": 1,
+    "shots": 29,
+    "shots_on_target": 12
+  },
+  {
+    "id": 2762,
+    "team_id": 718,
+    "name": "Josip Brekalo",
+    "position": "Midfielder",
+    "appearances": 26,
+    "minutes": 1344,
+    "goals": 4,
+    "assists": 2,
+    "shots": 25,
+    "shots_on_target": 12
+  },
+  {
+    "id": 885,
+    "team_id": 718,
+    "name": "Eric Bertrand Bailly",
+    "position": "Defender",
+    "appearances": 12,
+    "minutes": 618,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 41970,
+    "team_id": 718,
+    "name": "David Mota Veiga Teixeira Carmo",
+    "position": "Defender",
+    "appearances": 31,
+    "minutes": 2180,
+    "goals": 1,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 2
+  },
+  {
+    "id": 182636,
+    "team_id": 718,
+    "name": "Javier L\u00f3pez Carballo",
+    "position": "Defender",
+    "appearances": 48,
+    "minutes": 2262,
+    "goals": 0,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 2
+  }
+]

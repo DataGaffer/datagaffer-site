@@ -1,0 +1,110 @@
+[
+  {
+    "id": 6383,
+    "team_id": 520,
+    "name": "M. Payero",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 114,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 30775,
+    "team_id": 520,
+    "name": "G. Pezzella",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 457,
+    "goals": 0,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 0
+  },
+  {
+    "id": 30919,
+    "team_id": 520,
+    "name": "M. Bianchetti",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 405,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 31021,
+    "team_id": 520,
+    "name": "A. Grassi",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 281,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 31211,
+    "team_id": 520,
+    "name": "J. Vandeputte",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 266,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 31219,
+    "team_id": 520,
+    "name": "A. Zerbin",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 379,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 126889,
+    "team_id": 520,
+    "name": "M. Collocolo",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 286,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 127035,
+    "team_id": 520,
+    "name": "F. Baschirotto",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 457,
+    "goals": 2,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 3
+  },
+  {
+    "id": 264472,
+    "team_id": 520,
+    "name": "F. Terracciano",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 457,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  }
+]

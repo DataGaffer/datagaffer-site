@@ -1,0 +1,98 @@
+[
+  {
+    "id": 314,
+    "team_id": 801,
+    "name": "Ra\u00fal Albiol",
+    "position": "Defender",
+    "appearances": 28,
+    "minutes": 1199,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 485960,
+    "team_id": 801,
+    "name": "D. Denoon",
+    "position": "Defender",
+    "appearances": 19,
+    "minutes": 683,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 36910,
+    "team_id": 801,
+    "name": "C. Stengs",
+    "position": "Midfielder",
+    "appearances": 15,
+    "minutes": 706,
+    "goals": 1,
+    "assists": 3,
+    "shots": 9,
+    "shots_on_target": 5
+  },
+  {
+    "id": 866,
+    "team_id": 801,
+    "name": "J. Cuadrado",
+    "position": "Midfielder",
+    "appearances": 38,
+    "minutes": 1141,
+    "goals": 0,
+    "assists": 3,
+    "shots": 21,
+    "shots_on_target": 9
+  },
+  {
+    "id": 951,
+    "team_id": 801,
+    "name": "M. Aebischer",
+    "position": "Midfielder",
+    "appearances": 26,
+    "minutes": 757,
+    "goals": 0,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 5
+  },
+  {
+    "id": 91576,
+    "team_id": 801,
+    "name": "E. Giani",
+    "position": "Attacker",
+    "appearances": 23,
+    "minutes": 713,
+    "goals": 3,
+    "assists": 1,
+    "shots": 11,
+    "shots_on_target": 5
+  },
+  {
+    "id": 31318,
+    "team_id": 801,
+    "name": "M&apos;Bala Nzola",
+    "position": "Attacker",
+    "appearances": 22,
+    "minutes": 1464,
+    "goals": 6,
+    "assists": 1,
+    "shots": 39,
+    "shots_on_target": 18
+  },
+  {
+    "id": 331678,
+    "team_id": 801,
+    "name": "H. Meister",
+    "position": "Attacker",
+    "appearances": 22,
+    "minutes": 1429,
+    "goals": 9,
+    "assists": 0,
+    "shots": 34,
+    "shots_on_target": 18
+  }
+]

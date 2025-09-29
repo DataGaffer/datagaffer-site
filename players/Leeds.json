@@ -1,0 +1,122 @@
+[
+  {
+    "id": 2279,
+    "team_id": 63,
+    "name": "E. Ampadu",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 355,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 18766,
+    "team_id": 63,
+    "name": "D. Calvert-Lewin",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 270,
+    "goals": 1,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 6
+  },
+  {
+    "id": 18901,
+    "team_id": 63,
+    "name": "S. Longstaff",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 394,
+    "goals": 1,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 19201,
+    "team_id": 63,
+    "name": "J. Bogle",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 533,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 19461,
+    "team_id": 63,
+    "name": "L. Nmecha",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 143,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 32966,
+    "team_id": 63,
+    "name": "A. Tanaka",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 169,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 47969,
+    "team_id": 63,
+    "name": "G. Gudmundsson",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 537,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 64003,
+    "team_id": 63,
+    "name": "P. Struijk",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 547,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 129142,
+    "team_id": 63,
+    "name": "I. Gruev",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 194,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 162128,
+    "team_id": 63,
+    "name": "W. Gnonto",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 201,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 0
+  }
+]

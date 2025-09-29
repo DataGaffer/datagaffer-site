@@ -1,0 +1,26 @@
+[
+  {
+    "id": 386285,
+    "team_id": 400,
+    "name": "Yoram\\t Zague",
+    "position": "Defender",
+    "appearances": 22,
+    "minutes": 183,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 161919,
+    "team_id": 400,
+    "name": "Y. Moukoko",
+    "position": "Attacker",
+    "appearances": 33,
+    "minutes": 763,
+    "goals": 2,
+    "assists": 2,
+    "shots": 10,
+    "shots_on_target": 4
+  }
+]

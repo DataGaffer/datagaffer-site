@@ -1,0 +1,38 @@
+[
+  {
+    "id": 37923,
+    "team_id": 416,
+    "name": "Aaron Meijers",
+    "position": "Defender",
+    "appearances": 17,
+    "minutes": 752,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 270660,
+    "team_id": 416,
+    "name": "Joel Ideho",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 177,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 180466,
+    "team_id": 416,
+    "name": "Anthony Kevin N. Descotte",
+    "position": "Attacker",
+    "appearances": 26,
+    "minutes": 414,
+    "goals": 2,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 4
+  }
+]

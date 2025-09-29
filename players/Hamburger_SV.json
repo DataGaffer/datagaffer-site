@@ -1,0 +1,122 @@
+[
+  {
+    "id": 5973,
+    "team_id": 175,
+    "name": "N. Capaldo",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 206,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 8483,
+    "team_id": 175,
+    "name": "J. Domp\u00e9",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 125,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 129693,
+    "team_id": 175,
+    "name": "R. Philippe",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 159,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 162265,
+    "team_id": 175,
+    "name": "W. Omari",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 162773,
+    "team_id": 175,
+    "name": "R. K\u00f6nigsd\u00f6rffer",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 317,
+    "goals": 0,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 4
+  },
+  {
+    "id": 260898,
+    "team_id": 175,
+    "name": "N. Remberg",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 265741,
+    "team_id": 175,
+    "name": "G. Gocholeishvili",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 249,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 302632,
+    "team_id": 175,
+    "name": "W. Mikelbrencis",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 122,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 324019,
+    "team_id": 175,
+    "name": "Daniel Elfadli",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 300,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 470282,
+    "team_id": 175,
+    "name": "Alexander R\u00f8ssing-Lelesiit",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 186,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  }
+]

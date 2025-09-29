@@ -1,0 +1,74 @@
+[
+  {
+    "id": 33910,
+    "team_id": 571,
+    "name": "T. Kawamura",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 255,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 288073,
+    "team_id": 571,
+    "name": "S. Kitano",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 463,
+    "goals": 1,
+    "assists": 1,
+    "shots": 10,
+    "shots_on_target": 4
+  },
+  {
+    "id": 302869,
+    "team_id": 571,
+    "name": "N. Dorgeles",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 431,
+    "goals": 1,
+    "assists": 2,
+    "shots": 11,
+    "shots_on_target": 6
+  },
+  {
+    "id": 302915,
+    "team_id": 571,
+    "name": "M. Diambou",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 181,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 362564,
+    "team_id": 571,
+    "name": "A. Daghim",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 153,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 381810,
+    "team_id": 571,
+    "name": "M. Yeo",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 175,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  }
+]

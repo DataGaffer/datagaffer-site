@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1567,
+    "team_id": 79,
+    "name": "A. Mandi",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 199,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 2204,
+    "team_id": 79,
+    "name": "B. Andr\u00e9",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 67889,
+    "team_id": 79,
+    "name": "H. Haraldsson",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 411,
+    "goals": 2,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 2
+  },
+  {
+    "id": 99576,
+    "team_id": 79,
+    "name": "O. Sahraoui",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 134,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 2
+  },
+  {
+    "id": 135749,
+    "team_id": 79,
+    "name": "F\u00e9lix Correia",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 405,
+    "goals": 0,
+    "assists": 3,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 142691,
+    "team_id": 79,
+    "name": "Alexsandro Ribeiro",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 314,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 312964,
+    "team_id": 79,
+    "name": "N. Ngoy",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 0,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 0
+  },
+  {
+    "id": 340077,
+    "team_id": 79,
+    "name": "M. Fernandez-Pardo",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 424,
+    "goals": 2,
+    "assists": 2,
+    "shots": 8,
+    "shots_on_target": 4
+  },
+  {
+    "id": 375598,
+    "team_id": 79,
+    "name": "N. Mukau",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 330,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 438688,
+    "team_id": 79,
+    "name": "A. Bouaddi",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 379,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  }
+]

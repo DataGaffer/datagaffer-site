@@ -1,0 +1,86 @@
+[
+  {
+    "id": 15704,
+    "team_id": 327,
+    "name": "K. H\u00f8gh",
+    "position": "Attacker",
+    "appearances": 24,
+    "minutes": 1840,
+    "goals": 17,
+    "assists": 5,
+    "shots": 59,
+    "shots_on_target": 34
+  },
+  {
+    "id": 39058,
+    "team_id": 327,
+    "name": "F. Bj\u00f8rkan",
+    "position": "Defender",
+    "appearances": 23,
+    "minutes": 1939,
+    "goals": 1,
+    "assists": 2,
+    "shots": 9,
+    "shots_on_target": 6
+  },
+  {
+    "id": 39064,
+    "team_id": 327,
+    "name": "P. Berg",
+    "position": "Midfielder",
+    "appearances": 23,
+    "minutes": 1843,
+    "goals": 3,
+    "assists": 9,
+    "shots": 24,
+    "shots_on_target": 9
+  },
+  {
+    "id": 39065,
+    "team_id": 327,
+    "name": "H. Evjen",
+    "position": "Midfielder",
+    "appearances": 25,
+    "minutes": 2043,
+    "goals": 4,
+    "assists": 3,
+    "shots": 18,
+    "shots_on_target": 10
+  },
+  {
+    "id": 39073,
+    "team_id": 327,
+    "name": "J. Hauge",
+    "position": "Midfielder",
+    "appearances": 24,
+    "minutes": 1892,
+    "goals": 6,
+    "assists": 6,
+    "shots": 25,
+    "shots_on_target": 12
+  },
+  {
+    "id": 57159,
+    "team_id": 327,
+    "name": "S. Fet",
+    "position": "Midfielder",
+    "appearances": 16,
+    "minutes": 374,
+    "goals": 3,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 5
+  },
+  {
+    "id": 351483,
+    "team_id": 327,
+    "name": "F. Sj\u00f8vold",
+    "position": "Defender",
+    "appearances": 25,
+    "minutes": 2163,
+    "goals": 1,
+    "assists": 2,
+    "shots": 13,
+    "shots_on_target": 6
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 195893,
+    "team_id": 97,
+    "name": "S. Tour\u00e9",
+    "position": "Defender",
+    "appearances": 12,
+    "minutes": 737,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 193501,
+    "team_id": 97,
+    "name": "B. Meit\u00e9",
+    "position": "Defender",
+    "appearances": 7,
+    "minutes": 428,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 322865,
+    "team_id": 97,
+    "name": "D. Karim",
+    "position": "Midfielder",
+    "appearances": 13,
+    "minutes": 872,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 1
+  },
+  {
+    "id": 284072,
+    "team_id": 97,
+    "name": "B. Dieng",
+    "position": "Attacker",
+    "appearances": 18,
+    "minutes": 523,
+    "goals": 3,
+    "assists": 0,
+    "shots": 11,
+    "shots_on_target": 7
+  }
+]

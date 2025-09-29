@@ -1,0 +1,38 @@
+[
+  {
+    "id": 272091,
+    "team_id": 196,
+    "name": "Rick Meissen",
+    "position": "Defender",
+    "appearances": 20,
+    "minutes": 757,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 275268,
+    "team_id": 196,
+    "name": "Chris Kevin Nadje",
+    "position": "Midfielder",
+    "appearances": 21,
+    "minutes": 288,
+    "goals": 0,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 3
+  },
+  {
+    "id": 180128,
+    "team_id": 196,
+    "name": "Stefan Mitrovi\u0107",
+    "position": "Attacker",
+    "appearances": 28,
+    "minutes": 1507,
+    "goals": 2,
+    "assists": 1,
+    "shots": 30,
+    "shots_on_target": 10
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": 72048,
+    "team_id": 192,
+    "name": "C. \u00d6zkacar",
+    "position": "Defender",
+    "appearances": 28,
+    "minutes": 756,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 7319,
+    "team_id": 192,
+    "name": "J. Gazibegovi\u0107",
+    "position": "Defender",
+    "appearances": 19,
+    "minutes": 1642,
+    "goals": 1,
+    "assists": 1,
+    "shots": 16,
+    "shots_on_target": 5
+  },
+  {
+    "id": 48765,
+    "team_id": 192,
+    "name": "J. Schmied",
+    "position": "Defender",
+    "appearances": 18,
+    "minutes": 1606,
+    "goals": 3,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 5
+  },
+  {
+    "id": 1156,
+    "team_id": 192,
+    "name": "T. Krau\u00df",
+    "position": "Midfielder",
+    "appearances": 14,
+    "minutes": 1082,
+    "goals": 0,
+    "assists": 0,
+    "shots": 9,
+    "shots_on_target": 2
+  },
+  {
+    "id": 40560,
+    "team_id": 192,
+    "name": "J. Kami\u0144ski",
+    "position": "Midfielder",
+    "appearances": 31,
+    "minutes": 1138,
+    "goals": 0,
+    "assists": 2,
+    "shots": 11,
+    "shots_on_target": 3
+  },
+  {
+    "id": 25242,
+    "team_id": 192,
+    "name": "M. B\u00fclter",
+    "position": "Attacker",
+    "appearances": 29,
+    "minutes": 1871,
+    "goals": 7,
+    "assists": 2,
+    "shots": 29,
+    "shots_on_target": 16
+  },
+  {
+    "id": 8641,
+    "team_id": 192,
+    "name": "Alessio Daniel Castro-Montes",
+    "position": "Midfielder",
+    "appearances": 29,
+    "minutes": 1662,
+    "goals": 2,
+    "assists": 5,
+    "shots": 18,
+    "shots_on_target": 8
+  }
+]

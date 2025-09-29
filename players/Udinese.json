@@ -1,0 +1,86 @@
+[
+  {
+    "id": 656,
+    "team_id": 494,
+    "name": "O. Solet",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 19185,
+    "team_id": 494,
+    "name": "K. Davis",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 264,
+    "goals": 1,
+    "assists": 1,
+    "shots": 8,
+    "shots_on_target": 4
+  },
+  {
+    "id": 19824,
+    "team_id": 494,
+    "name": "J. Zemura",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 274,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 20656,
+    "team_id": 494,
+    "name": "E. Ebosse",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 53,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 36916,
+    "team_id": 494,
+    "name": "K. Ehizibue",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 319,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 40594,
+    "team_id": 494,
+    "name": "A. Buksa",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 101,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 281495,
+    "team_id": 494,
+    "name": "T. Kristensen",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  }
+]

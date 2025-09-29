@@ -1,0 +1,50 @@
+[
+  {
+    "id": 105,
+    "team_id": 112,
+    "name": "F. Ballo-Tour\u00e9",
+    "position": "Defender",
+    "appearances": 11,
+    "minutes": 595,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 363792,
+    "team_id": 112,
+    "name": "T. Yegbe",
+    "position": "Defender",
+    "appearances": 8,
+    "minutes": 647,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 3240,
+    "team_id": 112,
+    "name": "J. Gbamin",
+    "position": "Midfielder",
+    "appearances": 29,
+    "minutes": 1441,
+    "goals": 1,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 3
+  },
+  {
+    "id": 2990,
+    "team_id": 112,
+    "name": "Idrissa Gana Gueye",
+    "position": "Midfielder",
+    "appearances": 37,
+    "minutes": 3070,
+    "goals": 0,
+    "assists": 3,
+    "shots": 20,
+    "shots_on_target": 5
+  }
+]

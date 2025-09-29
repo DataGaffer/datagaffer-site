@@ -1,0 +1,122 @@
+[
+  {
+    "id": 716,
+    "team_id": 162,
+    "name": "L. Bittencourt",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 153,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 7073,
+    "team_id": 162,
+    "name": "M. Gr\u00fcll",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 357,
+    "goals": 0,
+    "assists": 1,
+    "shots": 8,
+    "shots_on_target": 3
+  },
+  {
+    "id": 7562,
+    "team_id": 162,
+    "name": "R. Schmid",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 418,
+    "goals": 2,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 3
+  },
+  {
+    "id": 25314,
+    "team_id": 162,
+    "name": "M. Friedl",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 353,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 26319,
+    "team_id": 162,
+    "name": "F. Agu",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 440,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 38798,
+    "team_id": 162,
+    "name": "S. Lynen",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 437,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 177807,
+    "team_id": 162,
+    "name": "J. Njinmah",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 303,
+    "goals": 2,
+    "assists": 0,
+    "shots": 8,
+    "shots_on_target": 5
+  },
+  {
+    "id": 334334,
+    "team_id": 162,
+    "name": "K. Topp",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 49,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 346866,
+    "team_id": 162,
+    "name": "S. Mbangula",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 291,
+    "goals": 1,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 448468,
+    "team_id": 162,
+    "name": "P. \u010covi\u0107",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 130,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  }
+]

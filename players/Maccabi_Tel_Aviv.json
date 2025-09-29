@@ -1,0 +1,74 @@
+[
+  {
+    "id": 942,
+    "team_id": 604,
+    "name": "M. Camara",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 90,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 126969,
+    "team_id": 604,
+    "name": "O. Davida",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 653,
+    "goals": 0,
+    "assists": 0,
+    "shots": 9,
+    "shots_on_target": 2
+  },
+  {
+    "id": 161826,
+    "team_id": 604,
+    "name": "I. Noy",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 17,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 206361,
+    "team_id": 604,
+    "name": "I. Sissokho",
+    "position": "Midfielder",
+    "appearances": 19,
+    "minutes": 600,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 274199,
+    "team_id": 604,
+    "name": "T. Asante",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 180,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 400496,
+    "team_id": 604,
+    "name": "E. Madmon",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 1,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  }
+]

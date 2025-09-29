@@ -1,0 +1,110 @@
+[
+  {
+    "id": 8474,
+    "team_id": 114,
+    "name": "T. De Smet",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 190,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 389322,
+    "team_id": 114,
+    "name": "N. Sangui",
+    "position": "Defender",
+    "appearances": 33,
+    "minutes": 1174,
+    "goals": 0,
+    "assists": 2,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 2202,
+    "team_id": 114,
+    "name": "H. Traor\u00e9",
+    "position": "Defender",
+    "appearances": 19,
+    "minutes": 716,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 266013,
+    "team_id": 114,
+    "name": "Ot\u00e1vio",
+    "position": "Defender",
+    "appearances": 33,
+    "minutes": 2051,
+    "goals": 2,
+    "assists": 0,
+    "shots": 14,
+    "shots_on_target": 5
+  },
+  {
+    "id": 22003,
+    "team_id": 114,
+    "name": "M. Cafaro",
+    "position": "Midfielder",
+    "appearances": 15,
+    "minutes": 733,
+    "goals": 1,
+    "assists": 0,
+    "shots": 22,
+    "shots_on_target": 10
+  },
+  {
+    "id": 22170,
+    "team_id": 114,
+    "name": "P. Lees-Melou",
+    "position": "Midfielder",
+    "appearances": 27,
+    "minutes": 1902,
+    "goals": 3,
+    "assists": 2,
+    "shots": 24,
+    "shots_on_target": 11
+  },
+  {
+    "id": 2781,
+    "team_id": 114,
+    "name": "M. Simon",
+    "position": "Attacker",
+    "appearances": 32,
+    "minutes": 2626,
+    "goals": 8,
+    "assists": 10,
+    "shots": 26,
+    "shots_on_target": 17
+  },
+  {
+    "id": 120,
+    "team_id": 114,
+    "name": "W. Geubbels",
+    "position": "Attacker",
+    "appearances": 30,
+    "minutes": 2213,
+    "goals": 13,
+    "assists": 1,
+    "shots": 60,
+    "shots_on_target": 34
+  },
+  {
+    "id": 22229,
+    "team_id": 114,
+    "name": "J. Ikon\u00e9",
+    "position": "Attacker",
+    "appearances": 15,
+    "minutes": 542,
+    "goals": 2,
+    "assists": 0,
+    "shots": 10,
+    "shots_on_target": 5
+  }
+]

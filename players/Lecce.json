@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1748,
+    "team_id": 867,
+    "name": "L. Coulibaly",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 353,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 6662,
+    "team_id": 867,
+    "name": "S. Pierotti",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 175,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 15673,
+    "team_id": 867,
+    "name": "Y. Ramadani",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 334,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 31543,
+    "team_id": 867,
+    "name": "A. Gallo",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 315,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 291589,
+    "team_id": 867,
+    "name": "Kialonda Gaspar",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 455316,
+    "team_id": 867,
+    "name": "Tiago Gabriel",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 281,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 482309,
+    "team_id": 867,
+    "name": "Owen Kouassi",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 184,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1408,
+    "team_id": 63,
+    "name": "S. Bornauw",
+    "position": "Defender",
+    "appearances": 19,
+    "minutes": 791,
+    "goals": 2,
+    "assists": 1,
+    "shots": 8,
+    "shots_on_target": 3
+  },
+  {
+    "id": 19760,
+    "team_id": 63,
+    "name": "J. Justin",
+    "position": "Defender",
+    "appearances": 36,
+    "minutes": 2920,
+    "goals": 2,
+    "assists": 2,
+    "shots": 14,
+    "shots_on_target": 7
+  },
+  {
+    "id": 833,
+    "team_id": 63,
+    "name": "J. Bijol",
+    "position": "Defender",
+    "appearances": 34,
+    "minutes": 2964,
+    "goals": 1,
+    "assists": 0,
+    "shots": 16,
+    "shots_on_target": 6
+  },
+  {
+    "id": 47969,
+    "team_id": 63,
+    "name": "G. Gudmundsson",
+    "position": "Defender",
+    "appearances": 48,
+    "minutes": 2669,
+    "goals": 2,
+    "assists": 1,
+    "shots": 21,
+    "shots_on_target": 9
+  },
+  {
+    "id": 177665,
+    "team_id": 63,
+    "name": "A. Stach",
+    "position": "Midfielder",
+    "appearances": 36,
+    "minutes": 3109,
+    "goals": 2,
+    "assists": 2,
+    "shots": 33,
+    "shots_on_target": 15
+  },
+  {
+    "id": 18901,
+    "team_id": 63,
+    "name": "S. Longstaff",
+    "position": "Midfielder",
+    "appearances": 25,
+    "minutes": 785,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 19461,
+    "team_id": 63,
+    "name": "L. Nmecha",
+    "position": "Attacker",
+    "appearances": 19,
+    "minutes": 455,
+    "goals": 3,
+    "assists": 0,
+    "shots": 15,
+    "shots_on_target": 9
+  },
+  {
+    "id": 48389,
+    "team_id": 63,
+    "name": "N. Okafor",
+    "position": "Attacker",
+    "appearances": 18,
+    "minutes": 521,
+    "goals": 1,
+    "assists": 1,
+    "shots": 13,
+    "shots_on_target": 6
+  },
+  {
+    "id": 18766,
+    "team_id": 63,
+    "name": "D. Calvert-Lewin",
+    "position": "Attacker",
+    "appearances": 26,
+    "minutes": 1629,
+    "goals": 3,
+    "assists": 1,
+    "shots": 42,
+    "shots_on_target": 20
+  },
+  {
+    "id": 19128,
+    "team_id": 63,
+    "name": "J. Harrison",
+    "position": "Attacker",
+    "appearances": 34,
+    "minutes": 2084,
+    "goals": 1,
+    "assists": 0,
+    "shots": 19,
+    "shots_on_target": 7
+  }
+]

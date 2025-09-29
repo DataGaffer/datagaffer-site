@@ -1,0 +1,110 @@
+[
+  {
+    "id": 8959,
+    "team_id": 180,
+    "name": "A. Beck",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 149,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 24641,
+    "team_id": 180,
+    "name": "B. Zivzivadze",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 125,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 24897,
+    "team_id": 180,
+    "name": "M. Busch",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 280,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 24899,
+    "team_id": 180,
+    "name": "P. Mainka",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 461,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 24979,
+    "team_id": 180,
+    "name": "J. F\u00f6hrenbach",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 425,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 25203,
+    "team_id": 180,
+    "name": "B. Gimber",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 305,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 125720,
+    "team_id": 180,
+    "name": "S. Conteh",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 235,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 2
+  },
+  {
+    "id": 127619,
+    "team_id": 180,
+    "name": "J. Sch\u00f6ppner",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 349,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 280055,
+    "team_id": 180,
+    "name": "L. Kerber",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 253,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  }
+]

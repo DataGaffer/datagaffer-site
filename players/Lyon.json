@@ -1,0 +1,110 @@
+[
+  {
+    "id": 68,
+    "team_id": 80,
+    "name": "Clinton Mata",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 536,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 529,
+    "team_id": 80,
+    "name": "N. Tagliafico",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 209,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 1456,
+    "team_id": 80,
+    "name": "A. Maitland-Niles",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 475,
+    "goals": 0,
+    "assists": 2,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 9700,
+    "team_id": 80,
+    "name": "Abner",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 325,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 25916,
+    "team_id": 80,
+    "name": "M. Niakhat\u00e9",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 540,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 80752,
+    "team_id": 80,
+    "name": "T. Tessmann",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 475,
+    "goals": 2,
+    "assists": 0,
+    "shots": 10,
+    "shots_on_target": 4
+  },
+  {
+    "id": 162590,
+    "team_id": 80,
+    "name": "T. Morton",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 410,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 193293,
+    "team_id": 80,
+    "name": "R. Kluivert",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 118,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 519664,
+    "team_id": 80,
+    "name": "K. Merah",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 252,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 840,
+    "team_id": 375,
+    "name": "A. Sigur\u00f0sson",
+    "position": "Midfielder",
+    "appearances": 17,
+    "minutes": 456,
+    "goals": 1,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 4
+  },
+  {
+    "id": 2733,
+    "team_id": 375,
+    "name": "J. Stryger Larsen",
+    "position": "Defender",
+    "appearances": 8,
+    "minutes": 270,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 15943,
+    "team_id": 375,
+    "name": "S. J\u00f8rgensen",
+    "position": "Midfielder",
+    "appearances": 30,
+    "minutes": 1895,
+    "goals": 6,
+    "assists": 1,
+    "shots": 35,
+    "shots_on_target": 21
+  },
+  {
+    "id": 19124,
+    "team_id": 375,
+    "name": "P. Jansson",
+    "position": "Defender",
+    "appearances": 8,
+    "minutes": 270,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 335095,
+    "team_id": 375,
+    "name": "H. Bolin",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 239,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 377168,
+    "team_id": 375,
+    "name": "K. Busulad\u017ei\u0107",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 36,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  }
+]

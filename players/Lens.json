@@ -1,0 +1,86 @@
+[
+  {
+    "id": 20525,
+    "team_id": 116,
+    "name": "M. Udol",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 440,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 1
+  },
+  {
+    "id": 20761,
+    "team_id": 116,
+    "name": "F. Sotoca",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 39,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 21568,
+    "team_id": 116,
+    "name": "R. Aguilar",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 386,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 21635,
+    "team_id": 116,
+    "name": "J. Gradit",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 21715,
+    "team_id": 116,
+    "name": "W. Sa\u00efd",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 348,
+    "goals": 2,
+    "assists": 2,
+    "shots": 9,
+    "shots_on_target": 6
+  },
+  {
+    "id": 22261,
+    "team_id": 116,
+    "name": "A. Thomasson",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 1,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 443579,
+    "team_id": 116,
+    "name": "R. Fofana",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 298,
+    "goals": 2,
+    "assists": 0,
+    "shots": 13,
+    "shots_on_target": 5
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1146,
+    "team_id": 746,
+    "name": "N. Mukiele",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 367,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 22225,
+    "team_id": 746,
+    "name": "Reinildo",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 393,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 37143,
+    "team_id": 746,
+    "name": "L. Geertruida",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 58,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 55904,
+    "team_id": 746,
+    "name": "D. Ballard",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 174,
+    "goals": 1,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 2
+  },
+  {
+    "id": 119121,
+    "team_id": 746,
+    "name": "T. Hume",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 547,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 301771,
+    "team_id": 746,
+    "name": "S. Adingra",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 245,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 327631,
+    "team_id": 746,
+    "name": "H. Diarra",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 347,
+    "goals": 0,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 1
+  },
+  {
+    "id": 336659,
+    "team_id": 746,
+    "name": "C. Talbi",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 472,
+    "goals": 0,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 0
+  },
+  {
+    "id": 339201,
+    "team_id": 746,
+    "name": "C. Rigg",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 98,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 365331,
+    "team_id": 746,
+    "name": "N. Sadiki",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 540,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  }
+]

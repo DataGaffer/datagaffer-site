@@ -1,0 +1,122 @@
+[
+  {
+    "id": 319,
+    "team_id": 490,
+    "name": "S. Luperto",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 454,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 2484,
+    "team_id": 490,
+    "name": "Y. Mina",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 454,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 30505,
+    "team_id": 490,
+    "name": "M. Adopo",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 437,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 30561,
+    "team_id": 490,
+    "name": "A. Deiola",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 345,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 31499,
+    "team_id": 490,
+    "name": "G. Borrelli",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 138,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 31734,
+    "team_id": 490,
+    "name": "M. Felici",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 82,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 309388,
+    "team_id": 490,
+    "name": "M. Prati",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 326,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 0
+  },
+  {
+    "id": 321744,
+    "team_id": 490,
+    "name": "A. Obert",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 422,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 383018,
+    "team_id": 490,
+    "name": "M. Palestra",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 302,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 383026,
+    "team_id": 490,
+    "name": "Riyad Idrissi",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 47,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  }
+]

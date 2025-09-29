@@ -1,0 +1,86 @@
+[
+  {
+    "id": 161963,
+    "team_id": 797,
+    "name": "Germ\u00e1n Valera",
+    "position": "Attacker",
+    "appearances": 8,
+    "minutes": 142,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 157146,
+    "team_id": 797,
+    "name": "L\u00e9o P\u00e9trot",
+    "position": "Defender",
+    "appearances": 31,
+    "minutes": 2637,
+    "goals": 0,
+    "assists": 3,
+    "shots": 5,
+    "shots_on_target": 3
+  },
+  {
+    "id": 343202,
+    "team_id": 797,
+    "name": "\u00c1lvaro Daniel Rodr\u00edguez Mu\u00f1oz",
+    "position": "Attacker",
+    "appearances": 30,
+    "minutes": 852,
+    "goals": 2,
+    "assists": 0,
+    "shots": 19,
+    "shots_on_target": 10
+  },
+  {
+    "id": 47013,
+    "team_id": 797,
+    "name": "Rafael Mir Vicente",
+    "position": "Attacker",
+    "appearances": 20,
+    "minutes": 743,
+    "goals": 1,
+    "assists": 2,
+    "shots": 21,
+    "shots_on_target": 8
+  },
+  {
+    "id": 2063,
+    "team_id": 797,
+    "name": "Andr\u00e9 Miguel Valente da Silva",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 460,
+    "goals": 1,
+    "assists": 2,
+    "shots": 6,
+    "shots_on_target": 3
+  },
+  {
+    "id": 47329,
+    "team_id": 797,
+    "name": "Adri\u00e0 Giner Pedrosa",
+    "position": "Defender",
+    "appearances": 34,
+    "minutes": 2303,
+    "goals": 1,
+    "assists": 1,
+    "shots": 19,
+    "shots_on_target": 8
+  },
+  {
+    "id": 386859,
+    "team_id": 797,
+    "name": "H\u00e9ctor Fort Garc\u00eda",
+    "position": "Defender",
+    "appearances": 49,
+    "minutes": 644,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 0
+  }
+]

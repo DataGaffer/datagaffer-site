@@ -1,0 +1,122 @@
+[
+  {
+    "id": 171,
+    "team_id": 48,
+    "name": "K. Walker-Peters",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 291,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 1445,
+    "team_id": 48,
+    "name": "K. Mavropanos",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 270,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 1646,
+    "team_id": 48,
+    "name": "Lucas Paquet\u00e1",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 428,
+    "goals": 2,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 4
+  },
+  {
+    "id": 2939,
+    "team_id": 48,
+    "name": "C. Wilson",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 172,
+    "goals": 1,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 4
+  },
+  {
+    "id": 18744,
+    "team_id": 48,
+    "name": "M. Kilman",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 19428,
+    "team_id": 48,
+    "name": "J. Bowen",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 2,
+    "assists": 0,
+    "shots": 8,
+    "shots_on_target": 6
+  },
+  {
+    "id": 25391,
+    "team_id": 48,
+    "name": "N. F\u00fcllkrug",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 230,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 37724,
+    "team_id": 48,
+    "name": "C. Summerville",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 147,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 336585,
+    "team_id": 48,
+    "name": "Mateus Fernandes",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 221,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 409303,
+    "team_id": 48,
+    "name": "E. Diouf",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 0,
+    "assists": 3,
+    "shots": 3,
+    "shots_on_target": 2
+  }
+]

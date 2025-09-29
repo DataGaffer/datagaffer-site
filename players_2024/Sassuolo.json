@@ -1,0 +1,110 @@
+[
+  {
+    "id": 37651,
+    "team_id": 488,
+    "name": "J. Idzes",
+    "position": "Defender",
+    "appearances": 35,
+    "minutes": 3128,
+    "goals": 1,
+    "assists": 0,
+    "shots": 12,
+    "shots_on_target": 3
+  },
+  {
+    "id": 41371,
+    "team_id": 488,
+    "name": "Fali Cand\u00e9",
+    "position": "Defender",
+    "appearances": 17,
+    "minutes": 1530,
+    "goals": 1,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 128338,
+    "team_id": 488,
+    "name": "W. Coulibaly",
+    "position": "Defender",
+    "appearances": 18,
+    "minutes": 1191,
+    "goals": 0,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 1
+  },
+  {
+    "id": 328046,
+    "team_id": 488,
+    "name": "I. Kon\u00e9",
+    "position": "Midfielder",
+    "appearances": 14,
+    "minutes": 361,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 902,
+    "team_id": 488,
+    "name": "N. Mati\u0107",
+    "position": "Midfielder",
+    "appearances": 40,
+    "minutes": 2452,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 127413,
+    "team_id": 488,
+    "name": "A. Vranckx",
+    "position": "Midfielder",
+    "appearances": 21,
+    "minutes": 571,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 31094,
+    "team_id": 488,
+    "name": "A. Pinamonti",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 2860,
+    "goals": 10,
+    "assists": 1,
+    "shots": 59,
+    "shots_on_target": 30
+  },
+  {
+    "id": 128478,
+    "team_id": 488,
+    "name": "W. Cheddira",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 652,
+    "goals": 1,
+    "assists": 1,
+    "shots": 10,
+    "shots_on_target": 4
+  },
+  {
+    "id": 263699,
+    "team_id": 488,
+    "name": "A. Fadera",
+    "position": "Attacker",
+    "appearances": 36,
+    "minutes": 1847,
+    "goals": 1,
+    "assists": 3,
+    "shots": 16,
+    "shots_on_target": 10
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 799,
+    "team_id": 567,
+    "name": "M. Havel",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 110,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 18930,
+    "team_id": 567,
+    "name": "M. Vydra",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 325,
+    "goals": 1,
+    "assists": 0,
+    "shots": 11,
+    "shots_on_target": 6
+  },
+  {
+    "id": 45824,
+    "team_id": 567,
+    "name": "S. Markovi\u0107",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 215,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 66253,
+    "team_id": 567,
+    "name": "T. Ladra",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 156,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 66270,
+    "team_id": 567,
+    "name": "V. Jemelka",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 0
+  },
+  {
+    "id": 162194,
+    "team_id": 567,
+    "name": "L. \u010cerv",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 271444,
+    "team_id": 567,
+    "name": "Merchas Doski",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 110,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 317825,
+    "team_id": 567,
+    "name": "S. Dweh",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 326,
+    "goals": 0,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 0
+  },
+  {
+    "id": 341226,
+    "team_id": 567,
+    "name": "R. Durosinmi",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 279,
+    "goals": 3,
+    "assists": 0,
+    "shots": 12,
+    "shots_on_target": 7
+  },
+  {
+    "id": 426130,
+    "team_id": 567,
+    "name": "Karel Sp\u00e1\u010dil",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 230,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 3
+  }
+]

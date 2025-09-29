@@ -1,0 +1,98 @@
+[
+  {
+    "id": 866,
+    "team_id": 801,
+    "name": "J. Cuadrado",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 85,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 951,
+    "team_id": 801,
+    "name": "M. Aebischer",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 356,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 0
+  },
+  {
+    "id": 30723,
+    "team_id": 801,
+    "name": "M. Marin",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 241,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 30753,
+    "team_id": 801,
+    "name": "M. L\u00e9ris",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 114,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 31604,
+    "team_id": 801,
+    "name": "A. Caracciolo",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 56293,
+    "team_id": 801,
+    "name": "I. Tour\u00e9",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 270,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 91503,
+    "team_id": 801,
+    "name": "S. Canestrelli",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 302069,
+    "team_id": 801,
+    "name": "S. Angori",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 233,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
+    "shots_on_target": 0
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 30780,
+    "team_id": 895,
+    "name": "L. Mazzitelli",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 38,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 14266,
+    "team_id": 895,
+    "name": "I. Smol\u010di\u0107",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 174,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 8586,
+    "team_id": 895,
+    "name": "M. Vojvoda",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 282,
+    "goals": 0,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 3
+  },
+  {
+    "id": 26301,
+    "team_id": 895,
+    "name": "M. Kempf",
+    "position": "Defender",
+    "appearances": 5,
+    "minutes": 412,
+    "goals": 1,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 659,
+    "team_id": 895,
+    "name": "M. Caqueret",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 117,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 162266,
+    "team_id": 895,
+    "name": "L. da Cunha",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 312,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 350037,
+    "team_id": 895,
+    "name": "N. Paz",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 440,
+    "goals": 3,
+    "assists": 3,
+    "shots": 12,
+    "shots_on_target": 9
+  },
+  {
+    "id": 137,
+    "team_id": 895,
+    "name": "Sergi Roberto",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 184,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 1
+  },
+  {
+    "id": 443162,
+    "team_id": 895,
+    "name": "Jes\u00fas Rodr\u00edguez",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 391,
+    "goals": 0,
+    "assists": 1,
+    "shots": 7,
+    "shots_on_target": 2
+  }
+]

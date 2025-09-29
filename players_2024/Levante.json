@@ -1,0 +1,110 @@
+[
+  {
+    "id": 388013,
+    "team_id": 539,
+    "name": "Andr\u00e9s Garc\u00eda",
+    "position": "Defender",
+    "appearances": 16,
+    "minutes": 325,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 64309,
+    "team_id": 539,
+    "name": "Manuel S\u00e1nchez de la Pe\u00f1a",
+    "position": "Defender",
+    "appearances": 35,
+    "minutes": 2646,
+    "goals": 1,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 2
+  },
+  {
+    "id": 421807,
+    "team_id": 539,
+    "name": "Mat\u00edas Agust\u00edn Moreno",
+    "position": "Defender",
+    "appearances": 34,
+    "minutes": 150,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 128985,
+    "team_id": 539,
+    "name": "Iker Losada Aragunde",
+    "position": "Attacker",
+    "appearances": 17,
+    "minutes": 377,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 182603,
+    "team_id": 539,
+    "name": "Jon Ander Olasagasti Imizcoz",
+    "position": "Midfielder",
+    "appearances": 49,
+    "minutes": 1101,
+    "goals": 1,
+    "assists": 2,
+    "shots": 11,
+    "shots_on_target": 4
+  },
+  {
+    "id": 378284,
+    "team_id": 539,
+    "name": "Karl Edouard Blaise Etta Eyong",
+    "position": "Attacker",
+    "appearances": 12,
+    "minutes": 46,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 20817,
+    "team_id": 539,
+    "name": "Goduine Koyalipou",
+    "position": "Attacker",
+    "appearances": 18,
+    "minutes": 891,
+    "goals": 4,
+    "assists": 0,
+    "shots": 29,
+    "shots_on_target": 15
+  },
+  {
+    "id": 125239,
+    "team_id": 539,
+    "name": "Kervin Fabi\u00e1n Arriaga Villanueva",
+    "position": "Midfielder",
+    "appearances": 16,
+    "minutes": 892,
+    "goals": 0,
+    "assists": 0,
+    "shots": 8,
+    "shots_on_target": 4
+  },
+  {
+    "id": 316517,
+    "team_id": 539,
+    "name": "Alan Agust\u00edn Matturro Romero",
+    "position": "Defender",
+    "appearances": 25,
+    "minutes": 902,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 3
+  }
+]

@@ -1,0 +1,151 @@
+[
+  
+  {
+    "id": 184,
+    "team_id": 157,
+    "name": "H. Kane",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 497,
+    "goals": 12,
+    "assists": 3,
+    "shots": 21,
+    "shots_on_target": 18
+  },
+
+  {
+    "id": 510,
+    "name": "S. Gnabry",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 289,
+    "goals": 3,
+    "assists": 2,
+    "shots": 10,
+    "shots_on_target": 4,
+   "team_id": 157
+  },
+
+
+  {
+    "id": 502,
+    "team_id": 157,
+    "name": "J. Kimmich",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 417,
+    "goals": 0,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 511,
+    "team_id": 157,
+    "name": "L. Goretzka",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 288,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 972,
+    "team_id": 157,
+    "name": "J. Tah",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 473,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 1149,
+    "team_id": 157,
+    "name": "D. Upamecano",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 426,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 1157,
+    "team_id": 157,
+    "name": "K. Laimer",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 500,
+    "goals": 1,
+    "assists": 2,
+    "shots": 5,
+    "shots_on_target": 4
+  },
+  {
+    "id": 2195,
+    "team_id": 157,
+    "name": "S. Boey",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 270,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 2489,
+    "team_id": 157,
+    "name": "L. D\u00edaz",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 520,
+    "goals": 3,
+    "assists": 3,
+    "shots": 17,
+    "shots_on_target": 8
+  },
+  {
+    "id": 2897,
+    "team_id": 157,
+    "name": "Kim Min-Jae",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 137,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 19617,
+    "team_id": 157,
+    "name": "M. Olise",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 466,
+    "goals": 3,
+    "assists": 2,
+    "shots": 17,
+    "shots_on_target": 13
+  },
+  {
+    "id": 125171,
+    "team_id": 157,
+    "name": "J. Stani\u0161i\u0107",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 321,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  }
+
+]

@@ -6,12 +6,8 @@
   <title>Sim Cards | DataGaffer</title>
   <style>
     html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0; padding: 0;
-      color: #003f2e;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+   header { background: #003f2e; color: white; padding: 15px; text-align: center; font-size: 22px; font-weight: bold; }
     .container { max-width: 950px; margin: auto; padding: 30px 20px; }
     .match-grid {
       display: flex; flex-wrap: wrap;
@@ -25,25 +21,24 @@
       width: 120px; height: 70px;
     }
 
-/* Hover effect for grid buttons */
-.match-box {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 18px 12px;
-  text-align: center;
-  width: 120px;
-  height: 70px;
-  transition: all 0.25s ease; /* 👈 smooth hover animation */
-  cursor: pointer; /* 👈 shows clickable hand */
-}
+    /* Hover effect for grid buttons */
+    .match-box {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 18px 12px;
+      text-align: center;
+      width: 120px;
+      height: 70px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
 
-.match-box:hover {
-  transform: translateY(-5px); /* 👈 lifts up slightly */
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25); /* 👈 stronger shadow */
-  background: #e0f2ea; /* 👈 light green background */
-}
-
+    .match-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      background: #e0f2ea;
+    }
 
     .match-box img { height: 45px; }
     .match-box .score { font-weight: bold; margin-top: 8px; font-size: 20px; }
@@ -53,14 +48,53 @@
       background-color: #e0f2ea; border-left: 5px solid #013b2b;
     }
     .sim-card {
-      background: white; border: 2px solid black; border-radius: 20px;
+      background: white; border-radius: 20px;
       width: 600px; margin: 0 auto 50px auto;
       padding: 24px 20px 30px 20px; text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
     }
+
+    /* Sim card hover effect */
+.sim-card {
+  transition: all 0.25s ease; /* smooth animation */
+  cursor: pointer;            /* shows clickable hand */
+}
+
+.sim-card:hover {
+  transform: translateY(-5px);  /* lift up */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25); /* stronger shadow */
+}
+
+    /* NEW green header for logos + names */
+    .sim-card-header {
+      background: #003f2e;
+      color: white;
+      padding: 4px 2px;
+      border-radius: 18px 18px 0 0;
+      margin: -24px -20px 20px -20px;
+    }
+    .sim-card-header .team-row { margin: 0; }
+    .sim-card-header .team-name { color: white; }
+
+    .score-box {
+  background: #14b36e;   /* green background */
+  border-radius: 6px;
+  display: inline-block;
+  padding: 8px 24px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;          /* white text */
+}
+.score-box span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
     .team-row { display: flex; justify-content: center; align-items: center; }
     .team-col {
       width: 10%; text-align: center; white-space: nowrap;
-      display: flex; flex-direction: column; align-items: center; font-size: 16px;
+      display: flex; flex-direction: column; align-items: center; font-size: 16px;;
     }
     .center-col {
       width: 22%; font-weight: bold; font-size: 16px;
@@ -73,95 +107,116 @@
     .team-name { font-weight: bold; font-size: 14px; margin-bottom: 12px; white-space: nowrap; }
     .odds-section { margin-bottom: 30px; font-size: 15px; }
     .section-title { font-weight: bold; font-size: 16px; margin: 20px 0 4px 0; }
-    .score-box {
-      border: 2px solid black; border-radius: 6px;
-      display: inline-block; padding: 10px 16px;
-      margin-top: 25px; font-size: 18px; font-weight: bold;
+    .odds-value {
+    font-weight: bold;
+    color: #038d46; /* dark green for Sim */
     }
-    .score-box span {
-      display: inline-block; margin-top: 4px; font-size: 20px;
-      color: #000; font-weight: bold; border-bottom: 3px solid #14b36e;
+    .bet365-value {
+  color: #000000; /* black for Bet365 */
     }
-    .odds-value { font-weight: bold; }
+    .sim-text {
+  font-weight: bold;
+  color: #038d46;
+  line-height: 0.1;   /* green */
+}
+.bet-text {
+  font-weight: normal;
+  color: #333333;
+  line-height: 0.3;   /* dark gray */
+}
   
     /* --- Mobile adjustments --- */
-  @media (max-width: 925px) {
-    .header-logo { height: 50px !important; width: auto !important; }
+    @media (max-width: 925px) {
+  body { overflow-x: hidden; }
+
+ .header-logo { height: 50px !important; width: auto !important; }
  h1 { font-size: 20px !important; }
 
- .banner {
-   width: 85% !important;
-   font-size: 13px !important;
-   padding: 6px !important;
-   margin-top: 25px;
- }
-    /* match grid */
-    .match-grid { gap: 10px; margin-bottom: 25px; }
-    .match-box {
-      width: 90px !important;
-      height: auto !important;
-      padding: 10px !important;
-    }
-    .match-box img { height: 30px !important; }
-    .match-box .score { font-size: 14px !important; margin-top: 4px; }
+      .banner {
+        width: 85% !important;
+        font-size: 13px !important;
+        padding: 6px !important;
+        margin-top: 25px;
+      }
+        .sim-text {
+          line-height: 0.5;
+          margin-top: 5px;
 
-    /* explanation box */
-    .explanation {
-      font-size: 13px !important;
-      padding: 6px !important;
-      margin-bottom: 25px !important;
-    }
+}
+.bet-down {
+  margin-top: 2px;   /* dark gray */
+}
+      /* match grid */
+      .match-grid { gap: 10px; margin-bottom: 25px; }
+      .match-box {
+        width: 90px !important;
+        height: auto !important;
+        padding: 10px !important;
+      }
+      .match-box img { height: 30px !important; }
+      .match-box .score { font-size: 14px !important; margin-top: 4px; }
 
-    /* sim cards */
-    .sim-card {
-      width: 95% !important;
-      padding: 15px 10px 20px 10px !important;
-      margin-bottom: 30px !important;
-    }
+      /* explanation box */
+      .explanation {
+        font-size: 13px !important;
+        padding: 6px !important;
+        margin-bottom: 40px !important;
+      }
 
-    .team-row { flex-wrap: wrap; }
-    .team-col {
-      width: 20% !important;
-      font-size: 12px !important;
-    }
-    .center-col {
-      width: 20% !important;
-      font-size: 12px !important;
-      margin-top: 10px !important;
-      line-height: 1.2;
-    }
+      /* sim cards */
+      .sim-card {
+        width: 95% !important;
+        padding: 15px 10px 20px 10px !important;
+        margin-bottom: 30px !important;
+      }
+
+      .score-box span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+      .team-row { flex-wrap: wrap; }
+      .team-col {
+        width: 20% !important;
+        font-size: 14px !important;
+      }
+      .center-col {
+        width: 20% !important;
+        font-size: 14px !important;
+        margin-top: 10px !important;
+        line-height: 1.2;
+      }
 
       .section-title {
-    font-size: 12px !important;
-    margin: 10px 0 2px 0 !important;
-  }
-  .sim-card div {
-    font-size: 12px !important;
-  }
+        font-size: 12px !important;
+        margin: 10px 0 2px 0 !important;
+      }
+      .sim-card div {
+        font-size: 12px !important;
+      }
 
+      .team-logo { height: 40px !important; }
+      .team-name { font-size: 12px !important; margin-bottom: 6px !important; }
+      .label { font-size: 11px !important; margin-bottom: 1px; }
 
-    .team-logo { height: 40px !important; }
-    .team-name { font-size: 12px !important; margin-bottom: 6px !important; }
-    .label { font-size: 11px !important; margin-bottom: 1px; }
-
-    .odds-section { margin-bottom: 15px !important; font-size: 12px !important; }
-    .section-title { font-size: 13px !important; margin: 12px 0 2px 0 !important; }
-    .score-box { padding: 6px 10px !important; font-size: 14px !important; margin-top: 15px !important; }
-    .score-box span { font-size: 16px !important; }
-  }
-
-  
+      .odds-section { margin-bottom: 15px !important; font-size: 14px !important; }
+      .section-title { font-size: 134x !important; margin: 12px 0 2px 0 !important; }
+      .sim-card-score { font-size: 14px !important; padding: 8px !important; }
+    }
   </style>
 </head>
 <body>
 
 <!-- Header -->
+<!-- Header -->
+<!-- Header -->
 <div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
-  <a href="dashboard.html" style="text-decoration: none; color: inherit; display: contents;">
+   <a href="dashboard.html" style="text-decoration: none; color: inherit; display: contents;">
   <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
-       alt="DG Logo"
-       style="height: 90px; position: absolute; left: 20px; top: 0px; z-index: 2;" />
-  <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
+        alt="DG Logo"
+        class="header-logo"
+        style="height: 90px; width: auto; position: absolute; left: 20px; top: 0px; z-index: 2;" />
+   <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
 </a>
 </div>
 
@@ -217,68 +272,64 @@ fetch('fixtures.json')
     card.className = 'sim-card';
     card.id = slug;
     card.innerHTML = `
-      <div class="team-row" style="margin-bottom: 12px;">
-        <div class="team-col"><div class="label">Home</div></div>
-        <div class="center-col"></div>
-        <div class="team-col"><div class="label">Away</div></div>
-      </div>
-
-      <div class="team-row">
-        <div class="team-col"><img src="${match.home.logo}" class="team-logo" /></div>
-        <div class="center-col">vs</div>
-        <div class="team-col"><img src="${match.away.logo}" class="team-logo" /></div>
-      </div>
-
-      <div class="team-row">
-        <div class="team-col"><div class="team-name">${match.home.name}</div></div>
-        <div class="center-col"></div>
-        <div class="team-col"><div class="team-name">${match.away.name}</div></div>
-      </div>
-
-      <div class="team-row odds-section">
-        <div class="team-col">
-          <div class="label">Win:</div>
-          <div><span class="odds-value">${sim.home_win_pct ?? 'N/A'}% (${toOdds(sim.home_win_pct)})</span></div>
-          <div style="margin-top: 4px;">${book.home_win ?? 'N/A'}</div>
-        </div>
-        <div class="center-col">Sim<br>Bet365</div>
-        <div class="team-col">
-          <div class="label">Win:</div>
-          <div><span class="odds-value">${sim.away_win_pct ?? 'N/A'}% (${toOdds(sim.away_win_pct)})</span></div>
-          <div style="margin-top: 4px;">${book.away_win ?? 'N/A'}</div>
+      <div class="sim-card-header">
+        <div class="team-row">
+          <div class="team-col"><img src="${match.home.logo}" class="team-logo" /><div class="team-name">${match.home.name}</div></div>
+          <div class="center-col">vs</div>
+          <div class="team-col"><img src="${match.away.logo}" class="team-logo" /><div class="team-name">${match.away.name}</div></div>
         </div>
       </div>
 
       <div class="team-row odds-section">
-        <div class="team-col">
-          <div class="label">o1.5:</div>
-          <div><span class="odds-value">${sim.home_o1_5_pct ?? 'N/A'}% (${toOdds(sim.home_o1_5_pct)})</span></div>
-          <div style="margin-top: 4px;">${book.home_o1_5 ?? 'N/A'}</div>
-        </div>
-        <div class="center-col">Sim<br>Bet365</div>
-        <div class="team-col">
-          <div class="label">o1.5:</div>
-          <div><span class="odds-value">${sim.away_o1_5_pct ?? 'N/A'}% (${toOdds(sim.away_o1_5_pct)})</span></div>
-          <div style="margin-top: 4px;">${book.away_o1_5 ?? 'N/A'}</div>
-        </div>
-      </div>
+  <div class="team-col">
+    <div class="label">Win:</div>
+    <div><span class="odds-value">${sim.home_win_pct ?? 'N/A'}% (${toOdds(sim.home_win_pct)})</span></div>
+    <div style="margin-top: 4px;">${book.home_win ?? 'N/A'}</div>
+  </div>
+  <div class="center-col">
+    <span class="sim-text">Sim</span><br>
+    <span class="bet-text bet-down">Bet365</span>
+  </div>
+  <div class="team-col">
+    <div class="label">Win:</div>
+    <div><span class="odds-value">${sim.away_win_pct ?? 'N/A'}% (${toOdds(sim.away_win_pct)})</span></div>
+    <div style="margin-top: 4px;">${book.away_win ?? 'N/A'}</div>
+  </div>
+</div>
 
-      <div class="section-title">Game Total (o2.5):</div>
-      <div style="margin-top: 6px;">
-        Sim: ${sim.over_2_5_pct ?? 'N/A'}% (${toOdds(sim.over_2_5_pct)}) <br>
-        Bet365: <span class="green">${book.over_2_5 ?? 'N/A'}</span>
-      </div>
+<div class="team-row odds-section">
+  <div class="team-col">
+    <div class="label">o1.5:</div>
+    <div><span class="odds-value">${sim.home_o1_5_pct ?? 'N/A'}% (${toOdds(sim.home_o1_5_pct)})</span></div>
+    <div style="margin-top: 4px;">${book.home_o1_5 ?? 'N/A'}</div>
+  </div>
+  <div class="center-col">
+    <span class="sim-text">Sim</span><br>
+    <span class="bet-text bet-down">Bet365</span>
+  </div>
+  <div class="team-col">
+    <div class="label">o1.5:</div>
+    <div><span class="odds-value">${sim.away_o1_5_pct ?? 'N/A'}% (${toOdds(sim.away_o1_5_pct)})</span></div>
+    <div style="margin-top: 4px;">${book.away_o1_5 ?? 'N/A'}</div>
+  </div>
+</div>
 
-      <div class="section-title">Both Teams To Score:</div>
-      <div style="margin-top: 6px;">
-        Sim: ${sim.btts_pct ?? 'N/A'}% (${toOdds(sim.btts_pct)}) <br>
-        Bet365: <span class="green">${book.btts ?? 'N/A'}</span>
-      </div>
+     <div class="section-title">Game Total (o2.5):</div>
+<div style="margin-top: 6px;">
+  <span class="odds-value">Sim: ${sim.over_2_5_pct ?? 'N/A'}% (${toOdds(sim.over_2_5_pct)})</span> <br>
+  Bet365: <span class="bet365-value">${book.over_2_5 ?? 'N/A'}</span>
+</div>
 
-      <div class="score-box">
-        Projected Match Score:<br />
-        <span>${match.sim_stats.xg.home} - ${match.sim_stats.xg.away}</span>
-      </div>
+<div class="section-title">Both Teams To Score:</div>
+<div style="margin-top: 6px;">
+  <span class="odds-value">Sim: ${sim.btts_pct ?? 'N/A'}% (${toOdds(sim.btts_pct)})</span> <br>
+  Bet365: <span class="bet365-value">${book.btts ?? 'N/A'}</span>
+</div>
+
+      <div class="section-title">Projected Match Score:</div>
+<div class="score-box">
+  <span>${match.sim_stats.xg.home} - ${match.sim_stats.xg.away}</span>
+</div>
     `;
     simCards.appendChild(card);
   });
@@ -287,13 +338,11 @@ fetch('fixtures.json')
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-/* --- Supabase setup --- */
 const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";  // replace with your anon key
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...";
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 
-/* --- Inactivity logout (15 minutes) --- */
-const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const INACTIVITY_LIMIT = 15 * 60 * 1000;
 let inactivityTimer;
 
 function resetInactivityTimer() {
@@ -305,15 +354,12 @@ function resetInactivityTimer() {
   }, INACTIVITY_LIMIT);
 }
 
-// Reset timer on user activity
 ["click","mousemove","keydown","scroll","touchstart"].forEach(evt =>
   document.addEventListener(evt, resetInactivityTimer)
 );
 
-// Start timer when page loads
 resetInactivityTimer();
 
-/* --- Explicit logout handling --- */
 supabaseClient.auth.onAuthStateChange((event) => {
   if (event === "SIGNED_OUT") {
     console.log("User signed out → redirecting to login");
@@ -333,8 +379,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 });
 </script>
-
-
 
 </body>
 </html>

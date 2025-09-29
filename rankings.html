@@ -77,10 +77,6 @@
       border-radius: 0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       border: 1.8px solid #ffffff;
-      display: none; /* hidden by default */
-    }
-    .outlook-page.active {
-      display: block; /* only active one shows */
     }
 
     h1, h2, h3, h4, h5, h6, p {
@@ -272,10 +268,10 @@
 
 <!-- Buttons -->
 <div class="toc">
-  <span class="toc-btn" onclick="showPage('btts')">BTTS</span>
-  <span class="toc-btn" onclick="showPage('over25')">Over 2.5</span>
-  <span class="toc-btn" onclick="showPage('team_total')">Team Total</span>
-  <span class="toc-btn" onclick="showPage('win')">Win %</span>
+<a class="toc-btn" href="#btts">BTTS</a>
+<a class="toc-btn" href="#over25">Over 2.5</a>
+<a class="toc-btn" href="#team_total">Team Total</a>
+<a class="toc-btn" href="#win">Win %</a>
 </div>
 
 <!-- BTTS Rankings -->
@@ -415,10 +411,6 @@ fetch("rankings/rankings.json")
     renderRankings(data.win, "win-rankings-body");
   });
 
-function showPage(pageId) {
-  document.querySelectorAll(".outlook-page").forEach(sec => sec.classList.remove("active"));
-  document.getElementById(pageId).classList.add("active");
-}
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

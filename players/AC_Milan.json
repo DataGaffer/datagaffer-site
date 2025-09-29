@@ -1,0 +1,110 @@
+[
+  {
+    "id": 754,
+    "team_id": 489,
+    "name": "L. Modri\u0107",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 335,
+    "goals": 1,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 22254,
+    "team_id": 489,
+    "name": "Y. Fofana",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 313,
+    "goals": 1,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 3
+  },
+  {
+    "id": 31056,
+    "team_id": 489,
+    "name": "S. Ricci",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 61,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 45826,
+    "team_id": 489,
+    "name": "S. Pavlovi\u0107",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 293,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 94562,
+    "team_id": 489,
+    "name": "S. Gim\u00e9nez",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 324,
+    "goals": 0,
+    "assists": 0,
+    "shots": 11,
+    "shots_on_target": 5
+  },
+  {
+    "id": 263481,
+    "team_id": 489,
+    "name": "L. Colombo",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 285,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
+  },
+  {
+    "id": 264472,
+    "team_id": 489,
+    "name": "F. Terracciano",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 266813,
+    "team_id": 489,
+    "name": "W. Bondo",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 250,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 436260,
+    "team_id": 489,
+    "name": "F. Camarda",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 164,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  }
+]

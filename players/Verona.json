@@ -1,0 +1,50 @@
+[
+  {
+    "id": 15909,
+    "team_id": 504,
+    "name": "M. Frese",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 295,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 22239,
+    "team_id": 504,
+    "name": "C. Niasse",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 89,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 47277,
+    "team_id": 504,
+    "name": "Unai N\u00fa\u00f1ez",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 312615,
+    "team_id": 504,
+    "name": "Giovane",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 333,
+    "goals": 0,
+    "assists": 1,
+    "shots": 14,
+    "shots_on_target": 8
+  }
+]

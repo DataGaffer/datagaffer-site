@@ -1,0 +1,110 @@
+[
+  {
+    "id": 85,
+    "team_id": 503,
+    "name": "C. Ngonge",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 226,
+    "goals": 0,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 243,
+    "team_id": 503,
+    "name": "Z. Aboukhlal",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 112,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 842,
+    "team_id": 503,
+    "name": "N. Vla\u0161i\u0107",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 312,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 19524,
+    "team_id": 503,
+    "name": "C. Adams",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 125,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 30396,
+    "team_id": 503,
+    "name": "C. Biraghi",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 346,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 40582,
+    "team_id": 503,
+    "name": "S. Walukiewicz",
+    "position": "Defender",
+    "appearances": 3,
+    "minutes": 225,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 122468,
+    "team_id": 503,
+    "name": "Sa\u00fal Coco",
+    "position": "Defender",
+    "appearances": 4,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 138777,
+    "team_id": 503,
+    "name": "F. Anjorin",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 35,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 270507,
+    "team_id": 503,
+    "name": "C. Casadei",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 289,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 4
+  }
+]

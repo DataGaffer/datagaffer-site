@@ -1,0 +1,122 @@
+[
+  {
+    "id": 25321,
+    "team_id": 194,
+    "name": "D. Klaassen",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 565,
+    "goals": 2,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 3
+  },
+  {
+    "id": 25416,
+    "team_id": 194,
+    "name": "W. Weghorst",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 527,
+    "goals": 3,
+    "assists": 1,
+    "shots": 15,
+    "shots_on_target": 6
+  },
+  {
+    "id": 36893,
+    "team_id": 194,
+    "name": "O. Wijndal",
+    "position": "Defender",
+    "appearances": 8,
+    "minutes": 698,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 38114,
+    "team_id": 194,
+    "name": "K. Itakura",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 470,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 38749,
+    "team_id": 194,
+    "name": "K. Taylor",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 669,
+    "goals": 2,
+    "assists": 2,
+    "shots": 8,
+    "shots_on_target": 6
+  },
+  {
+    "id": 138753,
+    "team_id": 194,
+    "name": "O. Edvardsen",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 349,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 161883,
+    "team_id": 194,
+    "name": "Y. Regeer",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 300,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 294684,
+    "team_id": 194,
+    "name": "Y. Baas",
+    "position": "Defender",
+    "appearances": 7,
+    "minutes": 630,
+    "goals": 1,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 313941,
+    "team_id": 194,
+    "name": "A. Gaaei",
+    "position": "Defender",
+    "appearances": 6,
+    "minutes": 446,
+    "goals": 0,
+    "assists": 1,
+    "shots": 6,
+    "shots_on_target": 2
+  },
+  {
+    "id": 329715,
+    "team_id": 194,
+    "name": "O. Gloukh",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 348,
+    "goals": 2,
+    "assists": 0,
+    "shots": 9,
+    "shots_on_target": 6
+  }
+]
