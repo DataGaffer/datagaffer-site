@@ -38,14 +38,14 @@
         "total": "5.10"
       },
       "corners": {
-        "home": "1.4",
-        "away": "16.7",
-        "total": "18.2"
+        "home": "2.4",
+        "away": "8.7",
+        "total": "11.1"
       },
       "shots": {
-        "home": "3.9",
-        "away": "38.8",
-        "total": "42.7"
+        "home": "7.9",
+        "away": "24.8",
+        "total": "32.7"
       },
       "percents": {
         "home_win_pct": 1.0,
@@ -393,13 +393,13 @@
       },
       "corners": {
         "home": "3.0",
-        "away": "9.3",
-        "total": "12.2"
+        "away": "7.3",
+        "total": "10.3"
       },
       "shots": {
-        "home": "7.7",
-        "away": "20.1",
-        "total": "27.7"
+        "home": "10.7",
+        "away": "18.1",
+        "total": "28.8"
       },
       "percents": {
         "home_win_pct": 8.0,
@@ -452,13 +452,13 @@
       },
       "corners": {
         "home": "1.8",
-        "away": "12.2",
-        "total": "14.0"
+        "away": "9.2",
+        "total": "11.0"
       },
       "shots": {
-        "home": "4.5",
-        "away": "30.8",
-        "total": "35.3"
+        "home": "5.5",
+        "away": "24.8",
+        "total": "30.3"
       },
       "percents": {
         "home_win_pct": 2.1,
@@ -510,13 +510,13 @@
         "total": "4.08"
       },
       "corners": {
-        "home": "2.7",
-        "away": "9.2",
+        "home": "4.7",
+        "away": "7.2",
         "total": "11.9"
       },
       "shots": {
-        "home": "7.0",
-        "away": "22.4",
+        "home": "11.0",
+        "away": "18.4",
         "total": "29.4"
       },
       "percents": {
