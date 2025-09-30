@@ -12,6 +12,18 @@
     "shots_on_target": 1
   },
   {
+    "id": 1460,
+    "team_id": 42,
+    "name": "B. Saka",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 321,
+    "goals": 1,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
+  },
+  {
     "id": 2937,
     "team_id": 42,
     "name": "D. Rice",
@@ -47,18 +59,7 @@
     "shots": 1,
     "shots_on_target": 1
   },
-  {
-    "id": 22090,
-    "team_id": 42,
-    "name": "W. Saliba",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 275,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 22224,
     "team_id": 42,
@@ -142,41 +143,5 @@
     "assists": 2,
     "shots": 7,
     "shots_on_target": 1
-  },
-  {
-    "id": 313236,
-    "team_id": 42,
-    "name": "E. Nwaneri",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 141,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
-    "id": 313245,
-    "team_id": 42,
-    "name": "M. Lewis-Skelly",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 68,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 333682,
-    "team_id": 42,
-    "name": "Cristhian Mosquera",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 293,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   }
 ]

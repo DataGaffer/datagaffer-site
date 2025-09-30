@@ -35,18 +35,7 @@
     "shots": 2,
     "shots_on_target": 0
   },
-  {
-    "id": 2194,
-    "team_id": 165,
-    "name": "R. Benseba\u00efni",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 1,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
-  },
+  
   {
     "id": 7334,
     "team_id": 165,
@@ -83,30 +72,7 @@
     "shots": 15,
     "shots_on_target": 14
   },
-  {
-    "id": 24807,
-    "team_id": 165,
-    "name": "S. \u00d6zcan",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 31,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 25368,
-    "team_id": 165,
-    "name": "W. Anton",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 1,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
+  
   {
     "id": 158644,
     "team_id": 165,

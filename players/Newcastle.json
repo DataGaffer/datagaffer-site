@@ -23,18 +23,7 @@
     "shots": 1,
     "shots_on_target": 0
   },
-  {
-    "id": 1463,
-    "team_id": 34,
-    "name": "J. Willock",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 115,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 2806,
     "team_id": 34,
@@ -107,18 +96,7 @@
     "shots": 7,
     "shots_on_target": 4
   },
-  {
-    "id": 38734,
-    "team_id": 34,
-    "name": "S. Botman",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 179,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 138787,
     "team_id": 34,
@@ -154,41 +132,6 @@
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
-  },
-  {
-    "id": 158694,
-    "team_id": 34,
-    "name": "T. Livramento",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 546,
-    "goals": 0,
-    "assists": 1,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 163189,
-    "team_id": 34,
-    "name": "M. Thiaw",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 120,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 284492,
-    "team_id": 34,
-    "name": "L. Hall",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 133,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
   }
+  
 ]

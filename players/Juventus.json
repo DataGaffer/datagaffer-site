@@ -23,18 +23,7 @@
     "shots": 8,
     "shots_on_target": 4
   },
-  {
-    "id": 415,
-    "team_id": 496,
-    "name": "W. McKennie",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 179,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
+  
   {
     "id": 8489,
     "team_id": 496,
@@ -47,18 +36,7 @@
     "shots": 5,
     "shots_on_target": 1
   },
-  {
-    "id": 19263,
-    "team_id": 496,
-    "name": "L. Kelly",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 546,
-    "goals": 2,
-    "assists": 0,
-    "shots": 7,
-    "shots_on_target": 3
-  },
+  
   {
     "id": 30415,
     "team_id": 496,
@@ -71,30 +49,7 @@
     "shots": 7,
     "shots_on_target": 5
   },
-  {
-    "id": 30497,
-    "team_id": 496,
-    "name": "Bremer",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 436,
-    "goals": 0,
-    "assists": 2,
-    "shots": 4,
-    "shots_on_target": 1
-  },
-  {
-    "id": 30533,
-    "team_id": 496,
-    "name": "M. Locatelli",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 259,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 36899,
     "team_id": 496,
@@ -119,18 +74,7 @@
     "shots": 1,
     "shots_on_target": 0
   },
-  {
-    "id": 48392,
-    "team_id": 496,
-    "name": "E. Zhegrova",
-    "position": "Attacker",
-    "appearances": 3,
-    "minutes": 57,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
+  
   {
     "id": 127011,
     "team_id": 496,
@@ -143,30 +87,7 @@
     "shots": 1,
     "shots_on_target": 0
   },
-  {
-    "id": 162188,
-    "team_id": 496,
-    "name": "P. Kalulu",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 546,
-    "goals": 0,
-    "assists": 1,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
-    "id": 268341,
-    "team_id": 496,
-    "name": "F. Gatti",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 380,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
-  },
+  
   {
     "id": 339872,
     "team_id": 496,

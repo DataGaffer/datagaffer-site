@@ -11,18 +11,7 @@
     "shots": 5,
     "shots_on_target": 1
   },
-  {
-    "id": 166,
-    "team_id": 533,
-    "name": "J. Foyth",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 452,
-    "goals": 0,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 928,
     "team_id": 533,
@@ -35,18 +24,7 @@
     "shots": 0,
     "shots_on_target": 0
   },
-  {
-    "id": 1702,
-    "team_id": 533,
-    "name": "Pedraza",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 194,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 3246,
     "team_id": 533,
@@ -71,18 +49,7 @@
     "shots": 13,
     "shots_on_target": 5
   },
-  {
-    "id": 47541,
-    "team_id": 533,
-    "name": "Santi Comesa\u00f1a",
-    "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 381,
-    "goals": 0,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 51016,
     "team_id": 533,
@@ -129,30 +96,6 @@
     "goals": 1,
     "assists": 0,
     "shots": 7,
-    "shots_on_target": 2
-  },
-  {
-    "id": 237066,
-    "team_id": 533,
-    "name": "Rafa Mar\u00edn",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 547,
-    "goals": 1,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
-  },
-  {
-    "id": 290740,
-    "team_id": 533,
-    "name": "Ilias Akhomach",
-    "position": "Attacker",
-    "appearances": 5,
-    "minutes": 145,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
     "shots_on_target": 2
   },
   {

@@ -92,12 +92,14 @@ def simulate_player(player, team_id, g_scale, a_scale, sh_scale, sot_scale, play
     if player.get("id") in top_ids or player.get("player_id") in top_ids:
         g_per90 *= 1.15
         a_per90 *= 1.15
+        sh_per90 *= 1.15
+        sot_per90 *= 1.15
 
     # Mild positional nudge (attackers only)
     pos = (player.get("position", "") or "").lower()
     if pos == "attacker":
         g_per90 *= 1.10
-        a_per90 *= 1.05
+        a_per90 *= 1.10
 
     # Monte Carlo draws
     g_draws   = np.random.poisson(lam=g_per90,   size=SIMULATIONS) if g_per90   > 0 else np.zeros(SIMULATIONS, dtype=int)
@@ -186,7 +188,7 @@ for fixture in fixtures:
         # fixture inputs
         team_xg_today = float(fixture.get("sim_stats", {}).get("xg", {}).get(side, 1.4) or 1.4)
         team_shots_today = float(fixture.get("sim_stats", {}).get("shots", {}).get(side, 10.0) or 10.0)
-        team_sot_today = team_shots_today * 0.45
+        team_sot_today = team_shots_today * 0.40
 
         # raw per90 totals
         team_raw_goals   = sum(per90(p.get("goals", 0),   p.get("minutes", 0), p.get("appearances", 0)) for p in blended_players)
@@ -208,7 +210,7 @@ for fixture in fixtures:
                 1 if player.get("shots", 0) == 0 else 0,
                 1 if player.get("shots_on_target", 0) == 0 else 0
             ])
-            if zero_count >= 2:
+            if zero_count >= 1:
                 continue
 
             sim = simulate_player(player, team_id, g_scale, a_scale, sh_scale, sot_scale, blended_players)

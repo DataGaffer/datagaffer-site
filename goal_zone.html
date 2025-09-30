@@ -129,215 +129,243 @@
    #goalprob-table th:nth-child(5), #goalprob-table td:nth-child(5) { width: 20%; font-weight: bold; }
 
    #match2-table td,
-#goalprob-table td {
-  padding: 18px 7px;  /* or whatever matches logo rows */
-}
+   #goalprob-table td {
+     padding: 18px 7px;  /* or whatever matches logo rows */
+   }
 
-/* ✅ Team table column widths */
-#team-table th:nth-child(1),
-#team-table td:nth-child(1) {
-  width: 20%;  /* Logo column narrower */
-}
+   /* ✅ Team table column widths */
+   #team-table th:nth-child(1),
+   #team-table td:nth-child(1) {
+     width: 20%;  /* Logo column narrower */
+   }
 
-#team-table th:nth-child(2),
-#team-table td:nth-child(2) {
-  width: 60%;  /* Team name column wider */
-}
+   #team-table th:nth-child(2),
+   #team-table td:nth-child(2) {
+     width: 60%;  /* Team name column wider */
+   }
 
-#team-table th:nth-child(3),
-#team-table td:nth-child(3) {
-  width: 20%;
-   font-weight: bold; /* Total column narrower */
-}
-
-
-
+   #team-table th:nth-child(3),
+   #team-table td:nth-child(3) {
+     width: 20%;
+      font-weight: bold; /* Total column narrower */
+   }
 
    /* ✅ Hide non-active sections */
    .section { display: none; }
    .section.active { display: block; }
 
    .search-box {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.search-box input {
-  width: 250px;
-  padding: 8px;
-  font-size: 14px;
-  border: 2px solid #003f2e;
-  border-radius: 6px;
-  margin-top: 20px;
-}
+     text-align: center;
+     margin-bottom: 20px;
+   }
+   .search-box input {
+     width: 250px;
+     padding: 8px;
+     font-size: 14px;
+     border: 2px solid #003f2e;
+     border-radius: 6px;
+     margin-top: 20px;
+   }
 
+   /* 🔹 Date navigation (same pattern as XG/Value) */
+   .date-nav {
+     text-align: center;
+     margin: 10px 0 0 0;
+     font-size: 20px;
+     color: #003f2e;
+     font-weight: bold;
+   }
+   .date-nav span {
+     cursor: pointer;
+     color: #006644;
+     padding: 0 15px;
+     font-weight: bold;
+   }
+   .date-nav span:hover { text-decoration: underline; }
+   .date-nav span.active {
+     color: #0077cc;  /* blue active like the other pages */
+     text-decoration: underline;
+   }
 
-/* --- 📱 Mobile adjustments for Goal Zone --- */
-@media (max-width: 925px) {
-  body { overflow-x: hidden; }
+   /* --- 📱 Mobile adjustments for Goal Zone --- */
+   @media (max-width: 925px) {
+     body { overflow-x: hidden; }
 
-  /* 🔝 Header & Logo */
-  .header-logo { height: 50px !important; width: auto !important; }
-  h1 { font-size: 20px !important; }
+     /* 🔝 Header & Logo */
+     .header-logo { height: 50px !important; width: auto !important; }
+     h1 { font-size: 20px !important; }
 
-  /* 📢 Banner */
-  .banner {
-    width: 85% !important;
-    font-size: 14px !important;
-    padding: 6px !important;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+     /* 📢 Banner */
+     .banner {
+       width: 85% !important;
+       font-size: 14px !important;
+       padding: 6px !important;
+       margin-top: 10px;
+       margin-bottom: 10px;
+     }
 
-  /* 🔘 Tab Buttons */
-  .button-row {
-    gap: 8px !important;
-    margin-top: 15px !important;
-  }
-  .button-row button {
-    padding: 6px 19px !important;
-    font-size: 12px !important;
-    margin: 0 4px !important;
-  }
+     /* 🔘 Tab Buttons */
+     .button-row {
+       gap: 8px !important;
+       margin-top: 15px !important;
+     }
+     .button-row button {
+       padding: 6px 19px !important;
+       font-size: 12px !important;
+       margin: 0 4px !important;
+     }
 
-  /* 📊 Main table container */
-  .goalzone-container,
-  .goalzone-container--match {
-    max-width: 95% !important;
-    gap: 10px !important;
-    padding: 0 5px !important;
-  }
+     /* 🔹 Mobile date nav */
+     .date-nav {
+       font-size: 14px !important;
+       margin: 12px 0 !important;
+       display: flex;
+       justify-content: center;
+       gap: 12px;
+       flex-wrap: wrap;
+     }
+     .date-nav span {
+       padding: 4px 6px !important;
+       white-space: nowrap;
+     }
+     .date-nav .active {
+       color: #0077cc !important;
+       text-decoration: underline;
+     }
 
-  /* 📏 Match tab row height fix (make rows same height as logo tables) */
+     /* 📊 Main table container */
+     .goalzone-container,
+     .goalzone-container--match {
+       max-width: 95% !important;
+       gap: 10px !important;
+       padding: 0 5px !important;
+     }
 
-  #match2-table td,
-  #goalprob-table td {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-  }
+     /* 📏 Match tab row height fix (make rows same height as logo tables) */
+     #match2-table td,
+     #goalprob-table td {
+       padding-top: 8px !important;
+       padding-bottom: 8px !important;
+     }
 
+     /* 🪶 Keep side-by-side layout */
+     .goalzone-container--match {
+       display: flex !important;
+       flex-direction: row !important;
+       justify-content: space-between !important;
+     }
 
-  /* 🪶 Keep side-by-side layout */
-  .goalzone-container--match {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-  }
+     /* 📏 Totals Tab Table Widths */
+     #match-table {
+       width: 25% !important;
+     }
+     #away-table,
+     #home-table {
+       width: 40% !important;
+     }
 
-  /* 📏 Totals Tab Table Widths */
-  #match-table {
-    width: 25% !important;
-  }
-  #away-table,
-  #home-table {
-    width: 40% !important;
-  }
+     /* 📱 Hide match text, show logos (Totals tab) */
+     .match-text { display: none !important; }
+     .match-logos { display: flex !important; justify-content: center; gap: 6px; }
 
-  /* 📱 Hide match text, show logos (Totals tab) */
-  .match-text { display: none !important; }
-  .match-logos { display: flex !important; justify-content: center; gap: 6px; }
+     /* 📊 Make Total column wider ONLY in Totals Match table */
+     #match-table th:nth-child(2),
+     #match-table td:nth-child(2) {
+       width: 40% !important;
+       font-size: 11px !important;
+       font-weight: bold !important;
+     }
+     #match-table th:nth-child(1),
+     #match-table td:nth-child(1) {
+       width: 60% !important;
+     }
 
-  /* 📊 Make Total column wider ONLY in Totals Match table */
-  #match-table th:nth-child(2),
-  #match-table td:nth-child(2) {
-    width: 40% !important;
-    font-size: 11px !important;
-    font-weight: bold !important;
-  }
-  #match-table th:nth-child(1),
-  #match-table td:nth-child(1) {
-    width: 60% !important;
-  }
+     /* 📏 Responsive widths for Match & Team tab side-by-side tables */
+     #match2-table,
+     #team-table {
+       width: 48% !important;
+     }
+     #goalprob-table,
+     #teamprob-table {
+       width: 48% !important;
+     }
 
-  /* 📏 Responsive widths for Match & Team tab side-by-side tables */
-  #match2-table,
-  #team-table {
-    width: 48% !important;
-  }
-  #goalprob-table,
-  #teamprob-table {
-    width: 48% !important;
-  }
+     /* 📈 Tables */
+     .goalzone-table {
+       font-size: 11px !important;
+       table-layout: fixed;
+     }
+     .goalzone-table th {
+       font-size: 10px !important;
+       padding: 4px 2px !important;
+       line-height: 1.3;
+     }
+     .goalzone-table td {
+       padding: 4px 2px !important;
+       font-size: 11px !important;
+       line-height: 1.2;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+     }
 
-  /* 📈 Tables */
-  .goalzone-table {
-    font-size: 11px !important;
-    table-layout: fixed;
-  }
-  .goalzone-table th {
-    font-size: 10px !important;
-    padding: 4px 2px !important;
-    line-height: 1.3;
-  }
-  .goalzone-table td {
-    padding: 4px 2px !important;
-    font-size: 11px !important;
-    line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+     /* 🖼️ Logos */
+     .team-logo {
+       height: 18px !important;
+     }
 
-  /* 🖼️ Logos */
-  .team-logo {
-    height: 18px !important;
-  }
+     /* 🧩 Narrow columns for logo + total in other tables */
+     #team-table th:nth-child(1), #team-table td:nth-child(1),
+     #team-table th:nth-child(3), #team-table td:nth-child(3),
+     #away-table th:nth-child(1), #away-table td:nth-child(1),
+     #home-table th:nth-child(1), #home-table td:nth-child(1) {
+       width: 15% !important;
+     }
 
-  /* 🧩 Narrow columns for logo + total in other tables */
-  #team-table th:nth-child(1), #team-table td:nth-child(1),
-  #team-table th:nth-child(3), #team-table td:nth-child(3),
-  #away-table th:nth-child(1), #away-table td:nth-child(1),
-  #home-table th:nth-child(1), #home-table td:nth-child(1) {
-    width: 15% !important;
-  }
+     /* 📉 Optional narrower total column in team table */
+     #team-table th:nth-child(3), #team-table td:nth-child(3) {
+       width: 20% !important;
+     }
 
-  /* 📉 Optional narrower total column in team table */
-  #team-table th:nth-child(3), #team-table td:nth-child(3) {
-    width: 20% !important;
-  }
+     /* 📊 Bold the numbers in Team tab */
+     #team-table td:nth-child(3),
+     #team-table th:nth-child(3) {
+       font-weight: bold !important;
+     }
 
-  /* 📊 Bold the numbers in Team tab */
-#team-table td:nth-child(3),
-#team-table th:nth-child(3) {
-  font-weight: bold !important;
-}
+     /* 📊 Ensure percentage table columns stay readable */
+     #goalprob-table th,
+     #goalprob-table td,
+     #teamprob-table th,
+     #teamprob-table td {
+       font-size: 10px !important;
+       padding: 4px 2px !important;
+       font-weight: bold;
+     }
 
+     #away-table th:nth-child(1),
+     #away-table td:nth-child(1),
+     #home-table th:nth-child(1),
+     #home-table td:nth-child(1) {
+       width: 20% !important;
+     }
 
-  /* 📊 Ensure percentage table columns stay readable */
-  #goalprob-table th,
-  #goalprob-table td,
-  #teamprob-table th,
-  #teamprob-table td {
-    font-size: 10px !important;
-    padding: 4px 2px !important;
-    font-weight: bold;
-  }
+     /* Shift the name column slightly narrower to compensate */
+     #away-table th:nth-child(2),
+     #away-table td:nth-child(2),
+     #home-table th:nth-child(2),
+     #home-table td:nth-child(2) {
+       width: 50% !important;
+     }
 
-  #away-table th:nth-child(1),
-  #away-table td:nth-child(1),
-  #home-table th:nth-child(1),
-  #home-table td:nth-child(1) {
-    width: 20% !important; /* 🔁 adjust 18–22% if you want more or less space */
-  }
-
-  /* Shift the name column slightly narrower to compensate */
-  #away-table th:nth-child(2),
-  #away-table td:nth-child(2),
-  #home-table th:nth-child(2),
-  #home-table td:nth-child(2) {
-    width: 50% !important;
-  }
-
-  /* Keep total column width balanced */
-  #away-table th:nth-child(3),
-  #away-table td:nth-child(3),
-  #home-table th:nth-child(3),
-  #home-table td:nth-child(3) {
-    width: 30% !important;
-  }
-}
-
-
-
+     /* Keep total column width balanced */
+     #away-table th:nth-child(3),
+     #away-table td:nth-child(3),
+     #home-table th:nth-child(3),
+     #home-table td:nth-child(3) {
+       width: 30% !important;
+     }
+   }
 </style>
 </head>
 <body>
@@ -355,6 +383,13 @@
   </a>
 </div>
 
+<!-- 🔹 Date navigation (exactly like XG/Value pages) -->
+<div class="date-nav">
+  <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
+  <span id="currentDate" class="active">Today's Fixtures</span>
+  <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
+</div>
+
 <!-- 📊 Banner -->
 <div class="banner" style="
   text-align: center;
@@ -366,14 +401,13 @@
   border-left: 6px solid #003f2e;
   width: 60%;
   border-radius: 4px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   line-height: 1.5;
   font-weight: 600;
 ">
   Goal totals, scoring probabilities, and team stats from 5,000 simulations
 </div>
-
 
 <!-- ✅ Button Row -->
 <div class="button-row">
@@ -391,8 +425,6 @@
     onkeyup="applySearch()" 
   />
 </div>
-
-
 
 <!-- ✅ Totals Section (your current table wrapped) -->
 <div id="totals-section" class="section active">
@@ -423,7 +455,7 @@
 <!-- ✅ Match Section (two mini tables side-by-side with fixed widths) -->
 <div id="match-section" class="section">
   <div class="goalzone-container goalzone-container--match">
-    <!-- Left: Match | Total (300px) -->
+    <!-- Left: Match | Total -->
     <table class="goalzone-table" id="match2-table" style="width:400px">
       <thead>
         <tr><th>Match</th><th>Total</th></tr>
@@ -431,7 +463,7 @@
       <tbody id="match2-body"></tbody>
     </table>
 
-    <!-- Right: Percentages 1+..5+ (700px), no Match column -->
+    <!-- Right: Percentages 1+..5+, no Match column -->
     <table class="goalzone-table" id="goalprob-table" style="width:400px">
       <thead>
         <tr><th>1+</th><th>2+</th><th>3+</th><th>4+</th><th>5+</th></tr>
@@ -459,15 +491,48 @@
   </div>
 </div>
 
-
 <!-- ✅ Empty Team Section placeholder (unchanged) -->
 <div id="team-section" class="section"></div>
-
 
 <script>
 let allFixtures = []; // ✅ store fixtures globally
 
-// ✅ Gradient helpers
+/* ======= NAV FILE SWITCH (same as Value/XG) ======= */
+let dayMode = "today";
+function loadFixturesFile() {
+  if (dayMode === "yesterday") return "fixtures_yesterday.json";
+  if (dayMode === "tomorrow")  return "fixtures_tomorrow.json";
+  return "fixtures.json"; // default today
+}
+
+function switchDay(mode) {
+  dayMode = mode;
+  const nav = document.querySelector(".date-nav");
+
+  if (mode === "yesterday") {
+    nav.innerHTML = `
+      <span class="active">Yesterday&#39;s Fixtures</span>
+      <span onclick="switchDay('today')">Today &raquo;</span>
+    `;
+  } else if (mode === "today") {
+    nav.innerHTML = `
+      <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
+      <span id="currentDate" class="active">Today&#39;s Fixtures</span>
+      <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
+    `;
+  } else if (mode === "tomorrow") {
+    nav.innerHTML = `
+      <span onclick="switchDay('today')">&laquo; Today</span>
+      <span id="currentDate" class="active">Tomorrow&#39;s Fixtures</span>
+    `;
+  }
+
+  // reload dataset for the selected day
+  loadAndRender();
+}
+/* ======= /NAV FILE SWITCH ======= */
+
+/* ======= Gradient helpers ======= */
 function colorFromRatio(ratio, colorLow, colorHigh) {
   const r = Math.round(colorLow.r + ratio * (colorHigh.r - colorLow.r));
   const g = Math.round(colorLow.g + ratio * (colorHigh.g - colorLow.g));
@@ -487,26 +552,21 @@ function getValueGradient(value, min, max) {
     return colorFromRatio(t, { r: 255, g: 255, b: 255 }, { r: 0, g: 200, b: 0 });
   }
 }
+/* ======= /Gradient helpers ======= */
 
-// ✅ Poisson helpers
-function factorial(n) {
-  let r = 1;
-  for (let i = 2; i <= n; i++) r *= i;
-  return r;
-}
-function poissonPMF(k, lambda) {
-  return Math.exp(-lambda) * Math.pow(lambda, k) / factorial(k);
-}
+/* ======= Poisson helpers ======= */
+function factorial(n) { let r=1; for (let i=2;i<=n;i++) r*=i; return r; }
+function poissonPMF(k, lambda) { return Math.exp(-lambda) * Math.pow(lambda, k) / factorial(k); }
 function probAtLeast(n, lambda) {
   if (n <= 0) return 1;
   let cdf = 0;
   for (let k = 0; k <= n - 1; k++) cdf += poissonPMF(k, lambda);
   return 1 - cdf;
 }
+/* ======= /Poisson helpers ======= */
 
-// ✅ Core render function — rebuilds everything from a filtered dataset
+/* ======= Core render function (unchanged) ======= */
 function renderEverything(fixtures) {
-  // Elements
   const matchBody = document.getElementById("match-body");
   const awayBody = document.getElementById("away-body");
   const homeBody = document.getElementById("home-body");
@@ -515,7 +575,6 @@ function renderEverything(fixtures) {
   const teamBody = document.getElementById("team-body");
   const teamProbBody = document.getElementById("teamprob-body");
 
-  // Reset
   matchBody.innerHTML = "";
   awayBody.innerHTML = "";
   homeBody.innerHTML = "";
@@ -524,7 +583,6 @@ function renderEverything(fixtures) {
   teamBody.innerHTML = "";
   teamProbBody.innerHTML = "";
 
-  // Build data arrays
   const matches = fixtures.map(f => ({
     match: `${f.home.name} vs ${f.away.name}`,
     total: parseFloat(f.sim_stats.xg.total),
@@ -534,21 +592,21 @@ function renderEverything(fixtures) {
 
   const sortedMatches = [...matches].sort((a, b) => b.total - a.total);
 
-// ✅ Always use global full dataset for gradient min/max
-const allMatchesFull = allFixtures.map(f => ({
-  total: parseFloat(f.sim_stats.xg.total),
-  homeVal: parseFloat(f.sim_stats.xg.home),
-  awayVal: parseFloat(f.sim_stats.xg.away)
-}));
+  // Always use global dataset for gradients
+  const allMatchesFull = allFixtures.map(f => ({
+    total: parseFloat(f.sim_stats.xg.total),
+    homeVal: parseFloat(f.sim_stats.xg.home),
+    awayVal: parseFloat(f.sim_stats.xg.away)
+  }));
 
-const totalMin = Math.min(...allMatchesFull.map(m => m.total));
-const totalMax = Math.max(...allMatchesFull.map(m => m.total));
-const homeMin  = Math.min(...allMatchesFull.map(m => m.homeVal));
-const homeMax  = Math.max(...allMatchesFull.map(m => m.homeVal));
-const awayMin  = Math.min(...allMatchesFull.map(m => m.awayVal));
-const awayMax  = Math.max(...allMatchesFull.map(m => m.awayVal));
+  const totalMin = Math.min(...allMatchesFull.map(m => m.total));
+  const totalMax = Math.max(...allMatchesFull.map(m => m.total));
+  const homeMin  = Math.min(...allMatchesFull.map(m => m.homeVal));
+  const homeMax  = Math.max(...allMatchesFull.map(m => m.homeVal));
+  const awayMin  = Math.min(...allMatchesFull.map(m => m.awayVal));
+  const awayMax  = Math.max(...allMatchesFull.map(m => m.awayVal));
 
-  // ✅ Fill Totals tab
+  // Totals tab
   sortedMatches.forEach(m => {
     matchBody.innerHTML += `
       <tr>
@@ -577,7 +635,7 @@ const awayMax  = Math.max(...allMatchesFull.map(m => m.awayVal));
       </tr>`;
   });
 
-  // ✅ Fill Match tab - Left table
+  // Match tab - Left table
   matches.forEach(m => {
     match2Body.innerHTML += `
       <tr>
@@ -586,27 +644,28 @@ const awayMax  = Math.max(...allMatchesFull.map(m => m.awayVal));
       </tr>`;
   });
 
-const allProbabilitiesFull = allFixtures.map(f => {
-  const total = parseFloat(f.sim_stats.xg.total);
-  return {
-    p1: probAtLeast(1, total) * 100,
-    p2: probAtLeast(2, total) * 100,
-    p3: probAtLeast(3, total) * 100,
-    p4: probAtLeast(4, total) * 100,
-    p5: probAtLeast(5, total) * 100
-  };
-});
+  // Prob tables
+  const allProbabilitiesFull = allFixtures.map(f => {
+    const total = parseFloat(f.sim_stats.xg.total);
+    return {
+      p1: probAtLeast(1, total) * 100,
+      p2: probAtLeast(2, total) * 100,
+      p3: probAtLeast(3, total) * 100,
+      p4: probAtLeast(4, total) * 100,
+      p5: probAtLeast(5, total) * 100
+    };
+  });
 
-const p1Min = Math.min(...allProbabilitiesFull.map(p => p.p1));
-const p1Max = Math.max(...allProbabilitiesFull.map(p => p.p1));
-const p2Min = Math.min(...allProbabilitiesFull.map(p => p.p2));
-const p2Max = Math.max(...allProbabilitiesFull.map(p => p.p2));
-const p3Min = Math.min(...allProbabilitiesFull.map(p => p.p3));
-const p3Max = Math.max(...allProbabilitiesFull.map(p => p.p3));
-const p4Min = Math.min(...allProbabilitiesFull.map(p => p.p4));
-const p4Max = Math.max(...allProbabilitiesFull.map(p => p.p4));
-const p5Min = Math.min(...allProbabilitiesFull.map(p => p.p5));
-const p5Max = Math.max(...allProbabilitiesFull.map(p => p.p5));
+  const p1Min = Math.min(...allProbabilitiesFull.map(p => p.p1));
+  const p1Max = Math.max(...allProbabilitiesFull.map(p => p.p1));
+  const p2Min = Math.min(...allProbabilitiesFull.map(p => p.p2));
+  const p2Max = Math.max(...allProbabilitiesFull.map(p => p.p2));
+  const p3Min = Math.min(...allProbabilitiesFull.map(p => p.p3));
+  const p3Max = Math.max(...allProbabilitiesFull.map(p => p.p3));
+  const p4Min = Math.min(...allProbabilitiesFull.map(p => p.p4));
+  const p4Max = Math.max(...allProbabilitiesFull.map(p => p.p4));
+  const p5Min = Math.min(...allProbabilitiesFull.map(p => p.p5));
+  const p5Max = Math.max(...allProbabilitiesFull.map(p => p.p5));
 
   function getBlueGradient(value, min, max) {
     if (!isFinite(value)) return "white";
@@ -632,7 +691,7 @@ const p5Max = Math.max(...allProbabilitiesFull.map(p => p.p5));
       </tr>`;
   });
 
-  // ✅ TEAM TAB
+  // TEAM TAB
   const teams = [];
   matches.forEach(m => {
     teams.push({ name: m.home.name, logo: m.home.logo, total: m.home.val });
@@ -682,7 +741,7 @@ const p5Max = Math.max(...allProbabilitiesFull.map(p => p.p5));
   });
 }
 
-// ✅ Search with gradient recalculation
+/* ======= Search (unchanged) ======= */
 function applySearch() {
   const searchTerm = document.getElementById("searchInput").value.toLowerCase();
   const filtered = allFixtures.filter(f =>
@@ -694,7 +753,7 @@ function applySearch() {
   renderEverything(filtered.length ? filtered : allFixtures);
 }
 
-// ✅ Button toggle logic (fixed)
+/* ======= Tabs (unchanged) ======= */
 document.querySelectorAll('.tab-button').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
@@ -704,15 +763,15 @@ document.querySelectorAll('.tab-button').forEach(btn => {
   });
 });
 
-// ✅ Initial load
-fetch("fixtures.json")
-  .then(res => res.json())
-  .then(data => {
-    allFixtures = data;
-    renderEverything(allFixtures);
-  });
+/* ======= Initial load USING dayMode ======= */
+async function loadAndRender() {
+  const file = loadFixturesFile();
+  const res = await fetch(file);
+  allFixtures = await res.json();
+  renderEverything(allFixtures);
+}
+loadAndRender(); // default "today"
 </script>
-
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
@@ -751,7 +810,6 @@ supabaseClient.auth.onAuthStateChange((event) => {
 });
 </script>
 
-
 <script>
 document.addEventListener("DOMContentLoaded", async () => {
   const { data, error } = await supabaseClient.auth.getSession();
@@ -763,6 +821,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 });
 </script>
+
+</body>
+</html>
 
 
 

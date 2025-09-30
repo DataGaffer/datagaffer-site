@@ -23,18 +23,7 @@
     "shots": 0,
     "shots_on_target": 0
   },
-  {
-    "id": 619,
-    "team_id": 529,
-    "name": "Eric Garc\u00eda",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 544,
-    "goals": 1,
-    "assists": 0,
-    "shots": 6,
-    "shots_on_target": 3
-  },
+  
   {
     "id": 909,
     "team_id": 529,
@@ -59,18 +48,7 @@
     "shots": 15,
     "shots_on_target": 9
   },
-  {
-    "id": 1257,
-    "team_id": 529,
-    "name": "J. Kound\u00e9",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 404,
-    "goals": 0,
-    "assists": 1,
-    "shots": 2,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 1323,
     "team_id": 529,
@@ -95,30 +73,7 @@
     "shots": 17,
     "shots_on_target": 5
   },
-  {
-    "id": 2282,
-    "team_id": 529,
-    "name": "A. Christensen",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 216,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 101814,
-    "team_id": 529,
-    "name": "R. Ara\u00fajo",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 357,
-    "goals": 1,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
-  },
+  
   {
     "id": 133609,
     "team_id": 529,
@@ -131,30 +86,7 @@
     "shots": 5,
     "shots_on_target": 3
   },
-  {
-    "id": 181701,
-    "team_id": 529,
-    "name": "Gerard Mart\u00edn",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 324,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 329728,
-    "team_id": 529,
-    "name": "Marc Casad\u00f3",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 211,
-    "goals": 0,
-    "assists": 1,
-    "shots": 1,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 340626,
     "team_id": 529,
@@ -167,16 +99,17 @@
     "shots": 8,
     "shots_on_target": 4
   },
+
   {
-    "id": 396623,
+    "id": 386828,
     "team_id": 529,
-    "name": "Pau Cubars\u00ed Paredes",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 408,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
+    "name": "Lamine Yamal",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 302,
+    "goals": 2,
+    "assists": 3,
+    "shots": 20,
+    "shots_on_target": 7
   }
 ]

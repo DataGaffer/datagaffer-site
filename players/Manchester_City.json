@@ -11,18 +11,7 @@
     "shots": 4,
     "shots_on_target": 2
   },
-  {
-    "id": 567,
-    "team_id": 50,
-    "name": "R\u00faben Dias",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 558,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 631,
     "team_id": 50,
@@ -71,18 +60,7 @@
     "shots": 5,
     "shots_on_target": 4
   },
-  {
-    "id": 18861,
-    "team_id": 50,
-    "name": "N. Ak\u00e9",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 126,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 36902,
     "team_id": 50,
@@ -107,30 +85,7 @@
     "shots": 2,
     "shots_on_target": 1
   },
-  {
-    "id": 129033,
-    "team_id": 50,
-    "name": "J. Gvardiol",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 330,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
-    "id": 161933,
-    "team_id": 50,
-    "name": "Nico Gonz\u00e1lez",
-    "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 317,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 266657,
     "team_id": 50,
@@ -154,41 +109,6 @@
     "assists": 1,
     "shots": 1,
     "shots_on_target": 0
-  },
-  {
-    "id": 284230,
-    "team_id": 50,
-    "name": "R. Lewis",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 191,
-    "goals": 0,
-    "assists": 1,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 307123,
-    "team_id": 50,
-    "name": "N. O&apos;Reilly",
-    "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 393,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
-    "id": 360114,
-    "team_id": 50,
-    "name": "A. Khusanov",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 319,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   }
+  
 ]

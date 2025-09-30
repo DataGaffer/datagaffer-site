@@ -104,6 +104,29 @@
      text-overflow: ellipsis;
    }
 
+   /* 🔹 Date navigation */
+   .date-nav {
+     text-align: center;
+     margin: 20px 0;
+     font-size: 20px;
+     color: #003f2e;
+     font-weight: bold;
+   }
+   .date-nav span {
+     cursor: pointer;
+     color: #006644;
+     padding: 0 15px;
+     font-weight: bold;
+   }
+   .date-nav span:hover {
+     text-decoration: underline;
+   }
+
+   .date-nav span.active {
+  color: #0077cc;      /* blue */
+  text-decoration: underline;
+}
+
  /* --- Mobile adjustments --- */
 @media (max-width: 925px) {
  body { overflow-x: hidden; }
@@ -111,15 +134,37 @@
  .header-logo { height: 50px !important; width: auto !important; }
  h1 { font-size: 20px !important; }
 
+  .date-nav {
+    font-size: 14px !important;
+    margin: 15px 0 !important;
+    display: flex;
+    justify-content: center;  /* keep everything centered */
+    gap: 12px;                /* even spacing between items */
+    flex-wrap: wrap;          /* allows wrapping on very small screens */
+  }
+
+  .date-nav span {
+    padding: 4px 6px !important;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .date-nav .active {
+    text-decoration: underline;
+    color: #0077cc !important;
+  }
+
+
  .banner {
    width: 85% !important;
    font-size: 13px !important;
    padding: 6px !important;
-   margin-top: 25px;
+   margin-top: 15px;
+   margin-bottom: 10px;
    line-height: 1.5;
  }
 
- .buttons { margin-bottom: 30px; margin-top: 25px; }
+ .buttons { margin-bottom: 20px; margin-top:20px; }
  .buttons button {
    padding: 6px 10px !important;
    font-size: 12px !important;
@@ -163,6 +208,13 @@
 </a>
   </div>
 
+ <!-- 🔹 Date navigation like Ballpark Pal -->
+ <div class="date-nav">
+  <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
+  <span id="currentDate">Today's Fixtures</span>
+  <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
+</div>
+
  <div class="banner">Expected goals, corners and shot stats after 5,000 match simulations</div>
 
  <div class="buttons">
@@ -180,115 +232,155 @@
 
 
  <script>
-   let allFixtures = [];
-   let currentFixtures = [];
-   let currentType = "xg";
-   let sortConfig = { column: null, asc: false };
+  let allFixtures = [];
+  let currentFixtures = [];
+  let currentType = "xg";
+  let sortConfig = { column: null, asc: false };
+  let dayMode = "today";
 
-   async function loadFixtures() {
-     const response = await fetch("fixtures.json");
-     const fixtures = await response.json();
-     allFixtures = fixtures;
-     return fixtures;
-   }
+  async function loadFixtures(file = "fixtures.json") {
+    const response = await fetch(file);
+    const fixtures = await response.json();
+    allFixtures = fixtures;
+    return fixtures;
+  }
 
-   function buildTable(fixtures, type) {
-     let table = `
-       <table id="statsTable">
-         <tr>
-           <th></th>
-           <th>Home Team</th>
-           <th class="sortable" onclick="sortTable(2, this)">Team</th>
-           <th class="sortable" onclick="sortTable(3, this)">Total</th>
-           <th class="sortable" onclick="sortTable(4, this)">Team</th>
-           <th>Away Team</th>
-           <th></th>
-         </tr>
-     `;
+  function buildTable(fixtures, type) {
+    let table = `
+      <table id="statsTable">
+        <tr>
+          <th></th>
+          <th>Home Team</th>
+          <th class="sortable" onclick="sortTable(2, this)">Team</th>
+          <th class="sortable" onclick="sortTable(3, this)">Total</th>
+          <th class="sortable" onclick="sortTable(4, this)">Team</th>
+          <th>Away Team</th>
+          <th></th>
+        </tr>
+    `;
 
-     fixtures.forEach(f => {
-       const home = f.home.name;
-       const away = f.away.name;
-       const homeLogo = f.home.logo;
-       const awayLogo = f.away.logo;
+    fixtures.forEach(f => {
+      const home = f.home.name;
+      const away = f.away.name;
+      const homeLogo = f.home.logo;
+      const awayLogo = f.away.logo;
 
-       const stats = f.sim_stats[type.toLowerCase()];
-       if (!stats) return;
+      const stats = f.sim_stats[type.toLowerCase()];
+      if (!stats) return;
 
-       table += `
-         <tr>
-           <td><img src="${homeLogo}" alt="${home}"></td>
-           <td>${home}</td>
-           <td>${stats.home}</td>
-           <td>${stats.total}</td>
-           <td>${stats.away}</td>
-           <td>${away}</td>
-           <td><img src="${awayLogo}" alt="${away}"></td>
-         </tr>
-       `;
-     });
+      table += `
+        <tr>
+          <td><img src="${homeLogo}" alt="${home}"></td>
+          <td>${home}</td>
+          <td>${stats.home}</td>
+          <td>${stats.total}</td>
+          <td>${stats.away}</td>
+          <td>${away}</td>
+          <td><img src="${awayLogo}" alt="${away}"></td>
+        </tr>
+      `;
+    });
 
-     table += `</table>`;
-     return table;
-   }
+    table += `</table>`;
+    return table;
+  }
 
-   function applySearch() {
-     const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-     const filtered = allFixtures.filter(f =>
-       f.home.name.toLowerCase().includes(searchTerm) ||
-       f.away.name.toLowerCase().includes(searchTerm) ||
-       (f.league && f.league.name.toLowerCase().includes(searchTerm))
-     );
-     document.getElementById("tables").innerHTML = buildTable(filtered, currentType);
-   }
+  function applySearch() {
+    const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    const filtered = allFixtures.filter(f =>
+      f.home.name.toLowerCase().includes(searchTerm) ||
+      f.away.name.toLowerCase().includes(searchTerm) ||
+      (f.league && f.league.name.toLowerCase().includes(searchTerm))
+    );
+    document.getElementById("tables").innerHTML = buildTable(filtered, currentType);
+  }
 
-   async function showTable(type, btn = null) {
-     currentFixtures = await loadFixtures();
-     currentType = type;
-     document.getElementById("tables").innerHTML = buildTable(currentFixtures, type);
+  async function showTable(type, btn = null) {
+    if (dayMode === "today") {
+      currentFixtures = await loadFixtures("fixtures.json");
+    } else if (dayMode === "yesterday") {
+      currentFixtures = await loadFixtures("fixtures_yesterday.json");
+    } else if (dayMode === "tomorrow") {
+      currentFixtures = await loadFixtures("fixtures_tomorrow.json");
+    }
 
-     sortConfig = { column: null, asc: false };
+    currentType = type;
+    document.getElementById("tables").innerHTML = buildTable(currentFixtures, type);
 
-     document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
-     if (btn) btn.classList.add("active");
-   }
+    sortConfig = { column: null, asc: false };
 
-   function sortTable(colIndex, header) {
-     const table = document.getElementById("statsTable");
-     let rows = Array.from(table.rows).slice(1);
+    // 🔹 restore active state
+    document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
+    document.getElementById("btn-" + currentType).classList.add("active");
+  }
 
-     const asc = sortConfig.column === colIndex ? !sortConfig.asc : false;
-     sortConfig = { column: colIndex, asc };
+  function sortTable(colIndex, header) {
+    const table = document.getElementById("statsTable");
+    let rows = Array.from(table.rows).slice(1);
 
-     rows.sort((a, b) => {
-       let valA = parseFloat(a.cells[colIndex].innerText) || 0;
-       let valB = parseFloat(b.cells[colIndex].innerText) || 0;
-       return asc ? valA - valB : valB - valA;
-     });
+    const asc = sortConfig.column === colIndex ? !sortConfig.asc : false;
+    sortConfig = { column: colIndex, asc };
 
-     rows.forEach(row => table.appendChild(row));
+    rows.sort((a, b) => {
+      let valA = parseFloat(a.cells[colIndex].innerText) || 0;
+      let valB = parseFloat(b.cells[colIndex].innerText) || 0;
+      return asc ? valA - valB : valB - valA;
+    });
 
-     rows.forEach(row => {
-       for (let i = 2; i <= 4; i++) row.cells[i].classList.remove("sorted-col");
-     });
-     document.querySelectorAll("th.sortable").forEach(th => th.classList.remove("active-header"));
+    rows.forEach(row => table.appendChild(row));
 
-     rows.forEach(row => row.cells[colIndex].classList.add("sorted-col"));
-     header.classList.add("active-header");
-   }
+    rows.forEach(row => {
+      for (let i = 2; i <= 4; i++) row.cells[i].classList.remove("sorted-col");
+    });
+    document.querySelectorAll("th.sortable").forEach(th => th.classList.remove("active-header"));
 
-   showTable("xg", document.getElementById("btn-xg"));
- </script>
+    rows.forEach(row => row.cells[colIndex].classList.add("sorted-col"));
+    header.classList.add("active-header");
+  }
+
+  function switchDay(mode) {
+    dayMode = mode;
+
+    const nav = document.querySelector(".date-nav");
+
+    if (mode === "yesterday") {
+      nav.innerHTML = `
+        <span class="active">Yesterday&#39;s Fixtures</span>
+        <span onclick="switchDay('today')">Today &raquo;</span>
+      `;
+    } else if (mode === "today") {
+      nav.innerHTML = `
+        <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
+        <span id="currentDate" class="active">Today&#39;s Fixtures</span>
+        <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
+      `;
+    } else if (mode === "tomorrow") {
+      nav.innerHTML = `
+        <span onclick="switchDay('today')">&laquo; Today</span>
+        <span id="currentDate" class="active">Tomorrow&#39;s Fixtures</span>
+      `;
+    }
+
+    // 🔹 reload fixtures but keep currentType button active
+    showTable(currentType);
+  }
+
+  // ✅ Initial load
+  switchDay("today");
+  showTable("xg");
+</script>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* --- Supabase setup --- */
 const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";  // replace with your anon key
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 
 /* --- Inactivity logout (15 minutes) --- */
-const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const INACTIVITY_LIMIT = 15 * 60 * 1000; 
 let inactivityTimer;
 
 function resetInactivityTimer() {
@@ -317,7 +409,6 @@ supabaseClient.auth.onAuthStateChange((event) => {
 });
 </script>
 
-
 <script>
 document.addEventListener("DOMContentLoaded", async () => {
   const { data, error } = await supabaseClient.auth.getSession();
@@ -329,8 +420,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 });
 </script>
-
-
 </body>
 </html>
 

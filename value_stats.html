@@ -42,16 +42,16 @@
     }
 
     .search-box {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .search-box input {
-      width: 250px;
-      padding: 8px;
-      font-size: 14px;
-      border: 2px solid #003f2e;
-      border-radius: 6px;
-    }
+     text-align: center;
+     margin-bottom: 20px;
+   }
+   .search-box input {
+     width: 250px;
+     padding: 8px;
+     font-size: 14px;
+     border: 2px solid #003f2e;
+     border-radius: 6px;
+   }
 
     table {
       width: 85%;
@@ -95,6 +95,27 @@
   color: black !important;
 }
 
+/* 🔹 Date navigation */
+.date-nav {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 20px;
+  color: #003f2e;
+  font-weight: bold;
+}
+.date-nav span {
+  cursor: pointer;
+  color: #006644;
+  padding: 0 15px;
+  font-weight: bold;
+}
+.date-nav span:hover { text-decoration: underline; }
+.date-nav span.active {
+  color: #0077cc;
+  text-decoration: underline;
+}
+  
+
 /* --- Mobile adjustments --- */
 @media (max-width: 925px) {
   body { overflow-x: hidden; }
@@ -106,11 +127,31 @@
     width: 85% !important;
     font-size: 13px !important;
     padding: 6px !important;
-    margin-top: 25px;
+    margin-top: 15px;
     line-height: 1.5;
+    margin-bottom: 10px;
   }
 
-  .buttons { margin-bottom: 30px; margin-top: 25px; }
+  .date-nav {
+    font-size: 14px !important;
+    margin: 15px 0 !important;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .date-nav span {
+    padding: 4px 6px !important;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .date-nav .active {
+    text-decoration: underline;
+    color: #0077cc !important;
+  }
+
+
+  .buttons { margin-bottom: 20px; margin-top: 25px; }
   .buttons button {
     padding: 6px 10px !important;
     font-size: 12px !important;
@@ -164,6 +205,13 @@
   </a>
   </div>
 
+  <!-- 🔹 Date navigation -->
+<div class="date-nav">
+  <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
+  <span id="currentDate" class="active">Today's Fixtures</span>
+  <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
+</div>
+
   <!-- Banner -->
   <div class="banner">Best value bets from DataGaffer simulations compared to bookmaker odds. </div>
 
@@ -187,14 +235,59 @@
 
   <script>
     let sortConfig = { column: null, asc: true };
-    let currentType = "btts";
-    let allFixtures = [];
+let currentType = "btts";
+let allFixtures = [];
+let dayMode = "today";
 
-    async function loadFixtures() {
-      const response = await fetch("fixtures.json");
-      allFixtures = await response.json();
-      return allFixtures;
-    }
+async function loadFixtures(file = "fixtures.json") {
+  const response = await fetch(file);
+  allFixtures = await response.json();
+  return allFixtures;
+}
+
+async function showTable(type, btn) {
+  currentType = type;
+  sortConfig = { column: null, asc: true };
+
+  let fixtures;
+  if (dayMode === "today") {
+    fixtures = await loadFixtures("fixtures.json");
+  } else if (dayMode === "yesterday") {
+    fixtures = await loadFixtures("fixtures_yesterday.json");
+  } else if (dayMode === "tomorrow") {
+    fixtures = await loadFixtures("fixtures_tomorrow.json");
+  }
+
+  document.getElementById("tables").innerHTML = buildTable(fixtures, type);
+
+  document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
+  if (btn) btn.classList.add("active");
+}
+
+function switchDay(mode) {
+  dayMode = mode;
+  const nav = document.querySelector(".date-nav");
+
+  if (mode === "yesterday") {
+    nav.innerHTML = `
+      <span class="active">Yesterday's Fixtures</span>
+      <span onclick="switchDay('today')">Today &raquo;</span>
+    `;
+  } else if (mode === "today") {
+    nav.innerHTML = `
+      <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
+      <span id="currentDate" class="active">Today's Fixtures</span>
+      <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
+    `;
+  } else if (mode === "tomorrow") {
+    nav.innerHTML = `
+      <span onclick="switchDay('today')">&laquo; Today</span>
+      <span id="currentDate" class="active">Tomorrow's Fixtures</span>
+    `;
+  }
+
+  showTable(currentType, document.getElementById("btn-" + currentType));
+}
 
     function toDecimalOdds(prob) {
       if (!prob || prob <= 0 || prob >= 100) return null;
@@ -344,17 +437,6 @@
     }
   });
 }
-
-
-    async function showTable(type, btn) {
-      currentType = type;
-      sortConfig = { column: null, asc: true };
-      const fixtures = await loadFixtures();
-      document.getElementById("tables").innerHTML = buildTable(fixtures, type);
-
-      document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-    }
 
     function applySearch() {
       document.getElementById("tables").innerHTML = buildTable(allFixtures, currentType);

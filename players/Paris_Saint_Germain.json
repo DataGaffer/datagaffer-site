@@ -11,18 +11,7 @@
     "shots": 5,
     "shots_on_target": 3
   },
-  {
-    "id": 33,
-    "team_id": 85,
-    "name": "L. Hern\u00e1ndez",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 248,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
+  
   {
     "id": 153,
     "team_id": 85,
@@ -83,18 +72,7 @@
     "shots": 3,
     "shots_on_target": 2
   },
-  {
-    "id": 16367,
-    "team_id": 85,
-    "name": "W. Pacho",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 289,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 41585,
     "team_id": 85,
@@ -144,18 +122,6 @@
     "shots_on_target": 3
   },
   {
-    "id": 307835,
-    "team_id": 85,
-    "name": "Beraldo",
-    "position": "Defender",
-    "appearances": 10,
-    "minutes": 887,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 336657,
     "team_id": 85,
     "name": "W. Za\u00efre-Emery",
@@ -190,17 +156,6 @@
     "assists": 0,
     "shots": 4,
     "shots_on_target": 2
-  },
-  {
-    "id": 493026,
-    "team_id": 85,
-    "name": "N. Kamara",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 75,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   }
+  
 ]

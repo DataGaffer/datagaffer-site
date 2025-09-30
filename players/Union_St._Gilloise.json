@@ -107,30 +107,8 @@
     "shots": 13,
     "shots_on_target": 6
   },
-  {
-    "id": 271875,
-    "team_id": 1393,
-    "name": "L. Patris",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 101,
-    "goals": 0,
-    "assists": 1,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 290546,
-    "team_id": 1393,
-    "name": "F. Leysen",
-    "position": "Defender",
-    "appearances": 10,
-    "minutes": 830,
-    "goals": 1,
-    "assists": 1,
-    "shots": 3,
-    "shots_on_target": 1
-  },
+  
+  
   {
     "id": 313353,
     "team_id": 1393,
@@ -155,18 +133,7 @@
     "shots": 7,
     "shots_on_target": 4
   },
-  {
-    "id": 340574,
-    "team_id": 1393,
-    "name": "K. Van de Perre",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 186,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 361966,
     "team_id": 1393,
