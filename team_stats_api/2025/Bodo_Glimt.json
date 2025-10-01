@@ -1,0 +1,15 @@
+{
+  "team_id": 327,
+  "season": 2025,
+  "league_id": 103,
+  "home": {
+    "matches": 11,
+    "goals_for": 34,
+    "goals_against": 10
+  },
+  "away": {
+    "matches": 11,
+    "goals_for": 25,
+    "goals_against": 10
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "team_id": 186,
+  "season": 2024,
+  "league_id": 78,
+  "home": {
+    "matches": 17,
+    "goals_for": 10,
+    "goals_against": 19
+  },
+  "away": {
+    "matches": 17,
+    "goals_for": 18,
+    "goals_against": 22
+  }
+}
