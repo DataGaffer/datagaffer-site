@@ -478,6 +478,31 @@ fetch('fixtures.json')
 });
 </script>
 
+<!-- Supabase SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: {
+    persistSession: true,
+    detectSessionInUrl: true   // 👈 process #access_token from email confirm
+  }
+});
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const { data: { session } } = await supabaseClient.auth.getSession();
+
+  if (session) {
+    console.log("✅ User confirmed via email:", session.user.email);
+
+    // 👇 Redirect them where you want after confirming
+    window.location.href = "subscribe.html";  
+  }
+});
+</script>
+
 </body>
 </html>
 
