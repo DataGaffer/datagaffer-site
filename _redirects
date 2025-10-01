@@ -18,6 +18,7 @@
 # ----------------------------
 
 /dashboard             /dashboard.html           200
+/standard              /standard.html            200
 /sim_cards             /sim_cards.html           200
 /xg_stats              /xg_stats.html            200
 /value_stats           /value_stats.html         200

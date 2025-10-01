@@ -158,7 +158,7 @@
 <body>
 
 <div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
-<a href="dashboard.html" style="text-decoration: none; color: inherit; display: contents;">
+<a id="header-link" style="text-decoration: none; color: inherit; display: contents;">
  <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
     alt="DG Logo" class="header-logo"
     style="height: 90px; width: auto; position: absolute; left: 20px; top: 0px; z-index: 2;" />
@@ -448,11 +448,11 @@ function showSection(section, btn) {
 <script>
 /* --- Supabase setup --- */
 const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";  // replace with your anon key
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 
 /* --- Inactivity logout (15 minutes) --- */
-const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const INACTIVITY_LIMIT = 15 * 60 * 1000; 
 let inactivityTimer;
 
 function resetInactivityTimer() {
@@ -481,16 +481,36 @@ supabaseClient.auth.onAuthStateChange((event) => {
 });
 </script>
 
-
 <script>
 document.addEventListener("DOMContentLoaded", async () => {
-  const { data, error } = await supabaseClient.auth.getSession();
-  console.log("DEBUG session:", data?.session);
-  console.log("DEBUG error:", error);
+  const { data: { session }, error } = await supabaseClient.auth.getSession();
+  if (error || !session) {
+    console.warn("No session → redirecting to login");
+    window.location.href = "login.html";
+    return;
+  }
 
-  supabaseClient.auth.onAuthStateChange((event, session) => {
-    console.log("DEBUG auth event:", event, session);
-  });
+  // Look up subscription + plan
+  const { data: profile, error: profileError } = await supabaseClient
+    .from("profiles")
+    .select("is_subscribed, plan")
+    .eq("id", session.user.id)
+    .single();
+
+  if (profileError || !profile?.is_subscribed) {
+    console.warn("Not subscribed → redirecting to subscribe");
+    window.location.href = "subscribe.html";
+    return;
+  }
+
+  // ✅ Route header link depending on plan
+  if (profile.plan === "20_new") {
+  document.getElementById("header-link").href = "standard.html";
+} else {
+  document.getElementById("header-link").href = "dashboard.html";
+}
+
+  console.log("DEBUG profile:", profile);
 });
 </script>
 

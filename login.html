@@ -13,6 +13,7 @@
       height: 100vh;
       background-color: #f9f9f9;
       color: #003f2e;
+      margin: 0;
     }
     .box {
       background: white;
@@ -66,31 +67,63 @@
     const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
 
     const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
-  auth: {
-    persistSession: true,         // ✅ keep session saved across pages
-    autoRefreshToken: true,       // ✅ refresh before it expires
-    detectSessionInUrl: true      // ✅ handle login callbacks
-  }
-});
-
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true
+      }
+    });
 
     document.getElementById("login-form").addEventListener("submit", async (e) => {
       e.preventDefault();
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
-      const { data, error } = await supabaseClient.auth.signInWithPassword({
+      // 🔹 Attempt login
+      const { data: loginData, error: loginError } = await supabaseClient.auth.signInWithPassword({
         email,
         password
       });
 
-      if (error) {
-        alert("Login error: " + error.message);
-        console.error(error);
+      if (loginError) {
+        alert("Login error: " + loginError.message);
+        console.error(loginError);
+        return;
+      }
+
+      // 🔹 Get active session
+      const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
+      if (sessionError || !session) {
+        alert("No active session found. Please try again.");
+        return;
+      }
+
+      const userId = session.user.id;
+
+      // 🔹 Look up subscription + plan from profiles
+      const { data: profile, error: profileError } = await supabaseClient
+        .from("profiles")
+        .select("is_subscribed, plan")
+        .eq("id", userId)
+        .single();
+
+      if (profileError) {
+        console.error("Profile fetch error:", profileError);
+        alert("Error fetching subscription profile. Contact support.");
+        return;
+      }
+
+      if (!profile?.is_subscribed) {
+        alert("You must subscribe first!");
+        window.location.href = "subscribe.html";
+        return;
+      }
+
+      // 🔹 Route user based on plan
+      if (profile.plan === "20_new") {
+        window.location.href = "standard.html"; // restricted dashboard
       } else {
-        alert("Login successful!");
-        // 🚀 Straight to index.html
-        window.location.href = "dashboard.html";
+        window.location.href = "dashboard.html"; // full dashboard
       }
     });
   </script>

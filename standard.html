@@ -558,18 +558,6 @@
 </div>
 
 
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
- const todaysPlay = "Barcelona to Win (Moneyline)";
- const playButton = document.getElementById("play-button");
-
- playButton.addEventListener("click", () => {
-   playButton.innerHTML = `<span class="bet-text">${todaysPlay}</span>`;
- });
-});
-</script>
-
 <script>
 fetch('fixtures.json')
 .then(res => res.json())
@@ -658,13 +646,13 @@ document.body.style.display = "none"; // hide content until validated
     return;
   }
 
-  // ✅ Allow only $20_old, $50, and $250 plans here
-  if (profile.plan === "20_old" || profile.plan === "50" || profile.plan === "250") {
-    console.log("User on full plan → showing dashboard");
+  // ✅ Allow only $20_new plan here
+  if (profile.plan === "20_new") {
+    console.log("User is on new $20 plan → showing standard dashboard");
     document.body.style.display = "block";
   } else {
-    console.warn("User not on full plan → redirecting to standard");
-    window.location.href = "standard.html";
+    console.warn("Wrong plan → redirecting to full dashboard");
+    window.location.href = "dashboard.html";
   }
 })();
 
@@ -714,11 +702,3 @@ document.getElementById("manage-subscription").addEventListener("click", async (
 
 </body>
 </html>
-
-
-
-
-
-
-
-

@@ -32,13 +32,45 @@
   <div class="box">
     <h1>✅ Subscription Successful!</h1>
     <p>Welcome to DataGaffer — your subscription is active.</p>
-    <p class="redirect">Redirecting you to the dashboard...</p>
+    <p class="redirect">Redirecting you to your dashboard...</p>
   </div>
 
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    setTimeout(() => {
-      window.location.href = "dashboard.html"; // redirect after 3 seconds
-    }, 3000);
+    const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+    const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+      auth: { persistSession: true, detectSessionInUrl: true }
+    });
+
+    async function redirectUser() {
+      const { data: { session }, error } = await supabaseClient.auth.getSession();
+      if (error || !session) {
+        console.warn("No session → fallback to login");
+        window.location.href = "login.html";
+        return;
+      }
+
+      const { data: profile, error: profileError } = await supabaseClient
+        .from("profiles")
+        .select("plan")
+        .eq("id", session.user.id)
+        .single();
+
+      let target = "dashboard.html"; // default
+      if (!profileError && profile) {
+        if (profile.plan === "20_new") {
+          target = "standard.html"; // sim-only plan
+        }
+        // 20_old, 50, 250 → dashboard (default)
+      }
+
+      setTimeout(() => { window.location.href = target; }, 3000);
+    }
+
+    redirectUser();
   </script>
 </body>
 </html>

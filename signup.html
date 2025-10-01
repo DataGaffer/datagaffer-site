@@ -13,6 +13,7 @@
       height: 100vh;
       background-color: #f9f9f9;
       color: #003f2e;
+      margin: 0;
     }
     .box {
       background: white;
@@ -67,8 +68,9 @@
 
     const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
       auth: {
-        persistSession: false,
-        autoRefreshToken: false
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true
       }
     });
 
@@ -77,6 +79,7 @@
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
+      // 🔹 Create user
       const { data, error } = await supabaseClient.auth.signUp({
         email,
         password,
@@ -88,24 +91,30 @@
       if (error) {
         alert("Signup error: " + error.message);
         console.error(error);
-      } else {
-        const user = data.user;
-        if (user) {
-          // 👇 Create profile row in Supabase
-          const { error: profileError } = await supabaseClient
-            .from("profiles")
-            .insert([{ id: user.id, email: user.email, is_subscribed: false }]);
-
-          if (profileError) {
-            console.error("Profile insert error:", profileError.message);
-          } else {
-            console.log("✅ Profile row created for", user.email);
-          }
-        }
-
-        alert("Signup successful! Check your email to confirm.");
-        window.location.href = "subscribe.html"; // 🚀 go straight to subscribe
+        return;
       }
+
+      const user = data.user;
+      if (user) {
+        // 🔹 Insert profile row with defaults
+        const { error: profileError } = await supabaseClient
+          .from("profiles")
+          .insert([{
+            id: user.id,
+            email: user.email,
+            is_subscribed: false,
+            plan: null
+          }]);
+
+        if (profileError) {
+          console.error("Profile insert error:", profileError.message);
+        } else {
+          console.log("✅ Profile row created for", user.email);
+        }
+      }
+
+      alert("Signup successful! Please check your email to confirm.");
+      window.location.href = "subscribe.html"; // 🚀 Go to plans
     });
   </script>
 </body>

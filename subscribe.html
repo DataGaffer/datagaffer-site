@@ -10,9 +10,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       background-color: #f9f9f9;
       color: #003f2e;
+      margin: 0;
     }
     .box {
       background: white;
@@ -20,9 +21,10 @@
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 320px;
+      width: 350px;
     }
     h1 { margin-bottom: 20px; }
+    p { margin: 8px 0 20px; font-size: 15px; }
     button {
       width: 100%;
       padding: 12px;
@@ -32,30 +34,54 @@
       border-radius: 5px;
       font-size: 18px;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 15px;
     }
     button:hover { background-color: #14722f; }
+    .plan { margin-bottom: 25px; }
+    .price { font-weight: bold; margin-bottom: 8px; }
+    .trial { font-size: 13px; color: #555; margin-top: 5px; }
   </style>
 </head>
 <body>
   <div class="box">
-    <h1>Subscribe</h1>
-    <p>Unlock full access to DataGaffer by subscribing below.</p>
-    <button id="checkout-btn">Subscribe Now</button>
+    <h1>Choose Your Plan</h1>
+
+    <div class="plan">
+      <div class="price">$20/month</div>
+      <p>Match Simulations Only</p>
+      <p class="trial">Includes 7-day free trial</p>
+      <button onclick="subscribe('20_new')">Subscribe $20</button>
+    </div>
+
+    <div class="plan">
+      <div class="price">$50/month</div>
+      <p>Simulations + Play of the Day</p>
+      <p class="trial">Includes 7-day free trial</p>
+      <button onclick="subscribe('50')">Subscribe $50</button>
+    </div>
+
+    <div class="plan">
+      <div class="price">$250/year</div>
+      <p>Full Season Sims + Play of the Day</p>
+      <p class="trial">Includes 7-day free trial</p>
+      <button onclick="subscribe('250')">Subscribe $250</button>
+    </div>
   </div>
 
   <script>
-    document.getElementById("checkout-btn").addEventListener("click", async () => {
+    async function subscribe(plan) {
       try {
         const res = await fetch("/.netlify/functions/create-checkout-session", {
-          method: "POST"
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ plan })
         });
         const { url } = await res.json();
-        window.location.href = url; // Redirects user to Stripe Checkout
+        window.location.href = url; // redirect to Stripe Checkout
       } catch (err) {
         alert("Error starting checkout: " + err.message);
       }
-    });
+    }
   </script>
 </body>
 </html>
