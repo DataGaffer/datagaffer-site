@@ -399,7 +399,7 @@
     <div class="dg-site-name">DataGaffer.com</div>
     <div class="dg-auth-links">
       <a href="login.html">Login</a>
-      <a href="signup.html" class="signup">Sign Up</a>
+      <a href="signup.html" class="signup">Free Trial</a>
     </div>
   </a>
 </div>
@@ -494,12 +494,7 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
 document.addEventListener("DOMContentLoaded", async () => {
   const { data: { session } } = await supabaseClient.auth.getSession();
 
-  if (session) {
-    console.log("✅ User confirmed via email:", session.user.email);
-
-    // 👇 Redirect them where you want after confirming
-    window.location.href = "subscribe.html";  
-  }
+  
 });
 </script>
 
