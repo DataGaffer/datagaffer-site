@@ -1,5 +1,6 @@
 import json
 import numpy as np
+import os
 
 # Load league coefficients
 with open("league_coefficients.json") as f:
@@ -12,8 +13,7 @@ try:
 except FileNotFoundError:
     team_boosters = {}
 
-
-# Load team stats
+# --- Load manual stats (corners/shots) ---
 def load_team_stats():
     stats = {}
     leagues = [
@@ -34,34 +34,68 @@ def load_team_stats():
 
 team_stats = load_team_stats()
 
+# --- Load API stats (2024 + 2025) ---
+def load_api_stats(season_folder):
+    stats = {}
+    folder = f"team_stats_api/{season_folder}"
+    if not os.path.exists(folder):
+        return stats
+    for file in os.listdir(folder):
+        if not file.endswith(".json"):
+            continue
+        with open(os.path.join(folder, file)) as f:
+            team = json.load(f)
+            team_id = team["team_id"]
+
+            # Normalize per-match averages
+            for side in ["home", "away"]:
+                matches = team[side].get("matches", 1) or 1
+                team[side]["goals_for"] = team[side].get("goals_for", 0) / matches
+                team[side]["goals_against"] = team[side].get("goals_against", 0) / matches
+
+            stats[team_id] = team
+    return stats
+
+# ✅ load AFTER defining the normalized version
+api_stats_2024 = load_api_stats("2024")
+api_stats_2025 = load_api_stats("2025")
+
+# --- Helper to get blended goals ---
+def get_blended_goals(team_id, side, stat_type):
+    val_2025 = api_stats_2025.get(team_id, {}).get(side, {}).get(stat_type, None)
+    val_2024 = api_stats_2024.get(team_id, {}).get(side, {}).get(stat_type, None)
+
+    if val_2025 is not None and val_2024 is not None:
+        return 0.6 * val_2025 + 0.4 * val_2024
+    elif val_2025 is not None:
+        return val_2025
+    elif val_2024 is not None:
+        return val_2024
+    return 0.0
+
+def get_manual_stat(team, side, stat_type):
+    try:
+        # Domestic leagues (home/away split, "against")
+        if side in team and stat_type in team[side]:
+            return team[side][stat_type]
+        
+        # European comps (no split, "conceded")
+        if stat_type == "corners_against":
+            return team.get("corners_conceded", 0)
+        if stat_type == "shots_against":
+            return team.get("shots_conceded", 0)
+        
+        # Fallback for base stats like "corners", "shots"
+        return team.get(stat_type, 0)
+    except:
+        return 0
+
 # Load H2H + odds
 try:
     with open("h2h_and_odds.json") as f:
         h2h_and_odds = json.load(f)
 except FileNotFoundError:
     h2h_and_odds = {}
-
-# Helper
-def get_stat(team, side, stat_type):
-    try:
-        if side in team and stat_type in team[side]:
-            return team[side][stat_type]
-
-        if stat_type == "goals_for":
-            return team.get("scored", 0)
-        elif stat_type == "goals_against":
-            return team.get("conceded", 0)
-        elif stat_type == "corners":
-            return team.get("corners", 0)
-        elif stat_type == "corners_against":
-            return team.get("corners_conceded", 0)
-        elif stat_type == "shots":
-            return team.get("shots", 0)
-        elif stat_type == "shots_against":
-            return team.get("shots_conceded", 0)
-        return 0
-    except:
-        return 0
 
 # Simulate one match
 def simulate_match(home_id, away_id, fixture_id=None):
@@ -85,29 +119,29 @@ def simulate_match(home_id, away_id, fixture_id=None):
     else:
         np.random.seed(42)
 
-    # --- Goals ---
-    home_avg = get_stat(home, "home", "goals_for")
-    home_conc = get_stat(home, "home", "goals_against")
-    away_avg = get_stat(away, "away", "goals_for")
-    away_conc = get_stat(away, "away", "goals_against")
+    # --- Goals (blended API) ---
+    home_avg = get_blended_goals(home_id, "home", "goals_for")
+    home_conc = get_blended_goals(home_id, "home", "goals_against")
+    away_avg = get_blended_goals(away_id, "away", "goals_for")
+    away_conc = get_blended_goals(away_id, "away", "goals_against")
 
     # --- Corners ---
-    home_corners = get_stat(home, "home", "corners")
-    home_corners_conc = get_stat(home, "home", "corners_against")
-    away_corners = get_stat(away, "away", "corners")
-    away_corners_conc = get_stat(away, "away", "corners_against")
+    home_corners = get_manual_stat(home, "home", "corners")
+    home_corners_conc = get_manual_stat(home, "home", "corners_against")
+    away_corners = get_manual_stat(away, "away", "corners")
+    away_corners_conc = get_manual_stat(away, "away", "corners_against")
 
     # --- Shots ---
-    home_shots = get_stat(home, "home", "shots")
-    home_shots_conc = get_stat(home, "home", "shots_against")
-    away_shots = get_stat(away, "away", "shots")
-    away_shots_conc = get_stat(away, "away", "shots_against")
+    home_shots = get_manual_stat(home, "home", "shots")
+    home_shots_conc = get_manual_stat(home, "home", "shots_against")
+    away_shots = get_manual_stat(away, "away", "shots")
+    away_shots_conc = get_manual_stat(away, "away", "shots_against")
 
     # League coefficients
     home_coef = league_coefficients.get(home["league"], 1.0)
     away_coef = league_coefficients.get(away["league"], 1.0)
 
-# --- Apply team boosters ---
+    # --- Apply team boosters ---
     home_boost = team_boosters.get(str(home_id), 1.0)
     away_boost = team_boosters.get(str(away_id), 1.0)
 
@@ -115,7 +149,6 @@ def simulate_match(home_id, away_id, fixture_id=None):
     away_coef *= away_boost
 
     coef_ratio = home_coef / away_coef
-
 
     # Expected values
     exp_home = (home_avg + away_conc) / 2 + 0.25
@@ -133,10 +166,10 @@ def simulate_match(home_id, away_id, fixture_id=None):
     exp_home_shots *= coef_ratio
     exp_away_shots /= coef_ratio
 
-   # ---- H2H influence ----
+    # ---- H2H influence ----
     with open("h2h_and_odds.json") as f:
-     h2h_and_odds = json.load(f)
-   
+        h2h_and_odds = json.load(f)
+
     key = f"home_{home_id}_{away_id}"
     h2h_data = h2h_and_odds.get(key, {})
     h_avg = h2h_data.get("avg_home", None)
@@ -150,10 +183,8 @@ def simulate_match(home_id, away_id, fixture_id=None):
         exp_home = exp_home * (1 - w) + h_avg * w
         exp_away = exp_away * (1 - w) + a_avg * w
 
-
-
     # --- Poisson simulations ---
-    sims = 20000
+    sims = 10000
     home_goals = np.random.poisson(exp_home, sims)
     away_goals = np.random.poisson(exp_away, sims)
     home_corners = np.random.poisson(exp_home_corners, sims)
