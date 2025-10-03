@@ -7,165 +7,202 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
       background-color: #f5fff8;
-      color: #003f2e;
       margin: 0;
+      padding: 40px 20px;
+      color: #003f2e;
     }
-    .plans-container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .plan-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-      border: 2px solid #003f2e;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+
     h1 {
       text-align: center;
       font-size: 32px;
-      margin-top: 20px;
+      margin-bottom: 10px;
     }
-    .tagline {
+
+    .subtitle {
       text-align: center;
       font-size: 16px;
-      margin-bottom: 30px;
-      color: #003f2e;
-      font-weight: 600;
+      margin-bottom: 40px;
+      color: #444;
     }
+
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .plan {
+      background: #fff;
+      border: 2px solid #003f2e;
+      border-radius: 12px;
+      padding: 25px;
+      flex: 1 1 280px;
+      max-width: 320px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .plan.popular {
+      border: 3px solid #0ea768;
+      transform: scale(1.05);
+    }
+
+    .badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0ea768;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .plan h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
     .price {
-      font-size: 24px;
+      font-size: 26px;
+      font-weight: bold;
+      color: #0b8c53;
+      margin: 10px 0 15px;
+    }
+
+    .price span {
+      font-size: 14px;
+      color: #666;
+      font-weight: normal;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    ul li {
+      margin: 8px 0;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    ul li.yes::before {
+  content: "✓"; /* instead of "✔" */
+  color: #0b8c53 !important;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+    ul li.no::before {
+      content: "✘";
+      color: #d9534f;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .save {
+      color: #d9534f;
       font-weight: bold;
       margin: 10px 0;
-      color: #1a8a39;
     }
-    .features {
-      text-align: left;
-      margin: 15px 0;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-    .features li {
-      margin: 6px 0;
-    }
-    .trial {
-      font-size: 13px;
-      color: #555;
-      margin-bottom: 15px;
-    }
+
     button {
+      width: 100%;
       padding: 12px;
-      background-color: #1a8a39;
+      background-color: #0b8c53;
       color: white;
       border: none;
       border-radius: 6px;
       font-size: 16px;
+      font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background-color: #14722f;
-    }
-    .highlight {
-      border: 2px solid #1a8a39;
-      transform: scale(1.02);
+      transition: background 0.2s;
     }
 
-    /* Redirect overlay */
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 63, 46, 0.9);
-      color: #fff;
-      font-size: 20px;
-      font-weight: bold;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
+    button:hover {
+      background-color: #046e47;
     }
-    .overlay span {
-      margin-top: 15px;
+
+    .trial {
+      font-size: 13px;
+      color: #555;
+      margin-top: 10px;
     }
-    .loader {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #1a8a39;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+
+    /* Mobile tweaks */
+    @media (max-width: 768px) {
+      .plans {
+        flex-direction: column;
+        align-items: center;
+      }
+      .plan.popular { transform: none; }
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Choose Your Plan</h1>
-    <div class="tagline">Unlock the most realistic football simulations ⚽</div>
-    <div class="plans-container">
-      <div class="plan-card">
-        <h2>Standard Plan</h2>
-        <div class="price">$19.99/Month</div>
-        <ul class="features">
-          <li>Full Match Simulations</li>
-          <li>Access to Sim Cards</li>
-          <li>Weekly Rankings</li>
-        </ul>
-        <p class="trial">Includes 7-day free trial</p>
-        <button onclick="subscribe('20_new')">Start Free Trial</button>
-      </div>
-      <div class="plan-card highlight">
-        <h2>Pro Plan</h2>
-        <div class="price">$49.99/Month</div>
-        <ul class="features">
-          <li>Everything in Standard</li>
-          <li>Play of the Day Picks</li>
-          <li>AI Parlay Builder</li>
-        </ul>
-        <p class="trial">Includes 7-day free trial</p>
-        <button onclick="subscribe('50')">Start Free Trial</button>
-      </div>
-      <div class="plan-card">
-        <h2>Season Pro Plan</h2>
-        <div class="price">$250/Year</div>
-        <ul class="features">
-          <li>42% OFF Annual Savings</li>
-          <li>Everything in Pro Plan</li>
-        </ul>
-        <p class="trial">Includes 7-day free trial</p>
-        <button onclick="subscribe('250')">Start Free Trial</button>
-      </div>
-    </div>
-  </div>
+  <h1>Choose Your Plan</h1>
+  <p class="subtitle">Unlock the most realistic football simulations & betting insights powered by DataGaffer.</p>
 
-  <!-- Overlay -->
-  <div class="overlay" id="overlay">
-    <div class="loader"></div>
-    <span>⚽ Redirecting to secure checkout…</span>
+  <div class="plans">
+    <!-- Standard -->
+    <div class="plan">
+      <h2>Standard</h2>
+      <div class="price">$19.99 <span>/month</span></div>
+      <ul>
+        <li class="yes">Full Match Simulations</li>
+        <li class="yes">Projections & Rankings</li>
+        <li class="yes">EV Plays + Player Simulations</li>
+        <li class="no">Play of the Day</li>
+        <li class="no">AI Parlay Builder</li>
+      </ul>
+      <button onclick="subscribe('20_new')">Start Free Trial</button>
+      <div class="trial">Includes 7-day free trial</div>
+    </div>
+
+    <!-- Pro -->
+    <div class="plan popular">
+      <div class="badge">Most Popular</div>
+      <h2>Pro</h2>
+      <div class="price">$49.99 <span>/month</span></div>
+      <ul>
+        <li class="yes">Everything in Standard</li>
+        <li class="yes">Play of the Day</li>
+        <li class="yes">AI Parlay Builder</li>
+      </ul>
+      <button onclick="subscribe('50')">Start Free Trial</button>
+      <div class="trial">Includes 7-day free trial</div>
+    </div>
+
+    <!-- Season Pro -->
+    <div class="plan">
+      <h2>Season Pro</h2>
+      <div class="price">$250 <span>/year</span></div>
+      <div class="save">🔥 Save 42% vs monthly</div>
+      <ul>
+        <li class="yes">Everything in Pro</li>
+        <li class="yes">Priority Access</li>
+        <li class="yes">Annual Savings</li>
+      </ul>
+      <button onclick="subscribe('250')">Start Free Trial</button>
+      <div class="trial">Includes 7-day free trial</div>
+    </div>
   </div>
 
   <script>
     async function subscribe(plan) {
-      document.getElementById("overlay").style.display = "flex"; // show overlay
       try {
         const res = await fetch("/.netlify/functions/create-checkout-session", {
           method: "POST",
@@ -173,9 +210,8 @@
           body: JSON.stringify({ plan })
         });
         const { url } = await res.json();
-        window.location.href = url; // redirect to Stripe Checkout
+        window.location.href = url;
       } catch (err) {
-        document.getElementById("overlay").style.display = "none"; // hide if error
         alert("Error starting checkout: " + err.message);
       }
     }
