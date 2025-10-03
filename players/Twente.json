@@ -12,30 +12,6 @@
     "shots_on_target": 3
   },
   {
-    "id": 37254,
-    "team_id": 415,
-    "name": "R. Pr\u00f6pper",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 630,
-    "goals": 0,
-    "assists": 0,
-    "shots": 6,
-    "shots_on_target": 2
-  },
-  {
-    "id": 37370,
-    "team_id": 415,
-    "name": "B. van Rooij",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 614,
-    "goals": 2,
-    "assists": 1,
-    "shots": 6,
-    "shots_on_target": 2
-  },
-  {
     "id": 38706,
     "team_id": 415,
     "name": "A. Verschueren",
@@ -120,30 +96,6 @@
     "shots_on_target": 4
   },
   {
-    "id": 291994,
-    "team_id": 415,
-    "name": "M. Bruns",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 591,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 408853,
-    "team_id": 415,
-    "name": "M. Rots",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 570,
-    "goals": 0,
-    "assists": 1,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
     "id": 455252,
     "team_id": 415,
     "name": "Lucas Vennegoor of Hesselink",
@@ -154,5 +106,29 @@
     "assists": 0,
     "shots": 2,
     "shots_on_target": 0
+  },
+  {
+    "id": 336562,
+    "team_id": 415,
+    "name": "D. Weidmann",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 149,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 352730,
+    "team_id": 415,
+    "name": "S. \u00d8rjas\u00e6ter",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 236,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
   }
 ]

@@ -60,30 +60,6 @@
     "shots_on_target": 5
   },
   {
-    "id": 24961,
-    "team_id": 186,
-    "name": "H. Wahl",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 450,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 2
-  },
-  {
-    "id": 27157,
-    "team_id": 186,
-    "name": "M. Saliakas",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 259,
-    "goals": 0,
-    "assists": 1,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 50863,
     "team_id": 186,
     "name": "J. Sands",
@@ -96,18 +72,6 @@
     "shots_on_target": 1
   },
   {
-    "id": 90731,
-    "team_id": 186,
-    "name": "L. Ritzka",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 99,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
     "id": 146586,
     "team_id": 186,
     "name": "J. Fujita",
@@ -117,18 +81,6 @@
     "goals": 0,
     "assists": 1,
     "shots": 2,
-    "shots_on_target": 0
-  },
-  {
-    "id": 148448,
-    "team_id": 186,
-    "name": "A. Pyrka",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 189,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
     "shots_on_target": 0
   },
   {
@@ -144,15 +96,15 @@
     "shots_on_target": 6
   },
   {
-    "id": 202636,
+    "id": 37759,
     "team_id": 186,
-    "name": "L. Oppie",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 450,
+    "name": "M. Kaars",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 116,
     "goals": 0,
     "assists": 0,
-    "shots": 6,
-    "shots_on_target": 2
+    "shots": 2,
+    "shots_on_target": 1
   }
 ]

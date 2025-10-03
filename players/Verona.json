@@ -1,17 +1,5 @@
 [
   {
-    "id": 15909,
-    "team_id": 504,
-    "name": "M. Frese",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 295,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 22239,
     "team_id": 504,
     "name": "C. Niasse",
@@ -24,12 +12,72 @@
     "shots_on_target": 0
   },
   {
-    "id": 47277,
+    "id": 236955,
     "team_id": 504,
-    "name": "Unai N\u00fa\u00f1ez",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 360,
+    "name": "A. Sarr",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 197,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 527889,
+    "team_id": 504,
+    "name": "Fallou Cham",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 141,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 418,
+    "team_id": 504,
+    "name": "S. Serdar",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 441,
+    "goals": 1,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 1
+  },
+  {
+    "id": 1090,
+    "team_id": 504,
+    "name": "A. Bernede",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 419,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 1
+  },
+  {
+    "id": 14327,
+    "team_id": 504,
+    "name": "D. Bradari\u0107",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 426,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 31678,
+    "team_id": 504,
+    "name": "J. Akpa Akpro",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 172,
     "goals": 0,
     "assists": 0,
     "shots": 1,
@@ -40,11 +88,23 @@
     "team_id": 504,
     "name": "Giovane",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 333,
+    "appearances": 5,
+    "minutes": 407,
     "goals": 0,
     "assists": 1,
     "shots": 14,
     "shots_on_target": 8
+  },
+  {
+    "id": 368260,
+    "team_id": 504,
+    "name": "G. Orban",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 259,
+    "goals": 1,
+    "assists": 0,
+    "shots": 15,
+    "shots_on_target": 7
   }
 ]

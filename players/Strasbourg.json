@@ -12,18 +12,6 @@
     "shots_on_target": 1
   },
   {
-    "id": 147835,
-    "team_id": 95,
-    "name": "A. Omobamidele",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 68,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
     "id": 203762,
     "team_id": 95,
     "name": "E. Emegha",
@@ -34,30 +22,6 @@
     "assists": 2,
     "shots": 8,
     "shots_on_target": 6
-  },
-  {
-    "id": 271542,
-    "team_id": 95,
-    "name": "I. Doukour\u00e9",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 405,
-    "goals": 0,
-    "assists": 1,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 276184,
-    "team_id": 95,
-    "name": "M. Sarr",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 319572,
@@ -130,5 +94,53 @@
     "assists": 0,
     "shots": 5,
     "shots_on_target": 3
+  },
+  {
+    "id": 335056,
+    "team_id": 95,
+    "name": "Diego Moreira",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 355,
+    "goals": 0,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 345416,
+    "team_id": 95,
+    "name": "Rafael Lu\u00c3\u00ads",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 176,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 395762,
+    "team_id": 95,
+    "name": "M. Amougou",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 133,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 415431,
+    "team_id": 95,
+    "name": "S. El Mourabet",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 261,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
   }
 ]

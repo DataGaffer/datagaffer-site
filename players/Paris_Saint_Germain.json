@@ -1,18 +1,5 @@
 [
   {
-    "id": 9,
-    "team_id": 85,
-    "name": "A. Hakimi",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 541,
-    "goals": 0,
-    "assists": 1,
-    "shots": 5,
-    "shots_on_target": 3
-  },
-  
-  {
     "id": 153,
     "team_id": 85,
     "name": "O. Demb\u00e9l\u00e9",
@@ -25,28 +12,16 @@
     "shots_on_target": 10
   },
   {
-    "id": 257,
-    "team_id": 85,
-    "name": "Marquinhos",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 270,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 328,
     "team_id": 85,
     "name": "Fabi\u00e1n Ruiz",
     "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 405,
+    "appearances": 7,
+    "minutes": 477,
     "goals": 1,
     "assists": 2,
-    "shots": 5,
-    "shots_on_target": 3
+    "shots": 6,
+    "shots_on_target": 4
   },
   {
     "id": 483,
@@ -65,36 +40,35 @@
     "team_id": 85,
     "name": "Lee Kang-In",
     "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 269,
+    "appearances": 7,
+    "minutes": 279,
     "goals": 0,
     "assists": 0,
-    "shots": 3,
+    "shots": 4,
     "shots_on_target": 2
   },
-  
   {
     "id": 41585,
     "team_id": 85,
     "name": "Gon\u00e7alo Ramos",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 430,
-    "goals": 1,
+    "appearances": 8,
+    "minutes": 441,
+    "goals": 2,
     "assists": 0,
-    "shots": 12,
-    "shots_on_target": 8
+    "shots": 13,
+    "shots_on_target": 9
   },
   {
     "id": 128384,
     "team_id": 85,
     "name": "Vitinha",
     "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 531,
+    "appearances": 8,
+    "minutes": 621,
     "goals": 1,
     "assists": 3,
-    "shots": 10,
+    "shots": 11,
     "shots_on_target": 5
   },
   {
@@ -102,32 +76,20 @@
     "team_id": 85,
     "name": "B. Barcola",
     "position": "Attacker",
-    "appearances": 6,
-    "minutes": 445,
+    "appearances": 7,
+    "minutes": 518,
     "goals": 3,
     "assists": 1,
-    "shots": 12,
-    "shots_on_target": 8
-  },
-  {
-    "id": 263482,
-    "team_id": 85,
-    "name": "Nuno Mendes",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 350,
-    "goals": 1,
-    "assists": 1,
-    "shots": 3,
-    "shots_on_target": 3
+    "shots": 14,
+    "shots_on_target": 9
   },
   {
     "id": 336657,
     "team_id": 85,
     "name": "W. Za\u00efre-Emery",
     "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 435,
+    "appearances": 8,
+    "minutes": 518,
     "goals": 0,
     "assists": 0,
     "shots": 3,
@@ -150,12 +112,35 @@
     "team_id": 85,
     "name": "I. Mbaye",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 263,
+    "appearances": 8,
+    "minutes": 321,
     "goals": 0,
     "assists": 0,
-    "shots": 4,
-    "shots_on_target": 2
+    "shots": 5,
+    "shots_on_target": 3
+  },
+  {
+    "id": 335051,
+    "team_id": 85,
+    "name": "Jo\u00e3o Neves",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 234,
+    "goals": 3,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 3
+  },
+  {
+    "id": 409216,
+    "team_id": 85,
+    "name": "Senny Mayulu",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 247,
+    "goals": 1,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 1
   }
-  
 ]

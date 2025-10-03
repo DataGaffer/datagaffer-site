@@ -1,17 +1,5 @@
 [
   {
-    "id": 1393,
-    "team_id": 206,
-    "name": "I. Mes\u00edk",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 630,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
     "id": 19360,
     "team_id": 206,
     "name": "J. \u017damb\u016frek",
@@ -48,18 +36,6 @@
     "shots_on_target": 1
   },
   {
-    "id": 37670,
-    "team_id": 206,
-    "name": "D. Mirani",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 618,
-    "goals": 1,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 2
-  },
-  {
     "id": 38122,
     "team_id": 206,
     "name": "T. Bruns",
@@ -70,18 +46,6 @@
     "assists": 0,
     "shots": 8,
     "shots_on_target": 2
-  },
-  {
-    "id": 93006,
-    "team_id": 206,
-    "name": "D. van der Kust",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 418,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
   },
   {
     "id": 144691,
@@ -106,18 +70,6 @@
     "assists": 2,
     "shots": 9,
     "shots_on_target": 5
-  },
-  {
-    "id": 177714,
-    "team_id": 206,
-    "name": "J. Wieckhoff",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 299,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
   },
   {
     "id": 318531,
@@ -152,6 +104,18 @@
     "minutes": 413,
     "goals": 0,
     "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 38123,
+    "team_id": 206,
+    "name": "A. Hrusti\u0107",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 368,
+    "goals": 0,
+    "assists": 1,
     "shots": 3,
     "shots_on_target": 1
   }

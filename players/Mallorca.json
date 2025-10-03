@@ -12,18 +12,6 @@
     "shots_on_target": 0
   },
   {
-    "id": 920,
-    "team_id": 798,
-    "name": "Toni Lato",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 158,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
     "id": 1701,
     "team_id": 798,
     "name": "Manu Morlanes",
@@ -46,30 +34,6 @@
     "assists": 0,
     "shots": 3,
     "shots_on_target": 1
-  },
-  {
-    "id": 46733,
-    "team_id": 798,
-    "name": "Ra\u00edllo",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 636,
-    "goals": 0,
-    "assists": 0,
-    "shots": 5,
-    "shots_on_target": 0
-  },
-  {
-    "id": 46738,
-    "team_id": 798,
-    "name": "M. Valjent",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 636,
-    "goals": 0,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 3
   },
   {
     "id": 47336,
@@ -96,40 +60,16 @@
     "shots_on_target": 11
   },
   {
-    "id": 64268,
-    "team_id": 798,
-    "name": "J. Mojica",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 478,
-    "goals": 0,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 2
-  },
-  {
     "id": 107194,
     "team_id": 798,
     "name": "Antonio S\u00e1nchez",
     "position": "Midfielder",
     "appearances": 6,
-    "minutes": 271,
+    "minutes": 265,
     "goals": 0,
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
-  },
-  {
-    "id": 108519,
-    "team_id": 798,
-    "name": "Mateu Morey",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 379,
-    "goals": 1,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
   },
   {
     "id": 285909,
@@ -149,10 +89,58 @@
     "name": "M. Joseph",
     "position": "Attacker",
     "appearances": 6,
-    "minutes": 382,
+    "minutes": 376,
     "goals": 0,
     "assists": 0,
     "shots": 6,
     "shots_on_target": 4
+  },
+  {
+    "id": 46751,
+    "team_id": 798,
+    "name": "Abd\u00f3n Prats",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 56,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 190485,
+    "team_id": 798,
+    "name": "Sam\u00fa Costa",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 248,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 482473,
+    "team_id": 798,
+    "name": "Marc Domenech",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 139,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 491248,
+    "team_id": 798,
+    "name": "Jan Virgili",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 63,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
+    "shots_on_target": 0
   }
 ]

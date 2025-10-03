@@ -12,24 +12,12 @@
     "shots_on_target": 2
   },
   {
-    "id": 1844,
-    "team_id": 487,
-    "name": "A. Maru\u0161i\u0107",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 296,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
     "id": 1852,
     "team_id": 487,
     "name": "D. Cataldi",
     "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 160,
+    "appearances": 4,
+    "minutes": 250,
     "goals": 0,
     "assists": 0,
     "shots": 4,
@@ -40,11 +28,11 @@
     "team_id": 487,
     "name": "Pedro",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 163,
+    "appearances": 5,
+    "minutes": 174,
     "goals": 0,
     "assists": 0,
-    "shots": 2,
+    "shots": 3,
     "shots_on_target": 0
   },
   {
@@ -52,48 +40,36 @@
     "team_id": 487,
     "name": "B. Dia",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 120,
+    "appearances": 5,
+    "minutes": 210,
     "goals": 1,
     "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
+    "shots": 4,
+    "shots_on_target": 3
   },
   {
     "id": 30937,
     "team_id": 487,
     "name": "M. Zaccagni",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 336,
-    "goals": 1,
+    "appearances": 5,
+    "minutes": 426,
+    "goals": 2,
     "assists": 0,
-    "shots": 6,
-    "shots_on_target": 4
-  },
-  {
-    "id": 41577,
-    "team_id": 487,
-    "name": "Nuno Tavares",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 267,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 0
+    "shots": 8,
+    "shots_on_target": 5
   },
   {
     "id": 50856,
     "team_id": 487,
     "name": "V. Castellanos",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 256,
-    "goals": 1,
-    "assists": 2,
-    "shots": 6,
-    "shots_on_target": 2
+    "appearances": 5,
+    "minutes": 340,
+    "goals": 2,
+    "assists": 3,
+    "shots": 7,
+    "shots_on_target": 3
   },
   {
     "id": 144740,
@@ -108,28 +84,16 @@
     "shots_on_target": 0
   },
   {
-    "id": 162952,
-    "team_id": 487,
-    "name": "Mario Gila",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 360,
-    "goals": 0,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 0
-  },
-  {
     "id": 286474,
     "team_id": 487,
     "name": "M. Cancellieri",
     "position": "Attacker",
-    "appearances": 3,
-    "minutes": 211,
-    "goals": 0,
+    "appearances": 4,
+    "minutes": 301,
+    "goals": 1,
     "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
+    "shots": 6,
+    "shots_on_target": 3
   },
   {
     "id": 333116,
@@ -141,6 +105,18 @@
     "goals": 0,
     "assists": 1,
     "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 30784,
+    "team_id": 487,
+    "name": "N. Rovella",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 201,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
     "shots_on_target": 0
   }
 ]

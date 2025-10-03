@@ -1,63 +1,99 @@
 [
   {
-    "id": 656,
+    "id": 1939,
     "team_id": 494,
-    "name": "O. Solet",
-    "position": "Defender",
+    "name": "J. Piotrowski",
+    "position": "Midfielder",
     "appearances": 4,
-    "minutes": 360,
+    "minutes": 192,
     "goals": 0,
     "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
+    "shots": 1,
+    "shots_on_target": 1
   },
   {
     "id": 19185,
     "team_id": 494,
     "name": "K. Davis",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 264,
-    "goals": 1,
+    "appearances": 5,
+    "minutes": 354,
+    "goals": 2,
     "assists": 1,
-    "shots": 8,
-    "shots_on_target": 4
-  },
-  {
-    "id": 19824,
-    "team_id": 494,
-    "name": "J. Zemura",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 274,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
-    "id": 20656,
-    "team_id": 494,
-    "name": "E. Ebosse",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 53,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
+    "shots": 11,
+    "shots_on_target": 5
   },
   {
     "id": 36916,
     "team_id": 494,
     "name": "K. Ehizibue",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 319,
+    "appearances": 5,
+    "minutes": 364,
     "goals": 0,
     "assists": 0,
     "shots": 1,
     "shots_on_target": 0
+  },
+  {
+    "id": 48047,
+    "team_id": 494,
+    "name": "J. Karlstr\u00f6m",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 450,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 330599,
+    "team_id": 494,
+    "name": "Iker Bravo",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 167,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 347644,
+    "team_id": 494,
+    "name": "A. Atta",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 431,
+    "goals": 1,
+    "assists": 0,
+    "shots": 8,
+    "shots_on_target": 8
+  },
+  {
+    "id": 541,
+    "team_id": 494,
+    "name": "J. Ekkelenkamp",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 102,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 786,
+    "team_id": 494,
+    "name": "N. Zaniolo",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 136,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
   },
   {
     "id": 40594,
@@ -72,15 +108,15 @@
     "shots_on_target": 0
   },
   {
-    "id": 281495,
+    "id": 182560,
     "team_id": 494,
-    "name": "T. Kristensen",
-    "position": "Defender",
+    "name": "Oier Zarraga",
+    "position": "Midfielder",
     "appearances": 4,
-    "minutes": 360,
-    "goals": 1,
+    "minutes": 168,
+    "goals": 0,
     "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
+    "shots": 0,
+    "shots_on_target": 0
   }
 ]

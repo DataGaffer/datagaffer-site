@@ -12,36 +12,12 @@
     "shots_on_target": 1
   },
   {
-    "id": 537,
-    "team_id": 51,
-    "name": "J. Veltman",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 325,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 1361,
-    "team_id": 51,
-    "name": "F. Kad\u0131o\u011flu",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 301,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
     "id": 1469,
     "team_id": 51,
     "name": "D. Welbeck",
     "position": "Attacker",
     "appearances": 6,
-    "minutes": 292,
+    "minutes": 278,
     "goals": 2,
     "assists": 0,
     "shots": 6,
@@ -65,23 +41,35 @@
     "name": "M. Wieffer",
     "position": "Midfielder",
     "appearances": 4,
-    "minutes": 235,
+    "minutes": 221,
     "goals": 0,
     "assists": 1,
     "shots": 1,
     "shots_on_target": 1
   },
   {
-    "id": 162007,
+    "id": 106835,
     "team_id": 51,
-    "name": "M. De Cuyper",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 290,
+    "name": "K. Mitoma",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 510,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 3
+  },
+  {
+    "id": 265820,
+    "team_id": 51,
+    "name": "Y. Ayari",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 453,
     "goals": 1,
     "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
+    "shots": 8,
+    "shots_on_target": 4
   },
   {
     "id": 278370,
@@ -96,24 +84,12 @@
     "shots_on_target": 1
   },
   {
-    "id": 305730,
-    "team_id": 51,
-    "name": "J. Hinshelwood",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 109,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
     "id": 328225,
     "team_id": 51,
     "name": "B. Gruda",
     "position": "Midfielder",
     "appearances": 6,
-    "minutes": 173,
+    "minutes": 159,
     "goals": 1,
     "assists": 1,
     "shots": 5,
@@ -137,10 +113,34 @@
     "name": "Y. Minteh",
     "position": "Attacker",
     "appearances": 6,
-    "minutes": 517,
+    "minutes": 503,
     "goals": 1,
     "assists": 2,
     "shots": 7,
     "shots_on_target": 3
+  },
+  {
+    "id": 129643,
+    "team_id": 51,
+    "name": "E. Ferguson",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 258,
+    "goals": 0,
+    "assists": 1,
+    "shots": 7,
+    "shots_on_target": 3
+  },
+  {
+    "id": 305730,
+    "team_id": 51,
+    "name": "J. Hinshelwood",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 109,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   }
 ]

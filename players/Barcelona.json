@@ -4,62 +4,132 @@
     "team_id": 529,
     "name": "R. Lewandowski",
     "position": "Attacker",
-    "appearances": 6,
-    "minutes": 234,
-    "goals": 3,
+    "appearances": 8,
+    "minutes": 342,
+    "goals": 4,
     "assists": 0,
-    "shots": 7,
-    "shots_on_target": 6
+    "shots": 12,
+    "shots_on_target": 9
   },
   {
     "id": 538,
     "team_id": 529,
     "name": "F. de Jong",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 375,
+    "appearances": 7,
+    "minutes": 555,
     "goals": 0,
     "assists": 1,
     "shots": 0,
     "shots_on_target": 0
   },
-  
+  {
+    "id": 1323,
+    "team_id": 529,
+    "name": "Dani Olmo",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 479,
+    "goals": 1,
+    "assists": 2,
+    "shots": 17,
+    "shots_on_target": 7
+  },
+  {
+    "id": 133609,
+    "team_id": 529,
+    "name": "Pedri",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 774,
+    "goals": 1,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 5
+  },
+  {
+    "id": 296667,
+    "team_id": 529,
+    "name": "Gavi",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 199,
+    "goals": 1,
+    "assists": 2,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 329728,
+    "team_id": 529,
+    "name": "Marc Casad\u00f3",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 230,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 338958,
+    "team_id": 529,
+    "name": "R. Bardghji",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 117,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 4
+  },
+  {
+    "id": 340626,
+    "team_id": 529,
+    "name": "Ferm\u00edn",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 282,
+    "goals": 2,
+    "assists": 0,
+    "shots": 8,
+    "shots_on_target": 4
+  },
+  {
+    "id": 386828,
+    "team_id": 529,
+    "name": "Lamine Yamal",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 392,
+    "goals": 2,
+    "assists": 3,
+    "shots": 16,
+    "shots_on_target": 7
+  },
   {
     "id": 909,
     "team_id": 529,
     "name": "M. Rashford",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 379,
+    "appearances": 9,
+    "minutes": 529,
     "goals": 2,
-    "assists": 2,
-    "shots": 12,
-    "shots_on_target": 7
+    "assists": 4,
+    "shots": 17,
+    "shots_on_target": 9
   },
   {
     "id": 931,
     "team_id": 529,
     "name": "Ferran Torres",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 476,
-    "goals": 4,
+    "appearances": 9,
+    "minutes": 578,
+    "goals": 5,
     "assists": 1,
-    "shots": 15,
-    "shots_on_target": 9
-  },
-  
-  {
-    "id": 1323,
-    "team_id": 529,
-    "name": "Dani Olmo",
-    "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 362,
-    "goals": 1,
-    "assists": 2,
-    "shots": 14,
-    "shots_on_target": 5
+    "shots": 17,
+    "shots_on_target": 11
   },
   {
     "id": 1496,
@@ -73,43 +143,16 @@
     "shots": 17,
     "shots_on_target": 5
   },
-  
   {
-    "id": 133609,
+    "id": 433396,
     "team_id": 529,
-    "name": "Pedri",
+    "name": "Marc Bernal",
     "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 606,
-    "goals": 1,
-    "assists": 0,
-    "shots": 5,
-    "shots_on_target": 3
-  },
-  
-  {
-    "id": 340626,
-    "team_id": 529,
-    "name": "Ferm\u00edn",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 282,
-    "goals": 2,
-    "assists": 0,
-    "shots": 8,
-    "shots_on_target": 4
-  },
-
-  {
-    "id": 386828,
-    "team_id": 529,
-    "name": "Lamine Yamal",
-    "position": "Attacker",
-    "appearances": 4,
-    "minutes": 302,
-    "goals": 2,
-    "assists": 3,
-    "shots": 20,
-    "shots_on_target": 7
+    "appearances": 3,
+    "minutes": 21,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
   }
 ]

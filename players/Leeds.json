@@ -1,51 +1,39 @@
 [
   {
-    "id": 2279,
-    "team_id": 63,
-    "name": "E. Ampadu",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 355,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 18766,
-    "team_id": 63,
-    "name": "D. Calvert-Lewin",
-    "position": "Attacker",
-    "appearances": 4,
-    "minutes": 270,
-    "goals": 1,
-    "assists": 0,
-    "shots": 7,
-    "shots_on_target": 6
-  },
-  {
     "id": 18901,
     "team_id": 63,
     "name": "S. Longstaff",
     "position": "Midfielder",
     "appearances": 6,
-    "minutes": 394,
+    "minutes": 387,
     "goals": 1,
     "assists": 1,
     "shots": 4,
     "shots_on_target": 2
   },
   {
-    "id": 19201,
+    "id": 19128,
     "team_id": 63,
-    "name": "J. Bogle",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 533,
+    "name": "J. Harrison",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 108,
     "goals": 0,
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
+  },
+  {
+    "id": 19329,
+    "team_id": 63,
+    "name": "D. James",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 216,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
   },
   {
     "id": 19461,
@@ -53,7 +41,7 @@
     "name": "L. Nmecha",
     "position": "Attacker",
     "appearances": 6,
-    "minutes": 143,
+    "minutes": 139,
     "goals": 1,
     "assists": 0,
     "shots": 1,
@@ -72,28 +60,16 @@
     "shots_on_target": 0
   },
   {
-    "id": 47969,
+    "id": 50739,
     "team_id": 63,
-    "name": "G. Gudmundsson",
-    "position": "Defender",
+    "name": "B. Aaronson",
+    "position": "Midfielder",
     "appearances": 6,
-    "minutes": 537,
+    "minutes": 332,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 64003,
-    "team_id": 63,
-    "name": "P. Struijk",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 547,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
+    "shots": 4,
+    "shots_on_target": 2
   },
   {
     "id": 129142,
@@ -118,5 +94,53 @@
     "assists": 0,
     "shots": 3,
     "shots_on_target": 0
+  },
+  {
+    "id": 177665,
+    "team_id": 63,
+    "name": "A. Stach",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 540,
+    "goals": 1,
+    "assists": 1,
+    "shots": 7,
+    "shots_on_target": 2
+  },
+  {
+    "id": 18766,
+    "team_id": 63,
+    "name": "D. Calvert-Lewin",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 267,
+    "goals": 1,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 6
+  },
+  {
+    "id": 48389,
+    "team_id": 63,
+    "name": "N. Okafor",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 230,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 313059,
+    "team_id": 63,
+    "name": "M. Joseph",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 265,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 3
   }
 ]

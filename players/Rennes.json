@@ -1,27 +1,15 @@
 [
   {
-    "id": 3007,
-    "team_id": 94,
-    "name": "P. Frankowski",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 220,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 15286,
     "team_id": 94,
     "name": "Mousa Tamari",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 214,
+    "appearances": 5,
+    "minutes": 280,
     "goals": 0,
     "assists": 1,
-    "shots": 5,
-    "shots_on_target": 3
+    "shots": 8,
+    "shots_on_target": 4
   },
   {
     "id": 21102,
@@ -40,8 +28,8 @@
     "team_id": 94,
     "name": "M. Camara",
     "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 123,
+    "appearances": 4,
+    "minutes": 218,
     "goals": 0,
     "assists": 0,
     "shots": 0,
@@ -52,23 +40,11 @@
     "team_id": 94,
     "name": "S. Fofana",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 370,
+    "appearances": 6,
+    "minutes": 465,
     "goals": 0,
     "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
-  },
-  {
-    "id": 129681,
-    "team_id": 94,
-    "name": "A. Rouault",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 450,
-    "goals": 1,
-    "assists": 0,
-    "shots": 1,
+    "shots": 5,
     "shots_on_target": 1
   },
   {
@@ -76,12 +52,12 @@
     "team_id": 94,
     "name": "E. Lepaul",
     "position": "Attacker",
-    "appearances": 3,
-    "minutes": 254,
+    "appearances": 4,
+    "minutes": 349,
     "goals": 2,
     "assists": 0,
-    "shots": 4,
-    "shots_on_target": 3
+    "shots": 7,
+    "shots_on_target": 4
   },
   {
     "id": 163032,
@@ -96,39 +72,51 @@
     "shots_on_target": 0
   },
   {
-    "id": 272460,
-    "team_id": 94,
-    "name": "Q. Merlin",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 450,
-    "goals": 0,
-    "assists": 2,
-    "shots": 2,
-    "shots_on_target": 2
-  },
-  {
-    "id": 367636,
-    "team_id": 94,
-    "name": "J. Jacquet",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 450,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 449662,
     "team_id": 94,
     "name": "M. Me\u00eft\u00e9",
     "position": "Attacker",
-    "appearances": 5,
-    "minutes": 113,
+    "appearances": 6,
+    "minutes": 147,
     "goals": 1,
     "assists": 1,
     "shots": 5,
     "shots_on_target": 3
+  },
+  {
+    "id": 421,
+    "team_id": 94,
+    "name": "B. Embolo",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 195,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 21497,
+    "team_id": 94,
+    "name": "L. Blas",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 382,
+    "goals": 2,
+    "assists": 0,
+    "shots": 8,
+    "shots_on_target": 4
+  },
+  {
+    "id": 343792,
+    "team_id": 94,
+    "name": "D. Ciss\u00e9",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 183,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 0
   }
 ]

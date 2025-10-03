@@ -1,29 +1,5 @@
 [
   {
-    "id": 734,
-    "team_id": 539,
-    "name": "Dela",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 474,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 0
-  },
-  {
-    "id": 1118,
-    "team_id": 539,
-    "name": "J. Toljan",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 604,
-    "goals": 1,
-    "assists": 2,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 46790,
     "team_id": 539,
     "name": "V\u00edctor Garc\u00eda",
@@ -34,18 +10,6 @@
     "assists": 0,
     "shots": 1,
     "shots_on_target": 1
-  },
-  {
-    "id": 46941,
-    "team_id": 539,
-    "name": "Unai Elgezabal",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 47225,
@@ -70,30 +34,6 @@
     "assists": 0,
     "shots": 2,
     "shots_on_target": 2
-  },
-  {
-    "id": 64309,
-    "team_id": 539,
-    "name": "Manu S\u00e1nchez",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 508,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 104832,
-    "team_id": 539,
-    "name": "Diego Pamp\u00edn",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 118,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 104949,
@@ -144,27 +84,75 @@
     "shots_on_target": 6
   },
   {
-    "id": 408320,
+    "id": 20817,
     "team_id": 539,
-    "name": "Jorge Cabello",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 242,
+    "name": "G. Koyalipou",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 73,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 125239,
+    "team_id": 539,
+    "name": "K. Arriaga",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 119,
     "goals": 0,
     "assists": 0,
     "shots": 0,
     "shots_on_target": 0
   },
   {
-    "id": 421807,
+    "id": 128985,
     "team_id": 539,
-    "name": "M. Moreno",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 261,
+    "name": "Iker Losada",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 45,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 182603,
+    "team_id": 539,
+    "name": "Jon Ander Olasagasti",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 200,
     "goals": 0,
     "assists": 0,
     "shots": 1,
     "shots_on_target": 0
+  },
+  {
+    "id": 182639,
+    "team_id": 539,
+    "name": "Unai Vencedor",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 182,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 378284,
+    "team_id": 539,
+    "name": "Etta Eyong",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 298,
+    "goals": 3,
+    "assists": 1,
+    "shots": 9,
+    "shots_on_target": 4
   }
 ]

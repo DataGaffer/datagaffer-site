@@ -12,22 +12,10 @@
     "shots_on_target": 3
   },
   {
-    "id": 19065,
-    "team_id": 205,
-    "name": "Ivo Pinto",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 290,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
     "id": 37273,
     "team_id": 205,
     "name": "K. Peterson",
-    "position": "Midfielder",
+    "position": "Attacker",
     "appearances": 7,
     "minutes": 427,
     "goals": 0,
@@ -46,42 +34,6 @@
     "assists": 1,
     "shots": 5,
     "shots_on_target": 2
-  },
-  {
-    "id": 40201,
-    "team_id": 205,
-    "name": "Iv\u00e1n M\u00e1rquez",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 485,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
-  },
-  {
-    "id": 129125,
-    "team_id": 205,
-    "name": "S. Adewoye",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 492,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 203786,
-    "team_id": 205,
-    "name": "J. Dahlhaus",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 623,
-    "goals": 0,
-    "assists": 1,
-    "shots": 1,
-    "shots_on_target": 0
   },
   {
     "id": 268572,
@@ -106,18 +58,6 @@
     "assists": 2,
     "shots": 5,
     "shots_on_target": 3
-  },
-  {
-    "id": 284359,
-    "team_id": 205,
-    "name": "Justin Quincy Hubner",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 197,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
   },
   {
     "id": 326029,
@@ -154,5 +94,41 @@
     "assists": 0,
     "shots": 6,
     "shots_on_target": 2
+  },
+  {
+    "id": 236,
+    "team_id": 205,
+    "name": "M. Ihattaren",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 411,
+    "goals": 3,
+    "assists": 1,
+    "shots": 8,
+    "shots_on_target": 7
+  },
+  {
+    "id": 38132,
+    "team_id": 205,
+    "name": "K. Sierhuis",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 149,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 38725,
+    "team_id": 205,
+    "name": "J. Lonwijk",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 410,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
   }
 ]

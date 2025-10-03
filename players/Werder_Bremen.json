@@ -36,30 +36,6 @@
     "shots_on_target": 3
   },
   {
-    "id": 25314,
-    "team_id": 162,
-    "name": "M. Friedl",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 353,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 26319,
-    "team_id": 162,
-    "name": "F. Agu",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 440,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 38798,
     "team_id": 162,
     "name": "S. Lynen",
@@ -118,5 +94,41 @@
     "assists": 0,
     "shots": 0,
     "shots_on_target": 0
+  },
+  {
+    "id": 15592,
+    "team_id": 162,
+    "name": "J. Stage",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 203,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 39071,
+    "team_id": 162,
+    "name": "V. Boniface",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 74,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 48642,
+    "team_id": 162,
+    "name": "Cameron Puertas",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 234,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
   }
 ]

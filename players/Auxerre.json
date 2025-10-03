@@ -1,17 +1,5 @@
 [
   {
-    "id": 7578,
-    "team_id": 108,
-    "name": "G. Mensah",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 524,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
     "id": 21010,
     "team_id": 108,
     "name": "E. Owusu",
@@ -24,24 +12,12 @@
     "shots_on_target": 0
   },
   {
-    "id": 31016,
-    "team_id": 108,
-    "name": "F. Sierralta",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 439,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
     "id": 90617,
     "team_id": 108,
     "name": "L. Sinayoko",
     "position": "Attacker",
     "appearances": 6,
-    "minutes": 510,
+    "minutes": 503,
     "goals": 2,
     "assists": 1,
     "shots": 9,
@@ -53,35 +29,11 @@
     "name": "J. Casimir",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 409,
+    "minutes": 402,
     "goals": 0,
     "assists": 0,
     "shots": 7,
     "shots_on_target": 4
-  },
-  {
-    "id": 191189,
-    "team_id": 108,
-    "name": "C. Akpa",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 360,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 191240,
-    "team_id": 108,
-    "name": "M. Senaya",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 530,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
   },
   {
     "id": 293643,
@@ -89,7 +41,7 @@
     "name": "I. Osman",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 248,
+    "minutes": 241,
     "goals": 0,
     "assists": 2,
     "shots": 4,
@@ -101,7 +53,7 @@
     "name": "L. Coulibaly",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 102,
+    "minutes": 95,
     "goals": 0,
     "assists": 0,
     "shots": 0,
@@ -125,10 +77,34 @@
     "name": "R. Matondo",
     "position": "Midfielder",
     "appearances": 4,
-    "minutes": 46,
+    "minutes": 39,
     "goals": 0,
     "assists": 0,
     "shots": 0,
     "shots_on_target": 0
+  },
+  {
+    "id": 19625,
+    "team_id": 108,
+    "name": "D. Namaso",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 373,
+    "goals": 1,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 4
+  },
+  {
+    "id": 190686,
+    "team_id": 108,
+    "name": "S. Mara",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 175,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 3
   }
 ]

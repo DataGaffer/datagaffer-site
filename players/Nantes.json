@@ -24,30 +24,6 @@
     "shots_on_target": 2
   },
   {
-    "id": 21570,
-    "team_id": 83,
-    "name": "N. Cozza",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 438,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 22134,
-    "team_id": 83,
-    "name": "K. Amian",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 0
-  },
-  {
     "id": 26519,
     "team_id": 83,
     "name": "Hong Hyun-Seok",
@@ -58,18 +34,6 @@
     "assists": 0,
     "shots": 3,
     "shots_on_target": 2
-  },
-  {
-    "id": 50026,
-    "team_id": 83,
-    "name": "C. Awaziem",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 137296,
@@ -180,15 +144,27 @@
     "shots_on_target": 2
   },
   {
-    "id": 522609,
+    "id": 42086,
     "team_id": 83,
-    "name": "T. Tati",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 516,
-    "goals": 0,
+    "name": "Y. El-Arabi",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 40,
+    "goals": 1,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 266200,
+    "team_id": 83,
+    "name": "M. Lahdo",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 164,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
   }
 ]

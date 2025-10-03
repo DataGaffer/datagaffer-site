@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "id": 1725,
+    "team_id": 620,
+    "name": "D. Ljubi\u010di\u0107",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 643,
+    "goals": 0,
+    "assists": 3,
+    "shots": 11,
+    "shots_on_target": 5
+  },
+  {
+    "id": 2373,
+    "team_id": 620,
+    "name": "J. Mi\u0161i\u0107",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 701,
+    "goals": 0,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 3
+  },
+  {
+    "id": 40405,
+    "team_id": 620,
+    "name": "S. Kulenovi\u0107",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 230,
+    "goals": 5,
+    "assists": 1,
+    "shots": 13,
+    "shots_on_target": 8
+  },
+  {
+    "id": 46982,
+    "team_id": 620,
+    "name": "Gonzalo Villar",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 176,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 105993,
+    "team_id": 620,
+    "name": "A. Hoxha",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 348,
+    "goals": 2,
+    "assists": 2,
+    "shots": 5,
+    "shots_on_target": 2
+  },
+  {
+    "id": 182434,
+    "team_id": 620,
+    "name": "D. Beljo",
+    "position": "Attacker",
+    "appearances": 8,
+    "minutes": 512,
+    "goals": 5,
+    "assists": 0,
+    "shots": 15,
+    "shots_on_target": 13
+  },
+  {
+    "id": 265491,
+    "team_id": 620,
+    "name": "M. Lisica",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 571,
+    "goals": 2,
+    "assists": 2,
+    "shots": 6,
+    "shots_on_target": 2
+  },
+  {
+    "id": 296333,
+    "team_id": 620,
+    "name": "M. Bakrar",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 191,
+    "goals": 3,
+    "assists": 0,
+    "shots": 8,
+    "shots_on_target": 3
+  },
+  {
+    "id": 308814,
+    "team_id": 620,
+    "name": "L. Stojkovi\u0107",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 335,
+    "goals": 1,
+    "assists": 1,
+    "shots": 9,
+    "shots_on_target": 4
+  },
+  {
+    "id": 280334,
+    "team_id": 620,
+    "name": "G. Vidovi\u0107",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 274,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 449628,
+    "team_id": 620,
+    "name": "Cardoso Varela",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 81,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  }
+]

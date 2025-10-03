@@ -362,8 +362,19 @@ function switchDay(mode) {
         }
       });
 
-      rows.forEach(r => {
-        r.valueDiff = (r.simOdds && r.bookVal) ? (r.bookVal - r.simOdds) : null;
+           rows.forEach(r => {
+              if (r.simVal && r.bookVal) {
+    // convert simulated % to prob
+              const simProb = r.simVal / 100;
+
+    // convert book decimal odds to implied probability
+              const bookProb = 1 / r.bookVal;
+
+    // edge = simulated probability – bookmaker implied probability
+         r.valueDiff = (simProb - bookProb) * 100;  // as percentage
+       }      else {
+      r.valueDiff = null;
+       }
       });
 
       const searchTerm = document.getElementById("searchInput").value.toLowerCase();
@@ -413,7 +424,12 @@ function switchDay(mode) {
             <td class="gradient-cell" style="background:${simColor}">${r.simVal !== null ? r.simVal + "%" : "N/A"}</td>
             <td class="gradient-cell" style="background:${oddsColor}">${r.simOdds ?? "N/A"}</td>
             <td class="gradient-cell" style="background:${bookColor}">${r.bookVal ?? "N/A"}</td>
-            <td class="gradient-cell" style="background:${valueColor}">${r.valueDiff !== null ? (r.valueDiff>=0?`+${r.valueDiff.toFixed(2)}`:r.valueDiff.toFixed(2)) : "N/A"}</td>
+            <td class="gradient-cell" style="background:${valueColor}">
+             ${r.valueDiff !== null 
+             ? (r.valueDiff >= 0 
+             ? `+${r.valueDiff.toFixed(1)}%` 
+             : `${r.valueDiff.toFixed(1)}%`) 
+             : "N/A"}</td>
           </tr>`;
       });
 

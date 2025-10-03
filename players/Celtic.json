@@ -1,29 +1,5 @@
 [
   {
-    "id": 1115,
-    "team_id": 247,
-    "name": "A. Ralston",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 423,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
-    "id": 1117,
-    "team_id": 247,
-    "name": "K. Tierney",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 469,
-    "goals": 0,
-    "assists": 1,
-    "shots": 4,
-    "shots_on_target": 1
-  },
-  {
     "id": 1127,
     "team_id": 247,
     "name": "J. Forrest",
@@ -36,40 +12,16 @@
     "shots_on_target": 3
   },
   {
-    "id": 1129,
+    "id": 27760,
     "team_id": 247,
-    "name": "C. McGregor",
+    "name": "L. Palma",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 783,
-    "goals": 0,
-    "assists": 0,
-    "shots": 5,
-    "shots_on_target": 4
-  },
-  {
-    "id": 19314,
-    "team_id": 247,
-    "name": "C. Carter-Vickers",
-    "position": "Defender",
-    "appearances": 8,
-    "minutes": 750,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
-  },
-  {
-    "id": 33224,
-    "team_id": 247,
-    "name": "D. Maeda",
-    "position": "Attacker",
-    "appearances": 9,
-    "minutes": 702,
-    "goals": 1,
-    "assists": 2,
-    "shots": 8,
-    "shots_on_target": 4
+    "appearances": 23,
+    "minutes": 1278,
+    "goals": 9,
+    "assists": 3,
+    "shots": 31,
+    "shots_on_target": 21
   },
   {
     "id": 45169,
@@ -96,64 +48,16 @@
     "shots_on_target": 10
   },
   {
-    "id": 50737,
+    "id": 57518,
     "team_id": 247,
-    "name": "A. Trusty",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 65,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 67958,
-    "team_id": 247,
-    "name": "S. Welsh",
-    "position": "Defender",
-    "appearances": 10,
-    "minutes": 360,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
-    "id": 69450,
-    "team_id": 247,
-    "name": "L. Scales",
-    "position": "Defender",
-    "appearances": 9,
-    "minutes": 840,
-    "goals": 0,
-    "assists": 0,
-    "shots": 6,
-    "shots_on_target": 0
-  },
-  {
-    "id": 78547,
-    "team_id": 247,
-    "name": "A. Johnston",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 213,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 130417,
-    "team_id": 247,
-    "name": "A. Idah",
+    "name": "S. Tounekti",
     "position": "Attacker",
-    "appearances": 4,
+    "appearances": 3,
     "minutes": 239,
     "goals": 0,
     "assists": 0,
-    "shots": 5,
-    "shots_on_target": 2
+    "shots": 6,
+    "shots_on_target": 1
   },
   {
     "id": 162210,
@@ -166,6 +70,102 @@
     "assists": 0,
     "shots": 4,
     "shots_on_target": 0
+  },
+  {
+    "id": 180758,
+    "team_id": 247,
+    "name": "R. Hatate",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 577,
+    "goals": 1,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 4
+  },
+  {
+    "id": 267728,
+    "team_id": 247,
+    "name": "M. Balikwisha",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 152,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 304958,
+    "team_id": 247,
+    "name": "Yang Hyun-Jun",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 320,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 371510,
+    "team_id": 247,
+    "name": "S. Yamada",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 121,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 1129,
+    "team_id": 247,
+    "name": "C. McGregor",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 783,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 4
+  },
+  {
+    "id": 2778,
+    "team_id": 247,
+    "name": "K. \u1ecaheanach\u1ecd",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 132,
+    "goals": 2,
+    "assists": 0,
+    "shots": 9,
+    "shots_on_target": 5
+  },
+  {
+    "id": 33224,
+    "team_id": 247,
+    "name": "D. Maeda",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 702,
+    "goals": 1,
+    "assists": 2,
+    "shots": 8,
+    "shots_on_target": 4
+  },
+  {
+    "id": 130417,
+    "team_id": 247,
+    "name": "A. Idah",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 239,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
   },
   {
     "id": 308868,

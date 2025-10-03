@@ -1,39 +1,15 @@
 [
   {
-    "id": 265,
-    "team_id": 196,
-    "name": "A. Zagr\u00e9",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 535,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
-  },
-  {
     "id": 36938,
     "team_id": 196,
     "name": "M. van Duinen",
     "position": "Attacker",
     "appearances": 6,
-    "minutes": 290,
+    "minutes": 283,
     "goals": 1,
     "assists": 0,
     "shots": 6,
     "shots_on_target": 2
-  },
-  {
-    "id": 38789,
-    "team_id": 196,
-    "name": "I. Bronkhorst",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 494,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
   },
   {
     "id": 126979,
@@ -46,30 +22,6 @@
     "assists": 1,
     "shots": 2,
     "shots_on_target": 1
-  },
-  {
-    "id": 263735,
-    "team_id": 196,
-    "name": "C. Widell",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 637,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 0
-  },
-  {
-    "id": 272091,
-    "team_id": 196,
-    "name": "R. Meissen",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 430,
-    "goals": 0,
-    "assists": 1,
-    "shots": 4,
-    "shots_on_target": 2
   },
   {
     "id": 272455,
@@ -104,32 +56,8 @@
     "minutes": 413,
     "goals": 0,
     "assists": 0,
-    "shots": 4,
-    "shots_on_target": 1
-  },
-  {
-    "id": 325850,
-    "team_id": 196,
-    "name": "S. Henderikx",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 291,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
+    "shots": 5,
     "shots_on_target": 2
-  },
-  {
-    "id": 342946,
-    "team_id": 196,
-    "name": "N. Martens",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 145,
-    "goals": 0,
-    "assists": 1,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 349595,
@@ -161,7 +89,7 @@
     "name": "Jerolldino Armantrading",
     "position": "Attacker",
     "appearances": 4,
-    "minutes": 112,
+    "minutes": 105,
     "goals": 0,
     "assists": 0,
     "shots": 2,
@@ -178,5 +106,53 @@
     "assists": 0,
     "shots": 0,
     "shots_on_target": 0
+  },
+  {
+    "id": 158614,
+    "team_id": 196,
+    "name": "S. W\u0142odarczyk",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 260,
+    "goals": 2,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 180128,
+    "team_id": 196,
+    "name": "S. Mitrovi\u0107",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 77,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 275268,
+    "team_id": 196,
+    "name": "C. Nadje",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 66,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 371231,
+    "team_id": 196,
+    "name": "I. Yegoian",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 431,
+    "goals": 0,
+    "assists": 0,
+    "shots": 9,
+    "shots_on_target": 3
   }
 ]

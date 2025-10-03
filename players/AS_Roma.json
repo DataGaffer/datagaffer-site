@@ -12,76 +12,40 @@
     "shots_on_target": 1
   },
   {
-    "id": 1807,
-    "team_id": 497,
-    "name": "E. Ndicka",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 450,
-    "goals": 1,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
-  },
-  {
     "id": 15811,
     "team_id": 497,
     "name": "A. Dovbyk",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 127,
-    "goals": 0,
+    "appearances": 5,
+    "minutes": 187,
+    "goals": 1,
     "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
+    "shots": 3,
+    "shots_on_target": 2
   },
   {
     "id": 22147,
     "team_id": 497,
     "name": "M. Kon\u00e9",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 429,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 22222,
-    "team_id": 497,
-    "name": "Z. \u00c7elik",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 199,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 162452,
-    "team_id": 497,
-    "name": "D. Rensch",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 182,
+    "appearances": 6,
+    "minutes": 519,
     "goals": 0,
     "assists": 0,
     "shots": 2,
-    "shots_on_target": 1
+    "shots_on_target": 0
   },
   {
     "id": 323936,
     "team_id": 497,
     "name": "M. Soul\u00e9",
     "position": "Attacker",
-    "appearances": 5,
-    "minutes": 395,
-    "goals": 1,
+    "appearances": 6,
+    "minutes": 477,
+    "goals": 2,
     "assists": 1,
-    "shots": 13,
-    "shots_on_target": 5
+    "shots": 14,
+    "shots_on_target": 6
   },
   {
     "id": 356888,
@@ -94,5 +58,65 @@
     "assists": 0,
     "shots": 1,
     "shots_on_target": 1
+  },
+  {
+    "id": 778,
+    "team_id": 497,
+    "name": "B. Cristante",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 437,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
+  },
+  {
+    "id": 782,
+    "team_id": 497,
+    "name": "L. Pellegrini",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 208,
+    "goals": 1,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 3
+  },
+  {
+    "id": 791,
+    "team_id": 497,
+    "name": "S. El Shaarawy",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 169,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 129643,
+    "team_id": 497,
+    "name": "E. Ferguson",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 309,
+    "goals": 0,
+    "assists": 1,
+    "shots": 7,
+    "shots_on_target": 3
+  },
+  {
+    "id": 277003,
+    "team_id": 497,
+    "name": "N. El Aynaoui",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 175,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   }
 ]

@@ -1,29 +1,5 @@
 [
   {
-    "id": 18867,
-    "team_id": 546,
-    "name": "Diego Rico",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 529,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
-    "id": 46795,
-    "team_id": 546,
-    "name": "Domingos Duarte",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 405,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 47085,
     "team_id": 546,
     "name": "Luis Milla",
@@ -33,18 +9,6 @@
     "goals": 0,
     "assists": 4,
     "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 47250,
-    "team_id": 546,
-    "name": "D. Dakonam",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 490,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
     "shots_on_target": 0
   },
   {
@@ -58,18 +22,6 @@
     "assists": 0,
     "shots": 10,
     "shots_on_target": 4
-  },
-  {
-    "id": 119742,
-    "team_id": 546,
-    "name": "Juan Iglesias",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 473,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 2
   },
   {
     "id": 309364,
@@ -111,7 +63,7 @@
     "id": 403554,
     "team_id": 546,
     "name": "Christantus Uche",
-    "position": "Attacker",
+    "position": "Midfielder",
     "appearances": 3,
     "minutes": 270,
     "goals": 1,
@@ -120,27 +72,39 @@
     "shots_on_target": 1
   },
   {
-    "id": 439617,
+    "id": 46860,
     "team_id": 546,
-    "name": "Z. Tassounte",
-    "position": "Defender",
+    "name": "Javi Mu\u00f1oz",
+    "position": "Midfielder",
     "appearances": 3,
-    "minutes": 108,
-    "goals": 0,
-    "assists": 1,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 471478,
-    "team_id": 546,
-    "name": "Davinchi",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 429,
+    "minutes": 151,
     "goals": 0,
     "assists": 0,
-    "shots": 2,
+    "shots": 4,
     "shots_on_target": 1
+  },
+  {
+    "id": 47472,
+    "team_id": 546,
+    "name": "Borja Mayoral",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 304,
+    "goals": 1,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 284441,
+    "team_id": 546,
+    "name": "A. Kamara",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 112,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   }
 ]

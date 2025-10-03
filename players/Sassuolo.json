@@ -1,38 +1,26 @@
 [
   {
-    "id": 902,
-    "team_id": 488,
-    "name": "N. Mati\u0107",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 262,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
     "id": 2215,
     "team_id": 488,
     "name": "A. Laurient\u00e9",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 282,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
+    "appearances": 5,
+    "minutes": 340,
+    "goals": 1,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 2
   },
   {
     "id": 30537,
     "team_id": 488,
     "name": "D. Berardi",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 351,
+    "appearances": 5,
+    "minutes": 441,
     "goals": 1,
-    "assists": 1,
-    "shots": 7,
+    "assists": 2,
+    "shots": 8,
     "shots_on_target": 4
   },
   {
@@ -40,57 +28,21 @@
     "team_id": 488,
     "name": "A. Pinamonti",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 339,
+    "appearances": 5,
+    "minutes": 425,
     "goals": 1,
     "assists": 0,
-    "shots": 10,
-    "shots_on_target": 7
-  },
-  {
-    "id": 40582,
-    "team_id": 488,
-    "name": "S. Walukiewicz",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 225,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 135526,
-    "team_id": 488,
-    "name": "J. Doig",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 306,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
+    "shots": 11,
+    "shots_on_target": 8
   },
   {
     "id": 263699,
     "team_id": 488,
     "name": "A. Fadera",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 87,
+    "appearances": 5,
+    "minutes": 119,
     "goals": 1,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
-    "id": 271350,
-    "team_id": 488,
-    "name": "T. Muharemovi\u0107",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 360,
-    "goals": 0,
     "assists": 1,
     "shots": 1,
     "shots_on_target": 1
@@ -100,12 +52,12 @@
     "team_id": 488,
     "name": "I. Kon\u00e9",
     "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 237,
-    "goals": 0,
+    "appearances": 4,
+    "minutes": 316,
+    "goals": 1,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
+    "shots": 1,
+    "shots_on_target": 1
   },
   {
     "id": 342035,
@@ -118,5 +70,53 @@
     "assists": 1,
     "shots": 0,
     "shots_on_target": 0
+  },
+  {
+    "id": 902,
+    "team_id": 488,
+    "name": "N. Mati\u0107",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 352,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 39143,
+    "team_id": 488,
+    "name": "K. Thorstvedt",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 63,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 127413,
+    "team_id": 488,
+    "name": "A. Vranckx",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 260,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 128478,
+    "team_id": 488,
+    "name": "W. Cheddira",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 30,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
   }
 ]

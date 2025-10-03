@@ -5,35 +5,23 @@
     "name": "C. Hudson-Odoi",
     "position": "Attacker",
     "appearances": 7,
-    "minutes": 443,
+    "minutes": 436,
     "goals": 1,
     "assists": 0,
     "shots": 6,
     "shots_on_target": 5
   },
   {
-    "id": 2771,
+    "id": 9366,
     "team_id": 65,
-    "name": "O. Aina",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 270,
-    "goals": 0,
+    "name": "Igor Jesus",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 146,
+    "goals": 2,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 2817,
-    "team_id": 65,
-    "name": "N. Milenkovi\u0107",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 636,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
+    "shots": 6,
+    "shots_on_target": 5
   },
   {
     "id": 18746,
@@ -41,11 +29,23 @@
     "name": "M. Gibbs-White",
     "position": "Midfielder",
     "appearances": 7,
-    "minutes": 561,
+    "minutes": 554,
     "goals": 0,
     "assists": 2,
     "shots": 9,
     "shots_on_target": 3
+  },
+  {
+    "id": 19305,
+    "team_id": 65,
+    "name": "R. Yates",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 45,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   },
   {
     "id": 22149,
@@ -60,28 +60,28 @@
     "shots_on_target": 0
   },
   {
-    "id": 67943,
+    "id": 48648,
     "team_id": 65,
-    "name": "Morato",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 367,
-    "goals": 0,
-    "assists": 0,
+    "name": "D. Ndoye",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 460,
+    "goals": 1,
+    "assists": 1,
     "shots": 1,
-    "shots_on_target": 0
+    "shots_on_target": 1
   },
   {
-    "id": 138780,
+    "id": 129695,
     "team_id": 65,
-    "name": "N. Williams",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 637,
-    "goals": 1,
+    "name": "D. Bakwa",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 206,
+    "goals": 0,
     "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
+    "shots": 4,
+    "shots_on_target": 3
   },
   {
     "id": 138908,
@@ -89,7 +89,7 @@
     "name": "E. Anderson",
     "position": "Midfielder",
     "appearances": 7,
-    "minutes": 637,
+    "minutes": 630,
     "goals": 0,
     "assists": 1,
     "shots": 5,
@@ -101,11 +101,23 @@
     "name": "A. Kalimuendo",
     "position": "Attacker",
     "appearances": 6,
-    "minutes": 108,
+    "minutes": 102,
     "goals": 0,
     "assists": 0,
     "shots": 0,
     "shots_on_target": 0
+  },
+  {
+    "id": 18931,
+    "team_id": 65,
+    "name": "C. Wood",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 464,
+    "goals": 2,
+    "assists": 0,
+    "shots": 16,
+    "shots_on_target": 6
   },
   {
     "id": 158697,
@@ -125,22 +137,10 @@
     "name": "O. Hutchinson",
     "position": "Attacker",
     "appearances": 3,
-    "minutes": 45,
+    "minutes": 38,
     "goals": 0,
     "assists": 0,
     "shots": 4,
     "shots_on_target": 2
-  },
-  {
-    "id": 363695,
-    "team_id": 65,
-    "name": "Murillo",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 307,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   }
 ]

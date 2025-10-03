@@ -5,7 +5,7 @@
     "name": "A. Beck",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 149,
+    "minutes": 138,
     "goals": 0,
     "assists": 0,
     "shots": 0,
@@ -22,54 +22,6 @@
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
-  },
-  {
-    "id": 24897,
-    "team_id": 180,
-    "name": "M. Busch",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 280,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
-    "id": 24899,
-    "team_id": 180,
-    "name": "P. Mainka",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 461,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
-  },
-  {
-    "id": 24979,
-    "team_id": 180,
-    "name": "J. F\u00f6hrenbach",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 425,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 25203,
-    "team_id": 180,
-    "name": "B. Gimber",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 305,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 125720,
@@ -89,7 +41,7 @@
     "name": "J. Sch\u00f6ppner",
     "position": "Midfielder",
     "appearances": 4,
-    "minutes": 349,
+    "minutes": 338,
     "goals": 0,
     "assists": 0,
     "shots": 2,
@@ -106,5 +58,53 @@
     "assists": 0,
     "shots": 3,
     "shots_on_target": 1
+  },
+  {
+    "id": 15732,
+    "team_id": 180,
+    "name": "M. Kaufmann",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 243,
+    "goals": 1,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 24904,
+    "team_id": 180,
+    "name": "N. Dorsch",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 299,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 24955,
+    "team_id": 180,
+    "name": "M. Honsak",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 167,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 327897,
+    "team_id": 180,
+    "name": "A. Ibrahimovi\u0107",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 377,
+    "goals": 0,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 4
   }
 ]

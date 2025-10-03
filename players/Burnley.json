@@ -1,38 +1,14 @@
 [
   {
-    "id": 575,
+    "id": 22,
     "team_id": 44,
-    "name": "Florentino",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 211,
+    "name": "J. Bruun Larsen",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 207,
     "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 627,
-    "team_id": 44,
-    "name": "K. Walker",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 544,
-    "goals": 0,
-    "assists": 0,
+    "assists": 1,
     "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 1746,
-    "team_id": 44,
-    "name": "J. Worrall",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 38,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
     "shots_on_target": 0
   },
   {
@@ -53,11 +29,23 @@
     "name": "J. Laurent",
     "position": "Midfielder",
     "appearances": 6,
-    "minutes": 373,
+    "minutes": 369,
     "goals": 0,
     "assists": 0,
     "shots": 4,
     "shots_on_target": 2
+  },
+  {
+    "id": 36927,
+    "team_id": 44,
+    "name": "Z. Flemming",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 42,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   },
   {
     "id": 98936,
@@ -70,18 +58,6 @@
     "assists": 1,
     "shots": 3,
     "shots_on_target": 1
-  },
-  {
-    "id": 128895,
-    "team_id": 44,
-    "name": "O. Sonne",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 104,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
   },
   {
     "id": 161621,
@@ -101,11 +77,23 @@
     "name": "H. Mejbri",
     "position": "Midfielder",
     "appearances": 6,
-    "minutes": 253,
+    "minutes": 249,
     "goals": 0,
     "assists": 0,
     "shots": 2,
     "shots_on_target": 0
+  },
+  {
+    "id": 196855,
+    "team_id": 44,
+    "name": "J. Anthony",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 532,
+    "goals": 4,
+    "assists": 1,
+    "shots": 10,
+    "shots_on_target": 7
   },
   {
     "id": 270508,
@@ -113,22 +101,22 @@
     "name": "L. Ugochukwu",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 272,
+    "minutes": 268,
     "goals": 0,
     "assists": 0,
     "shots": 2,
     "shots_on_target": 0
   },
   {
-    "id": 375915,
+    "id": 575,
     "team_id": 44,
-    "name": "Q. Hartman",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 538,
+    "name": "Florentino",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 207,
     "goals": 0,
-    "assists": 1,
-    "shots": 2,
-    "shots_on_target": 2
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   }
 ]

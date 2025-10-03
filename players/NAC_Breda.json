@@ -12,18 +12,6 @@
     "shots_on_target": 2
   },
   {
-    "id": 36886,
-    "team_id": 203,
-    "name": "R. Hillen",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 0,
-    "assists": 0,
-    "shots": 6,
-    "shots_on_target": 3
-  },
-  {
     "id": 36931,
     "team_id": 203,
     "name": "C. Leemans",
@@ -46,30 +34,6 @@
     "assists": 0,
     "shots": 7,
     "shots_on_target": 4
-  },
-  {
-    "id": 38737,
-    "team_id": 203,
-    "name": "B. Kemper",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 630,
-    "goals": 1,
-    "assists": 2,
-    "shots": 7,
-    "shots_on_target": 4
-  },
-  {
-    "id": 55882,
-    "team_id": 203,
-    "name": "E. Mahmutovi\u0107",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 314,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
   },
   {
     "id": 129067,
@@ -144,15 +108,27 @@
     "shots_on_target": 0
   },
   {
-    "id": 453918,
+    "id": 24876,
     "team_id": 203,
-    "name": "Cherrion Valerius",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 297,
+    "name": "L. Holtby",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 499,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 2
+  },
+  {
+    "id": 129788,
+    "team_id": 203,
+    "name": "C. Brym",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 141,
     "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 1
   }
 ]

@@ -12,28 +12,28 @@
     "shots_on_target": 2
   },
   {
+    "id": 3347,
+    "team_id": 651,
+    "name": "A. Traor\u00e9",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 316,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 0
+  },
+  {
     "id": 19272,
     "team_id": 651,
     "name": "C. O&apos;Dowda",
     "position": "Midfielder",
-    "appearances": 9,
+    "appearances": 10,
     "minutes": 697,
     "goals": 1,
     "assists": 0,
     "shots": 3,
     "shots_on_target": 1
-  },
-  {
-    "id": 22243,
-    "team_id": 651,
-    "name": "I. Aaneba",
-    "position": "Defender",
-    "appearances": 30,
-    "minutes": 2699,
-    "goals": 0,
-    "assists": 1,
-    "shots": 7,
-    "shots_on_target": 4
   },
   {
     "id": 27985,
@@ -48,22 +48,94 @@
     "shots_on_target": 2
   },
   {
-    "id": 28326,
+    "id": 178362,
     "team_id": 651,
-    "name": "E. Botka",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 78,
+    "name": "\u010c. Makreckis",
+    "position": "Midfielder",
+    "appearances": 10,
+    "minutes": 715,
+    "goals": 0,
+    "assists": 2,
+    "shots": 5,
+    "shots_on_target": 1
+  },
+  {
+    "id": 361485,
+    "team_id": 651,
+    "name": "A. T\u00f3th",
+    "position": "Midfielder",
+    "appearances": 12,
+    "minutes": 826,
+    "goals": 1,
+    "assists": 2,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 2027,
+    "team_id": 651,
+    "name": "K. Zachariassen",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 158,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 7398,
+    "team_id": 651,
+    "name": "B. Varga",
+    "position": "Attacker",
+    "appearances": 14,
+    "minutes": 801,
+    "goals": 8,
+    "assists": 1,
+    "shots": 24,
+    "shots_on_target": 14
+  },
+  {
+    "id": 20531,
+    "team_id": 651,
+    "name": "H. Ma\u00efga",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 125,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
+    "shots": 1,
     "shots_on_target": 0
+  },
+  {
+    "id": 21613,
+    "team_id": 651,
+    "name": "L. Joseph",
+    "position": "Attacker",
+    "appearances": 12,
+    "minutes": 586,
+    "goals": 3,
+    "assists": 1,
+    "shots": 18,
+    "shots_on_target": 10
+  },
+  {
+    "id": 34525,
+    "team_id": 651,
+    "name": "A. Pe\u0161i\u0107",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 302,
+    "goals": 2,
+    "assists": 0,
+    "shots": 11,
+    "shots_on_target": 7
   },
   {
     "id": 48072,
     "team_id": 651,
     "name": "J. Levi",
-    "position": "Midfielder",
+    "position": "Attacker",
     "appearances": 11,
     "minutes": 398,
     "goals": 0,
@@ -72,27 +144,15 @@
     "shots_on_target": 3
   },
   {
-    "id": 127657,
+    "id": 111148,
     "team_id": 651,
-    "name": "B. Nagy",
-    "position": "Defender",
+    "name": "G. Kanichowsky",
+    "position": "Midfielder",
     "appearances": 8,
-    "minutes": 252,
+    "minutes": 515,
     "goals": 0,
     "assists": 1,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
-    "id": 153287,
-    "team_id": 651,
-    "name": "T. Raemaekers",
-    "position": "Defender",
-    "appearances": 11,
-    "minutes": 740,
-    "goals": 0,
-    "assists": 0,
-    "shots": 6,
+    "shots": 5,
     "shots_on_target": 1
   },
   {
@@ -118,17 +178,5 @@
     "assists": 1,
     "shots": 12,
     "shots_on_target": 6
-  },
-  {
-    "id": 361485,
-    "team_id": 651,
-    "name": "A. T\u00f3th",
-    "position": "Midfielder",
-    "appearances": 11,
-    "minutes": 826,
-    "goals": 1,
-    "assists": 2,
-    "shots": 4,
-    "shots_on_target": 2
   }
 ]

@@ -4,8 +4,8 @@
     "team_id": 489,
     "name": "L. Modri\u0107",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 335,
+    "appearances": 5,
+    "minutes": 425,
     "goals": 1,
     "assists": 1,
     "shots": 2,
@@ -16,11 +16,11 @@
     "team_id": 489,
     "name": "Y. Fofana",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 313,
+    "appearances": 5,
+    "minutes": 393,
     "goals": 1,
-    "assists": 0,
-    "shots": 6,
+    "assists": 1,
+    "shots": 7,
     "shots_on_target": 3
   },
   {
@@ -36,24 +36,12 @@
     "shots_on_target": 1
   },
   {
-    "id": 45826,
-    "team_id": 489,
-    "name": "S. Pavlovi\u0107",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 293,
-    "goals": 1,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 94562,
     "team_id": 489,
     "name": "S. Gim\u00e9nez",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 324,
+    "appearances": 5,
+    "minutes": 393,
     "goals": 0,
     "assists": 0,
     "shots": 11,
@@ -70,18 +58,6 @@
     "assists": 0,
     "shots": 5,
     "shots_on_target": 2
-  },
-  {
-    "id": 264472,
-    "team_id": 489,
-    "name": "F. Terracciano",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 360,
-    "goals": 1,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
   },
   {
     "id": 266813,
@@ -106,5 +82,53 @@
     "assists": 0,
     "shots": 1,
     "shots_on_target": 0
+  },
+  {
+    "id": 17,
+    "team_id": 489,
+    "name": "C. Puli\u0161i\u0107",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 250,
+    "goals": 4,
+    "assists": 2,
+    "shots": 7,
+    "shots_on_target": 6
+  },
+  {
+    "id": 272,
+    "team_id": 489,
+    "name": "A. Rabiot",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 270,
+    "goals": 0,
+    "assists": 1,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 1417,
+    "team_id": 489,
+    "name": "A. Saelemaekers",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 416,
+    "goals": 1,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 3
+  },
+  {
+    "id": 2292,
+    "team_id": 489,
+    "name": "R. Loftus-Cheek",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 268,
+    "goals": 1,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 2
   }
 ]

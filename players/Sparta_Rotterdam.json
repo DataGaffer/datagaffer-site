@@ -1,47 +1,11 @@
 [
   {
-    "id": 18845,
-    "team_id": 426,
-    "name": "P. van Aanholt",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 483,
-    "goals": 0,
-    "assists": 2,
-    "shots": 4,
-    "shots_on_target": 2
-  },
-  {
-    "id": 19497,
-    "team_id": 426,
-    "name": "B. Martins Indi",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 487,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 28786,
     "team_id": 426,
     "name": "N. \u00de\u00f3risson",
     "position": "Attacker",
     "appearances": 4,
     "minutes": 21,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 36862,
-    "team_id": 426,
-    "name": "S. Bakari",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 202,
     "goals": 0,
     "assists": 0,
     "shots": 0,
@@ -96,18 +60,6 @@
     "shots_on_target": 7
   },
   {
-    "id": 148128,
-    "team_id": 426,
-    "name": "Teo Quintero",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 246,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 264419,
     "team_id": 426,
     "name": "S. Ltaief",
@@ -120,18 +72,6 @@
     "shots_on_target": 3
   },
   {
-    "id": 405379,
-    "team_id": 426,
-    "name": "M. Young",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 634,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
     "id": 444790,
     "team_id": 426,
     "name": "A. Oufkir",
@@ -142,5 +82,41 @@
     "assists": 0,
     "shots": 7,
     "shots_on_target": 5
+  },
+  {
+    "id": 36989,
+    "team_id": 426,
+    "name": "M. van Bergen",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 444,
+    "goals": 0,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 3
+  },
+  {
+    "id": 92977,
+    "team_id": 426,
+    "name": "L. Duijvestijn",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 62,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 3
+  },
+  {
+    "id": 272454,
+    "team_id": 426,
+    "name": "J. Baas",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 60,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
   }
 ]

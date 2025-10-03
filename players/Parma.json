@@ -4,11 +4,11 @@
     "team_id": 523,
     "name": "Adri\u00e1n Bernab\u00e9",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 343,
+    "appearances": 5,
+    "minutes": 424,
     "goals": 0,
     "assists": 0,
-    "shots": 4,
+    "shots": 6,
     "shots_on_target": 3
   },
   {
@@ -16,11 +16,11 @@
     "team_id": 523,
     "name": "P. Cutrone",
     "position": "Attacker",
-    "appearances": 3,
-    "minutes": 181,
+    "appearances": 4,
+    "minutes": 262,
     "goals": 1,
     "assists": 0,
-    "shots": 7,
+    "shots": 8,
     "shots_on_target": 4
   },
   {
@@ -28,24 +28,12 @@
     "team_id": 523,
     "name": "N. Est\u00e9vez",
     "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 14,
+    "appearances": 4,
+    "minutes": 23,
     "goals": 0,
     "assists": 0,
     "shots": 0,
     "shots_on_target": 0
-  },
-  {
-    "id": 30420,
-    "team_id": 523,
-    "name": "E. Del Prato",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 360,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 2
   },
   {
     "id": 48193,
@@ -64,10 +52,10 @@
     "team_id": 523,
     "name": "E. Valeri",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 360,
+    "appearances": 5,
+    "minutes": 450,
     "goals": 0,
-    "assists": 0,
+    "assists": 1,
     "shots": 2,
     "shots_on_target": 0
   },
@@ -76,8 +64,8 @@
     "team_id": 523,
     "name": "O. S\u00f8rensen",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 290,
+    "appearances": 5,
+    "minutes": 299,
     "goals": 0,
     "assists": 0,
     "shots": 1,
@@ -88,23 +76,23 @@
     "team_id": 523,
     "name": "Mateo Pellegrino",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 338,
-    "goals": 0,
+    "appearances": 5,
+    "minutes": 427,
+    "goals": 2,
     "assists": 0,
-    "shots": 6,
-    "shots_on_target": 4
+    "shots": 9,
+    "shots_on_target": 6
   },
   {
     "id": 308836,
     "team_id": 523,
     "name": "M. Keita",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 272,
+    "appearances": 5,
+    "minutes": 362,
     "goals": 0,
     "assists": 0,
-    "shots": 1,
+    "shots": 2,
     "shots_on_target": 0
   },
   {
@@ -120,18 +108,6 @@
     "shots_on_target": 0
   },
   {
-    "id": 348568,
-    "team_id": 523,
-    "name": "A. Circati",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 360,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
     "id": 362752,
     "team_id": 523,
     "name": "C. Ordo\u00f1ez",
@@ -141,6 +117,30 @@
     "goals": 0,
     "assists": 0,
     "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 31692,
+    "team_id": 523,
+    "name": "M. \u0110uri\u0107",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 26,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 161859,
+    "team_id": 523,
+    "name": "G. Oristanio",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 159,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
     "shots_on_target": 0
   }
 ]

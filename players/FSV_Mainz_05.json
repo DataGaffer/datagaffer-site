@@ -24,18 +24,6 @@
     "shots_on_target": 2
   },
   {
-    "id": 1812,
-    "team_id": 164,
-    "name": "D. da Costa",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 450,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
     "id": 2906,
     "team_id": 164,
     "name": "Lee Jae-Sung",
@@ -60,42 +48,6 @@
     "shots_on_target": 1
   },
   {
-    "id": 22244,
-    "team_id": 164,
-    "name": "A. Caci",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 313,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 0
-  },
-  {
-    "id": 25907,
-    "team_id": 164,
-    "name": "S. Bell",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 147,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
-    "id": 25915,
-    "team_id": 164,
-    "name": "P. Mwene",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 405,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
     "id": 33889,
     "team_id": 164,
     "name": "K. Sano",
@@ -106,30 +58,6 @@
     "assists": 1,
     "shots": 5,
     "shots_on_target": 1
-  },
-  {
-    "id": 39279,
-    "team_id": 164,
-    "name": "A. Hanche-Olsen",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 335,
-    "goals": 0,
-    "assists": 1,
-    "shots": 3,
-    "shots_on_target": 2
-  },
-  {
-    "id": 48378,
-    "team_id": 164,
-    "name": "S. Widmer",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 140,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 202736,
@@ -153,6 +81,18 @@
     "goals": 1,
     "assists": 0,
     "shots": 5,
+    "shots_on_target": 2
+  },
+  {
+    "id": 342177,
+    "team_id": 164,
+    "name": "N. Weiper",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 254,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
     "shots_on_target": 2
   }
 ]

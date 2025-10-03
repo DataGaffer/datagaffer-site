@@ -1,102 +1,99 @@
 [
   {
-    "id": 44,
-    "team_id": 50,
-    "name": "Rodri",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 342,
-    "goals": 0,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 2
-  },
-  
-  {
-    "id": 631,
-    "team_id": 50,
-    "name": "P. Foden",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 358,
-    "goals": 1,
-    "assists": 1,
-    "shots": 5,
-    "shots_on_target": 3
-  },
-  {
     "id": 636,
     "team_id": 50,
     "name": "Bernardo Silva",
     "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 454,
+    "appearances": 8,
+    "minutes": 544,
     "goals": 0,
     "assists": 1,
-    "shots": 1,
-    "shots_on_target": 0
+    "shots": 2,
+    "shots_on_target": 1
   },
   {
     "id": 1100,
     "team_id": 50,
     "name": "E. Haaland",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 590,
-    "goals": 9,
+    "appearances": 8,
+    "minutes": 676,
+    "goals": 11,
     "assists": 1,
-    "shots": 31,
-    "shots_on_target": 14
+    "shots": 35,
+    "shots_on_target": 17
   },
   {
     "id": 1422,
     "team_id": 50,
     "name": "J. Doku",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 448,
+    "appearances": 8,
+    "minutes": 505,
     "goals": 1,
     "assists": 3,
     "shots": 5,
     "shots_on_target": 4
   },
-  
   {
     "id": 36902,
     "team_id": 50,
     "name": "T. Reijnders",
     "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 613,
+    "appearances": 8,
+    "minutes": 703,
     "goals": 1,
     "assists": 3,
-    "shots": 14,
-    "shots_on_target": 6
+    "shots": 19,
+    "shots_on_target": 7
   },
   {
     "id": 41621,
     "team_id": 50,
     "name": "Matheus Nunes",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 249,
+    "appearances": 5,
+    "minutes": 262,
     "goals": 1,
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
   },
-  
   {
-    "id": 266657,
+    "id": 81573,
     "team_id": 50,
-    "name": "S\u00e1vio",
+    "name": "Omar Marmoush",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 109,
+    "appearances": 6,
+    "minutes": 358,
+    "goals": 1,
+    "assists": 3,
+    "shots": 10,
+    "shots_on_target": 5
+  },
+  {
+    "id": 156477,
+    "team_id": 50,
+    "name": "R. Cherki",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 512,
+    "goals": 2,
+    "assists": 0,
+    "shots": 9,
+    "shots_on_target": 5
+  },
+  {
+    "id": 161933,
+    "team_id": 50,
+    "name": "Nico Gonz\u00e1lez",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 342,
     "goals": 0,
     "assists": 0,
     "shots": 2,
-    "shots_on_target": 1
+    "shots_on_target": 0
   },
   {
     "id": 278133,
@@ -104,11 +101,94 @@
     "name": "Oscar Bobb",
     "position": "Midfielder",
     "appearances": 6,
-    "minutes": 305,
+    "minutes": 301,
     "goals": 0,
     "assists": 1,
     "shots": 1,
     "shots_on_target": 0
+  },
+  {
+    "id": 307123,
+    "team_id": 50,
+    "name": "N. O&apos;Reilly",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 483,
+    "goals": 0,
+    "assists": 1,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 323591,
+    "team_id": 50,
+    "name": "S. Nypan",
+    "position": "Midfielder",
+    "appearances": 24,
+    "minutes": 1511,
+    "goals": 5,
+    "assists": 1,
+    "shots": 18,
+    "shots_on_target": 11
+  },
+  {
+    "id": 414385,
+    "team_id": 50,
+    "name": "C. Echeverri",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 78,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 44,
+    "team_id": 50,
+    "name": "Rodri",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 393,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
+  },
+  {
+    "id": 631,
+    "team_id": 50,
+    "name": "P. Foden",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 444,
+    "goals": 1,
+    "assists": 1,
+    "shots": 6,
+    "shots_on_target": 3
+  },
+  {
+    "id": 19187,
+    "team_id": 50,
+    "name": "J. Grealish",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 163,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 3
+  },
+  {
+    "id": 266657,
+    "team_id": 50,
+    "name": "S\u00e1vio",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 138,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
   }
-  
 ]

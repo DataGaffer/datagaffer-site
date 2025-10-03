@@ -36,18 +36,6 @@
     "shots_on_target": 2
   },
   {
-    "id": 13736,
-    "team_id": 52,
-    "name": "D. Mu\u00f1oz",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 0,
-    "assists": 1,
-    "shots": 7,
-    "shots_on_target": 3
-  },
-  {
     "id": 18806,
     "team_id": 52,
     "name": "W. Hughes",
@@ -60,18 +48,6 @@
     "shots_on_target": 0
   },
   {
-    "id": 20995,
-    "team_id": 52,
-    "name": "M. Lacroix",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 0,
-    "assists": 1,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 25927,
     "team_id": 52,
     "name": "J. Mateta",
@@ -82,42 +58,6 @@
     "assists": 0,
     "shots": 13,
     "shots_on_target": 9
-  },
-  {
-    "id": 67971,
-    "team_id": 52,
-    "name": "M. Gu\u00e9hi",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 1,
-    "assists": 1,
-    "shots": 3,
-    "shots_on_target": 1
-  },
-  {
-    "id": 126949,
-    "team_id": 52,
-    "name": "C. Richards",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 182201,
-    "team_id": 52,
-    "name": "T. Mitchell",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
   },
   {
     "id": 286458,
@@ -142,5 +82,17 @@
     "assists": 0,
     "shots": 1,
     "shots_on_target": 0
+  },
+  {
+    "id": 184226,
+    "team_id": 52,
+    "name": "Yeremy Pino",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 222,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
   }
 ]

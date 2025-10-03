@@ -25,6 +25,10 @@ os.makedirs(SIM_OUTPUT_FOLDER, exist_ok=True)
 
 SIMULATIONS = 5000
 
+# thresholds
+MIN_APPS_CURRENT = 2
+MIN_AVG_MINUTES_CURRENT = 45.0
+
 # ---------- Helpers ----------
 def per90(count, minutes, appearances):
     """Return per-90 using minutes when available; fallback to appearances."""
@@ -44,8 +48,8 @@ def blend_stats(curr, prev):
     blended = {}
     for key in ["appearances", "minutes", "goals", "assists", "shots", "shots_on_target"]:
         blended[key] = int(round(
-            (curr.get(key, 0) or 0) * 0.7 +
-            (prev.get(key, 0) or 0) * 0.3
+            (curr.get(key, 0) or 0) * 0.5 +
+            (prev.get(key, 0) or 0) * 0.5
         ))
 
     return {**curr, **blended}
@@ -66,7 +70,7 @@ def simulate_player(player, team_id, g_scale, a_scale, sh_scale, sot_scale, play
     sh_per90  = sh_raw  * sh_scale
     sot_per90 = sot_raw * sot_scale
 
-    # --- NEW: bench/regular/boost adjustment ---
+    # --- Bench/regular/boost adjustment ---
     avg_minutes = mins / apps if apps > 0 else 0
     if avg_minutes < 55:
         play_factor = avg_minutes / 55.0
@@ -90,10 +94,10 @@ def simulate_player(player, team_id, g_scale, a_scale, sh_scale, sot_scale, play
     top_ids = {p.get("id") or p.get("player_id") for p in top_contributors}
 
     if player.get("id") in top_ids or player.get("player_id") in top_ids:
-        g_per90 *= 1.15
-        a_per90 *= 1.15
-        sh_per90 *= 1.15
-        sot_per90 *= 1.15
+        g_per90   *= 1.15
+        a_per90   *= 1.15
+        sh_per90  *= 1.10
+        sot_per90 *= 1.10
 
     # Mild positional nudge (attackers only)
     pos = (player.get("position", "") or "").lower()
@@ -177,25 +181,34 @@ for fixture in fixtures:
                 last_season_players = json.load(f)
         prev_by_id = {p["id"]: p for p in last_season_players}
 
-        # blend current + last season stats
+        # --- Filter (current season only) + blend ---
         blended_players = []
-        for player in players:
-            prev = prev_by_id.get(player["id"])
-            if prev:
-                player = blend_stats(player, prev)
-            blended_players.append(player)
+        for p in players:
+            curr_apps = p.get("appearances", 0) or 0
+            curr_mins = p.get("minutes", 0) or 0
+            avg_curr  = (curr_mins / curr_apps) if curr_apps > 0 else 0
+
+            if curr_apps < MIN_APPS_CURRENT:
+                continue
+            if avg_curr < MIN_AVG_MINUTES_CURRENT:
+                continue
+
+            prev = prev_by_id.get(p["id"])
+            blended = blend_stats(p, prev) if prev else dict(p)
+            blended_players.append(blended)
 
         # fixture inputs
         team_xg_today = float(fixture.get("sim_stats", {}).get("xg", {}).get(side, 1.4) or 1.4)
         team_shots_today = float(fixture.get("sim_stats", {}).get("shots", {}).get(side, 10.0) or 10.0)
         team_sot_today = team_shots_today * 0.40
 
-        # raw per90 totals
+        # --- Compute raw team per90 totals ---
         team_raw_goals   = sum(per90(p.get("goals", 0),   p.get("minutes", 0), p.get("appearances", 0)) for p in blended_players)
         team_raw_assists = sum(per90(p.get("assists", 0), p.get("minutes", 0), p.get("appearances", 0)) for p in blended_players)
         team_raw_shots   = sum(per90(p.get("shots", 0),   p.get("minutes", 0), p.get("appearances", 0)) for p in blended_players)
         team_raw_sot     = sum(per90(p.get("shots_on_target", 0), p.get("minutes", 0), p.get("appearances", 0)) for p in blended_players)
 
+        # --- Scaling factors (match fixture-level expectations) ---
         g_scale   = team_xg_today    / team_raw_goals   if team_raw_goals   > 0 else 1.0
         a_scale   = team_xg_today    / team_raw_assists if team_raw_assists > 0 else 1.0
         sh_scale  = team_shots_today / team_raw_shots   if team_raw_shots   > 0 else 1.0
@@ -203,14 +216,14 @@ for fixture in fixtures:
 
         simulated_players = []
         for player in blended_players:
-            # skip players with 2+ zeros in goals/assists/shots/sot
+            # skip players with 2+ zero stats
             zero_count = sum([
                 1 if player.get("goals", 0) == 0 else 0,
                 1 if player.get("assists", 0) == 0 else 0,
                 1 if player.get("shots", 0) == 0 else 0,
                 1 if player.get("shots_on_target", 0) == 0 else 0
             ])
-            if zero_count >= 1:
+            if zero_count >= 2:
                 continue
 
             sim = simulate_player(player, team_id, g_scale, a_scale, sh_scale, sot_scale, blended_players)

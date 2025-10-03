@@ -84,18 +84,6 @@
     "shots_on_target": 0
   },
   {
-    "id": 452697,
-    "team_id": 96,
-    "name": "D. Methalie",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 403,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 2
-  },
-  {
     "id": 514464,
     "team_id": 96,
     "name": "A. Vossah",
@@ -106,5 +94,29 @@
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
+  },
+  {
+    "id": 118345,
+    "team_id": 96,
+    "name": "A. Francis",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 204,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 362741,
+    "team_id": 96,
+    "name": "S. Hidalgo",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 106,
+    "goals": 0,
+    "assists": 2,
+    "shots": 1,
+    "shots_on_target": 0
   }
 ]

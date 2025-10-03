@@ -1,38 +1,14 @@
 [
   {
-    "id": 6383,
-    "team_id": 520,
-    "name": "M. Payero",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 114,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
     "id": 30775,
     "team_id": 520,
     "name": "G. Pezzella",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 457,
+    "minutes": 450,
     "goals": 0,
     "assists": 1,
     "shots": 3,
-    "shots_on_target": 0
-  },
-  {
-    "id": 30919,
-    "team_id": 520,
-    "name": "M. Bianchetti",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 405,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
     "shots_on_target": 0
   },
   {
@@ -41,7 +17,7 @@
     "name": "A. Grassi",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 281,
+    "minutes": 274,
     "goals": 0,
     "assists": 0,
     "shots": 0,
@@ -53,7 +29,7 @@
     "name": "J. Vandeputte",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 266,
+    "minutes": 259,
     "goals": 0,
     "assists": 1,
     "shots": 0,
@@ -72,6 +48,18 @@
     "shots_on_target": 0
   },
   {
+    "id": 31436,
+    "team_id": 520,
+    "name": "F. Bonazzoli",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 220,
+    "goals": 1,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
     "id": 126889,
     "team_id": 520,
     "name": "M. Collocolo",
@@ -84,27 +72,51 @@
     "shots_on_target": 1
   },
   {
-    "id": 127035,
+    "id": 266813,
     "team_id": 520,
-    "name": "F. Baschirotto",
-    "position": "Defender",
+    "name": "W. Bondo",
+    "position": "Midfielder",
     "appearances": 5,
-    "minutes": 457,
-    "goals": 2,
+    "minutes": 339,
+    "goals": 0,
     "assists": 0,
-    "shots": 5,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 2057,
+    "team_id": 520,
+    "name": "F. V\u00e1zquez",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 214,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
     "shots_on_target": 3
   },
   {
-    "id": 264472,
+    "id": 2522,
     "team_id": 520,
-    "name": "F. Terracciano",
-    "position": "Defender",
+    "name": "A. Sanabria",
+    "position": "Attacker",
     "appearances": 5,
-    "minutes": 457,
-    "goals": 1,
-    "assists": 0,
-    "shots": 1,
+    "minutes": 276,
+    "goals": 0,
+    "assists": 1,
+    "shots": 3,
     "shots_on_target": 1
+  },
+  {
+    "id": 6383,
+    "team_id": 520,
+    "name": "M. Payero",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 114,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
   }
 ]

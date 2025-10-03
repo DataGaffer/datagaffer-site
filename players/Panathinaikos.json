@@ -1,51 +1,51 @@
 [
   {
+    "id": 513,
+    "team_id": 617,
+    "name": "Renato Sanches",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 240,
+    "goals": 0,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
     "id": 607,
     "team_id": 617,
     "name": "A. Bakasetas",
     "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 423,
+    "appearances": 8,
+    "minutes": 506,
     "goals": 0,
     "assists": 2,
-    "shots": 5,
+    "shots": 6,
     "shots_on_target": 2
   },
   {
     "id": 691,
     "team_id": 617,
     "name": "Tet\u00ea",
-    "position": "Attacker",
-    "appearances": 7,
-    "minutes": 290,
-    "goals": 0,
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 380,
+    "goals": 1,
     "assists": 1,
-    "shots": 4,
-    "shots_on_target": 0
+    "shots": 6,
+    "shots_on_target": 2
   },
   {
     "id": 2385,
     "team_id": 617,
     "name": "K. \u015awiderski",
     "position": "Attacker",
-    "appearances": 8,
-    "minutes": 270,
+    "appearances": 9,
+    "minutes": 345,
     "goals": 3,
     "assists": 0,
-    "shots": 7,
+    "shots": 9,
     "shots_on_target": 3
-  },
-  {
-    "id": 2820,
-    "team_id": 617,
-    "name": "F. Mladenovi\u0107",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 209,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 2824,
@@ -54,18 +54,6 @@
     "position": "Midfielder",
     "appearances": 3,
     "minutes": 246,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
-    "id": 8777,
-    "team_id": 617,
-    "name": "A. Touba",
-    "position": "Defender",
-    "appearances": 8,
-    "minutes": 540,
     "goals": 0,
     "assists": 0,
     "shots": 2,
@@ -84,30 +72,6 @@
     "shots_on_target": 11
   },
   {
-    "id": 26828,
-    "team_id": 617,
-    "name": "G. Kiriakopoulos",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 367,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
-  },
-  {
-    "id": 26848,
-    "team_id": 617,
-    "name": "G. Kotsiras",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 205,
-    "goals": 0,
-    "assists": 1,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
     "id": 26965,
     "team_id": 617,
     "name": "F. Ioannidis",
@@ -120,39 +84,87 @@
     "shots_on_target": 17
   },
   {
+    "id": 37186,
+    "team_id": 617,
+    "name": "C. Dessers",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 118,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 56114,
+    "team_id": 617,
+    "name": "M. Siopis",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 395,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 129169,
+    "team_id": 617,
+    "name": "A. Zaroury",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 132,
+    "goals": 3,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 3
+  },
+  {
     "id": 30536,
     "team_id": 617,
     "name": "F. \u0110uri\u010di\u0107",
     "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 409,
+    "appearances": 7,
+    "minutes": 465,
     "goals": 2,
     "assists": 0,
-    "shots": 6,
-    "shots_on_target": 5
+    "shots": 7,
+    "shots_on_target": 6
   },
   {
-    "id": 38692,
+    "id": 56025,
     "team_id": 617,
-    "name": "E. Palmer-Brown",
-    "position": "Defender",
+    "name": "A. \u010cerin",
+    "position": "Midfielder",
     "appearances": 7,
-    "minutes": 437,
+    "minutes": 250,
     "goals": 0,
     "assists": 0,
-    "shots": 5,
-    "shots_on_target": 1
+    "shots": 4,
+    "shots_on_target": 0
+  },
+  {
+    "id": 70078,
+    "team_id": 617,
+    "name": "F. Pellistri",
+    "position": "Midfielder",
+    "appearances": 17,
+    "minutes": 1394,
+    "goals": 2,
+    "assists": 1,
+    "shots": 14,
+    "shots_on_target": 7
   },
   {
     "id": 93671,
     "team_id": 617,
     "name": "Pedro Chirivella",
     "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 454,
+    "appearances": 9,
+    "minutes": 537,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
+    "shots": 1,
+    "shots_on_target": 1
   }
 ]

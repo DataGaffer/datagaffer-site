@@ -24,40 +24,16 @@
     "shots_on_target": 0
   },
   {
-    "id": 2360,
-    "team_id": 170,
-    "name": "D. Giannoulis",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 166,
-    "goals": 1,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 14395,
     "team_id": 170,
     "name": "K. Jaki\u0107",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 370,
+    "minutes": 359,
     "goals": 1,
     "assists": 1,
     "shots": 3,
     "shots_on_target": 2
-  },
-  {
-    "id": 25290,
-    "team_id": 170,
-    "name": "J. Gouweleeuw",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 337,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
   },
   {
     "id": 26171,
@@ -65,59 +41,11 @@
     "name": "P. Tietz",
     "position": "Attacker",
     "appearances": 5,
-    "minutes": 134,
+    "minutes": 123,
     "goals": 1,
     "assists": 0,
     "shots": 3,
     "shots_on_target": 2
-  },
-  {
-    "id": 26242,
-    "team_id": 170,
-    "name": "K. Schlotterbeck",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 326,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 0
-  },
-  {
-    "id": 48574,
-    "team_id": 170,
-    "name": "C. Zesiger",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 210,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 143831,
-    "team_id": 170,
-    "name": "R. Fellhauer",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 327,
-    "goals": 0,
-    "assists": 1,
-    "shots": 5,
-    "shots_on_target": 1
-  },
-  {
-    "id": 163039,
-    "team_id": 170,
-    "name": "C. Matsima",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 461,
-    "goals": 1,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
   },
   {
     "id": 323974,
@@ -137,10 +65,46 @@
     "name": "M. K\u00f6m\u00fcr",
     "position": "Midfielder",
     "appearances": 5,
-    "minutes": 402,
+    "minutes": 391,
     "goals": 1,
     "assists": 1,
     "shots": 7,
     "shots_on_target": 2
+  },
+  {
+    "id": 20634,
+    "team_id": 170,
+    "name": "A. Claude-Maurice",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 170,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
+  },
+  {
+    "id": 25413,
+    "team_id": 170,
+    "name": "E. Rexhbe\u00e7aj",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 223,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 163032,
+    "team_id": 170,
+    "name": "F. Rieder",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 264,
+    "goals": 1,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 3
   }
 ]

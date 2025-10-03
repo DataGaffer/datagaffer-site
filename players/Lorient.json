@@ -1,17 +1,5 @@
 [
   {
-    "id": 1031,
-    "team_id": 97,
-    "name": "Igor Silva",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 270,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
     "id": 20917,
     "team_id": 97,
     "name": "L. Abergel",
@@ -22,18 +10,6 @@
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
-  },
-  {
-    "id": 50030,
-    "team_id": 97,
-    "name": "M. Talbi",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 540,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
   },
   {
     "id": 72457,
@@ -58,18 +34,6 @@
     "assists": 2,
     "shots": 6,
     "shots_on_target": 4
-  },
-  {
-    "id": 152669,
-    "team_id": 97,
-    "name": "D. Yongwa",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 52,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 158551,
@@ -120,18 +84,6 @@
     "shots_on_target": 0
   },
   {
-    "id": 384112,
-    "team_id": 97,
-    "name": "P. Katseris",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 130,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 402265,
     "team_id": 97,
     "name": "A. Avom",
@@ -154,5 +106,41 @@
     "assists": 1,
     "shots": 0,
     "shots_on_target": 0
+  },
+  {
+    "id": 22171,
+    "team_id": 97,
+    "name": "J. Makengo",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 117,
+    "goals": 0,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 23363,
+    "team_id": 97,
+    "name": "N. Cadiou",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 52,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 174703,
+    "team_id": 97,
+    "name": "T. Le Bris",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 218,
+    "goals": 1,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 3
   }
 ]

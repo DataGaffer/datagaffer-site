@@ -12,30 +12,6 @@
     "shots_on_target": 1
   },
   {
-    "id": 531,
-    "team_id": 547,
-    "name": "D. Blind",
-    "position": "Defender",
-    "appearances": 7,
-    "minutes": 534,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 47334,
-    "team_id": 547,
-    "name": "David L\u00f3pez",
-    "position": "Defender",
-    "appearances": 3,
-    "minutes": 203,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 47520,
     "team_id": 547,
     "name": "Portu",
@@ -48,40 +24,16 @@
     "shots_on_target": 3
   },
   {
-    "id": 162434,
-    "team_id": 547,
-    "name": "Alejandro Franc\u00e9s",
-    "position": "Defender",
-    "appearances": 4,
-    "minutes": 236,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 281795,
     "team_id": 547,
     "name": "Y. Asprilla",
-    "position": "Attacker",
+    "position": "Midfielder",
     "appearances": 7,
     "minutes": 318,
     "goals": 0,
     "assists": 0,
     "shots": 8,
     "shots_on_target": 4
-  },
-  {
-    "id": 283668,
-    "team_id": 547,
-    "name": "Arnau Mart\u00ednez",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 260,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 306727,
@@ -96,18 +48,6 @@
     "shots_on_target": 1
   },
   {
-    "id": 313025,
-    "team_id": 547,
-    "name": "Hugo Rinc\u00f3n",
-    "position": "Defender",
-    "appearances": 6,
-    "minutes": 349,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
     "id": 339105,
     "team_id": 547,
     "name": "Joel Roca",
@@ -120,15 +60,63 @@
     "shots_on_target": 2
   },
   {
-    "id": 414359,
+    "id": 1700,
     "team_id": 547,
-    "name": "Vitor Nunes",
-    "position": "Defender",
+    "name": "Iv\u00e1n Mart\u00edn",
+    "position": "Midfielder",
     "appearances": 6,
-    "minutes": 439,
+    "minutes": 462,
+    "goals": 0,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
+    "id": 2061,
+    "team_id": 547,
+    "name": "Bryan Gil",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 135,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 2617,
+    "team_id": 547,
+    "name": "C. Stuani",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 84,
     "goals": 0,
     "assists": 0,
-    "shots": 1,
+    "shots": 0,
     "shots_on_target": 0
+  },
+  {
+    "id": 129678,
+    "team_id": 547,
+    "name": "A. Ounahi",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 337,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 161670,
+    "team_id": 547,
+    "name": "V. Vanat",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 284,
+    "goals": 1,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 3
   }
 ]

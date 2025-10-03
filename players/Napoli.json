@@ -1,14 +1,122 @@
 [
   {
+    "id": 85,
+    "team_id": 492,
+    "name": "C. Ngonge",
+    "position": "Attacker",
+    "appearances": 12,
+    "minutes": 661,
+    "goals": 3,
+    "assists": 2,
+    "shots": 22,
+    "shots_on_target": 7
+  },
+  {
     "id": 219,
     "team_id": 492,
     "name": "M. Politano",
-    "position": "Attacker",
-    "appearances": 5,
-    "minutes": 380,
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 526,
     "goals": 0,
     "assists": 1,
+    "shots": 8,
+    "shots_on_target": 2
+  },
+  {
+    "id": 629,
+    "team_id": 492,
+    "name": "K. De Bruyne",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 509,
+    "goals": 3,
+    "assists": 2,
+    "shots": 9,
+    "shots_on_target": 5
+  },
+  {
+    "id": 3406,
+    "team_id": 492,
+    "name": "A. Zambo Anguissa",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 557,
+    "goals": 1,
+    "assists": 1,
+    "shots": 11,
+    "shots_on_target": 3
+  },
+  {
+    "id": 30414,
+    "team_id": 492,
+    "name": "G. Simeone",
+    "position": "Attacker",
+    "appearances": 35,
+    "minutes": 423,
+    "goals": 4,
+    "assists": 1,
+    "shots": 12,
+    "shots_on_target": 8
+  },
+  {
+    "id": 31219,
+    "team_id": 492,
+    "name": "A. Zerbin",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 334,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 47439,
+    "team_id": 492,
+    "name": "S. Lobotka",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 548,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 56851,
+    "team_id": 492,
+    "name": "M. Folorunsho",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 351,
+    "goals": 0,
+    "assists": 0,
     "shots": 6,
+    "shots_on_target": 1
+  },
+  {
+    "id": 341914,
+    "team_id": 492,
+    "name": "C. Saco",
+    "position": "Midfielder",
+    "appearances": 24,
+    "minutes": 142,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 544,
+    "team_id": 492,
+    "name": "N. Lang",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 56,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
     "shots_on_target": 1
   },
   {
@@ -16,88 +124,83 @@
     "team_id": 492,
     "name": "David Neres",
     "position": "Attacker",
-    "appearances": 3,
-    "minutes": 54,
+    "appearances": 5,
+    "minutes": 96,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 629,
-    "team_id": 492,
-    "name": "K. De Bruyne",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 356,
-    "goals": 2,
-    "assists": 0,
-    "shots": 7,
-    "shots_on_target": 4
-  },
-  
-  {
-    "id": 862,
-    "team_id": 492,
-    "name": "L. Spinazzola",
-    "position": "Defender",
-    "appearances": 5,
-    "minutes": 332,
-    "goals": 1,
-    "assists": 1,
-    "shots": 2,
-    "shots_on_target": 2
+    "shots": 1,
+    "shots_on_target": 1
   },
   {
     "id": 903,
     "team_id": 492,
     "name": "S. McTominay",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 449,
+    "appearances": 7,
+    "minutes": 591,
     "goals": 1,
     "assists": 1,
-    "shots": 10,
-    "shots_on_target": 5
+    "shots": 11,
+    "shots_on_target": 6
   },
-  
   {
-    "id": 3406,
+    "id": 907,
     "team_id": 492,
-    "name": "A. Zambo Anguissa",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 373,
-    "goals": 1,
-    "assists": 1,
-    "shots": 5,
-    "shots_on_target": 2
+    "name": "R. Lukaku",
+    "position": "Attacker",
+    "appearances": 26,
+    "minutes": 1663,
+    "goals": 10,
+    "assists": 6,
+    "shots": 43,
+    "shots_on_target": 22
   },
-  
- 
   {
-    "id": 47439,
+    "id": 1358,
     "team_id": 492,
-    "name": "S. Lobotka",
+    "name": "E. Elmas",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 365,
+    "appearances": 4,
+    "minutes": 116,
     "goals": 0,
-    "assists": 1,
-    "shots": 0,
-    "shots_on_target": 0
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
   },
-  
+  {
+    "id": 130423,
+    "team_id": 492,
+    "name": "B. Gilmour",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 100,
+    "goals": 1,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 199089,
+    "team_id": 492,
+    "name": "L. Lucca",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 207,
+    "goals": 1,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 3
+  },
   {
     "id": 288006,
     "team_id": 492,
     "name": "R. H\u00f8jlund",
     "position": "Attacker",
-    "appearances": 3,
-    "minutes": 223,
-    "goals": 1,
+    "appearances": 5,
+    "minutes": 386,
+    "goals": 3,
     "assists": 0,
-    "shots": 2,
-    "shots_on_target": 2
+    "shots": 4,
+    "shots_on_target": 4
   }
 ]
