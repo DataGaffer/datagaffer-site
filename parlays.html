@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Parlay Builder | DataGaffer</title>
+<style>
+  body{font-family:Arial, sans-serif;margin:0;background:#f5fff8}
+  .header{background:#003f2e;color:#fff;display:flex;align-items:center;justify-content:center;position:relative;padding:10px 20px}
+  .header img{height:90px;position:absolute;left:20px;top:0}
+  .header h1{margin:0;font-size:32px;font-weight:700}
+  .wrap{max-width:980px;margin:24px auto;padding:0 16px}
+  .banner{background:#fff;border:2px solid #003f2e;border-radius:6px;padding:10px 14px;text-align:center;font-weight:600;color:#003f2e}
+  .buttons{text-align:center;margin:20px 0}
+  .btn{padding:10px 18px;margin:0 6px;font-weight:bold;background:#003f2e;color:#fff;border:none;border-radius:6px;cursor:pointer}
+  .btn:hover{background:#046e47}
+  .cards{display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:10px}
+  .card{background:#fff;border-radius:12px;border:2px solid #003f2e;box-shadow:0 3px 12px rgba(0,0,0,.12);padding:16px;width:90%;max-width:700px}
+  .card h2{margin:0 0 10px 0;text-align:center;color:#003f2e}
+  .legs{border-top:1px solid #e8efe9;margin-top:10px;padding-top:10px}
+  .leg{display:flex;justify-content:space-between;gap:10px;background:#eef5f7;border:1px solid #dfe9e3;border-radius:8px;padding:12px;margin:8px 0}
+  .leg .left{max-width:62%}
+  .leg .title{font-weight:700}
+  .pill{display:inline-block;padding:2px 2px;border-radius:999px;background:#0ea768;color:#fff;font-weight:700;font-size:12px}
+  .row{display:flex;justify-content:space-between;margin-top:6px;font-size:13px}
+  .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+  .kpi>div{background:#fffdf7;border:1px solid #eee;border-radius:10px;padding:10px;text-align:center}
+  .kpi .big{font-weight:800;font-size:18px;color:#0b8c53}
+  .tiny{color:#666;font-size:13px}
+  .muted{color:#4e5a55}
+  .footer-note{margin-top:10px;color:#51615a;font-size:12px;text-align:center}
+  .btn.active {
+  background: #046e47;   /* darker green */
+  border: 2px solid #003f2e;
+}
+  @media (max-width:900px){
+    .header img{height:50px}
+    .header h1{font-size:20px}
+    .card{width:95%}
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <a href="dashboard.html" style="text-decoration:none;color:inherit;display:contents;">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DG Logo">
+    <h1>DataGaffer.com</h1>
+  </a>
+</div>
+
+<div class="wrap">
+  <div class="banner">AI generated EV parlays based on our DataGaffer simulations vs Bet365 odds</div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button class="btn" onclick="showParlays(2)">2-Leg</button>
+    <button class="btn" onclick="showParlays(3)">3-Leg</button>
+    <button class="btn" onclick="showParlays(4)">4-Leg</button>
+  </div>
+
+  <div class="cards" id="parlay-cards"></div>
+
+  <div class="footer-note">
+    Edge = Sim Probability − Implied Probability from Bet365 odds. Parlays avoid combining two legs from the same match.
+  </div>
+</div>
+
+<script>
+const toDecimalOdds = pct => (pct>0 && pct<100) ? +(100/pct).toFixed(2) : null;
+const impliedPct = dec => dec>1 ? +(100/dec).toFixed(1) : null;
+
+const MARKET_MAP = [
+  {sim:'home_win_pct', book:'home_win', label:(m)=>`${m.home.name} Win`},
+  {sim:'away_win_pct', book:'away_win', label:(m)=>`${m.away.name} Win`},
+  {sim:'over_2_5_pct', book:'over_2_5', label:()=>`Over 2.5`},
+  {sim:'btts_pct', book:'btts', label:()=>`BTTS Yes`},
+  {sim:'home_o1_5_pct', book:'home_o1_5', label:(m)=>`${m.home.name} o1.5`},
+  {sim:'away_o1_5_pct', book:'away_o1_5', label:(m)=>`${m.away.name} o1.5`}
+];
+
+let allLegs = [];
+
+function collectLegs(fixtures){
+  const legs=[];
+  for(const match of fixtures){
+    const sim=match.sim_stats?.percents||{};
+    const book=match.book_odds||{};
+    for(const mk of MARKET_MAP){
+      const p=sim[mk.sim], o=book[mk.book];
+      if(typeof p==='number' && typeof o==='number' && p>0 && o>1){
+        const imp=impliedPct(o);
+        const edge=+(p-imp).toFixed(1);
+        legs.push({
+          matchId:match.fixture_id||`${match.home_id}-${match.away_id}`,
+          desc:mk.label(match),
+          simPct:+p.toFixed(1),
+          bookOdds:+o.toFixed(2),
+          edge,
+          league:match.league?.name||'',
+          teams:`${match.home.name} vs ${match.away.name}`,
+        });
+      }
+    }
+  }
+  return legs.sort((a,b)=>b.edge-a.edge);
+}
+
+function combine(legs){
+  const simProb=legs.reduce((a,l)=>a*(l.simPct/100),1);
+  const bookDec=legs.reduce((a,l)=>a*l.bookOdds,1);
+  const parlaySimPct=+(simProb*100).toFixed(1);
+  const parlayImplied=impliedPct(bookDec);
+  const edge=+(parlaySimPct-parlayImplied).toFixed(1);
+  return {size:legs.length,legs,parlayDec:+bookDec.toFixed(2),parlaySimPct,parlayImplied,edge};
+}
+
+function bestParlays(legs,size,limit=5){
+  const pool=legs.slice(0,40);
+  const res=[];
+  const n=pool.length;
+  function add(par){
+    if(!par) return;
+    res.push(par);
+    res.sort((a,b)=>b.parlaySimPct-a.parlaySimPct); // ✅ sort by highest parlay sim%
+    if(res.length>limit) res.pop();
+  }
+  if(size===2){
+    for(let i=0;i<n;i++)for(let j=i+1;j<n;j++){
+      const arr=[pool[i],pool[j]];
+      if(new Set(arr.map(x=>x.matchId)).size<size) continue;
+      add(combine(arr));
+    }
+  }else if(size===3){
+    for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)for(let k=j+1;k<n;k++){
+      const arr=[pool[i],pool[j],pool[k]];
+      if(new Set(arr.map(x=>x.matchId)).size<size) continue;
+      add(combine(arr));
+    }
+  }else if(size===4){
+    for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)for(let k=j+1;k<n;k++)for(let l=k+1;l<n;l++){
+      const arr=[pool[i],pool[j],pool[k],pool[l]];
+      if(new Set(arr.map(x=>x.matchId)).size<size) continue;
+      add(combine(arr));
+    }
+  }
+  return res;
+}
+
+function legHTML(l){
+  return `<div class="leg">
+    <div class="left"><div class="title">${l.desc}</div><div class="tiny muted">${l.teams}${l.league?` • ${l.league}`:''}</div></div>
+    <div class="right">
+      <div class="row"><span class="muted">Sim% </span><span><b>${l.simPct}%</b></span></div>
+      <div class="row"><span class="muted">Bet365</span><span><b>${l.bookOdds}</b></span></div>
+      <div class="row"><span class="muted">Edge: </span><span class="pill">${l.edge>0?'+':''}${l.edge}%</span></div>
+    </div>
+  </div>`;
+}
+
+function parlayCardHTML(title,parlay){
+  return `<div class="card">
+    <h2>${title}</h2>
+    <div class="kpi">
+      <div><div class="tiny muted">Parlay Sim %</div><div class="big">${parlay.parlaySimPct}%</div></div>
+      <div><div class="tiny muted">Bet365 Odds</div><div class="big">${parlay.parlayDec}</div></div>
+      <div><div class="tiny muted">Edge</div><div class="big">${parlay.edge>0?'+':''}${parlay.edge}%</div></div>
+    </div>
+    <div class="legs">${parlay.legs.map(legHTML).join('')}</div>
+  </div>`;
+}
+
+function showParlays(size){
+  // reset all buttons
+  document.querySelectorAll(".btn").forEach(b => b.classList.remove("active"));
+  // set active button
+  const activeBtn = [...document.querySelectorAll(".btn")]
+    .find(b => b.textContent.startsWith(size+"-Leg"));
+  if (activeBtn) activeBtn.classList.add("active");
+
+  const best = bestParlays(allLegs, size, 5);
+  document.getElementById('parlay-cards').innerHTML =
+    best.map((p,i)=>parlayCardHTML(`${size}-Leg Parlay #${i+1}`,p)).join('');
+}
+
+(async()=>{
+  const fixtures=await fetch('fixtures.json').then(r=>r.json()).catch(()=>[]);
+  allLegs=collectLegs(fixtures);
+  showParlays(2); // default
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* --- Supabase setup --- */
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+/* --- Inactivity logout (15 minutes) --- */
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 min
+let inactivityTimer;
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(async () => {
+    console.log("Auto-logout after inactivity");
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+  }, INACTIVITY_LIMIT);
+}
+["click","mousemove","keydown","scroll","touchstart"].forEach(evt =>
+  document.addEventListener(evt, resetInactivityTimer)
+);
+resetInactivityTimer(); // start timer
+
+/* --- Auth + subscription check --- */
+document.addEventListener("DOMContentLoaded", async () => {
+  const { data: { session }, error } = await supabaseClient.auth.getSession();
+  if (error || !session) {
+    console.warn("No session → redirecting to login");
+    window.location.href = "login.html";
+    return;
+  }
+
+  const { data: profile, error: profileError } = await supabaseClient
+    .from("profiles")
+    .select("is_subscribed")
+    .eq("id", session.user.id)
+    .single();
+
+  if (profileError || !profile?.is_subscribed) {
+    console.warn("Not subscribed → redirecting to subscribe");
+    window.location.href = "subscribe.html";
+    return;
+  }
+
+  console.log("✅ Access granted for subscribed user");
+});
+</script>
+
+</body>
+</html>
