@@ -58,7 +58,6 @@
       <button type="submit">Login</button>
     </form>
     <p><a href="signup.html">Don’t have an account? Sign Up</a></p>
-    <p><a href="#" id="forgot-password">Forgot your password?</a></p>
   </div>
 
   <!-- Supabase SDK -->
@@ -75,12 +74,12 @@
       }
     });
 
-    // 🔹 Login flow
     document.getElementById("login-form").addEventListener("submit", async (e) => {
       e.preventDefault();
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
+      // 🔹 Attempt login
       const { data: loginData, error: loginError } = await supabaseClient.auth.signInWithPassword({
         email,
         password
@@ -92,6 +91,7 @@
         return;
       }
 
+      // 🔹 Get active session
       const { data: { session }, error: sessionError } = await supabaseClient.auth.getSession();
       if (sessionError || !session) {
         alert("No active session found. Please try again.");
@@ -100,6 +100,7 @@
 
       const userId = session.user.id;
 
+      // 🔹 Look up subscription + plan from profiles
       const { data: profile, error: profileError } = await supabaseClient
         .from("profiles")
         .select("is_subscribed, plan")
@@ -118,36 +119,17 @@
         return;
       }
 
+      // 🔹 Route user based on plan
       if (profile.plan === "20_new") {
-        window.location.href = "standard.html";
+        window.location.href = "standard.html"; // restricted dashboard
       } else {
-        window.location.href = "dashboard.html";
-      }
-    });
-
-    // 🔹 Forgot password flow
-    document.getElementById("forgot-password").addEventListener("click", async (e) => {
-      e.preventDefault();
-      const email = document.getElementById("email").value;
-      if (!email) {
-        alert("Please enter your email in the box first, then click Forgot password.");
-        return;
-      }
-
-      const { data, error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-        redirectTo: window.location.origin + "/reset-password.html"
-      });
-
-      if (error) {
-        alert("Error sending reset email: " + error.message);
-        console.error(error);
-      } else {
-        alert("✅ Password reset email sent! Check your inbox.");
+        window.location.href = "dashboard.html"; // full dashboard
       }
     });
   </script>
 </body>
 </html>
+
 
 
 
