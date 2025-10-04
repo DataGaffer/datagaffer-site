@@ -11,18 +11,7 @@
     "shots": 5,
     "shots_on_target": 2
   },
-  {
-    "id": 1904,
-    "team_id": 66,
-    "name": "B. Kamara",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 296,
-    "goals": 0,
-    "assists": 1,
-    "shots": 1,
-    "shots_on_target": 1
-  },
+  
   {
     "id": 19071,
     "team_id": 66,

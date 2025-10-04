@@ -1,16 +1,5 @@
 [
-  {
-    "id": 50,
-    "team_id": 530,
-    "name": "Koke",
-    "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 461,
-    "goals": 0,
-    "assists": 1,
-    "shots": 1,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 753,
     "team_id": 530,
@@ -59,18 +48,7 @@
     "shots": 0,
     "shots_on_target": 0
   },
-  {
-    "id": 451594,
-    "team_id": 530,
-    "name": "Alejandro Monserrate",
-    "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 0,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
-  },
+ 
   {
     "id": 56,
     "team_id": 530,
@@ -131,18 +109,7 @@
     "shots": 8,
     "shots_on_target": 4
   },
-  {
-    "id": 133185,
-    "team_id": 530,
-    "name": "J. Cardoso",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 262,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 323935,
     "team_id": 530,

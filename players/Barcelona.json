@@ -11,18 +11,7 @@
     "shots": 12,
     "shots_on_target": 9
   },
-  {
-    "id": 538,
-    "team_id": 529,
-    "name": "F. de Jong",
-    "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 555,
-    "goals": 0,
-    "assists": 1,
-    "shots": 0,
-    "shots_on_target": 0
-  },
+  
   {
     "id": 1323,
     "team_id": 529,
@@ -71,18 +60,7 @@
     "shots": 1,
     "shots_on_target": 0
   },
-  {
-    "id": 338958,
-    "team_id": 529,
-    "name": "R. Bardghji",
-    "position": "Attacker",
-    "appearances": 3,
-    "minutes": 117,
-    "goals": 0,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 4
-  },
+  
   {
     "id": 340626,
     "team_id": 529,
@@ -142,17 +120,5 @@
     "assists": 2,
     "shots": 17,
     "shots_on_target": 5
-  },
-  {
-    "id": 433396,
-    "team_id": 529,
-    "name": "Marc Bernal",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 21,
-    "goals": 0,
-    "assists": 1,
-    "shots": 0,
-    "shots_on_target": 0
   }
 ]

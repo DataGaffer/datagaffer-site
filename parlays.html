@@ -29,10 +29,7 @@
   .tiny{color:#666;font-size:13px}
   .muted{color:#4e5a55}
   .footer-note{margin-top:10px;color:#51615a;font-size:12px;text-align:center}
-  .btn.active {
-  background: #046e47;   /* darker green */
-  border: 2px solid #003f2e;
-}
+  .btn.active {background: #046e47;border: 2px solid #003f2e;}
   @media (max-width:900px){
     .header img{height:50px}
     .header h1{font-size:20px}
@@ -107,6 +104,27 @@ function collectLegs(fixtures){
   return legs.sort((a,b)=>b.edge-a.edge);
 }
 
+// ✅ Only best leg per match
+function buildPool(legs, poolSize = 200) {
+  const byMatch = {};
+
+  // group by match
+  for (const leg of legs) {
+    if (!byMatch[leg.matchId]) byMatch[leg.matchId] = [];
+    byMatch[leg.matchId].push(leg);
+  }
+
+  // pick best per match (highest simPct, fallback edge)
+  const pool = Object.values(byMatch).map(matchLegs => {
+    return matchLegs.sort((a,b) => b.simPct - a.simPct || b.edge - a.edge)[0];
+  });
+
+  // sort pool by edge (strongest first)
+  pool.sort((a,b) => b.edge - a.edge);
+
+  return pool.slice(0, poolSize);
+}
+
 function combine(legs){
   const simProb=legs.reduce((a,l)=>a*(l.simPct/100),1);
   const bookDec=legs.reduce((a,l)=>a*l.bookOdds,1);
@@ -117,13 +135,13 @@ function combine(legs){
 }
 
 function bestParlays(legs,size,limit=5){
-  const pool=legs.slice(0,40);
+  const pool=buildPool(legs,200); // ✅ new pool builder
   const res=[];
   const n=pool.length;
   function add(par){
     if(!par) return;
     res.push(par);
-    res.sort((a,b)=>b.parlaySimPct-a.parlaySimPct); // ✅ sort by highest parlay sim%
+    res.sort((a,b)=>b.parlaySimPct-a.parlaySimPct);
     if(res.length>limit) res.pop();
   }
   if(size===2){
@@ -172,9 +190,7 @@ function parlayCardHTML(title,parlay){
 }
 
 function showParlays(size){
-  // reset all buttons
   document.querySelectorAll(".btn").forEach(b => b.classList.remove("active"));
-  // set active button
   const activeBtn = [...document.querySelectorAll(".btn")]
     .find(b => b.textContent.startsWith(size+"-Leg"));
   if (activeBtn) activeBtn.classList.add("active");
@@ -187,9 +203,10 @@ function showParlays(size){
 (async()=>{
   const fixtures=await fetch('fixtures.json').then(r=>r.json()).catch(()=>[]);
   allLegs=collectLegs(fixtures);
-  showParlays(2); // default
+  showParlays(2);
 })();
 </script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
@@ -212,7 +229,7 @@ function resetInactivityTimer() {
 ["click","mousemove","keydown","scroll","touchstart"].forEach(evt =>
   document.addEventListener(evt, resetInactivityTimer)
 );
-resetInactivityTimer(); // start timer
+resetInactivityTimer();
 
 /* --- Auth + subscription check --- */
 document.addEventListener("DOMContentLoaded", async () => {

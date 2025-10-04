@@ -1,0 +1,21 @@
+[
+  
+  {
+    "team_id": 175,
+    "player_id": 41725,
+    "name": "F\u00e1bio Vieira",
+    "position": "Midfielder",
+    "appearances": 3,
+    "goals": 0,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 1,
+    "goals_per90_simulated": 0.0,
+    "assists_per90_simulated": 1.52,
+    "shots_per90": 3.1,
+    "sot_per90": 0.49,
+    "+1_goal_pct": 0.0,
+    "+1_assist_pct": 77.8,
+    "soa_pct": 77.8
+  }
+]

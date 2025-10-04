@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 801,
+    "player_id": 31318,
+    "name": "M&apos;Bala Nzola",
+    "position": "Attacker",
+    "appearances": 14,
+    "goals": 4,
+    "assists": 0,
+    "shots": 22,
+    "shots_on_target": 10,
+    "goals_per90_simulated": 0.66,
+    "assists_per90_simulated": 0.0,
+    "shots_per90": 1.97,
+    "sot_per90": 0.88,
+    "+1_goal_pct": 49.5,
+    "+1_assist_pct": 0.0,
+    "soa_pct": 49.5
+  },
+  {
+    "team_id": 801,
+    "player_id": 331678,
+    "name": "H. Meister",
+    "position": "Attacker",
+    "appearances": 14,
+    "goals": 4,
+    "assists": 0,
+    "shots": 18,
+    "shots_on_target": 10,
+    "goals_per90_simulated": 0.69,
+    "assists_per90_simulated": 0.0,
+    "shots_per90": 1.64,
+    "sot_per90": 0.88,
+    "+1_goal_pct": 49.5,
+    "+1_assist_pct": 0.0,
+    "soa_pct": 49.5
+  }
+]
