@@ -128,8 +128,11 @@
     // 🔹 Forgot password flow
     document.getElementById("forgot-password").addEventListener("click", async (e) => {
       e.preventDefault();
-      const email = prompt("Enter your email to reset your password:");
-      if (!email) return;
+      const email = document.getElementById("email").value;
+      if (!email) {
+        alert("Please enter your email in the box first, then click Forgot password.");
+        return;
+      }
 
       const { data, error } = await supabaseClient.auth.resetPasswordForEmail(email, {
         redirectTo: window.location.origin + "/reset-password.html"
@@ -139,7 +142,7 @@
         alert("Error sending reset email: " + error.message);
         console.error(error);
       } else {
-        alert("Password reset email sent! Check your inbox.");
+        alert("✅ Password reset email sent! Check your inbox.");
       }
     });
   </script>
