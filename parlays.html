@@ -86,7 +86,7 @@ function collectLegs(fixtures){
     const book=match.book_odds||{};
     for(const mk of MARKET_MAP){
       const p=sim[mk.sim], o=book[mk.book];
-      if(typeof p==='number' && typeof o==='number' && p>0 && o>1){
+      if(typeof p==='number' && typeof o==='number' && p>55 && o>1){  // ✅ only include sim% ≥ 55
         const imp=impliedPct(o);
         const edge=+(p-imp).toFixed(1);
         legs.push({
@@ -101,7 +101,8 @@ function collectLegs(fixtures){
       }
     }
   }
-  return legs.sort((a,b)=>b.edge-a.edge);
+  // ✅ Sort by highest Sim% first, fallback to Edge
+  return legs.sort((a,b)=>b.simPct - a.simPct || b.edge - a.edge);
 }
 
 // ✅ Only best leg per match
@@ -134,35 +135,56 @@ function combine(legs){
   return {size:legs.length,legs,parlayDec:+bookDec.toFixed(2),parlaySimPct,parlayImplied,edge};
 }
 
-function bestParlays(legs,size,limit=5){
-  const pool=buildPool(legs,200); // ✅ new pool builder
-  const res=[];
-  const n=pool.length;
-  function add(par){
-    if(!par) return;
+function bestParlays(legs, size, limit = 5) {
+  const pool = buildPool(legs, 200);
+  const res = [];
+  const usedBets = {}; // allow each bet up to 2 uses per button group
+  const n = pool.length;
+
+  function add(par) {
+    if (!par) return;
+
+    // skip if any leg has already been used 2+ times
+    if (par.legs.some(l => (usedBets[l.desc] || 0) >= 2)) return;
+
+    // add parlay and count bet usage
     res.push(par);
-    res.sort((a,b)=>b.parlaySimPct-a.parlaySimPct);
-    if(res.length>limit) res.pop();
+    par.legs.forEach(l => {
+      usedBets[l.desc] = (usedBets[l.desc] || 0) + 1;
+    });
+
+    // sort strictly by Simulated %
+    res.sort((a, b) => b.parlaySimPct - a.parlaySimPct);
+    if (res.length > limit) res.pop();
   }
-  if(size===2){
-    for(let i=0;i<n;i++)for(let j=i+1;j<n;j++){
-      const arr=[pool[i],pool[j]];
-      if(new Set(arr.map(x=>x.matchId)).size<size) continue;
-      add(combine(arr));
-    }
-  }else if(size===3){
-    for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)for(let k=j+1;k<n;k++){
-      const arr=[pool[i],pool[j],pool[k]];
-      if(new Set(arr.map(x=>x.matchId)).size<size) continue;
-      add(combine(arr));
-    }
-  }else if(size===4){
-    for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)for(let k=j+1;k<n;k++)for(let l=k+1;l<n;l++){
-      const arr=[pool[i],pool[j],pool[k],pool[l]];
-      if(new Set(arr.map(x=>x.matchId)).size<size) continue;
-      add(combine(arr));
-    }
+
+  // Generate parlays (avoid same match in one parlay)
+  if (size === 2) {
+    for (let i = 0; i < n; i++)
+      for (let j = i + 1; j < n; j++) {
+        const arr = [pool[i], pool[j]];
+        if (new Set(arr.map(x => x.matchId)).size < size) continue;
+        add(combine(arr));
+      }
+  } else if (size === 3) {
+    for (let i = 0; i < n; i++)
+      for (let j = i + 1; j < n; j++)
+        for (let k = j + 1; k < n; k++) {
+          const arr = [pool[i], pool[j], pool[k]];
+          if (new Set(arr.map(x => x.matchId)).size < size) continue;
+          add(combine(arr));
+        }
+  } else if (size === 4) {
+    for (let i = 0; i < n; i++)
+      for (let j = i + 1; j < n; j++)
+        for (let k = j + 1; k < n; k++)
+          for (let l = k + 1; l < n; l++) {
+            const arr = [pool[i], pool[j], pool[k], pool[l]];
+            if (new Set(arr.map(x => x.matchId)).size < size) continue;
+            add(combine(arr));
+          }
   }
+
   return res;
 }
 
