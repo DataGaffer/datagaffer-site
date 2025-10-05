@@ -28,12 +28,12 @@
     "shots": 24,
     "shots_on_target": 16,
     "goals_per90_simulated": 0.75,
-    "assists_per90_simulated": 1.43,
+    "assists_per90_simulated": 0.90,
     "shots_per90": 3.0,
     "sot_per90": 1.8,
     "+1_goal_pct": 52.1,
-    "+1_assist_pct": 76.0,
-    "soa_pct": 88.5
+    "+1_assist_pct": 66.0,
+    "soa_pct": 74.5
   },
   {
     "team_id": 160,

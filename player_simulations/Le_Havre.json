@@ -35,24 +35,7 @@
     "+1_assist_pct": 0.0,
     "soa_pct": 23.9
   },
-  {
-    "team_id": 111,
-    "player_id": 156465,
-    "name": "I. Soumar\u00e9",
-    "position": "Attacker",
-    "appearances": 18,
-    "goals": 4,
-    "assists": 2,
-    "shots": 24,
-    "shots_on_target": 12,
-    "goals_per90_simulated": 0.6,
-    "assists_per90_simulated": 2.36,
-    "shots_per90": 3.31,
-    "sot_per90": 1.54,
-    "+1_goal_pct": 44.8,
-    "+1_assist_pct": 90.5,
-    "soa_pct": 94.7
-  },
+  
   {
     "team_id": 111,
     "player_id": 174937,

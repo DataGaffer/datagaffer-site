@@ -1,22 +1,5 @@
 [
-  {
-    "team_id": 542,
-    "player_id": 143,
-    "name": "Carles Ale\u00f1\u00e1",
-    "position": "Midfielder",
-    "appearances": 10,
-    "goals": 0,
-    "assists": 2,
-    "shots": 6,
-    "shots_on_target": 2,
-    "goals_per90_simulated": 0.0,
-    "assists_per90_simulated": 1.0,
-    "shots_per90": 1.01,
-    "sot_per90": 0.34,
-    "+1_goal_pct": 0.0,
-    "+1_assist_pct": 63.3,
-    "soa_pct": 63.3
-  },
+  
   {
     "team_id": 542,
     "player_id": 47181,
