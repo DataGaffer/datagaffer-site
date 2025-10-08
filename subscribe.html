@@ -65,45 +65,20 @@
       font-weight: bold;
     }
 
-    .plan h2 {
-      margin: 0 0 8px;
-      font-size: 22px;
-    }
+    .plan h2 { margin: 0 0 8px; font-size: 22px; }
+    .price { font-size: 26px; font-weight: bold; color: #0b8c53; margin: 10px 0 15px; }
+    .price span { font-size: 14px; color: #666; font-weight: normal; }
 
-    .price {
-      font-size: 26px;
-      font-weight: bold;
-      color: #0b8c53;
-      margin: 10px 0 15px;
-    }
-
-    .price span {
-      font-size: 14px;
-      color: #666;
-      font-weight: normal;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 20px;
-      text-align: left;
-      font-size: 14px;
-    }
-
-    ul li {
-      margin: 8px 0;
-      padding-left: 24px;
-      position: relative;
-    }
+    ul { list-style: none; padding: 0; margin: 0 0 20px; text-align: left; font-size: 14px; }
+    ul li { margin: 8px 0; padding-left: 24px; position: relative; }
 
     ul li.yes::before {
-  content: "✓"; /* instead of "✔" */
-  color: #0b8c53 !important;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
+      content: "✓";
+      color: #0b8c53 !important;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
 
     ul li.no::before {
       content: "✘";
@@ -113,11 +88,7 @@
       left: 0;
     }
 
-    .save {
-      color: #d9534f;
-      font-weight: bold;
-      margin: 10px 0;
-    }
+    .save { color: #d9534f; font-weight: bold; margin: 10px 0; }
 
     button {
       width: 100%;
@@ -132,22 +103,11 @@
       transition: background 0.2s;
     }
 
-    button:hover {
-      background-color: #046e47;
-    }
+    button:hover { background-color: #046e47; }
+    .trial { font-size: 13px; color: #555; margin-top: 10px; }
 
-    .trial {
-      font-size: 13px;
-      color: #555;
-      margin-top: 10px;
-    }
-
-    /* Mobile tweaks */
     @media (max-width: 768px) {
-      .plans {
-        flex-direction: column;
-        align-items: center;
-      }
+      .plans { flex-direction: column; align-items: center; }
       .plan.popular { transform: none; }
     }
   </style>
@@ -157,7 +117,6 @@
   <p class="subtitle">Unlock the most realistic football simulations & betting insights powered by DataGaffer.</p>
 
   <div class="plans">
-    <!-- Standard -->
     <div class="plan">
       <h2>Standard</h2>
       <div class="price">$19.99 <span>/month</span></div>
@@ -172,7 +131,6 @@
       <div class="trial">Includes 7-day free trial</div>
     </div>
 
-    <!-- Pro -->
     <div class="plan popular">
       <div class="badge">Most Popular</div>
       <h2>Pro</h2>
@@ -186,7 +144,6 @@
       <div class="trial">Includes 7-day free trial</div>
     </div>
 
-    <!-- Season Pro -->
     <div class="plan">
       <h2>Season Pro</h2>
       <div class="price">$250 <span>/year</span></div>
@@ -201,18 +158,42 @@
     </div>
   </div>
 
+  <!-- Supabase + Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
+    const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+    const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
     async function subscribe(plan) {
       try {
+        // ✅ Get current user email from Supabase
+        const { data: { user }, error: userError } = await supabaseClient.auth.getUser();
+        if (userError || !user) {
+          alert("Please log in before subscribing.");
+          window.location.href = "login.html";
+          return;
+        }
+
+        // ✅ Send plan + email to Netlify function
         const res = await fetch("/.netlify/functions/create-checkout-session", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ plan })
+          body: JSON.stringify({
+            plan,
+            email: user.email  // 👈 lock email to Supabase account
+          })
         });
+
         const { url } = await res.json();
+        if (!url) throw new Error("No checkout URL returned");
+
+        // ✅ Go to Stripe Checkout
         window.location.href = url;
       } catch (err) {
         alert("Error starting checkout: " + err.message);
+        console.error(err);
       }
     }
   </script>

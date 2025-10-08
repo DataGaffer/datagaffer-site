@@ -76,16 +76,13 @@
 
     document.getElementById("signup-form").addEventListener("submit", async (e) => {
       e.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
 
-      // 🔹 Create user
+      // ✅ Direct signup without email confirmation
       const { data, error } = await supabaseClient.auth.signUp({
         email,
-        password,
-        options: {
-          redirectTo: "https://datagaffer.com/subscribe.html"
-        }
+        password
       });
 
       if (error) {
@@ -96,7 +93,7 @@
 
       const user = data.user;
       if (user) {
-        // 🔹 Insert profile row with defaults
+        // ✅ Create a new profile
         const { error: profileError } = await supabaseClient
           .from("profiles")
           .insert([{
@@ -111,10 +108,11 @@
         } else {
           console.log("✅ Profile row created for", user.email);
         }
-      }
 
-      alert("Signup successful! Please check your email to confirm.");
-      window.location.href = "subscribe.html"; // 🚀 Go to plans
+        // ✅ Redirect immediately to subscription page
+        alert("Signup successful! Redirecting...");
+        window.location.href = "subscribe.html";
+      }
     });
   </script>
 </body>
