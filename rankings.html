@@ -273,6 +273,7 @@
 <a class="toc-btn" href="#over25">Over 2.5</a>
 <a class="toc-btn" href="#team_total">Team Total</a>
 <a class="toc-btn" href="#win">Win %</a>
+<a class="toc-btn" href="#under25">Under 2.5</a>
 </div>
 
 <!-- BTTS Rankings -->
@@ -367,6 +368,29 @@
   </div>
 </section>
 
+<!-- Under 2.5 Rankings -->
+<section id="under25" class="outlook-page">
+  <div class="page-title">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo" class="section-logo">
+    <h2>Under 2.5 Rankings</h2>
+  </div>
+  <div class="page-description">
+    Teams ranked most likely to stay under 2.5 goals — defensive or low-scoring sides.
+  </div>
+  <div class="page-content">
+    <table class="outlook-table">
+      <thead>
+        <tr>
+          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th></th><th>Team</th>
+        </tr>
+      </thead>
+      <tbody id="under25-rankings-body"></tbody>
+    </table>
+  </div>
+</section>
+
 <script>
 function renderRankings(rankings, tbodyId) {
   const tbody = document.getElementById(tbodyId);
@@ -410,6 +434,7 @@ fetch("rankings/rankings.json")
     renderRankings(data.over25, "over25-rankings-body");
     renderRankings(data.team_total, "team-total-rankings-body");
     renderRankings(data.win, "win-rankings-body");
+    renderRankings(data.under25, "under25-rankings-body");
   });
 
 </script>

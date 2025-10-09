@@ -3,8 +3,8 @@ import glob
 import os
 
 # 🔹 Configurable weights
-WEIGHT_2024 = 0.6   # use 60% from 2024
-WEIGHT_2025 = 0.4   # use 40% from 2025
+WEIGHT_2024 = 0.5
+WEIGHT_2025 = 0.5
 
 # 🔹 Paths to both seasons
 TEAM_STATS_PATHS = {
@@ -23,16 +23,14 @@ def load_combined_team_stats():
             team_id = data["team_id"]
             team_name = os.path.splitext(os.path.basename(file))[0].replace("_", " ")
 
-            # Initialize if first time seeing this team
             if team_id not in teams_data:
                 teams_data[team_id] = {
                     "id": team_id,
-                    "name": team_name,   # ✅ use filename as team name
+                    "name": team_name,
                     "2024": {"gf": 0, "ga": 0, "matches": 0},
                     "2025": {"gf": 0, "ga": 0, "matches": 0}
                 }
 
-            # Average goals for/against
             gf = data["home"]["goals_for"] + data["away"]["goals_for"]
             ga = data["home"]["goals_against"] + data["away"]["goals_against"]
             matches = data["home"]["matches"] + data["away"]["matches"]
@@ -41,7 +39,6 @@ def load_combined_team_stats():
             teams_data[team_id][season]["ga"] += ga
             teams_data[team_id][season]["matches"] += matches
 
-    # Combine weighted stats
     combined = []
     for team in teams_data.values():
         gf_2024, ga_2024, m_2024 = team["2024"].values()
@@ -50,14 +47,13 @@ def load_combined_team_stats():
         if m_2024 == 0 and m_2025 == 0:
             continue
 
-        # Weighted averages if both available, otherwise fall back
         if m_2024 > 0 and m_2025 > 0:
             gf = (gf_2024 / m_2024) * WEIGHT_2024 + (gf_2025 / m_2025) * WEIGHT_2025
             ga = (ga_2024 / m_2024) * WEIGHT_2024 + (ga_2025 / m_2025) * WEIGHT_2025
-        elif m_2024 > 0:  # only 2024
+        elif m_2024 > 0:
             gf = gf_2024 / m_2024
             ga = ga_2024 / m_2024
-        else:  # only 2025
+        else:
             gf = gf_2025 / m_2025
             ga = ga_2025 / m_2025
 
@@ -72,23 +68,28 @@ def load_combined_team_stats():
 
 
 def calculate_rankings(teams):
-    rankings = { "btts": [], "over25": [], "team_total": [], "win": [] }
+    rankings = {"btts": [], "over25": [], "under25": [], "team_total": [], "win": []}
 
     for team in teams:
         gf, ga = team["gf"], team["ga"]
+        total_goals = gf + ga
 
-        # --- Simple proxy metrics ---
+        # --- Metrics ---
         btts_rate = (gf / (gf + 1)) * (ga / (ga + 1))
-        over25_rate = (gf + ga) / 3.0
+        over25_rate = total_goals / 3.0
         team_total_rate = gf / 2.0
         win_rate = gf / (gf + ga + 1e-6)
+
+        # ✅ Under 2.5: inverse of total goals, clamped to [0,1]
+        under25_rate = max(0.0, (3.0 - total_goals) / 3.0)
 
         rankings["btts"].append({"team": team["name"], "id": team["id"], "rate": btts_rate})
         rankings["over25"].append({"team": team["name"], "id": team["id"], "rate": over25_rate})
         rankings["team_total"].append({"team": team["name"], "id": team["id"], "rate": team_total_rate})
         rankings["win"].append({"team": team["name"], "id": team["id"], "rate": win_rate})
+        rankings["under25"].append({"team": team["name"], "id": team["id"], "rate": under25_rate})
 
-    # Sort & rank top 30
+    # Sort & rank top 30 (all DESC — higher value = stronger for that market)
     for key in rankings:
         rankings[key].sort(key=lambda x: x["rate"], reverse=True)
         for i, entry in enumerate(rankings[key][:30], start=1):
@@ -107,5 +108,5 @@ if __name__ == "__main__":
     with open("rankings/rankings.json", "w") as f:
         json.dump(rankings, f, indent=2)
 
-    print("✅ rankings/rankings.json updated (hybrid 2024 + 2025 stats)!")
+    print("✅ rankings/rankings.json updated (includes Under 2.5 Rankings)!")
 
