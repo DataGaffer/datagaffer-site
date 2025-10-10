@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Top Picks | DataGaffer</title>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#ffffff">
+
+<style>
+  body{font-family:Arial, sans-serif;margin:0;background:#f2f4f7}
+  .header{background:#003f2e;color:#fff;display:flex;align-items:center;justify-content:center;position:relative;padding:10px 20px}
+  .header img{height:90px;position:absolute;left:20px;top:0}
+  .header h1{margin:0;font-size:32px;font-weight:700}
+  .wrap{max-width:980px;margin:24px auto;padding:0 16px}
+  .banner{background:#fff;border:2px solid #003f2e;border-radius:6px;padding:10px 14px;text-align:center;font-weight:600;color:#003f2e}
+  .cards{display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:20px}
+  .card{background:#fff;border-radius:12px;border:2px solid #003f2e;box-shadow:0 3px 12px rgba(0,0,0,.12);padding:16px;width:90%;max-width:700px}
+  .card h2{margin:0 0 10px 0;text-align:center;color:#003f2e}
+  .stat-line{display:flex;justify-content:space-between;margin-top:8px;font-size:14px}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#0ea768;color:#fff;font-weight:700;font-size:12px}
+  .muted{color:#4e5a55}
+  .footer-note{margin-top:14px;color:#51615a;font-size:12px;text-align:center}
+  @media (max-width:900px){
+    .header img{height:50px}
+    .header h1{font-size:20px}
+    .card{width:95%}
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <a href="dashboard.html" style="text-decoration:none;color:inherit;display:contents;">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DG Logo">
+    <h1>DataGaffer.com</h1>
+  </a>
+</div>
+
+<div class="wrap">
+  <div class="banner">AI-selected top 3 best bets from today’s DataGaffer simulations</div>
+  <div class="cards" id="top-picks"></div>
+  <div class="footer-note">These plays are automatically chosen based on the highest edge between model and Bet365 odds.</div>
+</div>
+
+<script>
+const impliedPct = dec => dec > 1 ? +(100/dec).toFixed(1) : null;
+
+const MARKET_MAP = [
+  {sim:'home_win_pct', book:'home_win', label:(m)=>`${m.home.name} Win`},
+  {sim:'away_win_pct', book:'away_win', label:(m)=>`${m.away.name} Win`},
+  {sim:'over_2_5_pct', book:'over_2_5', label:()=>`Over 2.5 Goals`},
+  {sim:'btts_pct', book:'btts', label:()=>`BTTS Yes`},
+  {sim:'home_o1_5_pct', book:'home_o1_5', label:(m)=>`${m.home.name} o1.5 Goals`},
+  {sim:'away_o1_5_pct', book:'away_o1_5', label:(m)=>`${m.away.name} o1.5 Goals`}
+];
+
+async function loadTopPicks() {
+  const fixtures = await fetch("fixtures.json").then(r=>r.json()).catch(()=>[]);
+  const all = [];
+
+  for (const match of fixtures) {
+    const sim = match.sim_stats?.percents || {};
+    const book = match.book_odds || {};
+    for (const mk of MARKET_MAP) {
+      const p = sim[mk.sim], o = book[mk.book];
+      if (typeof p === "number" && typeof o === "number" && o > 1) {
+        const imp = impliedPct(o);
+        const edge = +(p - imp).toFixed(1);
+        if (edge > 0 && p >= 55) { // ✅ filter only confident, +EV plays
+          all.push({
+            matchId: match.fixture_id || `${match.home_id}-${match.away_id}`,
+            match: `${match.home.name} vs ${match.away.name}`,
+            pick: mk.label(match),
+            dg_odds: (100 / p).toFixed(2),
+            book_odds: o.toFixed(2),
+            edge: edge,
+            league: match.league?.name || ""
+          });
+        }
+      }
+    }
+  }
+
+  // ✅ Sort by highest edge first
+  all.sort((a,b)=>b.edge - a.edge);
+
+  // ✅ Ensure only 1 pick per match
+  const uniqueMatches = [];
+  const filtered = [];
+  for (const bet of all) {
+    if (!uniqueMatches.includes(bet.matchId)) {
+      uniqueMatches.push(bet.matchId);
+      filtered.push(bet);
+    }
+    if (filtered.length >= 3) break;
+  }
+
+  const container = document.getElementById("top-picks");
+  if (!filtered.length) {
+    container.innerHTML = "<p>No top picks available today.</p>";
+    return;
+  }
+
+  container.innerHTML = filtered.map((p,i)=>`
+    <div class="card">
+      <h2>AI Pick #${i+1}</h2>
+      <div class="stat-line"><span class="muted">Match:</span> <span>${p.match}</span></div>
+      <div class="stat-line"><span class="muted">Pick:</span> <span><b>${p.pick}</b></span></div>
+      <div class="stat-line"><span class="muted">DG Odds:</span> <span>${p.dg_odds}</span></div>
+      <div class="stat-line"><span class="muted">Bet365 Odds:</span> <span>${p.book_odds}</span></div>
+      <div class="stat-line"><span class="muted">Edge:</span> <span class="pill">+${p.edge}%</span></div>
+      <div class="stat-line"><span class="muted">League:</span> <span>${p.league}</span></div>
+    </div>
+  `).join("");
+}
+
+loadTopPicks();
+</script>
+
+<!-- ✅ Supabase Auth -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const { data: { session } } = await supabaseClient.auth.getSession();
+  if (!session) { window.location.href = "login.html"; return; }
+
+  const { data: profile } = await supabaseClient
+    .from("profiles")
+    .select("is_subscribed")
+    .eq("id", session.user.id)
+    .single();
+
+  if (!profile?.is_subscribed) {
+    window.location.href = "subscribe.html";
+  }
+});
+</script>
+
+</body>
+</html>
