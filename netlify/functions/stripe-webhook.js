@@ -8,11 +8,41 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
+const ACTIVE_STATUSES = new Set(["active", "trialing", "past_due"]); // treat these as subscribed
+
+function planFromPriceId(id) {
+  if (!id) return null;
+  if (id === process.env.STRIPE_PRICE_ID) return "20_old";
+  if (id === process.env.STRIPE_PRICE_ID_20_NEW) return "20_new";
+  if (id === process.env.STRIPE_PRICE_ID_50) return "50";
+  if (id === process.env.STRIPE_PRICE_ID_250) return "250";
+  return null;
+}
+
+async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
+  if (!email) {
+    console.warn("Missing email; cannot upsert profile");
+    return;
+  }
+  email = email.toLowerCase();
+  const { error } = await supabase
+    .from("profiles")
+    .upsert(
+      {
+        email,
+        customer_id: customerId ?? null,
+        plan: isSubscribed ? planCode : null,
+        is_subscribed: !!isSubscribed,
+      },
+      { onConflict: "email" }
+    );
+  if (error) console.error("Supabase upsert failed:", error);
+  else console.log(`Upserted profile for ${email} (subscribed=${isSubscribed})`);
+}
+
 exports.handler = async (event) => {
-  console.log("⚡ Incoming webhook event");
   const sig = event.headers["stripe-signature"];
   let stripeEvent;
-
   try {
     stripeEvent = stripe.webhooks.constructEvent(
       event.body,
@@ -20,78 +50,81 @@ exports.handler = async (event) => {
       process.env.STRIPE_WEBHOOK_SECRET
     );
   } catch (err) {
-    console.error("❌ Stripe signature verification failed:", err.message);
+    console.error("Signature verification failed:", err.message);
     return { statusCode: 400, body: `Webhook Error: ${err.message}` };
   }
 
-  console.log("✅ Webhook verified:", stripeEvent.type);
+  console.log("Webhook:", stripeEvent.type);
 
-  // Handle subscription creation / update
-  if (
-    stripeEvent.type === "checkout.session.completed" ||
-    stripeEvent.type === "customer.subscription.created" ||
-    stripeEvent.type === "customer.subscription.updated"
-  ) {
-    const session = stripeEvent.data.object;
-    const email = (session.customer_email || session.customer_details?.email || "").toLowerCase();
-    const customerId = session.customer;
+  try {
+    switch (stripeEvent.type) {
+      case "checkout.session.completed": {
+        const session = stripeEvent.data.object; // CheckoutSession
+        const customerId = session.customer;
+        // safest is to fetch the subscription to get price & status
+        let priceId = null, status = null;
+        if (session.subscription) {
+          const sub = await stripe.subscriptions.retrieve(session.subscription);
+          priceId = sub.items?.data?.[0]?.price?.id || null;
+          status = sub.status;
+        }
+        const email =
+          (session.customer_details?.email ||
+            session.customer_email ||
+            null);
 
-    let planCode = null;
-    const priceId =
-      session?.items?.data?.[0]?.price?.id ||
-      session?.plan?.id ||
-      session?.lines?.data?.[0]?.price?.id;
+        await upsertProfile({
+          email,
+          customerId,
+          planCode: planFromPriceId(priceId),
+          isSubscribed: ACTIVE_STATUSES.has(status || "active"), // sessions complete means they paid
+        });
+        break;
+      }
 
-    if (priceId === process.env.STRIPE_PRICE_ID) planCode = "20_old";
-    else if (priceId === process.env.STRIPE_PRICE_ID_20_NEW) planCode = "20_new";
-    else if (priceId === process.env.STRIPE_PRICE_ID_50) planCode = "50";
-    else if (priceId === process.env.STRIPE_PRICE_ID_250) planCode = "250";
+      case "customer.subscription.created":
+      case "customer.subscription.updated": {
+        const sub = stripeEvent.data.object; // Subscription
+        const customerId = sub.customer;
+        const priceId = sub.items?.data?.[0]?.price?.id || null;
+        const status = sub.status;
+        const customer = await stripe.customers.retrieve(customerId);
+        const email = customer?.email || null;
 
-    console.log("💳 Subscription active:", { email, customerId, planCode });
+        await upsertProfile({
+          email,
+          customerId,
+          planCode: planFromPriceId(priceId),
+          isSubscribed: ACTIVE_STATUSES.has(status),
+        });
+        break;
+      }
 
-    if (email && planCode) {
-      const { error } = await supabase
-        .from("profiles")
-        .update({
-          is_subscribed: true,
-          customer_id: customerId,
-          plan: planCode,
-        })
-        .eq("email", email);
+      case "customer.subscription.deleted": {
+        const sub = stripeEvent.data.object; // Subscription
+        const customerId = sub.customer;
+        const customer = await stripe.customers.retrieve(customerId);
+        const email = customer?.email || null;
 
-      if (error) console.error("❌ Supabase update failed:", error);
-      else console.log(`✅ Subscription activated for ${email}`);
+        await upsertProfile({
+          email,
+          customerId,
+          planCode: null,
+          isSubscribed: false,
+        });
+        break;
+      }
+
+      default:
+        // ignore other events
+        break;
     }
+  } catch (e) {
+    console.error("Webhook handler error:", e);
+    return { statusCode: 500, body: "handler error" };
   }
 
-  // Handle subscription cancellation
-  if (stripeEvent.type === "customer.subscription.deleted") {
-    const subscription = stripeEvent.data.object;
-    const customerId = subscription.customer;
-    const customer = await stripe.customers.retrieve(customerId);
-    const email = (customer.email || "").toLowerCase();
-
-    if (!email) {
-      console.warn("⚠️ No email found for canceled subscription:", customerId);
-      return { statusCode: 200, body: "no email found" };
-    }
-
-    console.log("⚠️ Subscription canceled:", { email, customerId });
-
-    const { error } = await supabase
-      .from("profiles")
-      .update({
-        is_subscribed: false,
-        customer_id: null,
-        plan: null,
-      })
-      .eq("email", email);
-
-    if (error) console.error("❌ Supabase update failed:", error);
-    else console.log(`✅ Subscription canceled for ${email}`);
-  }
-
-  return { statusCode: 200, body: "success" };
+  return { statusCode: 200, body: "ok" };
 };
 
 

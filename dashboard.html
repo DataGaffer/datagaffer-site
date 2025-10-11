@@ -96,7 +96,7 @@
   background-color: #097c35; /* green */
 }
 .button-match:hover {
-  background-color: #145827;
+  background-color: #015326;
 }
 
 /* Player Simulations section */
@@ -308,13 +308,27 @@
   width: 120px;
 }
 
+.bet365-icon {
+  width: 150px;   /* default is 50px */
+  height: 150px;  /* proportionally larger */
+}
 
+.play-button:hover {
+  background-color: #006846;   /* darker green on hover */
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
 
 @media (max-width: 768px) {
   .dg-logo-img {
     height: 80px;
     margin-right: 7px;
   }
+
+  .play-button .bet365-icon {
+  width: 85px;   /* slightly bigger than the default 50px */
+  height: 85px;
+}
 
   .match-box { width: 70px !important; padding: 10px !important; }
   .match-box img { height: 30px !important; }
@@ -512,10 +526,14 @@
   </a>
 </div>
 
-<!-- Play of the Day -->
+<!-- Bet365 Affiliate Banner -->
+<!-- Bet365 Affiliate Banner -->
 <div class="play-banner">
   <div class="play-line"></div>
-  <button class="play-button" id="play-button">Play of the day ★</button>
+  <button class="play-button" id="bet365-button">
+    <img class="button-icon bet365-icon" src="365.svg" alt="Bet365 Logo">
+    <span class="bet-text">#1 Sportsbook for Football</span>
+  </button>
   <div class="play-line"></div>
 </div>
 

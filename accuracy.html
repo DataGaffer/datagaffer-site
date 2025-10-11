@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Accuracy | DataGaffer</title>
+<style>
+  body { font-family: Arial, sans-serif; background:#f9f9f9; color:#003f2e; margin:0; }
+  .header { background:#003f2e; color:#fff; text-align:center; padding:14px; font-size:28px; font-weight:700; }
+  .wrap { max-width:900px; margin:auto; padding:20px; }
+  .summary { text-align:center; margin-bottom:30px; font-size:20px; font-weight:600; }
+  .card { background:#fff; border:2px solid #003f2e; border-radius:12px; padding:16px; margin-bottom:20px; }
+  .date { font-size:20px; font-weight:700; margin-bottom:10px; color:#003f2e; }
+  table { width:100%; border-collapse:collapse; }
+  th, td { padding:10px; border-bottom:1px solid #ddd; text-align:left; }
+  th { background:#003f2e; color:white; }
+  .win { color:#0ea768; font-weight:700; }
+  .loss { color:#e9ef85; font-weight:700; }
+</style>
+</head>
+<body>
+  <div class="header">DataGaffer Accuracy Tracker</div>
+  <div class="wrap">
+    <div class="summary" id="summary"></div>
+    <div id="results"></div>
+  </div>
+
+<script>
+async function loadAccuracy() {
+  const data = await fetch('accuracy.json').then(r=>r.json()).catch(()=>[]);
+  if (!data.length) {
+    document.getElementById("results").innerHTML = "<p>No data yet.</p>";
+    return;
+  }
+
+  let total=0, wins=0;
+  const container=document.getElementById("results");
+
+  data.forEach(day=>{
+    let html = `<div class='card'><div class='date'>${day.date}</div><table>
+      <tr><th>Match</th><th>Pick</th><th>Edge</th><th>Result</th></tr>`;
+    day.picks.forEach(p=>{
+      total++;
+      if(p.result==="Win") wins++;
+      html += `<tr>
+        <td>${p.match}</td>
+        <td>${p.pick}</td>
+        <td>+${p.edge}%</td>
+        <td class="${p.result==='Win'?'win':'loss'}">${p.result}</td>
+      </tr>`;
+    });
+    html += "</table></div>";
+    container.innerHTML += html;
+  });
+
+  const winRate = ((wins/total)*100).toFixed(1);
+  document.getElementById("summary").innerText = `Overall Accuracy: ${winRate}% (${wins}/${total})`;
+}
+loadAccuracy();
+</script>
+</body>
+</html>

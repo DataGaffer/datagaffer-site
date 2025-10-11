@@ -92,7 +92,7 @@
 
   /* Match Simulations section */
   .button-match { background-color: #097c35; }
-  .button-match:hover { background-color: #145827; }
+  .button-match:hover { background-color: #015326; }
 
   /* Player Simulations section */
   .button-player { background-color: #024d8a; }
@@ -259,6 +259,17 @@
   width: 120px;
 }
 
+.bet365-icon {
+  width: 150px;   /* default is 50px */
+  height: 150px;  /* proportionally larger */
+}
+
+.play-button:hover {
+  background-color: #006846;   /* darker green on hover */
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
+
 @media (max-width: 768px) {
  .dg-logo-img {
    height: 80px;
@@ -311,6 +322,23 @@
    padding-right: 65px;
  }
 
+  
+  .play-button {
+    font-size: 16px !important;   /* smaller text on mobile */
+    padding: 10px 12px !important;
+    width: 95% !important;
+    height: 50px !important;
+    gap: 10px !important;
+  }
+
+  .play-button .bet365-icon {
+    width: 85px !important;
+    height: 85px !important;
+  }
+
+  .bet-text {
+    font-size: 20px !important;   /* smaller inside span */
+  }
 
 
 
@@ -380,6 +408,7 @@
    font-size: 20px;
    font-weight: 500;
    margin: 15px 0 10px;
+   margin-top: 10px;
  }
 
 
@@ -432,10 +461,13 @@
   <a href="signup.html" class="button button-match"><img class="button-icon" src="page.svg" alt="icon">Outlooks</a>
 </div>
 
-<!-- Play of the Day -->
+<!-- Bet365 Affiliate Banner -->
 <div class="play-banner">
   <div class="play-line"></div>
-  <button class="play-button" id="play-button">Play of the day ★</button>
+  <button class="play-button" id="bet365-button">
+    <img class="button-icon bet365-icon" src="365.svg" alt="Bet365 Logo">
+    <span class="bet-text">#1 Sportsbook for Football</span>
+  </button>
   <div class="play-line"></div>
 </div>
 
