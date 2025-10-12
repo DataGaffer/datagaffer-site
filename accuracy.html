@@ -1,62 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Accuracy | DataGaffer</title>
-<style>
-  body { font-family: Arial, sans-serif; background:#f9f9f9; color:#003f2e; margin:0; }
-  .header { background:#003f2e; color:#fff; text-align:center; padding:14px; font-size:28px; font-weight:700; }
-  .wrap { max-width:900px; margin:auto; padding:20px; }
-  .summary { text-align:center; margin-bottom:30px; font-size:20px; font-weight:600; }
-  .card { background:#fff; border:2px solid #003f2e; border-radius:12px; padding:16px; margin-bottom:20px; }
-  .date { font-size:20px; font-weight:700; margin-bottom:10px; color:#003f2e; }
-  table { width:100%; border-collapse:collapse; }
-  th, td { padding:10px; border-bottom:1px solid #ddd; text-align:left; }
-  th { background:#003f2e; color:white; }
-  .win { color:#0ea768; font-weight:700; }
-  .loss { color:#e9ef85; font-weight:700; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DataGaffer - Accuracy Tracker</title>
+
+  <!-- ✅ Favicons -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f2f4f7;
+      color: #222;
+    }
+
+    /* Header */
+    .header-bar {
+      background-color: #003f2e;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .header-logo {
+      height: 90px;
+      position: absolute;
+      left: 20px;
+      top: 5px;
+    }
+    .header-bar h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    /* Banner */
+    .banner {
+      text-align: center;
+      font-size: 18px;
+      margin: 20px auto 15px auto;
+      color: #003f2e;
+      background: #ffffff;
+      padding: 10px;
+      border: 2px solid #003f2e;
+      width: 60%;
+      border-radius: 4px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* Summary */
+    .summary {
+      text-align: center;
+      font-size: 16px;
+      margin: 10px auto 25px auto;
+      font-weight: 600;
+      color: #003f2e;
+    }
+
+    /* Table */
+    .accuracy-table {
+      width: 95%;
+      max-width: 950px;
+      margin: 0 auto 40px auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    }
+    .accuracy-table th, .accuracy-table td {
+      padding: 12px 14px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      font-size: 15px;
+    }
+    .accuracy-table th {
+      background: #003f2e;
+      color: white;
+      font-weight: 600;
+    }
+    .accuracy-table tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    /* Results */
+    .result-win {
+      background: #23cc4a;
+      color: #000000;
+      font-weight: bold;
+    }
+    .result-loss {
+      background: #e9ef85;
+      color: #000000;
+      font-weight: bold;
+    }
+    .result-pending {
+      background: #f7f7f7;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .header-logo { height: 45px !important; }
+      .header-bar h1 { font-size: 20px !important; }
+      .banner { width: 95% !important; font-size: 13px !important; padding: 6px !important; }
+      .summary { font-size: 13px !important; margin: 10px auto 15px auto; }
+      .accuracy-table th, .accuracy-table td { font-size: 9px !important; padding: 4px 6px !important; }
+    }
+  </style>
 </head>
 <body>
-  <div class="header">DataGaffer Accuracy Tracker</div>
-  <div class="wrap">
-    <div class="summary" id="summary"></div>
-    <div id="results"></div>
+
+  <!-- Header -->
+  <div class="header-bar">
+    <a href="index.html" style="text-decoration:none; color:inherit;">
+      <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+           alt="DG Logo" class="header-logo"/>
+      <h1>DataGaffer.com</h1>
+    </a>
   </div>
+
+  <!-- Banner -->
+  <div class="banner">Daily AI Top Picks Accuracy – Full History</div>
+
+  <!-- Summary -->
+  <div class="summary" id="summary">Loading...</div>
+
+  <!-- Table -->
+  <table class="accuracy-table" id="accuracy-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Match</th>
+        <th>Pick</th>
+        <th>Bet365</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody id="accuracy-body"></tbody>
+  </table>
 
 <script>
 async function loadAccuracy() {
   const data = await fetch('accuracy.json').then(r=>r.json()).catch(()=>[]);
   if (!data.length) {
-    document.getElementById("results").innerHTML = "<p>No data yet.</p>";
+    document.getElementById("accuracy-body").innerHTML = "<tr><td colspan='5'>No data yet.</td></tr>";
     return;
   }
 
-  let total=0, wins=0;
-  const container=document.getElementById("results");
+  let total = 0, wins = 0;
+  const body = document.getElementById("accuracy-body");
+  body.innerHTML = "";
 
-  data.forEach(day=>{
-    let html = `<div class='card'><div class='date'>${day.date}</div><table>
-      <tr><th>Match</th><th>Pick</th><th>Edge</th><th>Result</th></tr>`;
-    day.picks.forEach(p=>{
-      total++;
-      if(p.result==="Win") wins++;
-      html += `<tr>
-        <td>${p.match}</td>
-        <td>${p.pick}</td>
-        <td>+${p.edge}%</td>
-        <td class="${p.result==='Win'?'win':'loss'}">${p.result}</td>
-      </tr>`;
+  // Flatten all picks into a single list
+  const allPicks = [];
+  data.forEach(day => {
+    day.picks.forEach(p => {
+      allPicks.push({
+        date: day.date,
+        match: p.match,
+        pick: p.pick,
+        book_odds: p.book_odds,
+        result: p.result
+      });
     });
-    html += "</table></div>";
-    container.innerHTML += html;
   });
 
-  const winRate = ((wins/total)*100).toFixed(1);
+  // Sort newest to oldest
+  allPicks.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  allPicks.forEach(p => {
+    total++;
+    if (p.result === "Win") wins++;
+    const resClass = p.result === "Win" ? "result-win" :
+                     p.result === "Loss" ? "result-loss" : "result-pending";
+
+    body.innerHTML += `
+      <tr>
+        <td>${p.date}</td>
+        <td>${p.match}</td>
+        <td>${p.pick}</td>
+        <td>${p.book_odds ? p.book_odds.toFixed(2) : "-"}</td>
+        <td class="${resClass}">${p.result}</td>
+      </tr>`;
+  });
+
+  const winRate = ((wins / total) * 100).toFixed(1);
   document.getElementById("summary").innerText = `Overall Accuracy: ${winRate}% (${wins}/${total})`;
 }
+
 loadAccuracy();
 </script>
+
 </body>
 </html>

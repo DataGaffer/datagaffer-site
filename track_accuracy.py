@@ -69,6 +69,10 @@ def fetch_result(fixture_id):
 
 
 def determine_result(pick, home_goals, away_goals, home_name, away_name):
+    # 🛑 Skip unfinished matches
+    if home_goals is None or away_goals is None:
+        return "Pending"
+
     total = home_goals + away_goals
     pick_lower = pick.lower()
 
