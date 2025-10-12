@@ -76,15 +76,13 @@ const toDecimalOdds = pct => (pct>0 && pct<100) ? +(100/pct).toFixed(2) : null;
 const impliedPct = dec => dec>1 ? +(100/dec).toFixed(1) : null;
 
 const MARKET_MAP = [
-  {sim:'home_win_pct', book:'home_win', label:(m)=>`${m.home.name} Win`},
-  {sim:'away_win_pct', book:'away_win', label:(m)=>`${m.away.name} Win`},
-  {sim:'over_2_5_pct', book:'over_2_5', label:()=>`Over 2.5`},
-  {sim:'btts_pct', book:'btts', label:()=>`BTTS Yes`},
-  {sim:'home_o1_5_pct', book:'home_o1_5', label:(m)=>`${m.home.name} o1.5`},
-  {sim:'away_o1_5_pct', book:'away_o1_5', label:(m)=>`${m.away.name} o1.5`}
+  {sim:'home_win_pct', book:'home_win', label:(m)=>`${m.home.name} Win`, minSim:60, type:'win'},
+  {sim:'away_win_pct', book:'away_win', label:(m)=>`${m.away.name} Win`, minSim:60, type:'win'},
+  {sim:'over_2_5_pct', book:'over_2_5', label:()=>`Over 2.5`, minSim:45, type:'total'},
+  {sim:'btts_pct', book:'btts', label:()=>`BTTS Yes`, minSim:45, type:'btts'},
+  {sim:'home_o1_5_pct', book:'home_o1_5', label:(m)=>`${m.home.name} o1.5`, minSim:50, type:'team_total'},
+  {sim:'away_o1_5_pct', book:'away_o1_5', label:(m)=>`${m.away.name} o1.5`, minSim:50, type:'team_total'}
 ];
-
-let allLegs = [];
 
 function collectLegs(fixtures){
   const legs=[];
@@ -93,7 +91,7 @@ function collectLegs(fixtures){
     const book=match.book_odds||{};
     for(const mk of MARKET_MAP){
       const p=sim[mk.sim], o=book[mk.book];
-      if(typeof p==='number' && typeof o==='number' && p>55 && o>1){  // ✅ only include sim% ≥ 55
+      if (typeof p==='number' && typeof o==='number' && p >= (mk.minSim || 55) && o>1){
         const imp=impliedPct(o);
         const edge=+(p-imp).toFixed(1);
         legs.push({
@@ -104,11 +102,11 @@ function collectLegs(fixtures){
           edge,
           league:match.league?.name||'',
           teams:`${match.home.name} vs ${match.away.name}`,
+          type:mk.type   // ✅ now legs know what kind they are
         });
       }
     }
   }
-  // ✅ Sort by highest Sim% first, fallback to Edge
   return legs.sort((a,b)=>b.simPct - a.simPct || b.edge - a.edge);
 }
 
@@ -149,21 +147,23 @@ function bestParlays(legs, size, limit = 5) {
   const n = pool.length;
 
   function add(par) {
-    if (!par) return;
+  if (!par) return;
 
-    // skip if any leg has already been used 2+ times
-    if (par.legs.some(l => (usedBets[l.desc] || 0) >= 2)) return;
+  // ❌ Skip if any leg has already been used 2+ times
+  if (par.legs.some(l => (usedBets[l.desc] || 0) >= 2)) return;
 
-    // add parlay and count bet usage
-    res.push(par);
-    par.legs.forEach(l => {
-      usedBets[l.desc] = (usedBets[l.desc] || 0) + 1;
-    });
+  // ✅ Limit: no more than 1 "win" type per parlay
+  const winCount = par.legs.filter(l => l.type === 'win').length;
+  if (winCount > 1) return;
 
-    // sort strictly by Simulated %
-    res.sort((a, b) => b.parlaySimPct - a.parlaySimPct);
-    if (res.length > limit) res.pop();
-  }
+  res.push(par);
+  par.legs.forEach(l => {
+    usedBets[l.desc] = (usedBets[l.desc] || 0) + 1;
+  });
+
+  res.sort((a, b) => b.parlaySimPct - a.parlaySimPct);
+  if (res.length > limit) res.pop();
+}
 
   // Generate parlays (avoid same match in one parlay)
   if (size === 2) {

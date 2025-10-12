@@ -69,21 +69,21 @@ async function loadTopPicks() {
     const book = match.book_odds || {};
     for (const mk of MARKET_MAP) {
       const p = sim[mk.sim], o = book[mk.book];
-      if (typeof p === "number" && typeof o === "number" && o > 1) {
-        const imp = impliedPct(o);
-        const edge = +(p - imp).toFixed(1);
-        if (edge > 0 && p >= 55) { // ✅ filter only confident, +EV plays
-          all.push({
-            matchId: match.fixture_id || `${match.home_id}-${match.away_id}`,
-            match: `${match.home.name} vs ${match.away.name}`,
-            pick: mk.label(match),
-            dg_odds: (100 / p).toFixed(2),
-            book_odds: o.toFixed(2),
-            edge: edge,
-            league: match.league?.name || ""
-          });
-        }
-      }
+      if (typeof p === "number" && typeof o === "number" && o >= 1.7 && o <= 2.5) {
+  const imp = impliedPct(o);
+  const edge = +(p - imp).toFixed(1);
+  if (edge > 0 && p >= 55) { // ✅ confident & +EV
+    all.push({
+      matchId: match.fixture_id || `${match.home_id}-${match.away_id}`,
+      match: `${match.home.name} vs ${match.away.name}`,
+      pick: mk.label(match),
+      dg_odds: (100 / p).toFixed(2),
+      book_odds: o.toFixed(2),
+      edge: edge,
+      league: match.league?.name || ""
+    });
+  }
+}
     }
   }
 
