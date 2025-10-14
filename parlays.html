@@ -156,6 +156,9 @@ function bestParlays(legs, size, limit = 5) {
   const winCount = par.legs.filter(l => l.type === 'win').length;
   if (winCount > 1) return;
 
+  // 🚫 NEW RULE: Skip parlays with total odds under 1.70
+  if (par.parlayDec < 1.7) return;
+
   res.push(par);
   par.legs.forEach(l => {
     usedBets[l.desc] = (usedBets[l.desc] || 0) + 1;
@@ -199,8 +202,8 @@ function legHTML(l){
   return `<div class="leg">
     <div class="left"><div class="title">${l.desc}</div><div class="tiny muted">${l.teams}${l.league?` • ${l.league}`:''}</div></div>
     <div class="right">
-      <div class="row"><span class="muted">Sim% </span><span><b>${l.simPct}%</b></span></div>
-      <div class="row"><span class="muted">Bet365</span><span><b>${l.bookOdds}</b></span></div>
+      <div class="row"><span class="muted">Sim%: </span><span><b>${l.simPct}%</b></span></div>
+      <div class="row"><span class="muted">Bet365:</span><span><b>${l.bookOdds}</b></span></div>
       <div class="row"><span class="muted">Edge: </span><span class="pill">${l.edge>0?'+':''}${l.edge}%</span></div>
     </div>
   </div>`;
