@@ -12,10 +12,8 @@ const ACTIVE_STATUSES = new Set(["active", "trialing", "past_due"]); // treat th
 
 function planFromPriceId(id) {
   if (!id) return null;
-  if (id === process.env.STRIPE_PRICE_ID) return "20_old";
-  if (id === process.env.STRIPE_PRICE_ID_20_NEW) return "20_new";
-  if (id === process.env.STRIPE_PRICE_ID_50) return "50";
-  if (id === process.env.STRIPE_PRICE_ID_250) return "250";
+  if (id === process.env.STRIPE_PRICE_ID_MONTHLY) return "monthly";
+  if (id === process.env.STRIPE_PRICE_ID_YEARLY) return "yearly";
   return null;
 }
 

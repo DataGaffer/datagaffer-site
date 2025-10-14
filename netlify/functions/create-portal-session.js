@@ -3,18 +3,16 @@ const { createClient } = require("@supabase/supabase-js");
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY // ⚠️ service role key is required here (server-side only)
+  process.env.SUPABASE_SERVICE_ROLE_KEY // ✅ Only use service role key server-side
 );
 
 exports.handler = async (event) => {
   try {
-    // ✅ Make sure it's a POST request
     if (event.httpMethod !== "POST") {
       return { statusCode: 405, body: "Method Not Allowed" };
     }
 
     const { user_id } = JSON.parse(event.body);
-
     if (!user_id) {
       return {
         statusCode: 400,
@@ -22,7 +20,7 @@ exports.handler = async (event) => {
       };
     }
 
-    // 🔎 Look up customer_id in profiles table
+    // 🔎 Fetch customer_id and email from Supabase
     const { data: profile, error } = await supabase
       .from("profiles")
       .select("customer_id, email")
@@ -30,22 +28,22 @@ exports.handler = async (event) => {
       .single();
 
     if (error) {
-      console.error("Supabase lookup error:", error.message);
+      console.error("❌ Supabase lookup error:", error.message);
       return { statusCode: 400, body: JSON.stringify({ error: error.message }) };
     }
 
     if (!profile?.customer_id) {
-      // No Stripe customer yet → send them to subscribe page
+      // No Stripe customer yet → redirect to subscribe page
       return {
         statusCode: 200,
         body: JSON.stringify({ redirect: "/subscribe.html" }),
       };
     }
 
-    // ✅ Create billing portal session
+    // ✅ Create a Stripe billing portal session
     const portalSession = await stripe.billingPortal.sessions.create({
       customer: profile.customer_id,
-      return_url: "https://www.datagaffer.com/dashboard.html", // send them back to dashboard
+      return_url: `${process.env.SITE_URL}/dashboard.html`,
     });
 
     return {
@@ -53,7 +51,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({ url: portalSession.url }),
     };
   } catch (err) {
-    console.error("Portal session error:", err);
+    console.error("❌ Portal session error:", err);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: "Internal server error" }),

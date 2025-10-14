@@ -54,6 +54,7 @@
     <h1>Sign Up</h1>
     <form id="signup-form">
       <input type="email" id="email" placeholder="Email" required>
+      <input type="email" id="confirm-email" placeholder="Confirm Email" required>
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Sign Up</button>
     </form>
@@ -77,13 +78,17 @@
     document.getElementById("signup-form").addEventListener("submit", async (e) => {
       e.preventDefault();
       const email = document.getElementById("email").value.trim();
+      const confirmEmail = document.getElementById("confirm-email").value.trim();
       const password = document.getElementById("password").value.trim();
 
+      // ✅ Check if emails match
+      if (email !== confirmEmail) {
+        alert("Emails do not match. Please re-enter.");
+        return;
+      }
+
       // ✅ Direct signup without email confirmation
-      const { data, error } = await supabaseClient.auth.signUp({
-        email,
-        password
-      });
+      const { data, error } = await supabaseClient.auth.signUp({ email, password });
 
       if (error) {
         alert("Signup error: " + error.message);
@@ -93,7 +98,7 @@
 
       const user = data.user;
       if (user) {
-        // ✅ Create a new profile
+        // ✅ Create a new profile in Supabase
         const { error: profileError } = await supabaseClient
           .from("profiles")
           .insert([{
@@ -106,11 +111,11 @@
         if (profileError) {
           console.error("Profile insert error:", profileError.message);
         } else {
-          console.log("✅ Profile row created for", user.email);
+          console.log("✅ Profile created for", user.email);
         }
 
-        // ✅ Redirect immediately to subscription page
-        alert("Signup successful! Redirecting...");
+        // ✅ Redirect to subscription page
+        alert("Signup successful! Redirecting to subscription...");
         window.location.href = "subscribe.html";
       }
     });

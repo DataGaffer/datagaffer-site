@@ -2,28 +2,22 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
   try {
-    const { plan, email } = JSON.parse(event.body); // ✅ now includes email from front-end
+    const { plan, email } = JSON.parse(event.body);
 
     let priceId;
     let successUrl;
 
-    if (plan === "20_old") {
-      priceId = process.env.STRIPE_PRICE_ID;
+    if (plan === "monthly") {
+      priceId = process.env.STRIPE_PRICE_ID_MONTHLY;
       successUrl = `${process.env.SITE_URL}/dashboard.html?session_id={CHECKOUT_SESSION_ID}`;
-    } else if (plan === "20_new") {
-      priceId = process.env.STRIPE_PRICE_ID_20_NEW;
-      successUrl = `${process.env.SITE_URL}/standard.html?session_id={CHECKOUT_SESSION_ID}`;
-    } else if (plan === "50") {
-      priceId = process.env.STRIPE_PRICE_ID_50;
-      successUrl = `${process.env.SITE_URL}/dashboard.html?session_id={CHECKOUT_SESSION_ID}`;
-    } else if (plan === "250") {
-      priceId = process.env.STRIPE_PRICE_ID_250;
+    } else if (plan === "yearly") {
+      priceId = process.env.STRIPE_PRICE_ID_YEARLY;
       successUrl = `${process.env.SITE_URL}/dashboard.html?session_id={CHECKOUT_SESSION_ID}`;
     } else {
       throw new Error("Invalid plan selected");
     }
 
-    // ✅ Create Stripe Checkout session with locked Supabase email
+    // ✅ Create checkout session
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "subscription",
@@ -34,9 +28,9 @@ exports.handler = async (event) => {
         },
       ],
       subscription_data: {
-        trial_period_days: 7, // ✅ 7-day free trial
+        trial_period_days: 7, // Optional free trial
       },
-      customer_email: email, // 👈 link Stripe checkout to Supabase user’s email
+      customer_email: email, // Links Stripe to Supabase user email
       success_url: successUrl,
       cancel_url: `${process.env.SITE_URL}/subscribe.html`,
     });

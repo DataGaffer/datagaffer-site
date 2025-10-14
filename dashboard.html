@@ -13,6 +13,7 @@
 <link rel="manifest" href="/site.webmanifest" />
 <meta name="theme-color" content="#ffffff">
 <style>
+
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -95,7 +96,7 @@
   background-color: #097c35; /* green */
 }
 .button-match:hover {
-  background-color: #145827;
+  background-color: #015326;
 }
 
 /* Player Simulations section */
@@ -147,7 +148,7 @@
   }
 
   .play-button {
-    background-color: #4a4a4a;
+    background-color: #003f2e;
     color: white;
     font-size: 48px;
     padding: 20px 40px;
@@ -307,13 +308,27 @@
   width: 120px;
 }
 
+.bet365-icon {
+  width: 150px;   /* default is 50px */
+  height: 150px;  /* proportionally larger */
+}
 
+.play-button:hover {
+  background-color: #006846;   /* darker green on hover */
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
 
 @media (max-width: 768px) {
   .dg-logo-img {
     height: 80px;
     margin-right: 7px;
   }
+
+  .play-button .bet365-icon {
+  width: 85px;   /* slightly bigger than the default 50px */
+  height: 85px;
+}
 
   .match-box { width: 70px !important; padding: 10px !important; }
   .match-box img { height: 30px !important; }
@@ -442,6 +457,7 @@
     font-size: 20px;
     font-weight: 500;
     margin: 15px 0 10px;
+    margin-top: 18px;
   }
 
   .bet-text {
@@ -510,26 +526,30 @@
   </a>
 </div>
 
-<!-- Play of the Day -->
+<!-- Bet365 Affiliate Banner -->
+<!-- Bet365 Affiliate Banner -->
 <div class="play-banner">
   <div class="play-line"></div>
-  <button class="play-button" id="play-button">Play of the day ★</button>
+  <button class="play-button" id="bet365-button">
+    <img class="button-icon bet365-icon" src="logo.svg" alt="Bet365 Logo">
+    <span class="bet-text"> #1 Sportsbook for Football</span>
+  </button>
   <div class="play-line"></div>
 </div>
 
 <!-- Simulation Focus -->
-<div class="section-title">Simulation Focus & Betting Tools</div>
+<div class="section-title">Simulation Focus & Betting tools</div>
 <div class="grid">
   <a href="player_card.html" class="button button-focus">
     <img class="button-icon" src="idcard.svg" alt="icon">Player Cards
   </a>
-  <a  class="button button-dead">
+  <a  href="parlays.html" class="button button-parlay">
    <img class="button-icon" src="parlay.svg" alt="icon">Parlay Builder
   </a>
   <a href="match_card.html" class="button button-focus">
     <img class="button-icon" src="field.svg" alt="icon">Match Cards
   </a>
-  <a class="button button-dead">
+  <a href="plays.html" class="button button-parlay">
     <img class="button-icon" src="star.svg" alt="icon">AI Top Picks
   </a>
 </div>
@@ -541,7 +561,7 @@
     <img class="button-icon" src="ball.svg" alt="icon">Goalscorer
   </a>
   <a href="player_simulations.html?section=assists" class="button button-player">
-    <img class="button-icon" src="cleat.svg" alt="icon">Assists 
+    <img class="button-icon" src="cleat.svg" alt="icon">Assists
   </a>
   <a href="player_simulations.html?section=shots" class="button button-player">
     <img class="button-icon" src="target.svg" alt="icon">Shots/SOT
@@ -565,9 +585,21 @@
 <div class="bottom-line"></div>
 <div class="bottom-buttons">
   <a href="model.html" class="bottom-btn">Model</a>
-  <a href="potd.html" class="bottom-btn">POTD</a>
+  <a href="accuracy.html" class="bottom-btn">Accuracy</a>
 </div>
 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+ const todaysPlay = "Norway vs Israel BTTS";
+ const playButton = document.getElementById("play-button");
+
+ playButton.addEventListener("click", () => {
+   playButton.innerHTML = `<span class="bet-text">${todaysPlay}</span>`;
+ });
+});
+</script>
 
 <script>
 fetch('fixtures.json')
@@ -594,7 +626,7 @@ fetch('fixtures.json')
 <script>
 /* --- Supabase setup --- */
 const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E"; // anon key only
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
   auth: { persistSession: true, detectSessionInUrl: true }
@@ -609,7 +641,7 @@ window.addEventListener("pageshow", function (event) {
 });
 
 /* --- Inactivity logout (15 minutes) --- */
-const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const INACTIVITY_LIMIT = 15 * 60 * 1000;
 let inactivityTimer;
 
 function resetInactivityTimer() {
@@ -644,7 +676,7 @@ document.body.style.display = "none"; // hide content until validated
     return;
   }
 
-  // Look up subscription + plan in Supabase
+  // Check user's subscription in Supabase
   const { data: profile, error: profileError } = await supabaseClient
     .from("profiles")
     .select("is_subscribed, plan")
@@ -652,64 +684,70 @@ document.body.style.display = "none"; // hide content until validated
     .single();
 
   if (profileError || !profile?.is_subscribed) {
-    console.warn("Not subscribed → redirecting to subscribe");
+    console.warn("Not subscribed → redirecting to subscribe page");
     window.location.href = "subscribe.html";
     return;
   }
 
-  // ✅ Allow only $20_new plan here
-  if (profile.plan === "20_new") {
-    console.log("User is on new $20 plan → showing standard dashboard");
+  // ✅ Allow only active monthly/yearly users
+  if (profile.plan === "monthly" || profile.plan === "yearly") {
+    console.log("✅ Active plan:", profile.plan, "→ Showing page");
     document.body.style.display = "block";
   } else {
-    console.warn("Wrong plan → redirecting to full dashboard");
-    window.location.href = "dashboard.html";
+    console.warn("User has unsupported plan:", profile.plan);
+    window.location.href = "subscribe.html";
   }
 })();
 
 /* --- Manage subscription button --- */
-document.getElementById("manage-subscription").addEventListener("click", async () => {
-  try {
-    const { data: { session }, error } = await supabaseClient.auth.getSession();
-    console.log("Manage subscription session:", session);
+const manageBtn = document.getElementById("manage-subscription");
+if (manageBtn) {
+  manageBtn.addEventListener("click", async () => {
+    try {
+      const { data: { session }, error } = await supabaseClient.auth.getSession();
+      if (error || !session) {
+        alert("You must be logged in to manage your subscription.");
+        return;
+      }
 
-    if (error || !session) {
-      alert("You must be logged in to manage your subscription.");
-      return;
+      const user_id = session.user.id;
+
+      const response = await fetch("/.netlify/functions/create-portal-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user_id })
+      });
+
+      const { url, error: portalError } = await response.json();
+      if (portalError) {
+        console.error("Portal error:", portalError);
+        alert("Error: " + portalError);
+        return;
+      }
+
+      if (url) {
+        window.location.href = url;
+      } else {
+        alert("Could not open billing portal.");
+      }
+    } catch (err) {
+      console.error("Portal exception:", err);
+      alert("Something went wrong. Please try again.");
     }
-
-    const user_id = session.user.id;
-
-    const response = await fetch("/.netlify/functions/create-portal-session", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ user_id })
-    });
-
-    const { url, error: portalError } = await response.json();
-    if (portalError) {
-      console.error("Portal error:", portalError);
-      alert("Error: " + portalError);
-      return;
-    }
-
-    if (url) {
-      window.location.href = url; // redirect to Stripe Billing Portal
-    } else {
-      alert("Could not open billing portal.");
-    }
-  } catch (err) {
-    console.error("Portal exception:", err);
-    alert("Something went wrong. Please try again.");
-  }
-});
+  });
+}
 </script>
-
-
-
 
 
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+

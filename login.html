@@ -67,11 +67,7 @@
     const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
 
     const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
-      auth: {
-        persistSession: true,
-        autoRefreshToken: true,
-        detectSessionInUrl: true
-      }
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
     });
 
     document.getElementById("login-form").addEventListener("submit", async (e) => {
@@ -79,11 +75,8 @@
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
-      // 🔹 Attempt login
-      const { data: loginData, error: loginError } = await supabaseClient.auth.signInWithPassword({
-        email,
-        password
-      });
+      // 🔹 Try to sign in
+      const { data: loginData, error: loginError } = await supabaseClient.auth.signInWithPassword({ email, password });
 
       if (loginError) {
         alert("Login error: " + loginError.message);
@@ -100,7 +93,7 @@
 
       const userId = session.user.id;
 
-      // 🔹 Look up subscription + plan from profiles
+      // 🔹 Look up subscription status
       const { data: profile, error: profileError } = await supabaseClient
         .from("profiles")
         .select("is_subscribed, plan")
@@ -109,7 +102,7 @@
 
       if (profileError) {
         console.error("Profile fetch error:", profileError);
-        alert("Error fetching subscription profile. Contact support X/Twitter @datagaffer");
+        alert("Error fetching subscription profile. Contact support on X @DataGaffer.");
         return;
       }
 
@@ -119,12 +112,8 @@
         return;
       }
 
-      // 🔹 Route user based on plan
-      if (profile.plan === "20_new") {
-        window.location.href = "standard.html"; // restricted dashboard
-      } else {
-        window.location.href = "dashboard.html"; // full dashboard
-      }
+      // ✅ Redirect all subscribed users to the same dashboard
+      window.location.href = "dashboard.html";
     });
   </script>
 </body>

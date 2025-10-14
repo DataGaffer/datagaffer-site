@@ -74,7 +74,7 @@
 
     ul li.yes::before {
       content: "✓";
-      color: #0b8c53 !important;
+      color: #0b8c53;
       font-weight: bold;
       position: absolute;
       left: 0;
@@ -114,46 +114,33 @@
 </head>
 <body>
   <h1>Choose Your Plan</h1>
-  <p class="subtitle">Unlock the most realistic football simulations & betting insights powered by DataGaffer.</p>
+  <p class="subtitle">Unlock advanced DataGaffer match simulations, projections & player analytics.</p>
 
   <div class="plans">
-    <div class="plan">
-      <h2>Standard</h2>
-      <div class="price">$19.99 <span>/month</span></div>
-      <ul>
-        <li class="yes">Full Match Simulations</li>
-        <li class="yes">Projections & Rankings</li>
-        <li class="yes">EV Plays + Player Simulations</li>
-        <li class="no">AI Top Plays of the day</li>
-        <li class="no">AI Parlay Builder</li>
-      </ul>
-      <button onclick="subscribe('20_new')">Start Free Trial</button>
-      <div class="trial">Includes 7-day free trial</div>
-    </div>
-
     <div class="plan popular">
       <div class="badge">Most Popular</div>
-      <h2>Pro</h2>
-      <div class="price">$49.99 <span>/month</span></div>
+      <h2>Monthly</h2>
+      <div class="price">$9.99 <span>/month</span></div>
       <ul>
-        <li class="yes">Everything in Standard</li>
-        <li class="yes">AI Top Plays of the day</li>
-        <li class="yes">AI Parlay Builder</li>
+        <li class="yes">All Match Simulations</li>
+        <li class="yes">AI Top Plays + Parlay Builder</li>
+        <li class="yes">Player Simulations</li>
+        <li class="yes">Access to All Stats Pages</li>
       </ul>
-      <button onclick="subscribe('50')">Start Free Trial</button>
+      <button onclick="subscribe('monthly')">Start Free Trial</button>
       <div class="trial">Includes 7-day free trial</div>
     </div>
 
     <div class="plan">
-      <h2>Season Pro</h2>
-      <div class="price">$250 <span>/year</span></div>
-      <div class="save">🔥 Save 42% vs monthly</div>
+      <h2>Yearly</h2>
+      <div class="price">$75 <span>/year</span></div>
+      <div class="save">🔥 Save 37% vs monthly</div>
       <ul>
-        <li class="yes">Everything in Pro</li>
+        <li class="yes">Everything in Monthly</li>
         <li class="yes">Priority Access</li>
         <li class="yes">Annual Savings</li>
       </ul>
-      <button onclick="subscribe('250')">Start Free Trial</button>
+      <button onclick="subscribe('yearly')">Start Free Trial</button>
       <div class="trial">Includes 7-day free trial</div>
     </div>
   </div>
@@ -168,7 +155,7 @@
 
     async function subscribe(plan) {
       try {
-        // ✅ Get current user email from Supabase
+        // ✅ Get current user email
         const { data: { user }, error: userError } = await supabaseClient.auth.getUser();
         if (userError || !user) {
           alert("Please log in before subscribing.");
@@ -176,20 +163,22 @@
           return;
         }
 
-        // ✅ Send plan + email to Netlify function
+        // ✅ Match new plan keys to your backend
+        let planKey;
+        if (plan === "monthly") planKey = "9_99";
+        else if (plan === "yearly") planKey = "75_year";
+
+        // ✅ Call Netlify function
         const res = await fetch("/.netlify/functions/create-checkout-session", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            plan,
-            email: user.email  // 👈 lock email to Supabase account
-          })
+          body: JSON.stringify({ plan: planKey, email: user.email })
         });
 
         const { url } = await res.json();
         if (!url) throw new Error("No checkout URL returned");
 
-        // ✅ Go to Stripe Checkout
+        // ✅ Redirect to Stripe Checkout
         window.location.href = url;
       } catch (err) {
         alert("Error starting checkout: " + err.message);
