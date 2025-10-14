@@ -163,17 +163,12 @@
           return;
         }
 
-        // ✅ Match new plan keys to your backend
-        let planKey;
-        if (plan === "monthly") planKey = "9_99";
-        else if (plan === "yearly") planKey = "75_year";
-
         // ✅ Call Netlify function
-        const res = await fetch("/.netlify/functions/create-checkout-session", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ plan: planKey, email: user.email })
-        });
+const res = await fetch("/.netlify/functions/create-checkout-session", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ plan, email: user.email }) // send "monthly" or "yearly" directly
+});
 
         const { url } = await res.json();
         if (!url) throw new Error("No checkout URL returned");
