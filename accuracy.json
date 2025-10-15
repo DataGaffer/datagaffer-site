@@ -68,5 +68,40 @@
         "result": "Win"
       }
     ]
+  },
+  {
+    "date": "2025-10-15",
+    "picks": [
+      {
+        "fixture_id": 1366310,
+        "match": "Italy vs Israel",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.29,
+        "book_odds": 1.95,
+        "edge": 26.3,
+        "league": "World Cup - Qualification Europe",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1323339,
+        "match": "Rep. Of Ireland vs Armenia",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.46,
+        "book_odds": 2.05,
+        "edge": 19.6,
+        "league": "World Cup - Qualification Europe",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1323340,
+        "match": "Estonia vs Moldova",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.59,
+        "book_odds": 2.25,
+        "edge": 18.4,
+        "league": "World Cup - Qualification Europe",
+        "result": "Loss"
+      }
+    ]
   }
 ]
