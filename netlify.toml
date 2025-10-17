@@ -1,8 +1,3 @@
-[[redirects]]
-  from = "/.netlify/functions/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
 [build]
   functions = "netlify/functions"
 
@@ -11,7 +6,11 @@
   external_node_modules = ["stripe"]
   included_files = ["netlify/functions/*"]
 
-[[headers]]
-  for = "/.netlify/functions/*"
-  [headers.values]
-    Content-Type = "application/json"
+# ✅ No redirect for functions!
+# This makes sure Stripe can hit your webhook directly.
+
+[[redirects]]
+  from = "http://datagaffer.com/*"
+  to = "https://www.datagaffer.com/:splat"
+  status = 301
+  force = true
