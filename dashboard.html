@@ -361,7 +361,19 @@
   background-color: #14722f;
 }
 
+/* Smooth DataGaffer page transitions */
+html, body {
+  background-color: #f9f9f9;  /* your site background */
+}
 
+body {
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
 
 /* --- Smooth fade & slide-in animation --- */
 @keyframes slideUpFade {
@@ -564,6 +576,12 @@
 </head>
 <body>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("fade-in");
+});
+</script>
+  
 <!-- Header -->
 <header class="dg-header">
   <!-- Left: Logo -->
@@ -858,6 +876,20 @@ if (manageBtn) {
     }
   });
 }
+</script>
+
+<script>
+// Smooth fade-out navigation
+document.querySelectorAll("a").forEach(link => {
+  const href = link.getAttribute("href");
+  if (!href || href.startsWith("#") || href.startsWith("mailto") || href.startsWith("http")) return;
+
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    document.body.classList.remove("fade-in");
+    setTimeout(() => window.location.href = href, 150);
+  });
+});
 </script>
 
 </body>

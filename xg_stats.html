@@ -138,6 +138,20 @@
   text-decoration: underline;
 }
 
+/* Smooth DataGaffer page transitions */
+html, body {
+  background-color: #f9f9f9;  /* your site background */
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
  /* --- Mobile adjustments --- */
 @media (max-width: 925px) {
  body { overflow-x: hidden; }
@@ -209,6 +223,13 @@
  </style>
 </head>
 <body>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("fade-in");
+});
+</script>
+
  <div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
    <a href="dashboard.html" style="text-decoration: none; color: inherit; display: contents;">
   <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
@@ -468,6 +489,20 @@ document.body.style.display = "none"; // hide content until validated
     window.location.href = "subscribe.html";
   }
 })();
+</script>
+
+<script>
+// Smooth fade-out navigation
+document.querySelectorAll("a").forEach(link => {
+  const href = link.getAttribute("href");
+  if (!href || href.startsWith("#") || href.startsWith("mailto") || href.startsWith("http")) return;
+
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    document.body.classList.remove("fade-in");
+    setTimeout(() => window.location.href = href, 150);
+  });
+});
 </script>
 
 </body>
