@@ -815,19 +815,7 @@ document.body.style.display = "none"; // hide content until validated
     // Show page + plan badge
     document.body.style.display = "block";
 
-    const badge = document.createElement("div");
-    badge.textContent = `Plan: ${profile.plan.charAt(0).toUpperCase() + profile.plan.slice(1)}`;
-    badge.style.position = "fixed";
-    badge.style.top = "15px";
-    badge.style.right = "20px";
-    badge.style.background = "#00BE00";
-    badge.style.color = "white";
-    badge.style.padding = "6px 12px";
-    badge.style.borderRadius = "6px";
-    badge.style.fontWeight = "bold";
-    badge.style.fontSize = "14px";
-    badge.style.zIndex = "9999";
-    document.body.appendChild(badge);
+    
   } else {
     console.warn("User has unsupported plan:", profile.plan);
     window.location.href = "subscribe.html";
