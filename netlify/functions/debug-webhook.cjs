@@ -1,17 +1,12 @@
-// netlify/functions/debug-webhook.cjs
 exports.config = { rawBody: true };
 
-exports.handler = async (event) => {
-  console.log("🔍 HEADERS:", JSON.stringify(event.headers, null, 2));
-  console.log("🔍 BODY TYPE:", typeof event.body);
-  console.log("🔍 BODY PREVIEW:", event.body?.slice?.(0, 300));
+export async function handler(event) {
+  console.log("🧩 typeof event.body:", typeof event.body);
+  console.log("🧩 event.body length:", event.body?.length || 0);
+  console.log("🧩 First 200 chars of body:", event.body?.slice?.(0, 200));
 
   return {
     statusCode: 200,
-    body: JSON.stringify({
-      message: "✅ Webhook test received",
-      bodyType: typeof event.body,
-      bodyPreview: event.body?.slice?.(0, 300),
-    }),
+    body: "ok"
   };
-};
+}

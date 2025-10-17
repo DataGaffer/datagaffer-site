@@ -6,6 +6,11 @@
   external_node_modules = ["stripe"]
   included_files = ["netlify/functions/*"]
 
+# 👇 Force raw body and CommonJS for Stripe webhook
+[functions."stripe-webhook"]
+  format = "cjs"
+  included_files = ["netlify/functions/stripe-webhook.cjs"]
+
 [[headers]]
   for = "/.netlify/functions/*"
   [headers.values]
