@@ -21,15 +21,15 @@ function planFromPriceId(id) {
   return null;
 }
 
-// --- Upsert profile in Supabase (always updates customer_id) ---
+// --- Upsert profile in Supabase ---
 async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
   if (!email) return;
   email = email.toLowerCase();
 
-  // 🧠 Find existing profile (auth-linked or Stripe-created)
+  // 🧠 Check if this email already exists (auth-linked or Stripe-created)
   const { data: existing } = await supabase
     .from("profiles")
-    .select("id, email, customer_id")
+    .select("id, email")
     .eq("email", email)
     .maybeSingle();
 
@@ -40,13 +40,7 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
     is_subscribed: !!isSubscribed,
   };
 
-  // ✅ Always overwrite outdated customer_id if Stripe gives a new one
-  if (customerId && existing?.customer_id !== customerId) {
-    console.log(`🔄 Updating customer_id for ${email} → ${customerId}`);
-    updatePayload.customer_id = customerId;
-  }
-
-  // Preserve linked auth user ID if one exists
+  // Preserve the auth-linked ID if one already exists
   if (existing?.id) updatePayload.id = existing.id;
 
   const { error } = await supabase
