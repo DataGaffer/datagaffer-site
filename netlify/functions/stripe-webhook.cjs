@@ -1,10 +1,8 @@
-// netlify/functions/stripe-webhook.js
-export const config = {
-  rawBody: true,
-};
+// netlify/functions/stripe-webhook.cjs
+exports.config = { rawBody: true };
 
-import Stripe from "stripe";
-import { createClient } from "@supabase/supabase-js";
+const Stripe = require("stripe");
+const { createClient } = require("@supabase/supabase-js");
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const supabase = createClient(
@@ -39,7 +37,7 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
   else console.log(`✅ Upserted ${email} (subscribed=${isSubscribed})`);
 }
 
-export async function handler(event) {
+exports.handler = async (event) => {
   const sig = event.headers["stripe-signature"];
   let stripeEvent;
 
@@ -60,7 +58,8 @@ export async function handler(event) {
     switch (stripeEvent.type) {
       case "checkout.session.completed": {
         const session = stripeEvent.data.object;
-        const email = session.customer_details?.email || session.customer_email || null;
+        const email =
+          session.customer_details?.email || session.customer_email || null;
         const customerId = session.customer;
         let planCode = null;
         let isSubscribed = false;
@@ -83,7 +82,12 @@ export async function handler(event) {
         const email = customer?.email || null;
         const planCode = planFromPriceId(sub.items?.data?.[0]?.price?.id);
         const isSubscribed = ACTIVE_STATUSES.has(sub.status);
-        await upsertProfile({ email, customerId: sub.customer, planCode, isSubscribed });
+        await upsertProfile({
+          email,
+          customerId: sub.customer,
+          planCode,
+          isSubscribed,
+        });
         break;
       }
 
@@ -91,7 +95,12 @@ export async function handler(event) {
         const sub = stripeEvent.data.object;
         const customer = await stripe.customers.retrieve(sub.customer);
         const email = customer?.email || null;
-        await upsertProfile({ email, customerId: sub.customer, planCode: null, isSubscribed: false });
+        await upsertProfile({
+          email,
+          customerId: sub.customer,
+          planCode: null,
+          isSubscribed: false,
+        });
         break;
       }
 
@@ -104,7 +113,7 @@ export async function handler(event) {
   }
 
   return { statusCode: 200, body: "ok" };
-}
+};
 
 
 
