@@ -26,17 +26,26 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
   if (!email) return;
   email = email.toLowerCase();
 
+  // 🧠 Check if this email already exists (auth-linked or Stripe-created)
+  const { data: existing } = await supabase
+    .from("profiles")
+    .select("id, email")
+    .eq("email", email)
+    .maybeSingle();
+
+  const updatePayload = {
+    email,
+    customer_id: customerId ?? existing?.customer_id ?? null,
+    plan: isSubscribed ? planCode : null,
+    is_subscribed: !!isSubscribed,
+  };
+
+  // Preserve the auth-linked ID if one already exists
+  if (existing?.id) updatePayload.id = existing.id;
+
   const { error } = await supabase
     .from("profiles")
-    .upsert(
-      {
-        email,
-        customer_id: customerId ?? null,
-        plan: isSubscribed ? planCode : null,
-        is_subscribed: !!isSubscribed,
-      },
-      { onConflict: "email" }
-    );
+    .upsert(updatePayload, { onConflict: "email" });
 
   if (error) console.error("❌ Supabase upsert failed:", error);
   else console.log(`✅ Upserted ${email} (subscribed=${isSubscribed})`);
@@ -46,7 +55,6 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
 export async function handler(event) {
   console.log("📩 Stripe webhook received");
 
-  // Safety check
   if (!event.body) {
     console.error("❌ No webhook body");
     return { statusCode: 400, body: "Webhook Error: No webhook payload was provided." };
