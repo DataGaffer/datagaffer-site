@@ -26,18 +26,19 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
   if (!email) return;
   email = email.toLowerCase();
 
-  // 🧠 Check if this email already exists (auth-linked or Stripe-created)
+  // 🧠 Fetch existing row for this email if it exists
   const { data: existing } = await supabase
     .from("profiles")
-    .select("id, email")
+    .select("id, email, is_subscribed, plan, customer_id")
     .eq("email", email)
     .maybeSingle();
 
+  // --- 🧩 Merge with existing data ---
   const updatePayload = {
     email,
     customer_id: customerId ?? existing?.customer_id ?? null,
-    plan: isSubscribed ? planCode : null,
-    is_subscribed: !!isSubscribed,
+    plan: isSubscribed ? planCode : existing?.plan ?? null,
+    is_subscribed: isSubscribed || existing?.is_subscribed || false,
   };
 
   // Preserve the auth-linked ID if one already exists
@@ -48,7 +49,10 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
     .upsert(updatePayload, { onConflict: "email" });
 
   if (error) console.error("❌ Supabase upsert failed:", error);
-  else console.log(`✅ Upserted ${email} (subscribed=${isSubscribed})`);
+  else
+    console.log(
+      `✅ Upserted ${email} | subscribed=${updatePayload.is_subscribed} | plan=${updatePayload.plan}`
+    );
 }
 
 // --- Main handler ---
