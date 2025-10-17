@@ -35,12 +35,13 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
       { onConflict: "email" }
     );
   if (error) console.error("Supabase upsert failed:", error);
-  else console.log(`Upserted profile for ${email} (subscribed=${isSubscribed})`);
+  else console.log(`✅ Upserted profile for ${email} (subscribed=${isSubscribed})`);
 }
 
 exports.handler = async (event) => {
   const sig = event.headers["stripe-signature"];
   let stripeEvent;
+
   try {
     stripeEvent = stripe.webhooks.constructEvent(
       event.body,
@@ -48,41 +49,56 @@ exports.handler = async (event) => {
       process.env.STRIPE_WEBHOOK_SECRET
     );
   } catch (err) {
-    console.error("Signature verification failed:", err.message);
+    console.error("❌ Signature verification failed:", err.message);
     return { statusCode: 400, body: `Webhook Error: ${err.message}` };
   }
 
-  console.log("Webhook:", stripeEvent.type);
+  console.log("📩 Webhook received:", stripeEvent.type);
 
   try {
     switch (stripeEvent.type) {
       case "checkout.session.completed": {
-        const session = stripeEvent.data.object; // CheckoutSession
-        const customerId = session.customer;
-        // safest is to fetch the subscription to get price & status
-        let priceId = null, status = null;
+        const session = stripeEvent.data.object;
+        let priceId = null;
+        let status = null;
+        let customerId = session.customer;
+
+        // Try to fetch subscription info
         if (session.subscription) {
           const sub = await stripe.subscriptions.retrieve(session.subscription);
           priceId = sub.items?.data?.[0]?.price?.id || null;
           status = sub.status;
+          customerId = sub.customer;
+        } else if (session.customer) {
+          // Fallback: get latest sub for this customer
+          const subs = await stripe.subscriptions.list({
+            customer: session.customer,
+            limit: 1,
+          });
+          if (subs.data.length) {
+            priceId = subs.data[0].items?.data?.[0]?.price?.id || null;
+            status = subs.data[0].status;
+            customerId = subs.data[0].customer;
+          }
         }
+
         const email =
-          (session.customer_details?.email ||
-            session.customer_email ||
-            null);
+          session.customer_details?.email ||
+          session.customer_email ||
+          null;
 
         await upsertProfile({
           email,
           customerId,
           planCode: planFromPriceId(priceId),
-          isSubscribed: ACTIVE_STATUSES.has(status || "active"), // sessions complete means they paid
+          isSubscribed: ACTIVE_STATUSES.has(status || "active"),
         });
-        break;
+        break; // ✅ prevents fallthrough
       }
 
       case "customer.subscription.created":
       case "customer.subscription.updated": {
-        const sub = stripeEvent.data.object; // Subscription
+        const sub = stripeEvent.data.object;
         const customerId = sub.customer;
         const priceId = sub.items?.data?.[0]?.price?.id || null;
         const status = sub.status;
@@ -99,7 +115,7 @@ exports.handler = async (event) => {
       }
 
       case "customer.subscription.deleted": {
-        const sub = stripeEvent.data.object; // Subscription
+        const sub = stripeEvent.data.object;
         const customerId = sub.customer;
         const customer = await stripe.customers.retrieve(customerId);
         const email = customer?.email || null;
@@ -114,11 +130,11 @@ exports.handler = async (event) => {
       }
 
       default:
-        // ignore other events
+        console.log("ℹ️ Ignored event type:", stripeEvent.type);
         break;
     }
   } catch (e) {
-    console.error("Webhook handler error:", e);
+    console.error("💥 Webhook handler error:", e);
     return { statusCode: 500, body: "handler error" };
   }
 
