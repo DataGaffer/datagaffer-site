@@ -37,7 +37,57 @@
   .muted{color:#4e5a55}
   .footer-note{margin-top:10px;color:#51615a;font-size:12px;text-align:center}
   .btn.active {background: #046e47;border: 2px solid #003f2e;}
-  @media (max-width:900px){
+
+  .betway-banner {
+  margin-top: 15px;
+  text-align: center;
+  background: #003f2e;
+  border-radius: 8px;
+  padding: 8px 10px;
+  transition: background 0.25s ease;
+}
+
+.betway-banner a {
+  display: flex;
+  flex-direction: row-reverse;   /* logo on right side */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 22px;
+  height: 30px;                  /* clean vertical balance */
+  line-height: 1;
+}
+
+.betway-banner img {
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.betway-banner:hover {
+  background: #046e47;
+}
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.betway-banner {
+  animation: slideUpFade 0.6s ease forwards;  /* ✨ subtle slide & fade-in */
+}
+
+@media (max-width:900px){
+  .betway-banner a { font-size: 16px; height: 24px; }
+  .betway-banner img { height: 16px; }
+
     .header img{height:50px}
     .header h1{font-size:20px}
     .card{width:95%}
@@ -55,7 +105,7 @@
 </div>
 
 <div class="wrap">
-  <div class="banner">AI generated EV parlays based on our DataGaffer simulations vs Bet365 odds</div>
+  <div class="banner">AI generated EV parlays based on our DataGaffer simulations vs Betway odds</div>
 
   <!-- Buttons -->
   <div class="buttons">
@@ -67,7 +117,7 @@
   <div class="cards" id="parlay-cards"></div>
 
   <div class="footer-note">
-    Edge = Sim Probability − Implied Probability from Bet365 odds. Parlays avoid combining two legs from the same match.
+    Edge = Sim Probability − Implied Probability from Betway odds. Parlays avoid combining two legs from the same match.
   </div>
 </div>
 
@@ -78,8 +128,8 @@ const impliedPct = dec => dec>1 ? +(100/dec).toFixed(1) : null;
 const MARKET_MAP = [
   {sim:'home_win_pct', book:'home_win', label:(m)=>`${m.home.name} Win`, minSim:60, type:'win'},
   {sim:'away_win_pct', book:'away_win', label:(m)=>`${m.away.name} Win`, minSim:60, type:'win'},
-  {sim:'over_2_5_pct', book:'over_2_5', label:()=>`Over 2.5`, minSim:45, type:'total'},
-  {sim:'btts_pct', book:'btts', label:()=>`BTTS Yes`, minSim:45, type:'btts'},
+  {sim:'over_2_5_pct', book:'over_2_5', label:()=>`Over 2.5`, minSim:50, type:'total'},
+  {sim:'btts_pct', book:'btts', label:()=>`BTTS Yes`, minSim:50, type:'btts'},
   {sim:'home_o1_5_pct', book:'home_o1_5', label:(m)=>`${m.home.name} o1.5`, minSim:50, type:'team_total'},
   {sim:'away_o1_5_pct', book:'away_o1_5', label:(m)=>`${m.away.name} o1.5`, minSim:50, type:'team_total'}
 ];
@@ -140,7 +190,7 @@ function combine(legs){
   return {size:legs.length,legs,parlayDec:+bookDec.toFixed(2),parlaySimPct,parlayImplied,edge};
 }
 
-function bestParlays(legs, size, limit = 5) {
+function bestParlays(legs, size, limit = 3) {
   const pool = buildPool(legs, 200);
   const res = [];
   const usedBets = {}; // allow each bet up to 2 uses per button group
@@ -154,7 +204,7 @@ function bestParlays(legs, size, limit = 5) {
 
   // ✅ Limit: no more than 1 "win" type per parlay
   const winCount = par.legs.filter(l => l.type === 'win').length;
-  if (winCount > 1) return;
+  if (winCount > 2) return;
 
   // 🚫 NEW RULE: Skip parlays with total odds under 1.70
   if (par.parlayDec < 1.7) return;
@@ -214,10 +264,19 @@ function parlayCardHTML(title,parlay){
     <h2>${title}</h2>
     <div class="kpi">
       <div><div class="tiny muted">Parlay Sim %</div><div class="big">${parlay.parlaySimPct}%</div></div>
-      <div><div class="tiny muted">Bet365 Odds</div><div class="big">${parlay.parlayDec}</div></div>
+      <div><div class="tiny muted">Betway Odds</div><div class="big">${parlay.parlayDec}</div></div>
       <div><div class="tiny muted">Edge</div><div class="big">${parlay.edge>0?'+':''}${parlay.edge}%</div></div>
     </div>
     <div class="legs">${parlay.legs.map(legHTML).join('')}</div>
+
+    <!-- 🔹 Betway banner -->
+    <div class="betway-banner">
+      <a href="https://betway.com/bwp/sports-welcome-ie/en-ie/?s=sp50396&a=spadid219120" 
+         target="_blank" rel="noopener noreferrer">
+         <img src="logo.svg" alt="Betway Logo">
+         <span>Bet on this parlay with</span>
+      </a>
+    </div>
   </div>`;
 }
 

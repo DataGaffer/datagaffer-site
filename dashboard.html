@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DataGaffer - Homepage</title>
+<title>DataGaffer</title>
 
 <!-- ✅ Favicons for all browsers and devices -->
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -12,6 +12,11 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <meta name="theme-color" content="#ffffff">
+
+<!-- ✅ Google Material Icons (for subscriber icon) -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 <style>
 
   body {
@@ -162,6 +167,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
   }
 
   .play-line {
@@ -174,8 +180,8 @@
   }
 
   .bet-text {
-   font-size: 30px;
-   font-weight: normal;
+   font-size: 32px;
+   font-weight: 600;
   }
 
   .dg-header {
@@ -189,35 +195,7 @@
  margin-left: auto;
 }
 
-.manage-btn {
- background-color: #1a8a39;
- color: white;
- border: none;
- padding: 8px 14px;
- border-radius: 6px;
- font-size: 14px;
- cursor: pointer;
-}
 
-.manage-btn:hover {
- background-color: #14722f;
-}
-
-.dg-auth-links {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-.dg-auth-links .manage-btn {
-  background-color: #1a8a39;
-  color: white;
-  padding: 6px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-}
 
 .bottom-buttons {
   display: grid;
@@ -313,16 +291,127 @@
   height: 150px;  /* proportionally larger */
 }
 
+.play-link {
+  display: inline-flex;        /* Prevent full-width stretch */
+  width: 40%;                 /* Match natural content width */
+  height: 80px;                /* Keep your original height */
+  padding: 0 40px;             /* Same side padding as before */
+  text-decoration: none;       /* Remove underline */
+  border-radius: 10px;         /* Match your button shape */
+  justify-content: center;
+  align-items: center;
+}
+
 .play-button:hover {
   background-color: #006846;   /* darker green on hover */
   transform: translateY(-2px);
   transition: all 0.2s ease-in-out;
 }
 
+.dg-auth-links {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.sub-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1.5px solid #003f2e;
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #003f2e;
+  background: #ffffff;
+  width: fit-content;
+  margin-top: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.sub-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.sub-count {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.manage-btn {
+  background-color: #1a8a39;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 5px;
+}
+
+.manage-btn:hover {
+  background-color: #14722f;
+}
+
+
+
+/* --- Smooth fade & slide-in animation --- */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply to the Betway banner */
+.play-banner {
+  animation: slideUpFade 0.8s ease forwards;
+}
+
+
 @media (max-width: 768px) {
   .dg-logo-img {
-    height: 80px;
+    height: 90px;
     margin-right: 7px;
+  }
+
+    .dg-auth-links {
+    right: 10px;
+    top: 15px;
+  }
+
+  .sub-pill {
+    font-size: 11px !important;
+    padding: 2px 6px !important;
+    border-width: 1px !important;
+    gap: 3px !important;
+    margin-top: 20px;
+  }
+
+  .sub-icon {
+    font-size: 12px !important;
+  }
+
+  .sub-count {
+    font-size: 12px !important;
+  }
+
+  .manage-btn {
+    font-size: 12px;
+    padding: 3px 8px;
+    margin-top: 15px;
   }
 
   .play-button .bet365-icon {
@@ -361,19 +450,6 @@
     padding-right: 65px;
   }
 
-  /* ✅ Stack manage button below the header */
-  .dg-auth-links {
-    position: absolute;   /* no absolute */
-    right: 10px;
-    top: 30px
-  }
-
-  .dg-auth-links .manage-btn {
-    font-size: 10px;    /* smaller font */
-    padding: 2px 6px;  /* smaller padding */
-    border-radius: 4px;
-  }
-
   .grid {
     grid-template-columns: repeat(2, 175px);
     gap: 10px;
@@ -381,6 +457,23 @@
     margin-bottom: 20px;
     justify-content: center;
   }
+
+  .play-link {
+  width: 85% !important;         /* Fit nicely on mobile screens */
+  height: 30px !important;       /* Match your smaller mobile banner */
+  font-size: 16px !important;
+  padding: 10px 12px !important;
+}
+
+.play-link .bet365-icon {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.play-banner {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
 
   .button {
     font-size: 16px;
@@ -457,26 +550,28 @@
     font-size: 20px;
     font-weight: 500;
     margin: 15px 0 10px;
-    margin-top: 18px;
+    margin-top: 12px;
   }
 
   .bet-text {
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 18px;
+    font-weight: 600;
   }
 }
-
 
 
 </style>
 </head>
 <body>
 
-<div class="dg-header">
+<!-- Header -->
+<header class="dg-header">
   <!-- Left: Logo -->
   <div class="dg-logo-wrapper">
     <a href="dashboard.html">
-      <img class="dg-logo-img" src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DataGaffer Logo">
+      <img class="dg-logo-img" 
+           src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" 
+           alt="DataGaffer Logo">
     </a>
   </div>
 
@@ -487,17 +582,18 @@
     </a>
   </div>
 
-  <!-- Right: Manage Subscription -->
+  <!-- Right: Subscribers + Manage -->
   <div class="dg-auth-links">
-    <button id="manage-subscription" class="manage-btn">Manage</button>
-  </div>
+    <div class="sub-pill">
+  <span class="material-icons sub-icon">group</span>
+  <span class="sub-count">95</span>
 </div>
 
+    <button id="manage-subscription" class="manage-btn">Manage</button>
+  </div>
+</header>
 
-
-
-
-<!-- Tagline -->
+<!-- ✅ Tagline sits OUTSIDE the header -->
 <div class="dg-tagline">
   Football's most realistic match simulations - driven by data
 </div>
@@ -527,13 +623,17 @@
 </div>
 
 <!-- Bet365 Affiliate Banner -->
-<!-- Bet365 Affiliate Banner -->
 <div class="play-banner">
   <div class="play-line"></div>
-  <button class="play-button" id="bet365-button">
-    <img class="button-icon bet365-icon" src="logo.svg" alt="Bet365 Logo">
-    <span class="bet-text"> #1 Sportsbook for Football</span>
-  </button>
+  <a 
+    href="https://betway.com/bwp/sports-welcome-ie/en-ie/?s=sp50396&a=spadid219120"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="play-button play-link"
+  >
+    <img class="button-icon bet365-icon" src="logo.svg" alt="Betway Logo">
+    <span class="bet-text">#1 Sportsbook for Football</span>
+  </a>
   <div class="play-line"></div>
 </div>
 
@@ -620,7 +720,6 @@ fetch('fixtures.json')
   });
 });
 </script>
-
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
@@ -737,8 +836,6 @@ if (manageBtn) {
   });
 }
 </script>
-
-
 
 
 </body>

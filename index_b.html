@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DataGaffer - Homepage</title>
+<title>DataGaffer</title>
 
 <!-- ✅ Favicons for all browsers and devices -->
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -12,6 +12,22 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <meta name="theme-color" content="#ffffff">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- ✅ Structured Data for Google Logo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DataGaffer",
+  "url": "https://datagaffer.com",
+  "logo": "https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png",
+  "sameAs": [
+    "https://x.com/datagaffer"
+  ]
+}
+</script>
 <style>
 
   body {
@@ -135,6 +151,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
   }
 
   .play-line {
@@ -146,7 +163,7 @@
     border-radius: 2px;
   }
 
-  .bet-text { font-size: 30px; font-weight: normal; }
+  .bet-text { font-size: 32px; font-weight: 600; }
 
   .dg-auth-links {
     position: absolute;
@@ -259,6 +276,17 @@
   width: 120px;
 }
 
+.play-link {
+  display: inline-flex;        /* Prevent full-width stretch */
+  width: 40%;                 /* Match natural content width */
+  height: 80px;                /* Keep your original height */
+  padding: 0 40px;             /* Same side padding as before */
+  text-decoration: none;       /* Remove underline */
+  border-radius: 10px;         /* Match your button shape */
+  justify-content: center;
+  align-items: center;
+}
+
 .bet365-icon {
   width: 150px;   /* default is 50px */
   height: 150px;  /* proportionally larger */
@@ -270,11 +298,74 @@
   transition: all 0.2s ease-in-out;
 }
 
+.sub-pill {
+  position: absolute;
+  right: 40px;
+  top: 60px;  /* sits nicely below buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1.5px solid #003f2e;
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #003f2e;
+  background: #ffffff;
+  width: fit-content;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  z-index: 5;
+  margin-top: 5px;
+}
+
+.sub-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.sub-count {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* --- Smooth fade & slide-in animation --- */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply to the Betway banner */
+.play-banner {
+  animation: slideUpFade 0.8s ease forwards;
+}
+
+
 @media (max-width: 768px) {
  .dg-logo-img {
    height: 80px;
    margin-right: 7px;
  }
+
+  .sub-pill {
+    top: 50px;          /* lowers into tagline on mobile */
+    right: 15px;
+    font-size: 11px !important;
+    padding: 2px 6px !important;
+    border-width: 1px !important;
+    gap: 3px !important;
+    margin-top: 15px;
+  }
+
+  .sub-icon { font-size: 12px !important; }
+  .sub-count { font-size: 12px !important; }
+
 
 .match-box { width: 70px !important; padding: 10px !important; }
 .match-box img { height: 30px !important; }
@@ -337,7 +428,8 @@
   }
 
   .bet-text {
-    font-size: 20px !important;   /* smaller inside span */
+    font-size: 18px!important;   /* smaller inside span */
+    font-weight: 600;
   }
 
 
@@ -425,6 +517,23 @@
  .dg-auth-links a.signup {
    padding: 5px 12px;
  }
+
+ .play-link {
+  width: 85% !important;         /* Fit nicely on mobile screens */
+  height: 30px !important;       /* Match your smaller mobile banner */
+  font-size: 16px !important;
+  padding: 10px 12px !important;
+}
+
+.play-link .bet365-icon {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.play-banner {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
 }
 
 </style>
@@ -442,6 +551,10 @@
       <a href="login.html">Login</a>
       <a href="signup.html" class="signup">Free Trial</a>
     </div>
+    <div class="sub-pill">
+  <span class="material-icons sub-icon">group</span>
+  <span class="sub-count">95</span>
+</div>
   </a>
 </div>
 
@@ -464,10 +577,15 @@
 <!-- Bet365 Affiliate Banner -->
 <div class="play-banner">
   <div class="play-line"></div>
-  <button class="play-button" id="bet365-button">
-    <img class="button-icon bet365-icon" src="logo.svg" alt="Bet365 Logo">
-    <span class="bet-text"> #1 Sportsbook for Football</span>
-  </button>
+  <a 
+    href="https://betway.com/bwp/sports-welcome-ie/en-ie/?s=sp50396&a=spadid219120"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="play-button play-link"
+  >
+    <img class="button-icon bet365-icon" src="logo.svg" alt="Betway Logo">
+    <span class="bet-text">#1 Sportsbook for Football</span>
+  </a>
   <div class="play-line"></div>
 </div>
 
@@ -541,6 +659,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   
 });
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BSMYHX4PLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BSMYHX4PLY');
 </script>
 
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Top Picks | DataGaffer</title>
+<title>Top Plays</title>
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
@@ -16,7 +16,7 @@
   .header{background:#003f2e;color:#fff;display:flex;align-items:center;justify-content:center;position:relative;padding:10px 20px}
   .header img{height:90px;position:absolute;left:20px;top:0}
   .header h1{margin:0;font-size:32px;font-weight:700}
-  .wrap{max-width:980px;margin:24px auto;padding:0 16px}
+  .wrap{max-width:700px;margin:24px auto;padding:0 16px}
   .banner{background:#fff;border:2px solid #003f2e;border-radius:6px;padding:10px 14px;text-align:center;font-weight:600;color:#003f2e}
   .cards{display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:20px}
   .card{background:#fff;border-radius:12px;border:2px solid #003f2e;box-shadow:0 3px 12px rgba(0,0,0,.12);padding:16px;width:90%;max-width:700px}
@@ -25,10 +25,63 @@
   .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#0ea768;color:#fff;font-weight:700;font-size:12px}
   .muted{color:#4e5a55}
   .footer-note{margin-top:14px;color:#51615a;font-size:12px;text-align:center}
+  .betway-banner {
+  margin-top: 15px;
+  text-align: center;
+  background: #003f2e;
+  border-radius: 8px;
+  padding: 8px 10px;
+  transition: background 0.25s ease;
+}
+
+.betway-banner a {
+  display: flex;
+  flex-direction: row-reverse;   /* 🔹 reverses logo and text */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  height: 24px;
+  line-height: 1;
+}
+
+.betway-banner img {
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.betway-banner:hover {
+  background: #046e47;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.betway-banner {
+  animation: slideUpFade 0.6s ease forwards;  /* ✨ subtle slide & fade-in */
+}
   @media (max-width:900px){
     .header img{height:50px}
     .header h1{font-size:20px}
     .card{width:95%}
+    .betway-banner a {
+  font-size: 16px;
+}
+
+.betway-banner img {
+  height: 16px;
+}
   }
 </style>
 </head>
@@ -108,16 +161,25 @@ async function loadTopPicks() {
   }
 
   container.innerHTML = filtered.map((p,i)=>`
-    <div class="card">
-      <h2>AI Pick #${i+1}</h2>
-      <div class="stat-line"><span class="muted">Match:</span> <span>${p.match}</span></div>
-      <div class="stat-line"><span class="muted">Pick:</span> <span><b>${p.pick}</b></span></div>
-      <div class="stat-line"><span class="muted">DG Odds:</span> <span>${p.dg_odds}</span></div>
-      <div class="stat-line"><span class="muted">Bet365 Odds:</span> <span>${p.book_odds}</span></div>
-      <div class="stat-line"><span class="muted">Edge:</span> <span class="pill">+${p.edge}%</span></div>
-      <div class="stat-line"><span class="muted">League:</span> <span>${p.league}</span></div>
+  <div class="card">
+    <h2>AI Pick #${i+1}</h2>
+    <div class="stat-line"><span class="muted">Match:</span> <span>${p.match}</span></div>
+    <div class="stat-line"><span class="muted">Pick:</span> <span><b>${p.pick}</b></span></div>
+    <div class="stat-line"><span class="muted">DG Odds:</span> <span>${p.dg_odds}</span></div>
+    <div class="stat-line"><span class="muted">Betway Odds:</span> <span>${p.book_odds}</span></div>
+    <div class="stat-line"><span class="muted">Edge:</span> <span class="pill">+${p.edge}%</span></div>
+    <div class="stat-line"><span class="muted">League:</span> <span>${p.league}</span></div>
+
+    <!-- 🔹 Betway banner -->
+    <div class="betway-banner">
+      <a href="https://betway.com/bwp/sports-welcome-ie/en-ie/?s=sp50396&a=spadid219120" 
+         target="_blank" rel="noopener noreferrer">
+         <img src="logo.svg" alt="Betway Logo">
+         <span>Bet on this play with</span>
+      </a>
     </div>
-  `).join("");
+  </div>
+`).join("");
 }
 
 loadTopPicks();
