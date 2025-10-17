@@ -6,11 +6,5 @@
   external_node_modules = ["stripe"]
   included_files = ["netlify/functions/*"]
 
-# ✅ No redirect for functions!
-# This makes sure Stripe can hit your webhook directly.
-
-[[redirects]]
-  from = "http://datagaffer.com/*"
-  to = "https://www.datagaffer.com/:splat"
-  status = 301
-  force = true
+[build.environment]
+  NODE_VERSION = "20"
