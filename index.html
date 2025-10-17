@@ -13,10 +13,21 @@
 <link rel="manifest" href="/site.webmanifest" />
 <meta name="theme-color" content="#ffffff">
 
-<!-- ✅ Google Material Icons (for subscriber icon) -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
+<!-- ✅ Structured Data for Google Logo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DataGaffer",
+  "url": "https://datagaffer.com",
+  "logo": "https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png",
+  "sameAs": [
+    "https://x.com/datagaffer"
+  ]
+}
+</script>
 <style>
 
   body {
@@ -76,72 +87,45 @@
     margin-bottom: 40px;
   }
 
-  /* ✅ Unified button styles for <a> and <button> */
   .button {
-  box-sizing: border-box;
-  color: white;
-  padding: 20px 40px;
-  border: none;
-  border-radius: 10px;
-  font-size: 28px;
-  cursor: pointer;
-  width: 100%;
-  text-align: center;
-  margin-bottom: -15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  height: 68px;
-  text-decoration: none;
-}
+    box-sizing: border-box;
+    color: white;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-bottom: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 68px;
+    text-decoration: none;
+  }
 
-/* Match Simulations section */
-.button-match {
-  background-color: #097c35; /* green */
-}
-.button-match:hover {
-  background-color: #015326;
-}
+  /* Match Simulations section */
+  .button-match { background-color: #097c35; }
+  .button-match:hover { background-color: #015326; }
 
-/* Player Simulations section */
-.button-player {
-  background-color: #085290; /* dark blue */
-}
-.button-player:hover {
-  background-color: #053e6d;
-}
+  /* Player Simulations section */
+  .button-player { background-color: #024d8a; }
+  .button-player:hover { background-color: #034275; }
 
-/* Simulation Focus section */
-.button-focus {
-  background-color: #98054a; /* deep magenta */
-}
-.button-focus:hover {
-  background-color: #6b082b;
-}
+  /* Simulation Focus section */
+  .button-focus { background-color: #98054a; }
+  .button-focus:hover { background-color: #700733; }
 
-/* Simulation Focus section */
-.button-value {
-  background-color: #e6b800; /* deep magenta */
-}
-.button-value:hover {
-  background-color: #001e16;
-}
+  /* Simulation Focus section */
+  .button-dead { background-color: #4a4a4a; }
+  .button-dead:hover { background-color: #272727; }
 
-/* Simulation Focus section */
-.button-dead {
-  background-color: #4a4a4a; /* deep magenta */
-}
-.button-dead:hover {
-  background-color: #1e1e1e;
-}
-.button-parlay { background-color: #c16a27; }
+  .button-parlay { background-color: #c16a27; }
   .button-parlay:hover { background-color: #80461a; }
 
-  .button-icon {
-    width: 50px;
-    height: 50px;
-  }
+  .button-icon { width: 50px; height: 50px; }
 
   .play-banner {
     text-align: center;
@@ -179,25 +163,31 @@
     border-radius: 2px;
   }
 
-  .bet-text {
-   font-size: 32px;
-   font-weight: 600;
+  .bet-text { font-size: 32px; font-weight: 600; }
+
+  .dg-auth-links {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    gap: 15px;
   }
 
-  .dg-header {
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 10px 20px;
-}
+  .dg-auth-links a {
+    color: #003f2e;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+  }
 
-.dg-header-right {
- margin-left: auto;
-}
+  .dg-auth-links a.signup {
+    background-color: #1a8a39;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+  }
 
-
-
-.bottom-buttons {
+  .bottom-buttons {
   display: grid;
   grid-template-columns: repeat(2, 175px);
   justify-content: center;
@@ -238,10 +228,10 @@
     background-color: #ccc;
     margin: 15px auto;
     border-radius: 2px;
-    margin-top: 30px;
+    margin-top: 60px;
   }
 
-.top-line {
+  .top-line {
     border: none;
     height: 3px;
     width: 300px;
@@ -286,11 +276,6 @@
   width: 120px;
 }
 
-.bet365-icon {
-  width: 150px;   /* default is 50px */
-  height: 150px;  /* proportionally larger */
-}
-
 .play-link {
   display: inline-flex;        /* Prevent full-width stretch */
   width: 40%;                 /* Match natural content width */
@@ -302,23 +287,21 @@
   align-items: center;
 }
 
+.bet365-icon {
+  width: 150px;   /* default is 50px */
+  height: 150px;  /* proportionally larger */
+}
+
 .play-button:hover {
   background-color: #006846;   /* darker green on hover */
   transform: translateY(-2px);
   transition: all 0.2s ease-in-out;
 }
 
-.dg-auth-links {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
-
 .sub-pill {
+  position: absolute;
+  right: 40px;
+  top: 60px;  /* sits nicely below buttons */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,8 +314,9 @@
   color: #003f2e;
   background: #ffffff;
   width: fit-content;
-  margin-top: 10px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  z-index: 5;
+  margin-top: 5px;
 }
 
 .sub-icon {
@@ -344,24 +328,6 @@
   font-weight: 700;
   font-size: 15px;
 }
-
-.manage-btn {
-  background-color: #1a8a39;
-  color: white;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  width: fit-content;
-  margin-top: 5px;
-}
-
-.manage-btn:hover {
-  background-color: #14722f;
-}
-
-
 
 /* --- Smooth fade & slide-in animation --- */
 @keyframes slideUpFade {
@@ -382,83 +348,177 @@
 
 
 @media (max-width: 768px) {
-  .dg-logo-img {
-    height: 90px;
-    margin-right: 7px;
-  }
-
-    .dg-auth-links {
-    right: 10px;
-    top: 15px;
-  }
+ .dg-logo-img {
+   height: 80px;
+   margin-right: 7px;
+ }
 
   .sub-pill {
+    top: 50px;          /* lowers into tagline on mobile */
+    right: 15px;
     font-size: 11px !important;
     padding: 2px 6px !important;
     border-width: 1px !important;
     gap: 3px !important;
-    margin-top: 20px;
-  }
-
-  .sub-icon {
-    font-size: 12px !important;
-  }
-
-  .sub-count {
-    font-size: 12px !important;
-  }
-
-  .manage-btn {
-    font-size: 12px;
-    padding: 3px 8px;
     margin-top: 15px;
   }
 
-  .play-button .bet365-icon {
-  width: 85px;   /* slightly bigger than the default 50px */
-  height: 85px;
-}
+  .sub-icon { font-size: 12px !important; }
+  .sub-count { font-size: 12px !important; }
 
-  .match-box { width: 70px !important; padding: 10px !important; }
-  .match-box img { height: 30px !important; }
 
-  .dg-header {
-    display: flex;
+.match-box { width: 70px !important; padding: 10px !important; }
+.match-box img { height: 30px !important; }
+
+.bottom-buttons {
+    grid-template-columns: repeat(2, 100px);
     justify-content: center;
-    align-items: center;
-    position: relative;
+    gap: 15px;                    /* smaller gap between them */
+    margin-bottom: 20px;          /* reduce bottom spacing */
+  }
+
+  .bottom-btn {
+    font-size: 18px;              /* smaller text */
+    padding: 12px 20px;           /* smaller padding */
+    width: 95%;                   /* shrink width compared to screen */
+    max-width: 100px;             /* don’t let it stretch too wide */
+    margin: 0 auto;               /* center the button horizontally */
+    height: 40px;                 /* let height adjust naturally */
+  }
+ 
+.bottom-line {
+    width: 40%;
+    margin-top: 25px;
+    margin-bottom: 10px;
   }
 
   .dg-logo-wrapper {
     position: absolute;
-    left: 10px;
-    top: 10px
+    left: 7px;
+    top: 20px;
+    z-index: 10;
   }
 
   .dg-site-name {
-   flex: 1;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+  }
+
+ .dg-tagline {
+   font-size: 14px;
+   padding: 8px 8px;
    text-align: center;
-   font-size: 30px;
-   margin: 0
+   padding-left: 65px;
+   padding-right: 65px;
+ }
+
+  
+  .play-button {
+    font-size: 16px !important;   /* smaller text on mobile */
+    padding: 10px 12px !important;
+    width: 95% !important;
+    height: 50px !important;
+    gap: 10px !important;
   }
 
-  .dg-tagline {
-    font-size: 14px;
-    padding: 8px 8px;
-    text-align: center;
-    padding-left: 65px;
-    padding-right: 65px;
+  .play-button .bet365-icon {
+    width: 85px !important;
+    height: 85px !important;
   }
 
-  .grid {
-    grid-template-columns: repeat(2, 175px);
-    gap: 10px;
-    row-gap: 15px;
-    margin-bottom: 20px;
-    justify-content: center;
+  .bet-text {
+    font-size: 18px!important;   /* smaller inside span */
+    font-weight: 600;
   }
 
-  .play-link {
+
+
+ .grid {
+   grid-template-columns: repeat(2, 175px);
+   gap: 10px;
+   row-gap: 15px;
+   margin-bottom: 20px;
+   justify-content: center;
+ }
+
+
+ .button {
+   font-size: 16px;
+   white-space: nowrap;
+   padding: 10px 12px;
+   border-radius: 5px;
+   width: 95%;
+   margin-bottom: -5px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 6px;
+   height: 37px;
+   text-decoration: none;
+   margin-left: 4px;
+ }
+
+
+ .button-icon {
+   width: 32px;
+   height: 32px;
+ }
+
+
+ .play-button {
+   font-size: 22px;
+   padding: 8px 12px;
+   width: 95%;
+   height: 50px;
+ }
+
+ .top-line {
+    width: 40%;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+
+ .play-banner {
+   text-align: center;
+   margin-top: 15px;
+   margin-bottom: 0px;
+   padding: 5px 0;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+ }
+
+
+ .play-line {
+   width: 80%;
+ }
+
+
+ .section-title {
+   font-size: 20px;
+   font-weight: 500;
+   margin: 15px 0 10px;
+   margin-top: 10px;
+ }
+
+
+   .dg-auth-links {
+   position: static;   /* remove absolute */
+   justify-content: center;
+   margin-top: 10px;
+ }
+
+ .dg-auth-links a {
+   font-size: 16px;
+ }
+
+ .dg-auth-links a.signup {
+   padding: 5px 12px;
+ }
+
+ .play-link {
   width: 85% !important;         /* Fit nicely on mobile screens */
   height: 30px !important;       /* Match your smaller mobile banner */
   font-size: 16px !important;
@@ -474,152 +534,44 @@
   margin-top: 10px !important;
   margin-bottom: 10px !important;
 }
-
-  .button {
-    font-size: 16px;
-    white-space: nowrap;
-    padding: 10px 12px;
-    border-radius: 5px;
-    width: 95%;
-    margin-bottom: -5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    height: 37px;
-    text-decoration: none;
-    margin-left: 4px;
-  }
-
-  .bottom-buttons {
-    grid-template-columns: repeat(2, 100px);
-    justify-content: center;
-    gap: 15px;                    /* smaller gap between them */
-    margin-bottom: 20px;          /* reduce bottom spacing */
-  }
-
-  .bottom-btn {
-    font-size: 18px;              /* smaller text */
-    padding: 12px 20px;           /* smaller padding */
-    width: 95%;                   /* shrink width compared to screen */
-    max-width: 100px;             /* don’t let it stretch too wide */
-    margin: 0 auto;               /* center the button horizontally */
-    height: 40px;                 /* let height adjust naturally */
-  }
-
-  .button-icon {
-    width: 32px;
-    height: 32px;
-  }
-
-  .play-button {
-    font-size: 22px;
-    padding: 8px 12px;
-    width: 95%;
-    height: 50px;
-  }
-
-  .play-banner {
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: -10px;
-    padding: 5px 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .play-line {
-    width: 80%;
-  }
-
-  .bottom-line {
-    width: 40%;
-    margin-top: 25px;
-    margin-bottom: 10px;
-  }
-
-  .top-line {
-    width: 40%;
-    margin-top: -5px;
-    margin-bottom: -5px;
-  }
-
-  .section-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin: 15px 0 10px;
-    margin-top: 12px;
-  }
-
-  .bet-text {
-    font-size: 18px;
-    font-weight: 600;
-  }
 }
-
 
 </style>
 </head>
 <body>
 
 <!-- Header -->
-<header class="dg-header">
-  <!-- Left: Logo -->
-  <div class="dg-logo-wrapper">
-    <a href="index.html">
-      <img class="dg-logo-img" 
-           src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" 
-           alt="DataGaffer Logo">
-    </a>
-  </div>
-
-  <!-- Center: Site name -->
-  <div class="dg-site-name">
-    <a href="index.html" style="text-decoration:none; color:inherit;">
-      DataGaffer.com
-    </a>
-  </div>
-
-  <!-- Right: Subscribers + Manage -->
-  <div class="dg-auth-links">
+<div class="dg-header">
+  <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; justify-content: center; position: relative;">
+    <div class="dg-logo-wrapper">
+      <img class="dg-logo-img" src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DataGaffer Logo">
+    </div>
+    <div class="dg-site-name">DataGaffer.com</div>
+    <div class="dg-auth-links">
+      <a href="login.html">Login</a>
+      <a href="signup.html" class="signup">Free Trial</a>
+    </div>
     <div class="sub-pill">
   <span class="material-icons sub-icon">group</span>
-  <span class="sub-count">0</span>
+  <span class="sub-count">95</span>
+</div>
+  </a>
 </div>
 
-    <button id="manage-subscription" class="manage-btn">Manage</button>
-  </div>
-</header>
-
-<!-- ✅ Tagline sits OUTSIDE the header -->
+<!-- Tagline -->
 <div class="dg-tagline">
   Football's most realistic match simulations - driven by data
 </div>
 
-
 <!-- Match Simulations -->
 <div class="section-title">Match Simulations</div>
 <div class="grid">
-  <a href="sim_cards.html" class="button button-match">
-    <img class="button-icon" src="gear.svg" alt="icon">Sim Cards
-  </a>
-  <a href="xg_stats.html" class="button button-match">
-    <img class="button-icon" src="chart.svg" alt="icon">Projections
-  </a>
-  <a href="value_stats.html" class="button button-match">
-    <img class="button-icon" src="plus.svg" alt="icon">EV Plays
-  </a>
-  <a  href="goal_zone.html" class="button button-match">
-   <img class="button-icon" src="goal.svg" alt="icon">Goal Zone
-  </a>
-  <a href="rankings.html" class="button button-match">
-    <img class="button-icon" src="rank.svg" alt="icon">Sim Rankings
-  </a>
-  <a href="outlooks.html" class="button button-match">
-    <img class="button-icon" src="page.svg" alt="icon">Outlooks
-  </a>
+  <a href="signup.html" class="button button-match"><img class="button-icon" src="gear.svg" alt="icon">Sim Cards</a>
+  <a href="signup.html" class="button button-match"><img class="button-icon" src="chart.svg" alt="icon">Projections</a>
+  <a href="signup.html" class="button button-match"><img class="button-icon" src="plus.svg" alt="icon">EV Plays</a>
+  <a href="signup.html" class="button button-match"><img class="button-icon" src="goal.svg" alt="icon">Goal Zone</a>
+  <a href="signup.html" class="button button-match"><img class="button-icon" src="rank.svg" alt="icon">Sim Rankings</a>
+  <a href="signup.html" class="button button-match"><img class="button-icon" src="page.svg" alt="icon">Outlooks</a>
 </div>
 
 <!-- Bet365 Affiliate Banner -->
@@ -638,37 +590,21 @@
 </div>
 
 <!-- Simulation Focus -->
-<div class="section-title">Simulation Focus & Betting tools</div>
+<div class="section-title">Simulation Focus & Betting Tools</div>
 <div class="grid">
-  <a href="player_card.html" class="button button-focus">
-    <img class="button-icon" src="idcard.svg" alt="icon">Player Cards
-  </a>
-  <a  href="parlays.html" class="button button-parlay">
-   <img class="button-icon" src="parlay.svg" alt="icon">Parlay Builder
-  </a>
-  <a href="match_card.html" class="button button-focus">
-    <img class="button-icon" src="field.svg" alt="icon">Match Cards
-  </a>
-  <a href="plays.html" class="button button-parlay">
-    <img class="button-icon" src="star.svg" alt="icon">AI Top Picks
-  </a>
+  <a href="signup.html" class="button button-focus"><img class="button-icon" src="idcard.svg" alt="icon">Player Cards</a>
+  <a href="signup.html" class="button button-parlay"><img class="button-icon" src="parlay.svg" alt="icon">Parlay Builder</a>
+  <a href="signup.html" class="button button-focus"><img class="button-icon" src="field.svg" alt="icon">Match Cards</a>
+  <a href="signup.html" class="button button-parlay"><img class="button-icon" src="star.svg" alt="icon">AI Top Picks</a>
 </div>
 
 <!-- Player Simulations -->
 <div class="section-title">Player Simulations</div>
 <div class="grid">
-  <a href="player_simulations.html?section=goals" class="button button-player">
-    <img class="button-icon" src="ball.svg" alt="icon">Goalscorer
-  </a>
-  <a href="player_simulations.html?section=assists" class="button button-player">
-    <img class="button-icon" src="cleat.svg" alt="icon">Assists
-  </a>
-  <a href="player_simulations.html?section=shots" class="button button-player">
-    <img class="button-icon" src="target.svg" alt="icon">Shots/SOT
-  </a>
-  <a href="player_simulations.html?section=soa" class="button button-player">
-    <img class="button-icon" src="player.svg" alt="icon">Score/Assist
-  </a>
+  <a href="signup.html" class="button button-player"><img class="button-icon" src="ball.svg" alt="icon">Goalscorer</a>
+  <a href="signup.html" class="button button-player"><img class="button-icon" src="cleat.svg" alt="icon">Assists</a>
+  <a href="signup.html" class="button button-player"><img class="button-icon" src="target.svg" alt="icon">Shots/SOT</a>
+  <a href="signup.html" class="button button-player"><img class="button-icon" src="player.svg" alt="icon">Score/Assist</a>
 </div>
 
 
@@ -676,30 +612,14 @@
 <div class="section-title">Today's Slate</div>
 <div class="top-line"></div>
 <div class="container">
-  <a href="sim_cards.html" class="match-grid" id="home-match-grid"></a>
+  <div class="match-grid" id="home-match-grid"></div>
 </div>
-
-
-<!-- 🔹 Bottom Buttons -->
 
 <div class="bottom-line"></div>
 <div class="bottom-buttons">
-  <a href="model.html" class="bottom-btn">Model</a>
-  <a href="accuracy.html" class="bottom-btn">Accuracy</a>
+  <a href="model_home.html" class="bottom-btn">Model</a>
+  <a href="accuracy_home.html" class="bottom-btn">Accuracy</a>
 </div>
-
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
- const todaysPlay = "Norway vs Israel BTTS";
- const playButton = document.getElementById("play-button");
-
- playButton.addEventListener("click", () => {
-   playButton.innerHTML = `<span class="bet-text">${todaysPlay}</span>`;
- });
-});
-</script>
 
 <script>
 fetch('fixtures.json')
@@ -721,6 +641,26 @@ fetch('fixtures.json')
 });
 </script>
 
+<!-- Supabase SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: {
+    persistSession: true,
+    detectSessionInUrl: true   // 👈 process #access_token from email confirm
+  }
+});
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const { data: { session } } = await supabaseClient.auth.getSession();
+
+  
+});
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSMYHX4PLY"></script>
 <script>
@@ -730,10 +670,8 @@ fetch('fixtures.json')
   gtag('config', 'G-BSMYHX4PLY');
 </script>
 
-
 </body>
 </html>
-
 
 
 
