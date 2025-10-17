@@ -102,7 +102,7 @@
 
 <!-- Header -->
 <div class="header">
-  <a href="dashboard.html" style="text-decoration:none;color:inherit;display:contents;">
+  <a href="index.html" style="text-decoration:none;color:inherit;display:contents;">
     <img class="header-logo" alt="DG" src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png">
     <h1>DataGaffer.com</h1>
   </a>
@@ -310,83 +310,7 @@
   <p class="small">© DataGaffer. For feedback or methods questions, ping us via the dashboard.</p>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-/* --- Supabase setup --- */
-const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
-const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
 
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
-  auth: { persistSession: true, detectSessionInUrl: true }
-});
-
-/* --- Prevent Safari/Chrome back-button cache bypass --- */
-window.addEventListener("pageshow", function (event) {
-  if (event.persisted) {
-    console.log("Reloading to bypass Safari back cache");
-    window.location.reload();
-  }
-});
-
-/* --- Inactivity logout (15 minutes) --- */
-const INACTIVITY_LIMIT = 15 * 60 * 1000;
-let inactivityTimer;
-
-function resetInactivityTimer() {
-  clearTimeout(inactivityTimer);
-  inactivityTimer = setTimeout(async () => {
-    console.log("Auto-logout after inactivity");
-    await supabaseClient.auth.signOut();
-    window.location.href = "login.html";
-  }, INACTIVITY_LIMIT);
-}
-["click","mousemove","keydown","scroll","touchstart"].forEach(evt =>
-  document.addEventListener(evt, resetInactivityTimer)
-);
-resetInactivityTimer();
-
-/* --- Explicit logout handling --- */
-supabaseClient.auth.onAuthStateChange((event) => {
-  if (event === "SIGNED_OUT") {
-    console.log("User signed out → redirecting to login");
-    window.location.href = "login.html";
-  }
-});
-
-/* --- Subscription enforcement --- */
-document.body.style.display = "none"; // hide content until validated
-
-(async () => {
-  const { data: { session }, error } = await supabaseClient.auth.getSession();
-  if (error || !session) {
-    console.warn("No session → redirecting to login");
-    window.location.href = "login.html";
-    return;
-  }
-
-  // Check user's subscription in Supabase
-  const { data: profile, error: profileError } = await supabaseClient
-    .from("profiles")
-    .select("is_subscribed, plan")
-    .eq("id", session.user.id)
-    .single();
-
-  if (profileError || !profile?.is_subscribed) {
-    console.warn("Not subscribed → redirecting to subscribe page");
-    window.location.href = "subscribe.html";
-    return;
-  }
-
-  // ✅ Allow only active monthly/yearly users
-  if (profile.plan === "monthly" || profile.plan === "yearly") {
-    console.log("✅ Active plan:", profile.plan, "→ Showing page");
-    document.body.style.display = "block";
-  } else {
-    console.warn("User has unsupported plan:", profile.plan);
-    window.location.href = "subscribe.html";
-  }
-})();
-</script>
 
 </body>
 </html>
