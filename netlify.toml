@@ -1,7 +1,12 @@
+[build]
+  functions = "netlify/functions"
+
 [functions]
   node_bundler = "esbuild"
+  external_node_modules = ["stripe"]
+  included_files = ["netlify/functions/*"]
 
 [[headers]]
-  for = "/.netlify/functions/stripe-webhook"
+  for = "/.netlify/functions/*"
   [headers.values]
     Content-Type = "application/json"
