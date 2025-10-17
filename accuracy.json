@@ -103,5 +103,20 @@
         "result": "Loss"
       }
     ]
+  },
+  {
+    "date": "2025-10-17",
+    "picks": [
+      {
+        "fixture_id": 1387767,
+        "match": "PSG vs Strasbourg",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.68,
+        "book_odds": 1.80,
+        "edge": 4.1,
+        "league": "Ligue 1",
+        "result": "Win"
+      }
+    ]
   }
 ]

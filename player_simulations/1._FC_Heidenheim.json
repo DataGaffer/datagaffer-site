@@ -1,0 +1,57 @@
+[
+  {
+    "team_id": 180,
+    "player_id": 125720,
+    "name": "S. Conteh",
+    "position": "Attacker",
+    "appearances": 20,
+    "goals": 1,
+    "assists": 1,
+    "shots": 8,
+    "shots_on_target": 4,
+    "goals_per90_simulated": 0.19,
+    "assists_per90_simulated": 0.76,
+    "shots_per90": 1.31,
+    "sot_per90": 0.5,
+    "+1_goal_pct": 18.0,
+    "+1_assist_pct": 52.8,
+    "soa_pct": 61.2
+  },
+  
+  {
+    "team_id": 180,
+    "player_id": 280055,
+    "name": "L. Kerber",
+    "position": "Midfielder",
+    "appearances": 20,
+    "goals": 1,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 3,
+    "goals_per90_simulated": 0.15,
+    "assists_per90_simulated": 0.0,
+    "shots_per90": 0.75,
+    "sot_per90": 0.35,
+    "+1_goal_pct": 14.5,
+    "+1_assist_pct": 0.0,
+    "soa_pct": 14.5
+  },
+  {
+    "team_id": 180,
+    "player_id": 24955,
+    "name": "M. Honsak",
+    "position": "Midfielder",
+    "appearances": 14,
+    "goals": 4,
+    "assists": 0,
+    "shots": 17,
+    "shots_on_target": 8,
+    "goals_per90_simulated": 1.02,
+    "assists_per90_simulated": 0.0,
+    "shots_per90": 3.94,
+    "sot_per90": 1.43,
+    "+1_goal_pct": 64.3,
+    "+1_assist_pct": 0.0,
+    "soa_pct": 64.3
+  }
+]

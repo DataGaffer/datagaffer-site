@@ -1,0 +1,39 @@
+[
+ 
+  {
+    "team_id": 63,
+    "player_id": 18766,
+    "name": "D. Calvert-Lewin",
+    "position": "Attacker",
+    "appearances": 15,
+    "goals": 2,
+    "assists": 0,
+    "shots": 24,
+    "shots_on_target": 13,
+    "goals_per90_simulated": 0.53,
+    "assists_per90_simulated": 0.0,
+    "shots_per90": 3.3,
+    "sot_per90": 1.65,
+    "+1_goal_pct": 41.3,
+    "+1_assist_pct": 0.0,
+    "soa_pct": 41.3
+  },
+  {
+    "team_id": 63,
+    "player_id": 48389,
+    "name": "N. Okafor",
+    "position": "Attacker",
+    "appearances": 11,
+    "goals": 1,
+    "assists": 0,
+    "shots": 8,
+    "shots_on_target": 4,
+    "goals_per90_simulated": 0.41,
+    "assists_per90_simulated": 0.0,
+    "shots_per90": 1.74,
+    "sot_per90": 0.77,
+    "+1_goal_pct": 34.1,
+    "+1_assist_pct": 0.0,
+    "soa_pct": 34.1
+  }
+]

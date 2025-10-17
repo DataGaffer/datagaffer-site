@@ -1,1 +1,179 @@
-[]
+[
+  {
+    "fixture_id": 1388369,
+    "league": {
+      "id": 78,
+      "name": "Bundesliga"
+    },
+    "home": {
+      "id": 182,
+      "name": "Union Berlin",
+      "logo": "https://media.api-sports.io/football/teams/182.png",
+      "winner": null
+    },
+    "away": {
+      "id": 163,
+      "name": "Borussia M.",
+      "logo": "https://media.api-sports.io/football/teams/163.png",
+      "winner": null
+    },
+    "home_id": 182,
+    "away_id": 163,
+    "home_logo": "https://media.api-sports.io/football/teams/182.png",
+    "away_logo": "https://media.api-sports.io/football/teams/163.png",
+    "date": "2025-10-17T18:30:00+00:00",
+    "book_odds": {
+      "home_win": 2.2,
+      "draw": 3.3,
+      "away_win": 3.2,
+      "btts": 1.66,
+      "over_2_5": 1.80,
+      "home_o1_5": 2.00,
+      "away_o1_5": 2.62
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.67",
+        "away": "1.25",
+        "total": "2.92"
+      },
+      "corners": {
+        "home": "5.6",
+        "away": "4.5",
+        "total": "10.1"
+      },
+      "shots": {
+        "home": "16.2",
+        "away": "11.4",
+        "total": "27.6"
+      },
+      "percents": {
+        "home_win_pct": 47.3,
+        "draw_pct": 24.7,
+        "away_win_pct": 28.0,
+        "over_2_5_pct": 55.6,
+        "btts_pct": 58.0,
+        "home_o1_5_pct": 49.7,
+        "away_o1_5_pct": 35.6
+      }
+    }
+  },
+  {
+    "fixture_id": 1387767,
+    "league": {
+      "id": 61,
+      "name": "Ligue 1"
+    },
+    "home": {
+      "id": 85,
+      "name": "PSG",
+      "logo": "https://media.api-sports.io/football/teams/85.png",
+      "winner": null
+    },
+    "away": {
+      "id": 95,
+      "name": "Strasbourg",
+      "logo": "https://media.api-sports.io/football/teams/95.png",
+      "winner": null
+    },
+    "home_id": 85,
+    "away_id": 95,
+    "home_logo": "https://media.api-sports.io/football/teams/85.png",
+    "away_logo": "https://media.api-sports.io/football/teams/95.png",
+    "date": "2025-10-17T18:45:00+00:00",
+    "book_odds": {
+      "home_win": 1.28,
+      "draw": 6.0,
+      "away_win": 9.0,
+      "btts": 1.80,
+      "over_2_5": 1.44,
+      "home_o1_5": 1.30,
+      "away_o1_5": 4.33
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "2.86",
+        "away": "1.26",
+        "total": "4.12"
+      },
+      "corners": {
+        "home": "9.1",
+        "away": "2.3",
+        "total": "11.4"
+      },
+      "shots": {
+        "home": "18.9",
+        "away": "9.4",
+        "total": "29.3"
+      },
+      "percents": {
+        "home_win_pct": 67.8,
+        "draw_pct": 16.2,
+        "away_win_pct": 16.0,
+        "over_2_5_pct": 73.5,
+        "btts_pct": 59.7,
+        "home_o1_5_pct": 77.8,
+        "away_o1_5_pct": 34.9
+      }
+    }
+  },
+  {
+    "fixture_id": 1390906,
+    "league": {
+      "id": 140,
+      "name": "La Liga"
+    },
+    "home": {
+      "id": 718,
+      "name": "Oviedo",
+      "logo": "https://media.api-sports.io/football/teams/718.png",
+      "winner": null
+    },
+    "away": {
+      "id": 540,
+      "name": "Espanyol",
+      "logo": "https://media.api-sports.io/football/teams/540.png",
+      "winner": null
+    },
+    "home_id": 718,
+    "away_id": 540,
+    "home_logo": "https://media.api-sports.io/football/teams/718.png",
+    "away_logo": "https://media.api-sports.io/football/teams/540.png",
+    "date": "2025-10-17T19:00:00+00:00",
+    "book_odds": {
+      "home_win": 2.9,
+      "draw": 3.1,
+      "away_win": 2.5,
+      "btts": 1.95,
+      "over_2_5": 2.30,
+      "home_o1_5": 3.00,
+      "away_o1_5": 2.62
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.18",
+        "away": "1.16",
+        "total": "2.34"
+      },
+      "corners": {
+        "home": "5.2",
+        "away": "5.1",
+        "total": "10.3"
+      },
+      "shots": {
+        "home": "13.8",
+        "away": "13.1",
+        "total": "26.9"
+      },
+      "percents": {
+        "home_win_pct": 36.6,
+        "draw_pct": 27.9,
+        "away_win_pct": 35.5,
+        "over_2_5_pct": 41.6,
+        "btts_pct": 46.9,
+        "home_o1_5_pct": 33.6,
+        "away_o1_5_pct": 32.2
+      }
+    }
+  }
+]
