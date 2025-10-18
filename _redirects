@@ -2,6 +2,10 @@
 # Public routes
 # ----------------------------
 
+# Allow search engines to access sitemap and robots
+/sitemap.xml  /sitemap.xml  200
+/robots.txt   /robots.txt   200
+
 # Root of site goes to the public landing page
 /           /index.html     200
 
@@ -12,11 +16,9 @@
 /success    /success.html   200
 /cancel     /cancel.html    200
 
-
 # ----------------------------
 # Private routes (require login)
 # ----------------------------
-
 /dashboard             /dashboard.html           200
 /standard              /standard.html            200
 /sim_cards             /sim_cards.html           200
