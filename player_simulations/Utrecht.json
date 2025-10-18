@@ -35,24 +35,7 @@
     "+1_assist_pct": 35.4,
     "soa_pct": 53.8
   },
-  {
-    "team_id": 207,
-    "player_id": 192434,
-    "name": "Miguel Rodr\u00edguez",
-    "position": "Attacker",
-    "appearances": 16,
-    "goals": 4,
-    "assists": 2,
-    "shots": 25,
-    "shots_on_target": 13,
-    "goals_per90_simulated": 0.79,
-    "assists_per90_simulated": 0.52,
-    "shots_per90": 5.13,
-    "sot_per90": 2.14,
-    "+1_goal_pct": 55.5,
-    "+1_assist_pct": 41.0,
-    "soa_pct": 73.8
-  },
+  
   {
     "team_id": 207,
     "player_id": 425819,

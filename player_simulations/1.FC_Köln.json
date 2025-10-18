@@ -52,23 +52,6 @@
     "+1_goal_pct": 30.0,
     "+1_assist_pct": 0.0,
     "soa_pct": 30.0
-  },
-  {
-    "team_id": 192,
-    "player_id": 181908,
-    "name": "J. Thielmann",
-    "position": "Midfielder",
-    "appearances": 5,
-    "goals": 2,
-    "assists": 1,
-    "shots": 12,
-    "shots_on_target": 7,
-    "goals_per90_simulated": 0.65,
-    "assists_per90_simulated": 0.72,
-    "shots_per90": 6.74,
-    "sot_per90": 3.29,
-    "+1_goal_pct": 60.9,
-    "+1_assist_pct": 56.0,
-    "soa_pct": 72.8
   }
+  
 ]
