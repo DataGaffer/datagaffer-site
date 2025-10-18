@@ -122,7 +122,7 @@ async function loadTopPicks() {
     const book = match.book_odds || {};
     for (const mk of MARKET_MAP) {
       const p = sim[mk.sim], o = book[mk.book];
-      if (typeof p === "number" && typeof o === "number" && o >= 1.7 && o <= 2.2) {
+      if (typeof p === "number" && typeof o === "number" && o >= 1.7 && o <= 2.4) {
   const imp = impliedPct(o);
   const edge = +(p - imp).toFixed(1);
   if (edge > 0 && p >= 55) { // ✅ confident & +EV

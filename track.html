@@ -16,7 +16,7 @@
   .header {background: #003f2e; color: #fff; display: flex; align-items: center; justify-content: center; position: relative; padding: 10px 20px;}
   .header img {height: 90px; position: absolute; left: 20px; top: 0;}
   .header h1 {margin: 0; font-size: 32px; font-weight: 700;}
-  .wrap {max-width: 900px; margin: 24px auto; padding: 0 16px;}
+  .wrap {max-width: 950px; margin: 24px auto; padding: 0 16px;}
   .banner {background: #fff; border: 2px solid #003f2e; border-radius: 6px; padding: 10px 14px; text-align: center; font-weight: 600; color: #003f2e;}
   .explain-box {background:#fff;border-left:6px solid #0ea768;padding:14px 18px;margin-top:16px;border-radius:4px;font-size:14px;line-height:1.6;color:#003f2e;}
   .explain-box b{color:#0ea768;}
@@ -34,7 +34,7 @@
   @media (max-width: 900px) {
     .header img {height: 50px;}
     .header h1 {font-size: 20px;}
-    .table th, .table td {font-size: 12px; padding: 6px;}
+    .table th, .table td {font-size: 11px; padding: 6px;}
   }
 </style>
 </head>
@@ -54,7 +54,7 @@
   <h2>Accuracy by League</h2>
   <div class="explain-box">
     <b>How accuracy is calculated:</b><br>
-    - Each market (Over 2.5, BTTS, Team Totals, Win) is tested against real match results.<br>
+    - Each market (Over 2.5, BTTS, Team Totals) is tested against real match results.<br>
     - If the model projected a result with <b>≥55%</b> probability and it happened, that counts as correct.<br>
     - If the model projected <b>≤50%</b> and it didn’t happen, that also counts as correct.<br>
     - The <b>DG Score</b> is the average of all four accuracy metrics — giving a single performance rating for each league.
@@ -68,7 +68,6 @@
         <th>O2.5</th>
         <th>BTTS</th>
         <th>TT o1.5</th>
-        <th>Win</th>
         <th>Score</th>
       </tr>
     </thead>
@@ -121,7 +120,6 @@ async function loadPerformance() {
       <td>${l.over25_accuracy}%</td>
       <td>${l.btts_accuracy}%</td>
       <td>${l.team_total_accuracy}%</td>
-      <td>${l.win_accuracy !== null && l.win_accuracy !== undefined ? l.win_accuracy + "%" : "–"}</td>
       <td><b>${l.dg_score}%</b></td>
     </tr>
   `).join("");

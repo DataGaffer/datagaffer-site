@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 490,
+    "player_id": 215,
+    "name": "S. Esposito",
+    "position": "Attacker",
+    "appearances": 19,
+    "goals": 4,
+    "assists": 0,
+    "shots": 22,
+    "shots_on_target": 10,
+    "goals_per90_simulated": 0.21,
+    "assists_per90_simulated": 0.0,
+    "shots_per90": 2.28,
+    "sot_per90": 0.96,
+    "+1_goal_pct": 19.3,
+    "+1_assist_pct": 0.0,
+    "soa_pct": 19.3
+  },
+  {
+    "team_id": 490,
+    "player_id": 30509,
+    "name": "A. Belotti",
+    "position": "Attacker",
+    "appearances": 20,
+    "goals": 4,
+    "assists": 0,
+    "shots": 20,
+    "shots_on_target": 10,
+    "goals_per90_simulated": 0.24,
+    "assists_per90_simulated": 0.0,
+    "shots_per90": 2.56,
+    "sot_per90": 1.03,
+    "+1_goal_pct": 21.2,
+    "+1_assist_pct": 0.0,
+    "soa_pct": 21.2
+  }
+]

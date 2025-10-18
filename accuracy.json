@@ -112,10 +112,45 @@
         "match": "PSG vs Strasbourg",
         "pick": "BTTS Yes",
         "dg_odds": 1.68,
-        "book_odds": 1.80,
+        "book_odds": 1.8,
         "edge": 4.1,
         "league": "Ligue 1",
         "result": "Win"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-18",
+    "picks": [
+      {
+        "fixture_id": 1379042,
+        "match": "Fulham vs Arsenal",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.76,
+        "book_odds": 2.05,
+        "edge": 8.0,
+        "league": "Premier League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1388366,
+        "match": "Mainz vs Leverkusen",
+        "pick": "Leverkusen o1.5 Goals",
+        "dg_odds": 1.73,
+        "book_odds": 2.10,
+        "edge": 10.1,
+        "league": "Bundesliga",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1377932,
+        "match": "AS Roma vs Inter",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.7,
+        "book_odds": 2.1,
+        "edge": 11.1,
+        "league": "Serie A",
+        "result": "Loss"
       }
     ]
   }

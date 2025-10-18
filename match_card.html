@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Match Cards</title>
-  <!-- ✅ Favicons for all browsers and devices -->
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#ffffff">
-<style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f2f4f7; }
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Color Thief (used to extract dominant logo color) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f2f4f7; color:#003f2e; }
 
     /* Header */
     .header-bar {
@@ -30,7 +33,6 @@
       position: absolute;
       left: 20px;
       top: 0;
-      z-index: 2;
     }
     .header-bar h1 {
       margin: 0;
@@ -38,7 +40,6 @@
       font-weight: 700;
     }
 
-    /* Banner */
     .banner {
       text-align: center;
       font-size: 20px;
@@ -53,7 +54,6 @@
       line-height: 1.5;
     }
 
-    /* Search */
     .search-box { text-align: center; margin-bottom: 20px; }
     .search-box input {
       width: 250px;
@@ -63,74 +63,90 @@
       border-radius: 6px;
     }
 
-    /* Card Grid */
+    /* Cards */
     .container { display:grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:16px; padding:16px; }
+    .card {
+      background:#ffffff;
+      border-radius:10px;
+      padding:14px;
+      box-shadow:0 2px 6px rgba(0,0,0,.1);
+      border: 2px solid #003f2e;
+      scroll-margin-top: 80px;
+      transition: box-shadow 0.4s ease, transform 0.3s ease;
+    }
 
-    .card { background:#ffffff; border-radius:10px; padding:14px; box-shadow:0 2px 6px rgba(0,0,0,.1);  border: 2px solid #003f2e;}
-    .card h3 { margin:0 0 10px; font-size:20px; color:#003f2e; text-align:center; display:flex; align-items:center; justify-content:center; gap:6px; }
+    .card.highlight {
+      box-shadow: 0 0 16px 4px #015326;
+      transform: scale(1.02);
+    }
+
+    .card h3 {
+      margin:0 0 10px;
+      font-size: 18px;
+      text-align:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+    }
+
+    .card .team-name {
+      font-weight:700;
+      transition: color .2s ease;
+    }
+
     .club-logo { height:22px; width:auto; vertical-align:middle; }
 
-    .row { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
-    .section { background:#eef5f7; border:1px solid #dfe9e3; border-radius:8px; padding:10px; }
-    .section h4 { margin:0 0 6px; font-size:15px; color:#1a1a1a; text-align:center; }
+    .section { background:#f6f9f7; border:1px solid #dfe9e3; border-radius:8px; padding:10px; margin-bottom:10px; }
+    .section h4 { margin:0 0 8px; font-size:15px; text-align:center; }
 
-    ul { list-style:none; padding:0; margin:0; }
-    li { display:flex; justify-content:space-between; align-items:center; font-size:14px; padding:4px 0; }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+      text-align:center;
+    }
+    th, td { padding:4px; }
+    th {
+      font-weight:600;
+      border-bottom:1px solid #d8e0db;
+      color:#003f2e;
+      font-size:13px;
+    }
 
-    .badge { padding:2px 6px; border-radius:6px; border:1px solid transparent; font-weight:bold; }
-    .badge.green { background:#76f79f; border-color:#7fd59f; }
-    .badge.red   { background:#fb6d6d; border-color:#e08a8a; }
+    .gradient-cell {
+      font-weight: bold;
+      border-radius:4px;
+      padding:3px 4px;
+    }
 
-    .h2h { background:#fff6e8; border:1px solid #f2e0c5; border-radius:8px; padding:10px; margin-top:12px; }
-    .h2h h4 { margin:0 0 6px; text-align:left; }
+    .projected-grid {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      gap: 8px;
+    }
+    .projected-grid .label {
+      font-weight: 700;
+      color: #003f2e;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
 
-    .player-face { width:22px; height:22px; border-radius:50%; vertical-align:middle; margin-right:6px; }
-  
-  /* 🔹 Mobile adjustments for Match Cards */
-@media (max-width: 768px) {
-  .header-logo { height: 50px !important; }
-  .header-bar h1 { font-size: 20px !important; }
-  .banner { width: 85% !important; font-size: 13px !important; padding: 6px !important; margin-top: 20px; margin-bottom: 20px; }
-
-  .search-box input {
-    width: 200px !important;
-    font-size: 12px !important;
-    padding: 5px !important;
-  }
-
-  .container {
-    gap: 12px !important;
-    margin: 10px auto !important;
-    grid-template-columns: 1fr !important; /* one card per row */
-  }
-
-  .card {
-    padding: 10px !important;
-    font-size: 12px !important;
-  }
-
-  .card h3 {
-    font-size: 14px !important;
-    flex-wrap: wrap; /* allow logos + names to break nicely */
-  }
-
-  .club-logo {
-    height: 18px !important;
-    max-width: 28px;
-    margin: 0 2px !important;
-  }
-
-  .section h4 { font-size: 12px !important; }
-  li { font-size: 11px !important; }
-  .player-face { width: 18px !important; height: 18px !important; }
-}
-
-  
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .header-logo { height: 50px !important; }
+      .header-bar h1 { font-size: 20px !important; }
+      .banner { width: 85% !important; font-size: 13px !important; }
+      .container { grid-template-columns: 1fr !important; }
+      .card { padding:10px !important; }
+      th, td { font-size:11px !important; }
+    }
   </style>
 </head>
 <body>
 
-<!-- 🔹 Header -->
+<!-- Header -->
 <div class="header-bar">
   <a href="dashboard.html" style="text-decoration:none; color:inherit; display:contents;">
     <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
@@ -139,300 +155,206 @@
   </a>
 </div>
 
-<!-- 🔹 Banner -->
-<div class="banner">Full match cards with xG, corners, shots, odds value & player simulations</div>
+<div class="banner">Full match cards showing projected stats and DataGaffer vs bookmaker values.</div>
 
-<!-- 🔹 Search -->
 <div class="search-box">
   <input type="text" id="searchInput" placeholder="Search team, matchup, or league..." onkeyup="applySearch()" />
 </div>
 
-<!-- 🔹 Cards -->
 <div class="container" id="cards"></div>
 
 <script>
-  async function loadData() {
-    const fixtures = await fetch("fixtures.json").then(r => r.json());
-    const h2hData  = await fetch("h2h_and_odds.json").then(r => r.json());
+function toDecimalOdds(prob) {
+  if (!prob || prob <= 0 || prob >= 100) return null;
+  return +(100 / prob).toFixed(2);
+}
 
-    const index = await fetch("player_simulations/index.json").then(r => r.json());
+function colorFromRatio(r, start, end) {
+  r = Math.max(0, Math.min(1, r));
+  const rr = Math.round(start.r + (end.r - start.r) * r);
+  const gg = Math.round(start.g + (end.g - start.g) * r);
+  const bb = Math.round(start.b + (end.b - start.b) * r);
+  return `rgb(${rr},${gg},${bb})`;
+}
 
-// ✅ Load all player JSONs in parallel
-const playerDataArray = await Promise.all(
-  index.map(async (file) => {
-    try {
-      const data = await fetch("player_simulations/" + file).then(r => r.json());
-      return { key: file.replace(".json", ""), data };
-    } catch {
-      return null;
-    }
-  })
-);
-
-// ✅ Build lookup object once all fetches finish
-const playersByTeamFile = {};
-playerDataArray.forEach(entry => {
-  if (entry) playersByTeamFile[entry.key] = entry.data;
-});
-    return { fixtures, h2hData, playersByTeamFile };
+function getValueGradient(value, min, max) {
+  if (!isFinite(value)) return "white";
+  if (value >= 0) {
+    const ratio = value / Math.max(1e-6, max);
+    return colorFromRatio(ratio * 0.85, { r:255,g:255,b:255 }, { r:90,g:210,b:120 });
+  } else {
+    const ratio = Math.abs(value) / Math.max(1e-6, Math.abs(min));
+    return colorFromRatio(ratio * 0.85, { r:255,g:255,b:255 }, { r:240,g:90,b:90 });
   }
+}
 
-  function toDecimalOdds(prob) {
-    if (!prob || prob <= 0 || prob >= 100) return null;
-    return +(100 / prob).toFixed(2);
-  }
+async function loadFixtures() {
+  return await fetch("fixtures.json").then(r => r.json());
+}
 
-  function wrapHighlight(value, values, suffix = "%") {
-    const nums = values.filter(v => typeof v === "number");
-    if (!nums.length || typeof value !== "number") return (value ?? "N/A") + suffix;
-    const max = Math.max(...nums), min = Math.min(...nums);
-    const display = value + suffix;
-    if (value === max) return `<span class="badge green">${display}</span>`;
-    if (value === min) return `<span class="badge red">${display}</span>`;
-    return display;
-  }
+function buildCard(f) {
+  const slug = `${f.home.name.toLowerCase().replace(/[^a-z0-9]/g, '')}-vs-${f.away.name.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+  const sim = f.sim_stats || {};
+  const perc = sim.percents || {};
+  const book = f.book_odds || {};
 
-  function wrapValueHighlight(value, values, suffix = "") {
-    const nums = values.filter(v => typeof v === "number");
-    if (!nums.length || typeof value !== "number") return (value ?? "N/A") + suffix;
-    const max = Math.max(...nums), min = Math.min(...nums);
-    const display = (value > 0 ? "+" + value : value) + suffix;
-    if (value === max) return `<span class="badge green">${display}</span>`;
-    if (value === min) return `<span class="badge red">${display}</span>`;
-    return display;
-  }
+  const projected = `
+  <div class="section">
+    <h4>Projected Stats</h4>
+    <div class="projected-grid">
+      <div><div class="label">Goals</div><div>${sim.xg?.home ?? "–"} - ${sim.xg?.away ?? "–"}</div></div>
+      <div><div class="label">Corners</div><div>${sim.corners?.home ?? "–"} - ${sim.corners?.away ?? "–"}</div></div>
+      <div><div class="label">Shots</div><div>${sim.shots?.home ?? "–"} - ${sim.shots?.away ?? "–"}</div></div>
+    </div>
+  </div>`;
 
-  function buildCard(f, h2hMap, playersByTeamFile) {
-    const sim = f.sim_stats || {};
-    const simStats = `
-      <div class="section">
-        <h4>Simulated Match Stats</h4>
-        <ul>
-          <li><span>xG</span><span>${sim.xg?.home ?? "–"} - ${sim.xg?.away ?? "–"}</span></li>
-          <li><span>Corners</span><span>${sim.corners?.home ?? "–"} - ${sim.corners?.away ?? "–"}</span></li>
-          <li><span>Shots</span><span>${sim.shots?.home ?? "–"} - ${sim.shots?.away ?? "–"}</span></li>
-        </ul>
-      </div>`;
+  const markets = [
+    ["Home Win", perc.home_win_pct, book.home_win],
+    ["Draw", perc.draw_pct, book.draw],
+    ["Away Win", perc.away_win_pct, book.away_win],
+    ["Home o1.5", perc.home_o1_5_pct, book.home_o1_5],
+    ["Away o1.5", perc.away_o1_5_pct, book.away_o1_5],
+    ["Over 2.5", perc.over_2_5_pct, book.over_2_5],
+    ["BTTS", perc.btts_pct, book.btts]
+  ];
 
-    const p = sim.percents || {};
-    const outcomeVals = [p.home_win_pct, p.draw_pct, p.away_win_pct];
-    const outcome = `
-      <div class="section">
-        <h4>Simulation Outcome</h4>
-        <ul>
-          <li><span>Home Win</span><span>${wrapHighlight(p.home_win_pct, outcomeVals)}</span></li>
-          <li><span>Draw</span><span>${wrapHighlight(p.draw_pct, outcomeVals)}</span></li>
-          <li><span>Away Win</span><span>${wrapHighlight(p.away_win_pct, outcomeVals)}</span></li>
-        </ul>
-      </div>`;
+  const diffs = markets.map(([_, simPct, bookOdds]) => {
+    if (!simPct || !bookOdds) return null;
+    const simProb = simPct / 100;
+    const bookProb = 1 / bookOdds;
+    return (simProb - bookProb) * 100;
+  });
 
-    const book = f.book_odds || {};
-    const valueRows = [];
-    for (const [k, simPct] of Object.entries(p)) {
-      const market = k.replace("_pct", "");
-      const bookOdds = book[market];
-      const simOdds = toDecimalOdds(simPct);
-      if (simOdds && bookOdds) {
-        valueRows.push({ label: market, diff: +(bookOdds - simOdds).toFixed(2) });
-      }
-    }
-    valueRows.sort((a,b) => b.diff - a.diff);
-    const topValues = valueRows.slice(0,3);
-    const diffs = topValues.map(r => r.diff);
-    const bestValue = `
-      <div class="section">
-        <h4>Top 3 Best Value</h4>
-        <ul>
-          ${topValues.map(r => `<li><span>${r.label}</span><span>${wrapValueHighlight(r.diff, diffs, "")}</span></li>`).join("") || "<li>No markets</li>"}
-        </ul>
-      </div>`;
+  const minDiff = Math.min(...diffs.filter(v => v !== null));
+  const maxDiff = Math.max(...diffs.filter(v => v !== null));
 
-    const homeKey = f.home.name.replace(/ /g, "_");
-    const awayKey = f.away.name.replace(/ /g, "_");
-    const allPlayers = [
-      ...(playersByTeamFile[homeKey] || []),
-      ...(playersByTeamFile[awayKey] || [])
-    ];
-    allPlayers.sort((a,b) => (b.soa_pct ?? 0) - (a.soa_pct ?? 0));
-    const topSOA = allPlayers.slice(0,3);
-    const soaVals = topSOA.map(p => p.soa_pct ?? 0);
-    const soa = `
-      <div class="section">
-        <h4>Top 3 SOA%</h4>
-        <ul>
-          ${topSOA.map(pl => `
-            <li>
-              <span>
-                <img 
-  class="player-face" 
-  src="assets/faces/${pl.player_id}.png" 
-  onerror="this.onerror=null;this.src='assets/faces/placeholder.png';"
-/>
-                ${pl.name}
-              </span>
-              <span>${wrapHighlight(pl.soa_pct, soaVals)}</span>
-            </li>`).join("") || "<li>No players</li>"}
-        </ul>
-      </div>`;
+  const tableRows = markets.map(([label, simPct, bookOdds], i) => {
+    const simOdds = toDecimalOdds(simPct);
+    const val = diffs[i];
+    const bg = val !== null ? getValueGradient(val, minDiff, maxDiff) : "white";
+    return `
+      <tr>
+        <td>${label}</td>
+        <td>${simPct ? simPct + "%" : "–"}</td>
+        <td>${simOdds ?? "–"}</td>
+        <td>${bookOdds ?? "–"}</td>
+        <td class="gradient-cell" style="background:${bg}">
+          ${val !== null ? (val >= 0 ? "+" + val.toFixed(1) + "%" : val.toFixed(1) + "%") : "–"}
+        </td>
+      </tr>`;
+  }).join("");
 
-    console.log("Fixture IDs:", f.home_id, f.away_id);
-const key = `home_${f.home_id}_${f.away_id}`;
-console.log("Looking for key:", key, "→ Found:", h2hMap[key]);
-    const h2h = h2hMap[key] || {};
-    const recHome = h2h.home_wins ?? 0;
-    const recDraw = h2h.draws ?? 0;
-    const recAway = h2h.away_wins ?? 0;
-    const avgHome = (h2h.avg_home ?? "–");
-    const avgAway = (h2h.avg_away ?? "–");
-
-    const h2hSection = h2h && Object.keys(h2h).length > 0
-  ? `
-    <div class="h2h">
-      <h4>Head-to-Head (last 5)</h4>
-      <ul>
-        <li><span>Record</span><span>${f.home.name} ${recHome}W - ${recDraw}D - ${recAway}W ${f.away.name}</span></li>
-        <li><span>Avg Goals</span><span>${f.home.name}: ${avgHome ?? "–"} &nbsp; | &nbsp; ${f.away.name}: ${avgAway ?? "–"}</span></li>
-      </ul>
-    </div>`
-  : `
-    <div class="h2h">
-      <h4>Head-to-Head (last 5)</h4>
-      <p style="font-size:14px; color:#555; margin:0;">No recent meetings</p>
+  const table = `
+    <div class="section">
+      <h4>Sim vs Book Odds</h4>
+      <table>
+        <tr><th>Market</th><th>Sim %</th><th>Sim Odds</th><th>Book</th><th>Value</th></tr>
+        ${tableRows}
+      </table>
     </div>`;
 
+  return `
+    <div class="card" id="${slug}">
+      <h3>
+        <img class="club-logo home-logo" src="${f.home.logo}" alt="${f.home.name}" crossorigin="anonymous">
+        <span class="team-name home-name">${f.home.name}</span>
+        &nbsp;vs&nbsp;
+        <span class="team-name away-name">${f.away.name}</span>
+        <img class="club-logo away-logo" src="${f.away.logo}" alt="${f.away.name}" crossorigin="anonymous">
+      </h3>
+      ${projected}
+      ${table}
+    </div>`;
+}
 
-    return `
-      <div class="card">
-        <h3>
-          <img class="club-logo" src="${f.home_logo}" alt="${f.home.name}">
-          ${f.home.name} &nbsp;vs&nbsp; ${f.away.name}
-          <img class="club-logo" src="${f.away_logo}" alt="${f.away.name}">
-        </h3>
-        <div class="row">
-          ${simStats}
-          ${outcome}
-        </div>
-        <div class="row">
-          ${bestValue}
-          ${soa}
-        </div>
-        ${h2hSection}
-      </div>`;
+function colorizeTeamNames() {
+  if (typeof ColorThief === "undefined") return;
+  const thief = new ColorThief();
+  document.querySelectorAll(".card").forEach(card => {
+    const homeImg  = card.querySelector(".home-logo");
+    const awayImg  = card.querySelector(".away-logo");
+    const homeName = card.querySelector(".home-name");
+    const awayName = card.querySelector(".away-name");
+    const applyColor = (img, nameEl) => {
+      if (!img || !nameEl) return;
+      try {
+        const [r,g,b] = thief.getColor(img);
+        const dr = Math.max(0, Math.floor(r * 0.75));
+        const dg = Math.max(0, Math.floor(g * 0.75));
+        const db = Math.max(0, Math.floor(b * 0.75));
+        nameEl.style.color = `rgb(${dr},${dg},${db})`;
+      } catch { nameEl.style.color = "#0b3d2e"; }
+    };
+    if (homeImg.complete && homeImg.naturalWidth) applyColor(homeImg, homeName);
+    else homeImg.addEventListener("load", () => applyColor(homeImg, homeName), { once:true });
+    if (awayImg.complete && awayImg.naturalWidth) applyColor(awayImg, awayName);
+    else awayImg.addEventListener("load", () => applyColor(awayImg, awayName), { once:true });
+  });
+}
+
+let allFixtures = [];
+async function init() {
+  allFixtures = await loadFixtures();
+  applySearch();
+  setTimeout(colorizeTeamNames, 150);
+
+  // scroll to match if hash provided
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    const target = document.getElementById(hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        target.classList.add("highlight");
+        setTimeout(() => target.classList.remove("highlight"), 1000);
+      }, 600);
+    }
   }
+}
 
-  let allFixtures = [];
-  function applySearch() {
-    const term = document.getElementById("searchInput").value.toLowerCase();
-    const filtered = allFixtures.filter(f =>
-      f.home.name.toLowerCase().includes(term) ||
-      f.away.name.toLowerCase().includes(term) ||
-      (f.league && f.league.name.toLowerCase().includes(term))
-    );
-    const { h2hData, playersByTeamFile } = window._loaded;
-    document.getElementById("cards").innerHTML =
-      filtered.map(f => buildCard(f, h2hData, playersByTeamFile)).join("");
-  }
+function applySearch() {
+  const term = document.getElementById("searchInput").value.toLowerCase();
+  const filtered = allFixtures.filter(f =>
+    f.home.name.toLowerCase().includes(term) ||
+    f.away.name.toLowerCase().includes(term) ||
+    (f.league && f.league.name.toLowerCase().includes(term))
+  );
+  document.getElementById("cards").innerHTML = filtered.map(buildCard).join("");
+  setTimeout(colorizeTeamNames, 50);
+}
 
-  (async () => {
-    const { fixtures, h2hData, playersByTeamFile } = await loadData();
-    window._loaded = { h2hData, playersByTeamFile };
-    allFixtures = fixtures;
-    document.getElementById("cards").innerHTML =
-      fixtures.map(f => buildCard(f, h2hData, playersByTeamFile)).join("");
-  })();
+init();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-/* --- Supabase setup --- */
 const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
 const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
-
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
-  auth: { persistSession: true, detectSessionInUrl: true }
-});
-
-/* --- Prevent Safari/Chrome back-button cache bypass --- */
-window.addEventListener("pageshow", function (event) {
-  if (event.persisted) {
-    console.log("Reloading to bypass Safari back cache");
-    window.location.reload();
-  }
-});
-
-/* --- Inactivity logout (15 minutes) --- */
-const INACTIVITY_LIMIT = 15 * 60 * 1000;
-let inactivityTimer;
-
-function resetInactivityTimer() {
-  clearTimeout(inactivityTimer);
-  inactivityTimer = setTimeout(async () => {
-    console.log("Auto-logout after inactivity");
-    await supabaseClient.auth.signOut();
-    window.location.href = "login.html";
-  }, INACTIVITY_LIMIT);
-}
-["click", "mousemove", "keydown", "scroll", "touchstart"].forEach(evt =>
-  document.addEventListener(evt, resetInactivityTimer)
-);
-resetInactivityTimer();
-
-/* --- Explicit logout handling --- */
-supabaseClient.auth.onAuthStateChange((event) => {
-  if (event === "SIGNED_OUT") {
-    console.log("User signed out → redirecting to login");
-    window.location.href = "login.html";
-  }
-});
-
-/* --- Subscription enforcement --- */
-document.body.style.display = "none"; // hide content until validated
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+document.body.style.display = "none";
 
 (async () => {
-  const { data: { session }, error } = await supabaseClient.auth.getSession();
-  if (error || !session) {
-    console.warn("No session → redirecting to login");
-    window.location.href = "login.html";
-    return;
-  }
+  const { data: { session } } = await supabaseClient.auth.getSession();
+  if (!session) return window.location.href = "login.html";
 
-  // --- Try matching by Supabase Auth ID first ---
-  let { data: profile, error: profileError } = await supabaseClient
+  const { data: profile } = await supabaseClient
     .from("profiles")
     .select("is_subscribed, plan")
     .eq("id", session.user.id)
     .maybeSingle();
 
-  // --- Fallback: try matching by email if profile not found or Stripe-created first ---
-  if ((!profile || profileError) && session.user.email) {
-    const { data: byEmail } = await supabaseClient
-      .from("profiles")
-      .select("is_subscribed, plan")
-      .eq("email", session.user.email.toLowerCase())
-      .maybeSingle();
-    profile = byEmail;
-  }
-
-  // --- Subscription validation ---
-  if (!profile?.is_subscribed) {
-    console.warn("Not subscribed → redirecting to subscribe page");
+  if (!profile?.is_subscribed || !["monthly","yearly"].includes(profile.plan)) {
     window.location.href = "subscribe.html";
     return;
   }
 
-  // ✅ Allow only active monthly/yearly users
-  if (profile.plan === "monthly" || profile.plan === "yearly") {
-    console.log("✅ Active plan:", profile.plan, "→ Showing page");
-    document.body.style.display = "block";
-  } else {
-    console.warn("User has unsupported plan:", profile.plan);
-    window.location.href = "subscribe.html";
-  }
+  document.body.style.display = "block";
 })();
 </script>
-
 </body>
 </html>
+
+
 
 
 

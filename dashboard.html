@@ -604,7 +604,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="dg-auth-links">
     <div class="sub-pill">
   <span class="material-icons sub-icon">group</span>
-  <span class="sub-count">54</span>
+  <span class="sub-count">75</span>
 </div>
 
     <button id="manage-subscription" class="manage-btn">Manage</button>
@@ -627,7 +627,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <img class="button-icon" src="chart.svg" alt="icon">Projections
   </a>
   <a href="value_stats.html" class="button button-match">
-    <img class="button-icon" src="plus.svg" alt="icon">EV Plays
+    <img class="button-icon" src="plus.svg" alt="icon">Value Stats
   </a>
   <a  href="goal_zone.html" class="button button-match">
    <img class="button-icon" src="goal.svg" alt="icon">Goal Zone
@@ -694,7 +694,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="section-title">Today's Slate</div>
 <div class="top-line"></div>
 <div class="container">
-  <a href="sim_cards.html" class="match-grid" id="home-match-grid"></a>
+  <div class="match-grid" id="home-match-grid"></div>
 </div>
 
 
@@ -727,21 +727,28 @@ fetch('fixtures.json')
   const grid = document.getElementById('home-match-grid');
 
   data.forEach(match => {
+    // Create a slug for the match cards link
+    const slug = `${match.home.name.toLowerCase().replace(/[^a-z0-9]/g, '')}-vs-${match.away.name.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+
+    // Each box links to the match card
     const box = document.createElement('a');
     box.className = 'match-box';
-    box.href = `sim_cards.html?match=${match.home.id}-${match.away.id}`;
+    box.href = `match_card.html#${slug}`;
     box.style.textDecoration = 'none';
     box.style.color = 'inherit';
+    box.id = slug; // optional for scroll highlight
+
+    // Keep the clean old look: logos only, no text
     box.innerHTML = `
       <div style="display: flex; justify-content: center; align-items: center; gap: 14px;">
         <img src="${match.home.logo}" alt="${match.home.name}" style="height: 50px;">
         <img src="${match.away.logo}" alt="${match.away.name}" style="height: 50px;">
       </div>
     `;
+
     grid.appendChild(box);
   });
 });
-
 </script>
 
 <!-- Google tag (gtag.js) -->
@@ -884,14 +891,14 @@ if (manageBtn) {
 </script>
 
 <script>
-// ✅ Smooth fade-out navigation (preserve ?match= links)
+// ✅ Smooth fade-out navigation (preserve match_cards.html# links)
 document.querySelectorAll("a").forEach(link => {
   const href = link.getAttribute("href");
   if (!href || href.startsWith("#") || href.startsWith("mailto") || href.startsWith("http")) return;
 
   link.addEventListener("click", e => {
-    // allow sim_cards.html?match= links to pass through instantly
-    if (href.includes("sim_cards.html?match=")) return;
+    // allow match_cards.html# links to pass through instantly
+    if (href.includes("match_cards.html#")) return;
 
     e.preventDefault();
     document.body.classList.remove("fade-in");

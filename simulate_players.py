@@ -41,17 +41,15 @@ def per90(count, minutes, appearances):
     return float(count) / float(denom)
 
 def blend_stats(curr, prev):
-    """Blend two seasons with fixed weighting: 70% current, 30% last season."""
+    """Blend two seasons with fixed weighting: 50% current, 50% last season."""
     if not prev:
         return curr
-
     blended = {}
     for key in ["appearances", "minutes", "goals", "assists", "shots", "shots_on_target"]:
         blended[key] = int(round(
             (curr.get(key, 0) or 0) * 0.5 +
             (prev.get(key, 0) or 0) * 0.5
         ))
-
     return {**curr, **blended}
 
 # ---------- Player simulation ----------
@@ -197,26 +195,39 @@ for fixture in fixtures:
             blended = blend_stats(p, prev) if prev else dict(p)
             blended_players.append(blended)
 
+        if not blended_players:
+            print(f"❌ No valid players for {team_name}")
+            continue
+
         # fixture inputs
         team_xg_today = float(fixture.get("sim_stats", {}).get("xg", {}).get(side, 1.4) or 1.4)
         team_shots_today = float(fixture.get("sim_stats", {}).get("shots", {}).get(side, 10.0) or 10.0)
         team_sot_today = team_shots_today * 0.40
 
-        # --- Compute raw team per90 totals ---
-        team_raw_goals   = sum(per90(p.get("goals", 0),   p.get("minutes", 0), p.get("appearances", 0)) for p in blended_players)
-        team_raw_assists = sum(per90(p.get("assists", 0), p.get("minutes", 0), p.get("appearances", 0)) for p in blended_players)
-        team_raw_shots   = sum(per90(p.get("shots", 0),   p.get("minutes", 0), p.get("appearances", 0)) for p in blended_players)
-        team_raw_sot     = sum(per90(p.get("shots_on_target", 0), p.get("minutes", 0), p.get("appearances", 0)) for p in blended_players)
+        # --- Option 2: average-based normalization ---
+        def safe_mean(values):
+            valid = [v for v in values if v > 0]
+            return np.mean(valid) if valid else 0.1
 
-        # --- Scaling factors (match fixture-level expectations) ---
-        g_scale   = team_xg_today    / team_raw_goals   if team_raw_goals   > 0 else 1.0
-        a_scale   = team_xg_today    / team_raw_assists if team_raw_assists > 0 else 1.0
-        sh_scale  = team_shots_today / team_raw_shots   if team_raw_shots   > 0 else 1.0
-        sot_scale = team_sot_today   / team_raw_sot     if team_raw_sot     > 0 else 1.0
+        goal_rates   = [per90(p.get("goals",0), p.get("minutes",0), p.get("appearances",0)) for p in blended_players]
+        assist_rates = [per90(p.get("assists",0), p.get("minutes",0), p.get("appearances",0)) for p in blended_players]
+        shot_rates   = [per90(p.get("shots",0), p.get("minutes",0), p.get("appearances",0)) for p in blended_players]
+        sot_rates    = [per90(p.get("shots_on_target",0), p.get("minutes",0), p.get("appearances",0)) for p in blended_players]
+
+        avg_goals   = safe_mean(goal_rates)
+        avg_assists = safe_mean(assist_rates)
+        avg_shots   = safe_mean(shot_rates)
+        avg_sot     = safe_mean(sot_rates)
+
+        player_count = max(1, len(blended_players))
+
+        g_scale   = (team_xg_today / (avg_goals   * player_count)) if avg_goals   > 0 else 1.0
+        a_scale   = (team_xg_today / (avg_assists * player_count)) if avg_assists > 0 else 1.0
+        sh_scale  = (team_shots_today / (avg_shots * player_count)) if avg_shots  > 0 else 1.0
+        sot_scale = (team_sot_today / (avg_sot    * player_count)) if avg_sot     > 0 else 1.0
 
         simulated_players = []
         for player in blended_players:
-            # skip players with 2+ zero stats
             zero_count = sum([
                 1 if player.get("goals", 0) == 0 else 0,
                 1 if player.get("assists", 0) == 0 else 0,

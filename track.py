@@ -24,16 +24,6 @@ def fetch_result(fixture_id):
         return None, None
 
 
-def determine_outcome(home_goals, away_goals):
-    """Return result label."""
-    if home_goals > away_goals:
-        return "home"
-    elif home_goals < away_goals:
-        return "away"
-    else:
-        return "draw"
-
-
 # ---------- MAIN ----------
 def main():
     # Load today's fixtures
@@ -50,14 +40,22 @@ def main():
     # Convert list → dict for easier merging
     combined_dict = {l["league"]: l for l in combined}
 
+    # ✅ Ensure all new keys exist in old files
+    for lg, data in combined_dict.items():
+        for key in [
+            "games_tracked", "over25_correct", "btts_correct",
+            "team_total_correct", "sim_goals_sum", "actual_goals_sum",
+            "actual_btts", "actual_over25"
+        ]:
+            if key not in data:
+                data[key] = 0
+
     # Track today’s stats temporarily
     daily_stats = defaultdict(lambda: {
         "games": 0,
         "over25_correct": 0,
         "btts_correct": 0,
         "team_total_correct": 0,
-        "win_correct": 0,
-        "win_evaluated": 0,
         "sim_goals_sum": 0,
         "actual_goals_sum": 0,
         "actual_btts": 0,
@@ -76,7 +74,6 @@ def main():
 
         total_goals = home_goals + away_goals
         both_scored = home_goals > 0 and away_goals > 0
-        actual_outcome = determine_outcome(home_goals, away_goals)
 
         # ----- Simulated totals -----
         sim_total = float(m["sim_stats"]["xg"]["total"])
@@ -98,27 +95,11 @@ def main():
         away_correct = (away_pred >= 55 and away_goals >= 2) or (away_pred <= 50 and away_goals <= 1)
         team_total_correct = (int(home_correct) + int(away_correct)) / 2
 
-        home_win = perc["home_win_pct"]
-        draw = perc["draw_pct"]
-        away_win = perc["away_win_pct"]
-        predicted_outcome, top_prob = max(
-            [("home", home_win), ("draw", draw), ("away", away_win)],
-            key=lambda x: x[1]
-        )
-        if top_prob >= 55:
-            win_correct = 1 if predicted_outcome == actual_outcome else 0
-            evaluated = 1
-        else:
-            win_correct = 0
-            evaluated = 0
-
         # Aggregate for today
         d["games"] += 1
         d["over25_correct"] += int(over25_correct)
         d["btts_correct"] += int(btts_correct)
         d["team_total_correct"] += team_total_correct
-        d["win_correct"] += win_correct
-        d["win_evaluated"] += evaluated
 
     # ---------- MERGE INTO COMBINED ----------
     for lg, s in daily_stats.items():
@@ -132,8 +113,6 @@ def main():
                 "over25_correct": 0,
                 "btts_correct": 0,
                 "team_total_correct": 0,
-                "win_correct": 0,
-                "win_evaluated": 0,
                 "sim_goals_sum": 0,
                 "actual_goals_sum": 0,
                 "actual_btts": 0,
@@ -141,13 +120,15 @@ def main():
             }
 
         c = combined_dict[lg]
-        for key in ["games_tracked", "over25_correct", "btts_correct", "team_total_correct",
-                    "win_correct", "win_evaluated", "sim_goals_sum", "actual_goals_sum",
-                    "actual_btts", "actual_over25"]:
+        for key in [
+            "games_tracked", "over25_correct", "btts_correct",
+            "team_total_correct", "sim_goals_sum", "actual_goals_sum",
+            "actual_btts", "actual_over25"
+        ]:
             if key == "games_tracked":
-                c[key] += s["games"]
+                c[key] += s.get("games", 0)
             else:
-                c[key] += s[key]
+                c[key] += s.get(key, 0)
 
     # ---------- REBUILD SUMMARY ----------
     combined = []
@@ -159,12 +140,8 @@ def main():
         over25_acc = (c["over25_correct"] / g) * 100
         btts_acc = (c["btts_correct"] / g) * 100
         team_total_acc = (c["team_total_correct"] / g) * 100
-        win_acc = (c["win_correct"] / c["win_evaluated"] * 100) if c["win_evaluated"] > 0 else None
 
-        parts = [over25_acc, btts_acc, team_total_acc]
-        if win_acc is not None:
-            parts.append(win_acc)
-        dg_score = round(sum(parts) / len(parts), 1)
+        dg_score = round((over25_acc + btts_acc + team_total_acc) / 3, 1)
 
         combined.append({
             "league": lg,
@@ -172,7 +149,6 @@ def main():
             "over25_accuracy": round(over25_acc, 1),
             "btts_accuracy": round(btts_acc, 1),
             "team_total_accuracy": round(team_total_acc, 1),
-            "win_accuracy": round(win_acc, 1) if win_acc is not None else None,
             "dg_score": dg_score,
             "sim_avg_goals": round(c["sim_goals_sum"] / g, 2),
             "actual_avg_goals": round(c["actual_goals_sum"] / g, 2),
@@ -187,11 +163,10 @@ def main():
     # ---------- PRINT SUMMARY ----------
     print(f"✅ DataGaffer Combined Accuracy Updated ({datetime.utcnow().strftime('%Y-%m-%d')}):")
     for s in combined:
-        win_display = f"{s['win_accuracy']}%" if s["win_accuracy"] is not None else "–"
         print(
             f"{s['league']}: {s['dg_score']}% | "
             f"O2.5={s['over25_accuracy']} | BTTS={s['btts_accuracy']} | "
-            f"TeamTot={s['team_total_accuracy']} | Win={win_display}"
+            f"TeamTot={s['team_total_accuracy']}"
         )
 
 
