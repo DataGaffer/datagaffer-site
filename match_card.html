@@ -156,13 +156,24 @@
     const h2hData  = await fetch("h2h_and_odds.json").then(r => r.json());
 
     const index = await fetch("player_simulations/index.json").then(r => r.json());
-    const playersByTeamFile = {};
-    for (const file of index) {
-      try {
-        playersByTeamFile[file.replace(".json","")] =
-          await fetch("player_simulations/" + file).then(r => r.json());
-      } catch (_) {}
+
+// ✅ Load all player JSONs in parallel
+const playerDataArray = await Promise.all(
+  index.map(async (file) => {
+    try {
+      const data = await fetch("player_simulations/" + file).then(r => r.json());
+      return { key: file.replace(".json", ""), data };
+    } catch {
+      return null;
     }
+  })
+);
+
+// ✅ Build lookup object once all fetches finish
+const playersByTeamFile = {};
+playerDataArray.forEach(entry => {
+  if (entry) playersByTeamFile[entry.key] = entry.data;
+});
     return { fixtures, h2hData, playersByTeamFile };
   }
 
@@ -252,7 +263,11 @@
           ${topSOA.map(pl => `
             <li>
               <span>
-                <img class="player-face" src="assets/faces/${pl.player_id}.png" onerror="this.style.display='none'"/>
+                <img 
+  class="player-face" 
+  src="assets/faces/${pl.player_id}.png" 
+  onerror="this.onerror=null;this.src='assets/faces/placeholder.png';"
+/>
                 ${pl.name}
               </span>
               <span>${wrapHighlight(pl.soa_pct, soaVals)}</span>

@@ -165,13 +165,17 @@ async function loadPlayerData() {
   const indexRes = await fetch("player_simulations/index.json");
   const files = await indexRes.json();
 
-  let allTeamsPlayers = [];
-  for (const file of files) {
-    const res = await fetch("player_simulations/" + file);
-    const teamPlayers = await res.json();
-    teamPlayers.forEach(p => p.team = teamLookup[p.team_id] || "Unknown");
-    allTeamsPlayers.push(...teamPlayers);
-  }
+  // ✅ Load all team JSONs in parallel for instant performance
+const allTeamsPlayers = (
+  await Promise.all(
+    files.map(async (file) => {
+      const res = await fetch("player_simulations/" + file);
+      const teamPlayers = await res.json();
+      teamPlayers.forEach(p => p.team = teamLookup[p.team_id] || "Unknown");
+      return teamPlayers;
+    })
+  )
+).flat();
 
   let players;
   if (fixtureTeamIds.size > 0) {
@@ -224,7 +228,27 @@ function applySearch() {
 
 async function init() {
   const players = await loadPlayerData();
-  document.getElementById("cards-grid").innerHTML = buildCards(players);
+  const urlParams = new URLSearchParams(window.location.search);
+  const playerId = urlParams.get("id");
+
+  if (playerId) {
+    // ✅ Show only the clicked player
+    const player = players.find(p => String(p.player_id) === playerId);
+    if (player) {
+      document.getElementById("cards-grid").innerHTML = buildCards([player]);
+    } else {
+      document.getElementById("cards-grid").innerHTML =
+        `<div style="text-align:center; font-size:18px; color:#003f2e; margin-top:40px;">Player not found.</div>`;
+    }
+  } else {
+    // ✅ Default: show all players
+    document.getElementById("cards-grid").innerHTML = buildCards(players);
+  }
+
+  // ✅ Hide back button if viewing all players
+  if (!playerId) {
+    document.getElementById("back-btn").style.display = "none";
+  }
 }
 init();
 </script>

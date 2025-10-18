@@ -727,17 +727,21 @@ fetch('fixtures.json')
   const grid = document.getElementById('home-match-grid');
 
   data.forEach(match => {
-    const box = document.createElement('div');
+    const box = document.createElement('a');
     box.className = 'match-box';
+    box.href = `sim_cards.html?match=${match.home.id}-${match.away.id}`;
+    box.style.textDecoration = 'none';
+    box.style.color = 'inherit';
     box.innerHTML = `
-      <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-        <img src="${match.home.logo}" alt="">
-        <img src="${match.away.logo}" alt="">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 14px;">
+        <img src="${match.home.logo}" alt="${match.home.name}" style="height: 50px;">
+        <img src="${match.away.logo}" alt="${match.away.name}" style="height: 50px;">
       </div>
     `;
     grid.appendChild(box);
   });
 });
+
 </script>
 
 <!-- Google tag (gtag.js) -->
@@ -880,12 +884,15 @@ if (manageBtn) {
 </script>
 
 <script>
-// Smooth fade-out navigation
+// ✅ Smooth fade-out navigation (preserve ?match= links)
 document.querySelectorAll("a").forEach(link => {
   const href = link.getAttribute("href");
   if (!href || href.startsWith("#") || href.startsWith("mailto") || href.startsWith("http")) return;
 
   link.addEventListener("click", e => {
+    // allow sim_cards.html?match= links to pass through instantly
+    if (href.includes("sim_cards.html?match=")) return;
+
     e.preventDefault();
     document.body.classList.remove("fade-in");
     setTimeout(() => window.location.href = href, 150);

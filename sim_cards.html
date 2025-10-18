@@ -443,6 +443,7 @@
 </div>
           `;
           simCards.appendChild(card);
+          card.setAttribute("data-match-id", `${match.home.id}-${match.away.id}`);
 
           // Apply team name colors for this card
           colorizeTeamHeaders(card);
@@ -542,6 +543,7 @@ document.body.style.display = "none"; // hide content until validated
   }
 })();
 </script>
+
 
 </body>
 </html>
