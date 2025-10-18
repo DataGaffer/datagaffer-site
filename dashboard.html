@@ -181,7 +181,7 @@
 
   .bet-text {
    font-size: 32px;
-   font-weight: 600;
+   font-weight: 400;
   }
 
   .dg-header {
@@ -199,7 +199,7 @@
 
 .bottom-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 175px);
+  grid-template-columns: repeat(3, 200px); /* ✅ now fits 3 evenly */
   justify-content: center;
   gap: 30px;
   margin-bottom: 40px;
@@ -234,7 +234,7 @@
 .bottom-line {
     border: none;
     height: 3px;
-    width: 300px;
+    width: 500px;
     background-color: #ccc;
     margin: 15px auto;
     border-radius: 2px;
@@ -258,7 +258,7 @@
   justify-content: center;
   gap: 20px;
   margin: 25px auto;
-  max-width: 900px;
+  max-width: 750px;
 }
 .match-box {
   background: rgb(191, 219, 200);
@@ -504,7 +504,7 @@ body.fade-in {
   }
 
   .bottom-buttons {
-    grid-template-columns: repeat(2, 100px);
+    grid-template-columns: repeat(3, 100px);
     justify-content: center;
     gap: 15px;                    /* smaller gap between them */
     margin-bottom: 20px;          /* reduce bottom spacing */
@@ -547,9 +547,9 @@ body.fade-in {
   }
 
   .bottom-line {
-    width: 40%;
+    width: 60%;
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
   }
 
   .top-line {
@@ -567,7 +567,7 @@ body.fade-in {
 
   .bet-text {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
   }
 }
 
@@ -704,6 +704,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="bottom-buttons">
   <a href="model.html" class="bottom-btn">Model</a>
   <a href="accuracy.html" class="bottom-btn">Accuracy</a>
+  <a href="track.html" class="bottom-btn">Sim Stats</a>
 </div>
 
 

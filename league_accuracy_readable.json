@@ -1,0 +1,41 @@
+[
+  {
+    "league": "Bundesliga",
+    "games_tracked": 1,
+    "over25_accuracy": 100.0,
+    "btts_accuracy": 100.0,
+    "team_total_accuracy": 50.0,
+    "win_accuracy": null,
+    "dg_score": 83.3,
+    "sim_avg_goals": 2.92,
+    "actual_avg_goals": 4.0,
+    "actual_btts_pct": 100.0,
+    "actual_over25_pct": 100.0
+  },
+  {
+    "league": "Ligue 1",
+    "games_tracked": 1,
+    "over25_accuracy": 100.0,
+    "btts_accuracy": 100.0,
+    "team_total_accuracy": 50.0,
+    "win_accuracy": 0.0,
+    "dg_score": 62.5,
+    "sim_avg_goals": 4.12,
+    "actual_avg_goals": 6.0,
+    "actual_btts_pct": 100.0,
+    "actual_over25_pct": 100.0
+  },
+  {
+    "league": "La Liga",
+    "games_tracked": 1,
+    "over25_accuracy": 100.0,
+    "btts_accuracy": 100.0,
+    "team_total_accuracy": 50.0,
+    "win_accuracy": null,
+    "dg_score": 83.3,
+    "sim_avg_goals": 2.34,
+    "actual_avg_goals": 2.0,
+    "actual_btts_pct": 0.0,
+    "actual_over25_pct": 0.0
+  }
+]

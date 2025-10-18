@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Performance</title>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#ffffff">
+
+<style>
+  body {font-family: Arial, sans-serif; margin: 0; background: #f2f4f7;}
+  .header {background: #003f2e; color: #fff; display: flex; align-items: center; justify-content: center; position: relative; padding: 10px 20px;}
+  .header img {height: 90px; position: absolute; left: 20px; top: 0;}
+  .header h1 {margin: 0; font-size: 32px; font-weight: 700;}
+  .wrap {max-width: 900px; margin: 24px auto; padding: 0 16px;}
+  .banner {background: #fff; border: 2px solid #003f2e; border-radius: 6px; padding: 10px 14px; text-align: center; font-weight: 600; color: #003f2e;}
+  .explain-box {background:#fff;border-left:6px solid #0ea768;padding:14px 18px;margin-top:16px;border-radius:4px;font-size:14px;line-height:1.6;color:#003f2e;}
+  .explain-box b{color:#0ea768;}
+  .table {margin-top: 20px; width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 3px 12px rgba(0,0,0,0.1);}
+  .table th {background: #003f2e; color: #fff; padding: 10px; font-size: 14px;}
+  .table td {padding: 8px 10px; text-align: center; border-bottom: 1px solid #d8e0db; font-size: 14px; color: #003f2e;}
+  .table tr:hover {background: #f1f7f4;}
+  h2 {
+    color: #003f2e;
+    margin-top: 40px;
+    text-align: center;   /* ✅ centers the titles */
+    font-weight: 700;     /* ✅ makes them bold */
+  }
+  .footer-note {margin-top: 20px; color: #51615a; font-size: 12px; text-align: center;}
+  @media (max-width: 900px) {
+    .header img {height: 50px;}
+    .header h1 {font-size: 20px;}
+    .table th, .table td {font-size: 12px; padding: 6px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <a href="index.html" style="text-decoration:none;color:inherit;display:contents;">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DG Logo">
+    <h1>DataGaffer.com</h1>
+  </a>
+</div>
+
+<div class="wrap">
+  <div class="banner">Daily model accuracy after simulations and league scoring sim + actual stats</div>
+
+  <h2>Accuracy by League</h2>
+  <div class="explain-box">
+    <b>How accuracy is calculated:</b><br>
+    - Each market (Over 2.5, BTTS, Team Totals, Win) is tested against real match results.<br>
+    - If the model projected a result with <b>≥55%</b> probability and it happened, that counts as correct.<br>
+    - If the model projected <b>≤50%</b> and it didn’t happen, that also counts as correct.<br>
+    - The <b>DG Score</b> is the average of all four accuracy metrics — giving a single performance rating for each league.
+  </div>
+
+  <table class="table" id="accuracy-table">
+    <thead>
+      <tr>
+        <th>League</th>
+        <th>Games</th>
+        <th>O2.5</th>
+        <th>BTTS</th>
+        <th>TT o1.5</th>
+        <th>Win</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>League Scoring Stats</h2>
+  <div class="explain-box">
+    <b>How these stats work:</b><br>
+    - <b>Sim Goals</b> = Average total goals predicted by DataGaffer’s xG model.<br>
+    - <b>Actual Goals</b> = Real average goals scored per match that day.<br>
+    - <b>BTTS %</b> = % of games where both teams scored.<br>
+    - <b>Over 2.5 %</b> = % of games finishing with 3+ total goals.<br>
+    These help show how offensive or defensive each league tends to be — both projected and real.
+  </div>
+
+  <table class="table" id="league-table">
+    <thead>
+      <tr>
+        <th>League</th>
+        <th>Sim Goals</th>
+        <th>Actual Goals</th>
+        <th>BTTS %</th>
+        <th>Over 2.5 %</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="footer-note">Performance updates daily after all matches finish using DataGaffer simulations and live API results.</div>
+</div>
+
+<!-- ✅ UPDATED SCRIPT -->
+<script>
+async function loadPerformance() {
+  const data = await fetch("league_accuracy_readable.json").then(r => r.json()).catch(() => []);
+  if (!data.length) return;
+
+  // New format: flat array of league stats
+  const accuracy = data;
+  const leagueStats = data;
+
+  const accTable = document.querySelector("#accuracy-table tbody");
+  const lgTable = document.querySelector("#league-table tbody");
+
+  accTable.innerHTML = accuracy.map(l => `
+    <tr>
+      <td>${l.league}</td>
+      <td>${l.games_tracked}</td>
+      <td>${l.over25_accuracy}%</td>
+      <td>${l.btts_accuracy}%</td>
+      <td>${l.team_total_accuracy}%</td>
+      <td>${l.win_accuracy !== null && l.win_accuracy !== undefined ? l.win_accuracy + "%" : "–"}</td>
+      <td><b>${l.dg_score}%</b></td>
+    </tr>
+  `).join("");
+
+  lgTable.innerHTML = leagueStats.map(l => `
+    <tr>
+      <td>${l.league}</td>
+      <td>${l.sim_avg_goals}</td>
+      <td>${l.actual_avg_goals}</td>
+      <td>${l.actual_btts_pct}%</td>
+      <td>${l.actual_over25_pct}%</td>
+    </tr>
+  `).join("");
+}
+
+loadPerformance();
+</script>
+
+
+
+</body>
+</html>
