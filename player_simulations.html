@@ -212,13 +212,17 @@ async function loadPlayerData() {
  const indexRes = await fetch("player_simulations/index.json");
  const files = await indexRes.json();
 
- let allTeamsPlayers = [];
- for (const file of files) {
-   const res = await fetch("player_simulations/" + file);
-   const teamPlayers = await res.json();
-   teamPlayers.forEach(p => p.team = teamLookup[p.team_id] || "Unknown");
-   allTeamsPlayers.push(...teamPlayers);
- }
+ // ✅ Load all team JSONs in parallel instead of one by one
+const allTeamsPlayers = (
+  await Promise.all(
+    files.map(async (file) => {
+      const res = await fetch("player_simulations/" + file);
+      const teamPlayers = await res.json();
+      teamPlayers.forEach(p => p.team = teamLookup[p.team_id] || "Unknown");
+      return teamPlayers;
+    })
+  )
+).flat();
 
  let players;
  if (fixtureTeamIds.size > 0) {
