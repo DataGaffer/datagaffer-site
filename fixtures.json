@@ -262,10 +262,10 @@
       "home_win": 2.3,
       "draw": 3.4,
       "away_win": 3.1,
-      "btts": null,
-      "over_2_5": null,
-      "home_o1_5": null,
-      "away_o1_5": null
+      "btts": 1.61,
+      "over_2_5": 1.75,
+      "home_o1_5": 2.00,
+      "away_o1_5": 2.50
     },
     "sim_stats": {
       "xg": {
