@@ -10,14 +10,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#ffffff">
-
-  <!-- Color Thief (used to extract dominant logo color) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
 
   <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f2f4f7; color:#003f2e; }
 
-    /* Header */
     .header-bar {
       background-color: #003f2e;
       color: white;
@@ -63,7 +60,6 @@
       border-radius: 6px;
     }
 
-    /* Cards */
     .container { display:grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:16px; padding:16px; }
     .card {
       background:#ffffff;
@@ -74,11 +70,7 @@
       scroll-margin-top: 80px;
       transition: box-shadow 0.4s ease, transform 0.3s ease;
     }
-
-    .card.highlight {
-      box-shadow: 0 0 16px 4px #015326;
-      transform: scale(1.02);
-    }
+    .card.highlight { box-shadow: 0 0 16px 4px #015326; transform: scale(1.02); }
 
     .card h3 {
       margin:0 0 10px;
@@ -90,50 +82,92 @@
       gap:6px;
     }
 
-    .card .team-name {
-      font-weight:700;
-      transition: color .2s ease;
-    }
-
+    .team-name { font-weight:700; transition: color .2s ease; }
     .club-logo { height:22px; width:auto; vertical-align:middle; }
 
-    .section { background:#f6f9f7; border:1px solid #dfe9e3; border-radius:8px; padding:10px; margin-bottom:10px; }
-    .section h4 { margin:0 0 8px; font-size:15px; text-align:center; }
+    .section { background:#f3f8f5; border:1px solid #dfe9e3; border-radius:8px; padding:8px; margin-bottom:8px; }
+    .section h4 { margin:0 0 2px; font-size:13px; text-align:center; }
 
-    table {
-      width:100%;
-      border-collapse:collapse;
-      font-size:14px;
-      text-align:center;
+    /* 🔹 Compact Projected + H2H sections */
+    .compact-section {
+      padding:6px 8px !important;
     }
-    th, td { padding:4px; }
-    th {
-      font-weight:600;
-      border-bottom:1px solid #d8e0db;
-      color:#003f2e;
-      font-size:13px;
+    .compact-section h4 {
+      font-size:13px !important;
+      margin-bottom:4px !important;
     }
-
-    .gradient-cell {
-      font-weight: bold;
-      border-radius:4px;
-      padding:3px 4px;
-    }
-
     .projected-grid {
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      gap: 8px;
+      display:flex;
+      justify-content:space-around;
+      text-align:center;
+      gap:6px;
     }
     .projected-grid .label {
-      font-weight: 700;
-      color: #003f2e;
-      margin-bottom: 4px;
-      font-size: 14px;
+      font-weight:600;
+      color:#003f2e;
+      margin-bottom:2px;
+      font-size:11px;
+      border-bottom: 1px solid #d8e0db;
+    }
+    .projected-grid div div:last-child {
+      font-size:12px;
     }
 
-    /* Mobile adjustments */
+    table { width:100%; border-collapse:collapse; font-size:14px; text-align:center; }
+    th, td { padding:4px; }
+    th { font-weight:600; border-bottom:1px solid #d8e0db; color:#003f2e; font-size:13px; }
+
+    .gradient-cell { font-weight: bold; border-radius:4px; padding:3px 4px; }
+
+    .h2h {
+  background:#fff6e8;
+  border:1px solid #f2e0c5;
+  border-radius:8px;
+  padding:6px 8px;
+  margin-top:8px;
+  text-align:center; /* Center everything inside */
+}
+.h2h h4 {
+  margin:0 0 4px;
+  text-align:center; /* Center heading too */
+  font-size:13px;
+  color:#000000;
+}
+.h2h ul {
+  list-style:none;
+  padding:0;
+  margin:0 auto;
+  font-size:13px;
+  text-align:center;
+}
+.h2h li {
+  display:block;
+  margin:2px 0;
+} 
+/* Light blue for Projected Stats section */
+.projected-section {
+  background: #f0f5fb;
+  border: 1px solid #c2d8f5;
+}
+
+
+.section table {
+  font-size: 12px; /* makes the table text smaller */
+}
+
+/* Make Projected Stats and Sim vs Book Odds text black */
+.section h4 {
+  color: #000 !important;
+}
+
+/* Light blue background specifically for Projected Stats section */
+.section.compact-section h4:contains("Projected Stats"),
+.section.compact-section:has(h4:contains("Projected Stats")) {
+  background: #e7f2ff !important;   /* light blue background */
+  border: 1px solid #c2d8f5 !important; /* matching blue border */
+}
+
+
     @media (max-width: 768px) {
       .header-logo { height: 50px !important; }
       .header-bar h1 { font-size: 20px !important; }
@@ -146,16 +180,14 @@
 </head>
 <body>
 
-<!-- Header -->
 <div class="header-bar">
   <a href="dashboard.html" style="text-decoration:none; color:inherit; display:contents;">
-    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
-         alt="DG Logo" class="header-logo" />
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DG Logo" class="header-logo" />
     <h1>DataGaffer.com</h1>
   </a>
 </div>
 
-<div class="banner">Full match cards showing projected stats and DataGaffer vs bookmaker values.</div>
+<div class="banner">Full match cards showing projected stats, bookmaker comparison, and H2H data.</div>
 
 <div class="search-box">
   <input type="text" id="searchInput" placeholder="Search team, matchup, or league..." onkeyup="applySearch()" />
@@ -164,11 +196,22 @@
 <div class="container" id="cards"></div>
 
 <script>
+const slugify = s =>
+  s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+   .toLowerCase().replace(/[^a-z0-9]+/g, '');
+
+async function loadFixtures() {
+  const [fixtures, h2h] = await Promise.all([
+    fetch("fixtures.json").then(r => r.json()),
+    fetch("h2h_and_odds.json").then(r => r.json()).catch(() => ({}))
+  ]);
+  return { fixtures, h2h };
+}
+
 function toDecimalOdds(prob) {
   if (!prob || prob <= 0 || prob >= 100) return null;
   return +(100 / prob).toFixed(2);
 }
-
 function colorFromRatio(r, start, end) {
   r = Math.max(0, Math.min(1, r));
   const rr = Math.round(start.r + (end.r - start.r) * r);
@@ -176,7 +219,6 @@ function colorFromRatio(r, start, end) {
   const bb = Math.round(start.b + (end.b - start.b) * r);
   return `rgb(${rr},${gg},${bb})`;
 }
-
 function getValueGradient(value, min, max) {
   if (!isFinite(value)) return "white";
   if (value >= 0) {
@@ -188,18 +230,14 @@ function getValueGradient(value, min, max) {
   }
 }
 
-async function loadFixtures() {
-  return await fetch("fixtures.json").then(r => r.json());
-}
-
-function buildCard(f) {
-  const slug = `${f.home.name.toLowerCase().replace(/[^a-z0-9]/g, '')}-vs-${f.away.name.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+function buildCard(f, h2hMap) {
+  const slug = `${slugify(f.home.name)}-vs-${slugify(f.away.name)}`;
   const sim = f.sim_stats || {};
   const perc = sim.percents || {};
   const book = f.book_odds || {};
 
   const projected = `
-  <div class="section">
+  <div class="section compact-section projected-section">
     <h4>Projected Stats</h4>
     <div class="projected-grid">
       <div><div class="label">Goals</div><div>${sim.xg?.home ?? "–"} - ${sim.xg?.away ?? "–"}</div></div>
@@ -224,7 +262,6 @@ function buildCard(f) {
     const bookProb = 1 / bookOdds;
     return (simProb - bookProb) * 100;
   });
-
   const minDiff = Math.min(...diffs.filter(v => v !== null));
   const maxDiff = Math.max(...diffs.filter(v => v !== null));
 
@@ -253,30 +290,80 @@ function buildCard(f) {
       </table>
     </div>`;
 
+  const key = `home_${f.home.id}_${f.away.id}`;
+  const h2h = h2hMap[key] || {};
+  const recHome = h2h.home_wins ?? 0;
+  const recDraw = h2h.draws ?? 0;
+  const recAway = h2h.away_wins ?? 0;
+  const avgHome = h2h.avg_home ?? "–";
+  const avgAway = h2h.avg_away ?? "–";
+
+  const h2hSection = Object.keys(h2h).length > 0
+    ? `<div class="h2h compact-section">
+        <h4>Head-to-Head (last 5)</h4>
+        <ul>
+          <li>Record: ${f.home.name} ${recHome}W - ${recDraw}D - ${recAway}W ${f.away.name}</li>
+          <li>Avg Goals: ${f.home.name} ${avgHome} | ${f.away.name} ${avgAway}</li>
+        </ul>
+      </div>`
+    : `<div class="h2h compact-section"><h4>Head-to-Head (last 5)</h4><p style="font-size:13px; color:#555;">No recent meetings</p></div>`;
+
   return `
     <div class="card" id="${slug}">
       <h3>
-        <img class="club-logo home-logo" src="${f.home.logo}" alt="${f.home.name}" crossorigin="anonymous">
+        <img class="club-logo home-logo" src="${f.home.logo}" alt="${f.home.name}">
         <span class="team-name home-name">${f.home.name}</span>
         &nbsp;vs&nbsp;
         <span class="team-name away-name">${f.away.name}</span>
-        <img class="club-logo away-logo" src="${f.away.logo}" alt="${f.away.name}" crossorigin="anonymous">
+        <img class="club-logo away-logo" src="${f.away.logo}" alt="${f.away.name}">
       </h3>
       ${projected}
       ${table}
+      ${h2hSection}
     </div>`;
+}
+
+let allFixtures = [];
+async function init() {
+  const { fixtures, h2h } = await loadFixtures();
+  allFixtures = fixtures;
+  applySearch(h2h);
+  setTimeout(colorizeTeamNames, 150);
+
+  // ✅ Scroll & highlight feature restored
+  const hash = decodeURIComponent(location.hash.slice(1));
+  if (hash) {
+    const target = document.getElementById(hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        target.classList.add("highlight");
+        setTimeout(() => target.classList.remove("highlight"), 1200);
+      }, 400);
+    }
+  }
+}
+
+function applySearch(h2h) {
+  const term = document.getElementById("searchInput").value.toLowerCase();
+  const filtered = allFixtures.filter(f =>
+    f.home.name.toLowerCase().includes(term) ||
+    f.away.name.toLowerCase().includes(term) ||
+    (f.league && f.league.name.toLowerCase().includes(term))
+  );
+  document.getElementById("cards").innerHTML = filtered.map(f => buildCard(f, h2h)).join("");
+  setTimeout(colorizeTeamNames, 50);
 }
 
 function colorizeTeamNames() {
   if (typeof ColorThief === "undefined") return;
   const thief = new ColorThief();
   document.querySelectorAll(".card").forEach(card => {
-    const homeImg  = card.querySelector(".home-logo");
-    const awayImg  = card.querySelector(".away-logo");
+    const homeImg = card.querySelector(".home-logo");
+    const awayImg = card.querySelector(".away-logo");
     const homeName = card.querySelector(".home-name");
     const awayName = card.querySelector(".away-name");
     const applyColor = (img, nameEl) => {
-      if (!img || !nameEl) return;
       try {
         const [r,g,b] = thief.getColor(img);
         const dr = Math.max(0, Math.floor(r * 0.75));
@@ -285,46 +372,16 @@ function colorizeTeamNames() {
         nameEl.style.color = `rgb(${dr},${dg},${db})`;
       } catch { nameEl.style.color = "#0b3d2e"; }
     };
-    if (homeImg.complete && homeImg.naturalWidth) applyColor(homeImg, homeName);
+    if (homeImg.complete) applyColor(homeImg, homeName);
     else homeImg.addEventListener("load", () => applyColor(homeImg, homeName), { once:true });
-    if (awayImg.complete && awayImg.naturalWidth) applyColor(awayImg, awayName);
+    if (awayImg.complete) applyColor(awayImg, awayName);
     else awayImg.addEventListener("load", () => applyColor(awayImg, awayName), { once:true });
   });
 }
 
-let allFixtures = [];
-async function init() {
-  allFixtures = await loadFixtures();
-  applySearch();
-  setTimeout(colorizeTeamNames, 150);
-
-  // scroll to match if hash provided
-  const hash = window.location.hash.substring(1);
-  if (hash) {
-    const target = document.getElementById(hash);
-    if (target) {
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: "smooth", block: "center" });
-        target.classList.add("highlight");
-        setTimeout(() => target.classList.remove("highlight"), 1000);
-      }, 600);
-    }
-  }
-}
-
-function applySearch() {
-  const term = document.getElementById("searchInput").value.toLowerCase();
-  const filtered = allFixtures.filter(f =>
-    f.home.name.toLowerCase().includes(term) ||
-    f.away.name.toLowerCase().includes(term) ||
-    (f.league && f.league.name.toLowerCase().includes(term))
-  );
-  document.getElementById("cards").innerHTML = filtered.map(buildCard).join("");
-  setTimeout(colorizeTeamNames, 50);
-}
-
 init();
 </script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
@@ -336,23 +393,20 @@ document.body.style.display = "none";
 (async () => {
   const { data: { session } } = await supabaseClient.auth.getSession();
   if (!session) return window.location.href = "login.html";
-
   const { data: profile } = await supabaseClient
     .from("profiles")
     .select("is_subscribed, plan")
     .eq("id", session.user.id)
     .maybeSingle();
-
   if (!profile?.is_subscribed || !["monthly","yearly"].includes(profile.plan)) {
-    window.location.href = "subscribe.html";
-    return;
+    window.location.href = "subscribe.html"; return;
   }
-
   document.body.style.display = "block";
 })();
 </script>
 </body>
 </html>
+
 
 
 
