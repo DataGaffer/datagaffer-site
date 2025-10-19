@@ -137,7 +137,7 @@
         "match": "Mainz vs Leverkusen",
         "pick": "Leverkusen o1.5 Goals",
         "dg_odds": 1.73,
-        "book_odds": 2.10,
+        "book_odds": 2.1,
         "edge": 10.1,
         "league": "Bundesliga",
         "result": "Win"
@@ -151,6 +151,41 @@
         "edge": 11.1,
         "league": "Serie A",
         "result": "Loss"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-19",
+    "picks": [
+      {
+        "fixture_id": 1387769,
+        "match": "Toulouse vs Metz",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.35,
+        "book_odds": 1.9,
+        "edge": 21.3,
+        "league": "Ligue 1",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1380946,
+        "match": "Telstar vs Heerenveen",
+        "pick": "Telstar o1.5 Goals",
+        "dg_odds": 1.57,
+        "book_odds": 2.2,
+        "edge": 18.3,
+        "league": "Eredivisie",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1387763,
+        "match": "Lorient vs Brest",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.46,
+        "book_odds": 1.90,
+        "edge": 16.1,
+        "league": "Ligue 1",
+        "result": "Win"
       }
     ]
   }
