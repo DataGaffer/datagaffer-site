@@ -2,45 +2,191 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Performance</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.85, user-scalable=no" />
+<title>Match Accuracy | DataGaffer</title>
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ffffff" />
 
 <style>
-  body {font-family: Arial, sans-serif; margin: 0; background: #f2f4f7;}
-  .header {background: #003f2e; color: #fff; display: flex; align-items: center; justify-content: center; position: relative; padding: 10px 20px;}
-  .header img {height: 90px; position: absolute; left: 20px; top: 0;}
-  .header h1 {margin: 0; font-size: 32px; font-weight: 700;}
-  .wrap {max-width: 900px; margin: 24px auto; padding: 0 16px;}
-  .banner {background: #fff; border: 2px solid #003f2e; border-radius: 6px; padding: 10px 14px; text-align: center; font-weight: 600; color: #003f2e;}
-  .explain-box {background:#fff;border-left:6px solid #0ea768;padding:14px 18px;margin-top:16px;border-radius:4px;font-size:14px;line-height:1.6;color:#003f2e;}
-  .explain-box b{color:#0ea768;}
-  .table {margin-top: 20px; width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 3px 12px rgba(0,0,0,0.1);}
-  .table th {background: #003f2e; color: #fff; padding: 10px; font-size: 14px;}
-  .table td {padding: 8px 10px; text-align: center; border-bottom: 1px solid #d8e0db; font-size: 14px; color: #003f2e;}
-  .table tr:hover {background: #f1f7f4;}
-  h2 {
-    color: #003f2e;
-    margin-top: 40px;
-    text-align: center;   /* ✅ centers the titles */
-    font-weight: 700;     /* ✅ makes them bold */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.header {
+  background: #003f2e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 8px 14px;
+}
+
+.header img {
+  height: 80px;
+  position: absolute;
+  left: 16px;
+  top: 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.banner {
+  background: #fff;
+  border: 2px solid #003f2e;
+  border-radius: 6px;
+  padding: 8px 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #003f2e;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.search-box {
+  text-align: center;
+  margin: 14px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.search-box input,
+.search-box select {
+  padding: 8px;
+  border: 2px solid #003f2e;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* ✅ Table styling */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+}
+
+.table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  border: 1px solid #d0d8d0;
+  margin-bottom: 0px;
+}
+
+th {
+  background: #003f2e;
+  color: #fff;
+  padding: 10px;
+  font-size: 13px;
+  white-space: nowrap;
+  border: 1px solid #d0d8d0;
+  cursor: pointer;
+  position: relative;
+}
+
+th span.sort-arrow {
+  font-size: 12px;
+  margin-left: 6px;
+  opacity: 0.7;
+}
+
+td {
+  padding: 8px 10px;
+  text-align: center;
+  border: 1px solid #d0d8d0;
+  font-size: 13px;
+  color: #003f2e;
+  white-space: nowrap;
+}
+
+tr:hover { background: #f1f7f4; }
+
+/* ✅ League Table Compact + Centered */
+#league-banner {
+  margin-top: 45px;
+  margin-bottom: 25px;
+}
+
+#league-table {
+  max-width: 780px;
+  margin: 0 auto;
+  border: 1px solid #ccd0cc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 50px;
+}
+
+#league-table th, #league-table td {
+  padding: 6px 8px;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+#league-table td:nth-child(3),
+#league-table td:nth-child(4) {
+  font-weight: bold;
+  color: #003f2e;
+}
+
+#league-table td {
+  font-weight: 500;
+}
+
+#league-table td:nth-child(3) {
+  font-weight: bold;
+  color: #003f2e;
+}
+
+/* ✅ Compact mobile view */
+@media (max-width: 900px) {
+  .header img { height: 50px; left: 10px; }
+  .header h1 { font-size: 20px; }
+  .banner { font-size: 12px; padding: 6px 8px; }
+  .search-box input, .search-box select { padding: 6px 8px; font-size: 12px; }
+  th, td { font-size: 11px; padding: 4px 6px; }
+  .wrap { padding: 0 8px; }
+  .table { min-width: 720px; }
+
+  #league-table {
+    max-width: 95%;
+    min-width: 600px;
   }
-  .footer-note {margin-top: 20px; color: #51615a; font-size: 12px; text-align: center;}
-  @media (max-width: 900px) {
-    .header img {height: 50px;}
-    .header h1 {font-size: 20px;}
-    .table th, .table td {font-size: 11px; padding: 6px;}
+
+  #league-table th, #league-table td {
+    font-size: 11px;
+    padding: 4px 5px;
   }
+}
 </style>
 </head>
+
 <body>
 
-<!-- Header -->
 <div class="header">
   <a href="index.html" style="text-decoration:none;color:inherit;display:contents;">
     <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DG Logo">
@@ -49,96 +195,147 @@
 </div>
 
 <div class="wrap">
-  <div class="banner">Daily model accuracy after simulations and league scoring sim + actual stats</div>
+  <div class="banner">Daily match accuracy tracker — compare projected vs actual goals.</div>
 
-  <h2>Accuracy by League</h2>
-  <div class="explain-box">
-    <b>How accuracy is calculated:</b><br>
-    - Each market (Over 2.5, BTTS, Team Totals) is tested against real match results.<br>
-    - If the model projected a result with <b>≥55%</b> probability and it happened, that counts as correct.<br>
-    - If the model projected <b>≤50%</b> and it didn’t happen, that also counts as correct.<br>
-    - The <b>DG Score</b> is the average of all four accuracy metrics — giving a single performance rating for each league.
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search by team or league..." onkeyup="filterMatches()" />
+    <select id="dateSelect" onchange="filterMatches()"></select>
   </div>
 
-  <table class="table" id="accuracy-table">
-    <thead>
-      <tr>
-        <th>League</th>
-        <th>Games</th>
-        <th>O2.5</th>
-        <th>BTTS</th>
-        <th>TT o1.5</th>
-        <th>Score</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <h2>League Scoring Stats</h2>
-  <div class="explain-box">
-    <b>How these stats work:</b><br>
-    - <b>Sim Goals</b> = Average total goals predicted by DataGaffer’s xG model.<br>
-    - <b>Actual Goals</b> = Real average goals scored per match that day.<br>
-    - <b>BTTS %</b> = % of games where both teams scored.<br>
-    - <b>Over 2.5 %</b> = % of games finishing with 3+ total goals.<br>
-    These help show how offensive or defensive each league tends to be — both projected and real.
+  <!-- ✅ TEAM MATCH ACCURACY TABLE -->
+  <div class="table-container">
+    <table class="table" id="accuracy-table">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Date <span class="sort-arrow">▾</span></th>
+          <th onclick="sortTable(1)">League</th>
+          <th onclick="sortTable(2)">Match</th>
+          <th onclick="sortTable(3)">Projected</th>
+          <th onclick="sortTable(4)">Actual</th>
+          <th onclick="sortTable(5)">Diff</th>
+          <th onclick="sortTable(6)">Accuracy <span class="sort-arrow">▾</span></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </div>
 
-  <table class="table" id="league-table">
-    <thead>
-      <tr>
-        <th>League</th>
-        <th>Sim Goals</th>
-        <th>Actual Goals</th>
-        <th>BTTS %</th>
-        <th>Over 2.5 %</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+  <!-- ✅ LEAGUE AVERAGES TABLE -->
+  <div id="league-banner" class="banner">
+    League-wide stats overview — DG Score = overall match accuracy across all tracked games. Stats not in bold are the actual league stats. Starting tracking 2025-10-20
+  </div>
 
-  <div class="footer-note">Performance updates daily after all matches finish using DataGaffer simulations and live API results.</div>
+  <div class="table-container">
+    <table class="table" id="league-table">
+      <thead>
+        <tr>
+          <th>League</th>
+          <th>Games</th>
+          <th>DG&nbsp;Score</th>
+          <th>Avg&nbsp;Sim</th>
+          <th>Avg&nbsp;Goals</th>
+          <th>BTTS%</th>
+          <th>O2.5%</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 </div>
 
-<!-- ✅ UPDATED SCRIPT -->
 <script>
-async function loadPerformance() {
-  const data = await fetch("league_accuracy_readable.json").then(r => r.json()).catch(() => []);
-  if (!data.length) return;
+let allMatches = [];
+let allLeagues = [];
+let sortDirection = false;
 
-  // New format: flat array of league stats
-  const accuracy = data;
-  const leagueStats = data;
+async function loadAccuracy() {
+  const data = await fetch("daily_accuracy.json").then(r => r.json()).catch(() => null);
+  if (!data) return;
 
-  const accTable = document.querySelector("#accuracy-table tbody");
-  const lgTable = document.querySelector("#league-table tbody");
+  const daily = data.daily || data;
+  const leagues = data.leagues || [];
 
-  accTable.innerHTML = accuracy.map(l => `
-    <tr>
-      <td>${l.league}</td>
-      <td>${l.games_tracked}</td>
-      <td>${l.over25_accuracy}%</td>
-      <td>${l.btts_accuracy}%</td>
-      <td>${l.team_total_accuracy}%</td>
-      <td><b>${l.dg_score}%</b></td>
-    </tr>
-  `).join("");
+  allMatches = daily.flatMap(day => day.matches.map(m => ({ ...m, date: day.date })));
+  allLeagues = leagues;
 
-  lgTable.innerHTML = leagueStats.map(l => `
-    <tr>
-      <td>${l.league}</td>
-      <td>${l.sim_avg_goals}</td>
-      <td>${l.actual_avg_goals}</td>
-      <td>${l.actual_btts_pct}%</td>
-      <td>${l.actual_over25_pct}%</td>
-    </tr>
-  `).join("");
+  const dates = [...new Set(daily.map(d => d.date))].sort().reverse();
+  const latestDate = dates[0];
+  const select = document.getElementById("dateSelect");
+  select.innerHTML =
+    `<option value="">All Dates</option>` +
+    dates.map(d => `<option value="${d}" ${d === latestDate ? "selected" : ""}>${d}</option>`).join("");
+
+  const latestMatches = allMatches.filter(m => m.date === latestDate);
+  renderTeamTable(latestMatches);
+  renderLeagueTable(allLeagues);
 }
 
-loadPerformance();
+function filterMatches() {
+  const term = document.getElementById("searchInput").value.toLowerCase();
+  const selectedDate = document.getElementById("dateSelect").value;
+  const filtered = allMatches.filter(
+    (m) =>
+      (m.match.toLowerCase().includes(term) ||
+       m.league.toLowerCase().includes(term)) &&
+      (!selectedDate || m.date === selectedDate)
+  );
+  renderTeamTable(filtered);
+}
+
+function renderTeamTable(data) {
+  const tbody = document.querySelector("#accuracy-table tbody");
+  tbody.innerHTML = data
+    .map((m) => `
+      <tr>
+        <td>${m.date}</td>
+        <td>${m.league}</td>
+        <td>${m.match}</td>
+        <td>${m.projected_score}</td>
+        <td>${m.actual_score}</td>
+        <td>${m.avg_diff}</td>
+        <td style="font-weight:bold;">${m.accuracy_score}%</td>
+      </tr>`)
+    .join("");
+}
+
+function renderLeagueTable(data) {
+  const tbody = document.querySelector("#league-table tbody");
+  tbody.innerHTML = data
+    .map(l => `
+      <tr>
+        <td>${l.league}</td>
+        <td>${l.games_tracked}</td>
+        <td><b>${l.dg_score}%</b></td>
+        <td>${l.sim_avg_goals}</td>
+        <td>${l.actual_avg_goals}</td>
+        <td>${l.actual_btts_pct}%</td>
+        <td>${l.actual_over25_pct}%</td>
+      </tr>`)
+    .join("");
+}
+
+function sortTable(n) {
+  const table = document.getElementById("accuracy-table");
+  const rows = Array.from(table.rows).slice(1);
+  const isNumeric = n >= 3;
+
+  rows.sort((a, b) => {
+    const x = a.cells[n].innerText;
+    const y = b.cells[n].innerText;
+    const valX = isNumeric ? parseFloat(x) || 0 : x.toLowerCase();
+    const valY = isNumeric ? parseFloat(y) || 0 : y.toLowerCase();
+    if (valX < valY) return sortDirection ? -1 : 1;
+    if (valX > valY) return sortDirection ? 1 : -1;
+    return 0;
+  });
+
+  sortDirection = !sortDirection;
+  const tbody = table.querySelector("tbody");
+  rows.forEach(r => tbody.appendChild(r));
+}
+
+loadAccuracy();
 </script>
-
-
 
 </body>
 </html>
