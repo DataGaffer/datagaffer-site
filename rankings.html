@@ -132,42 +132,125 @@
       border-right: 1px solid #ffffff;
     }
     .outlook-table td {
-      padding: 10px 7px;
+      padding: 5px 5px;
       text-align: center;
       line-height: 1.0;
       border-bottom: 1px solid #ddd;
     }
-    .outlook-table tr:nth-child(even) { background-color: #edecec; }
-    .outlook-table tr:nth-child(odd)  { background-color: #d4d3d3; }
+    /* Row striping that skips the black rank columns (1 & 5) */
+/* Row striping for all non-rank columns */
+.outlook-table tbody tr:nth-child(even) td {
+  background-color: #edecec;
+}
+.outlook-table tbody tr:nth-child(odd) td {
+  background-color: #d4d3d3;
+}
+/* Remove background for rank columns so only .rank-cell shows */
+.outlook-table td:nth-child(1),
+.outlook-table td:nth-child(5) {
+  background: none !important;
+}
 
-    .outlook-table th:nth-child(1), .outlook-table td:nth-child(1),
-    .outlook-table th:nth-child(4), .outlook-table td:nth-child(4) {
-      width: 8%;
-    }
-    .outlook-table tbody th:nth-child(1), .outlook-table td:nth-child(1),
-    .outlook-table tbody th:nth-child(4), .outlook-table td:nth-child(4) {
-      font-size: 24px;
-      font-weight: bold;
-      color: #fff;
-      background-color: #000;
-    }
-    .outlook-table th:nth-child(2), .outlook-table td:nth-child(2),
-    .outlook-table th:nth-child(5), .outlook-table td:nth-child(5) {
-      width: 10%;
-    }
-    .outlook-table th:nth-child(3), .outlook-table td:nth-child(3),
-    .outlook-table th:nth-child(6), .outlook-table td:nth-child(6) {
-      width: 26%;
-    }
-    .outlook-table tbody th:nth-child(3), .outlook-table td:nth-child(3),
-    .outlook-table tbody th:nth-child(6), .outlook-table td:nth-child(6) {
-      font-size: 20px;
-      font-weight: bold;
-    }
+  /* Solid black for entire columns 1 & 5 */
+.outlook-table th:nth-child(1),
+.outlook-table td:nth-child(1),
+.outlook-table th:nth-child(5),
+.outlook-table td:nth-child(5) {
+  background-color: #000 !important;
+  color: #fff !important;
+  font-weight: 700;
+  width: 45px;
+  text-align: center;
+  padding: 0;
+  border-right: 1px solid #fff;
+}
+
+
+/* Movement columns (2 & 6): small arrow column */
+.outlook-table th:nth-child(2), .outlook-table td:nth-child(2),
+.outlook-table th:nth-child(6), .outlook-table td:nth-child(6) {
+  width: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Logo columns (3 & 7): medium */
+.outlook-table th:nth-child(3), .outlook-table td:nth-child(3),
+.outlook-table th:nth-child(7), .outlook-table td:nth-child(7) {
+  width: 55px;
+  text-align: center;
+}
+
+/* Team columns (4 & 8): widest */
+.outlook-table th:nth-child(4), .outlook-table td:nth-child(4),
+.outlook-table th:nth-child(8), .outlook-table td:nth-child(8) {
+  width: auto;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 6px;
+}
 
     .team-logo {
       height: 40px;
     }
+
+/* Rank columns (1 & 5): only table body, not header */
+.outlook-table tbody td:nth-child(1),
+.outlook-table tbody td:nth-child(5) {
+  background: #000 !important;
+  color: #fff !important;
+  text-align: center;
+  font-weight: 700;
+  width: 40px;
+  padding: 0;
+  border-right: 1px solid #fff;
+}
+
+/* Keep header cells gray (default) */
+.outlook-table thead th:nth-child(1),
+.outlook-table thead th:nth-child(5) {
+  background: #505050 !important;
+  color: #fff !important;
+}
+
+/* Normal row striping for the rest of the table */
+.outlook-table tbody tr:nth-child(even) td:not(:nth-child(1)):not(:nth-child(5)) {
+  background-color: #edecec;
+}
+.outlook-table tbody tr:nth-child(odd) td:not(:nth-child(1)):not(:nth-child(5)) {
+  background-color: #d4d3d3;
+}
+
+/* Clean rank text */
+.rank-cell {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.move-up, .move-down, .new-tag {
+  font-weight: 700;
+  line-height: 1;
+  font-size: 20px;      /* subtle vs. the number */
+  transform: translateY(-1px);
+}
+.move-up  { color: #00c853; }
+.move-down{ color: #e53935; }
+.new-tag  {
+  background: #00c853;
+  color: #fff;
+  font-size: 10px;
+  padding: 1px 3px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transform: translateY(-2px);
+}
+
+
+
 
     /* --- Mobile adjustments for Rankings Page --- */
 @media (max-width: 925px) {
@@ -239,24 +322,90 @@
   .team-logo {
     height: 20px !important;
   }
-
-  /* Narrower rank columns */
-  .outlook-table td:nth-child(1),
-  .outlook-table td:nth-child(4) {
-    font-size: 14px !important;
-    width: 8% !important;
-  }
-
-  /* Narrower name columns with ellipsis */
-  .outlook-table td:nth-child(3),
-  .outlook-table td:nth-child(6) {
-    font-size: 9px !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.outlook-table th:nth-child(1), 
+.outlook-table th:nth-child(5) {
+  width: 17px !important;
+  background: #000 !important;
+  color: #fff !important;
+  font-size: 6px !important;
+  text-align: center !important;
 }
 
+
+/* Rank columns (1 & 5): ultra narrow black stripes */
+ .outlook-table td:nth-child(1),
+ .outlook-table td:nth-child(5) {
+  width: 17px !important;
+  background: #000 !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  text-align: center !important;
+}
+
+/* Movement columns (2 & 6): tiny arrow column */
+.outlook-table th:nth-child(2), .outlook-table td:nth-child(2),
+.outlook-table th:nth-child(6), .outlook-table td:nth-child(6) {
+  width: 25px !important;
+  font-size: 7px !important;
+  text-align: center !important;
+  padding: 0 !important;
+}
+
+/* Logo columns (3 & 7): keep medium */
+.outlook-table th:nth-child(3), .outlook-table td:nth-child(3),
+.outlook-table th:nth-child(7), .outlook-table td:nth-child(7) {
+  width: 30px !important;
+  text-align: center !important;
+}
+
+/* Team columns (4 & 8): widest area */
+ .outlook-table td:nth-child(4),
+ .outlook-table td:nth-child(8) {
+  font-size: 9px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding-left: 4px !important;
+}
+
+.outlook-table th:nth-child(4),
+.outlook-table th:nth-child(8) {
+  font-size: 8px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding-left: 4px !important;
+}
+
+
+
+/* Clean rank text */
+.rank-cell {
+  color: #fff;
+  font-weight: 700;
+  font-size: 7px;
+  line-height: 0;
+}
+
+.move-up, .move-down, .new-tag {
+  font-weight: 700;
+  line-height: 0;
+  font-size: 10px;      /* subtle vs. the number */
+  transform: translateY(-1px);
+}
+.move-up  { color: #00c853; }
+.move-down{ color: #e53935; }
+.new-tag  {
+  background: #00c853;
+  color: #fff;
+  font-size: 6px;
+  padding: 1px 1px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transform: translateY(-2px);
+}
+}
 
   </style>
 </head>
@@ -297,8 +446,8 @@
     <table class="outlook-table">
       <thead>
         <tr>
-          <th>Rank</th><th></th><th>Team</th>
-          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
         </tr>
       </thead>
       <tbody id="btts-rankings-body"></tbody>
@@ -320,8 +469,8 @@
     <table class="outlook-table">
       <thead>
         <tr>
-          <th>Rank</th><th></th><th>Team</th>
-          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
         </tr>
       </thead>
       <tbody id="over25-rankings-body"></tbody>
@@ -343,8 +492,8 @@
     <table class="outlook-table">
       <thead>
         <tr>
-          <th>Rank</th><th></th><th>Team</th>
-          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
         </tr>
       </thead>
       <tbody id="team-total-rankings-body"></tbody>
@@ -366,8 +515,8 @@
     <table class="outlook-table">
       <thead>
         <tr>
-          <th>Rank</th><th></th><th>Team</th>
-          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
         </tr>
       </thead>
       <tbody id="win-rankings-body"></tbody>
@@ -389,8 +538,8 @@
     <table class="outlook-table">
       <thead>
         <tr>
-          <th>Rank</th><th></th><th>Team</th>
-          <th>Rank</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
+          <th>Rank</th><th>Move</th><th></th><th>Team</th>
         </tr>
       </thead>
       <tbody id="under25-rankings-body"></tbody>
@@ -398,7 +547,20 @@
   </div>
 </section>
 
+
 <script>
+
+function movementHTML(entry) {
+  if (!entry.direction) return "";
+  if (entry.direction === "up")
+    return `<span class="move-up">▲ ${entry.change}</span>`;
+  if (entry.direction === "down")
+    return `<span class="move-down">▼ ${entry.change}</span>`;
+  if (entry.direction === "new")
+    return `<span class="new-tag">NEW</span>`;
+  return "";
+}
+
 function renderRankings(rankings, tbodyId) {
   const tbody = document.getElementById(tbodyId);
   tbody.innerHTML = "";
@@ -407,26 +569,30 @@ function renderRankings(rankings, tbodyId) {
     const right = rankings[i + 15];
     let row = "<tr>";
 
+    // LEFT SIDE
     if (left) {
       row += `
-        <td>${left.rank}</td>
+        <td class="rank-cell">${left.rank}</td>
+        <td>${movementHTML(left)}</td>
         <td><img src="assets/logos/${left.id}.png"
                  class="team-logo"
                  onerror="this.onerror=null; this.src='assets/logos/${left.id}.svg'"></td>
         <td>${left.team}</td>`;
     } else {
-      row += "<td></td><td></td><td></td>";
+      row += "<td></td><td></td><td></td><td></td>";
     }
 
+    // RIGHT SIDE
     if (right) {
       row += `
-        <td>${right.rank}</td>
+        <td class="rank-cell">${right.rank}</td>
+        <td>${movementHTML(right)}</td>
         <td><img src="assets/logos/${right.id}.png"
                  class="team-logo"
                  onerror="this.onerror=null; this.src='assets/logos/${right.id}.svg'"></td>
         <td>${right.team}</td>`;
     } else {
-      row += "<td></td><td></td><td></td>";
+      row += "<td></td><td></td><td></td><td></td>";
     }
 
     row += "</tr>";
