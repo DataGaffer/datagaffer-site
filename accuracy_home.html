@@ -108,6 +108,11 @@
       font-weight: bold;
     }
 
+    #summary, #avgOddsSummary {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
     /* Mobile */
     @media (max-width: 768px) {
       .header-logo { height: 50px !important; }
@@ -132,8 +137,8 @@
   <!-- Banner -->
   <div class="banner">AI Top Picks Accuracy – Full History</div>
 
-  <!-- Summary -->
   <div class="summary" id="summary">Loading...</div>
+  <div class="summary" id="avgOddsSummary"></div>
 
   <!-- Table -->
   <table class="accuracy-table" id="accuracy-table">
@@ -195,7 +200,15 @@ async function loadAccuracy() {
   });
 
   const winRate = ((wins / total) * 100).toFixed(1);
-  document.getElementById("summary").innerText = `Overall Accuracy: ${winRate}% (${wins}/${total})`;
+document.getElementById("summary").innerText = `Overall Accuracy: ${winRate}% (${wins}/${total})`;
+
+// 🔹 Calculate average book odds
+const validOdds = allPicks
+  .map(p => p.book_odds)
+  .filter(o => typeof o === "number" && !isNaN(o));
+const avgOdds = validOdds.length ? (validOdds.reduce((a,b)=>a+b,0) / validOdds.length).toFixed(2) : "–";
+
+document.getElementById("avgOddsSummary").innerText = `Avg Odds: ${avgOdds}`;
 }
 
 loadAccuracy();

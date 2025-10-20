@@ -3,8 +3,8 @@ import glob
 import os
 
 # 🔹 Configurable weights
-WEIGHT_2024 = 0.5
-WEIGHT_2025 = 0.5
+WEIGHT_2024 = 0.3
+WEIGHT_2025 = 0.7
 
 # 🔹 Paths to both seasons
 TEAM_STATS_PATHS = {

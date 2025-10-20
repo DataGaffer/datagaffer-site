@@ -94,7 +94,8 @@ def main():
     with open(FIXTURES_FILE, "r") as f:
         fixtures = json.load(f)
 
-    history = load_json(OUTPUT_FILE, [])
+    data = load_json(OUTPUT_FILE, {})
+    history = data.get("daily", []) if isinstance(data, dict) else data
 
     today_matches = []
 

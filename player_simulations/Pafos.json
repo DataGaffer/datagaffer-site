@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 3403,
+    "player_id": 26669,
+    "name": "Bruno Felipe",
+    "position": "Attacker",
+    "appearances": 23,
+    "goals": 0,
+    "assists": 1,
+    "shots": 6,
+    "shots_on_target": 2,
+    "goals_per90_simulated": 0.0,
+    "assists_per90_simulated": 0.77,
+    "shots_per90": 2.51,
+    "sot_per90": 1.17,
+    "+1_goal_pct": 0.0,
+    "+1_assist_pct": 53.5,
+    "soa_pct": 53.5
+  },
+  {
+    "team_id": 3403,
+    "player_id": 31397,
+    "name": "V. Dragomir",
+    "position": "Midfielder",
+    "appearances": 22,
+    "goals": 3,
+    "assists": 1,
+    "shots": 14,
+    "shots_on_target": 5,
+    "goals_per90_simulated": 0.68,
+    "assists_per90_simulated": 0.67,
+    "shots_per90": 5.7,
+    "sot_per90": 2.86,
+    "+1_goal_pct": 49.7,
+    "+1_assist_pct": 49.2,
+    "soa_pct": 74.5
+  }
+]

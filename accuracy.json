@@ -182,10 +182,35 @@
         "match": "Lorient vs Brest",
         "pick": "Over 2.5 Goals",
         "dg_odds": 1.46,
-        "book_odds": 1.90,
+        "book_odds": 1.9,
         "edge": 16.1,
         "league": "Ligue 1",
         "result": "Win"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-20",
+    "picks": [
+      {
+        "fixture_id": 1390899,
+        "match": "Alaves vs Valencia",
+        "pick": "Alaves Win",
+        "dg_odds": 1.69,
+        "book_odds": 2.25,
+        "edge": 14.9,
+        "league": "La Liga",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1379048,
+        "match": "West Ham vs Brentford",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.56,
+        "book_odds": 1.9,
+        "edge": 11.6,
+        "league": "Premier League",
+        "result": "Loss"
       }
     ]
   }
