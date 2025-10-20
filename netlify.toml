@@ -4,7 +4,7 @@
 [functions]
   node_bundler = "esbuild"
   external_node_modules = ["stripe"]
-  included_files = ["netlify/functions/*"]
+  included_files = ["netlify/functions/**/*.js"]
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
