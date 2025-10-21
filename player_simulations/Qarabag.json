@@ -1,0 +1,38 @@
+[
+  {
+    "team_id": 556,
+    "player_id": 1552,
+    "name": "A. Zoubir",
+    "position": "Midfielder",
+    "appearances": 10,
+    "goals": 2,
+    "assists": 1,
+    "shots": 8,
+    "shots_on_target": 4,
+    "goals_per90_simulated": 0.3,
+    "assists_per90_simulated": 0.13,
+    "shots_per90": 1.81,
+    "sot_per90": 0.59,
+    "+1_goal_pct": 26.4,
+    "+1_assist_pct": 12.4,
+    "soa_pct": 35.6
+  },
+  {
+    "team_id": 556,
+    "player_id": 9353,
+    "name": "Kady",
+    "position": "Midfielder",
+    "appearances": 10,
+    "goals": 0,
+    "assists": 2,
+    "shots": 8,
+    "shots_on_target": 5,
+    "goals_per90_simulated": 0.0,
+    "assists_per90_simulated": 0.35,
+    "shots_per90": 2.62,
+    "sot_per90": 0.97,
+    "+1_goal_pct": 0.0,
+    "+1_assist_pct": 29.6,
+    "soa_pct": 29.6
+  }
+]

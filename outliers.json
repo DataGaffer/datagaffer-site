@@ -1,0 +1,731 @@
+{
+  "generated_from": "find_outliers.py",
+  "sims_per_fixture": 5000,
+  "thresholds": {
+    "min_total_goals": 8,
+    "min_single_team_goals": 6,
+    "min_margin": 5
+  },
+  "outliers": [
+    {
+      "fixture_id": 1451061,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 42,
+        "name": "Arsenal"
+      },
+      "away": {
+        "id": 530,
+        "name": "Atletico"
+      },
+      "date": "2025-10-21T19:00:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "9-0",
+        "total_goals": 9,
+        "margin": 9,
+        "probability": 0.0002,
+        "probability_pretty": "0.020%",
+        "count": 1,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "1.160%",
+        "home_goals>=6": "2.600%",
+        "away_goals>=6": "0.020%",
+        "home_margin>=5": "4.200%",
+        "away_margin>=5": "0.020%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "9-3",
+          "prob": 0.0002,
+          "total_goals": 12,
+          "margin": 6,
+          "single_team_max": 9,
+          "count": 1
+        },
+        {
+          "scoreline": "7-4",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 3,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "6-5",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 1,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "9-1",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 8,
+          "single_team_max": 9,
+          "count": 1
+        },
+        {
+          "scoreline": "9-0",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 9,
+          "single_team_max": 9,
+          "count": 1
+        }
+      ],
+      "outlier_score": 1.2698
+    },
+    {
+      "fixture_id": 1451060,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 168,
+        "name": "Leverkusen"
+      },
+      "away": {
+        "id": 85,
+        "name": "PSG"
+      },
+      "date": "2025-10-21T19:00:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "0-9",
+        "total_goals": 9,
+        "margin": 9,
+        "probability": 0.0004,
+        "probability_pretty": "0.040%",
+        "count": 2,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "3.780%",
+        "home_goals>=6": "0.120%",
+        "away_goals>=6": "4.420%",
+        "home_margin>=5": "0.040%",
+        "away_margin>=5": "5.400%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "6-7",
+          "prob": 0.0002,
+          "total_goals": 13,
+          "margin": 1,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "4-8",
+          "prob": 0.0002,
+          "total_goals": 12,
+          "margin": 4,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "3-8",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 5,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "5-6",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 1,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "1-9",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 8,
+          "single_team_max": 9,
+          "count": 1
+        }
+      ],
+      "outlier_score": 1.2696
+    },
+    {
+      "fixture_id": 1451062,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 400,
+        "name": "Copenhagen"
+      },
+      "away": {
+        "id": 165,
+        "name": "Dortmund"
+      },
+      "date": "2025-10-21T19:00:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "0-9",
+        "total_goals": 9,
+        "margin": 9,
+        "probability": 0.0004,
+        "probability_pretty": "0.040%",
+        "count": 2,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "2.460%",
+        "home_goals>=6": "0.120%",
+        "away_goals>=6": "2.800%",
+        "home_margin>=5": "0.200%",
+        "away_margin>=5": "3.320%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "4-7",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 3,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "6-5",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 1,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "6-4",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 2,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "1-8",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 7,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "6-2",
+          "prob": 0.0002,
+          "total_goals": 8,
+          "margin": 4,
+          "single_team_max": 6,
+          "count": 1
+        }
+      ],
+      "outlier_score": 1.2688
+    },
+    {
+      "fixture_id": 1451069,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 169,
+        "name": "Eintracht Frankfurt"
+      },
+      "away": {
+        "id": 40,
+        "name": "Liverpool"
+      },
+      "date": "2025-10-22T19:00:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "0-9",
+        "total_goals": 9,
+        "margin": 9,
+        "probability": 0.0004,
+        "probability_pretty": "0.040%",
+        "count": 2,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "6.120%",
+        "home_goals>=6": "0.840%",
+        "away_goals>=6": "3.900%",
+        "home_margin>=5": "0.560%",
+        "away_margin>=5": "3.700%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "6-7",
+          "prob": 0.0002,
+          "total_goals": 13,
+          "margin": 1,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "9-3",
+          "prob": 0.0002,
+          "total_goals": 12,
+          "margin": 6,
+          "single_team_max": 9,
+          "count": 1
+        },
+        {
+          "scoreline": "4-8",
+          "prob": 0.0002,
+          "total_goals": 12,
+          "margin": 4,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "7-5",
+          "prob": 0.0002,
+          "total_goals": 12,
+          "margin": 2,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "2-9",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 7,
+          "single_team_max": 9,
+          "count": 1
+        }
+      ],
+      "outlier_score": 1.2644
+    },
+    {
+      "fixture_id": 1451064,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 34,
+        "name": "Newcastle"
+      },
+      "away": {
+        "id": 211,
+        "name": "Benfica"
+      },
+      "date": "2025-10-21T19:00:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "8-0",
+        "total_goals": 8,
+        "margin": 8,
+        "probability": 0.0004,
+        "probability_pretty": "0.040%",
+        "count": 2,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "1.060%",
+        "home_goals>=6": "1.140%",
+        "away_goals>=6": "0.160%",
+        "home_margin>=5": "2.120%",
+        "away_margin>=5": "0.100%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "7-2",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 5,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "6-3",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 3,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "0-5",
+          "prob": 0.0002,
+          "total_goals": 5,
+          "margin": 5,
+          "single_team_max": 5,
+          "count": 1
+        },
+        {
+          "scoreline": "3-6",
+          "prob": 0.0004,
+          "total_goals": 9,
+          "margin": 3,
+          "single_team_max": 6,
+          "count": 2
+        },
+        {
+          "scoreline": "4-5",
+          "prob": 0.0004,
+          "total_goals": 9,
+          "margin": 1,
+          "single_team_max": 5,
+          "count": 2
+        }
+      ],
+      "outlier_score": 1.239
+    },
+    {
+      "fixture_id": 1451063,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 533,
+        "name": "Villarreal"
+      },
+      "away": {
+        "id": 50,
+        "name": "Man City"
+      },
+      "date": "2025-10-21T19:00:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "0-8",
+        "total_goals": 8,
+        "margin": 8,
+        "probability": 0.0002,
+        "probability_pretty": "0.020%",
+        "count": 1,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "1.380%",
+        "home_goals>=6": "0.380%",
+        "away_goals>=6": "0.620%",
+        "home_margin>=5": "0.380%",
+        "away_margin>=5": "0.960%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "8-2",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 6,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "3-7",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 4,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "4-6",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 2,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "8-1",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 7,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "7-2",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 5,
+          "single_team_max": 7,
+          "count": 1
+        }
+      ],
+      "outlier_score": 1.2362
+    },
+    {
+      "fixture_id": 1451056,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 664,
+        "name": "Kairat Almaty"
+      },
+      "away": {
+        "id": 3403,
+        "name": "Pafos"
+      },
+      "date": "2025-10-21T16:45:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "8-0",
+        "total_goals": 8,
+        "margin": 8,
+        "probability": 0.0002,
+        "probability_pretty": "0.020%",
+        "count": 1,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "1.280%",
+        "home_goals>=6": "0.420%",
+        "away_goals>=6": "0.740%",
+        "home_margin>=5": "0.500%",
+        "away_margin>=5": "0.960%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "5-7",
+          "prob": 0.0002,
+          "total_goals": 12,
+          "margin": 2,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "6-5",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 1,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "7-3",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 4,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "1-8",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 7,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "3-6",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 3,
+          "single_team_max": 6,
+          "count": 1
+        }
+      ],
+      "outlier_score": 1.2358
+    },
+    {
+      "fixture_id": 1451059,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 197,
+        "name": "PSV"
+      },
+      "away": {
+        "id": 492,
+        "name": "Napoli"
+      },
+      "date": "2025-10-21T19:00:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "0-8",
+        "total_goals": 8,
+        "margin": 8,
+        "probability": 0.0002,
+        "probability_pretty": "0.020%",
+        "count": 1,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "2.480%",
+        "home_goals>=6": "0.620%",
+        "away_goals>=6": "1.240%",
+        "home_margin>=5": "0.460%",
+        "away_margin>=5": "1.340%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "4-8",
+          "prob": 0.0002,
+          "total_goals": 12,
+          "margin": 4,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "7-5",
+          "prob": 0.0002,
+          "total_goals": 12,
+          "margin": 2,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "6-4",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 2,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "8-1",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 7,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "1-8",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 7,
+          "single_team_max": 8,
+          "count": 1
+        }
+      ],
+      "outlier_score": 1.2354
+    },
+    {
+      "fixture_id": 1451058,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 1393,
+        "name": "USG"
+      },
+      "away": {
+        "id": 505,
+        "name": "Inter"
+      },
+      "date": "2025-10-21T19:00:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "8-1",
+        "total_goals": 9,
+        "margin": 7,
+        "probability": 0.0002,
+        "probability_pretty": "0.020%",
+        "count": 1,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "1.700%",
+        "home_goals>=6": "0.500%",
+        "away_goals>=6": "0.580%",
+        "home_margin>=5": "0.580%",
+        "away_margin>=5": "0.560%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "7-4",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 3,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "6-5",
+          "prob": 0.0002,
+          "total_goals": 11,
+          "margin": 1,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "8-2",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 6,
+          "single_team_max": 8,
+          "count": 1
+        },
+        {
+          "scoreline": "3-7",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 4,
+          "single_team_max": 7,
+          "count": 1
+        },
+        {
+          "scoreline": "6-4",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 2,
+          "single_team_max": 6,
+          "count": 1
+        }
+      ],
+      "outlier_score": 1.225
+    },
+    {
+      "fixture_id": 1451057,
+      "league": "UEFA Champions League",
+      "home": {
+        "id": 529,
+        "name": "Barcelona"
+      },
+      "away": {
+        "id": 553,
+        "name": "Olympiakos"
+      },
+      "date": "2025-10-21T16:45:00+00:00",
+      "craziest_scoreline_observed": {
+        "scoreline": "9-0",
+        "total_goals": 9,
+        "margin": 9,
+        "probability": 0.0136,
+        "probability_pretty": "1.360%",
+        "count": 68,
+        "sample_size": 5000
+      },
+      "extreme_probs": {
+        "total_goals>=8": "10.220%",
+        "home_goals>=6": "22.480%",
+        "away_goals>=6": "0.000%",
+        "home_margin>=5": "29.020%",
+        "away_margin>=5": "0.000%"
+      },
+      "rare_wild_scorelines": [
+        {
+          "scoreline": "9-4",
+          "prob": 0.0002,
+          "total_goals": 13,
+          "margin": 5,
+          "single_team_max": 9,
+          "count": 1
+        },
+        {
+          "scoreline": "6-4",
+          "prob": 0.0002,
+          "total_goals": 10,
+          "margin": 2,
+          "single_team_max": 6,
+          "count": 1
+        },
+        {
+          "scoreline": "4-5",
+          "prob": 0.0002,
+          "total_goals": 9,
+          "margin": 1,
+          "single_team_max": 5,
+          "count": 1
+        },
+        {
+          "scoreline": "6-5",
+          "prob": 0.0004,
+          "total_goals": 11,
+          "margin": 1,
+          "single_team_max": 6,
+          "count": 2
+        },
+        {
+          "scoreline": "5-4",
+          "prob": 0.0004,
+          "total_goals": 9,
+          "margin": 1,
+          "single_team_max": 5,
+          "count": 2
+        }
+      ],
+      "outlier_score": 1.1678
+    }
+  ]
+}

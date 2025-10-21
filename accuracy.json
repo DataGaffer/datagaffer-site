@@ -213,5 +213,40 @@
         "result": "Loss"
       }
     ]
+  },
+  {
+    "date": "2025-10-21",
+    "picks": [
+      {
+        "fixture_id": 1451056,
+        "match": "Kairat Almaty vs Pafos",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.68,
+        "book_odds": 2.2,
+        "edge": 14.0,
+        "league": "UEFA Champions League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1451057,
+        "match": "Barcelona vs Olympiakos",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.18,
+        "book_odds": 1.36,
+        "edge": 11.1,
+        "league": "UEFA Champions League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1451059,
+        "match": "PSV vs Napoli",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.49,
+        "book_odds": 1.72,
+        "edge": 9.2,
+        "league": "UEFA Champions League",
+        "result": "Win"
+      }
+    ]
   }
 ]
