@@ -363,17 +363,26 @@ function colorizeTeamNames() {
     const awayImg = card.querySelector(".away-logo");
     const homeName = card.querySelector(".home-name");
     const awayName = card.querySelector(".away-name");
+
+    // ✅ Allow color sampling from external logos
+    homeImg.crossOrigin = "Anonymous";
+    awayImg.crossOrigin = "Anonymous";
+
     const applyColor = (img, nameEl) => {
       try {
-        const [r,g,b] = thief.getColor(img);
+        const [r, g, b] = thief.getColor(img);
         const dr = Math.max(0, Math.floor(r * 0.75));
         const dg = Math.max(0, Math.floor(g * 0.75));
         const db = Math.max(0, Math.floor(b * 0.75));
         nameEl.style.color = `rgb(${dr},${dg},${db})`;
-      } catch { nameEl.style.color = "#0b3d2e"; }
+      } catch {
+        nameEl.style.color = "#0b3d2e";
+      }
     };
+
     if (homeImg.complete) applyColor(homeImg, homeName);
     else homeImg.addEventListener("load", () => applyColor(homeImg, homeName), { once:true });
+
     if (awayImg.complete) applyColor(awayImg, awayName);
     else awayImg.addEventListener("load", () => applyColor(awayImg, awayName), { once:true });
   });

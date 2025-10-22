@@ -17,13 +17,15 @@ def implied_pct(odds):
 def find_top_picks(fixtures):
     picks = []
     MARKET_MAP = [
-        ("home_win_pct", "home_win", lambda m: f"{m['home']['name']} Win"),
-        ("away_win_pct", "away_win", lambda m: f"{m['away']['name']} Win"),
-        ("over_2_5_pct", "over_2_5", lambda m: "Over 2.5 Goals"),
-        ("btts_pct", "btts", lambda m: "BTTS Yes"),
-        ("home_o1_5_pct", "home_o1_5", lambda m: f"{m['home']['name']} o1.5 Goals"),
-        ("away_o1_5_pct", "away_o1_5", lambda m: f"{m['away']['name']} o1.5 Goals"),
-    ]
+    ("home_win_pct", "home_win", lambda m: f"{m['home']['name']} Win"),
+    ("away_win_pct", "away_win", lambda m: f"{m['away']['name']} Win"),
+    ("over_2_5_pct", "over_2_5", lambda m: "Over 2.5 Goals"),
+    ("over_3_5_pct", "over_3_5", lambda m: "Over 3.5 Goals"),
+    ("under_2_5_pct", "under_2_5", lambda m: "Under 2.5 Goals"),
+    ("btts_pct", "btts", lambda m: "BTTS Yes"),
+    ("home_o1_5_pct", "home_o1_5", lambda m: f"{m['home']['name']} o1.5 Goals"),
+    ("away_o1_5_pct", "away_o1_5", lambda m: f"{m['away']['name']} o1.5 Goals"),
+]
 
     for match in fixtures:
         sim = match.get("sim_stats", {}).get("percents", {})
@@ -76,15 +78,26 @@ def determine_result(pick, home_goals, away_goals, home_name, away_name):
     total = home_goals + away_goals
     pick_lower = pick.lower()
 
+    # --- Goal Totals ---
+    if "over 3.5" in pick_lower:
+        return "Win" if total > 3 else "Loss"
     if "over 2.5" in pick_lower:
         return "Win" if total > 2 else "Loss"
+    if "under 2.5" in pick_lower:
+        return "Win" if total < 3 else "Loss"
+
+    # --- Both Teams To Score ---
     if "btts yes" in pick_lower:
         return "Win" if home_goals > 0 and away_goals > 0 else "Loss"
+
+    # --- Team Totals ---
     if "o1.5" in pick_lower:
         if home_name.lower() in pick_lower:
             return "Win" if home_goals >= 2 else "Loss"
         if away_name.lower() in pick_lower:
             return "Win" if away_goals >= 2 else "Loss"
+
+    # --- Win Markets ---
     if "win" in pick_lower:
         if home_name.lower() in pick_lower:
             return "Win" if home_goals > away_goals else "Loss"

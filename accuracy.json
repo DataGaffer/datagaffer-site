@@ -248,5 +248,40 @@
         "result": "Win"
       }
     ]
+  },
+  {
+    "date": "2025-10-22",
+    "picks": [
+      {
+        "fixture_id": 1451070,
+        "match": "Chelsea vs Ajax",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.51,
+        "book_odds": 1.75,
+        "edge": 9.1,
+        "league": "UEFA Champions League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1451066,
+        "match": "Athletic Club vs Qarabag",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.81,
+        "book_odds": 1.95,
+        "edge": 3.8,
+        "league": "UEFA Champions League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1451067,
+        "match": "Monaco vs Tottenham",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.46,
+        "book_odds": 1.61,
+        "edge": 6.5,
+        "league": "UEFA Champions League",
+        "result": "Loss"
+      }
+    ]
   }
 ]

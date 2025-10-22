@@ -55,6 +55,8 @@ for label, target_date in target_dates.items():
                 "away_win": float(odds_data[2]["odd"]),
                 "btts": None,
                 "over_2_5": None,
+                "over_3_5": None,
+                "under_2_5": None,
                 "home_o1_5": None,
                 "away_o1_5": None
             }
@@ -65,6 +67,8 @@ for label, target_date in target_dates.items():
                 "away_win": None,
                 "btts": None,
                 "over_2_5": None,
+                "over_3_5": None,
+                "under_2_5": None,
                 "home_o1_5": None,
                 "away_o1_5": None
             }
@@ -181,6 +185,8 @@ for label in all_matches:
                     "draw_pct": sim["draw_pct"],
                     "away_win_pct": sim["away_win_pct"],
                     "over_2_5_pct": sim["over_2_5_pct"],
+                    "over_3_5_pct": sim.get("over_3_5_pct", 0),   # ✅ new
+                    "under_2_5_pct": sim.get("under_2_5_pct", 0), # ✅ new
                     "btts_pct": sim["btts_pct"],
                     "home_o1_5_pct": sim["home_o1_5_pct"],
                     "away_o1_5_pct": sim["away_o1_5_pct"]

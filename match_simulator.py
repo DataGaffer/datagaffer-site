@@ -66,7 +66,7 @@ def get_blended_goals(team_id, side, stat_type):
     val_2024 = api_stats_2024.get(team_id, {}).get(side, {}).get(stat_type, None)
 
     if val_2025 is not None and val_2024 is not None:
-        return 0.5 * val_2025 + 0.5 * val_2024
+        return 0.6 * val_2025 + 0.4 * val_2024
     elif val_2025 is not None:
         return val_2025
     elif val_2024 is not None:
@@ -199,6 +199,8 @@ def simulate_match(home_id, away_id, fixture_id=None):
         "draw_pct": round(np.mean(home_goals == away_goals) * 100, 1),
         "away_win_pct": round(np.mean(home_goals < away_goals) * 100, 1),
         "over_2_5_pct": round(np.mean((home_goals + away_goals) > 2) * 100, 1),
+        "over_3_5_pct": round(np.mean((home_goals + away_goals) > 3) * 100, 1),
+        "under_2_5_pct": round(np.mean((home_goals + away_goals) <= 2) * 100, 1),
         "btts_pct": round(np.mean((home_goals > 0) & (away_goals > 0)) * 100, 1),
         "home_o1_5_pct": round(np.mean(home_goals > 1) * 100, 1),
         "away_o1_5_pct": round(np.mean(away_goals > 1) * 100, 1),

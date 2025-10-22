@@ -1,107 +1,8 @@
 {
-  "home_645_327": {
-    "book_home_win": 1.57,
-    "book_draw": 4.5,
-    "book_away_win": 4.75,
-    "home_wins": 0,
-    "away_wins": 0,
-    "draws": 0,
-    "avg_home": null,
-    "avg_away": null,
-    "num_matches": 0
-  },
-  "home_531_556": {
-    "book_home_win": 1.33,
-    "book_draw": 5.0,
-    "book_away_win": 9.0,
-    "home_wins": 0,
-    "away_wins": 0,
-    "draws": 0,
-    "avg_home": null,
-    "avg_away": null,
-    "num_matches": 0
-  },
-  "home_91_47": {
-    "book_home_win": 3.0,
-    "book_draw": 3.5,
-    "book_away_win": 2.3,
-    "home_wins": 1,
-    "away_wins": 0,
-    "draws": 1,
-    "avg_home": 1.5,
-    "avg_away": 1.0,
-    "num_matches": 2
-  },
-  "home_541_496": {
-    "book_home_win": 1.45,
-    "book_draw": 4.5,
-    "book_away_win": 6.25,
-    "home_wins": 3,
-    "away_wins": 1,
-    "draws": 1,
-    "avg_home": 1.6,
-    "avg_away": 1.0,
-    "num_matches": 5
-  },
-  "home_169_40": {
-    "book_home_win": 5.0,
-    "book_draw": 4.5,
-    "book_away_win": 1.57,
-    "home_wins": 0,
-    "away_wins": 0,
-    "draws": 0,
-    "avg_home": null,
-    "avg_away": null,
-    "num_matches": 0
-  },
-  "home_49_194": {
-    "book_home_win": 1.25,
-    "book_draw": 6.5,
-    "book_away_win": 9.5,
-    "home_wins": 0,
-    "away_wins": 0,
-    "draws": 1,
-    "avg_home": 4.0,
-    "avg_away": 4.0,
-    "num_matches": 1
-  },
-  "home_499_560": {
-    "book_home_win": 1.42,
-    "book_draw": 4.75,
-    "book_away_win": 6.5,
-    "home_wins": 0,
-    "away_wins": 0,
-    "draws": 0,
-    "avg_home": null,
-    "avg_away": null,
-    "num_matches": 0
-  },
-  "home_228_81": {
-    "book_home_win": 2.15,
-    "book_draw": 3.7,
-    "book_away_win": 3.1,
-    "home_wins": 0,
-    "away_wins": 1,
-    "draws": 0,
-    "avg_home": 0.0,
-    "avg_away": 2.0,
-    "num_matches": 1
-  },
-  "home_157_569": {
-    "book_home_win": 1.18,
-    "book_draw": 7.0,
-    "book_away_win": 13.0,
-    "home_wins": 0,
-    "away_wins": 0,
-    "draws": 0,
-    "avg_home": null,
-    "avg_away": null,
-    "num_matches": 0
-  },
   "home_611_172": {
-    "book_home_win": 2.3,
+    "book_home_win": 2.35,
     "book_draw": 3.75,
-    "book_away_win": 2.88,
+    "book_away_win": 2.8,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 0,
@@ -110,9 +11,9 @@
     "num_matches": 0
   },
   "home_319_257": {
-    "book_home_win": 2.15,
-    "book_draw": 3.5,
-    "book_away_win": 3.25,
+    "book_home_win": 2.0,
+    "book_draw": 3.6,
+    "book_away_win": 3.7,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 0,
@@ -121,9 +22,9 @@
     "num_matches": 0
   },
   "home_410_66": {
-    "book_home_win": 6.0,
+    "book_home_win": 6.5,
     "book_draw": 4.5,
-    "book_away_win": 1.5,
+    "book_away_win": 1.45,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 0,
@@ -154,9 +55,9 @@
     "num_matches": 0
   },
   "home_571_651": {
-    "book_home_win": 1.95,
+    "book_home_win": 2.0,
     "book_draw": 3.8,
-    "book_away_win": 3.6,
+    "book_away_win": 3.4,
     "home_wins": 1,
     "away_wins": 0,
     "draws": 0,
@@ -176,9 +77,9 @@
     "num_matches": 0
   },
   "home_217_598": {
-    "book_home_win": 1.91,
-    "book_draw": 3.7,
-    "book_away_win": 3.9,
+    "book_home_win": 1.95,
+    "book_draw": 3.6,
+    "book_away_win": 3.8,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 1,
@@ -187,9 +88,9 @@
     "num_matches": 1
   },
   "home_559_500": {
-    "book_home_win": 5.25,
-    "book_draw": 3.8,
-    "book_away_win": 1.67,
+    "book_home_win": 5.75,
+    "book_draw": 3.9,
+    "book_away_win": 1.6,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 0,
@@ -198,9 +99,9 @@
     "num_matches": 0
   },
   "home_538_84": {
-    "book_home_win": 1.9,
+    "book_home_win": 1.85,
     "book_draw": 3.6,
-    "book_away_win": 4.0,
+    "book_away_win": 4.1,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 0,
@@ -209,9 +110,9 @@
     "num_matches": 0
   },
   "home_565_566": {
-    "book_home_win": 1.83,
-    "book_draw": 3.8,
-    "book_away_win": 4.2,
+    "book_home_win": 1.9,
+    "book_draw": 3.7,
+    "book_away_win": 4.0,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 0,
@@ -221,8 +122,8 @@
   },
   "home_247_637": {
     "book_home_win": 1.5,
-    "book_draw": 4.33,
-    "book_away_win": 6.25,
+    "book_draw": 4.5,
+    "book_away_win": 5.75,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 0,
@@ -231,9 +132,9 @@
     "num_matches": 0
   },
   "home_497_567": {
-    "book_home_win": 1.36,
+    "book_home_win": 1.33,
     "book_draw": 5.25,
-    "book_away_win": 7.5,
+    "book_away_win": 8.0,
     "home_wins": 2,
     "away_wins": 0,
     "draws": 0,
@@ -242,9 +143,9 @@
     "num_matches": 2
   },
   "home_65_212": {
-    "book_home_win": 2.5,
+    "book_home_win": 2.38,
     "book_draw": 3.3,
-    "book_away_win": 2.8,
+    "book_away_win": 3.0,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 0,
@@ -253,9 +154,9 @@
     "num_matches": 0
   },
   "home_604_397": {
-    "book_home_win": 3.2,
+    "book_home_win": 3.25,
     "book_draw": 3.6,
-    "book_away_win": 2.15,
+    "book_away_win": 2.1,
     "home_wins": 0,
     "away_wins": 1,
     "draws": 0,
@@ -275,9 +176,9 @@
     "num_matches": 0
   },
   "home_375_620": {
-    "book_home_win": 3.0,
+    "book_home_win": 2.8,
     "book_draw": 3.4,
-    "book_away_win": 2.35,
+    "book_away_win": 2.45,
     "home_wins": 1,
     "away_wins": 0,
     "draws": 0,
@@ -288,12 +189,78 @@
   "home_160_207": {
     "book_home_win": 1.55,
     "book_draw": 4.33,
-    "book_away_win": 5.5,
+    "book_away_win": 5.25,
     "home_wins": 0,
     "away_wins": 0,
     "draws": 0,
     "avg_home": null,
     "avg_away": null,
     "num_matches": 0
+  },
+  "home_210_203": {
+    "book_home_win": 1.7,
+    "book_draw": 4.1,
+    "book_away_win": 4.2,
+    "home_wins": 3,
+    "away_wins": 0,
+    "draws": 1,
+    "avg_home": 1.75,
+    "avg_away": 0.25,
+    "num_matches": 4
+  },
+  "home_162_182": {
+    "book_home_win": 2.15,
+    "book_draw": 3.4,
+    "book_away_win": 3.4,
+    "home_wins": 2,
+    "away_wins": 3,
+    "draws": 0,
+    "avg_home": 1.4,
+    "avg_away": 1.4,
+    "num_matches": 5
+  },
+  "home_489_801": {
+    "book_home_win": 1.3,
+    "book_draw": 5.0,
+    "book_away_win": 11.0,
+    "home_wins": 0,
+    "away_wins": 0,
+    "draws": 0,
+    "avg_home": null,
+    "avg_away": null,
+    "num_matches": 0
+  },
+  "home_114_83": {
+    "book_home_win": 1.67,
+    "book_draw": 3.8,
+    "book_away_win": 4.75,
+    "home_wins": 0,
+    "away_wins": 0,
+    "draws": 0,
+    "avg_home": null,
+    "avg_away": null,
+    "num_matches": 0
+  },
+  "home_63_48": {
+    "book_home_win": 1.83,
+    "book_draw": 3.4,
+    "book_away_win": 4.33,
+    "home_wins": 0,
+    "away_wins": 2,
+    "draws": 2,
+    "avg_home": 1.25,
+    "avg_away": 1.75,
+    "num_matches": 4
+  },
+  "home_548_536": {
+    "book_home_win": 1.95,
+    "book_draw": 3.4,
+    "book_away_win": 3.9,
+    "home_wins": 2,
+    "away_wins": 2,
+    "draws": 1,
+    "avg_home": 1.0,
+    "avg_away": 1.0,
+    "num_matches": 5
   }
 }

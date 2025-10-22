@@ -126,10 +126,12 @@ const toDecimalOdds = pct => (pct>0 && pct<100) ? +(100/pct).toFixed(2) : null;
 const impliedPct = dec => dec>1 ? +(100/dec).toFixed(1) : null;
 
 const MARKET_MAP = [
-  {sim:'home_win_pct', book:'home_win', label:(m)=>`${m.home.name} Win`, minSim:60, type:'win'},
-  {sim:'away_win_pct', book:'away_win', label:(m)=>`${m.away.name} Win`, minSim:60, type:'win'},
-  {sim:'over_2_5_pct', book:'over_2_5', label:()=>`Over 2.5`, minSim:50, type:'total'},
-  {sim:'btts_pct', book:'btts', label:()=>`BTTS Yes`, minSim:50, type:'btts'},
+  {sim:'home_win_pct',  book:'home_win',  label:(m)=>`${m.home.name} Win`, minSim:60, type:'win'},
+  {sim:'away_win_pct',  book:'away_win',  label:(m)=>`${m.away.name} Win`, minSim:60, type:'win'},
+  {sim:'over_2_5_pct',  book:'over_2_5',  label:()=>`Over 2.5`, minSim:50, type:'total'},
+  {sim:'over_3_5_pct',  book:'over_3_5',  label:()=>`Over 3.5`, minSim:45, type:'total'},
+  {sim:'under_2_5_pct', book:'under_2_5', label:()=>`Under 2.5`, minSim:55, type:'total'},
+  {sim:'btts_pct',      book:'btts',      label:()=>`BTTS Yes`, minSim:50, type:'btts'},
   {sim:'home_o1_5_pct', book:'home_o1_5', label:(m)=>`${m.home.name} o1.5`, minSim:50, type:'team_total'},
   {sim:'away_o1_5_pct', book:'away_o1_5', label:(m)=>`${m.away.name} o1.5`, minSim:50, type:'team_total'}
 ];

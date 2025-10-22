@@ -354,6 +354,101 @@
           "accuracy_score": 71.5
         }
       ]
+    },
+    {
+      "date": "2025-10-22",
+      "matches": [
+        {
+          "date": "2025-10-22",
+          "league": "UEFA Champions League",
+          "match": "Galatasaray vs Bodo/Glimt",
+          "fixture_id": 1451065,
+          "projected_score": "2.16 - 1.35",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.59,
+          "accuracy_score": 85.2
+        },
+        {
+          "date": "2025-10-22",
+          "league": "UEFA Champions League",
+          "match": "Athletic Club vs Qarabag",
+          "fixture_id": 1451066,
+          "projected_score": "2.15 - 0.97",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.44,
+          "accuracy_score": 89.0
+        },
+        {
+          "date": "2025-10-22",
+          "league": "UEFA Champions League",
+          "match": "Monaco vs Tottenham",
+          "fixture_id": 1451067,
+          "projected_score": "1.73 - 1.79",
+          "actual_score": "0 - 0",
+          "avg_diff": 1.76,
+          "accuracy_score": 56.0
+        },
+        {
+          "date": "2025-10-22",
+          "league": "UEFA Champions League",
+          "match": "Real Madrid vs Juventus",
+          "fixture_id": 1451068,
+          "projected_score": "1.99 - 0.84",
+          "actual_score": "1 - 0",
+          "avg_diff": 0.92,
+          "accuracy_score": 77.0
+        },
+        {
+          "date": "2025-10-22",
+          "league": "UEFA Champions League",
+          "match": "Frankfurt vs Liverpool",
+          "fixture_id": 1451069,
+          "projected_score": "1.70 - 2.42",
+          "actual_score": "1 - 5",
+          "avg_diff": 1.64,
+          "accuracy_score": 59.0
+        },
+        {
+          "date": "2025-10-22",
+          "league": "UEFA Champions League",
+          "match": "Chelsea vs Ajax",
+          "fixture_id": 1451070,
+          "projected_score": "3.04 - 1.11",
+          "actual_score": "5 - 1",
+          "avg_diff": 1.04,
+          "accuracy_score": 74.0
+        },
+        {
+          "date": "2025-10-22",
+          "league": "UEFA Champions League",
+          "match": "Atalanta vs Slavia",
+          "fixture_id": 1451071,
+          "projected_score": "2.58 - 0.85",
+          "actual_score": "0 - 0",
+          "avg_diff": 1.72,
+          "accuracy_score": 57.0
+        },
+        {
+          "date": "2025-10-22",
+          "league": "UEFA Champions League",
+          "match": "Sporting vs Marseille",
+          "fixture_id": 1451072,
+          "projected_score": "1.80 - 1.28",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.24,
+          "accuracy_score": 94.0
+        },
+        {
+          "date": "2025-10-22",
+          "league": "UEFA Champions League",
+          "match": "Bayern vs Brugge",
+          "fixture_id": 1451073,
+          "projected_score": "4.16 - 0.64",
+          "actual_score": "4 - 0",
+          "avg_diff": 0.4,
+          "accuracy_score": 90.0
+        }
+      ]
     }
   ],
   "leagues": [
@@ -413,12 +508,12 @@
     },
     {
       "league": "UEFA Champions League",
-      "games_tracked": 9,
-      "dg_score": 60.7,
-      "sim_avg_goals": 3.39,
-      "actual_avg_goals": 4.78,
-      "actual_btts_pct": 44.4,
-      "actual_over25_pct": 77.8
+      "games_tracked": 18,
+      "dg_score": 68.2,
+      "sim_avg_goals": 3.51,
+      "actual_avg_goals": 3.94,
+      "actual_btts_pct": 50.0,
+      "actual_over25_pct": 72.2
     }
   ]
 }

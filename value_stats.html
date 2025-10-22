@@ -33,7 +33,7 @@
 
     .buttons { text-align: center; margin-bottom: 20px; }
     .buttons button {
-      margin: 0 10px;
+      margin: 6px 10px;
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
@@ -162,7 +162,7 @@
   .buttons button {
     padding: 6px 10px !important;
     font-size: 12px !important;
-    margin: 0 4px !important;
+    margin: 5px 4px !important;
   }
 
   .container { max-width: 100%; padding: 0 5px; }
@@ -222,13 +222,14 @@
   <!-- Banner -->
   <div class="banner">Sim & Value stats from today's simulations compared to bookmaker odds. </div>
 
-  <!-- Buttons -->
   <div class="buttons">
-    <button onclick="showTable('btts', this)" id="btn-btts">BTTS</button>
-    <button onclick="showTable('over25', this)" id="btn-over25">Over 2.5</button>
-    <button onclick="showTable('teamtotals', this)" id="btn-teamtotals">Team Total o1.5</button>
-    <button onclick="showTable('win', this)" id="btn-win">Win</button>
-  </div>
+  <button onclick="showTable('btts', this)" id="btn-btts">BTTS</button>
+  <button onclick="showTable('over25', this)" id="btn-over25">Over 2.5</button>
+  <button onclick="showTable('over35', this)" id="btn-over35">Over 3.5</button>
+  <button onclick="showTable('under25', this)" id="btn-under25">Under 2.5</button>
+  <button onclick="showTable('teamtotals', this)" id="btn-teamtotals">Team Total o1.5</button>
+  <button onclick="showTable('win', this)" id="btn-win">Win</button>
+</div>
 
   <!-- Search box -->
   <div class="search-box">
@@ -332,17 +333,31 @@ function switchDay(mode) {
       let rows = [];
 
       fixtures.forEach(f => {
-        if (type === "btts" || type === "over25") {
-          let simVal = type === "btts" ? f.sim_stats?.percents?.btts_pct : f.sim_stats?.percents?.over_2_5_pct;
-          let bookVal = type === "btts" ? f.book_odds?.btts : f.book_odds?.over_2_5;
-          const simOdds = toDecimalOdds(simVal);
-          rows.push({
-            matchup: `${f.home.name} vs ${f.away.name}`,
-            logos: `<img src="${f.home.logo}"> vs <img src="${f.away.logo}">`,
-            simVal, simOdds, bookVal,
-            league: f.league?.name || ""
-          });
-        } else if (type === "teamtotals") {
+        if (type === "btts" || type === "over25" || type === "over35" || type === "under25") {
+  let simVal, bookVal;
+
+  if (type === "btts") {
+    simVal = f.sim_stats?.percents?.btts_pct;
+    bookVal = f.book_odds?.btts;
+  } else if (type === "over25") {
+    simVal = f.sim_stats?.percents?.over_2_5_pct;
+    bookVal = f.book_odds?.over_2_5;
+  } else if (type === "over35") {
+    simVal = f.sim_stats?.percents?.over_3_5_pct;
+    bookVal = f.book_odds?.over_3_5;
+  } else if (type === "under25") {
+    simVal = f.sim_stats?.percents?.under_2_5_pct;
+    bookVal = f.book_odds?.under_2_5;
+  }
+
+  const simOdds = toDecimalOdds(simVal);
+  rows.push({
+    matchup: `${f.home.name} vs ${f.away.name}`,
+    logos: `<img src="${f.home.logo}"> vs <img src="${f.away.logo}">`,
+    simVal, simOdds, bookVal,
+    league: f.league?.name || ""
+  });
+} else if (type === "teamtotals") {
           [["home","home_o1_5_pct","home_o1_5"],["away","away_o1_5_pct","away_o1_5"]].forEach(([side,simKey,bookKey])=>{
             let simVal = f.sim_stats?.percents?.[simKey];
             let bookVal = f.book_odds?.[bookKey];
