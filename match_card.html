@@ -324,10 +324,12 @@ function buildCard(f, h2hMap) {
 }
 
 let allFixtures = [];
+let globalH2H = {}; // ✅ store h2h globally
 async function init() {
   const { fixtures, h2h } = await loadFixtures();
   allFixtures = fixtures;
-  applySearch(h2h);
+  globalH2H = h2h;  // ✅ save globally
+  applySearch();     // no need to pass h2h
   setTimeout(colorizeTeamNames, 150);
 
   // ✅ Scroll & highlight feature restored
@@ -344,14 +346,14 @@ async function init() {
   }
 }
 
-function applySearch(h2h) {
+function applySearch() {
   const term = document.getElementById("searchInput").value.toLowerCase();
   const filtered = allFixtures.filter(f =>
     f.home.name.toLowerCase().includes(term) ||
     f.away.name.toLowerCase().includes(term) ||
     (f.league && f.league.name.toLowerCase().includes(term))
   );
-  document.getElementById("cards").innerHTML = filtered.map(f => buildCard(f, h2h)).join("");
+  document.getElementById("cards").innerHTML = filtered.map(f => buildCard(f, globalH2H)).join("");
   setTimeout(colorizeTeamNames, 50);
 }
 
