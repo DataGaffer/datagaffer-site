@@ -283,5 +283,40 @@
         "result": "Loss"
       }
     ]
+  },
+  {
+    "date": "2025-10-23",
+    "picks": [
+      {
+        "fixture_id": 1451212,
+        "match": "Lille vs PAOK",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.37,
+        "book_odds": 1.8,
+        "edge": 17.6,
+        "league": "UEFA Europa League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1451204,
+        "match": "Braga vs Crevena Zvezda",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.45,
+        "book_odds": 1.80,
+        "edge": 13.3,
+        "league": "UEFA Europa League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1451201,
+        "match": "Feyenoord vs Panathinaikos",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.36,
+        "book_odds": 1.72,
+        "edge": 15.5,
+        "league": "UEFA Europa League",
+        "result": "Win"
+      }
+    ]
   }
 ]

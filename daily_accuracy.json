@@ -449,6 +449,191 @@
           "accuracy_score": 90.0
         }
       ]
+    },
+    {
+      "date": "2025-10-23",
+      "matches": [
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Fenerbahce vs Stuttgart",
+          "fixture_id": 1451197,
+          "projected_score": "1.38 - 1.93",
+          "actual_score": "1 - 0",
+          "avg_diff": 1.15,
+          "accuracy_score": 71.2
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Brann vs Rangers",
+          "fixture_id": 1451198,
+          "projected_score": "1.84 - 1.33",
+          "actual_score": "3 - 0",
+          "avg_diff": 1.25,
+          "accuracy_score": 68.8
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "GO Ahead vs Aston Villa",
+          "fixture_id": 1451199,
+          "projected_score": "1.05 - 1.83",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.89,
+          "accuracy_score": 77.8
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Genk vs Real Betis",
+          "fixture_id": 1451200,
+          "projected_score": "1.25 - 1.82",
+          "actual_score": "0 - 0",
+          "avg_diff": 1.54,
+          "accuracy_score": 61.5
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Feyenoord vs Panathinaikos",
+          "fixture_id": 1451201,
+          "projected_score": "2.95 - 0.88",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.08,
+          "accuracy_score": 98.0
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "RB Salzburg vs Ferencvarosi",
+          "fixture_id": 1451202,
+          "projected_score": "2.18 - 1.27",
+          "actual_score": "2 - 3",
+          "avg_diff": 0.96,
+          "accuracy_score": 76.0
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Lyon vs FC Basel",
+          "fixture_id": 1451203,
+          "projected_score": "3.07 - 0.84",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.95,
+          "accuracy_score": 76.2
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Braga vs Crvena Zvezda",
+          "fixture_id": 1451204,
+          "projected_score": "2.29 - 1.27",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.78,
+          "accuracy_score": 80.5
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "FCSB vs Bologna",
+          "fixture_id": 1451205,
+          "projected_score": "0.59 - 2.45",
+          "actual_score": "1 - 2",
+          "avg_diff": 0.43,
+          "accuracy_score": 89.2
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Celta Vigo vs Nice",
+          "fixture_id": 1451206,
+          "projected_score": "2.18 - 1.22",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.2,
+          "accuracy_score": 95.0
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Young Boys vs Ludogorets",
+          "fixture_id": 1451207,
+          "projected_score": "1.92 - 1.04",
+          "actual_score": "3 - 2",
+          "avg_diff": 1.02,
+          "accuracy_score": 74.5
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Celtic vs Sturm Graz",
+          "fixture_id": 1451208,
+          "projected_score": "2.09 - 1.04",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.06,
+          "accuracy_score": 98.5
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "AS Roma vs Plzen",
+          "fixture_id": 1451209,
+          "projected_score": "2.77 - 0.72",
+          "actual_score": "1 - 2",
+          "avg_diff": 1.52,
+          "accuracy_score": 62.0
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Nottingham Forest vs FC Porto",
+          "fixture_id": 1451210,
+          "projected_score": "1.33 - 1.48",
+          "actual_score": "2 - 0",
+          "avg_diff": 1.07,
+          "accuracy_score": 73.2
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Maccabi vs Midtjylland",
+          "fixture_id": 1451211,
+          "projected_score": "1.25 - 1.48",
+          "actual_score": "0 - 3",
+          "avg_diff": 1.39,
+          "accuracy_score": 65.2
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Lille vs PAOK",
+          "fixture_id": 1451212,
+          "projected_score": "2.78 - 1.02",
+          "actual_score": "3 - 4",
+          "avg_diff": 1.6,
+          "accuracy_score": 60.0
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "Malmo FF vs Dinamo Zagreb",
+          "fixture_id": 1451213,
+          "projected_score": "1.43 - 1.36",
+          "actual_score": "1 - 1",
+          "avg_diff": 0.4,
+          "accuracy_score": 90.0
+        },
+        {
+          "date": "2025-10-23",
+          "league": "UEFA Europa League",
+          "match": "SC Freiburg vs Utrecht",
+          "fixture_id": 1452156,
+          "projected_score": "2.43 - 1.24",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.84,
+          "accuracy_score": 79.0
+        }
+      ]
     }
   ],
   "leagues": [
@@ -514,6 +699,15 @@
       "actual_avg_goals": 3.94,
       "actual_btts_pct": 50.0,
       "actual_over25_pct": 72.2
+    },
+    {
+      "league": "UEFA Europa League",
+      "games_tracked": 18,
+      "dg_score": 77.6,
+      "sim_avg_goals": 3.28,
+      "actual_avg_goals": 2.94,
+      "actual_btts_pct": 55.6,
+      "actual_over25_pct": 61.1
     }
   ]
 }

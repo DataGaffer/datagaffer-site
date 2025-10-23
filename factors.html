@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Daily Stadium Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ Favicons -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f2f4f7;
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      background: #003f2e;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .header-logo {
+      height: 90px;
+      width: auto;
+      position: absolute;
+      left: 20px;
+      top: 0;
+      z-index: 2;
+    }
+
+    /* Banner */
+    .banner {
+      text-align: center;
+      font-size: 18px;
+      margin: 25px auto;
+      color: #003f2e;
+      background: #ffffff;
+      padding: 10px;
+      border: 2px solid #003f2e;
+      width: 60%;
+      border-radius: 4px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* Table */
+    table {
+      width: 95%;
+      max-width: 900px;
+      margin: 0 auto 50px auto;
+      border-collapse: collapse;
+      background: #ffffff;
+      font-size: 16px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    th {
+      background: #003f2e;
+      color: #ffffff;
+      text-align: center;
+      padding: 12px;
+      font-weight: bold;
+      border-bottom: 2px solid #ccc;
+    }
+
+    td {
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    .match-cell {
+  text-align: center;     /* center horizontally */
+  font-weight: 600;
+  width: 40%;
+  white-space: nowrap;    /* keeps “Team @ Team” together on one line */
+}
+
+.match-cell span {
+  font-weight: 500;
+  color: #555;
+}
+
+    .match-cell span {
+      font-weight: 500;
+      color: #555;
+    }
+
+    .pos {
+      color: #008e2b;
+      font-weight: bold;
+    }
+
+    .neg {
+      color: #d60000;
+      font-weight: bold;
+    }
+
+    small {
+      font-size: 12px;
+      color: #777;
+    }
+
+   /* --- Mobile adjustments --- */
+@media (max-width: 700px) {
+  header { font-size: 20px; padding: 10px; }
+  .header-logo { height: 50px; }
+  .banner { width: 90%; font-size: 14px; padding: 6px; }
+
+  table {
+    width: 95%;
+    max-width: 95%;
+    table-layout: fixed;
+    font-size: 10px;
+    margin: 10px auto;
+    border-radius: 6px;
+  }
+
+  th, td {
+    padding: 6px 4px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;     /* ✅ Keeps text on one line */
+  }
+
+  /* Column widths */
+  th:nth-child(1), td:nth-child(1) { width: 14%; }  /* Δ Goals */
+  th:nth-child(2), td:nth-child(2) { width: 50%; }  /* Match */
+  th:nth-child(3), td:nth-child(3),
+  th:nth-child(4), td:nth-child(4),
+  th:nth-child(5), td:nth-child(5) { width: 12%; }  /* Rest, Travel, Weather */
+
+  /* Make small text inline (no line break) */
+  small {
+    display: inline;          /* ✅ Keeps “(+0.08)” beside % */
+    font-size: 10px;
+    color: #777;
+  }
+
+  /* Match column text size */
+  .match-cell {
+    text-align: center;
+    font-size: 11.5px;        /* slightly smaller to fit */
+    white-space: nowrap;      /* ✅ prevents “Nottingha m” */
+  }
+}
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <a href="dashboard.html" style="text-decoration:none; color:inherit; display:contents;">
+      <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+           alt="DG Logo" class="header-logo" />
+      DataGaffer.com
+    </a>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">Daily Stadium Report – How rest, travel, and weather affect today's matches</div>
+
+  <!-- Table -->
+  <table id="env-table">
+    <thead>
+      <tr>
+        <th>% Goals</th>
+        <th>Match</th>
+        <th>Rest</th>
+        <th>Travel</th>
+        <th>Weather</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td colspan="5">Loading data...</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+  async function loadEnvironmentReport() {
+    try {
+      const response = await fetch("env_factors.json");
+      const data = await response.json();
+      const tbody = document.querySelector("#env-table tbody");
+      tbody.innerHTML = "";
+
+      // Sort by Δ Goals (descending)
+      data.sort((a, b) => b.delta_goals_pct - a.delta_goals_pct);
+
+      data.forEach(match => {
+        const posNeg = val => val > 0 ? "pos" : (val < 0 ? "neg" : "");
+        const plus = val => val > 0 ? "+" : "";
+        const w = match.weather_icon || "";
+
+        const row = `
+          <tr>
+            <td class="${posNeg(match.delta_goals_pct)}">
+              ${plus(match.delta_goals_pct)}${match.delta_goals_pct}%<br>
+              <small>(${plus(match.delta_goals)}${match.delta_goals.toFixed(2)})</small>
+            </td>
+            <td class="match-cell">${match.home} <span>vs ${match.away}</span> ${w}</td>
+            <td class="${posNeg(match.rest)}">${plus(match.rest)}${match.rest}%</td>
+            <td class="${posNeg(match.travel)}">${plus(match.travel)}${match.travel}%</td>
+            <td class="${posNeg(match.weather)}">${plus(match.weather)}${match.weather}%</td>
+          </tr>`;
+        tbody.insertAdjacentHTML("beforeend", row);
+      });
+
+    } catch (error) {
+      console.error("Error loading env_factors.json", error);
+      document.querySelector("#env-table tbody").innerHTML =
+        `<tr><td colspan="5">Failed to load environment data.</td></tr>`;
+    }
+  }
+
+  loadEnvironmentReport();
+  </script>
+</body>
+</html>
