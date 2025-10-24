@@ -288,7 +288,7 @@ function showParlays(size){
     .find(b => b.textContent.startsWith(size+"-Leg"));
   if (activeBtn) activeBtn.classList.add("active");
 
-  const best = bestParlays(allLegs, size, 5);
+  const best = bestParlays(allLegs, size, 3);
   document.getElementById('parlay-cards').innerHTML =
     best.map((p,i)=>parlayCardHTML(`${size}-Leg Parlay #${i+1}`,p)).join('');
 }

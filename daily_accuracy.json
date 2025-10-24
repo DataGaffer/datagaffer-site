@@ -634,62 +634,127 @@
           "accuracy_score": 79.0
         }
       ]
+    },
+    {
+      "date": "2025-10-24",
+      "matches": [
+        {
+          "date": "2025-10-24",
+          "league": "Eredivisie",
+          "match": "Heerenveen vs NAC Breda",
+          "fixture_id": 1380948,
+          "projected_score": "2.04 - 0.72",
+          "actual_score": "3 - 3",
+          "avg_diff": 1.62,
+          "accuracy_score": 59.5
+        },
+        {
+          "date": "2025-10-24",
+          "league": "Bundesliga",
+          "match": "Werder Bremen vs Union Berlin",
+          "fixture_id": 1388379,
+          "projected_score": "1.80 - 1.50",
+          "actual_score": "1 - 0",
+          "avg_diff": 1.15,
+          "accuracy_score": 71.2
+        },
+        {
+          "date": "2025-10-24",
+          "league": "Serie A",
+          "match": "AC Milan vs Pisa",
+          "fixture_id": 1377937,
+          "projected_score": "2.27 - 0.98",
+          "actual_score": "2 - 2",
+          "avg_diff": 0.65,
+          "accuracy_score": 83.8
+        },
+        {
+          "date": "2025-10-24",
+          "league": "Ligue 1",
+          "match": "Paris FC vs Nantes",
+          "fixture_id": 1387777,
+          "projected_score": "2.12 - 1.22",
+          "actual_score": "1 - 2",
+          "avg_diff": 0.95,
+          "accuracy_score": 76.2
+        },
+        {
+          "date": "2025-10-24",
+          "league": "Premier League",
+          "match": "Leeds vs West Ham",
+          "fixture_id": 1379055,
+          "projected_score": "1.40 - 1.33",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.47,
+          "accuracy_score": 88.2
+        },
+        {
+          "date": "2025-10-24",
+          "league": "La Liga",
+          "match": "Real Sociedad vs Sevilla",
+          "fixture_id": 1390917,
+          "projected_score": "1.25 - 1.22",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.48,
+          "accuracy_score": 88.0
+        }
+      ]
     }
   ],
   "leagues": [
     {
       "league": "Eredivisie",
-      "games_tracked": 4,
-      "dg_score": 64.3,
-      "sim_avg_goals": 3.36,
-      "actual_avg_goals": 3.75,
-      "actual_btts_pct": 25.0,
-      "actual_over25_pct": 50.0
+      "games_tracked": 5,
+      "dg_score": 63.4,
+      "sim_avg_goals": 3.24,
+      "actual_avg_goals": 4.2,
+      "actual_btts_pct": 40.0,
+      "actual_over25_pct": 60.0
     },
     {
       "league": "Serie A",
-      "games_tracked": 6,
-      "dg_score": 75.9,
-      "sim_avg_goals": 2.64,
-      "actual_avg_goals": 1.5,
-      "actual_btts_pct": 33.3,
-      "actual_over25_pct": 16.7
+      "games_tracked": 7,
+      "dg_score": 77.0,
+      "sim_avg_goals": 2.72,
+      "actual_avg_goals": 1.86,
+      "actual_btts_pct": 42.9,
+      "actual_over25_pct": 28.6
     },
     {
       "league": "La Liga",
-      "games_tracked": 5,
-      "dg_score": 75.7,
-      "sim_avg_goals": 2.58,
-      "actual_avg_goals": 1.2,
-      "actual_btts_pct": 20.0,
-      "actual_over25_pct": 20.0
+      "games_tracked": 6,
+      "dg_score": 77.8,
+      "sim_avg_goals": 2.56,
+      "actual_avg_goals": 1.5,
+      "actual_btts_pct": 33.3,
+      "actual_over25_pct": 33.3
     },
     {
       "league": "Premier League",
-      "games_tracked": 3,
-      "dg_score": 74.4,
-      "sim_avg_goals": 3.22,
-      "actual_avg_goals": 2.67,
-      "actual_btts_pct": 66.7,
-      "actual_over25_pct": 66.7
+      "games_tracked": 4,
+      "dg_score": 77.9,
+      "sim_avg_goals": 3.1,
+      "actual_avg_goals": 2.75,
+      "actual_btts_pct": 75.0,
+      "actual_over25_pct": 75.0
     },
     {
       "league": "Ligue 1",
-      "games_tracked": 5,
+      "games_tracked": 6,
       "dg_score": 76.7,
-      "sim_avg_goals": 2.96,
-      "actual_avg_goals": 3.8,
-      "actual_btts_pct": 60.0,
-      "actual_over25_pct": 80.0
+      "sim_avg_goals": 3.02,
+      "actual_avg_goals": 3.67,
+      "actual_btts_pct": 66.7,
+      "actual_over25_pct": 83.3
     },
     {
       "league": "Bundesliga",
-      "games_tracked": 2,
-      "dg_score": 79.1,
-      "sim_avg_goals": 3.39,
-      "actual_avg_goals": 3.5,
-      "actual_btts_pct": 50.0,
-      "actual_over25_pct": 100.0
+      "games_tracked": 3,
+      "dg_score": 76.5,
+      "sim_avg_goals": 3.36,
+      "actual_avg_goals": 2.67,
+      "actual_btts_pct": 33.3,
+      "actual_over25_pct": 66.7
     },
     {
       "league": "UEFA Champions League",

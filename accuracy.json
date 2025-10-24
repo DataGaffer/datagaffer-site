@@ -302,7 +302,7 @@
         "match": "Braga vs Crevena Zvezda",
         "pick": "Over 2.5 Goals",
         "dg_odds": 1.45,
-        "book_odds": 1.80,
+        "book_odds": 1.8,
         "edge": 13.3,
         "league": "UEFA Europa League",
         "result": "Loss"
@@ -316,6 +316,41 @@
         "edge": 15.5,
         "league": "UEFA Europa League",
         "result": "Win"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-24",
+    "picks": [
+      {
+        "fixture_id": 1380948,
+        "match": "Heerenveen vs NAC Breda",
+        "pick": "Heerenveen Win",
+        "dg_odds": 1.46,
+        "book_odds": 1.7,
+        "edge": 9.6,
+        "league": "Eredivisie",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1387777,
+        "match": "Paris FC vs Nantes",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.55,
+        "book_odds": 1.8,
+        "edge": 9.0,
+        "league": "Ligue 1",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1388379,
+        "match": "Werder Bremen vs Union Berlin",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.56,
+        "book_odds": 1.8,
+        "edge": 8.4,
+        "league": "Bundesliga",
+        "result": "Loss"
       }
     ]
   }
