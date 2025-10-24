@@ -163,7 +163,7 @@
     <b>Matchup</b> - Fixture being analyzed.<br>
     <b>Home / Away / Total</b> - Avg goals in past head-to-head meetings.<br>
     <b>H Form / A Form</b> - Each team's last 5 matches (<span class="W">W</span>=win, <span class="D">D</span>=draw, <span class="L">L</span>=loss)
-    + average goals per game (GPG) and total points from those 5.
+    + average goals per game (GPG) from those 5.
   </div>
 
   <div class="toggle-buttons">
@@ -242,8 +242,8 @@
         formBody.innerHTML += `
           <tr>
             <td class="match-cell">${match.matchup}</td>
-            <td class="form-cell">${formatForm(match.home_form_last5)}<small>${match.home_form_goals ?? "-"} GPG, ${match.home_form_points ?? "-"} pts</small></td>
-            <td class="form-cell">${formatForm(match.away_form_last5)}<small>${match.away_form_goals ?? "-"} GPG, ${match.away_form_points ?? "-"} pts</small></td>
+            <td class="form-cell">${formatForm(match.home_form_last5)}<small>${match.home_form_goals ?? "-"} GPG</small></td>
+            <td class="form-cell">${formatForm(match.away_form_last5)}<small>${match.away_form_goals ?? "-"} GPG</small></td>
           </tr>`;
       });
 

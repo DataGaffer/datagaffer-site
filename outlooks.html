@@ -1205,11 +1205,11 @@ async function loadH2HOutlook() {
           <td>${match.h2h_total_avg ?? "-"}</td>
           <td class="form-cell">
             ${formatForm(match.home_form_last5)}
-            <small>${match.home_form_goals ?? "-"} GPG, ${match.home_form_points ?? "-"} pts</small>
+            <small>${match.home_form_goals ?? "-"} GPG</small>
           </td>
           <td class="form-cell">
             ${formatForm(match.away_form_last5)}
-            <small>${match.away_form_goals ?? "-"} GPG, ${match.away_form_points ?? "-"} pts</small>
+            <small>${match.away_form_goals ?? "-"} GPG</small>
           </td>
         </tr>`;
       tbody.insertAdjacentHTML("beforeend", row);
