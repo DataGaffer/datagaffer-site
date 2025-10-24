@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Daily Stadium Report</title>
+  <title>H2H & Form Stats</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ✅ Favicons -->
@@ -13,160 +13,143 @@
   <meta name="theme-color" content="#ffffff">
 
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
       background: #f2f4f7;
       color: #222;
+      overflow-x: hidden;
     }
 
-    /* Header */
     header {
       background: #003f2e;
       color: white;
-      padding: 15px;
       text-align: center;
-      font-size: 26px;
+      padding: 12px;
+      font-size: 22px;
       font-weight: bold;
       position: relative;
     }
 
     .header-logo {
-      height: 90px;
+      height: 80px;
       width: auto;
       position: absolute;
       left: 20px;
       top: 0;
-      z-index: 2;
     }
 
-    /* Banner */
     .banner {
       text-align: center;
-      font-size: 18px;
-      margin: 25px auto;
+      font-size: 15px;
+      margin: 20px auto;
       color: #003f2e;
       background: #ffffff;
-      padding: 10px;
+      padding: 12px;
       border: 2px solid #003f2e;
-      width: 60%;
-      border-radius: 4px;
-      font-weight: 600;
-      line-height: 1.5;
+      width: 85%;
+      border-radius: 6px;
+      font-weight: 500;
+      line-height: 1.6;
     }
 
-    /* Table */
+    .toggle-buttons {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .toggle-buttons button {
+      background: #ffffff;
+      color: #004d26;
+      border: none;
+      padding: 10px 16px;
+      margin: 4px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s;
+      border: 2px solid #003f2e;
+    }
+
+    .toggle-buttons button.active {
+      background: #004d26;
+      color: white;
+      box-shadow: 0 0 6px rgba(0,0,0,0.25);
+    }
+
+    .search-container {
+      width: 85%;
+      margin: 10px auto 20px auto;
+      text-align: center;
+    }
+
+    #searchInput {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      border: 2px solid #003f2e;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .table-section { display: none; }
+    .table-section.active { display: block; }
+
     table {
-      width: 95%;
-      max-width: 900px;
-      margin: 0 auto 50px auto;
+      width: 85%;
       border-collapse: collapse;
       background: #ffffff;
-      font-size: 16px;
+      margin: 0 auto 40px auto;
       border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      border: 1.5px solid #004d26;
+      font-size: 13px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
 
     th {
       background: #003f2e;
-      color: #ffffff;
+      color: white;
       text-align: center;
-      padding: 12px;
+      padding: 8px;
       font-weight: bold;
-      border-bottom: 2px solid #ccc;
+      cursor: pointer;
+      user-select: none;
     }
 
     td {
       text-align: center;
-      padding: 10px;
-      border-bottom: 1px solid #eee;
+      padding: 6px;
+      border-bottom: 1px solid #ddd;
     }
 
-    tr:nth-child(even) {
-      background: #f9f9f9;
+    tr:nth-child(even) { background: #f9f9f9; }
+    tr:hover { background: #f1f7f4; }
+
+    .highlight-col { background-color: #fffacd; }
+
+    .match-cell { font-weight: 600; }
+    .form-cell { font-weight: bold; letter-spacing: 1px; }
+    .W { color: #00a84f; }
+    .D { color: #808080; }
+    .L { color: #cc0000; }
+    small { display: block; font-size: 10px; color: #666; margin-top: 2px; }
+
+    @media (max-width: 900px) {
+      header { font-size: 18px; padding: 10px; }
+      .header-logo { height: 45px; }
+      .banner { width: 90%; font-size: 13px; }
+      #searchInput { width: 90%; font-size: 14px; padding: 8px; }
+      table { width: 95%; font-size: 11.5px; }
+      th, td { padding: 5px; }
+      .toggle-buttons button { font-size: 13px; padding: 8px 12px; }
     }
-
-    .match-cell {
-  text-align: center;     /* center horizontally */
-  font-weight: 600;
-  width: 40%;
-  white-space: nowrap;    /* keeps “Team @ Team” together on one line */
-}
-
-.match-cell span {
-  font-weight: 500;
-  color: #555;
-}
-
-    .match-cell span {
-      font-weight: 500;
-      color: #555;
-    }
-
-    .pos {
-      color: #008e2b;
-      font-weight: bold;
-    }
-
-    .neg {
-      color: #d60000;
-      font-weight: bold;
-    }
-
-    small {
-      font-size: 12px;
-      color: #777;
-    }
-
-   /* --- Mobile adjustments --- */
-@media (max-width: 700px) {
-  header { font-size: 20px; padding: 10px; }
-  .header-logo { height: 50px; }
-  .banner { width: 90%; font-size: 14px; padding: 6px; }
-
-  table {
-    width: 95%;
-    max-width: 95%;
-    table-layout: fixed;
-    font-size: 10px;
-    margin: 10px auto;
-    border-radius: 6px;
-  }
-
-  th, td {
-    padding: 6px 4px;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;     /* ✅ Keeps text on one line */
-  }
-
-  /* Column widths */
-  th:nth-child(1), td:nth-child(1) { width: 14%; }  /* Δ Goals */
-  th:nth-child(2), td:nth-child(2) { width: 50%; }  /* Match */
-  th:nth-child(3), td:nth-child(3),
-  th:nth-child(4), td:nth-child(4),
-  th:nth-child(5), td:nth-child(5) { width: 12%; }  /* Rest, Travel, Weather */
-
-  /* Make small text inline (no line break) */
-  small {
-    display: inline;          /* ✅ Keeps “(+0.08)” beside % */
-    font-size: 10px;
-    color: #777;
-  }
-
-  /* Match column text size */
-  .match-cell {
-    text-align: center;
-    font-size: 11.5px;        /* slightly smaller to fit */
-    white-space: nowrap;      /* ✅ prevents “Nottingha m” */
-  }
-}
   </style>
 </head>
 
 <body>
-  <!-- Header -->
+
   <header>
     <a href="dashboard.html" style="text-decoration:none; color:inherit; display:contents;">
       <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
@@ -175,63 +158,242 @@
     </a>
   </header>
 
-  <!-- Banner -->
-  <div class="banner">Daily Stadium Report – How rest, travel, and weather affect today's matches</div>
+  <div class="banner">
+    <b>H2H & Form Comparison:</b><br>
+    <b>Matchup</b> - Fixture being analyzed.<br>
+    <b>Home / Away / Total</b> - Avg goals in past head-to-head meetings.<br>
+    <b>H Form / A Form</b> - Each team's last 5 matches (<span class="W">W</span>=win, <span class="D">D</span>=draw, <span class="L">L</span>=loss)
+    + average goals per game (GPG) and total points from those 5.
+  </div>
 
-  <!-- Table -->
-  <table id="env-table">
-    <thead>
-      <tr>
-        <th>% Goals</th>
-        <th>Match</th>
-        <th>Rest</th>
-        <th>Travel</th>
-        <th>Weather</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td colspan="5">Loading data...</td></tr>
-    </tbody>
-  </table>
+  <div class="toggle-buttons">
+    <button id="btnH2H" class="active">Head-to-Head</button>
+    <button id="btnForm">Form</button>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search matchups...">
+  </div>
+
+  <section id="h2hSection" class="table-section active">
+    <table id="h2h-table">
+      <thead>
+        <tr>
+          <th>Matchup</th>
+          <th>Home</th>
+          <th>Away</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody><tr><td colspan="4">Loading...</td></tr></tbody>
+    </table>
+  </section>
+
+  <section id="formSection" class="table-section">
+    <table id="form-table">
+      <thead>
+        <tr>
+          <th>Matchup</th>
+          <th>Home Form</th>
+          <th>Away Form</th>
+        </tr>
+      </thead>
+      <tbody><tr><td colspan="3">Loading...</td></tr></tbody>
+    </table>
+  </section>
 
   <script>
-  async function loadEnvironmentReport() {
-    try {
-      const response = await fetch("env_factors.json");
-      const data = await response.json();
-      const tbody = document.querySelector("#env-table tbody");
-      tbody.innerHTML = "";
+  document.getElementById("btnH2H").addEventListener("click", () => showTable("h2h"));
+  document.getElementById("btnForm").addEventListener("click", () => showTable("form"));
 
-      // Sort by Δ Goals (descending)
-      data.sort((a, b) => b.delta_goals_pct - a.delta_goals_pct);
+  function showTable(type) {
+    document.querySelectorAll(".table-section").forEach(t => t.classList.remove("active"));
+    document.querySelectorAll(".toggle-buttons button").forEach(b => b.classList.remove("active"));
 
-      data.forEach(match => {
-        const posNeg = val => val > 0 ? "pos" : (val < 0 ? "neg" : "");
-        const plus = val => val > 0 ? "+" : "";
-        const w = match.weather_icon || "";
-
-        const row = `
-          <tr>
-            <td class="${posNeg(match.delta_goals_pct)}">
-              ${plus(match.delta_goals_pct)}${match.delta_goals_pct}%<br>
-              <small>(${plus(match.delta_goals)}${match.delta_goals.toFixed(2)})</small>
-            </td>
-            <td class="match-cell">${match.home} <span>vs ${match.away}</span> ${w}</td>
-            <td class="${posNeg(match.rest)}">${plus(match.rest)}${match.rest}%</td>
-            <td class="${posNeg(match.travel)}">${plus(match.travel)}${match.travel}%</td>
-            <td class="${posNeg(match.weather)}">${plus(match.weather)}${match.weather}%</td>
-          </tr>`;
-        tbody.insertAdjacentHTML("beforeend", row);
-      });
-
-    } catch (error) {
-      console.error("Error loading env_factors.json", error);
-      document.querySelector("#env-table tbody").innerHTML =
-        `<tr><td colspan="5">Failed to load environment data.</td></tr>`;
+    if (type === "h2h") {
+      document.getElementById("h2hSection").classList.add("active");
+      document.getElementById("btnH2H").classList.add("active");
+    } else {
+      document.getElementById("formSection").classList.add("active");
+      document.getElementById("btnForm").classList.add("active");
     }
   }
 
-  loadEnvironmentReport();
+  async function loadTables() {
+    try {
+      const res = await fetch("h2h_form_combined.json");
+      const data = await res.json();
+
+      const h2hBody = document.querySelector("#h2h-table tbody");
+      const formBody = document.querySelector("#form-table tbody");
+      h2hBody.innerHTML = "";
+      formBody.innerHTML = "";
+
+      data.forEach(match => {
+        h2hBody.innerHTML += `
+          <tr>
+            <td class="match-cell">${match.matchup}</td>
+            <td>${match.h2h_home_avg_goals ?? "-"}</td>
+            <td>${match.h2h_away_avg_goals ?? "-"}</td>
+            <td>${match.h2h_total_avg ?? "-"}</td>
+          </tr>`;
+
+        const formatForm = (str) => [...(str || "")].map(c => `<span class="${c}">${c}</span>`).join("");
+        formBody.innerHTML += `
+          <tr>
+            <td class="match-cell">${match.matchup}</td>
+            <td class="form-cell">${formatForm(match.home_form_last5)}<small>${match.home_form_goals ?? "-"} GPG, ${match.home_form_points ?? "-"} pts</small></td>
+            <td class="form-cell">${formatForm(match.away_form_last5)}<small>${match.away_form_goals ?? "-"} GPG, ${match.away_form_points ?? "-"} pts</small></td>
+          </tr>`;
+      });
+
+      // 🔍 Search
+      const searchInput = document.getElementById("searchInput");
+      searchInput.addEventListener("input", () => {
+        const filter = searchInput.value.toLowerCase();
+        document.querySelectorAll("tbody tr").forEach(row => {
+          row.style.display = row.textContent.toLowerCase().includes(filter) ? "" : "none";
+        });
+      });
+
+      // 🔢 Sorting setup for both tables
+      setupSorting(document.getElementById("h2h-table"));
+      setupSorting(document.getElementById("form-table"));
+
+    } catch (err) {
+      console.error("Error loading JSON:", err);
+    }
+  }
+
+  let sortDirection = {};
+
+  function setupSorting(table) {
+    const headers = table.querySelectorAll("th");
+    headers.forEach((th, index) => {
+      th.addEventListener("click", () => sortTable(index, table));
+    });
+  }
+
+  function sortTable(columnIndex, table) {
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    const isNumeric = columnIndex > 0;
+    const currentDir = sortDirection[columnIndex] || "asc";
+    const nextDir = currentDir === "asc" ? "desc" : "asc";
+    sortDirection[columnIndex] = nextDir;
+
+    rows.sort((a, b) => {
+      const x = a.children[columnIndex].innerText.replace(/[^\d.-]/g, "") || a.children[columnIndex].innerText;
+      const y = b.children[columnIndex].innerText.replace(/[^\d.-]/g, "") || b.children[columnIndex].innerText;
+      if (isNumeric) {
+        const numX = parseFloat(x) || 0;
+        const numY = parseFloat(y) || 0;
+        return nextDir === "asc" ? numX - numY : numY - numX;
+      } else {
+        return nextDir === "asc" ? x.localeCompare(y) : y.localeCompare(x);
+      }
+    });
+
+    tbody.innerHTML = "";
+    rows.forEach(r => tbody.appendChild(r));
+
+    table.querySelectorAll("td").forEach(cell => cell.classList.remove("highlight-col"));
+    tbody.querySelectorAll(`td:nth-child(${columnIndex + 1})`)
+         .forEach(cell => cell.classList.add("highlight-col"));
+  }
+
+  loadTables();
   </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* --- Supabase setup --- */
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: { persistSession: true, detectSessionInUrl: true }
+});
+
+/* --- Prevent Safari/Chrome back-button cache bypass --- */
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    console.log("Reloading to bypass Safari back cache");
+    window.location.reload();
+  }
+});
+
+/* --- Inactivity logout (15 minutes) --- */
+const INACTIVITY_LIMIT = 15 * 60 * 1000;
+let inactivityTimer;
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(async () => {
+    console.log("Auto-logout after inactivity");
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+  }, INACTIVITY_LIMIT);
+}
+["click", "mousemove", "keydown", "scroll", "touchstart"].forEach(evt =>
+  document.addEventListener(evt, resetInactivityTimer)
+);
+resetInactivityTimer();
+
+/* --- Explicit logout handling --- */
+supabaseClient.auth.onAuthStateChange((event) => {
+  if (event === "SIGNED_OUT") {
+    console.log("User signed out → redirecting to login");
+    window.location.href = "login.html";
+  }
+});
+
+/* --- Subscription enforcement --- */
+document.body.style.display = "none"; // hide content until validated
+
+(async () => {
+  const { data: { session }, error } = await supabaseClient.auth.getSession();
+  if (error || !session) {
+    console.warn("No session → redirecting to login");
+    window.location.href = "login.html";
+    return;
+  }
+
+  // --- Try matching by Supabase Auth ID first ---
+  let { data: profile, error: profileError } = await supabaseClient
+    .from("profiles")
+    .select("is_subscribed, plan")
+    .eq("id", session.user.id)
+    .maybeSingle();
+
+  // --- Fallback: try matching by email if profile not found or Stripe-created first ---
+  if ((!profile || profileError) && session.user.email) {
+    const { data: byEmail } = await supabaseClient
+      .from("profiles")
+      .select("is_subscribed, plan")
+      .eq("email", session.user.email.toLowerCase())
+      .maybeSingle();
+    profile = byEmail;
+  }
+
+  // --- Subscription validation ---
+  if (!profile?.is_subscribed) {
+    console.warn("Not subscribed → redirecting to subscribe page");
+    window.location.href = "subscribe.html";
+    return;
+  }
+
+  // ✅ Allow only active monthly/yearly users
+  if (profile.plan === "monthly" || profile.plan === "yearly") {
+    console.log("✅ Active plan:", profile.plan, "→ Showing page");
+    document.body.style.display = "block";
+  } else {
+    console.warn("User has unsupported plan:", profile.plan);
+    window.location.href = "subscribe.html";
+  }
+})();
+</script>
+
 </body>
 </html>

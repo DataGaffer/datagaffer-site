@@ -305,6 +305,134 @@ h1, h2, h3, h4, h5, h6, p {
       color: #000;
     }
 
+  * ✅ Compact, non-scrollable, full-fit version */
+#h2h-form {
+  font-family: Arial, sans-serif;
+  margin-top: 12px;
+}
+
+#h2h-form .outlook-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid #004d26;
+  font-size: 13px;
+  background: #fff;
+  table-layout: fixed; /* keeps columns consistent */
+}
+
+#h2h-form thead {
+  background: #004d26;
+  color: #fff;
+  font-weight: bold;
+}
+
+#h2h-form th {
+  padding: 4px 3px;
+  font-size: 11.5px;
+  letter-spacing: 0.2px;
+  border-bottom: 1.5px solid #00351e;
+  text-align: center;
+}
+
+#h2h-form td {
+  padding: 4px 3px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+/* Zebra stripes for contrast */
+#h2h-form tr:nth-child(odd)  { background-color: #f9f9f9; }
+#h2h-form tr:nth-child(even) { background-color: #ededed; }
+
+/* Matchup column wider, but tighter text */
+#h2h-form td:first-child {
+  text-align: center;
+  font-weight: 600;
+  padding-left: 0;
+  color: #1c1c1c;
+  width: 42%;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Smaller numeric columns */
+#h2h-form td:nth-child(2),
+#h2h-form td:nth-child(3),
+#h2h-form td:nth-child(4) {
+  width: 8%;
+  font-weight: bold;
+  color: #003f2e;
+  font-size: 16px;
+}
+
+/* Keep form columns readable but narrower */
+#h2h-form td:nth-child(5),
+#h2h-form td:nth-child(6) {
+  width: 17%;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Form cell styling (unchanged) */
+#h2h-form .form-cell span {
+  display: inline-block;
+  margin: 0 1px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#h2h-form .form-cell small {
+  display: block;
+  font-size: 12px;
+  color: #444;
+  margin-top: 2px;
+}
+
+/* Color coding */
+#h2h-form .W { color: #00a84f; }
+#h2h-form .D { color: #808080; }
+#h2h-form .L { color: #cc0000; }
+
+/* Description bar - compact version */
+#h2h-form .page-description {
+  color: #3b3b3b;
+  font-size: 14px;
+  padding: 4px 0;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* ✅ Force column widths for H2H & Form table */
+#h2h-form table {
+  table-layout: fixed !important;
+  width: 100% !important;
+}
+
+#h2h-form th:first-child,
+#h2h-form td:first-child {
+  width: 42% !important;     /* Matchup wider */
+}
+
+#h2h-form th:nth-child(2),
+#h2h-form td:nth-child(2),
+#h2h-form th:nth-child(3),
+#h2h-form td:nth-child(3),
+#h2h-form th:nth-child(4),
+#h2h-form td:nth-child(4) {
+  width: 8% !important;      /* Compact numeric columns */
+}
+
+#h2h-form th:nth-child(5),
+#h2h-form td:nth-child(5),
+#h2h-form th:nth-child(6),
+#h2h-form td:nth-child(6) {
+  width: 17% !important;     /* Form columns */
+}
+
  /* --- Mobile adjustments for Outlooks Page --- */
 @media (max-width: 925px) {
   body { overflow-x: hidden; }
@@ -501,6 +629,84 @@ h1, h2, h3, h4, h5, h6, p {
     width: 20px !important;
     margin-right: 5px !important;
   }
+
+  
+  #h2h-form .outlook-table {
+    width: 100% !important;
+    border: 1px solid #004d26;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 10px !important;
+    margin-top: 2px;
+  }
+
+  #h2h-form th, #h2h-form td {
+    padding: 2px 2px !important;
+    font-size: 9px !important;
+    text-align: center !important;
+  }
+
+  /* ✅ Matchup column — centered, slightly smaller */
+  #h2h-form th:first-child,
+  #h2h-form td:first-child {
+    width: 38% !important;
+    text-align: center !important;
+    font-weight: 600;
+    font-size: 8px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ✅ Numeric columns tighter */
+  #h2h-form th:nth-child(2),
+  #h2h-form td:nth-child(2),
+  #h2h-form th:nth-child(3),
+  #h2h-form td:nth-child(3),
+  #h2h-form th:nth-child(4),
+  #h2h-form td:nth-child(4) {
+    width: 8% !important;
+    font-size: 9px !important;
+  }
+
+  /* ✅ Numeric columns tighter */
+  #h2h-form td:nth-child(2),
+  #h2h-form td:nth-child(3),
+  #h2h-form td:nth-child(4) {
+    width: 8% !important;
+    font-size: 10px !important;
+  }
+
+  /* ✅ Form columns fit neatly */
+  #h2h-form th:nth-child(5),
+  #h2h-form td:nth-child(5),
+  #h2h-form th:nth-child(6),
+  #h2h-form td:nth-child(6) {
+    width: 18% !important;
+    font-size: 8.5px !important;
+    line-height: 1.5;
+  }
+
+  /* ✅ Form symbols smaller & compact */
+  #h2h-form .form-cell span {
+    margin: 0 0.5px !important;
+    font-size: 9px !important;
+  }
+  #h2h-form .form-cell small {
+    font-size: 8.5px !important;
+  }
+
+  /* ✅ Keep alternating row colors */
+  #h2h-form tr:nth-child(odd)  { background-color: #f9f9f9; }
+  #h2h-form tr:nth-child(even) { background-color: #ededed; }
+
+  /* ✅ Page description smaller */
+  #h2h-form .page-description {
+    font-size: 10px !important;
+    padding: 3px 0 !important;
+  }
+
+
 }
 
 
@@ -535,6 +741,7 @@ h1, h2, h3, h4, h5, h6, p {
     <a href="#under25" class="toc-btn">Under 2.5 Outlook</a>
     <a href="#team-total" class="toc-btn">Team Total Outlook</a>
     <a href="#win-outlook" class="toc-btn">Win Outlook</a>
+    <a href="#h2h-form" class="toc-btn">H2H & Form Outlook</a>
     <a href="#top-players" class="toc-btn">Top 5 Player Sims</a>
   </div>
 
@@ -692,12 +899,43 @@ h1, h2, h3, h4, h5, h6, p {
     </div>
   </section>
 
+  <section id="h2h-form" class="outlook-page">
+  <div class="page-title">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" 
+         alt="DG Logo" class="section-logo">
+    <h2>8: Head-to-Head & Form Outlook</h2>
+  </div>
+  <div class="page-description">
+    Average head-to-head goals and last 5-match form for each team.
+  </div>
+
+  <div class="page-content">
+    <div class="table-container">
+      <table class="outlook-table" id="h2h-form-table">
+        <thead>
+          <tr>
+            <th>Matchup</th>
+            <th>Home</th>
+            <th>Away</th>
+            <th>Total</th>
+            <th>H Form</th>
+            <th>A Form</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
   <!-- Top 5 Player Sims -->
   <section id="top-players" class="outlook-page">
     <div class="page-title">
        <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" 
       alt="DG Logo" class="section-logo">
-      <h2>8: Top 5 Player Sims</h2>
+      <h2>9: Top 5 Player Sims</h2>
     </div>
     <div class="page-description">
       Best simulated players of the day across goals, assists, shots, and conversion stats.
@@ -947,7 +1185,44 @@ fetch("player_simulations/index.json")
       });
   </script>
 
+<script>
+async function loadH2HOutlook() {
+  try {
+    const res = await fetch("h2h_form_combined.json");
+    const data = await res.json();
+    const tbody = document.querySelector("#h2h-form-table tbody");
+    tbody.innerHTML = "";
 
+    const formatForm = (formStr) =>
+      [...(formStr || "")].map(c => `<span class="${c}">${c}</span>`).join("");
+
+    data.forEach(match => {
+      const row = `
+        <tr>
+          <td class="match-cell">${match.matchup}</td>
+          <td>${match.h2h_home_avg_goals ?? "-"}</td>
+          <td>${match.h2h_away_avg_goals ?? "-"}</td>
+          <td>${match.h2h_total_avg ?? "-"}</td>
+          <td class="form-cell">
+            ${formatForm(match.home_form_last5)}
+            <small>${match.home_form_goals ?? "-"} GPG, ${match.home_form_points ?? "-"} pts</small>
+          </td>
+          <td class="form-cell">
+            ${formatForm(match.away_form_last5)}
+            <small>${match.away_form_goals ?? "-"} GPG, ${match.away_form_points ?? "-"} pts</small>
+          </td>
+        </tr>`;
+      tbody.insertAdjacentHTML("beforeend", row);
+    });
+  } catch (err) {
+    console.error("Failed to load H2H Form Outlook", err);
+    document.querySelector("#h2h-form-table tbody").innerHTML =
+      `<tr><td colspan="6">Error loading data</td></tr>`;
+  }
+}
+
+loadH2HOutlook();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
