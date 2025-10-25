@@ -814,22 +814,19 @@ document.body.style.display = "none"; // hide content until validated
     return;
   }
 
-  // Try fetching by user ID first
-  let { data: profile, error: profileError } = await supabaseClient
-    .from("profiles")
-    .select("is_subscribed, plan")
-    .eq("id", session.user.id)
-    .maybeSingle();
+  // --- Fetch subscription profile by email ---
+const { data: profile, error: profileError } = await supabaseClient
+  .from("profiles")
+  .select("is_subscribed, plan")
+  .eq("email", session.user.email.toLowerCase())
+  .maybeSingle();
 
-  // Fallback: fetch by email if not found or created via Stripe first
-  if ((!profile || profileError) && session.user.email) {
-    const { data: byEmail } = await supabaseClient
-      .from("profiles")
-      .select("is_subscribed, plan")
-      .eq("email", session.user.email.toLowerCase())
-      .maybeSingle();
-    profile = byEmail;
-  }
+if (profileError) {
+  console.error("Error fetching profile:", profileError);
+  alert("Error fetching subscription profile. Contact support on X @DataGaffer.");
+  return;
+}
+
 
   // --- Subscription validation ---
   if (!profile?.is_subscribed) {
