@@ -26,14 +26,12 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
   if (!email) return;
   email = email.toLowerCase();
 
-  // 🧠 Fetch existing row for this email if it exists
   const { data: existing } = await supabase
     .from("profiles")
     .select("id, email, is_subscribed, plan, customer_id, trial_used")
     .eq("email", email)
     .maybeSingle();
 
-  // --- 🧩 Merge with existing data ---
   const updatePayload = {
     email,
     customer_id: customerId ?? existing?.customer_id ?? null,
@@ -41,7 +39,6 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
     is_subscribed: isSubscribed || existing?.is_subscribed || false,
   };
 
-  // Preserve the auth-linked ID if one already exists
   if (existing?.id) updatePayload.id = existing.id;
 
   const { error } = await supabase
@@ -55,7 +52,7 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
     );
 }
 
-// --- 🧩 NEW: Mark trial used ---
+// --- 🧩 Mark trial used ---
 async function markTrialUsed(customerId) {
   const { error } = await supabase
     .from("profiles")
@@ -72,13 +69,19 @@ export async function handler(event) {
 
   if (!event.body) {
     console.error("❌ No webhook body");
-    return { statusCode: 400, body: "Webhook Error: No webhook payload was provided." };
+    return {
+      statusCode: 400,
+      body: "Webhook Error: No webhook payload was provided.",
+    };
   }
 
   const sig = event.headers["stripe-signature"];
   if (!sig) {
     console.error("❌ Missing Stripe signature");
-    return { statusCode: 400, body: "Webhook Error: Missing Stripe signature" };
+    return {
+      statusCode: 400,
+      body: "Webhook Error: Missing Stripe signature",
+    };
   }
 
   let stripeEvent;
@@ -113,8 +116,8 @@ export async function handler(event) {
           planCode = planFromPriceId(priceId);
           isSubscribed = ACTIVE_STATUSES.has(sub.status);
 
-          // 🧩 NEW: If this subscription started with a trial, mark it now
-          if (sub.trial_end && sub.trial_end > Math.floor(Date.now() / 1000)) {
+          // ✅ If a trial exists, mark as used
+          if (sub.trial_start || sub.trial_end) {
             await markTrialUsed(customerId);
           }
         }
@@ -131,12 +134,17 @@ export async function handler(event) {
         const planCode = planFromPriceId(sub.items?.data?.[0]?.price?.id);
         const isSubscribed = ACTIVE_STATUSES.has(sub.status);
 
-        // 🧩 NEW: Mark trial used once it ends or if it was created with a trial
-        if (sub.trial_end && sub.trial_end < Math.floor(Date.now() / 1000)) {
+        // ✅ Mark trial used once trial exists or status changes to active
+        if (sub.trial_start || sub.status === "active") {
           await markTrialUsed(sub.customer);
         }
 
-        await upsertProfile({ email, customerId: sub.customer, planCode, isSubscribed });
+        await upsertProfile({
+          email,
+          customerId: sub.customer,
+          planCode,
+          isSubscribed,
+        });
         break;
       }
 
@@ -164,6 +172,7 @@ export async function handler(event) {
 
   return { statusCode: 200, body: "ok" };
 }
+
 
 
 
