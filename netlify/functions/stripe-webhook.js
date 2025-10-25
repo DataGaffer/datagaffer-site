@@ -161,21 +161,45 @@ export async function handler(event) {
         break;
       }
 
-      // --- Subscription canceled ---
       case "customer.subscription.deleted": {
-        const sub = stripeEvent.data.object;
-        const customer = await stripe.customers.retrieve(sub.customer);
-        const email = customer?.email || null;
+  const sub = stripeEvent.data.object;
+  let email = null;
 
-        await upsertProfile({
-          email,
-          customerId: sub.customer,
-          planCode: null,
-          isSubscribed: false,
-          subscriptionStatus: "canceled",
-        });
-        break;
-      }
+  try {
+    const customer = await stripe.customers.retrieve(sub.customer);
+    email = customer?.email || null;
+  } catch (err) {
+    console.warn("⚠️ Could not retrieve customer email:", err.message);
+  }
+
+  // Update by email if we have one
+  if (email) {
+    await supabase
+      .from("profiles")
+      .update({
+        is_subscribed: false,
+        plan: null,
+        subscription_status: "canceled",
+      })
+      .eq("email", email.toLowerCase());
+    console.log(`🚫 Subscription canceled for ${email}`);
+  }
+  // Fallback: update by customer_id if email is missing
+  else {
+    await supabase
+      .from("profiles")
+      .update({
+        is_subscribed: false,
+        plan: null,
+        subscription_status: "canceled",
+      })
+      .eq("customer_id", sub.customer);
+    console.log(`🚫 Subscription canceled for customer_id ${sub.customer}`);
+  }
+
+  break;
+}
+
 
       default:
         console.log("ℹ️ Ignored event:", stripeEvent.type);
