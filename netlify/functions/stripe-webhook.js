@@ -11,6 +11,7 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
+// --- Active subscription states ---
 const ACTIVE_STATUSES = new Set(["active", "trialing", "past_due"]);
 
 // --- Identify plan from price ID ---
@@ -22,13 +23,19 @@ function planFromPriceId(id) {
 }
 
 // --- Upsert profile in Supabase ---
-async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
+async function upsertProfile({
+  email,
+  customerId,
+  planCode,
+  isSubscribed,
+  subscriptionStatus,
+}) {
   if (!email) return;
   email = email.toLowerCase();
 
   const { data: existing } = await supabase
     .from("profiles")
-    .select("id, email, is_subscribed, plan, customer_id, trial_used")
+    .select("id, email, is_subscribed, plan, customer_id, trial_used, subscription_status")
     .eq("email", email)
     .maybeSingle();
 
@@ -37,6 +44,7 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
     customer_id: customerId ?? existing?.customer_id ?? null,
     plan: isSubscribed ? planCode : existing?.plan ?? null,
     is_subscribed: isSubscribed || existing?.is_subscribed || false,
+    subscription_status: subscriptionStatus ?? existing?.subscription_status ?? null, // ✅ added
   };
 
   if (existing?.id) updatePayload.id = existing.id;
@@ -48,7 +56,7 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
   if (error) console.error("❌ Supabase upsert failed:", error);
   else
     console.log(
-      `✅ Upserted ${email} | subscribed=${updatePayload.is_subscribed} | plan=${updatePayload.plan}`
+      `✅ Upserted ${email} | subscribed=${updatePayload.is_subscribed} | plan=${updatePayload.plan} | status=${updatePayload.subscription_status}`
     );
 }
 
@@ -100,6 +108,7 @@ export async function handler(event) {
 
   try {
     switch (stripeEvent.type) {
+      // --- New checkout completed ---
       case "checkout.session.completed": {
         const session = stripeEvent.data.object;
         const email =
@@ -109,23 +118,26 @@ export async function handler(event) {
         const customerId = session.customer;
         let planCode = null;
         let isSubscribed = false;
+        let subscriptionStatus = null;
 
         if (session.subscription) {
           const sub = await stripe.subscriptions.retrieve(session.subscription);
           const priceId = sub.items?.data?.[0]?.price?.id || null;
           planCode = planFromPriceId(priceId);
           isSubscribed = ACTIVE_STATUSES.has(sub.status);
+          subscriptionStatus = sub.status;
 
-          // ✅ If a trial exists, mark as used
+          // ✅ Mark trial used if present
           if (sub.trial_start || sub.trial_end) {
             await markTrialUsed(customerId);
           }
         }
 
-        await upsertProfile({ email, customerId, planCode, isSubscribed });
+        await upsertProfile({ email, customerId, planCode, isSubscribed, subscriptionStatus });
         break;
       }
 
+      // --- Subscription created or updated ---
       case "customer.subscription.created":
       case "customer.subscription.updated": {
         const sub = stripeEvent.data.object;
@@ -133,8 +145,8 @@ export async function handler(event) {
         const email = customer?.email || null;
         const planCode = planFromPriceId(sub.items?.data?.[0]?.price?.id);
         const isSubscribed = ACTIVE_STATUSES.has(sub.status);
+        const subscriptionStatus = sub.status;
 
-        // ✅ Mark trial used once trial exists or status changes to active
         if (sub.trial_start || sub.status === "active") {
           await markTrialUsed(sub.customer);
         }
@@ -144,10 +156,12 @@ export async function handler(event) {
           customerId: sub.customer,
           planCode,
           isSubscribed,
+          subscriptionStatus,
         });
         break;
       }
 
+      // --- Subscription canceled ---
       case "customer.subscription.deleted": {
         const sub = stripeEvent.data.object;
         const customer = await stripe.customers.retrieve(sub.customer);
@@ -158,6 +172,7 @@ export async function handler(event) {
           customerId: sub.customer,
           planCode: null,
           isSubscribed: false,
+          subscriptionStatus: "canceled",
         });
         break;
       }
