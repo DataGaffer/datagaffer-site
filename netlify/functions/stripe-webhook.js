@@ -29,7 +29,7 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
   // 🧠 Fetch existing row for this email if it exists
   const { data: existing } = await supabase
     .from("profiles")
-    .select("id, email, is_subscribed, plan, customer_id")
+    .select("id, email, is_subscribed, plan, customer_id, trial_used")
     .eq("email", email)
     .maybeSingle();
 
@@ -53,6 +53,17 @@ async function upsertProfile({ email, customerId, planCode, isSubscribed }) {
     console.log(
       `✅ Upserted ${email} | subscribed=${updatePayload.is_subscribed} | plan=${updatePayload.plan}`
     );
+}
+
+// --- 🧩 NEW: Mark trial used ---
+async function markTrialUsed(customerId) {
+  const { error } = await supabase
+    .from("profiles")
+    .update({ trial_used: true })
+    .eq("customer_id", customerId);
+
+  if (error) console.error("❌ Error marking trial_used:", error);
+  else console.log(`✅ Marked trial used for ${customerId}`);
 }
 
 // --- Main handler ---
@@ -101,6 +112,11 @@ export async function handler(event) {
           const priceId = sub.items?.data?.[0]?.price?.id || null;
           planCode = planFromPriceId(priceId);
           isSubscribed = ACTIVE_STATUSES.has(sub.status);
+
+          // 🧩 NEW: If this subscription started with a trial, mark it now
+          if (sub.trial_end && sub.trial_end > Math.floor(Date.now() / 1000)) {
+            await markTrialUsed(customerId);
+          }
         }
 
         await upsertProfile({ email, customerId, planCode, isSubscribed });
@@ -114,6 +130,11 @@ export async function handler(event) {
         const email = customer?.email || null;
         const planCode = planFromPriceId(sub.items?.data?.[0]?.price?.id);
         const isSubscribed = ACTIVE_STATUSES.has(sub.status);
+
+        // 🧩 NEW: Mark trial used once it ends or if it was created with a trial
+        if (sub.trial_end && sub.trial_end < Math.floor(Date.now() / 1000)) {
+          await markTrialUsed(sub.customer);
+        }
 
         await upsertProfile({ email, customerId: sub.customer, planCode, isSubscribed });
         break;
@@ -143,6 +164,7 @@ export async function handler(event) {
 
   return { statusCode: 200, body: "ok" };
 }
+
 
 
 
