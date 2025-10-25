@@ -814,6 +814,7 @@ document.body.style.display = "none"; // hide content until validated
     return;
   }
 
+console.log("Checking for profile with email:", session.user.email);
   // --- Fetch subscription profile by email ---
 const { data: profile, error: profileError } = await supabaseClient
   .from("profiles")
