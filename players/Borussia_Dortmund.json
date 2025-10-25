@@ -1,26 +1,50 @@
 [
   {
-    "id": 637,
-    "team_id": 165,
-    "name": "F. Nmecha",
-    "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 399,
-    "goals": 2,
-    "assists": 1,
-    "shots": 4,
-    "shots_on_target": 3
-  },
-  {
     "id": 984,
     "team_id": 165,
     "name": "J. Brandt",
     "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 284,
-    "goals": 2,
+    "appearances": 9,
+    "minutes": 378,
+    "goals": 3,
     "assists": 2,
-    "shots": 6,
+    "shots": 8,
+    "shots_on_target": 6
+  },
+  {
+    "id": 158644,
+    "team_id": 165,
+    "name": "M. Beier",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 561,
+    "goals": 1,
+    "assists": 2,
+    "shots": 8,
+    "shots_on_target": 3
+  },
+  {
+    "id": 326757,
+    "team_id": 165,
+    "name": "J. Bellingham",
+    "position": "Midfielder",
+    "appearances": 10,
+    "minutes": 381,
+    "goals": 0,
+    "assists": 2,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 637,
+    "team_id": 165,
+    "name": "F. Nmecha",
+    "position": "Midfielder",
+    "appearances": 10,
+    "minutes": 636,
+    "goals": 4,
+    "assists": 1,
+    "shots": 7,
     "shots_on_target": 5
   },
   {
@@ -28,11 +52,11 @@
     "team_id": 165,
     "name": "M. Sabitzer",
     "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 522,
+    "appearances": 9,
+    "minutes": 698,
     "goals": 0,
     "assists": 3,
-    "shots": 4,
+    "shots": 5,
     "shots_on_target": 1
   },
   {
@@ -40,11 +64,11 @@
     "team_id": 165,
     "name": "K. Adeyemi",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 412,
+    "appearances": 9,
+    "minutes": 556,
     "goals": 3,
     "assists": 3,
-    "shots": 13,
+    "shots": 15,
     "shots_on_target": 5
   },
   {
@@ -52,11 +76,11 @@
     "team_id": 165,
     "name": "P. Gro\u00df",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 174,
+    "appearances": 7,
+    "minutes": 267,
     "goals": 0,
     "assists": 1,
-    "shots": 1,
+    "shots": 2,
     "shots_on_target": 1
   },
   {
@@ -64,12 +88,12 @@
     "team_id": 165,
     "name": "S. Guirassy",
     "position": "Attacker",
-    "appearances": 6,
-    "minutes": 533,
+    "appearances": 9,
+    "minutes": 788,
     "goals": 5,
-    "assists": 2,
-    "shots": 17,
-    "shots_on_target": 16
+    "assists": 3,
+    "shots": 20,
+    "shots_on_target": 17
   },
   {
     "id": 24807,
@@ -84,39 +108,39 @@
     "shots_on_target": 0
   },
   {
-    "id": 158644,
+    "id": 129791,
     "team_id": 165,
-    "name": "M. Beier",
+    "name": "F\u00e1bio Silva",
     "position": "Attacker",
-    "appearances": 6,
-    "minutes": 401,
+    "appearances": 5,
+    "minutes": 65,
     "goals": 1,
-    "assists": 2,
-    "shots": 7,
-    "shots_on_target": 3
-  },
-  {
-    "id": 326757,
-    "team_id": 165,
-    "name": "J. Bellingham",
-    "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 254,
-    "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
+    "shots": 1,
+    "shots_on_target": 1
   },
   {
     "id": 138935,
     "team_id": 165,
     "name": "C. Chukwuemeka",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 148,
+    "appearances": 6,
+    "minutes": 176,
     "goals": 1,
-    "assists": 0,
+    "assists": 1,
     "shots": 2,
     "shots_on_target": 1
+  },
+  {
+    "id": 197448,
+    "team_id": 165,
+    "name": "Yan Couto",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 552,
+    "goals": 2,
+    "assists": 1,
+    "shots": 4,
+    "shots_on_target": 2
   }
 ]

@@ -1,27 +1,50 @@
 [
-  
+  {
+    "id": 50,
+    "team_id": 530,
+    "name": "Koke",
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 655,
+    "goals": 0,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 0
+  },
   {
     "id": 753,
     "team_id": 530,
     "name": "Marcos Llorente",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 810,
+    "appearances": 12,
+    "minutes": 1080,
     "goals": 2,
     "assists": 2,
-    "shots": 8,
-    "shots_on_target": 5
+    "shots": 9,
+    "shots_on_target": 6
+  },
+  {
+    "id": 6009,
+    "team_id": 530,
+    "name": "J. \u00c1lvarez",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 888,
+    "goals": 7,
+    "assists": 3,
+    "shots": 26,
+    "shots_on_target": 17
   },
   {
     "id": 8492,
     "team_id": 530,
     "name": "A. S\u00f8rloth",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 318,
+    "appearances": 10,
+    "minutes": 434,
     "goals": 2,
     "assists": 0,
-    "shots": 8,
+    "shots": 10,
     "shots_on_target": 7
   },
   {
@@ -29,72 +52,71 @@
     "team_id": 530,
     "name": "C. Gallagher",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 375,
+    "appearances": 12,
+    "minutes": 451,
     "goals": 1,
     "assists": 0,
     "shots": 4,
     "shots_on_target": 1
   },
   {
+    "id": 133185,
+    "team_id": 530,
+    "name": "J. Cardoso",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 185,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
     "id": 182219,
     "team_id": 530,
     "name": "\u00c1lex Baena",
     "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 70,
+    "appearances": 6,
+    "minutes": 174,
     "goals": 0,
     "assists": 1,
-    "shots": 0,
-    "shots_on_target": 0
+    "shots": 1,
+    "shots_on_target": 1
   },
- 
   {
     "id": 56,
     "team_id": 530,
     "name": "A. Griezmann",
     "position": "Attacker",
-    "appearances": 9,
-    "minutes": 424,
+    "appearances": 12,
+    "minutes": 542,
     "goals": 2,
     "assists": 0,
-    "shots": 14,
-    "shots_on_target": 9
-  },
-  {
-    "id": 6009,
-    "team_id": 530,
-    "name": "J. \u00c1lvarez",
-    "position": "Attacker",
-    "appearances": 8,
-    "minutes": 636,
-    "goals": 7,
-    "assists": 3,
-    "shots": 20,
-    "shots_on_target": 14
+    "shots": 19,
+    "shots_on_target": 11
   },
   {
     "id": 6067,
     "team_id": 530,
     "name": "T. Almada",
     "position": "Midfielder",
-    "appearances": 4,
+    "appearances": 5,
     "minutes": 254,
-    "goals": 0,
+    "goals": 1,
     "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
+    "shots": 4,
+    "shots_on_target": 3
   },
   {
     "id": 26315,
     "team_id": 530,
     "name": "N. Gonz\u00e1lez",
     "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 362,
+    "appearances": 9,
+    "minutes": 558,
     "goals": 1,
     "assists": 0,
-    "shots": 6,
+    "shots": 7,
     "shots_on_target": 3
   },
   {
@@ -102,24 +124,23 @@
     "team_id": 530,
     "name": "G. Raspadori",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 251,
+    "appearances": 8,
+    "minutes": 259,
     "goals": 1,
     "assists": 1,
     "shots": 8,
     "shots_on_target": 4
   },
-  
   {
     "id": 323935,
     "team_id": 530,
     "name": "G. Simeone",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 693,
+    "appearances": 12,
+    "minutes": 894,
     "goals": 2,
-    "assists": 2,
-    "shots": 13,
+    "assists": 3,
+    "shots": 14,
     "shots_on_target": 6
   },
   {
@@ -127,11 +148,11 @@
     "team_id": 530,
     "name": "Pablo Barrios",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 728,
+    "appearances": 12,
+    "minutes": 998,
     "goals": 1,
     "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
+    "shots": 5,
+    "shots_on_target": 3
   }
 ]

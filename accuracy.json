@@ -344,12 +344,47 @@
       },
       {
         "fixture_id": 1388379,
-        "match": "Werder Bremen vs Union Berlin",
+        "match": "Bremen vs Union Berlin",
         "pick": "Over 2.5 Goals",
         "dg_odds": 1.56,
         "book_odds": 1.8,
         "edge": 8.4,
         "league": "Bundesliga",
+        "result": "Loss"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-25",
+    "picks": [
+      {
+        "fixture_id": 1380950,
+        "match": "Volendam vs Heracles",
+        "pick": "Volendam Win",
+        "dg_odds": 1.63,
+        "book_odds": 2.10,
+        "edge": 13.8,
+        "league": "Eredivisie",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1380949,
+        "match": "Fortuna Sittard vs Groningen",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.69,
+        "book_odds": 2.10,
+        "edge": 13.8,
+        "league": "Eredivisie",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1387772,
+        "match": "Brest vs PSG",
+        "pick": "Over 3.5 Goals",
+        "dg_odds": 1.68,
+        "book_odds": 2.2,
+        "edge": 14.1,
+        "league": "Ligue 1",
         "result": "Loss"
       }
     ]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": 14243,
+    "name": "AGF",
+    "logo": "https://media-4.api-sports.io/football/teams/14243.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 6.6,
+      "corners_against": 2.1,
+      "shots": 17.4,
+      "shots_against": 9.5
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.0,
+      "corners_against": 4.7,
+      "shots": 15.8,
+      "shots_against": 11.5
+    }
+  },
+  {
+    "id": 407,
+    "name": "Brondby",
+    "logo": "https://media-4.api-sports.io/football/teams/407.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 2.3,
+      "corners_against": 2.7,
+      "shots": 16.6,
+      "shots_against": 10.3
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.2,
+      "corners_against": 4.8,
+      "shots": 14.6,
+      "shots_against": 12.3
+    }
+  },
+  {
+    "id": 398,
+    "name": "FC Nordsjaelland",
+    "logo": "https://media-4.api-sports.io/football/teams/398.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.0,
+      "corners_against": 2.0,
+      "shots": 13.3,
+      "shots_against": 10.0
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.0,
+      "corners_against": 4.3,
+      "shots": 11.3,
+      "shots_against": 12.0
+    }
+  },
+  {
+    "id": 401,
+    "name": "Randers FC",
+    "logo": "https://media-4.api-sports.io/football/teams/401.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.8,
+      "corners_against": 3.8,
+      "shots": 12.3,
+      "shots_against": 10.3
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.3,
+      "corners_against": 4.4,
+      "shots": 10.3,
+      "shots_against": 12.3
+    }
+  },
+  {
+    "id": 396,
+    "name": "Sonderjyske",
+    "logo": "https://media-4.api-sports.io/football/teams/396.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 2.7,
+      "corners_against": 6.8,
+      "shots": 13.1,
+      "shots_against": 13.9
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.3,
+      "corners_against": 6.0,
+      "shots": 11.1,
+      "shots_against": 15.9
+    }
+  },
+  {
+    "id": 405,
+    "name": "Odense",
+    "logo": "https://media-4.api-sports.io/football/teams/405.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.5,
+      "corners_against": 4,
+      "shots": 12.7,
+      "shots_against": 10.8
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.8,
+      "corners_against": 4.8,
+      "shots": 10.7,
+      "shots_against": 12.8
+    }
+  },
+  {
+    "id": 2073,
+    "name": "Silkeborg",
+    "logo": "https://media-4.api-sports.io/football/teams/2073.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.8,
+      "corners_against": 4.8,
+      "shots": 12.4,
+      "shots_against": 13.9
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.3,
+      "corners_against": 4.3,
+      "shots": 10.4,
+      "shots_against": 15.9
+    }
+  },
+  {
+    "id": 2070,
+    "name": "Viborg",
+    "logo": "https://media-4.api-sports.io/football/teams/2070.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.0,
+      "corners_against": 4.2,
+      "shots": 13.3,
+      "shots_against": 13.2
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.2,
+      "corners_against": 4.5,
+      "shots": 11.3,
+      "shots_against": 15.2
+    }
+  },
+  {
+    "id": 2061,
+    "name": "FC Fredericia",
+    "logo": "https://media-4.api-sports.io/football/teams/2061.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 6.3,
+      "corners_against": 6.3,
+      "shots": 11.9,
+      "shots_against": 18.3
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.3,
+      "corners_against": 6.2,
+      "shots": 9.9,
+      "shots_against": 19.3
+    }
+  },
+  {
+    "id": 395,
+    "name": "Vejle",
+    "logo": "https://media-4.api-sports.io/football/teams/395.png",
+    "league": "Danish Superliga",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.3,
+      "corners_against": 5.2,
+      "shots": 12.1,
+      "shots_against": 11.7
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.2,
+      "corners_against": 4.3,
+      "shots": 10.1,
+      "shots_against": 13.7
+    }
+  }
+]

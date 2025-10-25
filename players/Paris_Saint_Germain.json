@@ -1,17 +1,5 @@
 [
   {
-    "id": 153,
-    "team_id": 85,
-    "name": "O. Demb\u00e9l\u00e9",
-    "position": "Attacker",
-    "appearances": 7,
-    "minutes": 389,
-    "goals": 5,
-    "assists": 2,
-    "shots": 19,
-    "shots_on_target": 10
-  },
-  {
     "id": 328,
     "team_id": 85,
     "name": "Fabi\u00e1n Ruiz",
@@ -28,96 +16,48 @@
     "team_id": 85,
     "name": "K. Kvaratskhelia",
     "position": "Attacker",
-    "appearances": 6,
-    "minutes": 280,
-    "goals": 1,
-    "assists": 0,
-    "shots": 6,
-    "shots_on_target": 3
+    "appearances": 8,
+    "minutes": 372,
+    "goals": 2,
+    "assists": 1,
+    "shots": 11,
+    "shots_on_target": 5
   },
   {
     "id": 927,
     "team_id": 85,
     "name": "Lee Kang-In",
     "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 279,
+    "appearances": 10,
+    "minutes": 486,
     "goals": 0,
     "assists": 0,
-    "shots": 4,
-    "shots_on_target": 2
+    "shots": 8,
+    "shots_on_target": 4
   },
   {
     "id": 41585,
     "team_id": 85,
     "name": "Gon\u00e7alo Ramos",
     "position": "Attacker",
-    "appearances": 8,
-    "minutes": 441,
-    "goals": 2,
-    "assists": 0,
-    "shots": 13,
-    "shots_on_target": 9
-  },
-  {
-    "id": 128384,
-    "team_id": 85,
-    "name": "Vitinha",
-    "position": "Midfielder",
-    "appearances": 8,
+    "appearances": 10,
     "minutes": 621,
-    "goals": 1,
-    "assists": 3,
-    "shots": 11,
-    "shots_on_target": 5
+    "goals": 3,
+    "assists": 0,
+    "shots": 19,
+    "shots_on_target": 12
   },
   {
     "id": 161904,
     "team_id": 85,
     "name": "B. Barcola",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 518,
-    "goals": 3,
-    "assists": 1,
-    "shots": 14,
-    "shots_on_target": 9
-  },
-  {
-    "id": 336657,
-    "team_id": 85,
-    "name": "W. Za\u00efre-Emery",
-    "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 518,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
-  },
-  {
-    "id": 343027,
-    "team_id": 85,
-    "name": "D. Dou\u00e9",
-    "position": "Attacker",
-    "appearances": 5,
-    "minutes": 248,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 0
-  },
-  {
-    "id": 446249,
-    "team_id": 85,
-    "name": "I. Mbaye",
-    "position": "Attacker",
-    "appearances": 8,
-    "minutes": 321,
-    "goals": 0,
-    "assists": 0,
-    "shots": 5,
-    "shots_on_target": 3
+    "appearances": 10,
+    "minutes": 710,
+    "goals": 4,
+    "assists": 2,
+    "shots": 21,
+    "shots_on_target": 13
   },
   {
     "id": 335051,
@@ -132,15 +72,87 @@
     "shots_on_target": 3
   },
   {
+    "id": 336657,
+    "team_id": 85,
+    "name": "W. Za\u00efre-Emery",
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 774,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 1
+  },
+  {
+    "id": 343027,
+    "team_id": 85,
+    "name": "D. Dou\u00e9",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 276,
+    "goals": 2,
+    "assists": 1,
+    "shots": 6,
+    "shots_on_target": 3
+  },
+  {
     "id": 409216,
     "team_id": 85,
     "name": "Senny Mayulu",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 247,
-    "goals": 1,
+    "appearances": 8,
+    "minutes": 458,
+    "goals": 2,
     "assists": 1,
-    "shots": 2,
-    "shots_on_target": 1
+    "shots": 6,
+    "shots_on_target": 3
+  },
+  {
+    "id": 446249,
+    "team_id": 85,
+    "name": "I. Mbaye",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 488,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 3
+  },
+  {
+    "id": 153,
+    "team_id": 85,
+    "name": "O. Demb\u00e9l\u00e9",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 208,
+    "goals": 3,
+    "assists": 1,
+    "shots": 9,
+    "shots_on_target": 3
+  },
+  {
+    "id": 128384,
+    "team_id": 85,
+    "name": "Vitinha",
+    "position": "Midfielder",
+    "appearances": 10,
+    "minutes": 742,
+    "goals": 2,
+    "assists": 4,
+    "shots": 12,
+    "shots_on_target": 6
+  },
+  {
+    "id": 471107,
+    "team_id": 85,
+    "name": "Quentin Ndjantou Mbitcha",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 171,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
   }
 ]

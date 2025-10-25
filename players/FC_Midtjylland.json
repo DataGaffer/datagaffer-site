@@ -4,32 +4,32 @@
     "team_id": 397,
     "name": "P. Billing",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 426,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 2
+    "appearances": 9,
+    "minutes": 751,
+    "goals": 2,
+    "assists": 1,
+    "shots": 6,
+    "shots_on_target": 3
   },
   {
     "id": 15810,
     "team_id": 397,
     "name": "J\u00fanior Brumado",
     "position": "Attacker",
-    "appearances": 9,
-    "minutes": 429,
+    "appearances": 11,
+    "minutes": 562,
     "goals": 0,
     "assists": 2,
-    "shots": 8,
-    "shots_on_target": 3
+    "shots": 9,
+    "shots_on_target": 4
   },
   {
     "id": 34211,
     "team_id": 397,
     "name": "Cho Gue-Sung",
     "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 173,
+    "appearances": 10,
+    "minutes": 360,
     "goals": 2,
     "assists": 0,
     "shots": 5,
@@ -48,18 +48,6 @@
     "shots_on_target": 42
   },
   {
-    "id": 42007,
-    "team_id": 397,
-    "name": "Dani Silva",
-    "position": "Midfielder",
-    "appearances": 39,
-    "minutes": 1893,
-    "goals": 1,
-    "assists": 2,
-    "shots": 9,
-    "shots_on_target": 3
-  },
-  {
     "id": 48056,
     "team_id": 397,
     "name": "E. Chilufya",
@@ -76,35 +64,23 @@
     "team_id": 397,
     "name": "A. \u015eim\u015fir",
     "position": "Midfielder",
-    "appearances": 14,
-    "minutes": 598,
+    "appearances": 17,
+    "minutes": 791,
     "goals": 3,
-    "assists": 5,
-    "shots": 12,
+    "assists": 9,
+    "shots": 14,
     "shots_on_target": 9
-  },
-  {
-    "id": 307117,
-    "team_id": 397,
-    "name": "D. Osorio",
-    "position": "Midfielder",
-    "appearances": 23,
-    "minutes": 1518,
-    "goals": 5,
-    "assists": 3,
-    "shots": 29,
-    "shots_on_target": 11
   },
   {
     "id": 311432,
     "team_id": 397,
     "name": "P. Bravo",
     "position": "Midfielder",
-    "appearances": 12,
-    "minutes": 677,
+    "appearances": 16,
+    "minutes": 880,
     "goals": 0,
     "assists": 0,
-    "shots": 2,
+    "shots": 3,
     "shots_on_target": 2
   },
   {
@@ -112,11 +88,11 @@
     "team_id": 397,
     "name": "D. Castillo",
     "position": "Midfielder",
-    "appearances": 13,
-    "minutes": 712,
+    "appearances": 17,
+    "minutes": 899,
     "goals": 2,
     "assists": 2,
-    "shots": 6,
+    "shots": 8,
     "shots_on_target": 4
   },
   {
@@ -124,36 +100,36 @@
     "team_id": 397,
     "name": "Franculino Dj\u00fa",
     "position": "Attacker",
-    "appearances": 13,
-    "minutes": 827,
-    "goals": 8,
+    "appearances": 17,
+    "minutes": 1045,
+    "goals": 13,
     "assists": 3,
-    "shots": 20,
-    "shots_on_target": 14
+    "shots": 28,
+    "shots_on_target": 20
   },
   {
     "id": 371909,
     "team_id": 397,
     "name": "V. Byskov",
     "position": "Midfielder",
-    "appearances": 14,
-    "minutes": 218,
-    "goals": 1,
+    "appearances": 18,
+    "minutes": 409,
+    "goals": 4,
     "assists": 1,
-    "shots": 6,
-    "shots_on_target": 4
+    "shots": 12,
+    "shots_on_target": 8
   },
   {
-    "id": 435061,
+    "id": 42007,
     "team_id": 397,
-    "name": "Mikel Johan Gogorza Kr\u00fcger-Johnsen",
-    "position": "Attacker",
-    "appearances": 31,
-    "minutes": 1209,
-    "goals": 4,
-    "assists": 3,
-    "shots": 18,
-    "shots_on_target": 11
+    "name": "Dani Silva",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 361,
+    "goals": 0,
+    "assists": 2,
+    "shots": 3,
+    "shots_on_target": 1
   },
   {
     "id": 161569,
@@ -168,6 +144,18 @@
     "shots_on_target": 1
   },
   {
+    "id": 307117,
+    "team_id": 397,
+    "name": "D. Osorio",
+    "position": "Midfielder",
+    "appearances": 14,
+    "minutes": 714,
+    "goals": 3,
+    "assists": 5,
+    "shots": 22,
+    "shots_on_target": 11
+  },
+  {
     "id": 351146,
     "team_id": 397,
     "name": "F. Etim",
@@ -178,5 +166,17 @@
     "assists": 0,
     "shots": 1,
     "shots_on_target": 0
+  },
+  {
+    "id": 435061,
+    "team_id": 397,
+    "name": "Mikel Johan Gogorza Kr\u00fcger-Johnsen",
+    "position": "Attacker",
+    "appearances": 12,
+    "minutes": 346,
+    "goals": 1,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 4
   }
 ]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 297614,
+    "team_id": 405,
+    "name": "I. Ou\u00e9draogo",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 532,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 339876,
+    "team_id": 405,
+    "name": "E. Hansborg-S\u00f8rensen",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 41,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 376927,
+    "team_id": 405,
+    "name": "M. Ejdum",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 502,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 1
+  },
+  {
+    "id": 444452,
+    "team_id": 405,
+    "name": "W. Martin",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 93,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 1293,
+    "team_id": 405,
+    "name": "R. Falk",
+    "position": "Midfielder",
+    "appearances": 10,
+    "minutes": 900,
+    "goals": 0,
+    "assists": 2,
+    "shots": 4,
+    "shots_on_target": 0
+  },
+  {
+    "id": 15853,
+    "team_id": 405,
+    "name": "G. Grubbe",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 179,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 24887,
+    "team_id": 405,
+    "name": "J. Arp",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 964,
+    "goals": 6,
+    "assists": 2,
+    "shots": 20,
+    "shots_on_target": 12
+  },
+  {
+    "id": 37787,
+    "team_id": 405,
+    "name": "J. Grot",
+    "position": "Attacker",
+    "appearances": 12,
+    "minutes": 959,
+    "goals": 2,
+    "assists": 1,
+    "shots": 19,
+    "shots_on_target": 8
+  },
+  {
+    "id": 203253,
+    "team_id": 405,
+    "name": "N. Ganaus",
+    "position": "Attacker",
+    "appearances": 12,
+    "minutes": 947,
+    "goals": 6,
+    "assists": 1,
+    "shots": 21,
+    "shots_on_target": 12
+  },
+  {
+    "id": 324030,
+    "team_id": 405,
+    "name": "J. Niemiec",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 194,
+    "goals": 2,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 6
+  }
+]

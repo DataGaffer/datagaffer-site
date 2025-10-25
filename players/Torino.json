@@ -4,12 +4,12 @@
     "team_id": 503,
     "name": "C. Ngonge",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 316,
+    "appearances": 6,
+    "minutes": 434,
     "goals": 1,
     "assists": 1,
-    "shots": 5,
-    "shots_on_target": 4
+    "shots": 8,
+    "shots_on_target": 6
   },
   {
     "id": 243,
@@ -28,60 +28,60 @@
     "team_id": 503,
     "name": "N. Vla\u0161i\u0107",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 399,
+    "appearances": 7,
+    "minutes": 544,
     "goals": 0,
     "assists": 0,
-    "shots": 4,
+    "shots": 6,
     "shots_on_target": 3
-  },
-  {
-    "id": 19524,
-    "team_id": 503,
-    "name": "C. Adams",
-    "position": "Attacker",
-    "appearances": 5,
-    "minutes": 138,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 270507,
-    "team_id": 503,
-    "name": "C. Casadei",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 379,
-    "goals": 0,
-    "assists": 0,
-    "shots": 7,
-    "shots_on_target": 5
-  },
-  {
-    "id": 22174,
-    "team_id": 503,
-    "name": "A. Tam\u00e8ze",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 115,
-    "goals": 0,
-    "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
   },
   {
     "id": 30414,
     "team_id": 503,
     "name": "G. Simeone",
     "position": "Attacker",
-    "appearances": 5,
-    "minutes": 346,
+    "appearances": 7,
+    "minutes": 487,
+    "goals": 3,
+    "assists": 0,
+    "shots": 16,
+    "shots_on_target": 6
+  },
+  {
+    "id": 343189,
+    "team_id": 503,
+    "name": "G. Gineitis",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 130,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 19524,
+    "team_id": 503,
+    "name": "C. Adams",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 242,
     "goals": 1,
     "assists": 0,
-    "shots": 10,
-    "shots_on_target": 4
+    "shots": 4,
+    "shots_on_target": 3
+  },
+  {
+    "id": 22174,
+    "team_id": 503,
+    "name": "A. Tam\u00e8ze",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 275,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   },
   {
     "id": 46170,
@@ -108,15 +108,27 @@
     "shots_on_target": 0
   },
   {
+    "id": 270507,
+    "team_id": 503,
+    "name": "C. Casadei",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 559,
+    "goals": 0,
+    "assists": 0,
+    "shots": 8,
+    "shots_on_target": 5
+  },
+  {
     "id": 275776,
     "team_id": 503,
     "name": "K. Asllani",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 322,
+    "appearances": 6,
+    "minutes": 496,
     "goals": 0,
     "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
+    "shots": 4,
+    "shots_on_target": 1
   }
 ]

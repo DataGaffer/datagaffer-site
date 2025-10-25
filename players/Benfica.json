@@ -1,22 +1,10 @@
 [
   {
-    "id": 25918,
-    "team_id": 211,
-    "name": "L. Barreiro",
-    "position": "Midfielder",
-    "appearances": 13,
-    "minutes": 350,
-    "goals": 0,
-    "assists": 2,
-    "shots": 3,
-    "shots_on_target": 1
-  },
-  {
     "id": 301528,
     "team_id": 211,
     "name": "A. Schjelderup",
     "position": "Attacker",
-    "appearances": 12,
+    "appearances": 10,
     "minutes": 613,
     "goals": 2,
     "assists": 2,
@@ -36,11 +24,35 @@
     "shots_on_target": 1
   },
   {
+    "id": 345427,
+    "team_id": 211,
+    "name": "Jo\u00e3o Pedro Seno Lu\u00eds R\u00eago",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 20,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
+  },
+  {
+    "id": 362755,
+    "team_id": 211,
+    "name": "G. Prestianni",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 208,
+    "goals": 1,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 1
+  },
+  {
     "id": 575,
     "team_id": 211,
     "name": "Florentino",
     "position": "Midfielder",
-    "appearances": 6,
+    "appearances": 5,
     "minutes": 165,
     "goals": 1,
     "assists": 0,
@@ -48,28 +60,28 @@
     "shots_on_target": 1
   },
   {
-    "id": 1163,
-    "team_id": 211,
-    "name": "Bruma",
-    "position": "Attacker",
-    "appearances": 14,
-    "minutes": 510,
-    "goals": 1,
-    "assists": 2,
-    "shots": 13,
-    "shots_on_target": 6
-  },
-  {
     "id": 25458,
     "team_id": 211,
     "name": "D. Lukebakio",
     "position": "Attacker",
-    "appearances": 3,
-    "minutes": 170,
+    "appearances": 5,
+    "minutes": 340,
     "goals": 0,
     "assists": 1,
-    "shots": 8,
-    "shots_on_target": 4
+    "shots": 11,
+    "shots_on_target": 6
+  },
+  {
+    "id": 25918,
+    "team_id": 211,
+    "name": "L. Barreiro",
+    "position": "Midfielder",
+    "appearances": 12,
+    "minutes": 360,
+    "goals": 0,
+    "assists": 2,
+    "shots": 3,
+    "shots_on_target": 1
   },
   {
     "id": 36798,
@@ -77,10 +89,10 @@
     "name": "V. Pavlidis",
     "position": "Attacker",
     "appearances": 13,
-    "minutes": 1043,
+    "minutes": 1223,
     "goals": 6,
     "assists": 2,
-    "shots": 25,
+    "shots": 26,
     "shots_on_target": 16
   },
   {
@@ -89,23 +101,11 @@
     "name": "F. Aursnes",
     "position": "Midfielder",
     "appearances": 13,
-    "minutes": 1144,
+    "minutes": 1324,
     "goals": 2,
     "assists": 2,
     "shots": 5,
     "shots_on_target": 2
-  },
-  {
-    "id": 142959,
-    "team_id": 211,
-    "name": "K. Akt\u00fcrko\u011flu",
-    "position": "Attacker",
-    "appearances": 4,
-    "minutes": 188,
-    "goals": 1,
-    "assists": 0,
-    "shots": 5,
-    "shots_on_target": 3
   },
   {
     "id": 158378,
@@ -113,10 +113,10 @@
     "name": "E. Barrenechea",
     "position": "Midfielder",
     "appearances": 12,
-    "minutes": 985,
+    "minutes": 1165,
     "goals": 1,
     "assists": 0,
-    "shots": 4,
+    "shots": 5,
     "shots_on_target": 1
   },
   {
@@ -124,24 +124,12 @@
     "team_id": 211,
     "name": "H. Sudakov",
     "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 440,
+    "appearances": 8,
+    "minutes": 619,
     "goals": 2,
     "assists": 1,
-    "shots": 6,
-    "shots_on_target": 4
-  },
-  {
-    "id": 162098,
-    "team_id": 211,
-    "name": "Henrique Ara\u00fajo",
-    "position": "Attacker",
-    "appearances": 7,
-    "minutes": 78,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
+    "shots": 7,
+    "shots_on_target": 5
   },
   {
     "id": 195104,
@@ -149,10 +137,10 @@
     "name": "R. Rios",
     "position": "Midfielder",
     "appearances": 13,
-    "minutes": 1111,
+    "minutes": 1291,
     "goals": 0,
     "assists": 0,
-    "shots": 23,
+    "shots": 24,
     "shots_on_target": 8
   },
   {
@@ -160,23 +148,11 @@
     "team_id": 211,
     "name": "F. Ivanovi\u0107",
     "position": "Attacker",
-    "appearances": 13,
-    "minutes": 675,
+    "appearances": 12,
+    "minutes": 702,
     "goals": 3,
     "assists": 0,
     "shots": 22,
     "shots_on_target": 12
-  },
-  {
-    "id": 362755,
-    "team_id": 211,
-    "name": "G. Prestianni",
-    "position": "Attacker",
-    "appearances": 8,
-    "minutes": 208,
-    "goals": 1,
-    "assists": 0,
-    "shots": 6,
-    "shots_on_target": 1
   }
 ]

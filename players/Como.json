@@ -16,11 +16,11 @@
     "team_id": 895,
     "name": "M. Caqueret",
     "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 110,
+    "appearances": 5,
+    "minutes": 199,
     "goals": 0,
     "assists": 0,
-    "shots": 2,
+    "shots": 3,
     "shots_on_target": 0
   },
   {
@@ -28,24 +28,24 @@
     "team_id": 895,
     "name": "L. da Cunha",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 305,
+    "appearances": 6,
+    "minutes": 484,
     "goals": 0,
     "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
+    "shots": 4,
+    "shots_on_target": 3
   },
   {
     "id": 350037,
     "team_id": 895,
     "name": "N. Paz",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 438,
-    "goals": 3,
-    "assists": 3,
-    "shots": 12,
-    "shots_on_target": 9
+    "appearances": 7,
+    "minutes": 618,
+    "goals": 4,
+    "assists": 4,
+    "shots": 13,
+    "shots_on_target": 10
   },
   {
     "id": 137,
@@ -58,6 +58,18 @@
     "assists": 0,
     "shots": 4,
     "shots_on_target": 1
+  },
+  {
+    "id": 295026,
+    "team_id": 895,
+    "name": "M. Baturina",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 90,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
   },
   {
     "id": 443162,
@@ -76,12 +88,12 @@
     "team_id": 895,
     "name": "T. Douvikas",
     "position": "Attacker",
-    "appearances": 5,
-    "minutes": 247,
+    "appearances": 7,
+    "minutes": 314,
     "goals": 1,
     "assists": 0,
-    "shots": 3,
-    "shots_on_target": 2
+    "shots": 5,
+    "shots_on_target": 3
   },
   {
     "id": 263699,
@@ -100,35 +112,23 @@
     "team_id": 895,
     "name": "J. Addai",
     "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 91,
+    "appearances": 4,
+    "minutes": 181,
     "goals": 1,
     "assists": 0,
-    "shots": 3,
-    "shots_on_target": 1
+    "shots": 4,
+    "shots_on_target": 2
   },
   {
     "id": 288699,
     "team_id": 895,
     "name": "M. Perrone",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 328,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
-    "id": 59,
-    "team_id": 895,
-    "name": "\u00c1lvaro Morata",
-    "position": "Attacker",
-    "appearances": 5,
-    "minutes": 181,
-    "goals": 0,
+    "appearances": 7,
+    "minutes": 508,
+    "goals": 1,
     "assists": 1,
-    "shots": 5,
+    "shots": 3,
     "shots_on_target": 1
   },
   {
@@ -142,5 +142,17 @@
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
+  },
+  {
+    "id": 59,
+    "team_id": 895,
+    "name": "\u00c1lvaro Morata",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 315,
+    "goals": 0,
+    "assists": 1,
+    "shots": 6,
+    "shots_on_target": 2
   }
 ]

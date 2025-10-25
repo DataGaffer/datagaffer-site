@@ -1,0 +1,354 @@
+[
+  {
+    "id": 1603,
+    "name": "Vancouver Whitecaps",
+    "logo": "https://media-4.api-sports.io/football/teams/1603.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 6.7,
+      "corners_against": 4.6,
+      "shots": 15.7,
+      "shots_against": 9.0
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.2,
+      "corners_against": 5.2,
+      "shots": 12.1,
+      "shots_against": 11.1
+    }
+  },
+  {
+    "id": 1597,
+    "name": "FC Dallas",
+    "logo": "https://media-4.api-sports.io/football/teams/1597.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.4,
+      "corners_against": 6.4,
+      "shots": 11.6,
+      "shots_against": 13.5
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.1,
+      "corners_against": 6.9,
+      "shots": 9.6,
+      "shots_against": 15.5
+    }
+  },
+  {
+    "id": 1616,
+    "name": "Los Angeles FC",
+    "logo": "https://media-4.api-sports.io/football/teams/1616.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.3,
+      "corners_against": 3.7,
+      "shots": 15.6,
+      "shots_against": 8.9
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.9,
+      "corners_against": 5.7,
+      "shots": 12.6,
+      "shots_against": 11.4
+    }
+  },
+  {
+    "id": 16489,
+    "name": "Austin",
+    "logo": "https://media-4.api-sports.io/football/teams/16489.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.4,
+      "corners_against": 5.2,
+      "shots": 12.5,
+      "shots_against": 12.0
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.7,
+      "corners_against": 5.8,
+      "shots": 10.5,
+      "shots_against": 14.9
+    }
+  },
+  {
+    "id": 1612,
+    "name": "Minnesota United FC",
+    "logo": "https://media-4.api-sports.io/football/teams/1612.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.2,
+      "corners_against": 4.7,
+      "shots": 12.9,
+      "shots_against": 12.1
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.1,
+      "corners_against": 6.4,
+      "shots": 10.9,
+      "shots_against": 14.4
+    }
+  },
+  {
+    "id": 1595,
+    "name": "Seattle Sounders",
+    "logo": "https://media-4.api-sports.io/football/teams/1595.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.0,
+      "corners_against": 3.9,
+      "shots": 14.9,
+      "shots_against": 10.4
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.7,
+      "corners_against": 4.5,
+      "shots": 12.6,
+      "shots_against": 12.4
+    }
+  },
+  {
+    "id": 25484,
+    "name": "San Diego",
+    "logo": "https://media-4.api-sports.io/football/teams/25484.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 6.4,
+      "corners_against": 2.5,
+      "shots": 14.0,
+      "shots_against": 9.4
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.1,
+      "corners_against": 4.4,
+      "shots": 12.0,
+      "shots_against": 11.4
+    }
+  },
+  {
+    "id": 1617,
+    "name": "Portland Timbers",
+    "logo": "https://media-4.api-sports.io/football/teams/1617.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.6,
+      "corners_against": 5.4,
+      "shots": 13.0,
+      "shots_against": 12.4
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.7,
+      "corners_against": 4.8,
+      "shots": 11.0,
+      "shots_against": 14.4
+    }
+  },
+  {
+    "id": 2242,
+    "name": "FC Cincinnati",
+    "logo": "https://media-4.api-sports.io/football/teams/2242.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.5,
+      "corners_against": 4.9,
+      "shots": 14.7,
+      "shots_against": 12.0
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.9,
+      "corners_against": 5.9,
+      "shots": 12.7,
+      "shots_against": 13.9
+    }
+  },
+  {
+    "id": 1613,
+    "name": "Columbus Crew",
+    "logo": "https://media-4.api-sports.io/football/teams/1613.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.8,
+      "corners_against": 2.7,
+      "shots": 13.9,
+      "shots_against": 9.1
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.1,
+      "corners_against": 4.2,
+      "shots": 11.9,
+      "shots_against": 11.1
+    }
+  },
+  {
+    "id": 9568,
+    "name": "Inter Miami",
+    "logo": "https://media-4.api-sports.io/football/teams/9568.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.1,
+      "corners_against": 3.9,
+      "shots": 14.3,
+      "shots_against": 10.7
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.9,
+      "corners_against": 4.2,
+      "shots": 12.3,
+      "shots_against": 12.7
+    }
+  },
+  {
+    "id": 9569,
+    "name": "Nashville SC",
+    "logo": "https://media-4.api-sports.io/football/teams/9569.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.7,
+      "corners_against": 3.0,
+      "shots": 14.3,
+      "shots_against": 9.8
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.9,
+      "corners_against": 3.7,
+      "shots": 12.3,
+      "shots_against": 11.8
+    }
+  },
+  {
+    "id": 18310,
+    "name": "Charlotte",
+    "logo": "https://media-4.api-sports.io/football/teams/18310.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.4,
+      "corners_against": 5.2,
+      "shots": 11.4,
+      "shots_against": 13.7
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.4,
+      "corners_against": 5.5,
+      "shots": 9.4,
+      "shots_against": 15.7
+    }
+  },
+  {
+    "id": 1604,
+    "name": "New York City FC",
+    "logo": "https://media-4.api-sports.io/football/teams/1604.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 6.3,
+      "corners_against": 5.2,
+      "shots": 13.3,
+      "shots_against": 11.0
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.9,
+      "corners_against": 5.9,
+      "shots": 11.3,
+      "shots_against": 13.00
+    }
+  },
+  {
+    "id": 1599,
+    "name": "Philadelphia Union",
+    "logo": "https://media-4.api-sports.io/football/teams/1599.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 7.1,
+      "corners_against": 3.9,
+      "shots": 16.3,
+      "shots_against": 8.7
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.3,
+      "corners_against": 3.9,
+      "shots": 14.3,
+      "shots_against": 10.7
+    }
+  },
+  {
+    "id": 1607,
+    "name": "Chicago Fire",
+    "logo": "https://media-4.api-sports.io/football/teams/1607.png",
+    "league": "Major League Soccer",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.1,
+      "corners_against": 4.2,
+      "shots": 14.5,
+      "shots_against": 12.3
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.9,
+      "corners_against": 5.5,
+      "shots": 12.5,
+      "shots_against": 14.3
+    }
+  }
+]
