@@ -62,11 +62,11 @@
 
     .container { display:grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:16px; padding:16px; }
     .card {
-      background:#ffffff;
-      border-radius:10px;
+      background:#003f2e;
+      border-radius:15px;
       padding:14px;
       box-shadow:0 2px 6px rgba(0,0,0,.1);
-      border: 2px solid #003f2e;
+      border: 2px solid #ffffff;
       scroll-margin-top: 80px;
       transition: box-shadow 0.4s ease, transform 0.3s ease;
     }
@@ -85,7 +85,7 @@
     .team-name { font-weight:700; transition: color .2s ease; }
     .club-logo { height:22px; width:auto; vertical-align:middle; }
 
-    .section { background:#f3f8f5; border:1px solid #dfe9e3; border-radius:8px; padding:8px; margin-bottom:8px; }
+    .section { background:#ffffff; border:1px solid #ffffff; border-radius:0px; padding:6px 8px; margin-bottom:5px; }
     .section h4 { margin:0 0 2px; font-size:13px; text-align:center; }
 
     /* 🔹 Compact Projected + H2H sections */
@@ -120,11 +120,11 @@
     .gradient-cell { font-weight: bold; border-radius:4px; padding:3px 4px; }
 
     .h2h {
-  background:#fff6e8;
-  border:1px solid #f2e0c5;
-  border-radius:8px;
+  background:#ffffff;
+  border:1px solid #ffffff;
+  border-radius:0px;
   padding:6px 8px;
-  margin-top:8px;
+  margin-top:5px;
   text-align:center; /* Center everything inside */
 }
 .h2h h4 {
@@ -146,8 +146,8 @@
 } 
 /* Light blue for Projected Stats section */
 .projected-section {
-  background: #f0f5fb;
-  border: 1px solid #c2d8f5;
+  background: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 
@@ -163,9 +163,40 @@
 /* Light blue background specifically for Projected Stats section */
 .section.compact-section h4:contains("Projected Stats"),
 .section.compact-section:has(h4:contains("Projected Stats")) {
-  background: #e7f2ff !important;   /* light blue background */
-  border: 1px solid #c2d8f5 !important; /* matching blue border */
+  background: #ffffff !important;   /* light blue background */
+  border: 1px solid #ffffff !important; /* matching blue border */
 }
+
+.card-header {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 6px 8px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #d8e0db;
+}
+
+.card-header img {
+  height: 22px;
+  width: auto;
+}
+
+.card-header .team-name {
+  font-weight: 700;
+  color: #003f2e;
+  font-size: 15px;
+}
+
+.projected-grid .highlight {
+  background: #d4f7d9;        /* light green */
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+
 
 
     @media (max-width: 768px) {
@@ -236,15 +267,37 @@ function buildCard(f, h2hMap) {
   const perc = sim.percents || {};
   const book = f.book_odds || {};
 
-  const projected = `
+  // Determine highlights
+const highlight = (home, away) => {
+  if (home == null || away == null || home === "–" || away === "–") return { homeCls: "", awayCls: "" };
+  if (parseFloat(home) > parseFloat(away)) return { homeCls: "highlight", awayCls: "" };
+  if (parseFloat(away) > parseFloat(home)) return { homeCls: "", awayCls: "highlight" };
+  return { homeCls: "", awayCls: "" };
+};
+
+const goalsHL = highlight(sim.xg?.home, sim.xg?.away);
+const cornersHL = highlight(sim.corners?.home, sim.corners?.away);
+const shotsHL = highlight(sim.shots?.home, sim.shots?.away);
+
+const projected = `
   <div class="section compact-section projected-section">
     <h4>Projected Stats</h4>
     <div class="projected-grid">
-      <div><div class="label">Goals</div><div>${sim.xg?.home ?? "–"} - ${sim.xg?.away ?? "–"}</div></div>
-      <div><div class="label">Corners</div><div>${sim.corners?.home ?? "–"} - ${sim.corners?.away ?? "–"}</div></div>
-      <div><div class="label">Shots</div><div>${sim.shots?.home ?? "–"} - ${sim.shots?.away ?? "–"}</div></div>
+      <div>
+        <div class="label">Goals</div>
+        <div><span class="${goalsHL.homeCls}">${sim.xg?.home ?? "–"}</span> - <span class="${goalsHL.awayCls}">${sim.xg?.away ?? "–"}</span></div>
+      </div>
+      <div>
+        <div class="label">Corners</div>
+        <div><span class="${cornersHL.homeCls}">${sim.corners?.home ?? "–"}</span> - <span class="${cornersHL.awayCls}">${sim.corners?.away ?? "–"}</span></div>
+      </div>
+      <div>
+        <div class="label">Shots</div>
+        <div><span class="${shotsHL.homeCls}">${sim.shots?.home ?? "–"}</span> - <span class="${shotsHL.awayCls}">${sim.shots?.away ?? "–"}</span></div>
+      </div>
     </div>
   </div>`;
+
 
   const markets = [
     ["Home Win", perc.home_win_pct, book.home_win],
@@ -308,19 +361,24 @@ function buildCard(f, h2hMap) {
       </div>`
     : `<div class="h2h compact-section"><h4>Head-to-Head (last 5)</h4><p style="font-size:13px; color:#555;">No recent meetings</p></div>`;
 
-  return `
-    <div class="card" id="${slug}">
-      <h3>
-        <img class="club-logo home-logo" src="${f.home.logo}" alt="${f.home.name}">
-        <span class="team-name home-name">${f.home.name}</span>
-        &nbsp;vs&nbsp;
-        <span class="team-name away-name">${f.away.name}</span>
-        <img class="club-logo away-logo" src="${f.away.logo}" alt="${f.away.name}">
-      </h3>
-      ${projected}
-      ${table}
-      ${h2hSection}
-    </div>`;
+  const header = `
+  <div class="card-header">
+    <img class="club-logo home-logo" src="${f.home.logo}" alt="${f.home.name}">
+    <span class="team-name home-name">${f.home.name}</span>
+    <span style="margin: 0 4px;">vs</span>
+    <span class="team-name away-name">${f.away.name}</span>
+    <img class="club-logo away-logo" src="${f.away.logo}" alt="${f.away.name}">
+  </div>
+`;
+
+return `
+  <div class="card" id="${slug}">
+    ${header}
+    ${projected}
+    ${table}
+    ${h2hSection}
+  </div>`;
+
 }
 
 let allFixtures = [];
