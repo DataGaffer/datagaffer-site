@@ -362,7 +362,7 @@
         "match": "Volendam vs Heracles",
         "pick": "Volendam Win",
         "dg_odds": 1.63,
-        "book_odds": 2.10,
+        "book_odds": 2.1,
         "edge": 13.8,
         "league": "Eredivisie",
         "result": "Win"
@@ -372,7 +372,7 @@
         "match": "Fortuna Sittard vs Groningen",
         "pick": "Over 2.5 Goals",
         "dg_odds": 1.69,
-        "book_odds": 2.10,
+        "book_odds": 2.1,
         "edge": 13.8,
         "league": "Eredivisie",
         "result": "Win"
@@ -386,6 +386,41 @@
         "edge": 14.1,
         "league": "Ligue 1",
         "result": "Loss"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-26",
+    "picks": [
+      {
+        "fixture_id": 1379049,
+        "match": "Arsenal vs Crystal Palace",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.62,
+        "book_odds": 2.00,
+        "edge": 11.8,
+        "league": "Premier League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1379058,
+        "match": "Wolves vs Burnley",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.59,
+        "book_odds": 2.00,
+        "edge": 12.8,
+        "league": "Premier League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1387770,
+        "match": "GO Ahead vs Excelsior",
+        "pick": "GO Ahead Win",
+        "dg_odds": 1.43,
+        "book_odds": 1.80,
+        "edge": 14.1,
+        "league": "Eredivisie",
+        "result": "Win"
       }
     ]
   }
