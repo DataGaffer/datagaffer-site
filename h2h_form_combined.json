@@ -1,19 +1,5 @@
 [
   {
-    "matchup": "San Diego vs Portland Timbers",
-    "home_logo": "https://media.api-sports.io/football/teams/25484.png",
-    "away_logo": "https://media.api-sports.io/football/teams/1617.png",
-    "h2h_home_avg_goals": 0.0,
-    "h2h_away_avg_goals": 0.0,
-    "h2h_total_avg": 0,
-    "home_form_points": 10,
-    "away_form_points": 5,
-    "home_form_goals": 2.6,
-    "away_form_goals": 1.2,
-    "home_form_last5": "WWLDW",
-    "away_form_last5": "WLLDD"
-  },
-  {
     "matchup": "Odense vs Brondby",
     "home_logo": "https://media.api-sports.io/football/teams/405.png",
     "away_logo": "https://media.api-sports.io/football/teams/407.png",

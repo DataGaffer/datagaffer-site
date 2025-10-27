@@ -197,13 +197,13 @@
     },
     "home": {
       "id": 1612,
-      "name": "Minnesota United FC",
+      "name": "Minnesota",
       "logo": "https://media.api-sports.io/football/teams/1612.png",
       "winner": null
     },
     "away": {
       "id": 1595,
-      "name": "Seattle Sounders",
+      "name": "Seattle",
       "logo": "https://media.api-sports.io/football/teams/1595.png",
       "winner": null
     },
