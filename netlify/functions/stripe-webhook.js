@@ -23,13 +23,7 @@ function planFromPriceId(id) {
 }
 
 // --- Upsert profile in Supabase ---
-async function upsertProfile({
-  email,
-  customerId,
-  planCode,
-  isSubscribed,
-  subscriptionStatus,
-}) {
+async function upsertProfile({ email, customerId, planCode, isSubscribed, subscriptionStatus }) {
   if (!email) return;
   email = email.toLowerCase();
 
@@ -77,19 +71,13 @@ export async function handler(event) {
 
   if (!event.body) {
     console.error("❌ No webhook body");
-    return {
-      statusCode: 400,
-      body: "Webhook Error: No webhook payload was provided.",
-    };
+    return { statusCode: 400, body: "Webhook Error: No webhook payload provided." };
   }
 
   const sig = event.headers["stripe-signature"];
   if (!sig) {
     console.error("❌ Missing Stripe signature");
-    return {
-      statusCode: 400,
-      body: "Webhook Error: Missing Stripe signature",
-    };
+    return { statusCode: 400, body: "Webhook Error: Missing Stripe signature" };
   }
 
   let stripeEvent;
@@ -108,8 +96,7 @@ export async function handler(event) {
 
   try {
     switch (stripeEvent.type) {
-
-      // --- New checkout completed ---
+      // --- Checkout completed ---
       case "checkout.session.completed": {
         const session = stripeEvent.data.object;
         const email =
@@ -117,6 +104,7 @@ export async function handler(event) {
           session.customer_email ||
           null;
         const customerId = session.customer;
+
         let planCode = null;
         let isSubscribed = false;
         let subscriptionStatus = null;
@@ -128,8 +116,8 @@ export async function handler(event) {
           isSubscribed = ACTIVE_STATUSES.has(sub.status);
           subscriptionStatus = sub.status;
 
-          // ✅ Mark trial used immediately if trialing
-          if (sub.status === "trialing" || sub.trial_start || sub.trial_end) {
+          // ✅ Mark trial used right away if trial is present
+          if (sub.status === "trialing" || (sub.trial_end && sub.trial_end > Date.now() / 1000)) {
             console.log("📆 Trial detected → marking trial_used true");
             await markTrialUsed(customerId);
           }
@@ -149,9 +137,9 @@ export async function handler(event) {
         const isSubscribed = ACTIVE_STATUSES.has(sub.status);
         const subscriptionStatus = sub.status;
 
-        // ✅ Also mark trial used if trialing or active
-        if (sub.status === "trialing" || sub.status === "active" || sub.trial_start || sub.trial_end) {
-          console.log("📆 Trial or active detected → marking trial_used true");
+        // ✅ Mark trial used if it's trialing, active, or just started
+        if (sub.status === "trialing" || sub.status === "active" || sub.trial_start) {
+          console.log("📆 Trial/active detected → marking trial_used true");
           await markTrialUsed(sub.customer);
         }
 
@@ -177,25 +165,17 @@ export async function handler(event) {
           console.warn("⚠️ Could not retrieve customer email:", err.message);
         }
 
+        const update = {
+          is_subscribed: false,
+          plan: null,
+          subscription_status: "canceled",
+        };
+
         if (email) {
-          await supabase
-            .from("profiles")
-            .update({
-              is_subscribed: false,
-              plan: null,
-              subscription_status: "canceled",
-            })
-            .eq("email", email.toLowerCase());
+          await supabase.from("profiles").update(update).eq("email", email.toLowerCase());
           console.log(`🚫 Subscription canceled for ${email}`);
         } else {
-          await supabase
-            .from("profiles")
-            .update({
-              is_subscribed: false,
-              plan: null,
-              subscription_status: "canceled",
-            })
-            .eq("customer_id", sub.customer);
+          await supabase.from("profiles").update(update).eq("customer_id", sub.customer);
           console.log(`🚫 Subscription canceled for customer_id ${sub.customer}`);
         }
 
@@ -212,6 +192,7 @@ export async function handler(event) {
 
   return { statusCode: 200, body: "ok" };
 }
+
 
 
 
