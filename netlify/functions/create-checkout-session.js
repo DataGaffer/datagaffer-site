@@ -1,9 +1,29 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const { createClient } = require("@supabase/supabase-js");
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY
+);
 
 exports.handler = async (event) => {
   try {
     const { plan, email } = JSON.parse(event.body);
 
+    if (!email) throw new Error("Missing email");
+
+    // ✅ 1️⃣ Look up user in Supabase
+    const { data: profile, error } = await supabase
+      .from("profiles")
+      .select("trial_used")
+      .eq("email", email.toLowerCase())
+      .maybeSingle();
+
+    if (error) throw error;
+
+    const userHasUsedTrial = profile?.trial_used === true;
+
+    // ✅ 2️⃣ Set up pricing and URLs
     let priceId;
     let successUrl;
 
@@ -17,7 +37,7 @@ exports.handler = async (event) => {
       throw new Error("Invalid plan selected");
     }
 
-    // ✅ Create checkout session
+    // ✅ 3️⃣ Create checkout session with conditional trial
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "subscription",
@@ -28,9 +48,10 @@ exports.handler = async (event) => {
         },
       ],
       subscription_data: {
-        trial_period_days: 7, // Optional free trial
+        // 👇 this line blocks repeat trials
+        trial_period_days: userHasUsedTrial ? 0 : 7,
       },
-      customer_email: email, // Links Stripe to Supabase user email
+      customer_email: email,
       success_url: successUrl,
       cancel_url: `${process.env.SITE_URL}/subscribe.html`,
     });
@@ -47,6 +68,7 @@ exports.handler = async (event) => {
     };
   }
 };
+
 
 
 
