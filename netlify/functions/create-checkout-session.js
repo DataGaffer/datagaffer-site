@@ -12,7 +12,7 @@ exports.handler = async (event) => {
 
     if (!email) throw new Error("Missing email");
 
-    // ✅ 1️⃣ Look up user in Supabase
+    // ✅ 1️⃣ Check Supabase for previous trial usage
     const { data: profile, error } = await supabase
       .from("profiles")
       .select("trial_used")
@@ -23,7 +23,7 @@ exports.handler = async (event) => {
 
     const userHasUsedTrial = profile?.trial_used === true;
 
-    // ✅ 2️⃣ Set up pricing and URLs
+    // ✅ 2️⃣ Configure pricing and redirect URLs
     let priceId;
     let successUrl;
 
@@ -37,7 +37,12 @@ exports.handler = async (event) => {
       throw new Error("Invalid plan selected");
     }
 
-    // ✅ 3️⃣ Create checkout session with conditional trial
+    // ✅ 3️⃣ Conditionally include trial only for first-time users
+    const subscriptionData = userHasUsedTrial
+      ? {} // No free trial
+      : { trial_period_days: 7 }; // First-time trial
+
+    // ✅ 4️⃣ Create Stripe checkout session
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "subscription",
@@ -47,14 +52,13 @@ exports.handler = async (event) => {
           quantity: 1,
         },
       ],
-      subscription_data: {
-        // 👇 this line blocks repeat trials
-        trial_period_days: userHasUsedTrial ? 0 : 7,
-      },
+      subscription_data: subscriptionData,
       customer_email: email,
       success_url: successUrl,
       cancel_url: `${process.env.SITE_URL}/subscribe.html`,
     });
+
+    if (!session.url) throw new Error("No checkout URL returned");
 
     return {
       statusCode: 200,
@@ -68,6 +72,7 @@ exports.handler = async (event) => {
     };
   }
 };
+
 
 
 
