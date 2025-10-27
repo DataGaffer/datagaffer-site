@@ -44,7 +44,7 @@ async function upsertProfile({
     customer_id: customerId ?? existing?.customer_id ?? null,
     plan: isSubscribed ? planCode : existing?.plan ?? null,
     is_subscribed: isSubscribed || existing?.is_subscribed || false,
-    subscription_status: subscriptionStatus ?? existing?.subscription_status ?? null, // ✅ added
+    subscription_status: subscriptionStatus ?? existing?.subscription_status ?? null,
   };
 
   if (existing?.id) updatePayload.id = existing.id;
@@ -108,6 +108,7 @@ export async function handler(event) {
 
   try {
     switch (stripeEvent.type) {
+
       // --- New checkout completed ---
       case "checkout.session.completed": {
         const session = stripeEvent.data.object;
@@ -127,8 +128,9 @@ export async function handler(event) {
           isSubscribed = ACTIVE_STATUSES.has(sub.status);
           subscriptionStatus = sub.status;
 
-          // ✅ Mark trial used if present
-          if (sub.trial_start || sub.trial_end) {
+          // ✅ Mark trial used immediately if trialing
+          if (sub.status === "trialing" || sub.trial_start || sub.trial_end) {
+            console.log("📆 Trial detected → marking trial_used true");
             await markTrialUsed(customerId);
           }
         }
@@ -147,7 +149,9 @@ export async function handler(event) {
         const isSubscribed = ACTIVE_STATUSES.has(sub.status);
         const subscriptionStatus = sub.status;
 
-        if (sub.trial_start || sub.status === "active") {
+        // ✅ Also mark trial used if trialing or active
+        if (sub.status === "trialing" || sub.status === "active" || sub.trial_start || sub.trial_end) {
+          console.log("📆 Trial or active detected → marking trial_used true");
           await markTrialUsed(sub.customer);
         }
 
@@ -161,45 +165,42 @@ export async function handler(event) {
         break;
       }
 
+      // --- Subscription canceled ---
       case "customer.subscription.deleted": {
-  const sub = stripeEvent.data.object;
-  let email = null;
+        const sub = stripeEvent.data.object;
+        let email = null;
 
-  try {
-    const customer = await stripe.customers.retrieve(sub.customer);
-    email = customer?.email || null;
-  } catch (err) {
-    console.warn("⚠️ Could not retrieve customer email:", err.message);
-  }
+        try {
+          const customer = await stripe.customers.retrieve(sub.customer);
+          email = customer?.email || null;
+        } catch (err) {
+          console.warn("⚠️ Could not retrieve customer email:", err.message);
+        }
 
-  // Update by email if we have one
-  if (email) {
-    await supabase
-      .from("profiles")
-      .update({
-        is_subscribed: false,
-        plan: null,
-        subscription_status: "canceled",
-      })
-      .eq("email", email.toLowerCase());
-    console.log(`🚫 Subscription canceled for ${email}`);
-  }
-  // Fallback: update by customer_id if email is missing
-  else {
-    await supabase
-      .from("profiles")
-      .update({
-        is_subscribed: false,
-        plan: null,
-        subscription_status: "canceled",
-      })
-      .eq("customer_id", sub.customer);
-    console.log(`🚫 Subscription canceled for customer_id ${sub.customer}`);
-  }
+        if (email) {
+          await supabase
+            .from("profiles")
+            .update({
+              is_subscribed: false,
+              plan: null,
+              subscription_status: "canceled",
+            })
+            .eq("email", email.toLowerCase());
+          console.log(`🚫 Subscription canceled for ${email}`);
+        } else {
+          await supabase
+            .from("profiles")
+            .update({
+              is_subscribed: false,
+              plan: null,
+              subscription_status: "canceled",
+            })
+            .eq("customer_id", sub.customer);
+          console.log(`🚫 Subscription canceled for customer_id ${sub.customer}`);
+        }
 
-  break;
-}
-
+        break;
+      }
 
       default:
         console.log("ℹ️ Ignored event:", stripeEvent.type);
@@ -211,6 +212,7 @@ export async function handler(event) {
 
   return { statusCode: 200, body: "ok" };
 }
+
 
 
 
