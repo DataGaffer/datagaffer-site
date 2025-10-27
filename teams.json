@@ -416,6 +416,11 @@
   { "name": "FC Fredericia", "id": 2061, "league": "Danish Superliga", "logo": "https://media-4.api-sports.io/football/teams/2061.png" },
   { "name": "Vejle", "id": 395, "league": "Danish Superliga", "logo": "https://media-4.api-sports.io/football/teams/395.png" },
 
+{ "id": 191, "name": "Holstein Kiel", "logo": "https://media.api-sports.io/football/teams/191.png" },
+{ "id": 176, "name": "VfL Bochum", "logo": "https://media.api-sports.io/football/teams/176.png" },
+{ "id": 185, "name": "SC Paderborn 07", "logo": "https://media.api-sports.io/football/teams/185.png" },
+{ "id": 785, "name": "Karlsruher SC", "logo": "https://media.api-sports.io/football/teams/785.png" },
+{ "id": 76, "name": "Swansea", "logo": "https://media.api-sports.io/football/teams/76.png" },
 
   
    {

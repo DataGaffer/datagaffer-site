@@ -99,9 +99,9 @@
     },
     "sim_stats": {
       "xg": {
-        "home": "2.04",
-        "away": "1.90",
-        "total": "3.94"
+        "home": "2.03",
+        "away": "1.78",
+        "total": "3.81"
       },
       "corners": {
         "home": "5.3",
@@ -109,20 +109,83 @@
         "total": "10.1"
       },
       "shots": {
-        "home": "14.8",
-        "away": "13.1",
+        "home": "14.7",
+        "away": "13.2",
         "total": "27.9"
       },
       "percents": {
-        "home_win_pct": 42.8,
-        "draw_pct": 20.8,
-        "away_win_pct": 36.5,
-        "over_2_5_pct": 75.4,
-        "over_3_5_pct": 56.0,
-        "under_2_5_pct": 24.6,
-        "btts_pct": 73.8,
-        "home_o1_5_pct": 60.9,
-        "away_o1_5_pct": 56.4
+        "home_win_pct": 44.4,
+        "draw_pct": 20.7,
+        "away_win_pct": 34.9,
+        "over_2_5_pct": 72.9,
+        "over_3_5_pct": 52.9,
+        "under_2_5_pct": 27.1,
+        "btts_pct": 71.7,
+        "home_o1_5_pct": 60.6,
+        "away_o1_5_pct": 52.8
+      }
+    }
+  },
+  {
+    "fixture_id": 1463460,
+    "league": {
+      "id": 81,
+      "name": "DFB Pokal"
+    },
+    "home": {
+      "id": 161,
+      "name": "VfL Wolfsburg",
+      "logo": "https://media.api-sports.io/football/teams/161.png",
+      "winner": null
+    },
+    "away": {
+      "id": 191,
+      "name": "Holstein Kiel",
+      "logo": "https://media.api-sports.io/football/teams/191.png",
+      "winner": null
+    },
+    "home_id": 161,
+    "away_id": 191,
+    "home_logo": "https://media.api-sports.io/football/teams/161.png",
+    "away_logo": "https://media.api-sports.io/football/teams/191.png",
+    "date": "2025-10-28T17:30:00+00:00",
+    "book_odds": {
+      "home_win": 1.53,
+      "draw": 4.33,
+      "away_win": 5.5,
+      "btts": null,
+      "over_2_5": null,
+      "over_3_5": null,
+      "under_2_5": null,
+      "home_o1_5": null,
+      "away_o1_5": null
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.50",
+        "away": "1.12",
+        "total": "2.62"
+      },
+      "corners": {
+        "home": "6.6",
+        "away": "4.2",
+        "total": "10.8"
+      },
+      "shots": {
+        "home": "16.4",
+        "away": "10.9",
+        "total": "27.4"
+      },
+      "percents": {
+        "home_win_pct": 46.6,
+        "draw_pct": 25.3,
+        "away_win_pct": 28.1,
+        "over_2_5_pct": 48.2,
+        "over_3_5_pct": 26.0,
+        "under_2_5_pct": 51.8,
+        "btts_pct": 52.3,
+        "home_o1_5_pct": 44.2,
+        "away_o1_5_pct": 30.4
       }
     }
   },
@@ -253,6 +316,132 @@
     }
   },
   {
+    "fixture_id": 1463464,
+    "league": {
+      "id": 81,
+      "name": "DFB Pokal"
+    },
+    "home": {
+      "id": 163,
+      "name": "Borussia M\u00f6nchengladbach",
+      "logo": "https://media.api-sports.io/football/teams/163.png",
+      "winner": null
+    },
+    "away": {
+      "id": 785,
+      "name": "Karlsruher SC",
+      "logo": "https://media.api-sports.io/football/teams/785.png",
+      "winner": null
+    },
+    "home_id": 163,
+    "away_id": 785,
+    "home_logo": "https://media.api-sports.io/football/teams/163.png",
+    "away_logo": "https://media.api-sports.io/football/teams/785.png",
+    "date": "2025-10-28T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 1.62,
+      "draw": 4.33,
+      "away_win": 5.0,
+      "btts": null,
+      "over_2_5": null,
+      "over_3_5": null,
+      "under_2_5": null,
+      "home_o1_5": null,
+      "away_o1_5": null
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.87",
+        "away": "1.44",
+        "total": "3.31"
+      },
+      "corners": {
+        "home": "6.9",
+        "away": "3.5",
+        "total": "10.4"
+      },
+      "shots": {
+        "home": "17.3",
+        "away": "11.5",
+        "total": "28.7"
+      },
+      "percents": {
+        "home_win_pct": 48.3,
+        "draw_pct": 22.2,
+        "away_win_pct": 29.5,
+        "over_2_5_pct": 63.8,
+        "over_3_5_pct": 41.9,
+        "under_2_5_pct": 36.2,
+        "btts_pct": 64.2,
+        "home_o1_5_pct": 56.7,
+        "away_o1_5_pct": 41.8
+      }
+    }
+  },
+  {
+    "fixture_id": 1463465,
+    "league": {
+      "id": 81,
+      "name": "DFB Pokal"
+    },
+    "home": {
+      "id": 170,
+      "name": "FC Augsburg",
+      "logo": "https://media.api-sports.io/football/teams/170.png",
+      "winner": null
+    },
+    "away": {
+      "id": 176,
+      "name": "VfL Bochum",
+      "logo": "https://media.api-sports.io/football/teams/176.png",
+      "winner": null
+    },
+    "home_id": 170,
+    "away_id": 176,
+    "home_logo": "https://media.api-sports.io/football/teams/170.png",
+    "away_logo": "https://media.api-sports.io/football/teams/176.png",
+    "date": "2025-10-28T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 1.53,
+      "draw": 4.5,
+      "away_win": 5.0,
+      "btts": null,
+      "over_2_5": null,
+      "over_3_5": null,
+      "under_2_5": null,
+      "home_o1_5": null,
+      "away_o1_5": null
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.71",
+        "away": "1.69",
+        "total": "3.40"
+      },
+      "corners": {
+        "home": "5.7",
+        "away": "4.2",
+        "total": "9.9"
+      },
+      "shots": {
+        "home": "14.5",
+        "away": "11.6",
+        "total": "26.2"
+      },
+      "percents": {
+        "home_win_pct": 39.2,
+        "draw_pct": 22.7,
+        "away_win_pct": 38.1,
+        "over_2_5_pct": 66.0,
+        "over_3_5_pct": 43.7,
+        "under_2_5_pct": 34.0,
+        "btts_pct": 66.7,
+        "home_o1_5_pct": 51.1,
+        "away_o1_5_pct": 50.2
+      }
+    }
+  },
+  {
     "fixture_id": 1463466,
     "league": {
       "id": 81,
@@ -339,9 +528,9 @@
     "away_logo": "https://media.api-sports.io/football/teams/1604.png",
     "date": "2025-10-28T22:45:00+00:00",
     "book_odds": {
-      "home_win": 2.5,
+      "home_win": 2.55,
       "draw": 3.5,
-      "away_win": 2.75,
+      "away_win": 2.7,
       "btts": null,
       "over_2_5": null,
       "over_3_5": null,

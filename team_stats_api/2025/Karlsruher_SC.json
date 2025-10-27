@@ -1,15 +1,15 @@
 {
-  "team_id": 79,
+  "team_id": 785,
   "season": 2025,
-  "league_id": 61,
+  "league_id": 79,
   "home": {
     "matches": 5,
     "goals_for": 10,
-    "goals_against": 4
+    "goals_against": 6
   },
   "away": {
-    "matches": 4,
-    "goals_for": 12,
+    "matches": 5,
+    "goals_for": 7,
     "goals_against": 7
   }
 }

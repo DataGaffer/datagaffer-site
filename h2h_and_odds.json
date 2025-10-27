@@ -1,19 +1,19 @@
 {
   "home_25484_1617": {
-    "book_home_win": 1.6,
-    "book_draw": 4.2,
-    "book_away_win": 5.25,
-    "home_wins": 0,
+    "book_home_win": 1.55,
+    "book_draw": 4.5,
+    "book_away_win": 5.5,
+    "home_wins": 1,
     "away_wins": 0,
     "draws": 1,
-    "avg_home": 0.0,
-    "avg_away": 0.0,
-    "num_matches": 1
+    "avg_home": 1.0,
+    "avg_away": 0.5,
+    "num_matches": 2
   },
   "home_405_407": {
-    "book_home_win": 4.0,
+    "book_home_win": 4.2,
     "book_draw": 3.6,
-    "book_away_win": 1.9,
+    "book_away_win": 1.85,
     "home_wins": 0,
     "away_wins": 2,
     "draws": 3,
@@ -22,9 +22,9 @@
     "num_matches": 5
   },
   "home_543_530": {
-    "book_home_win": 3.2,
+    "book_home_win": 3.1,
     "book_draw": 3.7,
-    "book_away_win": 2.15,
+    "book_away_win": 2.2,
     "home_wins": 1,
     "away_wins": 2,
     "draws": 2,
@@ -33,7 +33,7 @@
     "num_matches": 5
   },
   "home_2242_1613": {
-    "book_home_win": 2.4,
+    "book_home_win": 2.38,
     "book_draw": 3.8,
     "book_away_win": 2.7,
     "home_wins": 1,
@@ -76,6 +76,17 @@
     "avg_away": 1.8,
     "num_matches": 5
   },
+  "home_161_191": {
+    "book_home_win": 1.53,
+    "book_draw": 4.33,
+    "book_away_win": 5.5,
+    "home_wins": 1,
+    "away_wins": 1,
+    "draws": 1,
+    "avg_home": 1.33,
+    "avg_away": 1.0,
+    "num_matches": 3
+  },
   "home_180_175": {
     "book_home_win": 2.55,
     "book_draw": 3.6,
@@ -98,6 +109,28 @@
     "avg_away": 1.8,
     "num_matches": 5
   },
+  "home_163_785": {
+    "book_home_win": 1.62,
+    "book_draw": 4.33,
+    "book_away_win": 5.0,
+    "home_wins": 0,
+    "away_wins": 0,
+    "draws": 0,
+    "avg_home": null,
+    "avg_away": null,
+    "num_matches": 0
+  },
+  "home_170_176": {
+    "book_home_win": 1.53,
+    "book_draw": 4.5,
+    "book_away_win": 5.0,
+    "home_wins": 1,
+    "away_wins": 2,
+    "draws": 1,
+    "avg_home": 1.25,
+    "avg_away": 1.5,
+    "num_matches": 4
+  },
   "home_186_167": {
     "book_home_win": 2.7,
     "book_draw": 3.4,
@@ -110,9 +143,9 @@
     "num_matches": 3
   },
   "home_18310_1604": {
-    "book_home_win": 2.5,
+    "book_home_win": 2.55,
     "book_draw": 3.5,
-    "book_away_win": 2.75,
+    "book_away_win": 2.7,
     "home_wins": 4,
     "away_wins": 0,
     "draws": 0,

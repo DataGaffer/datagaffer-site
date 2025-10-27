@@ -1,0 +1,91 @@
+[
+{
+  "id": 191,
+  "name": "Holstein Kiel",
+  "logo": "https://media.api-sports.io/football/teams/191.png",
+  "league": "2. Bundesliga",
+  "home": {
+    "goals_for": "",
+    "goals_against": "",
+    "corners": 5.9,
+    "corners_against": 4.2,
+    "shots": 14.7,
+    "shots_against": 10.1
+  },
+  "away": {
+    "goals_for": "",
+    "goals_against": "",
+    "corners": 4.8,
+    "corners_against": 5.6,
+    "shots": 12.9,
+    "shots_against": 11.8
+  }
+},
+{
+  "id": 176,
+  "name": "VfL Bochum",
+  "logo": "https://media.api-sports.io/football/teams/176.png",
+  "league": "Bundesliga",
+  "home": {
+    "goals_for": "",
+    "goals_against": "",
+    "corners": 5.4,
+    "corners_against": 4.9,
+    "shots": 13.2,
+    "shots_against": 12.4
+  },
+  "away": {
+    "goals_for": "",
+    "goals_against": "",
+    "corners": 3.8,
+    "corners_against": 6.2,
+    "shots": 11.0,
+    "shots_against": 14.3
+  }
+},
+{
+  "id": 185,
+  "name": "SC Paderborn 07",
+  "logo": "https://media.api-sports.io/football/teams/185.png",
+  "league": "2. Bundesliga",
+  "home": {
+    "goals_for": "",
+    "goals_against": "",
+    "corners": 6.2,
+    "corners_against": 4.5,
+    "shots": 15.4,
+    "shots_against": 9.9
+  },
+  "away": {
+    "goals_for": "",
+    "goals_against": "",
+    "corners": 4.3,
+    "corners_against": 5.3,
+    "shots": 12.6,
+    "shots_against": 12.0
+  }
+},
+{
+  "id": 785,
+  "name": "Karlsruher SC",
+  "logo": "https://media.api-sports.io/football/teams/785.png",
+  "league": "2. Bundesliga",
+  "home": {
+    "goals_for": "",
+    "goals_against": "",
+    "corners": 5.7,
+    "corners_against": 4.1,
+    "shots": 14.9,
+    "shots_against": 10.8
+  },
+  "away": {
+    "goals_for": "",
+    "goals_against": "",
+    "corners": 3.9,
+    "corners_against": 5.7,
+    "shots": 12.1,
+    "shots_against": 12.9
+  }
+}
+
+]
