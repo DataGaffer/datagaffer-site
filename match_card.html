@@ -1,216 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Match Cards</title>
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#ffffff">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DataGaffer Match Cards</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #003f2e;
+    margin: 0;
+    padding: 0;
+  }
 
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f2f4f7; color:#003f2e; }
+  /* ✅ Header bar styling */
+  .header-bar {
+    background-color: #003f2e;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-logo {
+    height: 80px;
+    width: auto;
+    position: absolute;
+    left: 20px;
+    top: 0;
+  }
+  .header-bar h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
 
-    .header-bar {
-      background-color: #003f2e;
-      color: white;
-      padding: 10px 20px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .header-logo {
-      height: 90px;
-      width: auto;
-      position: absolute;
-      left: 20px;
-      top: 0;
-    }
-    .header-bar h1 {
-      margin: 0;
-      font-size: 32px;
-      font-weight: 700;
-    }
+  /* ✅ Search box styling */
+  .search-box {
+    text-align: center;
+    margin: 15px 0 20px 0;
+  }
+  .search-box input {
+    width: 260px;
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #003f2e;
+    border-radius: 6px;
+  }
 
-    .banner {
-      text-align: center;
-      font-size: 20px;
-      margin: 20px auto 40px auto;
-      color: #003f2e;
-      background: #ffffff;
-      padding: 10px;
-      border: 2px solid #003f2e;
-      width: 60%;
-      border-radius: 4px;
-      font-weight: 600;
-      line-height: 1.5;
-    }
+  /* ✅ Main layout */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 22px;
+    padding: 16px;
+  }
 
-    .search-box { text-align: center; margin-bottom: 20px; }
-    .search-box input {
-      width: 250px;
-      padding: 8px;
-      font-size: 14px;
-      border: 2px solid #003f2e;
-      border-radius: 6px;
-    }
+  .card {
+    background: #fff;
+    border: 2px solid #003f2e;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    padding: 14px 18px;
+    transition: transform .25s;
+  }
+  .card:hover { transform: scale(1.01); }
 
-    .container { display:grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:16px; padding:16px; }
-    .card {
-      background:#003f2e;
-      border-radius:15px;
-      padding:14px;
-      box-shadow:0 2px 6px rgba(0,0,0,.1);
-      border: 2px solid #ffffff;
-      scroll-margin-top: 80px;
-      transition: box-shadow 0.4s ease, transform 0.3s ease;
-    }
-    .card.highlight { box-shadow: 0 0 16px 4px #015326; transform: scale(1.02); }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .header img { height: 42px; width: auto; }
+  .header h3 { font-size: 16px; font-weight: 700; margin: 0; }
 
-    .card h3 {
-      margin:0 0 10px;
-      font-size: 18px;
-      text-align:center;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:6px;
-    }
+  .section {
+    border-top: 1px solid #e1e5e2;
+    margin-top: 2px;
+    padding-top: 2px;
+  }
+  .section h4 {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 4px 0;
+  }
 
-    .team-name { font-weight:700; transition: color .2s ease; }
-    .club-logo { height:22px; width:auto; vertical-align:middle; }
+  .form-line {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    margin-top: 4px;
+  }
+  .form-line span {
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin: 0 1px;
+    color: white;
+  }
+  .win { background: #2e8b57; }
+  .draw { background: #a9a9a9; }
+  .loss { background: #c62828; }
 
-    .section { background:#ffffff; border:1px solid #ffffff; border-radius:0px; padding:6px 8px; margin-bottom:5px; }
-    .section h4 { margin:0 0 2px; font-size:13px; text-align:center; }
+  .form-grid, .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 6px;
+    font-size: 13px;
+    text-align: center;
+  }
 
-    /* 🔹 Compact Projected + H2H sections */
-    .compact-section {
-      padding:6px 8px !important;
-    }
-    .compact-section h4 {
-      font-size:13px !important;
-      margin-bottom:4px !important;
-    }
-    .projected-grid {
-      display:flex;
-      justify-content:space-around;
-      text-align:center;
-      gap:6px;
-    }
-    .projected-grid .label {
-      font-weight:600;
-      color:#003f2e;
-      margin-bottom:2px;
-      font-size:11px;
-      border-bottom: 1px solid #d8e0db;
-    }
-    .projected-grid div div:last-child {
-      font-size:12px;
-    }
+  .h2h-bar {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
 
-    table { width:100%; border-collapse:collapse; font-size:14px; text-align:center; }
-    th, td { padding:4px; }
-    th { font-weight:600; border-bottom:1px solid #d8e0db; color:#003f2e; font-size:13px; }
+  .value-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .value-table th, .value-table td {
+    border: 1px solid #ddd;
+    padding: 4px 6px;
+    text-align: center;
+  }
+  .value-table th { background: #f2f9f3; font-weight: 700; }
 
-    .gradient-cell { font-weight: bold; border-radius:4px; padding:3px 4px; }
+  .gradient-cell { font-weight: bold; border-radius: 4px; padding: 2px 4px; }
 
-    .h2h {
-  background:#ffffff;
-  border:1px solid #ffffff;
-  border-radius:0px;
-  padding:6px 8px;
-  margin-top:5px;
-  text-align:center; /* Center everything inside */
-}
-.h2h h4 {
-  margin:0 0 4px;
-  text-align:center; /* Center heading too */
-  font-size:13px;
-  color:#000000;
-}
-.h2h ul {
-  list-style:none;
-  padding:0;
-  margin:0 auto;
-  font-size:13px;
-  text-align:center;
-}
-.h2h li {
-  display:block;
-  margin:2px 0;
-} 
-/* Light blue for Projected Stats section */
-.projected-section {
-  background: #ffffff;
-  border: 1px solid #ffffff;
-}
+  .projected-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 6px;
+  }
+  .projected-grid .label {
+    font-weight: 600;
+    color: #003f2e;
+    margin-bottom: 2px;
+    font-size: 11px;
+    border-bottom: 1px solid #d8e0db;
+  }
+  .highlight {
+    background: #d4f7d9;
+    border-radius: 4px;
+    padding: 1px 4px;
+  }
+  .projected-grid div div:last-child { font-size: 12px; }
 
-
-.section table {
-  font-size: 12px; /* makes the table text smaller */
-}
-
-/* Make Projected Stats and Sim vs Book Odds text black */
-.section h4 {
-  color: #000 !important;
-}
-
-/* Light blue background specifically for Projected Stats section */
-.section.compact-section h4:contains("Projected Stats"),
-.section.compact-section:has(h4:contains("Projected Stats")) {
-  background: #ffffff !important;   /* light blue background */
-  border: 1px solid #ffffff !important; /* matching blue border */
-}
-
-.card-header {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 6px 8px;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  border: 1px solid #d8e0db;
-}
-
-.card-header img {
-  height: 22px;
-  width: auto;
-}
-
-.card-header .team-name {
-  font-weight: 700;
-  color: #003f2e;
-  font-size: 15px;
-}
-
-.projected-grid .highlight {
-  background: #d4f7d9;        /* light green */
-  font-weight: bold;
-  border-radius: 4px;
-  padding: 1px 4px;
-}
-
-
-
-    @media (max-width: 768px) {
-      .header-logo { height: 50px !important; }
-      .header-bar h1 { font-size: 20px !important; }
-      .banner { width: 85% !important; font-size: 13px !important; }
-      .container { grid-template-columns: 1fr !important; }
-      .card { padding:10px !important; }
-      th, td { font-size:11px !important; }
-    }
-  </style>
+  @media (max-width: 768px) {
+    .header-logo { height: 50px; }
+    .header-bar h1 { font-size: 20px; }
+    .container { grid-template-columns: 1fr; }
+    .header h3 { font-size: 14px; }
+  }
+</style>
 </head>
 <body>
 
+<!-- ✅ Header bar -->
 <div class="header-bar">
   <a href="dashboard.html" style="text-decoration:none; color:inherit; display:contents;">
     <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DG Logo" class="header-logo" />
@@ -218,261 +175,295 @@
   </a>
 </div>
 
-<div class="banner">Full match cards showing projected stats, bookmaker comparison, and H2H data.</div>
-
+<!-- ✅ Search bar -->
 <div class="search-box">
-  <input type="text" id="searchInput" placeholder="Search team, matchup, or league..." onkeyup="applySearch()" />
+  <input type="text" id="searchInput" placeholder="Search team, matchup, or league..." onkeyup="applySearch()">
 </div>
 
 <div class="container" id="cards"></div>
 
 <script>
-const slugify = s =>
-  s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-   .toLowerCase().replace(/[^a-z0-9]+/g, '');
+let allFixtures = [];
 
 async function loadFixtures() {
-  const [fixtures, h2h] = await Promise.all([
-    fetch("fixtures.json").then(r => r.json()),
-    fetch("h2h_and_odds.json").then(r => r.json()).catch(() => ({}))
+  const [formData, fixturesData] = await Promise.all([
+    fetch("h2h_form_combined.json").then(r => r.json()),
+    fetch("fixtures.json").then(r => r.json())
   ]);
-  return { fixtures, h2h };
-}
 
-function toDecimalOdds(prob) {
-  if (!prob || prob <= 0 || prob >= 100) return null;
-  return +(100 / prob).toFixed(2);
-}
-function colorFromRatio(r, start, end) {
-  r = Math.max(0, Math.min(1, r));
-  const rr = Math.round(start.r + (end.r - start.r) * r);
-  const gg = Math.round(start.g + (end.g - start.g) * r);
-  const bb = Math.round(start.b + (end.b - start.b) * r);
-  return `rgb(${rr},${gg},${bb})`;
-}
-function getValueGradient(value, min, max) {
-  if (!isFinite(value)) return "white";
-  if (value >= 0) {
-    const ratio = value / Math.max(1e-6, max);
-    return colorFromRatio(ratio * 0.85, { r:255,g:255,b:255 }, { r:90,g:210,b:120 });
-  } else {
-    const ratio = Math.abs(value) / Math.max(1e-6, Math.abs(min));
-    return colorFromRatio(ratio * 0.85, { r:255,g:255,b:255 }, { r:240,g:90,b:90 });
-  }
-}
+  const formList = Array.isArray(formData.matches) ? formData.matches : formData;
+  const fixtureList = Array.isArray(fixturesData) ? fixturesData : fixturesData.fixtures || fixturesData;
 
-function buildCard(f, h2hMap) {
-  const slug = `${slugify(f.home.name)}-vs-${slugify(f.away.name)}`;
-  const sim = f.sim_stats || {};
-  const perc = sim.percents || {};
-  const book = f.book_odds || {};
-
-  // Determine highlights
-const highlight = (home, away) => {
-  if (home == null || away == null || home === "–" || away === "–") return { homeCls: "", awayCls: "" };
-  if (parseFloat(home) > parseFloat(away)) return { homeCls: "highlight", awayCls: "" };
-  if (parseFloat(away) > parseFloat(home)) return { homeCls: "", awayCls: "highlight" };
-  return { homeCls: "", awayCls: "" };
-};
-
-const goalsHL = highlight(sim.xg?.home, sim.xg?.away);
-const cornersHL = highlight(sim.corners?.home, sim.corners?.away);
-const shotsHL = highlight(sim.shots?.home, sim.shots?.away);
-
-const projected = `
-  <div class="section compact-section projected-section">
-    <h4>Projected Stats</h4>
-    <div class="projected-grid">
-      <div>
-        <div class="label">Goals</div>
-        <div><span class="${goalsHL.homeCls}">${sim.xg?.home ?? "–"}</span> - <span class="${goalsHL.awayCls}">${sim.xg?.away ?? "–"}</span></div>
-      </div>
-      <div>
-        <div class="label">Corners</div>
-        <div><span class="${cornersHL.homeCls}">${sim.corners?.home ?? "–"}</span> - <span class="${cornersHL.awayCls}">${sim.corners?.away ?? "–"}</span></div>
-      </div>
-      <div>
-        <div class="label">Shots</div>
-        <div><span class="${shotsHL.homeCls}">${sim.shots?.home ?? "–"}</span> - <span class="${shotsHL.awayCls}">${sim.shots?.away ?? "–"}</span></div>
-      </div>
-    </div>
-  </div>`;
-
-
-  const markets = [
-    ["Home Win", perc.home_win_pct, book.home_win],
-    ["Draw", perc.draw_pct, book.draw],
-    ["Away Win", perc.away_win_pct, book.away_win],
-    ["Home o1.5", perc.home_o1_5_pct, book.home_o1_5],
-    ["Away o1.5", perc.away_o1_5_pct, book.away_o1_5],
-    ["Over 2.5", perc.over_2_5_pct, book.over_2_5],
-    ["BTTS", perc.btts_pct, book.btts]
-  ];
-
-  const diffs = markets.map(([_, simPct, bookOdds]) => {
-    if (!simPct || !bookOdds) return null;
-    const simProb = simPct / 100;
-    const bookProb = 1 / bookOdds;
-    return (simProb - bookProb) * 100;
+  allFixtures = formList.map(formMatch => {
+    const fx = fixtureList.find(f =>
+      f.home?.name === formMatch.home_name && f.away?.name === formMatch.away_name
+    );
+    return { ...formMatch, ...fx };
   });
-  const minDiff = Math.min(...diffs.filter(v => v !== null));
-  const maxDiff = Math.max(...diffs.filter(v => v !== null));
 
-  const tableRows = markets.map(([label, simPct, bookOdds], i) => {
-    const simOdds = toDecimalOdds(simPct);
-    const val = diffs[i];
-    const bg = val !== null ? getValueGradient(val, minDiff, maxDiff) : "white";
-    return `
-      <tr>
-        <td>${label}</td>
-        <td>${simPct ? simPct + "%" : "–"}</td>
-        <td>${simOdds ?? "–"}</td>
-        <td>${bookOdds ?? "–"}</td>
-        <td class="gradient-cell" style="background:${bg}">
-          ${val !== null ? (val >= 0 ? "+" + val.toFixed(1) + "%" : val.toFixed(1) + "%") : "–"}
-        </td>
-      </tr>`;
-  }).join("");
-
-  const table = `
-    <div class="section">
-      <h4>Sim vs Book Odds</h4>
-      <table>
-        <tr><th>Market</th><th>Sim %</th><th>Sim Odds</th><th>Book</th><th>Value</th></tr>
-        ${tableRows}
-      </table>
-    </div>`;
-
-  const key = `home_${f.home.id}_${f.away.id}`;
-  const h2h = h2hMap[key] || {};
-  const recHome = h2h.home_wins ?? 0;
-  const recDraw = h2h.draws ?? 0;
-  const recAway = h2h.away_wins ?? 0;
-  const avgHome = h2h.avg_home ?? "–";
-  const avgAway = h2h.avg_away ?? "–";
-
-  const h2hSection = Object.keys(h2h).length > 0
-    ? `<div class="h2h compact-section">
-        <h4>Head-to-Head (last 5)</h4>
-        <ul>
-          <li>Record: ${f.home.name} ${recHome}W - ${recDraw}D - ${recAway}W ${f.away.name}</li>
-          <li>Avg Goals: ${f.home.name} ${avgHome} | ${f.away.name} ${avgAway}</li>
-        </ul>
-      </div>`
-    : `<div class="h2h compact-section"><h4>Head-to-Head (last 5)</h4><p style="font-size:13px; color:#555;">No recent meetings</p></div>`;
-
-  const header = `
-  <div class="card-header">
-    <img class="club-logo home-logo" src="${f.home.logo}" alt="${f.home.name}">
-    <span class="team-name home-name">${f.home.name}</span>
-    <span style="margin: 0 4px;">vs</span>
-    <span class="team-name away-name">${f.away.name}</span>
-    <img class="club-logo away-logo" src="${f.away.logo}" alt="${f.away.name}">
-  </div>
-`;
-
-return `
-  <div class="card" id="${slug}">
-    ${header}
-    ${projected}
-    ${table}
-    ${h2hSection}
-  </div>`;
-
-}
-
-let allFixtures = [];
-let globalH2H = {}; // ✅ store h2h globally
-async function init() {
-  const { fixtures, h2h } = await loadFixtures();
-  allFixtures = fixtures;
-  globalH2H = h2h;  // ✅ save globally
-  applySearch();     // no need to pass h2h
-  setTimeout(colorizeTeamNames, 150);
-
-  // ✅ Scroll & highlight feature restored
-  const hash = decodeURIComponent(location.hash.slice(1));
-  if (hash) {
-    const target = document.getElementById(hash);
-    if (target) {
-      setTimeout(() => {
-        target.scrollIntoView({ behavior: "smooth", block: "center" });
-        target.classList.add("highlight");
-        setTimeout(() => target.classList.remove("highlight"), 1200);
-      }, 400);
-    }
-  }
+  renderCards(allFixtures);
 }
 
 function applySearch() {
   const term = document.getElementById("searchInput").value.toLowerCase();
   const filtered = allFixtures.filter(f =>
-    f.home.name.toLowerCase().includes(term) ||
-    f.away.name.toLowerCase().includes(term) ||
-    (f.league && f.league.name.toLowerCase().includes(term))
+    f.home_name.toLowerCase().includes(term) ||
+    f.away_name.toLowerCase().includes(term) ||
+    (f.league?.name?.toLowerCase() || "").includes(term)
   );
-  document.getElementById("cards").innerHTML = filtered.map(f => buildCard(f, globalH2H)).join("");
-  setTimeout(colorizeTeamNames, 50);
+  renderCards(filtered);
 }
 
-function colorizeTeamNames() {
-  if (typeof ColorThief === "undefined") return;
+function renderCards(fixtures) {
+  const container = document.getElementById("cards");
+  container.innerHTML = "";
   const thief = new ColorThief();
-  document.querySelectorAll(".card").forEach(card => {
-    const homeImg = card.querySelector(".home-logo");
-    const awayImg = card.querySelector(".away-logo");
-    const homeName = card.querySelector(".home-name");
-    const awayName = card.querySelector(".away-name");
 
-    // ✅ Allow color sampling from external logos
-    homeImg.crossOrigin = "Anonymous";
-    awayImg.crossOrigin = "Anonymous";
+  fixtures.forEach(match => {
+    const sim = match.sim_stats || {};
+    const perc = sim.percents || {};
+    const book = match.book_odds || {};
+    const h2h = match.h2h || {};
 
-    const applyColor = (img, nameEl) => {
-      try {
-        const [r, g, b] = thief.getColor(img);
-        const dr = Math.max(0, Math.floor(r * 0.75));
-        const dg = Math.max(0, Math.floor(g * 0.75));
-        const db = Math.max(0, Math.floor(b * 0.75));
-        nameEl.style.color = `rgb(${dr},${dg},${db})`;
-      } catch {
-        nameEl.style.color = "#0b3d2e";
-      }
+    const colorForm = form => form.split("").map(c => {
+      if (c === "W") return `<span class="win">${c}</span>`;
+      if (c === "L") return `<span class="loss">${c}</span>`;
+      if (c === "D") return `<span class="draw">${c}</span>`;
+      return c;
+    }).join("");
+
+    const highlight = (a, b) => parseFloat(a) > parseFloat(b)
+      ? ["highlight", ""] : parseFloat(b) > parseFloat(a)
+      ? ["", "highlight"] : ["", ""];
+
+    const gHL = highlight(sim.xg?.home, sim.xg?.away);
+    const cHL = highlight(sim.corners?.home, sim.corners?.away);
+    const sHL = highlight(sim.shots?.home, sim.shots?.away);
+
+    const calcValue = (simPct, bookOdds) => {
+      if (!simPct || !bookOdds) return "<td>–</td>";
+      const simProb = simPct / 100;
+      const bookProb = 1 / bookOdds;
+      const val = (simProb - bookProb) * 100;
+      const bg = val > 0 ? `background:rgba(0,180,0,${Math.min(0.3, val / 100)});` :
+                 val < 0 ? `background:rgba(255,0,0,${Math.min(0.3, Math.abs(val) / 100)});` : "";
+      return `<td class="gradient-cell" style="${bg}">${val > 0 ? "+" : ""}${val.toFixed(1)}%</td>`;
     };
 
-    if (homeImg.complete) applyColor(homeImg, homeName);
-    else homeImg.addEventListener("load", () => applyColor(homeImg, homeName), { once:true });
+    const tableRows = [
+      ["Home Win", perc.home_win_pct, book.home_win],
+      ["Draw", perc.draw_pct, book.draw],
+      ["Away Win", perc.away_win_pct, book.away_win],
+      ["Over 2.5", perc.over_2_5_pct, book.over_2_5],
+      ["BTTS", perc.btts_pct, book.btts],
+      ["Home O1.5", perc.home_o1_5_pct, book.home_o1_5],
+      ["Away O1.5", perc.away_o1_5_pct, book.away_o1_5]
+    ].map(([label, simPct, bookOdds]) => {
+      const simOdds = simPct ? (100 / simPct).toFixed(2) : "–";
+      const bookStr = bookOdds ?? "–";
+      return `<tr><td>${label}</td><td>${simPct ?? "–"}%</td><td>${simOdds}</td><td>${bookStr}</td>${calcValue(simPct, bookOdds)}</tr>`;
+    }).join("");
 
-    if (awayImg.complete) applyColor(awayImg, awayName);
-    else awayImg.addEventListener("load", () => applyColor(awayImg, awayName), { once:true });
+    const slug = `${match.home_name.toLowerCase().replace(/[^a-z0-9]+/g, '')}-vs-${match.away_name.toLowerCase().replace(/[^a-z0-9]+/g, '')}`;
+    const card = `
+        <div class="card" id="${slug}">
+        <div class="header">
+          <img src="${match.home_logo}" class="home-logo">
+          <h3><span class="home-name">${match.home_name}</span> vs <span class="away-name">${match.away_name}</span></h3>
+          <img src="${match.away_logo}" class="away-logo">
+        </div>
+
+        <div class="section">
+          <h4>Form (Last 5)</h4>
+          <div class="form-line">${colorForm(match.home_form_last5 || "-----")} &nbsp;|&nbsp; ${colorForm(match.away_form_last5 || "-----")}</div>
+          <div class="form-grid">
+            <div>Win %: ${match.home_form_win || 0}%</div><div>Win %: ${match.away_form_win || 0}%</div>
+            <div>Over 1.5: ${match.home_form_o15 || 0}%</div><div>Over 1.5: ${match.away_form_o15 || 0}%</div>
+            <div>Over 3.5: ${match.home_form_o35 || 0}%</div><div>Over 3.5: ${match.away_form_o35 || 0}%</div>
+            <div>BTTS: ${match.home_form_btts || 0}%</div><div>BTTS: ${match.away_form_btts || 0}%</div>
+            <div>Clean Sheets: ${match.home_form_clean || 0}%</div><div>Clean Sheets: ${match.away_form_clean || 0}%</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h4>Head-to-Head (Last 10)</h4>
+          <div class="h2h-bar">${match.home_name} ${h2h.home_wins || 0}W | Draws ${h2h.draws || 0} | ${match.away_name} ${h2h.away_wins || 0}W</div>
+          <div class="stat-grid">
+            <div>Over 1.5: ${h2h.over_1_5_pct || 0}%</div><div>Over 3.5: ${h2h.over_3_5_pct || 0}%</div>
+            <div>BTTS: ${h2h.btts_pct || 0}%</div><div>Avg Goals: ${(h2h.avg_home_goals || 0).toFixed(2)} | ${(h2h.avg_away_goals || 0).toFixed(2)}</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h4>Simulated vs Book Odds</h4>
+          <table class="value-table">
+            <tr><th>Market</th><th>Sim %</th><th>Sim Odds</th><th>Book</th><th>Value</th></tr>
+            ${tableRows}
+          </table>
+        </div>
+
+        <div class="section">
+          <h4>Projected Stats</h4>
+          <div class="projected-grid">
+            <div>
+              <div class="label">Goals</div>
+              <div><span class="${highlight(sim.xg?.home, sim.xg?.away)[0]}">${sim.xg?.home ?? "–"}</span> - <span class="${highlight(sim.xg?.home, sim.xg?.away)[1]}">${sim.xg?.away ?? "–"}</span></div>
+            </div>
+            <div>
+              <div class="label">Corners</div>
+              <div><span class="${highlight(sim.corners?.home, sim.corners?.away)[0]}">${sim.corners?.home ?? "–"}</span> - <span class="${highlight(sim.corners?.home, sim.corners?.away)[1]}">${sim.corners?.away ?? "–"}</span></div>
+            </div>
+            <div>
+              <div class="label">Shots</div>
+              <div><span class="${highlight(sim.shots?.home, sim.shots?.away)[0]}">${sim.shots?.home ?? "–"}</span> - <span class="${highlight(sim.shots?.home, sim.shots?.away)[1]}">${sim.shots?.away ?? "–"}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    container.innerHTML += card;
   });
+
+  // ✅ Team name colorization
+  setTimeout(() => {
+    document.querySelectorAll(".card").forEach(card => {
+      const homeImg = card.querySelector(".home-logo");
+      const awayImg = card.querySelector(".away-logo");
+      const homeName = card.querySelector(".home-name");
+      const awayName = card.querySelector(".away-name");
+      homeImg.crossOrigin = "Anonymous";
+      awayImg.crossOrigin = "Anonymous";
+      const thief = new ColorThief();
+      const apply = (img, el) => {
+        try {
+          const [r, g, b] = thief.getColor(img);
+          el.style.color = `rgb(${r * 0.7},${g * 0.7},${b * 0.7})`;
+        } catch {}
+      };
+      if (homeImg.complete) apply(homeImg, homeName);
+      else homeImg.addEventListener("load", () => apply(homeImg, homeName), { once: true });
+      if (awayImg.complete) apply(awayImg, awayName);
+      else awayImg.addEventListener("load", () => apply(awayImg, awayName), { once: true });
+    });
+  }, 500);
 }
 
-init();
-</script>
+// --- Scroll to correct card if arriving from dashboard ---
+window.addEventListener("DOMContentLoaded", () => {
+  const hash = decodeURIComponent(window.location.hash.slice(1));
+  if (!hash) return;
 
+  const checkCard = setInterval(() => {
+    const target = document.getElementById(hash);
+    if (target) {
+      clearInterval(checkCard);
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+      target.style.boxShadow = "0 0 15px 3px rgba(0,128,0,0.4)";
+      target.style.transform = "scale(1.02)";
+      setTimeout(() => {
+        target.style.boxShadow = "";
+        target.style.transform = "";
+      }, 2000);
+    }
+  }, 300);
+});
+
+
+
+// ✅ Ensure it runs after fixtures load
+loadFixtures();
+
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+/* --- Supabase setup --- */
 const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
 const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
-document.body.style.display = "none";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: { persistSession: true, detectSessionInUrl: true }
+});
+
+/* --- Prevent Safari/Chrome back-button cache bypass --- */
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    console.log("Reloading to bypass Safari back cache");
+    window.location.reload();
+  }
+});
+
+/* --- Inactivity logout (15 minutes) --- */
+const INACTIVITY_LIMIT = 15 * 60 * 1000;
+let inactivityTimer;
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(async () => {
+    console.log("Auto-logout after inactivity");
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+  }, INACTIVITY_LIMIT);
+}
+["click", "mousemove", "keydown", "scroll", "touchstart"].forEach(evt =>
+  document.addEventListener(evt, resetInactivityTimer)
+);
+resetInactivityTimer();
+
+/* --- Explicit logout handling --- */
+supabaseClient.auth.onAuthStateChange((event) => {
+  if (event === "SIGNED_OUT") {
+    console.log("User signed out → redirecting to login");
+    window.location.href = "login.html";
+  }
+});
+
+/* --- Subscription enforcement --- */
+document.body.style.display = "none"; // hide content until validated
 
 (async () => {
-  const { data: { session } } = await supabaseClient.auth.getSession();
-  if (!session) return window.location.href = "login.html";
-  const { data: profile } = await supabaseClient
+  const { data: { session }, error } = await supabaseClient.auth.getSession();
+  if (error || !session) {
+    console.warn("No session → redirecting to login");
+    window.location.href = "login.html";
+    return;
+  }
+
+  // --- Try matching by Supabase Auth ID first ---
+  let { data: profile, error: profileError } = await supabaseClient
     .from("profiles")
     .select("is_subscribed, plan")
     .eq("id", session.user.id)
     .maybeSingle();
-  if (!profile?.is_subscribed || !["monthly","yearly"].includes(profile.plan)) {
-    window.location.href = "subscribe.html"; return;
+
+  // --- Fallback: try matching by email if profile not found or Stripe-created first ---
+  if ((!profile || profileError) && session.user.email) {
+    const { data: byEmail } = await supabaseClient
+      .from("profiles")
+      .select("is_subscribed, plan")
+      .eq("email", session.user.email.toLowerCase())
+      .maybeSingle();
+    profile = byEmail;
   }
-  document.body.style.display = "block";
+
+  // --- Subscription validation ---
+  if (!profile?.is_subscribed) {
+    console.warn("Not subscribed → redirecting to subscribe page");
+    window.location.href = "subscribe.html";
+    return;
+  }
+
+  // ✅ Allow only active monthly/yearly users
+  if (profile.plan === "monthly" || profile.plan === "yearly") {
+    console.log("✅ Active plan:", profile.plan, "→ Showing page");
+    document.body.style.display = "block";
+  } else {
+    console.warn("User has unsupported plan:", profile.plan);
+    window.location.href = "subscribe.html";
+  }
 })();
 </script>
+
 </body>
 </html>
 

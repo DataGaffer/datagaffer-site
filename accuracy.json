@@ -397,7 +397,7 @@
         "match": "Arsenal vs Crystal Palace",
         "pick": "BTTS Yes",
         "dg_odds": 1.62,
-        "book_odds": 2.00,
+        "book_odds": 2.0,
         "edge": 11.8,
         "league": "Premier League",
         "result": "Loss"
@@ -407,7 +407,7 @@
         "match": "Wolves vs Burnley",
         "pick": "BTTS Yes",
         "dg_odds": 1.59,
-        "book_odds": 2.00,
+        "book_odds": 2.0,
         "edge": 12.8,
         "league": "Premier League",
         "result": "Win"
@@ -417,10 +417,45 @@
         "match": "GO Ahead vs Excelsior",
         "pick": "GO Ahead Win",
         "dg_odds": 1.43,
-        "book_odds": 1.80,
+        "book_odds": 1.8,
         "edge": 14.1,
         "league": "Eredivisie",
         "result": "Win"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-28",
+    "picks": [
+      {
+        "fixture_id": 1463459,
+        "match": "Frankfurt vs Dortmund",
+        "pick": "Frankfurt o1.5 Goals",
+        "dg_odds": 1.65,
+        "book_odds": 2.1,
+        "edge": 13.0,
+        "league": "DFB Pokal",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1377944,
+        "match": "Atalanta vs AC Milan",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.74,
+        "book_odds": 1.80,
+        "edge": 1.8,
+        "league": "Seria A",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1377951,
+        "match": "Lecce vs Napoli",
+        "pick": "Napoli o1.5 Goals",
+        "dg_odds": 1.72,
+        "book_odds": 1.80,
+        "edge": 2.6,
+        "league": "Serie A",
+        "result": "Loss"
       }
     ]
   }

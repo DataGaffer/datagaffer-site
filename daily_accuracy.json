@@ -1234,6 +1234,91 @@
           "accuracy_score": 72.0
         }
       ]
+    },
+    {
+      "date": "2025-10-28",
+      "matches": [
+        {
+          "date": "2025-10-28",
+          "league": "Serie A",
+          "match": "Lecce vs Napoli",
+          "fixture_id": 1377951,
+          "projected_score": "0.80 - 1.95",
+          "actual_score": "0 - 1",
+          "avg_diff": 0.88,
+          "accuracy_score": 78.0
+        },
+        {
+          "date": "2025-10-28",
+          "league": "DFB Pokal",
+          "match": "Frankfurt vs Dortmund",
+          "fixture_id": 1463459,
+          "projected_score": "2.03 - 1.78",
+          "actual_score": "1 - 1",
+          "avg_diff": 0.9,
+          "accuracy_score": 77.5
+        },
+        {
+          "date": "2025-10-28",
+          "league": "DFB Pokal",
+          "match": "Wolfsburg vs Holstein Kiel",
+          "fixture_id": 1463460,
+          "projected_score": "1.50 - 1.12",
+          "actual_score": "0 - 1",
+          "avg_diff": 0.81,
+          "accuracy_score": 79.8
+        },
+        {
+          "date": "2025-10-28",
+          "league": "DFB Pokal",
+          "match": "Heidenheim vs Hamburger",
+          "fixture_id": 1463461,
+          "projected_score": "1.80 - 1.30",
+          "actual_score": "0 - 1",
+          "avg_diff": 1.05,
+          "accuracy_score": 73.8
+        },
+        {
+          "date": "2025-10-28",
+          "league": "Serie A",
+          "match": "Atalanta vs AC Milan",
+          "fixture_id": 1377944,
+          "projected_score": "1.46 - 1.50",
+          "actual_score": "1 - 1",
+          "avg_diff": 0.48,
+          "accuracy_score": 88.0
+        },
+        {
+          "date": "2025-10-28",
+          "league": "DFB Pokal",
+          "match": "Borussia M. vs Karlsruher SC",
+          "fixture_id": 1463464,
+          "projected_score": "1.87 - 1.44",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.78,
+          "accuracy_score": 80.5
+        },
+        {
+          "date": "2025-10-28",
+          "league": "DFB Pokal",
+          "match": "FC Augsburg vs VfL Bochum",
+          "fixture_id": 1463465,
+          "projected_score": "1.71 - 1.69",
+          "actual_score": "0 - 1",
+          "avg_diff": 1.2,
+          "accuracy_score": 70.0
+        },
+        {
+          "date": "2025-10-28",
+          "league": "DFB Pokal",
+          "match": "FC St. Pauli vs 1899 Hoffenheim",
+          "fixture_id": 1463466,
+          "projected_score": "1.15 - 1.72",
+          "actual_score": "2 - 2",
+          "avg_diff": 0.57,
+          "accuracy_score": 85.8
+        }
+      ]
     }
   ],
   "leagues": [
@@ -1248,12 +1333,12 @@
     },
     {
       "league": "Serie A",
-      "games_tracked": 16,
-      "dg_score": 77.3,
-      "sim_avg_goals": 2.65,
-      "actual_avg_goals": 2.31,
-      "actual_btts_pct": 56.2,
-      "actual_over25_pct": 43.8
+      "games_tracked": 18,
+      "dg_score": 77.9,
+      "sim_avg_goals": 2.67,
+      "actual_avg_goals": 2.22,
+      "actual_btts_pct": 55.6,
+      "actual_over25_pct": 38.9
     },
     {
       "league": "La Liga",
@@ -1317,6 +1402,15 @@
       "actual_avg_goals": 5.0,
       "actual_btts_pct": 100.0,
       "actual_over25_pct": 100.0
+    },
+    {
+      "league": "DFB Pokal",
+      "games_tracked": 6,
+      "dg_score": 77.9,
+      "sim_avg_goals": 3.19,
+      "actual_avg_goals": 2.17,
+      "actual_btts_pct": 50.0,
+      "actual_over25_pct": 33.3
     }
   ]
 }

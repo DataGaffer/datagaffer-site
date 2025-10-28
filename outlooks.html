@@ -1189,7 +1189,8 @@ fetch("player_simulations/index.json")
 async function loadH2HOutlook() {
   try {
     const res = await fetch("h2h_form_combined.json");
-    const data = await res.json();
+    const json = await res.json();
+    const data = Array.isArray(json) ? json : json.matches;
     const tbody = document.querySelector("#h2h-form-table tbody");
     tbody.innerHTML = "";
 
@@ -1197,12 +1198,17 @@ async function loadH2HOutlook() {
       [...(formStr || "")].map(c => `<span class="${c}">${c}</span>`).join("");
 
     data.forEach(match => {
+      const total =
+        match.h2h?.avg_home_goals && match.h2h?.avg_away_goals
+          ? (match.h2h.avg_home_goals + match.h2h.avg_away_goals).toFixed(2)
+          : "-";
+
       const row = `
         <tr>
-          <td class="match-cell">${match.matchup}</td>
-          <td>${match.h2h_home_avg_goals ?? "-"}</td>
-          <td>${match.h2h_away_avg_goals ?? "-"}</td>
-          <td>${match.h2h_total_avg ?? "-"}</td>
+          <td class="match-cell">${match.home_name} vs ${match.away_name}</td>
+          <td>${match.h2h?.avg_home_goals ?? "-"}</td>
+          <td>${match.h2h?.avg_away_goals ?? "-"}</td>
+          <td>${total}</td>
           <td class="form-cell">
             ${formatForm(match.home_form_last5)}
             <small>${match.home_form_goals ?? "-"} GPG</small>
@@ -1223,6 +1229,7 @@ async function loadH2HOutlook() {
 
 loadH2HOutlook();
 </script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>

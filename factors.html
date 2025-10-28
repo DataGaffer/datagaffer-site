@@ -220,50 +220,56 @@
   }
 
   async function loadTables() {
-    try {
-      const res = await fetch("h2h_form_combined.json");
-      const data = await res.json();
+  try {
+    const res = await fetch("h2h_form_combined.json");
+    const json = await res.json();
+    const data = Array.isArray(json) ? json : json.matches;
 
-      const h2hBody = document.querySelector("#h2h-table tbody");
-      const formBody = document.querySelector("#form-table tbody");
-      h2hBody.innerHTML = "";
-      formBody.innerHTML = "";
+    const h2hBody = document.querySelector("#h2h-table tbody");
+    const formBody = document.querySelector("#form-table tbody");
+    h2hBody.innerHTML = "";
+    formBody.innerHTML = "";
 
-      data.forEach(match => {
-        h2hBody.innerHTML += `
-          <tr>
-            <td class="match-cell">${match.matchup}</td>
-            <td>${match.h2h_home_avg_goals ?? "-"}</td>
-            <td>${match.h2h_away_avg_goals ?? "-"}</td>
-            <td>${match.h2h_total_avg ?? "-"}</td>
-          </tr>`;
+    data.forEach(match => {
+      h2hBody.innerHTML += `
+        <tr>
+          <td class="match-cell">${match.home_name} vs ${match.away_name}</td>
+          <td>${match.h2h?.avg_home_goals ?? "-"}</td>
+          <td>${match.h2h?.avg_away_goals ?? "-"}</td>
+          <td>${match.h2h?.avg_home_goals && match.h2h?.avg_away_goals
+            ? ((match.h2h.avg_home_goals + match.h2h.avg_away_goals).toFixed(2))
+            : "-"}</td>
+        </tr>`;
 
-        const formatForm = (str) => [...(str || "")].map(c => `<span class="${c}">${c}</span>`).join("");
-        formBody.innerHTML += `
-          <tr>
-            <td class="match-cell">${match.matchup}</td>
-            <td class="form-cell">${formatForm(match.home_form_last5)}<small>${match.home_form_goals ?? "-"} GPG</small></td>
-            <td class="form-cell">${formatForm(match.away_form_last5)}<small>${match.away_form_goals ?? "-"} GPG</small></td>
-          </tr>`;
+      const formatForm = str =>
+        [...(str || "")].map(c => `<span class="${c}">${c}</span>`).join("");
+
+      formBody.innerHTML += `
+        <tr>
+          <td class="match-cell">${match.home_name} vs ${match.away_name}</td>
+          <td class="form-cell">${formatForm(match.home_form_last5)}<small>${match.home_form_goals ?? "-"} GPG</small></td>
+          <td class="form-cell">${formatForm(match.away_form_last5)}<small>${match.away_form_goals ?? "-"} GPG</small></td>
+        </tr>`;
+    });
+
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", () => {
+      const filter = searchInput.value.toLowerCase();
+      document.querySelectorAll("tbody tr").forEach(row => {
+        row.style.display = row.textContent.toLowerCase().includes(filter)
+          ? ""
+          : "none";
       });
+    });
 
-      // 🔍 Search
-      const searchInput = document.getElementById("searchInput");
-      searchInput.addEventListener("input", () => {
-        const filter = searchInput.value.toLowerCase();
-        document.querySelectorAll("tbody tr").forEach(row => {
-          row.style.display = row.textContent.toLowerCase().includes(filter) ? "" : "none";
-        });
-      });
+    setupSorting(document.getElementById("h2h-table"));
+    setupSorting(document.getElementById("form-table"));
 
-      // 🔢 Sorting setup for both tables
-      setupSorting(document.getElementById("h2h-table"));
-      setupSorting(document.getElementById("form-table"));
-
-    } catch (err) {
-      console.error("Error loading JSON:", err);
-    }
+  } catch (err) {
+    console.error("Error loading JSON:", err);
   }
+}
+
 
   let sortDirection = {};
 
