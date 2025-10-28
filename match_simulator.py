@@ -25,7 +25,6 @@ def load_team_stats():
         "eredivisie.json",
         "champions_league.json",
         "europa_league.json",
-        "Major_league_soccer.json",
         "Danish_Superliga.json",
         "2._Bundesliga.json",
         "Championship.json"

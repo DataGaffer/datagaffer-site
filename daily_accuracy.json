@@ -1209,6 +1209,31 @@
           "accuracy_score": 69.8
         }
       ]
+    },
+    {
+      "date": "2025-10-28",
+      "matches": [
+        {
+          "date": "2025-10-28",
+          "league": "Superliga",
+          "match": "Odense vs Brondby",
+          "fixture_id": 1379424,
+          "projected_score": "1.27 - 1.73",
+          "actual_score": "1 - 4",
+          "avg_diff": 1.27,
+          "accuracy_score": 68.2
+        },
+        {
+          "date": "2025-10-28",
+          "league": "La Liga",
+          "match": "Real Betis vs Atletico Madrid",
+          "fixture_id": 1390910,
+          "projected_score": "1.32 - 1.08",
+          "actual_score": "0 - 2",
+          "avg_diff": 1.12,
+          "accuracy_score": 72.0
+        }
+      ]
     }
   ],
   "leagues": [
@@ -1232,12 +1257,12 @@
     },
     {
       "league": "La Liga",
-      "games_tracked": 14,
-      "dg_score": 75.3,
-      "sim_avg_goals": 2.68,
+      "games_tracked": 15,
+      "dg_score": 75.1,
+      "sim_avg_goals": 2.66,
       "actual_avg_goals": 2.07,
-      "actual_btts_pct": 42.9,
-      "actual_over25_pct": 35.7
+      "actual_btts_pct": 40.0,
+      "actual_over25_pct": 33.3
     },
     {
       "league": "Premier League",
@@ -1283,6 +1308,15 @@
       "actual_avg_goals": 2.94,
       "actual_btts_pct": 55.6,
       "actual_over25_pct": 61.1
+    },
+    {
+      "league": "Superliga",
+      "games_tracked": 1,
+      "dg_score": 68.2,
+      "sim_avg_goals": 3.0,
+      "actual_avg_goals": 5.0,
+      "actual_btts_pct": 100.0,
+      "actual_over25_pct": 100.0
     }
   ]
 }
