@@ -1,6 +1,7 @@
 import json
 import numpy as np
 import os
+import requests
 
 # Load league coefficients
 with open("league_coefficients.json") as f:
@@ -69,7 +70,7 @@ def get_blended_goals(team_id, side, stat_type):
     val_2024 = api_stats_2024.get(team_id, {}).get(side, {}).get(stat_type, None)
 
     if val_2025 is not None and val_2024 is not None:
-        return 0.6 * val_2025 + 0.4 * val_2024
+        return 0.7 * val_2025 + 0.3 * val_2024
     elif val_2025 is not None:
         return val_2025
     elif val_2024 is not None:
@@ -93,6 +94,50 @@ def get_manual_stat(team, side, stat_type):
     except:
         return 0
 
+# --- New: Form-based Attack/Defense Profile ---
+def calculate_form_profile(team_id, api_key="3c2b2ba5c3a0ccad7f273e8ca96bba5f"):
+    """
+    Returns {'attack': x, 'defense': y} based on last 5 matches:
+      - High scoring teams → higher attack multiplier
+      - Low conceding teams → higher defense multiplier
+    """
+    try:
+        url = f"https://v3.football.api-sports.io/fixtures?team={team_id}&last=5"
+        headers = {"x-apisports-key": api_key}
+        res = requests.get(url, headers=headers, timeout=10).json()
+        matches = res.get("response", [])
+        if not matches:
+            return {"attack": 1.0, "defense": 1.0}
+
+        scored, conceded = [], []
+        for fixture in matches:
+            is_home = fixture["teams"]["home"]["id"] == team_id
+            gf = fixture["goals"]["home"] if is_home else fixture["goals"]["away"]
+            ga = fixture["goals"]["away"] if is_home else fixture["goals"]["home"]
+            if gf is not None and ga is not None:
+                scored.append(gf)
+                conceded.append(ga)
+
+        if not scored or not conceded:
+            return {"attack": 1.0, "defense": 1.0}
+
+        avg_scored = sum(scored) / len(scored)
+        avg_conceded = sum(conceded) / len(conceded)
+        neutral = 1.5  # typical scoring baseline per team per match
+
+        attack_boost = np.clip((avg_scored - neutral) * 0.10 + 1.0, 0.85, 1.15)
+        defense_boost = np.clip((neutral - avg_conceded) * 0.10 + 1.0, 0.85, 1.15)
+
+        return {
+            "attack": round(float(attack_boost), 3),
+            "defense": round(float(defense_boost), 3)
+        }
+
+    except Exception as e:
+        print(f"⚠️ Form profile fetch failed for {team_id}: {e}")
+        return {"attack": 1.0, "defense": 1.0}
+
+
 # Load H2H + odds
 try:
     with open("h2h_and_odds.json") as f:
@@ -100,7 +145,7 @@ try:
 except FileNotFoundError:
     h2h_and_odds = {}
 
-# Simulate one match
+# --- Simulate one match ---
 def simulate_match(home_id, away_id, fixture_id=None):
     home = team_stats.get(home_id)
     away = team_stats.get(away_id)
@@ -116,7 +161,7 @@ def simulate_match(home_id, away_id, fixture_id=None):
             "home_shots": 0, "away_shots": 0, "total_shots": 0
         }
 
-    # Seed random generator (reproducible per fixture)
+    # Seed random generator
     if fixture_id:
         np.random.seed(fixture_id % (2**32 - 1))
     else:
@@ -140,20 +185,18 @@ def simulate_match(home_id, away_id, fixture_id=None):
     away_shots = get_manual_stat(away, "away", "shots")
     away_shots_conc = get_manual_stat(away, "away", "shots_against")
 
-    # League coefficients
+    # --- League coefficients ---
     home_coef = league_coefficients.get(home["league"], 1.0)
     away_coef = league_coefficients.get(away["league"], 1.0)
 
     # --- Apply team boosters ---
     home_boost = team_boosters.get(str(home_id), 1.0)
     away_boost = team_boosters.get(str(away_id), 1.0)
-
     home_coef *= home_boost
     away_coef *= away_boost
-
     coef_ratio = home_coef / away_coef
 
-    # Expected values
+    # --- Expected base values ---
     exp_home = (home_avg + away_conc) / 2 + 0.25
     exp_away = (away_avg + home_conc) / 2
     exp_home_corners = (home_corners + away_corners_conc) / 2 + 0.3
@@ -161,7 +204,7 @@ def simulate_match(home_id, away_id, fixture_id=None):
     exp_home_shots = (home_shots + away_shots_conc) / 2 + 1.2
     exp_away_shots = (away_shots + home_shots_conc) / 2
 
-    # League strength boost
+    # --- Apply coefficients ---
     exp_home *= coef_ratio
     exp_away /= coef_ratio
     exp_home_corners *= coef_ratio
@@ -169,15 +212,26 @@ def simulate_match(home_id, away_id, fixture_id=None):
     exp_home_shots *= coef_ratio
     exp_away_shots /= coef_ratio
 
-    # ---- H2H influence ----
+    # --- Apply Form-Based Attack/Defense ---
+    home_form = calculate_form_profile(home_id)
+    away_form = calculate_form_profile(away_id)
+
+    exp_home *= home_form["attack"]
+    exp_away *= away_form["attack"]
+    exp_home /= away_form["defense"]
+    exp_away /= home_form["defense"]
+
+    # Optional debug
+    print(f"📊 {home['name']} form → ⚔️ {home_form['attack']} | 🧱 {home_form['defense']}")
+    print(f"📊 {away['name']} form → ⚔️ {away_form['attack']} | 🧱 {away_form['defense']}")
+
+    # --- H2H influence ---
     with open("h2h_and_odds.json") as f:
         h2h_and_odds = json.load(f)
-
     key = f"home_{home_id}_{away_id}"
     h2h_data = h2h_and_odds.get(key, {})
     h_avg = h2h_data.get("avg_home", None)
     a_avg = h2h_data.get("avg_away", None)
-
     num_matches = h2h_data.get("num_matches", 0)
 
     if h_avg is not None and a_avg is not None and num_matches > 0:
@@ -214,8 +268,3 @@ def simulate_match(home_id, away_id, fixture_id=None):
         "away_shots": round(np.mean(away_shots), 2),
         "total_shots": round(np.mean(home_shots + away_shots), 2),
     }
-
-
-
-
-

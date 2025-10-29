@@ -1,17 +1,5 @@
 [
   {
-    "id": 513,
-    "team_id": 617,
-    "name": "Renato Sanches",
-    "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 278,
-    "goals": 0,
-    "assists": 1,
-    "shots": 5,
-    "shots_on_target": 3
-  },
-  {
     "id": 607,
     "team_id": 617,
     "name": "A. Bakasetas",
@@ -28,8 +16,8 @@
     "team_id": 617,
     "name": "Tet\u00ea",
     "position": "Attacker",
-    "appearances": 11,
-    "minutes": 719,
+    "appearances": 12,
+    "minutes": 809,
     "goals": 1,
     "assists": 2,
     "shots": 16,
@@ -40,12 +28,12 @@
     "team_id": 617,
     "name": "K. \u015awiderski",
     "position": "Attacker",
-    "appearances": 12,
-    "minutes": 653,
-    "goals": 6,
+    "appearances": 13,
+    "minutes": 719,
+    "goals": 7,
     "assists": 0,
-    "shots": 19,
-    "shots_on_target": 8
+    "shots": 22,
+    "shots_on_target": 10
   },
   {
     "id": 20863,
@@ -75,25 +63,25 @@
     "id": 30536,
     "team_id": 617,
     "name": "F. \u0110uri\u010di\u0107",
-    "position": "Attacker",
-    "appearances": 10,
-    "minutes": 653,
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 743,
     "goals": 2,
     "assists": 0,
-    "shots": 9,
-    "shots_on_target": 7
+    "shots": 10,
+    "shots_on_target": 8
   },
   {
-    "id": 56025,
+    "id": 56114,
     "team_id": 617,
-    "name": "A. \u010cerin",
+    "name": "M. Siopis",
     "position": "Midfielder",
     "appearances": 10,
-    "minutes": 560,
-    "goals": 1,
+    "minutes": 278,
+    "goals": 0,
     "assists": 0,
-    "shots": 10,
-    "shots_on_target": 3
+    "shots": 0,
+    "shots_on_target": 0
   },
   {
     "id": 70078,
@@ -112,12 +100,24 @@
     "team_id": 617,
     "name": "Pedro Chirivella",
     "position": "Midfielder",
-    "appearances": 11,
-    "minutes": 796,
+    "appearances": 12,
+    "minutes": 886,
     "goals": 0,
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
+  },
+  {
+    "id": 513,
+    "team_id": 617,
+    "name": "Renato Sanches",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 302,
+    "goals": 0,
+    "assists": 1,
+    "shots": 5,
+    "shots_on_target": 3
   },
   {
     "id": 37186,
@@ -144,39 +144,39 @@
     "shots_on_target": 2
   },
   {
-    "id": 56114,
+    "id": 56025,
     "team_id": 617,
-    "name": "M. Siopis",
+    "name": "A. \u010cerin",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 265,
-    "goals": 0,
+    "appearances": 11,
+    "minutes": 643,
+    "goals": 1,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
+    "shots": 13,
+    "shots_on_target": 4
   },
   {
     "id": 129169,
     "team_id": 617,
     "name": "A. Zaroury",
-    "position": "Attacker",
-    "appearances": 10,
-    "minutes": 333,
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 400,
     "goals": 3,
     "assists": 0,
-    "shots": 6,
-    "shots_on_target": 4
+    "shots": 7,
+    "shots_on_target": 5
   },
   {
     "id": 154742,
     "team_id": 617,
     "name": "M. Pantovi\u0107",
     "position": "Attacker",
-    "appearances": 4,
-    "minutes": 54,
+    "appearances": 5,
+    "minutes": 77,
     "goals": 0,
     "assists": 0,
-    "shots": 1,
+    "shots": 2,
     "shots_on_target": 0
   },
   {

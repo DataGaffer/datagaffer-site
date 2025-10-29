@@ -1,0 +1,144 @@
+{
+  "records": [
+    {
+      "type": "League Record",
+      "description": "FC Midtjylland vs Silkeborg has the highest projected total (4.45) ever in DBU Pokalen history.",
+      "league": "DBU Pokalen",
+      "match": "FC Midtjylland vs Silkeborg",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "FC Midtjylland\u2019s projected 3.21 goals vs Silkeborg is their highest ever.",
+      "league": "DBU Pokalen",
+      "match": "FC Midtjylland vs Silkeborg",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "Silkeborg\u2019s projected 1.24 goals vs FC Midtjylland is their highest ever.",
+      "league": "DBU Pokalen",
+      "match": "FC Midtjylland vs Silkeborg",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Global Record",
+      "description": "FC Midtjylland vs Silkeborg is the most lopsided projection ever (1.97-goal margin).",
+      "league": "DBU Pokalen",
+      "match": "FC Midtjylland vs Silkeborg",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "League Record",
+      "description": "Cagliari vs Sassuolo has the highest projected total (2.21) ever in Serie A history.",
+      "league": "Serie A",
+      "match": "Cagliari vs Sassuolo",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "Cagliari\u2019s projected 1.24 goals vs Sassuolo is their highest ever.",
+      "league": "Serie A",
+      "match": "Cagliari vs Sassuolo",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "Sassuolo\u2019s projected 0.97 goals vs Cagliari is their highest ever.",
+      "league": "Serie A",
+      "match": "Cagliari vs Sassuolo",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Global Record",
+      "description": "Cagliari vs Sassuolo is the most lopsided projection ever (0.27-goal margin).",
+      "league": "Serie A",
+      "match": "Cagliari vs Sassuolo",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "League Record",
+      "description": "Sparta Rotterdam vs Groningen has the highest projected total (3.36) ever in KNVB Beker history.",
+      "league": "KNVB Beker",
+      "match": "Sparta Rotterdam vs Groningen",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "Sparta Rotterdam\u2019s projected 1.69 goals vs Groningen is their highest ever.",
+      "league": "KNVB Beker",
+      "match": "Sparta Rotterdam vs Groningen",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "Groningen\u2019s projected 1.67 goals vs Sparta Rotterdam is their highest ever.",
+      "league": "KNVB Beker",
+      "match": "Sparta Rotterdam vs Groningen",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Global Record",
+      "description": "Sparta Rotterdam vs Groningen is the most lopsided projection ever (0.02-goal margin).",
+      "league": "KNVB Beker",
+      "match": "Sparta Rotterdam vs Groningen",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "League Record",
+      "description": "Pisa vs Lazio has the highest projected total (1.30) ever in Serie A history.",
+      "league": "Serie A",
+      "match": "Pisa vs Lazio",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "Pisa\u2019s projected 0.58 goals vs Lazio is their highest ever.",
+      "league": "Serie A",
+      "match": "Pisa vs Lazio",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "Lazio\u2019s projected 0.72 goals vs Pisa is their highest ever.",
+      "league": "Serie A",
+      "match": "Pisa vs Lazio",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Global Record",
+      "description": "Pisa vs Lazio is the most lopsided projection ever (0.14-goal margin).",
+      "league": "Serie A",
+      "match": "Pisa vs Lazio",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "League Record",
+      "description": "FC Nordsjaelland vs Brondby has the highest projected total (2.46) ever in DBU Pokalen history.",
+      "league": "DBU Pokalen",
+      "match": "FC Nordsjaelland vs Brondby",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "FC Nordsjaelland\u2019s projected 1.36 goals vs Brondby is their highest ever.",
+      "league": "DBU Pokalen",
+      "match": "FC Nordsjaelland vs Brondby",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Team Record",
+      "description": "Brondby\u2019s projected 1.10 goals vs FC Nordsjaelland is their highest ever.",
+      "league": "DBU Pokalen",
+      "match": "FC Nordsjaelland vs Brondby",
+      "date": "2025-10-29"
+    },
+    {
+      "type": "Global Record",
+      "description": "FC Nordsjaelland vs Brondby is the most lopsided projection ever (0.26-goal margin).",
+      "league": "DBU Pokalen",
+      "match": "FC Nordsjaelland vs Brondby",
+      "date": "2025-10-29"
+    }
+  ]
+}

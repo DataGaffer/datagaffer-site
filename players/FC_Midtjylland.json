@@ -4,36 +4,36 @@
     "team_id": 397,
     "name": "P. Billing",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 751,
+    "appearances": 10,
+    "minutes": 813,
     "goals": 2,
     "assists": 1,
-    "shots": 6,
-    "shots_on_target": 3
+    "shots": 7,
+    "shots_on_target": 4
   },
   {
     "id": 15810,
     "team_id": 397,
     "name": "J\u00fanior Brumado",
     "position": "Attacker",
-    "appearances": 11,
-    "minutes": 562,
-    "goals": 0,
+    "appearances": 12,
+    "minutes": 607,
+    "goals": 1,
     "assists": 2,
-    "shots": 9,
-    "shots_on_target": 4
+    "shots": 10,
+    "shots_on_target": 5
   },
   {
     "id": 34211,
     "team_id": 397,
     "name": "Cho Gue-Sung",
     "position": "Midfielder",
-    "appearances": 10,
-    "minutes": 360,
-    "goals": 2,
+    "appearances": 11,
+    "minutes": 450,
+    "goals": 3,
     "assists": 0,
-    "shots": 5,
-    "shots_on_target": 4
+    "shots": 7,
+    "shots_on_target": 6
   },
   {
     "id": 40594,
@@ -64,20 +64,20 @@
     "team_id": 397,
     "name": "A. \u015eim\u015fir",
     "position": "Midfielder",
-    "appearances": 17,
-    "minutes": 791,
+    "appearances": 18,
+    "minutes": 836,
     "goals": 3,
     "assists": 9,
-    "shots": 14,
-    "shots_on_target": 9
+    "shots": 15,
+    "shots_on_target": 10
   },
   {
     "id": 311432,
     "team_id": 397,
     "name": "P. Bravo",
     "position": "Midfielder",
-    "appearances": 16,
-    "minutes": 880,
+    "appearances": 17,
+    "minutes": 908,
     "goals": 0,
     "assists": 0,
     "shots": 3,
@@ -88,11 +88,11 @@
     "team_id": 397,
     "name": "D. Castillo",
     "position": "Midfielder",
-    "appearances": 17,
-    "minutes": 899,
+    "appearances": 18,
+    "minutes": 979,
     "goals": 2,
-    "assists": 2,
-    "shots": 8,
+    "assists": 4,
+    "shots": 9,
     "shots_on_target": 4
   },
   {
@@ -100,12 +100,12 @@
     "team_id": 397,
     "name": "Franculino Dj\u00fa",
     "position": "Attacker",
-    "appearances": 17,
-    "minutes": 1045,
-    "goals": 13,
+    "appearances": 18,
+    "minutes": 1090,
+    "goals": 14,
     "assists": 3,
-    "shots": 28,
-    "shots_on_target": 20
+    "shots": 29,
+    "shots_on_target": 21
   },
   {
     "id": 371909,
@@ -124,8 +124,8 @@
     "team_id": 397,
     "name": "Dani Silva",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 361,
+    "appearances": 10,
+    "minutes": 371,
     "goals": 0,
     "assists": 2,
     "shots": 3,
@@ -148,12 +148,12 @@
     "team_id": 397,
     "name": "D. Osorio",
     "position": "Midfielder",
-    "appearances": 14,
-    "minutes": 714,
+    "appearances": 15,
+    "minutes": 776,
     "goals": 3,
     "assists": 5,
-    "shots": 22,
-    "shots_on_target": 11
+    "shots": 25,
+    "shots_on_target": 14
   },
   {
     "id": 351146,
@@ -172,11 +172,11 @@
     "team_id": 397,
     "name": "Mikel Johan Gogorza Kr\u00fcger-Johnsen",
     "position": "Attacker",
-    "appearances": 12,
-    "minutes": 346,
-    "goals": 1,
+    "appearances": 13,
+    "minutes": 391,
+    "goals": 2,
     "assists": 0,
-    "shots": 7,
-    "shots_on_target": 4
+    "shots": 9,
+    "shots_on_target": 5
   }
 ]

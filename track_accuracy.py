@@ -17,15 +17,14 @@ def implied_pct(odds):
 def find_top_picks(fixtures):
     picks = []
     MARKET_MAP = [
-    ("home_win_pct", "home_win", lambda m: f"{m['home']['name']} Win"),
-    ("away_win_pct", "away_win", lambda m: f"{m['away']['name']} Win"),
-    ("over_2_5_pct", "over_2_5", lambda m: "Over 2.5 Goals"),
-    ("over_3_5_pct", "over_3_5", lambda m: "Over 3.5 Goals"),
-    ("under_2_5_pct", "under_2_5", lambda m: "Under 2.5 Goals"),
-    ("btts_pct", "btts", lambda m: "BTTS Yes"),
-    ("home_o1_5_pct", "home_o1_5", lambda m: f"{m['home']['name']} o1.5 Goals"),
-    ("away_o1_5_pct", "away_o1_5", lambda m: f"{m['away']['name']} o1.5 Goals"),
-]
+        ("home_win_pct", "home_win", lambda m: f"{m['home']['name']} Win"),
+        ("away_win_pct", "away_win", lambda m: f"{m['away']['name']} Win"),
+        ("over_2_5_pct", "over_2_5", lambda m: "Over 2.5 Goals"),
+        ("under_2_5_pct", "under_2_5", lambda m: "Under 2.5 Goals"),
+        ("btts_pct", "btts", lambda m: "BTTS Yes"),
+        ("home_o1_5_pct", "home_o1_5", lambda m: f"{m['home']['name']} o1.5 Goals"),
+        ("away_o1_5_pct", "away_o1_5", lambda m: f"{m['away']['name']} o1.5 Goals"),
+    ]
 
     for match in fixtures:
         sim = match.get("sim_stats", {}).get("percents", {})
@@ -33,9 +32,13 @@ def find_top_picks(fixtures):
         for sim_key, book_key, label_func in MARKET_MAP:
             p = sim.get(sim_key)
             o = book.get(book_key)
-            if isinstance(p, (int, float)) and isinstance(o, (int, float)) and o > 1:
+
+            # ✅ Only consider valid decimal odds within realistic range
+            if isinstance(p, (int, float)) and isinstance(o, (int, float)) and 1.7 <= o <= 2.4:
                 imp = implied_pct(o)
                 edge = round(p - imp, 1)
+
+                # ✅ same threshold logic as your plays.html
                 if edge > 0 and p >= 55:
                     picks.append({
                         "fixture_id": match.get("fixture_id"),
@@ -47,17 +50,17 @@ def find_top_picks(fixtures):
                         "league": match.get("league", {}).get("name", "")
                     })
 
-    # sort by edge
+    # ✅ Sort by highest edge first
     picks.sort(key=lambda x: x["edge"], reverse=True)
 
-    # ensure unique matches
+    # ✅ One pick per match (unique)
     seen = set()
     unique = []
     for p in picks:
         if p["fixture_id"] not in seen:
             unique.append(p)
             seen.add(p["fixture_id"])
-        if len(unique) == 3:
+        if len(unique) >= 3:  # ✅ top 5 same as plays.html
             break
     return unique
 

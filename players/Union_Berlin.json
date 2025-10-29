@@ -1,17 +1,5 @@
 [
   {
-    "id": 512,
-    "team_id": 182,
-    "name": "Jeong Woo-Yeong",
-    "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 162,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 1124,
     "team_id": 182,
     "name": "O. Burke",
@@ -34,42 +22,6 @@
     "assists": 0,
     "shots": 2,
     "shots_on_target": 1
-  },
-  {
-    "id": 1298,
-    "team_id": 182,
-    "name": "R. Skov",
-    "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 223,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 24848,
-    "team_id": 182,
-    "name": "C. Trimmel",
-    "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 590,
-    "goals": 0,
-    "assists": 1,
-    "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 24910,
-    "team_id": 182,
-    "name": "T. Skarke",
-    "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 246,
-    "goals": 0,
-    "assists": 0,
-    "shots": 6,
-    "shots_on_target": 3
   },
   {
     "id": 25300,
@@ -130,6 +82,30 @@
     "assists": 0,
     "shots": 9,
     "shots_on_target": 4
+  },
+  {
+    "id": 512,
+    "team_id": 182,
+    "name": "Jeong Woo-Yeong",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 162,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 24910,
+    "team_id": 182,
+    "name": "T. Skarke",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 246,
+    "goals": 0,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 3
   },
   {
     "id": 327831,

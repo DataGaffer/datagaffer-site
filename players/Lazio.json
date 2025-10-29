@@ -4,11 +4,11 @@
     "team_id": 487,
     "name": "M. Guendouzi",
     "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 440,
+    "appearances": 6,
+    "minutes": 530,
     "goals": 1,
     "assists": 0,
-    "shots": 4,
+    "shots": 5,
     "shots_on_target": 2
   },
   {
@@ -16,11 +16,11 @@
     "team_id": 487,
     "name": "D. Cataldi",
     "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 430,
+    "appearances": 7,
+    "minutes": 520,
     "goals": 1,
-    "assists": 0,
-    "shots": 5,
+    "assists": 1,
+    "shots": 6,
     "shots_on_target": 2
   },
   {
@@ -28,11 +28,11 @@
     "team_id": 487,
     "name": "Pedro",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 255,
+    "appearances": 8,
+    "minutes": 268,
     "goals": 0,
     "assists": 1,
-    "shots": 3,
+    "shots": 4,
     "shots_on_target": 0
   },
   {
@@ -40,20 +40,20 @@
     "team_id": 487,
     "name": "B. Dia",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 381,
+    "appearances": 8,
+    "minutes": 463,
     "goals": 1,
     "assists": 0,
-    "shots": 4,
-    "shots_on_target": 3
+    "shots": 5,
+    "shots_on_target": 4
   },
   {
     "id": 30866,
     "team_id": 487,
     "name": "M. Lazzari",
     "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 82,
+    "appearances": 4,
+    "minutes": 137,
     "goals": 0,
     "assists": 0,
     "shots": 0,
@@ -64,11 +64,11 @@
     "team_id": 487,
     "name": "M. Zaccagni",
     "position": "Attacker",
-    "appearances": 6,
-    "minutes": 502,
+    "appearances": 7,
+    "minutes": 592,
     "goals": 2,
     "assists": 0,
-    "shots": 8,
+    "shots": 9,
     "shots_on_target": 5
   },
   {
@@ -82,6 +82,18 @@
     "assists": 3,
     "shots": 8,
     "shots_on_target": 4
+  },
+  {
+    "id": 133729,
+    "team_id": 487,
+    "name": "T. Noslin",
+    "position": "Attacker",
+    "appearances": 3,
+    "minutes": 28,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   },
   {
     "id": 144740,
@@ -124,12 +136,12 @@
     "team_id": 487,
     "name": "T. Ba\u0161i\u0107",
     "position": "Midfielder",
-    "appearances": 3,
-    "minutes": 226,
-    "goals": 0,
+    "appearances": 4,
+    "minutes": 294,
+    "goals": 1,
     "assists": 1,
-    "shots": 3,
-    "shots_on_target": 1
+    "shots": 5,
+    "shots_on_target": 3
   },
   {
     "id": 30784,
@@ -148,11 +160,11 @@
     "team_id": 487,
     "name": "G. Isaksen",
     "position": "Attacker",
-    "appearances": 3,
-    "minutes": 101,
+    "appearances": 4,
+    "minutes": 184,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
+    "shots": 2,
     "shots_on_target": 0
   }
 ]

@@ -4,36 +4,36 @@
     "team_id": 742,
     "name": "P. Hro\u0161ovsk\u00fd",
     "position": "Midfielder",
-    "appearances": 11,
-    "minutes": 658,
+    "appearances": 12,
+    "minutes": 698,
     "goals": 1,
     "assists": 0,
-    "shots": 12,
-    "shots_on_target": 5
+    "shots": 14,
+    "shots_on_target": 6
   },
   {
     "id": 1937,
     "team_id": 742,
     "name": "B. Heynen",
     "position": "Midfielder",
-    "appearances": 15,
-    "minutes": 1279,
+    "appearances": 16,
+    "minutes": 1377,
     "goals": 1,
     "assists": 0,
-    "shots": 10,
-    "shots_on_target": 2
+    "shots": 11,
+    "shots_on_target": 3
   },
   {
     "id": 34710,
     "team_id": 742,
     "name": "Oh Hyeon-Gyu",
     "position": "Attacker",
-    "appearances": 14,
-    "minutes": 863,
+    "appearances": 15,
+    "minutes": 903,
     "goals": 4,
     "assists": 2,
-    "shots": 30,
-    "shots_on_target": 16
+    "shots": 31,
+    "shots_on_target": 17
   },
   {
     "id": 110153,
@@ -84,6 +84,18 @@
     "shots_on_target": 6
   },
   {
+    "id": 380647,
+    "team_id": 742,
+    "name": "Noah Adedeji-Sternberg",
+    "position": "Attacker",
+    "appearances": 15,
+    "minutes": 599,
+    "goals": 0,
+    "assists": 0,
+    "shots": 6,
+    "shots_on_target": 2
+  },
+  {
     "id": 380780,
     "team_id": 742,
     "name": "I. Bangoura",
@@ -112,23 +124,23 @@
     "team_id": 742,
     "name": "D. Heymans",
     "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 71,
-    "goals": 0,
+    "appearances": 5,
+    "minutes": 158,
+    "goals": 1,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
+    "shots": 3,
+    "shots_on_target": 1
   },
   {
     "id": 203458,
     "team_id": 742,
     "name": "Y. Sor",
     "position": "Attacker",
-    "appearances": 9,
-    "minutes": 256,
+    "appearances": 10,
+    "minutes": 327,
     "goals": 0,
     "assists": 1,
-    "shots": 5,
+    "shots": 6,
     "shots_on_target": 2
   },
   {
@@ -136,8 +148,8 @@
     "team_id": 742,
     "name": "N. Sattlberger",
     "position": "Midfielder",
-    "appearances": 11,
-    "minutes": 535,
+    "appearances": 12,
+    "minutes": 593,
     "goals": 0,
     "assists": 1,
     "shots": 3,
@@ -148,47 +160,35 @@
     "team_id": 742,
     "name": "J. Erabi",
     "position": "Attacker",
-    "appearances": 8,
-    "minutes": 302,
+    "appearances": 9,
+    "minutes": 313,
     "goals": 1,
     "assists": 0,
     "shots": 6,
     "shots_on_target": 3
   },
   {
-    "id": 380647,
-    "team_id": 742,
-    "name": "Noah Adedeji-Sternberg",
-    "position": "Attacker",
-    "appearances": 14,
-    "minutes": 572,
-    "goals": 0,
-    "assists": 0,
-    "shots": 6,
-    "shots_on_target": 2
-  },
-  {
     "id": 392412,
     "team_id": 742,
     "name": "R. Mirisola",
     "position": "Attacker",
-    "appearances": 5,
-    "minutes": 170,
+    "appearances": 6,
+    "minutes": 228,
     "goals": 1,
     "assists": 1,
-    "shots": 3,
-    "shots_on_target": 1
+    "shots": 4,
+    "shots_on_target": 2
   },
   {
     "id": 404891,
     "team_id": 742,
     "name": "K. Karetsas",
     "position": "Midfielder",
-    "appearances": 13,
-    "minutes": 682,
+    "appearances": 14,
+    "minutes": 780,
     "goals": 0,
     "assists": 1,
-    "shots": 11,
+    "shots": 12,
     "shots_on_target": 6
   }
 ]

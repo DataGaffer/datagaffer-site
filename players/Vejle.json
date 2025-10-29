@@ -4,12 +4,12 @@
     "team_id": 395,
     "name": "M. Duelund",
     "position": "Midfielder",
-    "appearances": 10,
-    "minutes": 719,
+    "appearances": 11,
+    "minutes": 786,
     "goals": 3,
     "assists": 0,
-    "shots": 20,
-    "shots_on_target": 10
+    "shots": 21,
+    "shots_on_target": 11
   },
   {
     "id": 15913,
@@ -28,12 +28,12 @@
     "team_id": 395,
     "name": "A. Pitu",
     "position": "Attacker",
-    "appearances": 6,
-    "minutes": 113,
+    "appearances": 7,
+    "minutes": 136,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "shots_on_target": 0
+    "shots": 1,
+    "shots_on_target": 1
   },
   {
     "id": 47437,
@@ -52,8 +52,8 @@
     "team_id": 395,
     "name": "T. Lauritsen",
     "position": "Midfielder",
-    "appearances": 12,
-    "minutes": 845,
+    "appearances": 13,
+    "minutes": 880,
     "goals": 0,
     "assists": 1,
     "shots": 2,
@@ -64,8 +64,8 @@
     "team_id": 395,
     "name": "Amin Chiakha",
     "position": "Attacker",
-    "appearances": 9,
-    "minutes": 585,
+    "appearances": 10,
+    "minutes": 675,
     "goals": 1,
     "assists": 0,
     "shots": 11,
@@ -112,8 +112,8 @@
     "team_id": 395,
     "name": "M. Vesterg\u00e5rd",
     "position": "Midfielder",
-    "appearances": 12,
-    "minutes": 1017,
+    "appearances": 13,
+    "minutes": 1107,
     "goals": 0,
     "assists": 0,
     "shots": 1,
@@ -136,11 +136,11 @@
     "team_id": 395,
     "name": "M. Engg\u00e5rd",
     "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 249,
+    "appearances": 8,
+    "minutes": 304,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
+    "shots": 1,
     "shots_on_target": 0
   },
   {
@@ -148,11 +148,11 @@
     "team_id": 395,
     "name": "C. Gammelgaard",
     "position": "Attacker",
-    "appearances": 12,
-    "minutes": 836,
-    "goals": 2,
+    "appearances": 13,
+    "minutes": 926,
+    "goals": 3,
     "assists": 1,
-    "shots": 5,
-    "shots_on_target": 4
+    "shots": 8,
+    "shots_on_target": 5
   }
 ]

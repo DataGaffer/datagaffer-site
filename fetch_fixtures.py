@@ -208,6 +208,137 @@ with open("fixtures.json", "w") as f:
 with open("fixtures_tomorrow.json", "w") as f:
     json.dump(all_matches["day_after"], f, indent=2)
 
+import os
+import json
+from datetime import datetime
+
+def detect_new_records(fixtures_file="fixtures.json", history_file="daily_accuracy.json", out_folder="highlights"):
+    """
+    Checks today's simulated fixtures against daily_accuracy history to find new records.
+    Flags records like:
+      - Highest projected score by a team
+      - Most lopsided match in history
+      - Highest total projection in league history
+    """
+    os.makedirs(out_folder, exist_ok=True)
+
+    if not os.path.exists(fixtures_file) or not os.path.exists(history_file):
+        print("⚠️ Missing fixtures.json or daily_accuracy.json for record detection.")
+        return
+
+    with open(fixtures_file, "r") as f:
+        today_fixtures = json.load(f)
+
+    with open(history_file, "r") as f:
+        try:
+            history = json.load(f)
+        except json.JSONDecodeError:
+            history = []
+
+    if not history:
+        print("⚠️ No historical data yet to compare records.")
+        return
+
+    # --- Precompute all-time records ---
+    league_highest_total = {}
+    team_highest_proj = {}
+    global_most_lopsided = {"diff": 0, "match": None}
+
+    for rec in history:
+        try:
+            league = rec["league"]
+            home, away = map(float, rec["projected_score"].split(" - "))
+        except Exception:
+            continue
+
+        total = home + away
+        diff = abs(home - away)
+        home_team, away_team = rec["match"].split(" vs ")
+
+        # Per-league total record
+        if league not in league_highest_total or total > league_highest_total[league]["total"]:
+            league_highest_total[league] = {"total": total, "match": rec["match"]}
+
+        # Per-team highest projection
+        for team, goals in [(home_team, home), (away_team, away)]:
+            if team not in team_highest_proj or goals > team_highest_proj[team]["goals"]:
+                team_highest_proj[team] = {"goals": goals, "match": rec["match"]}
+
+        # Global most lopsided
+        if diff > global_most_lopsided["diff"]:
+            global_most_lopsided = {"diff": diff, "match": rec["match"], "league": league}
+
+    # --- Compare today’s fixtures ---
+    new_records = []
+    for fx in today_fixtures:
+        try:
+            home = float(fx["sim_stats"]["xg"]["home"])
+            away = float(fx["sim_stats"]["xg"]["away"])
+        except (KeyError, TypeError, ValueError):
+            continue
+
+        league = fx["league"]["name"]
+        home_team = fx["home"]["name"]
+        away_team = fx["away"]["name"]
+        match_name = f"{home_team} vs {away_team}"
+        total = home + away
+        diff = abs(home - away)
+
+        # Check for league record
+        if league not in league_highest_total or total > league_highest_total[league]["total"]:
+            new_records.append({
+                "type": "League Record",
+                "description": f"{match_name} has the highest projected total ({total:.2f}) ever in {league} history.",
+                "league": league,
+                "match": match_name,
+                "date": datetime.now().strftime("%Y-%m-%d")
+            })
+
+        # Check for team records
+        if home_team not in team_highest_proj or home > team_highest_proj[home_team]["goals"]:
+            new_records.append({
+                "type": "Team Record",
+                "description": f"{home_team}’s projected {home:.2f} goals vs {away_team} is their highest ever.",
+                "league": league,
+                "match": match_name,
+                "date": datetime.now().strftime("%Y-%m-%d")
+            })
+        if away_team not in team_highest_proj or away > team_highest_proj[away_team]["goals"]:
+            new_records.append({
+                "type": "Team Record",
+                "description": f"{away_team}’s projected {away:.2f} goals vs {home_team} is their highest ever.",
+                "league": league,
+                "match": match_name,
+                "date": datetime.now().strftime("%Y-%m-%d")
+            })
+
+        # Check for global lopsided record
+        if diff > global_most_lopsided["diff"]:
+            new_records.append({
+                "type": "Global Record",
+                "description": f"{match_name} is the most lopsided projection ever ({diff:.2f}-goal margin).",
+                "league": league,
+                "match": match_name,
+                "date": datetime.now().strftime("%Y-%m-%d")
+            })
+
+    # --- Save results if any ---
+    if new_records:
+        out_path = os.path.join(out_folder, "records_broken.json")
+        with open(out_path, "w") as f:
+            json.dump({"records": new_records}, f, indent=2)
+
+        print("\n🏆 RECORD ALERTS")
+        for rec in new_records:
+            print(f"🔥 {rec['description']}")
+        print(f"💾 Saved → {out_path}\n")
+    else:
+        print("✅ No new records broken today.")
+
+
+# ✅ Run it automatically at the end
+detect_new_records()
+
 print(f"✅ Saved {len(all_matches['tomorrow'])} fixture(s) to fixtures.json (tomorrow).")
 print(f"✅ Saved {len(all_matches['day_after'])} fixture(s) to fixtures_tomorrow.json (day after tomorrow).")
 print("✅ Saved h2h_and_odds.json with goal averages.")

@@ -384,26 +384,6 @@
   { "id": 533, "name": "Villarreal", "logo": "https://media.api-sports.io/football/teams/533.png" },
 
 
-  
-  { "name": "Vancouver Whitecaps", "id": 1603, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1603.png" },
-  { "name": "FC Dallas", "id": 1597, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1597.png" },
-  { "name": "Los Angeles FC", "id": 1616, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1616.png" },
-  { "name": "Austin", "id": 16489, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/16489.png" },
-  { "name": "Minnesota United FC", "id": 1612, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1612.png" },
-  { "name": "Seattle Sounders", "id": 1595, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1595.png" },
-  { "name": "San Diego", "id": 25484, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/25484.png" },
-  { "name": "Portland Timbers", "id": 1617, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1617.png" },
-  { "name": "FC Cincinnati", "id": 2242, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/2242.png" },
-  { "name": "Columbus Crew", "id": 1613, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1613.png" },
-  { "name": "Inter Miami", "id": 9568, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/9568.png" },
-  { "name": "Nashville SC", "id": 9569, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/9569.png" },
-  { "name": "Charlotte", "id": 18310, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/18310.png" },
-  { "name": "New York City FC", "id": 1604, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1604.png" },
-  { "name": "Philadelphia Union", "id": 1599, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1599.png" },
-  { "name": "Chicago Fire", "id": 1607, "league": "Major League Soccer", "logo": "https://media-4.api-sports.io/football/teams/1607.png" },
-
-
-
 
   { "name": "AGF", "id": 14243, "league": "Danish Superliga", "logo": "https://media-4.api-sports.io/football/teams/14243.png" },
   { "name": "Brondby", "id": 407, "league": "Danish Superliga", "logo": "https://media-4.api-sports.io/football/teams/407.png" },
@@ -416,11 +396,6 @@
   { "name": "FC Fredericia", "id": 2061, "league": "Danish Superliga", "logo": "https://media-4.api-sports.io/football/teams/2061.png" },
   { "name": "Vejle", "id": 395, "league": "Danish Superliga", "logo": "https://media-4.api-sports.io/football/teams/395.png" },
 
-{ "id": 191, "name": "Holstein Kiel", "logo": "https://media.api-sports.io/football/teams/191.png" },
-{ "id": 176, "name": "VfL Bochum", "logo": "https://media.api-sports.io/football/teams/176.png" },
-{ "id": 185, "name": "SC Paderborn 07", "logo": "https://media.api-sports.io/football/teams/185.png" },
-{ "id": 785, "name": "Karlsruher SC", "logo": "https://media.api-sports.io/football/teams/785.png" },
-{ "id": 76, "name": "Swansea", "logo": "https://media.api-sports.io/football/teams/76.png" },
 
   
    {

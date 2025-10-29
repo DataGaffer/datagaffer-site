@@ -162,6 +162,10 @@ tr:hover { background: #f1f7f4; }
   color: #003f2e;
 }
 
+tr[style*="background:#003f2e"] td {
+  color: #fff !important;
+}
+
 /* ✅ Compact mobile view */
 @media (max-width: 900px) {
   .header img { height: 50px; left: 10px; }
@@ -273,29 +277,74 @@ async function loadAccuracy() {
 function filterMatches() {
   const term = document.getElementById("searchInput").value.toLowerCase();
   const selectedDate = document.getElementById("dateSelect").value;
+
   const filtered = allMatches.filter(
     (m) =>
       (m.match.toLowerCase().includes(term) ||
        m.league.toLowerCase().includes(term)) &&
       (!selectedDate || m.date === selectedDate)
   );
+
+  console.log("🔄 Showing", filtered.length, "matches for", selectedDate || "all dates");
   renderTeamTable(filtered);
 }
 
 function renderTeamTable(data) {
   const tbody = document.querySelector("#accuracy-table tbody");
-  tbody.innerHTML = data
-    .map((m) => `
-      <tr>
-        <td>${m.date}</td>
-        <td>${m.league}</td>
-        <td>${m.match}</td>
-        <td>${m.projected_score}</td>
-        <td>${m.actual_score}</td>
-        <td>${m.avg_diff}</td>
-        <td style="font-weight:bold;">${m.accuracy_score}%</td>
-      </tr>`)
-    .join("");
+
+  if (!Array.isArray(data) || data.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7">No matches found</td></tr>`;
+    return;
+  }
+
+  let totalProjected = 0;
+  let totalActual = 0;
+  let totalDiff = 0;
+  let totalAccuracy = 0;
+  let matchCount = 0;
+
+  data.forEach(m => {
+    if (!m.projected_score || !m.actual_score) return;
+
+    const [ph, pa] = m.projected_score.replace(/\s+/g, "").split("-").map(Number);
+    const [ah, aa] = m.actual_score.replace(/\s+/g, "").split("-").map(Number);
+    if ([ph, pa, ah, aa].some(isNaN)) return;
+
+    totalProjected += ph + pa;
+    totalActual += ah + aa;
+    totalDiff += parseFloat(m.avg_diff) || 0;
+    totalAccuracy += parseFloat(m.accuracy_score) || 0;
+    matchCount++;
+  });
+
+  const avgProj = matchCount ? (totalProjected / matchCount).toFixed(2) : "0.00";
+  const avgAct = matchCount ? (totalActual / matchCount).toFixed(2) : "0.00";
+  const avgDiff = matchCount ? (totalDiff / matchCount).toFixed(2) : "0.00";
+  const avgAcc = matchCount ? (totalAccuracy / matchCount).toFixed(1) : "0.0";
+
+  const rows = data.map(m => `
+    <tr>
+      <td>${m.date}</td>
+      <td>${m.league}</td>
+      <td>${m.match}</td>
+      <td>${m.projected_score}</td>
+      <td>${m.actual_score}</td>
+      <td>${m.avg_diff}</td>
+      <td style="font-weight:bold;">${m.accuracy_score}%</td>
+    </tr>
+  `).join("");
+
+  const summaryRow = `
+    <tr style="background:#003f2e;color:#fff;font-weight:bold;">
+      <td colspan="3">Combined Totals / Averages (${matchCount} games)</td>
+      <td>${avgProj}</td>
+      <td>${avgAct}</td>
+      <td>${avgDiff}</td>
+      <td>${avgAcc}%</td>
+    </tr>
+  `;
+
+  tbody.innerHTML = rows + summaryRow;
 }
 
 function renderLeagueTable(data) {
@@ -316,7 +365,7 @@ function renderLeagueTable(data) {
 
 function sortTable(n) {
   const table = document.getElementById("accuracy-table");
-  const rows = Array.from(table.rows).slice(1);
+  const rows = Array.from(table.rows).slice(1, -1); // exclude header & summary
   const isNumeric = n >= 3;
 
   rows.sort((a, b) => {
@@ -331,7 +380,7 @@ function sortTable(n) {
 
   sortDirection = !sortDirection;
   const tbody = table.querySelector("tbody");
-  rows.forEach(r => tbody.appendChild(r));
+  rows.forEach(r => tbody.insertBefore(r, tbody.lastElementChild));
 }
 
 loadAccuracy();

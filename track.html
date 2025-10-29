@@ -162,6 +162,10 @@ tr:hover { background: #f1f7f4; }
   color: #003f2e;
 }
 
+tr[style*="background:#003f2e"] td {
+  color: #fff !important;
+}
+
 /* ✅ Compact mobile view */
 @media (max-width: 900px) {
   .header img { height: 50px; left: 10px; }
@@ -270,32 +274,80 @@ async function loadAccuracy() {
   renderLeagueTable(allLeagues);
 }
 
-function filterMatches() {
-  const term = document.getElementById("searchInput").value.toLowerCase();
-  const selectedDate = document.getElementById("dateSelect").value;
-  const filtered = allMatches.filter(
-    (m) =>
-      (m.match.toLowerCase().includes(term) ||
-       m.league.toLowerCase().includes(term)) &&
-      (!selectedDate || m.date === selectedDate)
-  );
-  renderTeamTable(filtered);
-}
-
 function renderTeamTable(data) {
   const tbody = document.querySelector("#accuracy-table tbody");
-  tbody.innerHTML = data
-    .map((m) => `
-      <tr>
-        <td>${m.date}</td>
-        <td>${m.league}</td>
-        <td>${m.match}</td>
-        <td>${m.projected_score}</td>
-        <td>${m.actual_score}</td>
-        <td>${m.avg_diff}</td>
-        <td style="font-weight:bold;">${m.accuracy_score}%</td>
-      </tr>`)
-    .join("");
+  if (!Array.isArray(data) || data.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7">No matches found</td></tr>`;
+    return;
+  }
+
+  console.log("📊 Rendering", data.length, "matches");
+
+  let totalProjected = 0;
+  let totalActual = 0;
+  let totalDiff = 0;
+  let totalAccuracy = 0;
+  let matchCount = 0;
+
+  data.forEach(m => {
+    const projStr = (m.projected_score || "").trim();
+    const actStr = (m.actual_score || "").trim();
+    if (!projStr.includes("-") || !actStr.includes("-")) {
+      console.warn("Skipping invalid row:", m);
+      return;
+    }
+
+    const projParts = projStr.replace(/\s*-\s*/, "-").split("-").map(x => parseFloat(x));
+    const actParts = actStr.replace(/\s*-\s*/, "-").split("-").map(x => parseFloat(x));
+
+    if (projParts.some(isNaN) || actParts.some(isNaN)) {
+      console.warn("NaN found in:", projStr, actStr);
+      return;
+    }
+
+    const projTotal = projParts[0] + projParts[1];
+    const actTotal = actParts[0] + actParts[1];
+
+    totalProjected += projTotal;
+    totalActual += actTotal;
+    totalDiff += parseFloat(m.avg_diff) || 0;
+    totalAccuracy += parseFloat(m.accuracy_score) || 0;
+    matchCount++;
+  });
+
+  console.log({ totalProjected, totalActual, totalDiff, totalAccuracy, matchCount });
+
+    const avgDiff = matchCount ? (totalDiff / matchCount).toFixed(2) : "0.00";
+  const avgAccuracy = matchCount ? (totalAccuracy / matchCount).toFixed(1) : "0.0";
+  const avgProj = matchCount ? (totalProjected / matchCount).toFixed(2) : "0.00";
+  const avgAct = matchCount ? (totalActual / matchCount).toFixed(2) : "0.00";
+
+  console.log("✅ Final averages:", { avgProj, avgAct, avgDiff, avgAccuracy });
+
+  const rows = data.map(m => `
+    <tr>
+      <td>${m.date}</td>
+      <td>${m.league}</td>
+      <td>${m.match}</td>
+      <td>${m.projected_score}</td>
+      <td>${m.actual_score}</td>
+      <td>${m.avg_diff}</td>
+      <td style="font-weight:bold;">${m.accuracy_score}%</td>
+    </tr>
+  `).join("");
+
+  // ✅ Add clean summary row
+  const summaryRow = `
+    <tr style="background:#003f2e;color:#fff;font-weight:bold;">
+      <td colspan="3">Combined Totals / Averages (${matchCount} games)</td>
+      <td>${avgProj}</td>
+      <td>${avgAct}</td>
+      <td>${avgDiff}</td>
+      <td>${avgAccuracy}%</td>
+    </tr>
+  `;
+
+  tbody.innerHTML = rows + summaryRow;
 }
 
 function renderLeagueTable(data) {
@@ -316,7 +368,7 @@ function renderLeagueTable(data) {
 
 function sortTable(n) {
   const table = document.getElementById("accuracy-table");
-  const rows = Array.from(table.rows).slice(1);
+  const rows = Array.from(table.rows).slice(1, -1); // exclude header & summary row
   const isNumeric = n >= 3;
 
   rows.sort((a, b) => {
@@ -331,8 +383,27 @@ function sortTable(n) {
 
   sortDirection = !sortDirection;
   const tbody = table.querySelector("tbody");
-  rows.forEach(r => tbody.appendChild(r));
+  rows.forEach(r => tbody.insertBefore(r, tbody.lastElementChild));
 }
+
+function filterMatches() {
+  const term = document.getElementById("searchInput").value.toLowerCase();
+  const selectedDate = document.getElementById("dateSelect").value;
+
+  // Filter matches based on search and date
+  const filtered = allMatches.filter(
+    (m) =>
+      (m.match.toLowerCase().includes(term) ||
+       m.league.toLowerCase().includes(term)) &&
+      (!selectedDate || m.date === selectedDate)
+  );
+
+  console.log("🔄 Re-rendering", filtered.length, "matches for date:", selectedDate || "All");
+
+  // ✅ Always rebuild table and totals
+  renderTeamTable(filtered);
+}
+
 
 loadAccuracy();
 </script>

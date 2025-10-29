@@ -442,7 +442,7 @@
         "match": "Atalanta vs AC Milan",
         "pick": "Over 2.5 Goals",
         "dg_odds": 1.74,
-        "book_odds": 1.80,
+        "book_odds": 1.8,
         "edge": 1.8,
         "league": "Seria A",
         "result": "Loss"
@@ -452,10 +452,65 @@
         "match": "Lecce vs Napoli",
         "pick": "Napoli o1.5 Goals",
         "dg_odds": 1.72,
-        "book_odds": 1.80,
+        "book_odds": 1.8,
         "edge": 2.6,
         "league": "Serie A",
         "result": "Loss"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-29",
+    "picks": [
+      {
+        "fixture_id": 1479621,
+        "match": "Newcastle vs Tottenham",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.43,
+        "book_odds": 1.75,
+        "edge": 13.0,
+        "league": "League Cup",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1387782,
+        "match": "Metz vs Lens",
+        "pick": "Under 2.5 Goals",
+        "dg_odds": 1.45,
+        "book_odds": 2.2,
+        "edge": 23.6,
+        "league": "Ligue 1",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1387780,
+        "match": "Lorient vs PSG",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.4,
+        "book_odds": 1.8,
+        "edge": 16.0,
+        "league": "Ligue 1",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1387785,
+        "match": "Paris FC vs Lyon",
+        "pick": "Paris FC o1.5 Goals",
+        "dg_odds": 1.66,
+        "book_odds": 2.2,
+        "edge": 14.7,
+        "league": "Ligue 1",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1387787,
+        "match": "Toulouse vs Rennes",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.52,
+        "book_odds": 1.9,
+        "edge": 13.4,
+        "league": "Ligue 1",
+        "result": "Win"
       }
     ]
   }

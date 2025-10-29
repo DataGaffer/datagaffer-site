@@ -1,232 +1,862 @@
 [
   {
-    "fixture_id": 1377951,
+    "fixture_id": 1463469,
+    "league": {
+      "id": 81,
+      "name": "DFB Pokal"
+    },
+    "home": {
+      "id": 164,
+      "name": "Mainz",
+      "logo": "https://media.api-sports.io/football/teams/164.png",
+      "winner": null
+    },
+    "away": {
+      "id": 172,
+      "name": "Stuttgart",
+      "logo": "https://media.api-sports.io/football/teams/172.png",
+      "winner": null
+    },
+    "home_id": 164,
+    "away_id": 172,
+    "home_logo": "https://media.api-sports.io/football/teams/164.png",
+    "away_logo": "https://media.api-sports.io/football/teams/172.png",
+    "date": "2025-10-29T17:00:00+00:00",
+    "book_odds": {
+      "home_win": 3.1,
+      "draw": 3.6,
+      "away_win": 2.15,
+      "btts": 1.53,
+      "over_2_5": 1.61,
+      "over_3_5": 2.50,
+      "under_2_5": 2.25,
+      "home_o1_5": 2.25,
+      "away_o1_5": 1.83
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.33",
+        "away": "1.72",
+        "total": "3.05"
+      },
+      "corners": {
+        "home": "5.0",
+        "away": "4.5",
+        "total": "9.5"
+      },
+      "shots": {
+        "home": "13.2",
+        "away": "12.8",
+        "total": "25.9"
+      },
+      "percents": {
+        "home_win_pct": 29.5,
+        "draw_pct": 23.4,
+        "away_win_pct": 47.0,
+        "over_2_5_pct": 58.8,
+        "over_3_5_pct": 36.0,
+        "under_2_5_pct": 41.2,
+        "btts_pct": 61.1,
+        "home_o1_5_pct": 38.0,
+        "away_o1_5_pct": 51.5
+      }
+    }
+  },
+  {
+    "fixture_id": 1463470,
+    "league": {
+      "id": 81,
+      "name": "DFB Pokal"
+    },
+    "home": {
+      "id": 185,
+      "name": "Paderborn",
+      "logo": "https://media.api-sports.io/football/teams/185.png",
+      "winner": null
+    },
+    "away": {
+      "id": 168,
+      "name": "Leverkusen",
+      "logo": "https://media.api-sports.io/football/teams/168.png",
+      "winner": null
+    },
+    "home_id": 185,
+    "away_id": 168,
+    "home_logo": "https://media.api-sports.io/football/teams/185.png",
+    "away_logo": "https://media.api-sports.io/football/teams/168.png",
+    "date": "2025-10-29T17:00:00+00:00",
+    "book_odds": {
+      "home_win": 4.5,
+      "draw": 4.33,
+      "away_win": 1.65,
+      "btts": 1.50,
+      "over_2_5": 1.47,
+      "over_3_5": 2.10,
+      "under_2_5": 2.60,
+      "home_o1_5": 2.62,
+      "away_o1_5": 1.53
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.51",
+        "away": "2.61",
+        "total": "4.12"
+      },
+      "corners": {
+        "home": "4.1",
+        "away": "6.7",
+        "total": "10.8"
+      },
+      "shots": {
+        "home": "11.2",
+        "away": "15.2",
+        "total": "26.4"
+      },
+      "percents": {
+        "home_win_pct": 21.1,
+        "draw_pct": 18.0,
+        "away_win_pct": 60.9,
+        "over_2_5_pct": 78.4,
+        "over_3_5_pct": 58.8,
+        "under_2_5_pct": 21.6,
+        "btts_pct": 72.9,
+        "home_o1_5_pct": 44.5,
+        "away_o1_5_pct": 73.7
+      }
+    }
+  },
+  {
+    "fixture_id": 1476667,
+    "league": {
+      "id": 121,
+      "name": "DBU Pokalen"
+    },
+    "home": {
+      "id": 2061,
+      "name": "FC Fredericia",
+      "logo": "https://media.api-sports.io/football/teams/2061.png",
+      "winner": null
+    },
+    "away": {
+      "id": 2070,
+      "name": "Viborg",
+      "logo": "https://media.api-sports.io/football/teams/2070.png",
+      "winner": null
+    },
+    "home_id": 2061,
+    "away_id": 2070,
+    "home_logo": "https://media.api-sports.io/football/teams/2061.png",
+    "away_logo": "https://media.api-sports.io/football/teams/2070.png",
+    "date": "2025-10-29T17:00:00+00:00",
+    "book_odds": {
+      "home_win": 3.90,
+      "draw": 3.90,
+      "away_win": 1.76,
+      "btts": 1.57,
+      "over_2_5": 1.57,
+      "over_3_5": 2.37,
+      "under_2_5": 2.35,
+      "home_o1_5": 2.62,
+      "away_o1_5": 1.66
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.14",
+        "away": "1.62",
+        "total": "2.76"
+      },
+      "corners": {
+        "home": "5.7",
+        "away": "4.7",
+        "total": "10.4"
+      },
+      "shots": {
+        "home": "14.7",
+        "away": "14.8",
+        "total": "29.5"
+      },
+      "percents": {
+        "home_win_pct": 26.6,
+        "draw_pct": 24.9,
+        "away_win_pct": 48.5,
+        "over_2_5_pct": 51.9,
+        "over_3_5_pct": 29.3,
+        "under_2_5_pct": 48.1,
+        "btts_pct": 54.7,
+        "home_o1_5_pct": 31.4,
+        "away_o1_5_pct": 47.7
+      }
+    }
+  },
+  {
+    "fixture_id": 1377947,
     "league": {
       "id": 135,
       "name": "Serie A"
     },
     "home": {
-      "id": 867,
-      "name": "Lecce",
-      "logo": "https://media.api-sports.io/football/teams/867.png",
+      "id": 895,
+      "name": "Como",
+      "logo": "https://media.api-sports.io/football/teams/895.png",
       "winner": null
     },
     "away": {
-      "id": 492,
-      "name": "Napoli",
-      "logo": "https://media.api-sports.io/football/teams/492.png",
+      "id": 504,
+      "name": "Verona",
+      "logo": "https://media.api-sports.io/football/teams/504.png",
       "winner": null
     },
-    "home_id": 867,
-    "away_id": 492,
-    "home_logo": "https://media.api-sports.io/football/teams/867.png",
-    "away_logo": "https://media.api-sports.io/football/teams/492.png",
-    "date": "2025-10-28T17:30:00+00:00",
+    "home_id": 895,
+    "away_id": 504,
+    "home_logo": "https://media.api-sports.io/football/teams/895.png",
+    "away_logo": "https://media.api-sports.io/football/teams/504.png",
+    "date": "2025-10-29T17:30:00+00:00",
     "book_odds": {
-      "home_win": 6.25,
-      "draw": 4.0,
-      "away_win": 1.53,
+      "home_win": 1.6,
+      "draw": 3.6,
+      "away_win": 6.25,
+      "btts": 2.10,
+      "over_2_5": 2.10,
+      "over_3_5": 4.00,
+      "under_2_5": 1.72,
+      "home_o1_5": 1.80,
+      "away_o1_5": 5.50
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.98",
+        "away": "0.83",
+        "total": "2.81"
+      },
+      "corners": {
+        "home": "5.5",
+        "away": "3.8",
+        "total": "9.3"
+      },
+      "shots": {
+        "home": "15.0",
+        "away": "9.2",
+        "total": "24.2"
+      },
+      "percents": {
+        "home_win_pct": 64.3,
+        "draw_pct": 20.8,
+        "away_win_pct": 14.9,
+        "over_2_5_pct": 53.4,
+        "over_3_5_pct": 31.6,
+        "under_2_5_pct": 46.6,
+        "btts_pct": 49.3,
+        "home_o1_5_pct": 58.9,
+        "away_o1_5_pct": 20.1
+      }
+    }
+  },
+  {
+    "fixture_id": 1377950,
+    "league": {
+      "id": 135,
+      "name": "Serie A"
+    },
+    "home": {
+      "id": 496,
+      "name": "Juventus",
+      "logo": "https://media.api-sports.io/football/teams/496.png",
+      "winner": null
+    },
+    "away": {
+      "id": 494,
+      "name": "Udinese",
+      "logo": "https://media.api-sports.io/football/teams/494.png",
+      "winner": null
+    },
+    "home_id": 496,
+    "away_id": 494,
+    "home_logo": "https://media.api-sports.io/football/teams/496.png",
+    "away_logo": "https://media.api-sports.io/football/teams/494.png",
+    "date": "2025-10-29T17:30:00+00:00",
+    "book_odds": {
+      "home_win": 1.44,
+      "draw": 4.1,
+      "away_win": 8.5,
+      "btts": 2.05,
+      "over_2_5": 1.90,
+      "over_3_5": 3.40,
+      "under_2_5": 1.90,
+      "home_o1_5": 1.61,
+      "away_o1_5": 5.50
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.77",
+        "away": "0.77",
+        "total": "2.54"
+      },
+      "corners": {
+        "home": "5.8",
+        "away": "4.1",
+        "total": "9.9"
+      },
+      "shots": {
+        "home": "14.9",
+        "away": "10.4",
+        "total": "25.3"
+      },
+      "percents": {
+        "home_win_pct": 61.3,
+        "draw_pct": 22.5,
+        "away_win_pct": 16.2,
+        "over_2_5_pct": 46.8,
+        "over_3_5_pct": 25.2,
+        "under_2_5_pct": 53.2,
+        "btts_pct": 44.0,
+        "home_o1_5_pct": 52.6,
+        "away_o1_5_pct": 18.0
+      }
+    }
+  },
+  {
+    "fixture_id": 1377953,
+    "league": {
+      "id": 135,
+      "name": "Serie A"
+    },
+    "home": {
+      "id": 497,
+      "name": "AS Roma",
+      "logo": "https://media.api-sports.io/football/teams/497.png",
+      "winner": null
+    },
+    "away": {
+      "id": 523,
+      "name": "Parma",
+      "logo": "https://media.api-sports.io/football/teams/523.png",
+      "winner": null
+    },
+    "home_id": 497,
+    "away_id": 523,
+    "home_logo": "https://media.api-sports.io/football/teams/497.png",
+    "away_logo": "https://media.api-sports.io/football/teams/523.png",
+    "date": "2025-10-29T17:30:00+00:00",
+    "book_odds": {
+      "home_win": 1.53,
+      "draw": 3.75,
+      "away_win": 7.5,
       "btts": 2.10,
       "over_2_5": 2.10,
       "over_3_5": 3.75,
       "under_2_5": 1.72,
-      "home_o1_5": 5.50,
-      "away_o1_5": 1.80
+      "home_o1_5": 1.72,
+      "away_o1_5": 5.50
     },
     "sim_stats": {
       "xg": {
-        "home": "0.80",
-        "away": "1.95",
-        "total": "2.75"
+        "home": "1.83",
+        "away": "0.46",
+        "total": "2.29"
+      },
+      "corners": {
+        "home": "5.9",
+        "away": "3.8",
+        "total": "9.8"
+      },
+      "shots": {
+        "home": "15.6",
+        "away": "10.4",
+        "total": "26.0"
+      },
+      "percents": {
+        "home_win_pct": 70.4,
+        "draw_pct": 20.8,
+        "away_win_pct": 8.8,
+        "over_2_5_pct": 40.1,
+        "over_3_5_pct": 20.3,
+        "under_2_5_pct": 59.9,
+        "btts_pct": 31.0,
+        "home_o1_5_pct": 54.5,
+        "away_o1_5_pct": 7.9
+      }
+    }
+  },
+  {
+    "fixture_id": 1342362,
+    "league": {
+      "id": 103,
+      "name": "Eliteserien"
+    },
+    "home": {
+      "id": 319,
+      "name": "Brann",
+      "logo": "https://media.api-sports.io/football/teams/319.png",
+      "winner": null
+    },
+    "away": {
+      "id": 327,
+      "name": "Bodo/Glimt",
+      "logo": "https://media.api-sports.io/football/teams/327.png",
+      "winner": null
+    },
+    "home_id": 319,
+    "away_id": 327,
+    "home_logo": "https://media.api-sports.io/football/teams/319.png",
+    "away_logo": "https://media.api-sports.io/football/teams/327.png",
+    "date": "2025-10-29T18:00:00+00:00",
+    "book_odds": {
+      "home_win": 3.0,
+      "draw": 3.75,
+      "away_win": 2.15,
+      "btts": 1.40,
+      "over_2_5": 1.44,
+      "over_3_5": 2.00,
+      "under_2_5": 2.70,
+      "home_o1_5": 2.00,
+      "away_o1_5": 1.66
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.93",
+        "away": "1.92",
+        "total": "3.85"
       },
       "corners": {
         "home": "4.5",
-        "away": "5.6",
-        "total": "10.1"
+        "away": "6.4",
+        "total": "10.9"
       },
       "shots": {
-        "home": "12.1",
-        "away": "13.2",
-        "total": "25.3"
+        "home": "9.3",
+        "away": "15.8",
+        "total": "25.2"
       },
       "percents": {
-        "home_win_pct": 14.5,
-        "draw_pct": 21.3,
-        "away_win_pct": 64.2,
-        "over_2_5_pct": 51.8,
-        "over_3_5_pct": 29.8,
-        "under_2_5_pct": 48.2,
-        "btts_pct": 46.9,
-        "home_o1_5_pct": 19.4,
-        "away_o1_5_pct": 58.2
+        "home_win_pct": 39.0,
+        "draw_pct": 21.5,
+        "away_win_pct": 39.5,
+        "over_2_5_pct": 74.0,
+        "over_3_5_pct": 54.0,
+        "under_2_5_pct": 26.0,
+        "btts_pct": 73.0,
+        "home_o1_5_pct": 57.5,
+        "away_o1_5_pct": 57.0
       }
     }
   },
   {
-    "fixture_id": 1463459,
+    "fixture_id": 1387779,
     "league": {
-      "id": 81,
-      "name": "DFB Pokal"
+      "id": 61,
+      "name": "Ligue 1"
     },
     "home": {
-      "id": 169,
-      "name": "Frankfurt",
-      "logo": "https://media.api-sports.io/football/teams/169.png",
+      "id": 111,
+      "name": "Le Havre",
+      "logo": "https://media.api-sports.io/football/teams/111.png",
       "winner": null
     },
     "away": {
-      "id": 165,
-      "name": "Dortmund",
-      "logo": "https://media.api-sports.io/football/teams/165.png",
+      "id": 106,
+      "name": "Stade Brestois 29",
+      "logo": "https://media.api-sports.io/football/teams/106.png",
       "winner": null
     },
-    "home_id": 169,
-    "away_id": 165,
-    "home_logo": "https://media.api-sports.io/football/teams/169.png",
-    "away_logo": "https://media.api-sports.io/football/teams/165.png",
-    "date": "2025-10-28T17:30:00+00:00",
+    "home_id": 111,
+    "away_id": 106,
+    "home_logo": "https://media.api-sports.io/football/teams/111.png",
+    "away_logo": "https://media.api-sports.io/football/teams/106.png",
+    "date": "2025-10-29T18:00:00+00:00",
     "book_odds": {
-      "home_win": 3.0,
-      "draw": 3.6,
-      "away_win": 2.2,
-      "btts": 1.44,
-      "over_2_5": 1.53,
-      "over_3_5": 2.25,
-      "under_2_5": 2.40,
-      "home_o1_5": 2.10,
-      "away_o1_5": 1.83
+      "home_win": 2.55,
+      "draw": 3.2,
+      "away_win": 2.9,
+      "btts": 1.70,
+      "over_2_5": 1.90,
+      "over_3_5": 3.40,
+      "under_2_5": 1.90,
+      "home_o1_5": 2.25,
+      "away_o1_5": 2.50
     },
     "sim_stats": {
       "xg": {
-        "home": "2.03",
-        "away": "1.78",
-        "total": "3.81"
+        "home": "1.74",
+        "away": "1.45",
+        "total": "3.19"
       },
       "corners": {
-        "home": "5.3",
-        "away": "4.8",
-        "total": "10.1"
+        "home": "5.2",
+        "away": "4.7",
+        "total": "9.9"
       },
       "shots": {
-        "home": "14.7",
-        "away": "13.2",
-        "total": "27.9"
+        "home": "12.5",
+        "away": "12.7",
+        "total": "25.1"
       },
       "percents": {
-        "home_win_pct": 44.4,
-        "draw_pct": 20.7,
-        "away_win_pct": 34.9,
-        "over_2_5_pct": 72.9,
-        "over_3_5_pct": 52.9,
-        "under_2_5_pct": 27.1,
-        "btts_pct": 71.7,
-        "home_o1_5_pct": 60.6,
-        "away_o1_5_pct": 52.8
+        "home_win_pct": 44.7,
+        "draw_pct": 23.2,
+        "away_win_pct": 32.1,
+        "over_2_5_pct": 62.0,
+        "over_3_5_pct": 38.9,
+        "under_2_5_pct": 38.0,
+        "btts_pct": 63.3,
+        "home_o1_5_pct": 51.6,
+        "away_o1_5_pct": 41.9
       }
     }
   },
   {
-    "fixture_id": 1463460,
+    "fixture_id": 1387780,
     "league": {
-      "id": 81,
-      "name": "DFB Pokal"
+      "id": 61,
+      "name": "Ligue 1"
     },
     "home": {
-      "id": 161,
-      "name": "Wolfsburg",
-      "logo": "https://media.api-sports.io/football/teams/161.png",
+      "id": 97,
+      "name": "Lorient",
+      "logo": "https://media.api-sports.io/football/teams/97.png",
       "winner": null
     },
     "away": {
-      "id": 191,
-      "name": "Holstein Kiel",
-      "logo": "https://media.api-sports.io/football/teams/191.png",
+      "id": 85,
+      "name": "PSG",
+      "logo": "https://media.api-sports.io/football/teams/85.png",
       "winner": null
     },
-    "home_id": 161,
-    "away_id": 191,
-    "home_logo": "https://media.api-sports.io/football/teams/161.png",
-    "away_logo": "https://media.api-sports.io/football/teams/191.png",
-    "date": "2025-10-28T17:30:00+00:00",
+    "home_id": 97,
+    "away_id": 85,
+    "home_logo": "https://media.api-sports.io/football/teams/97.png",
+    "away_logo": "https://media.api-sports.io/football/teams/85.png",
+    "date": "2025-10-29T18:00:00+00:00",
     "book_odds": {
-      "home_win": 1.55,
-      "draw": 4.2,
-      "away_win": 5.5,
-      "btts": 1.90,
-      "over_2_5": 1.80,
-      "over_3_5": 3.00,
-      "under_2_5": 2.00,
-      "home_o1_5": 1.61,
-      "away_o1_5": 4.33
+      "home_win": 9.0,
+      "draw": 6.5,
+      "away_win": 1.25,
+      "btts": 1.80,
+      "over_2_5": 1.44,
+      "over_3_5": 2.10,
+      "under_2_5": 2.75,
+      "home_o1_5": 4.50,
+      "away_o1_5": 1.28
     },
     "sim_stats": {
       "xg": {
-        "home": "1.50",
-        "away": "1.12",
-        "total": "2.62"
+        "home": "1.40",
+        "away": "2.95",
+        "total": "4.35"
       },
       "corners": {
-        "home": "6.6",
-        "away": "4.2",
+        "home": "3.1",
+        "away": "7.7",
         "total": "10.8"
       },
       "shots": {
-        "home": "16.4",
-        "away": "10.9",
-        "total": "27.4"
+        "home": "7.9",
+        "away": "21.8",
+        "total": "29.7"
       },
       "percents": {
-        "home_win_pct": 46.6,
-        "draw_pct": 25.3,
-        "away_win_pct": 28.1,
-        "over_2_5_pct": 48.2,
-        "over_3_5_pct": 26.0,
-        "under_2_5_pct": 51.8,
-        "btts_pct": 52.3,
-        "home_o1_5_pct": 44.2,
-        "away_o1_5_pct": 30.4
+        "home_win_pct": 15.7,
+        "draw_pct": 15.6,
+        "away_win_pct": 68.6,
+        "over_2_5_pct": 80.8,
+        "over_3_5_pct": 62.7,
+        "under_2_5_pct": 19.2,
+        "btts_pct": 71.6,
+        "home_o1_5_pct": 40.9,
+        "away_o1_5_pct": 79.0
       }
     }
   },
   {
-    "fixture_id": 1463461,
+    "fixture_id": 1387782,
     "league": {
-      "id": 81,
-      "name": "DFB Pokal"
+      "id": 61,
+      "name": "Ligue 1"
     },
     "home": {
-      "id": 180,
-      "name": "Heidenheim",
-      "logo": "https://media.api-sports.io/football/teams/180.png",
+      "id": 112,
+      "name": "Metz",
+      "logo": "https://media.api-sports.io/football/teams/112.png",
       "winner": null
     },
     "away": {
-      "id": 175,
-      "name": "Hamburger",
-      "logo": "https://media.api-sports.io/football/teams/175.png",
+      "id": 116,
+      "name": "Lens",
+      "logo": "https://media.api-sports.io/football/teams/116.png",
       "winner": null
     },
-    "home_id": 180,
-    "away_id": 175,
-    "home_logo": "https://media.api-sports.io/football/teams/180.png",
-    "away_logo": "https://media.api-sports.io/football/teams/175.png",
-    "date": "2025-10-28T17:30:00+00:00",
+    "home_id": 112,
+    "away_id": 116,
+    "home_logo": "https://media.api-sports.io/football/teams/112.png",
+    "away_logo": "https://media.api-sports.io/football/teams/116.png",
+    "date": "2025-10-29T18:00:00+00:00",
     "book_odds": {
-      "home_win": 2.55,
-      "draw": 3.6,
-      "away_win": 2.55,
-      "btts": 1.53,
-      "over_2_5": 1.60,
-      "over_3_5": 2.50,
-      "under_2_5": 2.30,
-      "home_o1_5": 2.00,
+      "home_win": 5.75,
+      "draw": 4.33,
+      "away_win": 1.53,
+      "btts": 1.80,
+      "over_2_5": 1.66,
+      "over_3_5": 2.75,
+      "under_2_5": 2.20,
+      "home_o1_5": 4.00,
+      "away_o1_5": 1.53
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.13",
+        "away": "0.82",
+        "total": "1.95"
+      },
+      "corners": {
+        "home": "4.4",
+        "away": "5.2",
+        "total": "9.5"
+      },
+      "shots": {
+        "home": "12.2",
+        "away": "14.0",
+        "total": "26.2"
+      },
+      "percents": {
+        "home_win_pct": 42.9,
+        "draw_pct": 30.7,
+        "away_win_pct": 26.4,
+        "over_2_5_pct": 30.9,
+        "over_3_5_pct": 13.3,
+        "under_2_5_pct": 69.1,
+        "btts_pct": 37.6,
+        "home_o1_5_pct": 31.5,
+        "away_o1_5_pct": 20.1
+      }
+    }
+  },
+  {
+    "fixture_id": 1387784,
+    "league": {
+      "id": 61,
+      "name": "Ligue 1"
+    },
+    "home": {
+      "id": 84,
+      "name": "Nice",
+      "logo": "https://media.api-sports.io/football/teams/84.png",
+      "winner": null
+    },
+    "away": {
+      "id": 79,
+      "name": "Lille",
+      "logo": "https://media.api-sports.io/football/teams/79.png",
+      "winner": null
+    },
+    "home_id": 84,
+    "away_id": 79,
+    "home_logo": "https://media.api-sports.io/football/teams/84.png",
+    "away_logo": "https://media.api-sports.io/football/teams/79.png",
+    "date": "2025-10-29T18:00:00+00:00",
+    "book_odds": {
+      "home_win": 2.88,
+      "draw": 3.4,
+      "away_win": 2.45,
+      "btts": 1.61,
+      "over_2_5": 1.72,
+      "over_3_5": 2.75,
+      "under_2_5": 2.10,
+      "home_o1_5": 2.50,
       "away_o1_5": 2.00
     },
     "sim_stats": {
       "xg": {
-        "home": "1.80",
-        "away": "1.30",
-        "total": "3.10"
+        "home": "1.63",
+        "away": "1.54",
+        "total": "3.17"
+      },
+      "corners": {
+        "home": "5.2",
+        "away": "4.6",
+        "total": "9.9"
+      },
+      "shots": {
+        "home": "13.9",
+        "away": "12.4",
+        "total": "26.3"
+      },
+      "percents": {
+        "home_win_pct": 40.2,
+        "draw_pct": 23.6,
+        "away_win_pct": 36.2,
+        "over_2_5_pct": 61.2,
+        "over_3_5_pct": 39.2,
+        "under_2_5_pct": 38.8,
+        "btts_pct": 63.0,
+        "home_o1_5_pct": 48.3,
+        "away_o1_5_pct": 45.7
+      }
+    }
+  },
+  {
+    "fixture_id": 1477447,
+    "league": {
+      "id": 90,
+      "name": "KNVB Beker"
+    },
+    "home": {
+      "id": 203,
+      "name": "NAC Breda",
+      "logo": "https://media.api-sports.io/football/teams/203.png",
+      "winner": null
+    },
+    "away": {
+      "id": 206,
+      "name": "Heracles",
+      "logo": "https://media.api-sports.io/football/teams/206.png",
+      "winner": null
+    },
+    "home_id": 203,
+    "away_id": 206,
+    "home_logo": "https://media.api-sports.io/football/teams/203.png",
+    "away_logo": "https://media.api-sports.io/football/teams/206.png",
+    "date": "2025-10-29T19:00:00+00:00",
+    "book_odds": {
+      "home_win": 1.61,
+      "draw": 4.10,
+      "away_win": 3.90,
+      "btts": 1.53,
+      "over_2_5": 1.50,
+      "over_3_5": 2.25,
+      "under_2_5": 2.50,
+      "home_o1_5": 1.57,
+      "away_o1_5": 2.62
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "2.10",
+        "away": "1.24",
+        "total": "3.34"
+      },
+      "corners": {
+        "home": "5.4",
+        "away": "5.0",
+        "total": "10.4"
+      },
+      "shots": {
+        "home": "15.0",
+        "away": "12.3",
+        "total": "27.3"
+      },
+      "percents": {
+        "home_win_pct": 57.2,
+        "draw_pct": 20.5,
+        "away_win_pct": 22.4,
+        "over_2_5_pct": 64.8,
+        "over_3_5_pct": 42.6,
+        "under_2_5_pct": 35.2,
+        "btts_pct": 63.1,
+        "home_o1_5_pct": 62.1,
+        "away_o1_5_pct": 35.1
+      }
+    }
+  },
+  {
+    "fixture_id": 1377945,
+    "league": {
+      "id": 135,
+      "name": "Serie A"
+    },
+    "home": {
+      "id": 500,
+      "name": "Bologna",
+      "logo": "https://media.api-sports.io/football/teams/500.png",
+      "winner": null
+    },
+    "away": {
+      "id": 503,
+      "name": "Torino",
+      "logo": "https://media.api-sports.io/football/teams/503.png",
+      "winner": null
+    },
+    "home_id": 500,
+    "away_id": 503,
+    "home_logo": "https://media.api-sports.io/football/teams/500.png",
+    "away_logo": "https://media.api-sports.io/football/teams/503.png",
+    "date": "2025-10-29T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 1.75,
+      "draw": 3.5,
+      "away_win": 5.0,
+      "btts": 2.05,
+      "over_2_5": 2.20,
+      "over_3_5": 4.33,
+      "under_2_5": 1.66,
+      "home_o1_5": 2.00,
+      "away_o1_5": 4.50
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "2.03",
+        "away": "0.86",
+        "total": "2.89"
+      },
+      "corners": {
+        "home": "5.7",
+        "away": "3.6",
+        "total": "9.3"
+      },
+      "shots": {
+        "home": "15.2",
+        "away": "9.0",
+        "total": "24.2"
+      },
+      "percents": {
+        "home_win_pct": 64.6,
+        "draw_pct": 20.6,
+        "away_win_pct": 14.8,
+        "over_2_5_pct": 55.4,
+        "over_3_5_pct": 32.6,
+        "under_2_5_pct": 44.6,
+        "btts_pct": 50.5,
+        "home_o1_5_pct": 60.0,
+        "away_o1_5_pct": 21.4
+      }
+    }
+  },
+  {
+    "fixture_id": 1377948,
+    "league": {
+      "id": 135,
+      "name": "Serie A"
+    },
+    "home": {
+      "id": 495,
+      "name": "Genoa",
+      "logo": "https://media.api-sports.io/football/teams/495.png",
+      "winner": null
+    },
+    "away": {
+      "id": 520,
+      "name": "Cremonese",
+      "logo": "https://media.api-sports.io/football/teams/520.png",
+      "winner": null
+    },
+    "home_id": 495,
+    "away_id": 520,
+    "home_logo": "https://media.api-sports.io/football/teams/495.png",
+    "away_logo": "https://media.api-sports.io/football/teams/520.png",
+    "date": "2025-10-29T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 1.85,
+      "draw": 3.25,
+      "away_win": 4.75,
+      "btts": 2.20,
+      "over_2_5": 2.50,
+      "over_3_5": 5.00,
+      "under_2_5": 1.53,
+      "home_o1_5": 2.20,
+      "away_o1_5": 5.00
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.22",
+        "away": "1.06",
+        "total": "2.28"
       },
       "corners": {
         "home": "5.0",
@@ -234,274 +864,777 @@
         "total": "9.8"
       },
       "shots": {
-        "home": "13.6",
-        "away": "12.7",
-        "total": "26.3"
+        "home": "12.9",
+        "away": "11.9",
+        "total": "24.8"
       },
       "percents": {
-        "home_win_pct": 49.4,
-        "draw_pct": 22.8,
-        "away_win_pct": 27.8,
-        "over_2_5_pct": 59.8,
-        "over_3_5_pct": 37.6,
-        "under_2_5_pct": 40.2,
-        "btts_pct": 60.0,
-        "home_o1_5_pct": 54.0,
-        "away_o1_5_pct": 37.4
+        "home_win_pct": 40.2,
+        "draw_pct": 28.1,
+        "away_win_pct": 31.7,
+        "over_2_5_pct": 40.1,
+        "over_3_5_pct": 19.5,
+        "under_2_5_pct": 59.9,
+        "btts_pct": 46.8,
+        "home_o1_5_pct": 34.0,
+        "away_o1_5_pct": 28.7
       }
     }
   },
   {
-    "fixture_id": 1377944,
+    "fixture_id": 1377949,
     "league": {
       "id": 135,
       "name": "Serie A"
     },
     "home": {
-      "id": 499,
-      "name": "Atalanta",
-      "logo": "https://media.api-sports.io/football/teams/499.png",
+      "id": 505,
+      "name": "Inter",
+      "logo": "https://media.api-sports.io/football/teams/505.png",
       "winner": null
     },
     "away": {
-      "id": 489,
-      "name": "AC Milan",
-      "logo": "https://media.api-sports.io/football/teams/489.png",
+      "id": 502,
+      "name": "Fiorentina",
+      "logo": "https://media.api-sports.io/football/teams/502.png",
       "winner": null
     },
-    "home_id": 499,
-    "away_id": 489,
-    "home_logo": "https://media.api-sports.io/football/teams/499.png",
-    "away_logo": "https://media.api-sports.io/football/teams/489.png",
-    "date": "2025-10-28T19:45:00+00:00",
+    "home_id": 505,
+    "away_id": 502,
+    "home_logo": "https://media.api-sports.io/football/teams/505.png",
+    "away_logo": "https://media.api-sports.io/football/teams/502.png",
+    "date": "2025-10-29T19:45:00+00:00",
     "book_odds": {
-      "home_win": 2.6,
-      "draw": 3.3,
-      "away_win": 2.7,
-      "btts": 1.61,
-      "over_2_5": 1.80,
-      "over_3_5": 3.00,
-      "under_2_5": 2.00,
-      "home_o1_5": 2.25,
-      "away_o1_5": 2.25
+      "home_win": 1.36,
+      "draw": 4.75,
+      "away_win": 9.0,
+      "btts": 1.95,
+      "over_2_5": 1.72,
+      "over_3_5": 2.75,
+      "under_2_5": 2.10,
+      "home_o1_5": 1.50,
+      "away_o1_5": 5.00
     },
     "sim_stats": {
       "xg": {
-        "home": "1.46",
-        "away": "1.50",
-        "total": "2.96"
+        "home": "2.05",
+        "away": "0.81",
+        "total": "2.86"
       },
       "corners": {
-        "home": "5.2",
-        "away": "4.6",
-        "total": "9.8"
+        "home": "6.0",
+        "away": "3.3",
+        "total": "9.3"
       },
       "shots": {
-        "home": "14.4",
-        "away": "12.7",
-        "total": "27.1"
+        "home": "16.2",
+        "away": "9.6",
+        "total": "25.8"
       },
       "percents": {
-        "home_win_pct": 37.0,
-        "draw_pct": 24.2,
-        "away_win_pct": 38.7,
-        "over_2_5_pct": 57.4,
-        "over_3_5_pct": 34.1,
-        "under_2_5_pct": 42.6,
-        "btts_pct": 60.3,
-        "home_o1_5_pct": 43.2,
-        "away_o1_5_pct": 44.2
+        "home_win_pct": 65.9,
+        "draw_pct": 20.2,
+        "away_win_pct": 13.9,
+        "over_2_5_pct": 54.9,
+        "over_3_5_pct": 32.7,
+        "under_2_5_pct": 45.1,
+        "btts_pct": 48.9,
+        "home_o1_5_pct": 60.6,
+        "away_o1_5_pct": 19.3
       }
     }
   },
   {
-    "fixture_id": 1463464,
+    "fixture_id": 1463474,
     "league": {
       "id": 81,
       "name": "DFB Pokal"
     },
     "home": {
-      "id": 163,
-      "name": "Borussia M.",
-      "logo": "https://media.api-sports.io/football/teams/163.png",
+      "id": 192,
+      "name": "FC K\u00f6ln",
+      "logo": "https://media.api-sports.io/football/teams/192.png",
       "winner": null
     },
     "away": {
-      "id": 785,
-      "name": "Karlsruher SC",
-      "logo": "https://media.api-sports.io/football/teams/785.png",
+      "id": 157,
+      "name": "Bayern",
+      "logo": "https://media.api-sports.io/football/teams/157.png",
       "winner": null
     },
-    "home_id": 163,
-    "away_id": 785,
-    "home_logo": "https://media.api-sports.io/football/teams/163.png",
-    "away_logo": "https://media.api-sports.io/football/teams/785.png",
-    "date": "2025-10-28T19:45:00+00:00",
+    "home_id": 192,
+    "away_id": 157,
+    "home_logo": "https://media.api-sports.io/football/teams/192.png",
+    "away_logo": "https://media.api-sports.io/football/teams/157.png",
+    "date": "2025-10-29T19:45:00+00:00",
     "book_odds": {
-      "home_win": 1.65,
-      "draw": 4.2,
-      "away_win": 4.5,
+      "home_win": 9.0,
+      "draw": 7.0,
+      "away_win": 1.25,
       "btts": 1.66,
-      "over_2_5": 1.61,
-      "over_3_5": 2.50,
-      "under_2_5": 2.25,
-      "home_o1_5": 1.61,
-      "away_o1_5": 3.25
+      "over_2_5": 1.30,
+      "over_3_5": 1.72,
+      "under_2_5": 3.50,
+      "home_o1_5": 3.75,
+      "away_o1_5": 1.22
     },
     "sim_stats": {
       "xg": {
-        "home": "1.87",
-        "away": "1.44",
-        "total": "3.31"
+        "home": "1.18",
+        "away": "2.70",
+        "total": "3.88"
       },
       "corners": {
-        "home": "6.9",
-        "away": "3.5",
-        "total": "10.4"
+        "home": "3.0",
+        "away": "7.5",
+        "total": "10.5"
       },
       "shots": {
-        "home": "17.3",
-        "away": "11.5",
-        "total": "28.7"
+        "home": "7.5",
+        "away": "20.6",
+        "total": "28.0"
       },
       "percents": {
-        "home_win_pct": 48.3,
-        "draw_pct": 22.2,
-        "away_win_pct": 29.5,
-        "over_2_5_pct": 63.8,
-        "over_3_5_pct": 41.9,
-        "under_2_5_pct": 36.2,
-        "btts_pct": 64.2,
-        "home_o1_5_pct": 56.7,
+        "home_win_pct": 14.8,
+        "draw_pct": 16.0,
+        "away_win_pct": 69.2,
+        "over_2_5_pct": 74.7,
+        "over_3_5_pct": 54.8,
+        "under_2_5_pct": 25.3,
+        "btts_pct": 64.7,
+        "home_o1_5_pct": 33.3,
+        "away_o1_5_pct": 75.0
+      }
+    }
+  },
+  {
+    "fixture_id": 1479617,
+    "league": {
+      "id": 48,
+      "name": "League Cup"
+    },
+    "home": {
+      "id": 76,
+      "name": "Swansea",
+      "logo": "https://media.api-sports.io/football/teams/76.png",
+      "winner": null
+    },
+    "away": {
+      "id": 50,
+      "name": "Man City",
+      "logo": "https://media.api-sports.io/football/teams/50.png",
+      "winner": null
+    },
+    "home_id": 76,
+    "away_id": 50,
+    "home_logo": "https://media.api-sports.io/football/teams/76.png",
+    "away_logo": "https://media.api-sports.io/football/teams/50.png",
+    "date": "2025-10-29T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 12.0,
+      "draw": 6.5,
+      "away_win": 1.22,
+      "btts": 1.95,
+      "over_2_5": 1.44,
+      "over_3_5": 2.10,
+      "under_2_5": 2.70,
+      "home_o1_5": 5.50,
+      "away_o1_5": 1.28
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "0.96",
+        "away": "2.41",
+        "total": "3.37"
+      },
+      "corners": {
+        "home": "3.5",
+        "away": "8.5",
+        "total": "11.9"
+      },
+      "shots": {
+        "home": "8.5",
+        "away": "19.9",
+        "total": "28.4"
+      },
+      "percents": {
+        "home_win_pct": 13.1,
+        "draw_pct": 17.3,
+        "away_win_pct": 69.6,
+        "over_2_5_pct": 65.3,
+        "over_3_5_pct": 43.7,
+        "under_2_5_pct": 34.7,
+        "btts_pct": 56.4,
+        "home_o1_5_pct": 24.7,
+        "away_o1_5_pct": 69.2
+      }
+    }
+  },
+  {
+    "fixture_id": 1479618,
+    "league": {
+      "id": 48,
+      "name": "League Cup"
+    },
+    "home": {
+      "id": 40,
+      "name": "Liverpool",
+      "logo": "https://media.api-sports.io/football/teams/40.png",
+      "winner": null
+    },
+    "away": {
+      "id": 52,
+      "name": "Palace",
+      "logo": "https://media.api-sports.io/football/teams/52.png",
+      "winner": null
+    },
+    "home_id": 40,
+    "away_id": 52,
+    "home_logo": "https://media.api-sports.io/football/teams/40.png",
+    "away_logo": "https://media.api-sports.io/football/teams/52.png",
+    "date": "2025-10-29T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 1.57,
+      "draw": 4.75,
+      "away_win": 4.5,
+      "btts": 1.61,
+      "over_2_5": 1.53,
+      "over_3_5": 2.37,
+      "under_2_5": 2.40,
+      "home_o1_5": 1.57,
+      "away_o1_5": 3.00
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.57",
+        "away": "1.00",
+        "total": "2.57"
+      },
+      "corners": {
+        "home": "6.8",
+        "away": "3.6",
+        "total": "10.3"
+      },
+      "shots": {
+        "home": "17.2",
+        "away": "9.8",
+        "total": "27.1"
+      },
+      "percents": {
+        "home_win_pct": 50.5,
+        "draw_pct": 25.2,
+        "away_win_pct": 24.2,
+        "over_2_5_pct": 47.5,
+        "over_3_5_pct": 25.4,
+        "under_2_5_pct": 52.5,
+        "btts_pct": 50.1,
+        "home_o1_5_pct": 46.0,
+        "away_o1_5_pct": 26.5
+      }
+    }
+  },
+  {
+    "fixture_id": 1479619,
+    "league": {
+      "id": 48,
+      "name": "League Cup"
+    },
+    "home": {
+      "id": 42,
+      "name": "Arsenal",
+      "logo": "https://media.api-sports.io/football/teams/42.png",
+      "winner": null
+    },
+    "away": {
+      "id": 51,
+      "name": "Brighton",
+      "logo": "https://media.api-sports.io/football/teams/51.png",
+      "winner": null
+    },
+    "home_id": 42,
+    "away_id": 51,
+    "home_logo": "https://media.api-sports.io/football/teams/42.png",
+    "away_logo": "https://media.api-sports.io/football/teams/51.png",
+    "date": "2025-10-29T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 1.44,
+      "draw": 4.2,
+      "away_win": 7.5,
+      "btts": 1.75,
+      "over_2_5": 1.61,
+      "over_3_5": 2.50,
+      "under_2_5": 2.25,
+      "home_o1_5": 1.50,
+      "away_o1_5": 3.75
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.91",
+        "away": "1.21",
+        "total": "3.12"
+      },
+      "corners": {
+        "home": "6.3",
+        "away": "3.8",
+        "total": "10.2"
+      },
+      "shots": {
+        "home": "14.5",
+        "away": "11.1",
+        "total": "25.6"
+      },
+      "percents": {
+        "home_win_pct": 54.2,
+        "draw_pct": 22.0,
+        "away_win_pct": 23.8,
+        "over_2_5_pct": 60.3,
+        "over_3_5_pct": 37.9,
+        "under_2_5_pct": 39.7,
+        "btts_pct": 59.6,
+        "home_o1_5_pct": 57.0,
+        "away_o1_5_pct": 34.0
+      }
+    }
+  },
+  {
+    "fixture_id": 1479620,
+    "league": {
+      "id": 48,
+      "name": "League Cup"
+    },
+    "home": {
+      "id": 39,
+      "name": "Wolves",
+      "logo": "https://media.api-sports.io/football/teams/39.png",
+      "winner": null
+    },
+    "away": {
+      "id": 49,
+      "name": "Chelsea",
+      "logo": "https://media.api-sports.io/football/teams/49.png",
+      "winner": null
+    },
+    "home_id": 39,
+    "away_id": 49,
+    "home_logo": "https://media.api-sports.io/football/teams/39.png",
+    "away_logo": "https://media.api-sports.io/football/teams/49.png",
+    "date": "2025-10-29T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 5.0,
+      "draw": 3.8,
+      "away_win": 1.67,
+      "btts": 1.57,
+      "over_2_5": 1.61,
+      "over_3_5": 2.50,
+      "under_2_5": 2.25,
+      "home_o1_5": 2.75,
+      "away_o1_5": 1.61
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.50",
+        "away": "2.00",
+        "total": "3.50"
+      },
+      "corners": {
+        "home": "4.2",
+        "away": "5.7",
+        "total": "9.9"
+      },
+      "shots": {
+        "home": "12.1",
+        "away": "13.7",
+        "total": "25.7"
+      },
+      "percents": {
+        "home_win_pct": 29.0,
+        "draw_pct": 21.3,
+        "away_win_pct": 49.7,
+        "over_2_5_pct": 68.0,
+        "over_3_5_pct": 46.4,
+        "under_2_5_pct": 32.0,
+        "btts_pct": 67.0,
+        "home_o1_5_pct": 44.4,
+        "away_o1_5_pct": 59.3
+      }
+    }
+  },
+  {
+    "fixture_id": 1479621,
+    "league": {
+      "id": 48,
+      "name": "League Cup"
+    },
+    "home": {
+      "id": 34,
+      "name": "Newcastle",
+      "logo": "https://media.api-sports.io/football/teams/34.png",
+      "winner": null
+    },
+    "away": {
+      "id": 47,
+      "name": "Tottenham",
+      "logo": "https://media.api-sports.io/football/teams/47.png",
+      "winner": null
+    },
+    "home_id": 34,
+    "away_id": 47,
+    "home_logo": "https://media.api-sports.io/football/teams/34.png",
+    "away_logo": "https://media.api-sports.io/football/teams/47.png",
+    "date": "2025-10-29T20:00:00+00:00",
+    "book_odds": {
+      "home_win": 1.75,
+      "draw": 3.7,
+      "away_win": 4.5,
+      "btts": 1.70,
+      "over_2_5": 1.75,
+      "over_3_5": 2.75,
+      "under_2_5": 2.05,
+      "home_o1_5": 1.66,
+      "away_o1_5": 3.40
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "2.21",
+        "away": "1.42",
+        "total": "3.63"
+      },
+      "corners": {
+        "home": "6.6",
+        "away": "4.8",
+        "total": "11.4"
+      },
+      "shots": {
+        "home": "15.4",
+        "away": "11.2",
+        "total": "26.6"
+      },
+      "percents": {
+        "home_win_pct": 55.5,
+        "draw_pct": 20.1,
+        "away_win_pct": 24.4,
+        "over_2_5_pct": 70.1,
+        "over_3_5_pct": 49.3,
+        "under_2_5_pct": 29.9,
+        "btts_pct": 67.2,
+        "home_o1_5_pct": 64.6,
+        "away_o1_5_pct": 42.1
+      }
+    }
+  },
+  {
+    "fixture_id": 1387781,
+    "league": {
+      "id": 61,
+      "name": "Ligue 1"
+    },
+    "home": {
+      "id": 81,
+      "name": "Marseille",
+      "logo": "https://media.api-sports.io/football/teams/81.png",
+      "winner": null
+    },
+    "away": {
+      "id": 77,
+      "name": "Angers",
+      "logo": "https://media.api-sports.io/football/teams/77.png",
+      "winner": null
+    },
+    "home_id": 81,
+    "away_id": 77,
+    "home_logo": "https://media.api-sports.io/football/teams/81.png",
+    "away_logo": "https://media.api-sports.io/football/teams/77.png",
+    "date": "2025-10-29T20:05:00+00:00",
+    "book_odds": {
+      "home_win": 1.22,
+      "draw": 6.5,
+      "away_win": 13.0,
+      "btts": 2.20,
+      "over_2_5": 1.61,
+      "over_3_5": 2.50,
+      "under_2_5": 2.30,
+      "home_o1_5": 1.33,
+      "away_o1_5": 7.00
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "2.64",
+        "away": "0.95",
+        "total": "3.59"
+      },
+      "corners": {
+        "home": "5.7",
+        "away": "3.0",
+        "total": "8.7"
+      },
+      "shots": {
+        "home": "15.9",
+        "away": "8.7",
+        "total": "24.6"
+      },
+      "percents": {
+        "home_win_pct": 73.3,
+        "draw_pct": 15.1,
+        "away_win_pct": 11.6,
+        "over_2_5_pct": 69.4,
+        "over_3_5_pct": 48.1,
+        "under_2_5_pct": 30.6,
+        "btts_pct": 56.6,
+        "home_o1_5_pct": 74.0,
+        "away_o1_5_pct": 24.6
+      }
+    }
+  },
+  {
+    "fixture_id": 1387783,
+    "league": {
+      "id": 61,
+      "name": "Ligue 1"
+    },
+    "home": {
+      "id": 83,
+      "name": "Nantes",
+      "logo": "https://media.api-sports.io/football/teams/83.png",
+      "winner": null
+    },
+    "away": {
+      "id": 91,
+      "name": "Monaco",
+      "logo": "https://media.api-sports.io/football/teams/91.png",
+      "winner": null
+    },
+    "home_id": 83,
+    "away_id": 91,
+    "home_logo": "https://media.api-sports.io/football/teams/83.png",
+    "away_logo": "https://media.api-sports.io/football/teams/91.png",
+    "date": "2025-10-29T20:05:00+00:00",
+    "book_odds": {
+      "home_win": 4.75,
+      "draw": 4.0,
+      "away_win": 1.67,
+      "btts": 1.66,
+      "over_2_5": 1.66,
+      "over_3_5": 2.62,
+      "under_2_5": 2.20,
+      "home_o1_5": 3.25,
+      "away_o1_5": 1.61
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.56",
+        "away": "1.43",
+        "total": "2.99"
+      },
+      "corners": {
+        "home": "4.5",
+        "away": "5.4",
+        "total": "9.8"
+      },
+      "shots": {
+        "home": "11.5",
+        "away": "12.9",
+        "total": "24.4"
+      },
+      "percents": {
+        "home_win_pct": 40.6,
+        "draw_pct": 24.4,
+        "away_win_pct": 34.9,
+        "over_2_5_pct": 57.7,
+        "over_3_5_pct": 34.7,
+        "under_2_5_pct": 42.3,
+        "btts_pct": 60.6,
+        "home_o1_5_pct": 46.4,
         "away_o1_5_pct": 41.8
       }
     }
   },
   {
-    "fixture_id": 1463465,
+    "fixture_id": 1387785,
     "league": {
-      "id": 81,
-      "name": "DFB Pokal"
+      "id": 61,
+      "name": "Ligue 1"
     },
     "home": {
-      "id": 170,
-      "name": "FC Augsburg",
-      "logo": "https://media.api-sports.io/football/teams/170.png",
+      "id": 114,
+      "name": "Paris FC",
+      "logo": "https://media.api-sports.io/football/teams/114.png",
       "winner": null
     },
     "away": {
-      "id": 176,
-      "name": "VfL Bochum",
-      "logo": "https://media.api-sports.io/football/teams/176.png",
+      "id": 80,
+      "name": "Lyon",
+      "logo": "https://media.api-sports.io/football/teams/80.png",
       "winner": null
     },
-    "home_id": 170,
-    "away_id": 176,
-    "home_logo": "https://media.api-sports.io/football/teams/170.png",
-    "away_logo": "https://media.api-sports.io/football/teams/176.png",
-    "date": "2025-10-28T19:45:00+00:00",
+    "home_id": 114,
+    "away_id": 80,
+    "home_logo": "https://media.api-sports.io/football/teams/114.png",
+    "away_logo": "https://media.api-sports.io/football/teams/80.png",
+    "date": "2025-10-29T20:05:00+00:00",
     "book_odds": {
-      "home_win": 1.53,
-      "draw": 4.5,
-      "away_win": 5.25,
-      "btts": 1.66,
-      "over_2_5": 1.57,
-      "over_3_5": 2.37,
-      "under_2_5": 2.35,
-      "home_o1_5": 1.53,
-      "away_o1_5": 3.40
+      "home_win": 2.75,
+      "draw": 3.2,
+      "away_win": 2.6,
+      "btts": 1.53,
+      "over_2_5": 1.66,
+      "over_3_5": 2.75,
+      "under_2_5": 2.20,
+      "home_o1_5": 2.20,
+      "away_o1_5": 2.10
     },
     "sim_stats": {
       "xg": {
-        "home": "1.71",
-        "away": "1.69",
-        "total": "3.40"
+        "home": "2.01",
+        "away": "1.58",
+        "total": "3.59"
       },
       "corners": {
-        "home": "5.7",
-        "away": "4.2",
-        "total": "9.9"
-      },
-      "shots": {
-        "home": "14.5",
-        "away": "11.6",
-        "total": "26.2"
-      },
-      "percents": {
-        "home_win_pct": 39.2,
-        "draw_pct": 22.7,
-        "away_win_pct": 38.1,
-        "over_2_5_pct": 66.0,
-        "over_3_5_pct": 43.7,
-        "under_2_5_pct": 34.0,
-        "btts_pct": 66.7,
-        "home_o1_5_pct": 51.1,
-        "away_o1_5_pct": 50.2
-      }
-    }
-  },
-  {
-    "fixture_id": 1463466,
-    "league": {
-      "id": 81,
-      "name": "DFB Pokal"
-    },
-    "home": {
-      "id": 186,
-      "name": "FC St. Pauli",
-      "logo": "https://media.api-sports.io/football/teams/186.png",
-      "winner": null
-    },
-    "away": {
-      "id": 167,
-      "name": "1899 Hoffenheim",
-      "logo": "https://media.api-sports.io/football/teams/167.png",
-      "winner": null
-    },
-    "home_id": 186,
-    "away_id": 167,
-    "home_logo": "https://media.api-sports.io/football/teams/186.png",
-    "away_logo": "https://media.api-sports.io/football/teams/167.png",
-    "date": "2025-10-28T19:45:00+00:00",
-    "book_odds": {
-      "home_win": 2.8,
-      "draw": 3.4,
-      "away_win": 2.38,
-      "btts": 1.61,
-      "over_2_5": 1.80,
-      "over_3_5": 3.00,
-      "under_2_5": 2.00,
-      "home_o1_5": 2.37,
-      "away_o1_5": 2.20
-    },
-    "sim_stats": {
-      "xg": {
-        "home": "1.15",
-        "away": "1.72",
-        "total": "2.87"
-      },
-      "corners": {
-        "home": "5.2",
-        "away": "4.2",
-        "total": "9.3"
+        "home": "5.3",
+        "away": "4.9",
+        "total": "10.2"
       },
       "shots": {
         "home": "13.7",
         "away": "11.7",
-        "total": "25.4"
+        "total": "25.3"
       },
       "percents": {
-        "home_win_pct": 25.5,
-        "draw_pct": 23.9,
-        "away_win_pct": 50.6,
-        "over_2_5_pct": 54.8,
-        "over_3_5_pct": 32.8,
-        "under_2_5_pct": 45.2,
-        "btts_pct": 56.2,
-        "home_o1_5_pct": 31.7,
-        "away_o1_5_pct": 51.4
+        "home_win_pct": 48.0,
+        "draw_pct": 21.5,
+        "away_win_pct": 30.4,
+        "over_2_5_pct": 69.6,
+        "over_3_5_pct": 48.6,
+        "under_2_5_pct": 30.4,
+        "btts_pct": 68.7,
+        "home_o1_5_pct": 60.2,
+        "away_o1_5_pct": 47.2
+      }
+    }
+  },
+  {
+    "fixture_id": 1387786,
+    "league": {
+      "id": 61,
+      "name": "Ligue 1"
+    },
+    "home": {
+      "id": 95,
+      "name": "Strasbourg",
+      "logo": "https://media.api-sports.io/football/teams/95.png",
+      "winner": null
+    },
+    "away": {
+      "id": 108,
+      "name": "Auxerre",
+      "logo": "https://media.api-sports.io/football/teams/108.png",
+      "winner": null
+    },
+    "home_id": 95,
+    "away_id": 108,
+    "home_logo": "https://media.api-sports.io/football/teams/95.png",
+    "away_logo": "https://media.api-sports.io/football/teams/108.png",
+    "date": "2025-10-29T20:05:00+00:00",
+    "book_odds": {
+      "home_win": 1.7,
+      "draw": 3.75,
+      "away_win": 4.75,
+      "btts": 1.75,
+      "over_2_5": 1.80,
+      "over_3_5": 3.00,
+      "under_2_5": 2.00,
+      "home_o1_5": 1.72,
+      "away_o1_5": 3.50
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "2.27",
+        "away": "0.84",
+        "total": "3.11"
+      },
+      "corners": {
+        "home": "5.8",
+        "away": "3.8",
+        "total": "9.6"
+      },
+      "shots": {
+        "home": "13.7",
+        "away": "11.3",
+        "total": "25.0"
+      },
+      "percents": {
+        "home_win_pct": 69.6,
+        "draw_pct": 17.9,
+        "away_win_pct": 12.4,
+        "over_2_5_pct": 59.6,
+        "over_3_5_pct": 37.7,
+        "under_2_5_pct": 40.4,
+        "btts_pct": 50.3,
+        "home_o1_5_pct": 65.6,
+        "away_o1_5_pct": 20.8
+      }
+    }
+  },
+  {
+    "fixture_id": 1387787,
+    "league": {
+      "id": 61,
+      "name": "Ligue 1"
+    },
+    "home": {
+      "id": 96,
+      "name": "Toulouse",
+      "logo": "https://media.api-sports.io/football/teams/96.png",
+      "winner": null
+    },
+    "away": {
+      "id": 94,
+      "name": "Rennes",
+      "logo": "https://media.api-sports.io/football/teams/94.png",
+      "winner": null
+    },
+    "home_id": 96,
+    "away_id": 94,
+    "home_logo": "https://media.api-sports.io/football/teams/96.png",
+    "away_logo": "https://media.api-sports.io/football/teams/94.png",
+    "date": "2025-10-29T20:05:00+00:00",
+    "book_odds": {
+      "home_win": 2.1,
+      "draw": 3.4,
+      "away_win": 3.4,
+      "btts": 1.70,
+      "over_2_5": 1.90,
+      "over_3_5": 3.20,
+      "under_2_5": 1.90,
+      "home_o1_5": 2.10,
+      "away_o1_5": 2.75
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.99",
+        "away": "1.42",
+        "total": "3.41"
+      },
+      "corners": {
+        "home": "4.9",
+        "away": "4.2",
+        "total": "9.1"
+      },
+      "shots": {
+        "home": "12.9",
+        "away": "11.0",
+        "total": "23.9"
+      },
+      "percents": {
+        "home_win_pct": 51.6,
+        "draw_pct": 21.3,
+        "away_win_pct": 27.0,
+        "over_2_5_pct": 66.0,
+        "over_3_5_pct": 44.2,
+        "under_2_5_pct": 34.0,
+        "btts_pct": 65.3,
+        "home_o1_5_pct": 59.5,
+        "away_o1_5_pct": 41.5
       }
     }
   }
-  
 ]
