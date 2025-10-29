@@ -20,6 +20,7 @@ def find_top_picks(fixtures):
         ("home_win_pct", "home_win", lambda m: f"{m['home']['name']} Win"),
         ("away_win_pct", "away_win", lambda m: f"{m['away']['name']} Win"),
         ("over_2_5_pct", "over_2_5", lambda m: "Over 2.5 Goals"),
+        ("over_3_5_pct", "over_3_5", lambda m: "Over 3.5 Goals"),
         ("under_2_5_pct", "under_2_5", lambda m: "Under 2.5 Goals"),
         ("btts_pct", "btts", lambda m: "BTTS Yes"),
         ("home_o1_5_pct", "home_o1_5", lambda m: f"{m['home']['name']} o1.5 Goals"),

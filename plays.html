@@ -108,11 +108,13 @@ const MARKET_MAP = [
   {sim:'home_win_pct',  book:'home_win',  label:(m)=>`${m.home.name} Win`},
   {sim:'away_win_pct',  book:'away_win',  label:(m)=>`${m.away.name} Win`},
   {sim:'over_2_5_pct',  book:'over_2_5',  label:()=>`Over 2.5 Goals`},
+  {sim:'over_3_5_pct',  book:'over_3_5',  label:()=>`Over 3.5 Goals`},   // ✅ Added this line
   {sim:'under_2_5_pct', book:'under_2_5', label:()=>`Under 2.5 Goals`},
   {sim:'btts_pct',      book:'btts',      label:()=>`BTTS Yes`},
   {sim:'home_o1_5_pct', book:'home_o1_5', label:(m)=>`${m.home.name} o1.5 Goals`},
   {sim:'away_o1_5_pct', book:'away_o1_5', label:(m)=>`${m.away.name} o1.5 Goals`}
 ];
+
 
 async function loadTopPicks() {
   const fixtures = await fetch("fixtures.json").then(r=>r.json()).catch(()=>[]);
