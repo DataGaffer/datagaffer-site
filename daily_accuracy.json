@@ -1584,6 +1584,61 @@
           "accuracy_score": 92.5
         }
       ]
+    },
+    {
+      "date": "2025-10-30",
+      "matches": [
+        {
+          "date": "2025-10-30",
+          "league": "DBU Pokalen",
+          "match": "FC Midtjylland vs Silkeborg",
+          "fixture_id": 1476670,
+          "projected_score": "3.21 - 1.24",
+          "actual_score": "4 - 0",
+          "avg_diff": 1.02,
+          "accuracy_score": 74.5
+        },
+        {
+          "date": "2025-10-30",
+          "league": "Serie A",
+          "match": "Cagliari vs Sassuolo",
+          "fixture_id": 1377946,
+          "projected_score": "1.24 - 0.97",
+          "actual_score": "1 - 2",
+          "avg_diff": 0.64,
+          "accuracy_score": 84.0
+        },
+        {
+          "date": "2025-10-30",
+          "league": "KNVB Beker",
+          "match": "Sparta Rotterdam vs Groningen",
+          "fixture_id": 1477453,
+          "projected_score": "1.69 - 1.67",
+          "actual_score": "5 - 2",
+          "avg_diff": 1.82,
+          "accuracy_score": 54.5
+        },
+        {
+          "date": "2025-10-30",
+          "league": "Serie A",
+          "match": "Pisa vs Lazio",
+          "fixture_id": 1377952,
+          "projected_score": "0.58 - 0.72",
+          "actual_score": "0 - 0",
+          "avg_diff": 0.65,
+          "accuracy_score": 83.8
+        },
+        {
+          "date": "2025-10-30",
+          "league": "DBU Pokalen",
+          "match": "FC Nordsjaelland vs Brondby",
+          "fixture_id": 1476671,
+          "projected_score": "1.36 - 1.10",
+          "actual_score": "2 - 2",
+          "avg_diff": 0.77,
+          "accuracy_score": 80.8
+        }
+      ]
     }
   ],
   "leagues": [
@@ -1598,12 +1653,12 @@
     },
     {
       "league": "Serie A",
-      "games_tracked": 24,
-      "dg_score": 78.2,
-      "sim_avg_goals": 2.65,
-      "actual_avg_goals": 2.33,
-      "actual_btts_pct": 54.2,
-      "actual_over25_pct": 45.8
+      "games_tracked": 26,
+      "dg_score": 78.6,
+      "sim_avg_goals": 2.58,
+      "actual_avg_goals": 2.27,
+      "actual_btts_pct": 53.8,
+      "actual_over25_pct": 46.2
     },
     {
       "league": "La Liga",
@@ -1679,11 +1734,11 @@
     },
     {
       "league": "DBU Pokalen",
-      "games_tracked": 1,
-      "dg_score": 84.5,
-      "sim_avg_goals": 2.76,
+      "games_tracked": 3,
+      "dg_score": 79.9,
+      "sim_avg_goals": 3.22,
       "actual_avg_goals": 4.0,
-      "actual_btts_pct": 100.0,
+      "actual_btts_pct": 66.7,
       "actual_over25_pct": 100.0
     },
     {
@@ -1697,10 +1752,10 @@
     },
     {
       "league": "KNVB Beker",
-      "games_tracked": 1,
-      "dg_score": 51.8,
-      "sim_avg_goals": 3.34,
-      "actual_avg_goals": 5.0,
+      "games_tracked": 2,
+      "dg_score": 53.1,
+      "sim_avg_goals": 3.35,
+      "actual_avg_goals": 6.0,
       "actual_btts_pct": 100.0,
       "actual_over25_pct": 100.0
     },

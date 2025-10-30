@@ -396,6 +396,18 @@
   { "name": "FC Fredericia", "id": 2061, "league": "Danish Superliga", "logo": "https://media-4.api-sports.io/football/teams/2061.png" },
   { "name": "Vejle", "id": 395, "league": "Danish Superliga", "logo": "https://media-4.api-sports.io/football/teams/395.png" },
 
+   { "name": "FC Thun", "id": 1012, "logo": "https://media-4.api-sports.io/football/teams/1012.png" },
+  { "name": "FC St. Gallen", "id": 1011, "logo": "https://media-4.api-sports.io/football/teams/1011.png" },
+  { "name": "FC Sion", "id": 630, "logo": "https://media-4.api-sports.io/football/teams/630.png" },
+  { "name": "FC Luzern", "id": 644, "logo": "https://media-4.api-sports.io/football/teams/644.png" },
+  { "name": "Servette FC", "id": 2184, "logo": "https://media-4.api-sports.io/football/teams/2184.png" },
+  { "name": "FC Lugano", "id": 606, "logo": "https://media-4.api-sports.io/football/teams/606.png" },
+  { "name": "FC Zürich", "id": 783, "logo": "https://media-4.api-sports.io/football/teams/783.png" },
+  { "name": "Lausanne", "id": 1014, "logo": "https://media-4.api-sports.io/football/teams/1014.png" },
+  { "name": "Grasshoppers", "id": 1013, "logo": "https://media-4.api-sports.io/football/teams/1013.png" },
+  { "name": "FC Winterthur", "id": 2180, "logo": "https://media-4.api-sports.io/football/teams/2180.png" },
+
+
 
   
    {

@@ -20,7 +20,6 @@ def find_top_picks(fixtures):
         ("home_win_pct", "home_win", lambda m: f"{m['home']['name']} Win"),
         ("away_win_pct", "away_win", lambda m: f"{m['away']['name']} Win"),
         ("over_2_5_pct", "over_2_5", lambda m: "Over 2.5 Goals"),
-        ("over_3_5_pct", "over_3_5", lambda m: "Over 3.5 Goals"),
         ("under_2_5_pct", "under_2_5", lambda m: "Under 2.5 Goals"),
         ("btts_pct", "btts", lambda m: "BTTS Yes"),
         ("home_o1_5_pct", "home_o1_5", lambda m: f"{m['home']['name']} o1.5 Goals"),
@@ -35,7 +34,7 @@ def find_top_picks(fixtures):
             o = book.get(book_key)
 
             # ✅ Only consider valid decimal odds within realistic range
-            if isinstance(p, (int, float)) and isinstance(o, (int, float)) and 1.7 <= o <= 2.4:
+            if isinstance(p, (int, float)) and isinstance(o, (int, float)) and 1.6 <= o <= 2.4:
                 imp = implied_pct(o)
                 edge = round(p - imp, 1)
 

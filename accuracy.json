@@ -513,5 +513,40 @@
         "result": "Win"
       }
     ]
+  },
+  {
+    "date": "2025-10-30",
+    "picks": [
+      {
+        "fixture_id": 1377952,
+        "match": "Pisa vs Lazio",
+        "pick": "Under 2.5 Goals",
+        "dg_odds": 1.16,
+        "book_odds": 1.66,
+        "edge": 25.8,
+        "league": "Serie A",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1476670,
+        "match": "FC Midtjylland vs Silkeborg",
+        "pick": "Over 3.5 Goals",
+        "dg_odds": 1.54,
+        "book_odds": 2.1,
+        "edge": 17.4,
+        "league": "DBU Pokalen",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1476671,
+        "match": "FC Nordsjaelland vs Brondby",
+        "pick": "Under 2.5 Goals",
+        "dg_odds": 1.81,
+        "book_odds": 2.35,
+        "edge": 12.7,
+        "league": "DBU Pokalen",
+        "result": "Loss"
+      }
+    ]
   }
 ]

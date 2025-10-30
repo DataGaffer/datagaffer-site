@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1012,
+    "name": "FC Thun",
+    "logo": "https://media-4.api-sports.io/football/teams/1012.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.7,
+      "corners_against": 4.6,
+      "shots": 13.8,
+      "shots_against": 10.7
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.4,
+      "corners_against": 5.5,
+      "shots": 11.9,
+      "shots_against": 12.4
+    }
+  },
+  {
+    "id": 1011,
+    "name": "FC St. Gallen",
+    "logo": "https://media-4.api-sports.io/football/teams/1011.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 6.1,
+      "corners_against": 4.2,
+      "shots": 14.6,
+      "shots_against": 9.6
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.6,
+      "corners_against": 5.0,
+      "shots": 12.8,
+      "shots_against": 11.2
+    }
+  },
+  {
+    "id": 630,
+    "name": "FC Sion",
+    "logo": "https://media-4.api-sports.io/football/teams/630.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.9,
+      "corners_against": 5.3,
+      "shots": 12.7,
+      "shots_against": 12.0
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.8,
+      "corners_against": 5.9,
+      "shots": 10.9,
+      "shots_against": 13.5
+    }
+  },
+  {
+    "id": 644,
+    "name": "FC Luzern",
+    "logo": "https://media-4.api-sports.io/football/teams/644.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.8,
+      "corners_against": 4.7,
+      "shots": 13.9,
+      "shots_against": 10.9
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.2,
+      "corners_against": 5.4,
+      "shots": 11.7,
+      "shots_against": 12.5
+    }
+  },
+  {
+    "id": 2184,
+    "name": "Servette FC",
+    "logo": "https://media-4.api-sports.io/football/teams/2184.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 6.3,
+      "corners_against": 4.1,
+      "shots": 15.0,
+      "shots_against": 9.4
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.0,
+      "corners_against": 4.9,
+      "shots": 13.2,
+      "shots_against": 11.1
+    }
+  },
+  {
+    "id": 606,
+    "name": "FC Lugano",
+    "logo": "https://media-4.api-sports.io/football/teams/606.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 6.0,
+      "corners_against": 4.3,
+      "shots": 14.8,
+      "shots_against": 9.8
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.8,
+      "corners_against": 5.1,
+      "shots": 12.5,
+      "shots_against": 11.8
+    }
+  },
+  {
+    "id": 783,
+    "name": "FC Zürich",
+    "logo": "https://media-4.api-sports.io/football/teams/783.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 6.2,
+      "corners_against": 4.0,
+      "shots": 15.1,
+      "shots_against": 9.5
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.0,
+      "corners_against": 4.8,
+      "shots": 13.3,
+      "shots_against": 10.9
+    }
+  },
+  {
+    "id": 1014,
+    "name": "Lausanne",
+    "logo": "https://media-4.api-sports.io/football/teams/1014.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.4,
+      "corners_against": 5.0,
+      "shots": 13.1,
+      "shots_against": 11.3
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.0,
+      "corners_against": 5.6,
+      "shots": 11.5,
+      "shots_against": 12.8
+    }
+  },
+  {
+    "id": 1013,
+    "name": "Grasshoppers",
+    "logo": "https://media-4.api-sports.io/football/teams/1013.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.3,
+      "corners_against": 5.2,
+      "shots": 12.8,
+      "shots_against": 11.7
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 3.9,
+      "corners_against": 5.9,
+      "shots": 10.7,
+      "shots_against": 13.1
+    }
+  },
+  {
+    "id": 2180,
+    "name": "FC Winterthur",
+    "logo": "https://media-4.api-sports.io/football/teams/2180.png",
+    "league": "Swiss Super League",
+    "home": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 5.0,
+      "corners_against": 5.5,
+      "shots": 13.0,
+      "shots_against": 11.9
+    },
+    "away": {
+      "goals_for": "",
+      "goals_against": "",
+      "corners": 4.1,
+      "corners_against": 5.8,
+      "shots": 11.2,
+      "shots_against": 13.3
+    }
+  }
+]

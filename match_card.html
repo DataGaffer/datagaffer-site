@@ -277,21 +277,24 @@ function renderCards(fixtures) {
           <h4>Form (Last 5)</h4>
           <div class="form-line">${colorForm(match.home_form_last5 || "-----")} &nbsp;|&nbsp; ${colorForm(match.away_form_last5 || "-----")}</div>
           <div class="form-grid">
-            <div>Win %: ${match.home_form_win || 0}%</div><div>Win %: ${match.away_form_win || 0}%</div>
-            <div>Over 1.5: ${match.home_form_o15 || 0}%</div><div>Over 1.5: ${match.away_form_o15 || 0}%</div>
-            <div>Over 3.5: ${match.home_form_o35 || 0}%</div><div>Over 3.5: ${match.away_form_o35 || 0}%</div>
-            <div>BTTS: ${match.home_form_btts || 0}%</div><div>BTTS: ${match.away_form_btts || 0}%</div>
-            <div>Clean Sheets: ${match.home_form_clean || 0}%</div><div>Clean Sheets: ${match.away_form_clean || 0}%</div>
-          </div>
+  <div>Win %: ${match.home_form_win || 0}%</div><div>Win %: ${match.away_form_win || 0}%</div>
+  <div>Over 1.5: ${match.home_form_o15 || 0}%</div><div>Over 1.5: ${match.away_form_o15 || 0}%</div>
+  <div>Over 2.5: ${match.home_form_o25 || 0}%</div><div>Over 2.5: ${match.away_form_o25 || 0}%</div>
+  <div>Over 3.5: ${match.home_form_o35 || 0}%</div><div>Over 3.5: ${match.away_form_o35 || 0}%</div>
+  <div>BTTS: ${match.home_form_btts || 0}%</div><div>BTTS: ${match.away_form_btts || 0}%</div>
+</div>
         </div>
 
         <div class="section">
           <h4>Head-to-Head (Last 10)</h4>
           <div class="h2h-bar">${match.home_name} ${h2h.home_wins || 0}W | Draws ${h2h.draws || 0} | ${match.away_name} ${h2h.away_wins || 0}W</div>
           <div class="stat-grid">
-            <div>Over 1.5: ${h2h.over_1_5_pct || 0}%</div><div>Over 3.5: ${h2h.over_3_5_pct || 0}%</div>
-            <div>BTTS: ${h2h.btts_pct || 0}%</div><div>Avg Goals: ${(h2h.avg_home_goals || 0).toFixed(2)} | ${(h2h.avg_away_goals || 0).toFixed(2)}</div>
-          </div>
+  <div>Over 1.5: ${h2h.over_1_5_pct || 0}%</div><div>Over 2.5: ${h2h.over_2_5_pct || 0}%</div>
+  <div>Over 3.5: ${h2h.over_3_5_pct || 0}%</div><div>BTTS: ${h2h.btts_pct || 0}%</div>
+  <div style="grid-column: span 2; text-align:center; font-weight:600;">
+  Avg Goals: ${(h2h.avg_home_goals || 0).toFixed(2)} | ${(h2h.avg_away_goals || 0).toFixed(2)}
+</div>
+</div>
         </div>
 
         <div class="section">

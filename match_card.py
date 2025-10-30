@@ -170,26 +170,28 @@ def main():
 
         # Flatten for HTML
         results.append({
-            "home_name": home["name"],
-            "away_name": away["name"],
-            "home_logo": home["logo"],
-            "away_logo": away["logo"],
-            "home_form_goals": home_form.get("avg_goals", 0),
-            "away_form_goals": away_form.get("avg_goals", 0),
-            "home_form_last5": home_form.get("form", ""),
-            "away_form_last5": away_form.get("form", ""),
-            "home_form_win": home_form.get("win_pct", 0),
-            "away_form_win": away_form.get("win_pct", 0),
-            "home_form_o15": home_form.get("over_1_5_pct", 0),
-            "away_form_o15": away_form.get("over_1_5_pct", 0),
-            "home_form_o35": home_form.get("over_3_5_pct", 0),
-            "away_form_o35": away_form.get("over_3_5_pct", 0),
-            "home_form_btts": home_form.get("btts_pct", 0),
-            "away_form_btts": away_form.get("btts_pct", 0),
-            "home_form_clean": home_form.get("clean_sheets_pct", 0),
-            "away_form_clean": away_form.get("clean_sheets_pct", 0),
-            "h2h": h2h,
-        })
+    "home_name": home["name"],
+    "away_name": away["name"],
+    "home_logo": home["logo"],
+    "away_logo": away["logo"],
+    "home_form_goals": home_form.get("avg_goals", 0),
+    "away_form_goals": away_form.get("avg_goals", 0),
+    "home_form_last5": home_form.get("form", ""),
+    "away_form_last5": away_form.get("form", ""),
+    "home_form_win": home_form.get("win_pct", 0),
+    "away_form_win": away_form.get("win_pct", 0),
+    "home_form_o15": home_form.get("over_1_5_pct", 0),
+    "away_form_o15": away_form.get("over_1_5_pct", 0),
+    "home_form_o25": home_form.get("over_2_5_pct", 0),   # ✅ NEW
+    "away_form_o25": away_form.get("over_2_5_pct", 0),   # ✅ NEW
+    "home_form_o35": home_form.get("over_3_5_pct", 0),
+    "away_form_o35": away_form.get("over_3_5_pct", 0),
+    "home_form_btts": home_form.get("btts_pct", 0),
+    "away_form_btts": away_form.get("btts_pct", 0),
+    "home_form_clean": home_form.get("clean_sheets_pct", 0),
+    "away_form_clean": away_form.get("clean_sheets_pct", 0),
+    "h2h": h2h,
+})
 
     output = {
         "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),

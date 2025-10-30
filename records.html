@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Records Broken</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f6f7f8;
+    color: #222;
+    margin: 0;
+    padding: 30px;
+  }
+  h1 {
+    text-align: center;
+    color: #003f2e;
+    margin-bottom: 20px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .record {
+    border-left: 6px solid #0ea768;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    background: #f9fdfb;
+    border-radius: 6px;
+    animation: fadeIn 0.3s ease;
+  }
+  .record h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #003f2e;
+  }
+  .record p {
+    margin: 6px 0 0 0;
+    font-size: 14px;
+    color: #333;
+  }
+  .record small {
+    display: block;
+    margin-top: 4px;
+    color: #777;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(5px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  .no-records {
+    text-align: center;
+    color: #555;
+    padding: 20px;
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+  <h1>Records Broken Today</h1>
+  <div class="container" id="records"></div>
+
+<script>
+async function loadRecords() {
+  try {
+    const res = await fetch("highlights/records_broken.json");
+    if (!res.ok) throw new Error("File not found");
+    const data = await res.json();
+    const container = document.getElementById("records");
+    const records = data.records || [];
+
+    if (!records.length) {
+      container.innerHTML = '<div class="no-records">✅ No records broken today.</div>';
+      return;
+    }
+
+    container.innerHTML = records.map(r => `
+      <div class="record">
+        <h2>${r.type}</h2>
+        <p>${r.description}</p>
+        ${r.league ? `<small>🏆 League: ${r.league}</small>` : ""}
+        <small>📅 ${r.date}</small>
+      </div>
+    `).join("");
+  } catch (e) {
+    document.getElementById("records").innerHTML =
+      '<div class="no-records">⚠️ Could not load records_broken.json</div>';
+  }
+}
+
+loadRecords();
+</script>
+</body>
+</html>
