@@ -548,5 +548,30 @@
         "result": "Loss"
       }
     ]
+  },
+  {
+    "date": "2025-10-31",
+    "picks": [
+      {
+        "fixture_id": 1390923,
+        "match": "Getafe vs Girona",
+        "pick": "Getafe Win",
+        "dg_odds": 1.68,
+        "book_odds": 2.15,
+        "edge": 13.2,
+        "league": "La Liga",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1380957,
+        "match": "PSV vs Fortuna Sittard",
+        "pick": "BTTS Yes",
+        "dg_odds": 1.77,
+        "book_odds": 1.8,
+        "edge": 1.0,
+        "league": "Eredivisie",
+        "result": "Win"
+      }
+    ]
   }
 ]

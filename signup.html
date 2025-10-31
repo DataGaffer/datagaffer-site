@@ -21,7 +21,7 @@
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 300px;
+      width: 320px;
     }
     h1 { margin-bottom: 20px; }
     input {
@@ -31,6 +31,7 @@
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 5px;
+      font-size: 16px;
     }
     button {
       width: 100%;
@@ -47,10 +48,37 @@
     p { margin-top: 15px; font-size: 14px; }
     a { color: #003f2e; text-decoration: none; font-weight: bold; }
     a:hover { text-decoration: underline; }
+
+    /* ✅ New pricing preview box */
+    .pricing-preview {
+      background: #f0f8f2;
+      border: 1px solid #1a8a39;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 15px;
+    }
+    .pricing-preview h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #1a8a39;
+      margin-bottom: 10px;
+    }
+    .pricing-preview p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
   <div class="box">
+    <!-- ✅ Pricing preview added here -->
+    <div class="pricing-preview">
+      <h3>Plans & Pricing</h3>
+      <p><strong>$9.99/month</strong> + 7 Day free trial</p>
+      <p><strong>$75/year</strong> + 7 Day free trial</p>
+      <p>Sign up first to choose plan</p>
+    </div>
+
     <h1>Sign Up</h1>
     <form id="signup-form">
       <input type="email" id="email" placeholder="Email" required>
@@ -87,7 +115,6 @@
         return;
       }
 
-      // ✅ Direct signup without email confirmation
       const { data, error } = await supabaseClient.auth.signUp({ email, password });
 
       if (error) {
@@ -98,7 +125,6 @@
 
       const user = data.user;
       if (user) {
-        // ✅ Create a new profile in Supabase
         const { error: profileError } = await supabaseClient
           .from("profiles")
           .insert([{
@@ -114,7 +140,6 @@
           console.log("✅ Profile created for", user.email);
         }
 
-        // ✅ Redirect to subscription page
         alert("Signup successful! Redirecting to subscription...");
         window.location.href = "subscribe.html";
       }

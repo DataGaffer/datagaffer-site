@@ -1639,17 +1639,52 @@
           "accuracy_score": 80.8
         }
       ]
+    },
+    {
+      "date": "2025-10-31",
+      "matches": [
+        {
+          "date": "2025-10-31",
+          "league": "Eredivisie",
+          "match": "PSV vs Fortuna Sittard",
+          "fixture_id": 1380957,
+          "projected_score": "3.22 - 0.89",
+          "actual_score": "5 - 2",
+          "avg_diff": 1.44,
+          "accuracy_score": 64.0
+        },
+        {
+          "date": "2025-10-31",
+          "league": "Bundesliga",
+          "match": "Augsburg vs Dortmund",
+          "fixture_id": 1388380,
+          "projected_score": "1.40 - 1.97",
+          "actual_score": "0 - 1",
+          "avg_diff": 1.19,
+          "accuracy_score": 70.2
+        },
+        {
+          "date": "2025-10-31",
+          "league": "La Liga",
+          "match": "Getafe vs Girona",
+          "fixture_id": 1390923,
+          "projected_score": "1.73 - 0.79",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.24,
+          "accuracy_score": 94.0
+        }
+      ]
     }
   ],
   "leagues": [
     {
       "league": "Eredivisie",
-      "games_tracked": 13,
-      "dg_score": 72.4,
-      "sim_avg_goals": 3.36,
-      "actual_avg_goals": 3.77,
-      "actual_btts_pct": 53.8,
-      "actual_over25_pct": 69.2
+      "games_tracked": 14,
+      "dg_score": 71.8,
+      "sim_avg_goals": 3.41,
+      "actual_avg_goals": 4.0,
+      "actual_btts_pct": 57.1,
+      "actual_over25_pct": 71.4
     },
     {
       "league": "Serie A",
@@ -1662,12 +1697,12 @@
     },
     {
       "league": "La Liga",
-      "games_tracked": 15,
-      "dg_score": 75.1,
-      "sim_avg_goals": 2.66,
-      "actual_avg_goals": 2.07,
-      "actual_btts_pct": 40.0,
-      "actual_over25_pct": 33.3
+      "games_tracked": 16,
+      "dg_score": 76.3,
+      "sim_avg_goals": 2.65,
+      "actual_avg_goals": 2.12,
+      "actual_btts_pct": 43.8,
+      "actual_over25_pct": 37.5
     },
     {
       "league": "Premier League",
@@ -1689,12 +1724,12 @@
     },
     {
       "league": "Bundesliga",
-      "games_tracked": 11,
-      "dg_score": 74.7,
+      "games_tracked": 12,
+      "dg_score": 74.3,
       "sim_avg_goals": 3.34,
-      "actual_avg_goals": 2.73,
-      "actual_btts_pct": 27.3,
-      "actual_over25_pct": 54.5
+      "actual_avg_goals": 2.58,
+      "actual_btts_pct": 25.0,
+      "actual_over25_pct": 50.0
     },
     {
       "league": "UEFA Champions League",
