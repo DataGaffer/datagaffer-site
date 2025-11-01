@@ -539,7 +539,7 @@
       },
       {
         "fixture_id": 1476671,
-        "match": "FC Nordsjaelland vs Brondby",
+        "match": "Nordsjaelland vs Brondby",
         "pick": "Under 2.5 Goals",
         "dg_odds": 1.81,
         "book_odds": 2.35,
@@ -571,6 +571,61 @@
         "edge": 1.0,
         "league": "Eredivisie",
         "result": "Win"
+      }
+    ]
+  },
+  {
+    "date": "2025-11-01",
+    "picks": [
+      {
+        "fixture_id": 1380961,
+        "match": "Telstar vs Excelsior",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.28,
+        "book_odds": 1.65,
+        "edge": 17.8,
+        "league": "Eredivisie",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1379059,
+        "match": "Brighton vs Leeds",
+        "pick": "Brighton Win",
+        "dg_odds": 1.39,
+        "book_odds": 1.83,
+        "edge": 17.3,
+        "league": "Premier League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1388385,
+        "match": "RB Leipzig vs Stuttgart",
+        "pick": "RB Leipzig Win",
+        "dg_odds": 1.49,
+        "book_odds": 1.95,
+        "edge": 15.7,
+        "league": "Bundesliga",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1379060,
+        "match": "Burnley vs Arsenal",
+        "pick": "Under 2.5 Goals",
+        "dg_odds": 1.58,
+        "book_odds": 2.1,
+        "edge": 15.7,
+        "league": "Premier League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1379067,
+        "match": "Tottenham vs Chelsea",
+        "pick": "Chelsea o1.5 Goals",
+        "dg_odds": 1.58,
+        "book_odds": 2.1,
+        "edge": 15.7,
+        "league": "Premier League",
+        "result": "Loss"
       }
     ]
   }

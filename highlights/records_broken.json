@@ -2,338 +2,309 @@
   "records": [
     {
       "type": "Team Record",
-      "description": "Villarreal sets a new personal record high: 1.89 projected goals.",
-      "league": "La Liga",
-      "date": "2025-10-31"
+      "description": "Heracles sets a new personal record high: 2.06 projected goals.",
+      "league": "Eredivisie",
+      "date": "2025-11-01"
     },
     {
       "type": "Team Record",
-      "description": "Rayo Vallecano sets a new personal record low: 0.94 projected goals.",
-      "league": "La Liga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "1. FC Heidenheim sets a new personal record high: 1.50 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Eintracht Frankfurt sets a new personal record high: 2.37 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "FSV Mainz 05 sets a new personal record high: 1.57 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Werder Bremen sets a new personal record low: 1.64 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "RB Leipzig sets a new personal record high: 2.51 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "VfB Stuttgart sets a new personal record high: 1.15 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "FC St. Pauli sets a new personal record high: 1.59 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Borussia M\u00f6nchengladbach sets a new personal record high: 1.64 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
+      "description": "PEC Zwolle sets a new personal record high: 2.06 projected goals.",
+      "league": "Eredivisie",
+      "date": "2025-11-01"
     },
     {
       "type": "League Record",
-      "description": "Union Berlin vs SC Freiburg sets a new Bundesliga record low projection (2.58 goals).",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Union Berlin sets a new personal record high: 1.58 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "SC Freiburg sets a new personal record low: 1.00 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Brighton sets a new personal record high: 2.09 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Leeds sets a new personal record low: 0.63 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "League Record",
-      "description": "Burnley vs Arsenal sets a new Premier League record low projection (2.17 goals).",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Burnley sets a new personal record low: 0.76 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Arsenal sets a new personal record low: 1.41 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Crystal Palace sets a new personal record high: 1.53 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Brentford sets a new personal record low: 1.24 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Fulham sets a new personal record high: 1.43 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Wolves sets a new personal record low: 1.21 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Nottingham Forest sets a new personal record low: 1.11 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Manchester United sets a new personal record high: 1.46 projected goals.",
-      "league": "Premier League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Atletico Madrid sets a new personal record high: 2.31 projected goals.",
-      "league": "La Liga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Sevilla sets a new personal record low: 1.19 projected goals.",
-      "league": "La Liga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Ajax sets a new personal record high: 2.83 projected goals.",
-      "league": "Eredivisie",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Heerenveen sets a new personal record low: 0.94 projected goals.",
-      "league": "Eredivisie",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Paris Saint Germain sets a new personal record high: 2.88 projected goals.",
-      "league": "Ligue 1",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Nice sets a new personal record low: 1.06 projected goals.",
-      "league": "Ligue 1",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Como sets a new personal record low: 0.90 projected goals.",
+      "description": "Verona vs Inter sets a new Serie A record high projection (3.55 goals).",
       "league": "Serie A",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "League Record",
-      "description": "FC Copenhagen vs FC Fredericia sets a new Superliga record high projection (3.71 goals).",
-      "league": "Superliga",
-      "date": "2025-10-31"
+      "date": "2025-11-01"
     },
     {
       "type": "Team Record",
-      "description": "FC Copenhagen sets a new personal record high: 2.47 projected goals.",
-      "league": "Superliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "FC Fredericia sets a new personal record high: 1.24 projected goals.",
-      "league": "Superliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "League Record",
-      "description": "FC Thun vs FC Sion sets a new Super League record high projection (3.37 goals).",
-      "league": "Super League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "FC Thun sets a new personal record high: 1.72 projected goals.",
-      "league": "Super League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "FC Sion sets a new personal record high: 1.65 projected goals.",
-      "league": "Super League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "League Record",
-      "description": "FC Winterthur vs Servette FC sets a new Super League record high projection (3.46 goals).",
-      "league": "Super League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "FC Winterthur sets a new personal record high: 1.47 projected goals.",
-      "league": "Super League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Servette FC sets a new personal record high: 1.99 projected goals.",
-      "league": "Super League",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Global Record",
-      "description": "Bayern M\u00fcnchen vs Bayer Leverkusen sets a new all-time highest projection: 4.94 goals.",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "League Record",
-      "description": "Bayern M\u00fcnchen vs Bayer Leverkusen sets a new Bundesliga record high projection (4.94 goals).",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Bayern M\u00fcnchen sets a new personal record high: 3.84 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Bayer Leverkusen sets a new personal record high: 1.10 projected goals.",
-      "league": "Bundesliga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "League Record",
-      "description": "Real Sociedad vs Athletic Club sets a new La Liga record low projection (2.11 goals).",
-      "league": "La Liga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Real Sociedad sets a new personal record high: 1.38 projected goals.",
-      "league": "La Liga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Athletic Club sets a new personal record low: 0.73 projected goals.",
-      "league": "La Liga",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "GO Ahead Eagles sets a new personal record high: 1.36 projected goals.",
-      "league": "Eredivisie",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Monaco sets a new personal record high: 2.67 projected goals.",
-      "league": "Ligue 1",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "FC Volendam sets a new personal record high: 0.88 projected goals.",
-      "league": "Eredivisie",
-      "date": "2025-10-31"
-    },
-    {
-      "type": "Team Record",
-      "description": "Juventus sets a new personal record low: 0.82 projected goals.",
+      "description": "Inter sets a new personal record high: 2.59 projected goals.",
       "league": "Serie A",
-      "date": "2025-10-31"
+      "date": "2025-11-01"
+    },
+    {
+      "type": "League Record",
+      "description": "Viborg vs Randers FC sets a new Superliga record low projection (2.66 goals).",
+      "league": "Superliga",
+      "date": "2025-11-01"
     },
     {
       "type": "Team Record",
-      "description": "Aston Villa sets a new personal record low: 0.78 projected goals.",
+      "description": "Viborg sets a new personal record low: 1.58 projected goals.",
+      "league": "Superliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Randers FC sets a new personal record high: 1.08 projected goals.",
+      "league": "Superliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Twente sets a new personal record low: 1.61 projected goals.",
+      "league": "Eredivisie",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Sparta Rotterdam sets a new personal record low: 1.63 projected goals.",
+      "league": "Eredivisie",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "AZ Alkmaar sets a new personal record high: 2.08 projected goals.",
+      "league": "Eredivisie",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Lecce sets a new personal record high: 1.13 projected goals.",
+      "league": "Serie A",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Torino sets a new personal record high: 1.96 projected goals.",
+      "league": "Serie A",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "West Ham sets a new personal record low: 0.81 projected goals.",
       "league": "Premier League",
-      "date": "2025-10-31"
+      "date": "2025-11-01"
     },
     {
       "type": "Team Record",
-      "description": "Telstar sets a new personal record high: 2.37 projected goals.",
-      "league": "Eredivisie",
-      "date": "2025-10-31"
+      "description": "Strasbourg sets a new personal record low: 1.01 projected goals.",
+      "league": "Ligue 1",
+      "date": "2025-11-01"
     },
     {
       "type": "Team Record",
-      "description": "Excelsior sets a new personal record high: 1.76 projected goals.",
-      "league": "Eredivisie",
-      "date": "2025-10-31"
+      "description": "Celtic sets a new personal record high: 2.29 projected goals.",
+      "league": "League Cup",
+      "date": "2025-11-01"
     },
     {
       "type": "Team Record",
-      "description": "Real Madrid sets a new personal record high: 2.84 projected goals.",
+      "description": "Rangers sets a new personal record low: 1.00 projected goals.",
+      "league": "League Cup",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "1.FC K\u00f6ln sets a new personal record high: 1.72 projected goals.",
+      "league": "Bundesliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Hamburger SV sets a new personal record high: 1.03 projected goals.",
+      "league": "Bundesliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "League Record",
+      "description": "Sonderjyske vs Vejle sets a new Superliga record low projection (2.40 goals).",
+      "league": "Superliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Sonderjyske sets a new personal record high: 1.61 projected goals.",
+      "league": "Superliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Vejle sets a new personal record high: 0.79 projected goals.",
+      "league": "Superliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "League Record",
+      "description": "Alaves vs Espanyol sets a new La Liga record low projection (1.97 goals).",
       "league": "La Liga",
-      "date": "2025-10-31"
+      "date": "2025-11-01"
     },
     {
       "type": "Team Record",
-      "description": "Valencia sets a new personal record low: 0.65 projected goals.",
+      "description": "Espanyol sets a new personal record low: 0.74 projected goals.",
       "league": "La Liga",
-      "date": "2025-10-31"
+      "date": "2025-11-01"
+    },
+    {
+      "type": "League Record",
+      "description": "FC Luzern vs Grasshoppers sets a new Super League record low projection (3.02 goals).",
+      "league": "Super League",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "FC Luzern sets a new personal record high: 2.04 projected goals.",
+      "league": "Super League",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Grasshoppers sets a new personal record high: 0.98 projected goals.",
+      "league": "Super League",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "League Record",
+      "description": "BSC Young Boys vs FC Basel 1893 sets a new Super League record high projection (4.70 goals).",
+      "league": "Super League",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "BSC Young Boys sets a new personal record high: 3.12 projected goals.",
+      "league": "Super League",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "FC Basel 1893 sets a new personal record high: 1.58 projected goals.",
+      "league": "Super League",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "NEC Nijmegen sets a new personal record high: 1.19 projected goals.",
+      "league": "Eredivisie",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Lens sets a new personal record high: 2.54 projected goals.",
+      "league": "Ligue 1",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Angers sets a new personal record low: 0.77 projected goals.",
+      "league": "Ligue 1",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Nantes sets a new personal record high: 2.25 projected goals.",
+      "league": "Ligue 1",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Toulouse sets a new personal record high: 2.54 projected goals.",
+      "league": "Ligue 1",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "League Record",
+      "description": "Manchester City vs Bournemouth sets a new Premier League record high projection (4.00 goals).",
+      "league": "Premier League",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Manchester City sets a new personal record high: 2.91 projected goals.",
+      "league": "Premier League",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Bournemouth sets a new personal record low: 1.09 projected goals.",
+      "league": "Premier League",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "VfL Wolfsburg sets a new personal record high: 1.59 projected goals.",
+      "league": "Bundesliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "1899 Hoffenheim sets a new personal record high: 1.86 projected goals.",
+      "league": "Bundesliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "FC Nordsjaelland sets a new personal record high: 2.12 projected goals.",
+      "league": "Superliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Odense sets a new personal record low: 1.16 projected goals.",
+      "league": "Superliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Elche sets a new personal record low: 0.59 projected goals.",
+      "league": "La Liga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Silkeborg sets a new personal record high: 1.48 projected goals.",
+      "league": "Superliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Brondby sets a new personal record high: 1.87 projected goals.",
+      "league": "Superliga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "AC Milan sets a new personal record low: 1.44 projected goals.",
+      "league": "Serie A",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "AS Roma sets a new personal record low: 1.06 projected goals.",
+      "league": "Serie A",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Stade Brestois 29 sets a new personal record high: 1.87 projected goals.",
+      "league": "Ligue 1",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "Mallorca sets a new personal record low: 1.16 projected goals.",
+      "league": "La Liga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "League Record",
+      "description": "FC Porto vs SC Braga sets a new Primeira Liga record high projection (2.84 goals).",
+      "league": "Primeira Liga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "FC Porto sets a new personal record high: 1.95 projected goals.",
+      "league": "Primeira Liga",
+      "date": "2025-11-01"
+    },
+    {
+      "type": "Team Record",
+      "description": "SC Braga sets a new personal record high: 0.89 projected goals.",
+      "league": "Primeira Liga",
+      "date": "2025-11-01"
     }
   ]
 }

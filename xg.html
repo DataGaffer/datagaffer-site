@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>xG Performance | DataGaffer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+   body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f2f4f7; }
+   header { background: #003f2e; color: white; padding: 15px; text-align: center; font-size: 22px; font-weight: bold; }
+
+   .container { max-width: 1200px; margin: auto; padding: 30px 20px; }
+
+   .buttons { text-align: center; margin-bottom: 20px; margin-top: 20px; }
+   .buttons button {
+     margin: 0 10px;
+     padding: 10px 20px;
+     font-size: 16px;
+     cursor: pointer;
+     border: 2px solid #003f2e;
+     border-radius: 4px;
+     background: white;
+     color: #003f2e;
+   }
+   .buttons button.active {
+     background: #003f2e;
+     color: white;
+     font-weight: bold;
+   }
+
+   h2 {
+     text-align: center;
+     color: #003f2e;
+     margin-top: 40px;
+     margin-bottom: 10px;
+   }
+
+   table {
+     width: 85%;
+     max-width: 950px;
+     margin: auto;
+     border-collapse: collapse;
+     background: white;
+     font-size: 18px;
+     line-height: 1.2;
+     border-radius: 10px;
+     overflow: hidden;
+     box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+     margin-bottom: 40px;
+   }
+
+   th, td {
+     padding: 8px 10px;
+     text-align: center;
+     border: 1px solid #ccc;
+     font-weight: normal;
+   }
+
+   th {
+     background: #003f2e;
+     color: white;
+     font-size: 18px;
+   }
+
+   img { width: 30px; height: 30px; vertical-align: middle; }
+   tr:nth-child(even) { background: #f2f2f2; }
+
+   .pos { color: #008000; font-weight: bold; }
+   .neg { color: #c62828; font-weight: bold; }
+
+   /* --- Mobile adjustments --- */
+   @media (max-width: 925px) {
+     table {
+       width: 95% !important;
+       font-size: 12px !important;
+       margin-bottom: 25px;
+     }
+     th, td { padding: 4px !important; }
+     img { width: 20px !important; height: 20px !important; }
+     .buttons button {
+       padding: 6px 8px !important;
+       font-size: 12px !important;
+       margin: 0 4px !important;
+     }
+   }
+  </style>
+</head>
+<body>
+
+  <div style="background-color:#003f2e; color:white; padding:10px 20px; position:relative; display:flex; align-items:center; justify-content:center;">
+    <a href="dashboard.html" style="text-decoration:none; color:inherit; display:contents;">
+      <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+           alt="DG Logo"
+           class="header-logo"
+           style="height:90px; width:auto; position:absolute; left:20px; top:0;" />
+      <h1 style="margin:0; font-size:32px; font-weight:700;">DataGaffer.com</h1>
+    </a>
+  </div>
+
+  <div class="container">
+    <div class="buttons">
+      <button class="active" onclick="showLeague('premier_league', this)">Premier League</button>
+      <button onclick="showLeague('la_liga', this)">La Liga</button>
+      <button onclick="showLeague('serie_a', this)">Serie A</button>
+      <button onclick="showLeague('bundesliga', this)">Bundesliga</button>
+      <button onclick="showLeague('ligue_1', this)">Ligue 1</button>
+      <button onclick="showLeague('eredivisie', this)">Eredivisie</button>
+    </div>
+
+    <div id="tables"></div>
+  </div>
+
+  <script>
+    let xgData = {};
+
+    async function loadData() {
+      const response = await fetch("xg_stats.json");
+      xgData = await response.json();
+      showLeague("premier_league", document.querySelector(".buttons button"));
+    }
+
+    function buildTable(title, data, type) {
+      let tableHTML = `<h2>${title}</h2><table><tr><th></th><th>Team</th><th>${type === 'for' ? 'xG' : 'xGA'}</th><th>${type === 'for' ? 'Goals' : 'Goals Against'}</th><th>Δ</th></tr>`;
+      data.forEach(t => {
+        const diff = (t.actual - t.xg).toFixed(2);
+        const cls = diff > 0 ? "pos" : diff < 0 ? "neg" : "";
+        tableHTML += `
+          <tr>
+            <td><img src="${t.logo}" alt="${t.team}"></td>
+            <td>${t.team}</td>
+            <td>${t.xg.toFixed(2)}</td>
+            <td>${t.actual.toFixed(2)}</td>
+            <td class="${cls}">${diff}</td>
+          </tr>
+        `;
+      });
+      tableHTML += `</table>`;
+      return tableHTML;
+    }
+
+    function showLeague(league, btn) {
+      document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const leagueData = xgData[league];
+      if (!leagueData) {
+        document.getElementById("tables").innerHTML = "<p style='text-align:center;color:#003f2e;font-size:18px;'>No data available for this league yet.</p>";
+        return;
+      }
+
+      const goalsForTable = buildTable("Goals For", leagueData.for, "for");
+      const goalsAgainstTable = buildTable("Goals Against", leagueData.against, "against");
+
+      document.getElementById("tables").innerHTML = goalsForTable + goalsAgainstTable;
+    }
+
+    loadData();
+  </script>
+
+</body>
+</html>
