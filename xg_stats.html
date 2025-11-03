@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projections</title>
+  <title>Expected Goals | DataGaffer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ Favicons for all browsers and devices -->
+  <!-- Favicons -->
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -14,375 +14,327 @@
   <meta name="theme-color" content="#ffffff">
 
   <style>
-   body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f2f4f7; }
-   header { background: #003f2e; color: white; padding: 15px; text-align: center; font-size: 22px; font-weight: bold; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f2f4f7; color: #003f2e; }
 
-   .banner {
-     text-align: center;
-     font-size: 20px;
-     margin: 20px auto;
-     color: #003f2e;
-     background: #ffffff;
-     padding: 10px;
-     border: 2px solid #003f2e;
-     width: 60%;
-     border-radius: 4px;
-     margin-bottom: 40px;
-     margin-top: 40px;
-     font-weight: 600;
-   }
+    header {
+      background: #003f2e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 26px;
+      font-weight: bold;
+      position: relative;
+    }
 
-   .container {
-     max-width: 1200px;
-     margin: auto;
-     padding: 30px 20px;
-   }
+    header img {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      height: 90px;
+      width: auto;
+    }
 
-   .buttons { text-align: center; margin-bottom: 20px; }
-   .buttons button {
-     margin: 0 10px;
-     padding: 10px 20px;
-     font-size: 16px;
-     cursor: pointer;
-     border: 2px solid #003f2e;
-     border-radius: 4px;
-     background: white;
-     color: #003f2e;
-   }
-   .buttons button.active {
-     background: #003f2e;
-     color: white;
-     font-weight: bold;
-   }
+    .banner {
+      text-align: center;
+      font-size: 20px;
+      margin: 25px auto;
+      color: #003f2e;
+      background: #ffffff;
+      padding: 10px;
+      border: 2px solid #003f2e;
+      width: 60%;
+      border-radius: 4px;
+      font-weight: 600;
+    }
 
-   .search-box {
-     text-align: center;
-     margin-bottom: 20px;
-   }
-   .search-box input {
-     width: 250px;
-     padding: 8px;
-     font-size: 14px;
-     border: 2px solid #003f2e;
-     border-radius: 6px;
-   }
+    .buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .buttons button {
+      margin: 0 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: 2px solid #003f2e;
+      border-radius: 4px;
+      background: white;
+      color: #003f2e;
+    }
+    .buttons button.active {
+      background: #003f2e;
+      color: white;
+      font-weight: bold;
+    }
 
-   table {
-     width: 85%;
-     max-width: 950px;
-     margin: auto;
-     border-collapse: collapse;
-     background: white;
-     font-size: 18px;
-     line-height: 1.2;
-     border-radius: 10px;
-     overflow: hidden;
-     box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-     margin-bottom: 40px;
-   }
+    table {
+      width: 90%;
+      max-width: 1000px;
+      margin: 25px auto 60px;
+      border-collapse: collapse;
+      background: white;
+      font-size: 17px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    }
 
-   th, td {
-     padding: 8px 10px;
-     text-align: center;
-     border: 1px solid #ccc;
-     font-weight: normal;
-   }
-   th {
-     background: #003f2e;
-     color: white;
-     font-size: 18px;
-     cursor: pointer;
-   }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
 
-   th.sortable:hover { background: #003f2e; }
+    th {
+      background: #003f2e;
+      color: white;
+      cursor: pointer;
+    }
 
-   th:first-child { border-top-left-radius: 10px; }
-   th:last-child { border-top-right-radius: 10px; }
-
-   img { width: 30px; height: 30px; vertical-align: middle; }
-   tr:nth-child(even) { background: #f2f2f2; }
-
-   .sorted-col { background: #fffacd !important; font-weight: bold; }
-   .active-header { background: #fcff55 !important; color: black !important; border-bottom: 1px solid #ffffff; }
-
-   /* 🔹 Fix Home Team & Away Team column widths */
-   td:nth-child(2), th:nth-child(2),
-   td:nth-child(6), th:nth-child(6) {
-     width: 180px;
-     white-space: nowrap;
-     max-width: 180px;
-     overflow: hidden;
-     text-overflow: ellipsis;
-   }
-
-   /* 🔹 Date navigation */
-   .date-nav {
-     text-align: center;
-     margin: 20px 0;
-     font-size: 20px;
-     color: #003f2e;
-     font-weight: bold;
-   }
-   .date-nav span {
-     cursor: pointer;
-     color: #006644;
-     padding: 0 15px;
-     font-weight: bold;
-   }
-   .date-nav span:hover {
-     text-decoration: underline;
-   }
-
-   .date-nav span.active {
-  color: #0077cc;      /* blue */
-  text-decoration: underline;
+    /* Make columns 2–7 equal width */
+#xgTable th:nth-child(n+2):nth-child(-n+7),
+#xgTable td:nth-child(n+2):nth-child(-n+7) {
+  width: 12%;
+  text-align: center;
 }
 
+/* Make team column wider */
+#xgTable th:first-child,
+#xgTable td:first-child {
+  width: 20%;
+  text-align: center;
+  padding-left: 10px;
 
+}
 
- /* --- Mobile adjustments --- */
-@media (max-width: 925px) {
+    tr:nth-child(even) { background: #f2f2f2; }
+    img { width: 28px; height: 28px; vertical-align: middle; margin-right: 6px; }
+
+    /* Highlighted column cells */
+.sorted-col {
+  background: #fffacd !important;   /* pale yellow */
+  font-weight: bold;
+}
+
+/* Highlighted header */
+.active-header {
+  background: #fcff55 !important;   /* bright yellow */
+  color: black !important;
+  font-weight: bold;
+}
+
+  @media (max-width: 925px) {
  body { overflow-x: hidden; }
 
  .header-logo { height: 50px !important; width: auto !important; }
  h1 { font-size: 20px !important; }
+  .banner { width: 85%; font-size: 13px; padding: 6px; }
+  /* 🔹 Fix jammed league buttons on mobile */
+.buttons { margin-bottom: 15px; margin-top:15px; }
+ .buttons button {
+   padding: 6px 8px !important;
+   font-size: 12px !important;
+   margin: 6px 4px !important;
+ }
+  table { width: 95%; font-size: 12px; margin: auto; table-layout: fixed; margin-bottom: 50px;}
 
-  .date-nav {
-    font-size: 14px !important;
-    margin: 15px 0 !important;
-    display: flex;
-    justify-content: center;  /* keep everything centered */
-    gap: 12px;                /* even spacing between items */
-    flex-wrap: wrap;          /* allows wrapping on very small screens */
+  /* 🔹 Allow horizontal scroll for table overflow */
+  #table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .date-nav span {
-    padding: 4px 6px !important;
-    font-weight: bold;
+  th, td {
+    padding: 4px 6px;
     white-space: nowrap;
   }
 
-  .date-nav .active {
-    text-decoration: underline;
-    color: #0077cc !important;
-  }
+  img { width: 16px; height: 16px; margin-right: 4px; vertical-align: middle; }
 
-
- .banner {
-   width: 85% !important;
-   font-size: 13px !important;
-   padding: 6px !important;
-   margin-top: 15px;
-   margin-bottom: 10px;
-   line-height: 1.5;
- }
-
- .buttons { margin-bottom: 20px; margin-top:20px; }
- .buttons button {
-   padding: 6px 8px !important;
-   font-size: 11px !important;
-   margin: 0 4px !important;
- }
-
- .container { max-width: 100%; padding: 0 5px; }
-
- table {
-   width: 95% !important;
-   max-width: 100% !important;
-   font-size: 12px !important;
-   margin: auto;
-   margin-bottom: 25px;
-   table-layout: fixed;
- }
-
- th, td {
-   padding: 4px !important;
-   font-size: 12px !important;
-   word-wrap: break-word;
- }
-
- img { width: 20px !important; height: 20px !important; }
-
- td:nth-child(2), th:nth-child(2),
- td:nth-child(6), th:nth-child(6) {
-   width: 22% !important;
- }
+  /* 🔹 Mobile: truncate long team names with ellipsis */
+#xgTable td:first-child,
+#xgTable th:first-child {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  text-align: center;
 }
- </style>
+
+  /* 🔹 Compress remaining 6 columns evenly */
+  #xgTable th:nth-child(n+2):nth-child(-n+7),
+  #xgTable td:nth-child(n+2):nth-child(-n+7) {
+    width: 10%;
+    text-align: center;
+    font-size: 10.5px;
+  }
+#xgTable th:nth-child(n+2):nth-child(-n+7) {
+  font-size: 7px;
+}
+
+
+  /* 🔹 Smaller header font */
+  th {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+  </style>
 </head>
 <body>
 
-
- <div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
-   <a href="dashboard.html" style="text-decoration: none; color: inherit; display: contents;">
-  <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
-        alt="DG Logo"
-        class="header-logo"
-        style="height: 90px; width: auto; position: absolute; left: 20px; top: 0px; z-index: 2;" />
-   <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
-</a>
-  </div>
-
- <!-- 🔹 Date navigation like Ballpark Pal -->
- <div class="date-nav">
-  <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
-  <span id="currentDate">Today's Fixtures</span>
-  <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
+<div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
+  <a href="dashboard.html" style="text-decoration: none; color: inherit; display: contents;">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+         alt="DG Logo"
+         class="header-logo"
+         style="height: 90px; width: auto; position: absolute; left: 20px; top: 0; z-index: 2;" />
+    <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
+  </a>
 </div>
 
- <div class="banner">Projected goals, corners and shot stats after 5,000 match simulations</div>
+<div class="banner">Expected Goals vs Actual Team Performance — 2025 Season</div>
 
- <div class="buttons">
-   <button id="btn-xg" onclick="showTable('xg', this)">Projected Goals</button>
-   <button id="btn-corners" onclick="showTable('corners', this)">Projected Corners</button>
-   <button id="btn-shots" onclick="showTable('shots', this)">Projected Shots</button>
- </div>
+<div class="buttons">
+  <button onclick="showLeague('premier_league', this)">Premier League</button>
+  <button onclick="showLeague('la_liga', this)">La Liga</button>
+  <button onclick="showLeague('serie_a', this)">Serie A</button>
+  <button onclick="showLeague('bundesliga', this)">Bundesliga</button>
+  <button onclick="showLeague('ligue_1', this)">Ligue 1</button>
+  <button onclick="showLeague('eredivisie', this)">Eredivisie</button>
+</div>
 
- <!-- 🔹 New Search Box -->
- <div class="search-box">
-   <input type="text" id="searchInput" placeholder="Search team, matchup, or league..." onkeyup="applySearch()" />
- </div>
+<div id="table-container"></div>
 
- <div id="tables"></div>
-
-
- <script>
-  let allFixtures = [];
-  let currentFixtures = [];
-  let currentType = "xg";
+<script>
+  let xgData = {};
   let sortConfig = { column: null, asc: false };
-  let dayMode = "today";
 
-  async function loadFixtures(file = "fixtures.json") {
-    const response = await fetch(file);
-    const fixtures = await response.json();
-    allFixtures = fixtures;
-    return fixtures;
+  async function loadData() {
+    const res = await fetch('xg_stats.json');
+    xgData = await res.json();
   }
 
-  function buildTable(fixtures, type) {
-    let table = `
-      <table id="statsTable">
-        <tr>
-          <th></th>
-          <th>Home Team</th>
-          <th class="sortable" onclick="sortTable(2, this)">Team</th>
-          <th class="sortable" onclick="sortTable(3, this)">Total</th>
-          <th class="sortable" onclick="sortTable(4, this)">Team</th>
-          <th>Away Team</th>
-          <th></th>
-        </tr>
-    `;
+  async function fetchActuals(team) {
+  try {
+    // ✅ Convert spaces to underscores (and encode safely)
+    const safeTeam = encodeURIComponent(team.replace(/\s+/g, "_"));
+    const res = await fetch(`team_stats_api/2025/${safeTeam}.json`);
 
-    fixtures.forEach(f => {
-      const home = f.home.name;
-      const away = f.away.name;
-      const homeLogo = f.home.logo;
-      const awayLogo = f.away.logo;
-
-      const stats = f.sim_stats[type.toLowerCase()];
-      if (!stats) return;
-
-      table += `
-        <tr>
-          <td><img src="${homeLogo}" alt="${home}"></td>
-          <td>${home}</td>
-          <td>${stats.home}</td>
-          <td>${stats.total}</td>
-          <td>${stats.away}</td>
-          <td>${away}</td>
-          <td><img src="${awayLogo}" alt="${away}"></td>
-        </tr>
-      `;
-    });
-
-    table += `</table>`;
-    return table;
-  }
-
-  function applySearch() {
-    const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-    const filtered = allFixtures.filter(f =>
-      f.home.name.toLowerCase().includes(searchTerm) ||
-      f.away.name.toLowerCase().includes(searchTerm) ||
-      (f.league && f.league.name.toLowerCase().includes(searchTerm))
-    );
-    document.getElementById("tables").innerHTML = buildTable(filtered, currentType);
-  }
-
-  async function showTable(type, btn = null) {
-    if (dayMode === "today") {
-      currentFixtures = await loadFixtures("fixtures.json");
-    } else if (dayMode === "yesterday") {
-      currentFixtures = await loadFixtures("fixtures_yesterday.json");
-    } else if (dayMode === "tomorrow") {
-      currentFixtures = await loadFixtures("fixtures_tomorrow.json");
+    if (!res.ok) {
+      console.warn(`Missing stats file for ${team}`);
+      return { goals_for: 0, goals_against: 0 };
     }
 
-    currentType = type;
-    document.getElementById("tables").innerHTML = buildTable(currentFixtures, type);
+    const data = await res.json();
+    const homeMatches = data.home?.matches || 0;
+    const awayMatches = data.away?.matches || 0;
+    const totalMatches = homeMatches + awayMatches || 1;
 
-    sortConfig = { column: null, asc: false };
+    const goals_for_total = (data.home?.goals_for || 0) + (data.away?.goals_for || 0);
+    const goals_against_total = (data.home?.goals_against || 0) + (data.away?.goals_against || 0);
 
-    // 🔹 restore active state
-    document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
-    document.getElementById("btn-" + currentType).classList.add("active");
+    // ✅ Convert totals to per-match averages
+    const goals_for = (goals_for_total / totalMatches).toFixed(2);
+    const goals_against = (goals_against_total / totalMatches).toFixed(2);
+
+    return { goals_for, goals_against };
+  } catch (err) {
+    console.error(`Error fetching ${team}:`, err);
+    return { goals_for: 0, goals_against: 0 };
   }
+}
+
+async function showLeague(league, btn) {
+  document.querySelectorAll('.buttons button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const leagueTeams = xgData[league]?.for || [];
+  if (!leagueTeams.length) {
+    document.getElementById('table-container').innerHTML =
+      `<p style="text-align:center; font-size:18px; color:#555;">No data found for this league.</p>`;
+    return;
+  }
+
+  const rows = await Promise.all(
+    leagueTeams.map(async t => {
+      const actual = await fetchActuals(t.team);
+      const xgf = parseFloat(t.xg_for || 0);
+      const xga = parseFloat(t.xg_against || 0);
+      const totalXG = (xgf + xga).toFixed(2);
+      const totalActual = (parseFloat(actual.goals_for) + parseFloat(actual.goals_against)).toFixed(2);
+
+      // ✅ Clean logo fix (handles media-4 → media + fallback)
+      const logo = t.logo
+        ? t.logo.replace('media-4.api-sports.io', 'media.api-sports.io')
+        : `https://media.api-sports.io/football/teams/${t.id}.png`;
+
+      return `
+  <tr>
+    <td>${t.team}</td>
+    <td>${xgf}</td>
+    <td>${actual.goals_for}</td>
+    <td>${xga}</td>
+    <td>${actual.goals_against}</td>
+    <td>${totalXG}</td>
+    <td>${totalActual}</td>
+  </tr>
+`;
+    })
+  );
+
+  const table = `
+    <table id="xgTable">
+      <thead>
+        <tr>
+          <th>Team</th>
+          <th onclick="sortTable(1, this)">XG For</th>
+          <th onclick="sortTable(2, this)">Actual</th>
+          <th onclick="sortTable(3, this)">XG Against</th>
+          <th onclick="sortTable(4, this)">Actual</th>
+          <th onclick="sortTable(5, this)">Total XG</th>
+          <th onclick="sortTable(6, this)">Actual Total</th>
+        </tr>
+      </thead>
+      <tbody>${rows.join('')}</tbody>
+    </table>
+  `;
+
+  document.getElementById('table-container').innerHTML = table;
+}
 
   function sortTable(colIndex, header) {
-    const table = document.getElementById("statsTable");
-    let rows = Array.from(table.rows).slice(1);
+  const table = document.getElementById("xgTable");
+  let rows = Array.from(table.rows).slice(1);
 
-    const asc = sortConfig.column === colIndex ? !sortConfig.asc : false;
-    sortConfig = { column: colIndex, asc };
+  // 🔹 Default to descending first
+  const asc = sortConfig.column === colIndex ? !sortConfig.asc : false;
+  sortConfig = { column: colIndex, asc };
 
-    rows.sort((a, b) => {
-      let valA = parseFloat(a.cells[colIndex].innerText) || 0;
-      let valB = parseFloat(b.cells[colIndex].innerText) || 0;
-      return asc ? valA - valB : valB - valA;
-    });
+  rows.sort((a, b) => {
+    const valA = parseFloat(a.cells[colIndex].innerText) || 0;
+    const valB = parseFloat(b.cells[colIndex].innerText) || 0;
+    return asc ? valA - valB : valB - valA;
+  });
 
-    rows.forEach(row => table.appendChild(row));
+  const tbody = table.querySelector('tbody');
+  rows.forEach(r => tbody.appendChild(r));
 
-    rows.forEach(row => {
-      for (let i = 2; i <= 4; i++) row.cells[i].classList.remove("sorted-col");
-    });
-    document.querySelectorAll("th.sortable").forEach(th => th.classList.remove("active-header"));
-
-    rows.forEach(row => row.cells[colIndex].classList.add("sorted-col"));
-    header.classList.add("active-header");
-  }
-
-  function switchDay(mode) {
-    dayMode = mode;
-
-    const nav = document.querySelector(".date-nav");
-
-    if (mode === "yesterday") {
-      nav.innerHTML = `
-        <span class="active">Yesterday&#39;s Fixtures</span>
-        <span onclick="switchDay('today')">Today &raquo;</span>
-      `;
-    } else if (mode === "today") {
-      nav.innerHTML = `
-        <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
-        <span id="currentDate" class="active">Today&#39;s Fixtures</span>
-        <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
-      `;
-    } else if (mode === "tomorrow") {
-      nav.innerHTML = `
-        <span onclick="switchDay('today')">&laquo; Today</span>
-        <span id="currentDate" class="active">Tomorrow&#39;s Fixtures</span>
-      `;
+  // Clear all old highlights
+  rows.forEach(row => {
+    for (let i = 1; i < row.cells.length; i++) {
+      row.cells[i].classList.remove("sorted-col");
     }
+  });
+  document.querySelectorAll("th").forEach(th => th.classList.remove("active-header"));
 
-    // 🔹 reload fixtures but keep currentType button active
-    showTable(currentType);
-  }
+  // Highlight selected column
+  rows.forEach(row => row.cells[colIndex].classList.add("sorted-col"));
+  header.classList.add("active-header");
+}
 
-  // ✅ Initial load
-  switchDay("today");
-  showTable("xg");
+  loadData().then(() => showLeague('premier_league', document.querySelector('.buttons button')));
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -474,12 +426,5 @@ document.body.style.display = "none"; // hide content until validated
 })();
 </script>
 
-
 </body>
 </html>
-
-
-
-
-
-

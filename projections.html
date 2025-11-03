@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projections</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ Favicons for all browsers and devices -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+   body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f2f4f7; }
+   header { background: #003f2e; color: white; padding: 15px; text-align: center; font-size: 22px; font-weight: bold; }
+
+   .banner {
+     text-align: center;
+     font-size: 20px;
+     margin: 20px auto;
+     color: #003f2e;
+     background: #ffffff;
+     padding: 10px;
+     border: 2px solid #003f2e;
+     width: 60%;
+     border-radius: 4px;
+     margin-bottom: 40px;
+     margin-top: 40px;
+     font-weight: 600;
+   }
+
+   .container {
+     max-width: 1200px;
+     margin: auto;
+     padding: 30px 20px;
+   }
+
+   .buttons { text-align: center; margin-bottom: 20px; }
+   .buttons button {
+     margin: 0 10px;
+     padding: 10px 20px;
+     font-size: 16px;
+     cursor: pointer;
+     border: 2px solid #003f2e;
+     border-radius: 4px;
+     background: white;
+     color: #003f2e;
+   }
+   .buttons button.active {
+     background: #003f2e;
+     color: white;
+     font-weight: bold;
+   }
+
+   .search-box {
+     text-align: center;
+     margin-bottom: 20px;
+   }
+   .search-box input {
+     width: 250px;
+     padding: 8px;
+     font-size: 14px;
+     border: 2px solid #003f2e;
+     border-radius: 6px;
+   }
+
+   table {
+     width: 85%;
+     max-width: 950px;
+     margin: auto;
+     border-collapse: collapse;
+     background: white;
+     font-size: 18px;
+     line-height: 1.2;
+     border-radius: 10px;
+     overflow: hidden;
+     box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+     margin-bottom: 40px;
+   }
+
+   th, td {
+     padding: 8px 10px;
+     text-align: center;
+     border: 1px solid #ccc;
+     font-weight: normal;
+   }
+   th {
+     background: #003f2e;
+     color: white;
+     font-size: 18px;
+     cursor: pointer;
+   }
+
+   th.sortable:hover { background: #003f2e; }
+
+   th:first-child { border-top-left-radius: 10px; }
+   th:last-child { border-top-right-radius: 10px; }
+
+   img { width: 30px; height: 30px; vertical-align: middle; }
+   tr:nth-child(even) { background: #f2f2f2; }
+
+   .sorted-col { background: #fffacd !important; font-weight: bold; }
+   .active-header { background: #fcff55 !important; color: black !important; border-bottom: 1px solid #ffffff; }
+
+   /* 🔹 Fix Home Team & Away Team column widths */
+   td:nth-child(2), th:nth-child(2),
+   td:nth-child(6), th:nth-child(6) {
+     width: 180px;
+     white-space: nowrap;
+     max-width: 180px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+   }
+
+   /* 🔹 Date navigation */
+   .date-nav {
+     text-align: center;
+     margin: 20px 0;
+     font-size: 20px;
+     color: #003f2e;
+     font-weight: bold;
+   }
+   .date-nav span {
+     cursor: pointer;
+     color: #006644;
+     padding: 0 15px;
+     font-weight: bold;
+   }
+   .date-nav span:hover {
+     text-decoration: underline;
+   }
+
+   .date-nav span.active {
+  color: #0077cc;      /* blue */
+  text-decoration: underline;
+}
+
+
+
+ /* --- Mobile adjustments --- */
+@media (max-width: 925px) {
+ body { overflow-x: hidden; }
+
+ .header-logo { height: 50px !important; width: auto !important; }
+ h1 { font-size: 20px !important; }
+
+  .date-nav {
+    font-size: 14px !important;
+    margin: 15px 0 !important;
+    display: flex;
+    justify-content: center;  /* keep everything centered */
+    gap: 12px;                /* even spacing between items */
+    flex-wrap: wrap;          /* allows wrapping on very small screens */
+  }
+
+  .date-nav span {
+    padding: 4px 6px !important;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .date-nav .active {
+    text-decoration: underline;
+    color: #0077cc !important;
+  }
+
+
+ .banner {
+   width: 85% !important;
+   font-size: 13px !important;
+   padding: 6px !important;
+   margin-top: 15px;
+   margin-bottom: 10px;
+   line-height: 1.5;
+ }
+
+ .buttons { margin-bottom: 20px; margin-top:20px; }
+ .buttons button {
+   padding: 6px 8px !important;
+   font-size: 11px !important;
+   margin: 0 4px !important;
+ }
+
+ .container { max-width: 100%; padding: 0 5px; }
+
+ table {
+   width: 95% !important;
+   max-width: 100% !important;
+   font-size: 12px !important;
+   margin: auto;
+   margin-bottom: 25px;
+   table-layout: fixed;
+ }
+
+ th, td {
+   padding: 4px !important;
+   font-size: 12px !important;
+   word-wrap: break-word;
+ }
+
+ img { width: 20px !important; height: 20px !important; }
+
+ td:nth-child(2), th:nth-child(2),
+ td:nth-child(6), th:nth-child(6) {
+   width: 22% !important;
+ }
+}
+ </style>
+</head>
+<body>
+
+
+ <div style="background-color: #003f2e; color: white; padding: 10px 20px; position: relative; display: flex; align-items: center; justify-content: center;">
+   <a href="dashboard.html" style="text-decoration: none; color: inherit; display: contents;">
+  <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png"
+        alt="DG Logo"
+        class="header-logo"
+        style="height: 90px; width: auto; position: absolute; left: 20px; top: 0px; z-index: 2;" />
+   <h1 style="margin: 0; font-size: 32px; font-weight: 700;">DataGaffer.com</h1>
+</a>
+  </div>
+
+ <!-- 🔹 Date navigation like Ballpark Pal -->
+ <div class="date-nav">
+  <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
+  <span id="currentDate">Today's Fixtures</span>
+  <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
+</div>
+
+ <div class="banner">Projected goals, corners and shot stats after 5,000 match simulations</div>
+
+ <div class="buttons">
+   <button id="btn-xg" onclick="showTable('xg', this)">Projected Goals</button>
+   <button id="btn-corners" onclick="showTable('corners', this)">Projected Corners</button>
+   <button id="btn-shots" onclick="showTable('shots', this)">Projected Shots</button>
+ </div>
+
+ <!-- 🔹 New Search Box -->
+ <div class="search-box">
+   <input type="text" id="searchInput" placeholder="Search team, matchup, or league..." onkeyup="applySearch()" />
+ </div>
+
+ <div id="tables"></div>
+
+
+ <script>
+  let allFixtures = [];
+  let currentFixtures = [];
+  let currentType = "xg";
+  let sortConfig = { column: null, asc: false };
+  let dayMode = "today";
+
+  async function loadFixtures(file = "fixtures.json") {
+    const response = await fetch(file);
+    const fixtures = await response.json();
+    allFixtures = fixtures;
+    return fixtures;
+  }
+
+  function buildTable(fixtures, type) {
+    let table = `
+      <table id="statsTable">
+        <tr>
+          <th></th>
+          <th>Home Team</th>
+          <th class="sortable" onclick="sortTable(2, this)">Team</th>
+          <th class="sortable" onclick="sortTable(3, this)">Total</th>
+          <th class="sortable" onclick="sortTable(4, this)">Team</th>
+          <th>Away Team</th>
+          <th></th>
+        </tr>
+    `;
+
+    fixtures.forEach(f => {
+      const home = f.home.name;
+      const away = f.away.name;
+      const homeLogo = f.home.logo;
+      const awayLogo = f.away.logo;
+
+      const stats = f.sim_stats[type.toLowerCase()];
+      if (!stats) return;
+
+      table += `
+        <tr>
+          <td><img src="${homeLogo}" alt="${home}"></td>
+          <td>${home}</td>
+          <td>${stats.home}</td>
+          <td>${stats.total}</td>
+          <td>${stats.away}</td>
+          <td>${away}</td>
+          <td><img src="${awayLogo}" alt="${away}"></td>
+        </tr>
+      `;
+    });
+
+    table += `</table>`;
+    return table;
+  }
+
+  function applySearch() {
+    const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    const filtered = allFixtures.filter(f =>
+      f.home.name.toLowerCase().includes(searchTerm) ||
+      f.away.name.toLowerCase().includes(searchTerm) ||
+      (f.league && f.league.name.toLowerCase().includes(searchTerm))
+    );
+    document.getElementById("tables").innerHTML = buildTable(filtered, currentType);
+  }
+
+  async function showTable(type, btn = null) {
+    if (dayMode === "today") {
+      currentFixtures = await loadFixtures("fixtures.json");
+    } else if (dayMode === "yesterday") {
+      currentFixtures = await loadFixtures("fixtures_yesterday.json");
+    } else if (dayMode === "tomorrow") {
+      currentFixtures = await loadFixtures("fixtures_tomorrow.json");
+    }
+
+    currentType = type;
+    document.getElementById("tables").innerHTML = buildTable(currentFixtures, type);
+
+    sortConfig = { column: null, asc: false };
+
+    // 🔹 restore active state
+    document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
+    document.getElementById("btn-" + currentType).classList.add("active");
+  }
+
+  function sortTable(colIndex, header) {
+    const table = document.getElementById("statsTable");
+    let rows = Array.from(table.rows).slice(1);
+
+    const asc = sortConfig.column === colIndex ? !sortConfig.asc : false;
+    sortConfig = { column: colIndex, asc };
+
+    rows.sort((a, b) => {
+      let valA = parseFloat(a.cells[colIndex].innerText) || 0;
+      let valB = parseFloat(b.cells[colIndex].innerText) || 0;
+      return asc ? valA - valB : valB - valA;
+    });
+
+    rows.forEach(row => table.appendChild(row));
+
+    rows.forEach(row => {
+      for (let i = 2; i <= 4; i++) row.cells[i].classList.remove("sorted-col");
+    });
+    document.querySelectorAll("th.sortable").forEach(th => th.classList.remove("active-header"));
+
+    rows.forEach(row => row.cells[colIndex].classList.add("sorted-col"));
+    header.classList.add("active-header");
+  }
+
+  function switchDay(mode) {
+    dayMode = mode;
+
+    const nav = document.querySelector(".date-nav");
+
+    if (mode === "yesterday") {
+      nav.innerHTML = `
+        <span class="active">Yesterday&#39;s Fixtures</span>
+        <span onclick="switchDay('today')">Today &raquo;</span>
+      `;
+    } else if (mode === "today") {
+      nav.innerHTML = `
+        <span onclick="switchDay('yesterday')">&laquo; Yesterday</span>
+        <span id="currentDate" class="active">Today&#39;s Fixtures</span>
+        <span onclick="switchDay('tomorrow')">Tomorrow &raquo;</span>
+      `;
+    } else if (mode === "tomorrow") {
+      nav.innerHTML = `
+        <span onclick="switchDay('today')">&laquo; Today</span>
+        <span id="currentDate" class="active">Tomorrow&#39;s Fixtures</span>
+      `;
+    }
+
+    // 🔹 reload fixtures but keep currentType button active
+    showTable(currentType);
+  }
+
+  // ✅ Initial load
+  switchDay("today");
+  showTable("xg");
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* --- Supabase setup --- */
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: { persistSession: true, detectSessionInUrl: true }
+});
+
+/* --- Prevent Safari/Chrome back-button cache bypass --- */
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    console.log("Reloading to bypass Safari back cache");
+    window.location.reload();
+  }
+});
+
+/* --- Inactivity logout (15 minutes) --- */
+const INACTIVITY_LIMIT = 15 * 60 * 1000;
+let inactivityTimer;
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(async () => {
+    console.log("Auto-logout after inactivity");
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+  }, INACTIVITY_LIMIT);
+}
+["click", "mousemove", "keydown", "scroll", "touchstart"].forEach(evt =>
+  document.addEventListener(evt, resetInactivityTimer)
+);
+resetInactivityTimer();
+
+/* --- Explicit logout handling --- */
+supabaseClient.auth.onAuthStateChange((event) => {
+  if (event === "SIGNED_OUT") {
+    console.log("User signed out → redirecting to login");
+    window.location.href = "login.html";
+  }
+});
+
+/* --- Subscription enforcement --- */
+document.body.style.display = "none"; // hide content until validated
+
+(async () => {
+  const { data: { session }, error } = await supabaseClient.auth.getSession();
+  if (error || !session) {
+    console.warn("No session → redirecting to login");
+    window.location.href = "login.html";
+    return;
+  }
+
+  // --- Try matching by Supabase Auth ID first ---
+  let { data: profile, error: profileError } = await supabaseClient
+    .from("profiles")
+    .select("is_subscribed, plan")
+    .eq("id", session.user.id)
+    .maybeSingle();
+
+  // --- Fallback: try matching by email if profile not found or Stripe-created first ---
+  if ((!profile || profileError) && session.user.email) {
+    const { data: byEmail } = await supabaseClient
+      .from("profiles")
+      .select("is_subscribed, plan")
+      .eq("email", session.user.email.toLowerCase())
+      .maybeSingle();
+    profile = byEmail;
+  }
+
+  // --- Subscription validation ---
+  if (!profile?.is_subscribed) {
+    console.warn("Not subscribed → redirecting to subscribe page");
+    window.location.href = "subscribe.html";
+    return;
+  }
+
+  // ✅ Allow only active monthly/yearly users
+  if (profile.plan === "monthly" || profile.plan === "yearly") {
+    console.log("✅ Active plan:", profile.plan, "→ Showing page");
+    document.body.style.display = "block";
+  } else {
+    console.warn("User has unsupported plan:", profile.plan);
+    window.location.href = "subscribe.html";
+  }
+})();
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+

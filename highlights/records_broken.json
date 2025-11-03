@@ -2,45 +2,87 @@
   "records": [
     {
       "type": "Team Record",
-      "description": "Sassuolo sets a new personal record high: 2.04 projected goals.",
-      "league": "Serie A",
-      "date": "2025-11-02"
+      "description": "Napoli sets a new personal record high: 2.32 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
     },
     {
       "type": "Team Record",
-      "description": "Lazio sets a new personal record high: 1.79 projected goals.",
-      "league": "Serie A",
-      "date": "2025-11-02"
+      "description": "Eintracht Frankfurt sets a new personal record high: 1.30 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
+    },
+    {
+      "type": "League Record",
+      "description": "Slavia Praha vs Arsenal sets a new UEFA Champions League record low projection (2.58 goals).",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
     },
     {
       "type": "Team Record",
-      "description": "Cagliari sets a new personal record low: 0.88 projected goals.",
-      "league": "Serie A",
-      "date": "2025-11-02"
+      "description": "Slavia Praha sets a new personal record high: 0.61 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
     },
     {
       "type": "Team Record",
-      "description": "Sunderland sets a new personal record high: 1.63 projected goals.",
-      "league": "Premier League",
-      "date": "2025-11-02"
+      "description": "Tottenham sets a new personal record high: 2.77 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
     },
     {
       "type": "Team Record",
-      "description": "Everton sets a new personal record low: 0.78 projected goals.",
-      "league": "Premier League",
-      "date": "2025-11-02"
+      "description": "FC Copenhagen sets a new personal record high: 0.96 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
     },
     {
       "type": "Team Record",
-      "description": "Oviedo sets a new personal record high: 1.21 projected goals.",
-      "league": "La Liga",
-      "date": "2025-11-02"
+      "description": "Liverpool sets a new personal record low: 1.45 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
     },
     {
       "type": "Team Record",
-      "description": "Osasuna sets a new personal record low: 1.17 projected goals.",
-      "league": "La Liga",
-      "date": "2025-11-02"
+      "description": "Olympiakos Piraeus sets a new personal record high: 2.05 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
+    },
+    {
+      "type": "Team Record",
+      "description": "PSV Eindhoven sets a new personal record high: 2.63 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
+    },
+    {
+      "type": "Team Record",
+      "description": "Atletico Madrid sets a new personal record high: 2.52 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
+    },
+    {
+      "type": "Team Record",
+      "description": "Union St. Gilloise sets a new personal record high: 0.88 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
+    },
+    {
+      "type": "Team Record",
+      "description": "Paris Saint Germain sets a new personal record high: 1.40 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
+    },
+    {
+      "type": "Team Record",
+      "description": "Bayern M\u00fcnchen sets a new personal record high: 1.57 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
+    },
+    {
+      "type": "Team Record",
+      "description": "Sporting CP sets a new personal record high: 1.35 projected goals.",
+      "league": "UEFA Champions League",
+      "date": "2025-11-03"
     }
   ]
 }

@@ -136,6 +136,28 @@
     .L { color: #cc0000; }
     small { display: block; font-size: 10px; color: #666; margin-top: 2px; }
 
+    /* --- Desktop: make table more compact like other pages --- */
+@media (min-width: 901px) {
+  table {
+    width: 65% !important;          /* narrower, matches your Projections layout */
+    max-width: 950px !important;
+    margin: 25px auto 40px auto !important;
+    font-size: 15px !important;
+  }
+
+  th, td {
+    padding: 8px 10px !important;   /* tighter spacing for desktop */
+  }
+
+  .banner {
+    width: 60% !important;          /* aligns visually with table width */
+  }
+
+  .search-container {
+    width: 60% !important;
+  }
+}
+
     @media (max-width: 900px) {
       header { font-size: 18px; padding: 10px; }
       .header-logo { height: 45px; }

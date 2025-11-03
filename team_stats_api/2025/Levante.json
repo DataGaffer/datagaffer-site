@@ -3,9 +3,9 @@
   "season": 2025,
   "league_id": 140,
   "home": {
-    "matches": 4,
-    "goals_for": 5,
-    "goals_against": 12
+    "matches": 5,
+    "goals_for": 6,
+    "goals_against": 14
   },
   "away": {
     "matches": 6,

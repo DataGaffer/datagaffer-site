@@ -96,7 +96,7 @@
 </div>
 
 <div class="wrap">
-  <div class="banner">AI-selected best bets from today’s DataGaffer simulations</div>
+  <div class="banner">Computer generated best bets from today’s DataGaffer simulations</div>
   <div class="cards" id="top-picks"></div>
   <div class="footer-note">These plays are automatically chosen based on the highest edge between model and Bet365 odds.</div>
 </div>
@@ -124,7 +124,7 @@ async function loadTopPicks() {
     const book = match.book_odds || {};
     for (const mk of MARKET_MAP) {
       const p = sim[mk.sim], o = book[mk.book];
-      if (typeof p === "number" && typeof o === "number" && o >= 1.65 && o <= 1.7) {
+      if (typeof p === "number" && typeof o === "number" && o >= 1.65 && o <= 2.4) {
   const imp = impliedPct(o);
   const edge = +(p - imp).toFixed(1);
   if (edge > 0 && p >= 55) { // ✅ confident & +EV

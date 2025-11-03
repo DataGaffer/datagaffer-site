@@ -112,7 +112,11 @@
   display: inline-block;
   margin: 10px 20px;
 }
-
+/* Center accuracy + avg odds together */
+.summary-wrapper {
+  text-align: center;
+  margin-bottom: 0px;
+}
     /* Mobile */
     @media (max-width: 768px) {
       .header-logo { height: 50px !important; }
@@ -135,10 +139,12 @@
   </div>
 
   <!-- Banner -->
-  <div class="banner">AI Top Picks Accuracy – Full History</div>
+  <div class="banner">DG Top Picks Accuracy – Full History</div>
 
+  <div class="summary-wrapper">
   <div class="summary" id="summary">Loading...</div>
   <div class="summary" id="avgOddsSummary"></div>
+</div>
 
   <!-- Table -->
   <table class="accuracy-table" id="accuracy-table">

@@ -1,0 +1,708 @@
+{
+  "Ligue 1": [
+    {
+      "team": "Marseille",
+      "predicted_points": 62.3,
+      "win_chance": 37.47
+    },
+    {
+      "team": "Paris Saint Germain",
+      "predicted_points": 59.6,
+      "win_chance": 22.24
+    },
+    {
+      "team": "Lille",
+      "predicted_points": 56.9,
+      "win_chance": 12.55
+    },
+    {
+      "team": "Strasbourg",
+      "predicted_points": 54.4,
+      "win_chance": 6.52
+    },
+    {
+      "team": "Lens",
+      "predicted_points": 53.3,
+      "win_chance": 5.42
+    },
+    {
+      "team": "Monaco",
+      "predicted_points": 52.5,
+      "win_chance": 5.76
+    },
+    {
+      "team": "Lyon",
+      "predicted_points": 51.9,
+      "win_chance": 4.37
+    },
+    {
+      "team": "Toulouse",
+      "predicted_points": 48.7,
+      "win_chance": 1.87
+    },
+    {
+      "team": "Rennes",
+      "predicted_points": 47.3,
+      "win_chance": 1.11
+    },
+    {
+      "team": "Nice",
+      "predicted_points": 46.1,
+      "win_chance": 0.77
+    },
+    {
+      "team": "Paris FC",
+      "predicted_points": 45.6,
+      "win_chance": 0.82
+    },
+    {
+      "team": "Le Havre",
+      "predicted_points": 43.4,
+      "win_chance": 0.41
+    },
+    {
+      "team": "Stade Brestois 29",
+      "predicted_points": 42.7,
+      "win_chance": 0.44
+    },
+    {
+      "team": "Angers",
+      "predicted_points": 40.0,
+      "win_chance": 0.1
+    },
+    {
+      "team": "Nantes",
+      "predicted_points": 39.8,
+      "win_chance": 0.08
+    },
+    {
+      "team": "Lorient",
+      "predicted_points": 36.5,
+      "win_chance": 0.06
+    },
+    {
+      "team": "Auxerre",
+      "predicted_points": 35.4,
+      "win_chance": 0.01
+    },
+    {
+      "team": "Metz",
+      "predicted_points": 32.4,
+      "win_chance": 0.0
+    }
+  ],
+  "Bundesliga": [
+    {
+      "team": "Bayern M\u00fcnchen",
+      "predicted_points": 78.3,
+      "win_chance": 91.94
+    },
+    {
+      "team": "RB Leipzig",
+      "predicted_points": 59.1,
+      "win_chance": 3.01
+    },
+    {
+      "team": "Borussia Dortmund",
+      "predicted_points": 58.9,
+      "win_chance": 2.84
+    },
+    {
+      "team": "1.FC K\u00f6ln",
+      "predicted_points": 53.0,
+      "win_chance": 0.67
+    },
+    {
+      "team": "VfB Stuttgart",
+      "predicted_points": 53.0,
+      "win_chance": 0.55
+    },
+    {
+      "team": "Bayer Leverkusen",
+      "predicted_points": 51.5,
+      "win_chance": 0.43
+    },
+    {
+      "team": "Eintracht Frankfurt",
+      "predicted_points": 51.0,
+      "win_chance": 0.24
+    },
+    {
+      "team": "1899 Hoffenheim",
+      "predicted_points": 49.5,
+      "win_chance": 0.23
+    },
+    {
+      "team": "SC Freiburg",
+      "predicted_points": 45.0,
+      "win_chance": 0.04
+    },
+    {
+      "team": "Werder Bremen",
+      "predicted_points": 42.8,
+      "win_chance": 0.02
+    },
+    {
+      "team": "VfL Wolfsburg",
+      "predicted_points": 42.0,
+      "win_chance": 0.0
+    },
+    {
+      "team": "Union Berlin",
+      "predicted_points": 41.7,
+      "win_chance": 0.02
+    },
+    {
+      "team": "Hamburger SV",
+      "predicted_points": 40.0,
+      "win_chance": 0.0
+    },
+    {
+      "team": "FSV Mainz 05",
+      "predicted_points": 39.1,
+      "win_chance": 0.01
+    },
+    {
+      "team": "Borussia M\u00f6nchengladbach",
+      "predicted_points": 39.0,
+      "win_chance": 0.0
+    },
+    {
+      "team": "FC Augsburg",
+      "predicted_points": 38.1,
+      "win_chance": 0.0
+    },
+    {
+      "team": "1. FC Heidenheim",
+      "predicted_points": 35.7,
+      "win_chance": 0.0
+    },
+    {
+      "team": "FC St. Pauli",
+      "predicted_points": 35.4,
+      "win_chance": 0.0
+    }
+  ],
+  "Serie A": [
+    {
+      "team": "Inter",
+      "predicted_points": 67.7,
+      "win_chance": 27.75
+    },
+    {
+      "team": "Bologna",
+      "predicted_points": 64.5,
+      "win_chance": 17.09
+    },
+    {
+      "team": "AC Milan",
+      "predicted_points": 64.1,
+      "win_chance": 15.69
+    },
+    {
+      "team": "Napoli",
+      "predicted_points": 63.0,
+      "win_chance": 12.35
+    },
+    {
+      "team": "Como",
+      "predicted_points": 60.3,
+      "win_chance": 6.69
+    },
+    {
+      "team": "AS Roma",
+      "predicted_points": 58.9,
+      "win_chance": 4.41
+    },
+    {
+      "team": "Atalanta",
+      "predicted_points": 58.7,
+      "win_chance": 5.27
+    },
+    {
+      "team": "Lazio",
+      "predicted_points": 58.7,
+      "win_chance": 4.87
+    },
+    {
+      "team": "Juventus",
+      "predicted_points": 57.4,
+      "win_chance": 3.53
+    },
+    {
+      "team": "Cremonese",
+      "predicted_points": 51.8,
+      "win_chance": 0.84
+    },
+    {
+      "team": "Sassuolo",
+      "predicted_points": 51.7,
+      "win_chance": 0.85
+    },
+    {
+      "team": "Udinese",
+      "predicted_points": 48.0,
+      "win_chance": 0.22
+    },
+    {
+      "team": "Cagliari",
+      "predicted_points": 47.7,
+      "win_chance": 0.28
+    },
+    {
+      "team": "Torino",
+      "predicted_points": 43.9,
+      "win_chance": 0.06
+    },
+    {
+      "team": "Lecce",
+      "predicted_points": 43.6,
+      "win_chance": 0.01
+    },
+    {
+      "team": "Pisa",
+      "predicted_points": 41.9,
+      "win_chance": 0.04
+    },
+    {
+      "team": "Parma",
+      "predicted_points": 41.4,
+      "win_chance": 0.03
+    },
+    {
+      "team": "Genoa",
+      "predicted_points": 40.5,
+      "win_chance": 0.0
+    },
+    {
+      "team": "Fiorentina",
+      "predicted_points": 39.5,
+      "win_chance": 0.01
+    },
+    {
+      "team": "Verona",
+      "predicted_points": 38.1,
+      "win_chance": 0.01
+    }
+  ],
+  "La Liga": [
+    {
+      "team": "Barcelona",
+      "predicted_points": 70.8,
+      "win_chance": 32.95
+    },
+    {
+      "team": "Real Madrid",
+      "predicted_points": 70.5,
+      "win_chance": 34.5
+    },
+    {
+      "team": "Villarreal",
+      "predicted_points": 65.5,
+      "win_chance": 13.31
+    },
+    {
+      "team": "Atletico Madrid",
+      "predicted_points": 64.9,
+      "win_chance": 11.58
+    },
+    {
+      "team": "Real Betis",
+      "predicted_points": 59.5,
+      "win_chance": 3.4
+    },
+    {
+      "team": "Espanyol",
+      "predicted_points": 54.6,
+      "win_chance": 1.1
+    },
+    {
+      "team": "Alaves",
+      "predicted_points": 53.0,
+      "win_chance": 0.51
+    },
+    {
+      "team": "Elche",
+      "predicted_points": 52.3,
+      "win_chance": 0.51
+    },
+    {
+      "team": "Celta Vigo",
+      "predicted_points": 51.9,
+      "win_chance": 0.43
+    },
+    {
+      "team": "Getafe",
+      "predicted_points": 51.8,
+      "win_chance": 0.36
+    },
+    {
+      "team": "Sevilla",
+      "predicted_points": 50.5,
+      "win_chance": 0.43
+    },
+    {
+      "team": "Rayo Vallecano",
+      "predicted_points": 50.5,
+      "win_chance": 0.33
+    },
+    {
+      "team": "Athletic Club",
+      "predicted_points": 49.5,
+      "win_chance": 0.18
+    },
+    {
+      "team": "Real Sociedad",
+      "predicted_points": 48.6,
+      "win_chance": 0.17
+    },
+    {
+      "team": "Osasuna",
+      "predicted_points": 48.3,
+      "win_chance": 0.11
+    },
+    {
+      "team": "Levante",
+      "predicted_points": 46.1,
+      "win_chance": 0.1
+    },
+    {
+      "team": "Mallorca",
+      "predicted_points": 44.7,
+      "win_chance": 0.02
+    },
+    {
+      "team": "Valencia",
+      "predicted_points": 42.4,
+      "win_chance": 0.01
+    },
+    {
+      "team": "Oviedo",
+      "predicted_points": 37.2,
+      "win_chance": 0.0
+    },
+    {
+      "team": "Girona",
+      "predicted_points": 36.9,
+      "win_chance": 0.0
+    }
+  ],
+  "Danish Superliga": [
+    {
+      "team": "FC Midtjylland",
+      "predicted_points": 41.2,
+      "win_chance": 41.2
+    },
+    {
+      "team": "Aarhus",
+      "predicted_points": 38.4,
+      "win_chance": 24.71
+    },
+    {
+      "team": "Brondby",
+      "predicted_points": 36.8,
+      "win_chance": 14.71
+    },
+    {
+      "team": "FC Copenhagen",
+      "predicted_points": 35.2,
+      "win_chance": 9.71
+    },
+    {
+      "team": "Sonderjyske",
+      "predicted_points": 30.8,
+      "win_chance": 3.44
+    },
+    {
+      "team": "Viborg",
+      "predicted_points": 28.3,
+      "win_chance": 1.66
+    },
+    {
+      "team": "Randers FC",
+      "predicted_points": 28.2,
+      "win_chance": 1.53
+    },
+    {
+      "team": "FC Nordsjaelland",
+      "predicted_points": 27.8,
+      "win_chance": 1.27
+    },
+    {
+      "team": "Silkeborg",
+      "predicted_points": 27.1,
+      "win_chance": 0.75
+    },
+    {
+      "team": "Odense",
+      "predicted_points": 25.9,
+      "win_chance": 0.6
+    },
+    {
+      "team": "Vejle",
+      "predicted_points": 24.3,
+      "win_chance": 0.21
+    },
+    {
+      "team": "FC Fredericia",
+      "predicted_points": 23.7,
+      "win_chance": 0.21
+    }
+  ],
+  "Premier League": [
+    {
+      "team": "Arsenal",
+      "predicted_points": 72.4,
+      "win_chance": 45.37
+    },
+    {
+      "team": "Manchester City",
+      "predicted_points": 67.9,
+      "win_chance": 24.01
+    },
+    {
+      "team": "Tottenham",
+      "predicted_points": 64.1,
+      "win_chance": 9.77
+    },
+    {
+      "team": "Chelsea",
+      "predicted_points": 61.4,
+      "win_chance": 6.65
+    },
+    {
+      "team": "Sunderland",
+      "predicted_points": 59.8,
+      "win_chance": 3.95
+    },
+    {
+      "team": "Crystal Palace",
+      "predicted_points": 58.9,
+      "win_chance": 2.93
+    },
+    {
+      "team": "Liverpool",
+      "predicted_points": 57.5,
+      "win_chance": 2.25
+    },
+    {
+      "team": "Bournemouth",
+      "predicted_points": 56.1,
+      "win_chance": 1.72
+    },
+    {
+      "team": "Brighton",
+      "predicted_points": 55.1,
+      "win_chance": 1.23
+    },
+    {
+      "team": "Manchester United",
+      "predicted_points": 53.6,
+      "win_chance": 0.95
+    },
+    {
+      "team": "Newcastle",
+      "predicted_points": 50.7,
+      "win_chance": 0.22
+    },
+    {
+      "team": "Aston Villa",
+      "predicted_points": 50.5,
+      "win_chance": 0.24
+    },
+    {
+      "team": "Brentford",
+      "predicted_points": 50.0,
+      "win_chance": 0.31
+    },
+    {
+      "team": "Fulham",
+      "predicted_points": 49.7,
+      "win_chance": 0.29
+    },
+    {
+      "team": "Everton",
+      "predicted_points": 47.2,
+      "win_chance": 0.07
+    },
+    {
+      "team": "Burnley",
+      "predicted_points": 43.8,
+      "win_chance": 0.03
+    },
+    {
+      "team": "Leeds",
+      "predicted_points": 42.0,
+      "win_chance": 0.01
+    },
+    {
+      "team": "West Ham",
+      "predicted_points": 39.0,
+      "win_chance": 0.0
+    },
+    {
+      "team": "Nottingham Forest",
+      "predicted_points": 37.1,
+      "win_chance": 0.0
+    },
+    {
+      "team": "Wolves",
+      "predicted_points": 33.9,
+      "win_chance": 0.0
+    }
+  ],
+  "Eredivisie": [
+    {
+      "team": "Feyenoord",
+      "predicted_points": 66.8,
+      "win_chance": 43.12
+    },
+    {
+      "team": "PSV Eindhoven",
+      "predicted_points": 64.7,
+      "win_chance": 32.99
+    },
+    {
+      "team": "AZ Alkmaar",
+      "predicted_points": 58.3,
+      "win_chance": 10.8
+    },
+    {
+      "team": "NEC Nijmegen",
+      "predicted_points": 54.7,
+      "win_chance": 4.85
+    },
+    {
+      "team": "Ajax",
+      "predicted_points": 52.8,
+      "win_chance": 2.96
+    },
+    {
+      "team": "Utrecht",
+      "predicted_points": 51.2,
+      "win_chance": 1.73
+    },
+    {
+      "team": "Twente",
+      "predicted_points": 49.1,
+      "win_chance": 1.13
+    },
+    {
+      "team": "Groningen",
+      "predicted_points": 48.7,
+      "win_chance": 0.82
+    },
+    {
+      "team": "GO Ahead Eagles",
+      "predicted_points": 47.6,
+      "win_chance": 0.64
+    },
+    {
+      "team": "Heerenveen",
+      "predicted_points": 47.2,
+      "win_chance": 0.46
+    },
+    {
+      "team": "Fortuna Sittard",
+      "predicted_points": 44.0,
+      "win_chance": 0.2
+    },
+    {
+      "team": "FC Volendam",
+      "predicted_points": 43.4,
+      "win_chance": 0.14
+    },
+    {
+      "team": "NAC Breda",
+      "predicted_points": 41.8,
+      "win_chance": 0.09
+    },
+    {
+      "team": "Telstar",
+      "predicted_points": 40.4,
+      "win_chance": 0.01
+    },
+    {
+      "team": "Sparta Rotterdam",
+      "predicted_points": 39.2,
+      "win_chance": 0.03
+    },
+    {
+      "team": "Excelsior",
+      "predicted_points": 37.1,
+      "win_chance": 0.02
+    },
+    {
+      "team": "PEC Zwolle",
+      "predicted_points": 34.2,
+      "win_chance": 0.01
+    },
+    {
+      "team": "Heracles",
+      "predicted_points": 33.5,
+      "win_chance": 0.0
+    }
+  ],
+  "Swiss Super League": [
+    {
+      "team": "FC St. Gallen",
+      "predicted_points": 37.9,
+      "win_chance": 26.68
+    },
+    {
+      "team": "FC Thun",
+      "predicted_points": 37.1,
+      "win_chance": 21.52
+    },
+    {
+      "team": "FC Basel 1893",
+      "predicted_points": 35.8,
+      "win_chance": 18.14
+    },
+    {
+      "team": "FC Luzern",
+      "predicted_points": 33.5,
+      "win_chance": 9.95
+    },
+    {
+      "team": "Lausanne",
+      "predicted_points": 32.9,
+      "win_chance": 7.7
+    },
+    {
+      "team": "FC Sion",
+      "predicted_points": 32.3,
+      "win_chance": 6.34
+    },
+    {
+      "team": "BSC Young Boys",
+      "predicted_points": 30.1,
+      "win_chance": 3.41
+    },
+    {
+      "team": "FC Lugano",
+      "predicted_points": 29.2,
+      "win_chance": 2.8
+    },
+    {
+      "team": "Servette FC",
+      "predicted_points": 28.3,
+      "win_chance": 1.6
+    },
+    {
+      "team": "FC Z\u00fcrich",
+      "predicted_points": 26.4,
+      "win_chance": 1.38
+    },
+    {
+      "team": "Grasshoppers",
+      "predicted_points": 24.8,
+      "win_chance": 0.44
+    },
+    {
+      "team": "FC Winterthur",
+      "predicted_points": 20.3,
+      "win_chance": 0.04
+    }
+  ]
+}

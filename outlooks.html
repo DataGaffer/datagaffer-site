@@ -433,6 +433,52 @@ h1, h2, h3, h4, h5, h6, p {
   width: 17% !important;     /* Form columns */
 }
 
+/* ✅ Make TOC buttons appear 2 per row */
+.toc {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* two even columns */
+  gap: 8px 20px; /* vertical | horizontal spacing */
+  justify-content: center;
+  align-items: center;
+  max-width: 560px;
+  margin: 20px auto;
+}
+
+.toc-btn {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  background: #004d26;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+/* MOBILE: 2 per row with visible spacing and centered */
+@media (max-width: 925px) {
+  .toc {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;                 /* both row + column spacing */
+    justify-content: center !important;
+    align-content: start !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+
+  .toc a.toc-btn {
+    display: block !important;            /* anchors become blocks */
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;                 /* kill old margins */
+    padding: 8px 10px !important;         /* smaller button */
+    font-size: 12px !important;
+    border-radius: 6px !important;
+  }
+}
+
  /* --- Mobile adjustments for Outlooks Page --- */
 @media (max-width: 925px) {
   body { overflow-x: hidden; }
@@ -743,6 +789,7 @@ h1, h2, h3, h4, h5, h6, p {
     <a href="#win-outlook" class="toc-btn">Win Outlook</a>
     <a href="#h2h-form" class="toc-btn">H2H & Form Outlook</a>
     <a href="#top-players" class="toc-btn">Top 5 Player Sims</a>
+    <a href="#top-rankings" class="toc-btn">Top 5 Team Rankings</a>
   </div>
 
   <!-- Sections -->
@@ -951,6 +998,27 @@ h1, h2, h3, h4, h5, h6, p {
       </div>
     </div>
   </section>
+
+  <section id="top-rankings" class="outlook-page">
+  <div class="page-title">
+     <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" 
+    alt="DG Logo" class="section-logo">
+    <h2>10: Top 5 Team Rankings</h2>
+  </div>
+  <div class="page-description">
+    Top 5 teams across each major bets from simulation history 
+  </div>
+  <div class="page-content">
+    <div class="player-grid">
+      <div class="leaderboard"><h3>BTTS %</h3><ul id="rank-btts"></ul></div>
+      <div class="leaderboard"><h3>Over 2.5 %</h3><ul id="rank-over25"></ul></div>
+      <div class="leaderboard"><h3>Team Total</h3><ul id="rank-teamtotal"></ul></div>
+      <div class="leaderboard"><h3>Win %</h3><ul id="rank-win"></ul></div>
+      <div class="leaderboard"><h3>Under 2.5 %</h3><ul id="rank-under25"></ul></div>
+      <div class="leaderboard"><h3>Over 2.5 + BTTS</h3><ul id="rank-combined"></ul></div>
+    </div>
+  </div>
+</section>
 
   <script>
 function parseNum(txt) {
@@ -1230,6 +1298,140 @@ async function loadH2HOutlook() {
 loadH2HOutlook();
 </script>
 
+<script>
+(async () => {
+  try {
+    const [rankingsRes, teamsRes] = await Promise.all([
+      fetch("rankings/rankings.json"),
+      fetch("teams.json"),
+    ]);
+    const data  = await rankingsRes.json();
+    const teams = await teamsRes.json();
+
+    // --- Fast lookup maps ---
+    const byId = new Map();
+    const byNorm = new Map();
+    const norm = s => String(s||"")
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+
+    teams.forEach(t => {
+      if (t.id != null) byId.set(String(t.id), t);
+      byNorm.set(norm(t.name), t);
+      if (t.short_name) byNorm.set(norm(t.short_name), t);
+      if (t.alias)      byNorm.set(norm(t.alias), t);
+    });
+
+    // --- Manual overrides for missing logos ---
+    // --- Manual overrides for missing logos ---
+const forcedLogos = {
+  "bodoglimt": "https://media.api-sports.io/football/teams/327.png",
+  "bodo/glimt": "https://media.api-sports.io/football/teams/327.png",
+  "bodo": "https://media.api-sports.io/football/teams/327.png",
+  "fkcrvenazvezda": "https://media.api-sports.io/football/teams/598.png",
+  "crvenazvezda": "https://media.api-sports.io/football/teams/598.png",
+  "redstarbelgrade": "https://media.api-sports.io/football/teams/598.png"
+};
+
+    // Multi-source <img> with cascading fallbacks
+    function imgHTML(cands) {
+      const first = cands.find(Boolean) || "assets/faces/placeholder.png";
+      const rest  = cands.slice(1).filter(Boolean).join("|");
+      return `<img class="player-face" style="border-radius:0;"
+                   src="${first}"
+                   onerror="this.onerror=null;
+                            const nxt=this.dataset.next?.split('|').filter(Boolean);
+                            if(nxt && nxt.length){ this.dataset.next=nxt.slice(1).join('|'); this.src=nxt[0]; }
+                            else { this.src='assets/faces/placeholder.png'; }"
+                   data-next="${rest}">`;
+    }
+
+    // --- Find best logo for each ranking entry ---
+    function resolveLogo(entry) {
+      const idStr = entry.id != null ? String(entry.id) : null;
+      const tById = idStr ? byId.get(idStr) : null;
+      const tByNm = byNorm.get(norm(entry.team));
+      const teamKey = norm(entry.team);
+
+      // ✅ Forced logos take top priority
+      if (forcedLogos[teamKey]) {
+        return imgHTML([forcedLogos[teamKey]]);
+      }
+
+      // candidate order: teams.json logo → assets by id → assets by normalized name
+      const cands = [
+        tById?.logo || tByNm?.logo || null,
+        idStr ? `assets/logos/${idStr}.png` : null,
+        `assets/logos/${teamKey}.png`
+      ];
+      return imgHTML(cands);
+    }
+
+    const parsePct = s => (s ? parseFloat(String(s).replace("%","").trim()) : 0);
+
+    // --- Combined Over 2.5 + BTTS ---
+    const over = data.over25 || [];
+    const btts = data.btts  || [];
+    const bttsByTeam = new Map(btts.map(x => [x.team, x]));
+    const combined = over.map(o => {
+      const b = bttsByTeam.get(o.team);
+      const val = b ? (parsePct(o.value) + parsePct(b.value)) / 2 : parsePct(o.value);
+      return { team: o.team, id: o.id, value: val };
+    }).sort((a,b) => b.value - a.value);
+
+    function renderList(category, ulId) {
+      const list = document.getElementById(ulId);
+      const rows = data[category] || [];
+      if (!list) return;
+      list.innerHTML = "";
+
+      const unresolved = [];
+      rows.slice(0,5).forEach(entry => {
+        const idStr = entry.id != null ? String(entry.id) : null;
+        const foundById  = idStr && byId.has(idStr);
+        const foundByNm  = byNorm.has(norm(entry.team));
+        if (!foundById && !foundByNm && !forcedLogos[norm(entry.team)]) {
+          unresolved.push({team: entry.team, id: entry.id});
+        }
+
+        list.insertAdjacentHTML("beforeend", `
+          <li>
+            ${resolveLogo(entry)}
+            ${entry.team}
+            <span style="margin-left:auto; font-weight:600;">${entry.value}</span>
+          </li>
+        `);
+      });
+
+      if (unresolved.length) {
+        console.warn(`[Rankings] Missing logo matches in "${category}":`, unresolved);
+      }
+    }
+
+    renderList("btts",       "rank-btts");
+    renderList("over25",     "rank-over25");
+    renderList("team_total", "rank-teamtotal");
+    renderList("win",        "rank-win");
+    renderList("under25",    "rank-under25");
+
+    // --- Combined list ---
+    const combinedList = document.getElementById("rank-combined");
+    if (combinedList) {
+      combined.slice(0,5).forEach(entry => {
+        combinedList.insertAdjacentHTML("beforeend", `
+          <li>
+            ${resolveLogo(entry)}
+            ${entry.team}
+            <span style="margin-left:auto; font-weight:600;">${entry.value.toFixed(1)}%</span>
+          </li>
+        `);
+      });
+    }
+  } catch (e) {
+    console.error("Error loading rankings:", e);
+  }
+})();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
