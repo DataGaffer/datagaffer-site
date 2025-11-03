@@ -16,24 +16,36 @@
     "team_id": 112,
     "name": "C. Sabaly",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 539,
+    "appearances": 8,
+    "minutes": 620,
     "goals": 0,
     "assists": 1,
-    "shots": 3,
-    "shots_on_target": 1
+    "shots": 4,
+    "shots_on_target": 2
   },
   {
     "id": 21640,
     "team_id": 112,
     "name": "J. Deminguet",
     "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 437,
+    "appearances": 9,
+    "minutes": 518,
     "goals": 0,
     "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 68177,
+    "team_id": 112,
+    "name": "G. Abuashvili",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 266,
+    "goals": 0,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 2
   },
   {
     "id": 157912,
@@ -52,10 +64,10 @@
     "team_id": 112,
     "name": "Ibou San\u00e9",
     "position": "Attacker",
-    "appearances": 7,
-    "minutes": 179,
+    "appearances": 8,
+    "minutes": 188,
     "goals": 1,
-    "assists": 0,
+    "assists": 1,
     "shots": 2,
     "shots_on_target": 2
   },
@@ -64,11 +76,11 @@
     "team_id": 112,
     "name": "A. Tour\u00e9",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 356,
+    "appearances": 10,
+    "minutes": 446,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
+    "shots": 2,
     "shots_on_target": 0
   },
   {
@@ -100,36 +112,24 @@
     "team_id": 112,
     "name": "G. Hein",
     "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 642,
-    "goals": 1,
+    "appearances": 9,
+    "minutes": 732,
+    "goals": 3,
     "assists": 2,
-    "shots": 3,
-    "shots_on_target": 2
+    "shots": 6,
+    "shots_on_target": 4
   },
   {
     "id": 20535,
     "team_id": 112,
     "name": "H. Diallo",
     "position": "Attacker",
-    "appearances": 6,
-    "minutes": 523,
+    "appearances": 7,
+    "minutes": 613,
     "goals": 1,
     "assists": 1,
-    "shots": 5,
-    "shots_on_target": 4
-  },
-  {
-    "id": 68177,
-    "team_id": 112,
-    "name": "G. Abuashvili",
-    "position": "Attacker",
-    "appearances": 6,
-    "minutes": 257,
-    "goals": 0,
-    "assists": 0,
-    "shots": 5,
-    "shots_on_target": 2
+    "shots": 7,
+    "shots_on_target": 5
   },
   {
     "id": 336180,
@@ -142,5 +142,17 @@
     "assists": 0,
     "shots": 1,
     "shots_on_target": 1
+  },
+  {
+    "id": 384683,
+    "team_id": 112,
+    "name": "I. Guerti",
+    "position": "Midfielder",
+    "appearances": 3,
+    "minutes": 35,
+    "goals": 0,
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   }
 ]

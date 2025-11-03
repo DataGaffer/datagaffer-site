@@ -4,23 +4,23 @@
     "team_id": 33,
     "name": "Casemiro",
     "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 463,
-    "goals": 2,
+    "appearances": 9,
+    "minutes": 559,
+    "goals": 3,
     "assists": 1,
-    "shots": 5,
-    "shots_on_target": 2
+    "shots": 7,
+    "shots_on_target": 3
   },
   {
     "id": 1485,
     "team_id": 33,
     "name": "Bruno Fernandes",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 802,
+    "appearances": 10,
+    "minutes": 898,
     "goals": 2,
-    "assists": 1,
-    "shots": 14,
+    "assists": 2,
+    "shots": 15,
     "shots_on_target": 8
   },
   {
@@ -76,8 +76,8 @@
     "team_id": 33,
     "name": "Diogo Dalot",
     "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 518,
+    "appearances": 8,
+    "minutes": 586,
     "goals": 0,
     "assists": 1,
     "shots": 3,
@@ -88,35 +88,35 @@
     "team_id": 33,
     "name": "Matheus Cunha",
     "position": "Attacker",
-    "appearances": 8,
-    "minutes": 523,
+    "appearances": 9,
+    "minutes": 619,
     "goals": 1,
     "assists": 0,
-    "shots": 15,
-    "shots_on_target": 9
+    "shots": 16,
+    "shots_on_target": 10
   },
   {
     "id": 20589,
     "team_id": 33,
     "name": "B. Mbeumo",
     "position": "Attacker",
-    "appearances": 9,
-    "minutes": 776,
+    "appearances": 10,
+    "minutes": 872,
     "goals": 4,
     "assists": 1,
-    "shots": 19,
-    "shots_on_target": 12
+    "shots": 20,
+    "shots_on_target": 13
   },
   {
     "id": 115589,
     "team_id": 33,
     "name": "B. \u0160e\u0161ko",
     "position": "Attacker",
-    "appearances": 9,
-    "minutes": 498,
+    "appearances": 10,
+    "minutes": 594,
     "goals": 2,
     "assists": 1,
-    "shots": 13,
+    "shots": 15,
     "shots_on_target": 7
   },
   {
@@ -124,11 +124,11 @@
     "team_id": 33,
     "name": "A. Diallo",
     "position": "Attacker",
-    "appearances": 8,
-    "minutes": 577,
-    "goals": 0,
+    "appearances": 9,
+    "minutes": 673,
+    "goals": 1,
     "assists": 1,
-    "shots": 7,
-    "shots_on_target": 4
+    "shots": 11,
+    "shots_on_target": 7
   }
 ]

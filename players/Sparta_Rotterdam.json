@@ -24,6 +24,18 @@
     "shots_on_target": 2
   },
   {
+    "id": 36989,
+    "team_id": 426,
+    "name": "M. van Bergen",
+    "position": "Attacker",
+    "appearances": 8,
+    "minutes": 687,
+    "goals": 1,
+    "assists": 0,
+    "shots": 10,
+    "shots_on_target": 4
+  },
+  {
     "id": 37156,
     "team_id": 426,
     "name": "J. Toornstra",
@@ -34,18 +46,6 @@
     "assists": 0,
     "shots": 3,
     "shots_on_target": 1
-  },
-  {
-    "id": 39091,
-    "team_id": 426,
-    "name": "J. Kitolano",
-    "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 708,
-    "goals": 2,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 2
   },
   {
     "id": 39100,
@@ -60,16 +60,40 @@
     "shots_on_target": 10
   },
   {
+    "id": 92977,
+    "team_id": 426,
+    "name": "L. Duijvestijn",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 259,
+    "goals": 0,
+    "assists": 0,
+    "shots": 7,
+    "shots_on_target": 5
+  },
+  {
     "id": 264419,
     "team_id": 426,
     "name": "S. Ltaief",
-    "position": "Midfielder",
+    "position": "Attacker",
     "appearances": 8,
     "minutes": 511,
     "goals": 1,
     "assists": 0,
     "shots": 8,
     "shots_on_target": 3
+  },
+  {
+    "id": 272454,
+    "team_id": 426,
+    "name": "J. Baas",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 330,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
   },
   {
     "id": 444790,
@@ -96,39 +120,15 @@
     "shots_on_target": 0
   },
   {
-    "id": 36989,
+    "id": 39091,
     "team_id": 426,
-    "name": "M. van Bergen",
-    "position": "Attacker",
+    "name": "J. Kitolano",
+    "position": "Midfielder",
     "appearances": 8,
-    "minutes": 687,
-    "goals": 1,
+    "minutes": 708,
+    "goals": 2,
     "assists": 0,
-    "shots": 10,
-    "shots_on_target": 4
-  },
-  {
-    "id": 92977,
-    "team_id": 426,
-    "name": "L. Duijvestijn",
-    "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 259,
-    "goals": 0,
-    "assists": 0,
-    "shots": 7,
-    "shots_on_target": 5
-  },
-  {
-    "id": 272454,
-    "team_id": 426,
-    "name": "J. Baas",
-    "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 330,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
+    "shots": 4,
     "shots_on_target": 2
   }
 ]

@@ -36,16 +36,28 @@
     "shots_on_target": 2
   },
   {
-    "id": 38122,
+    "id": 38123,
     "team_id": 206,
-    "name": "T. Bruns",
+    "name": "A. Hrusti\u0107",
     "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 489,
+    "appearances": 9,
+    "minutes": 638,
+    "goals": 0,
+    "assists": 2,
+    "shots": 4,
+    "shots_on_target": 2
+  },
+  {
+    "id": 38464,
+    "team_id": 206,
+    "name": "W. Ould-Chikh",
+    "position": "Midfielder",
+    "appearances": 4,
+    "minutes": 77,
     "goals": 0,
     "assists": 0,
-    "shots": 9,
-    "shots_on_target": 2
+    "shots": 1,
+    "shots_on_target": 0
   },
   {
     "id": 144691,
@@ -84,6 +96,18 @@
     "shots_on_target": 3
   },
   {
+    "id": 38122,
+    "team_id": 206,
+    "name": "T. Bruns",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 489,
+    "goals": 0,
+    "assists": 0,
+    "shots": 9,
+    "shots_on_target": 2
+  },
+  {
     "id": 358450,
     "team_id": 206,
     "name": "S. Scheperman",
@@ -106,29 +130,5 @@
     "assists": 0,
     "shots": 3,
     "shots_on_target": 1
-  },
-  {
-    "id": 38123,
-    "team_id": 206,
-    "name": "A. Hrusti\u0107",
-    "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 638,
-    "goals": 0,
-    "assists": 2,
-    "shots": 4,
-    "shots_on_target": 2
-  },
-  {
-    "id": 38464,
-    "team_id": 206,
-    "name": "W. Ould-Chikh",
-    "position": "Midfielder",
-    "appearances": 4,
-    "minutes": 77,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 0
   }
 ]

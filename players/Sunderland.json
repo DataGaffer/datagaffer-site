@@ -1,17 +1,5 @@
 [
   {
-    "id": 1464,
-    "team_id": 746,
-    "name": "G. Xhaka",
-    "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 810,
-    "goals": 0,
-    "assists": 3,
-    "shots": 3,
-    "shots_on_target": 2
-  },
-  {
     "id": 20638,
     "team_id": 746,
     "name": "E. Le F\u00e9e",
@@ -34,6 +22,54 @@
     "assists": 0,
     "shots": 14,
     "shots_on_target": 6
+  },
+  {
+    "id": 339201,
+    "team_id": 746,
+    "name": "C. Rigg",
+    "position": "Midfielder",
+    "appearances": 6,
+    "minutes": 189,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
+    "id": 671,
+    "team_id": 746,
+    "name": "B. Traor\u00e9",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 217,
+    "goals": 0,
+    "assists": 0,
+    "shots": 4,
+    "shots_on_target": 3
+  },
+  {
+    "id": 1464,
+    "team_id": 746,
+    "name": "G. Xhaka",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 810,
+    "goals": 0,
+    "assists": 3,
+    "shots": 3,
+    "shots_on_target": 2
+  },
+  {
+    "id": 38750,
+    "team_id": 746,
+    "name": "B. Brobbey",
+    "position": "Attacker",
+    "appearances": 4,
+    "minutes": 79,
+    "goals": 0,
+    "assists": 1,
+    "shots": 0,
+    "shots_on_target": 0
   },
   {
     "id": 301771,
@@ -72,18 +108,6 @@
     "shots_on_target": 2
   },
   {
-    "id": 339201,
-    "team_id": 746,
-    "name": "C. Rigg",
-    "position": "Midfielder",
-    "appearances": 6,
-    "minutes": 189,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
     "id": 349799,
     "team_id": 746,
     "name": "Eliezer Mayenda",
@@ -105,30 +129,6 @@
     "goals": 0,
     "assists": 0,
     "shots": 1,
-    "shots_on_target": 0
-  },
-  {
-    "id": 671,
-    "team_id": 746,
-    "name": "B. Traor\u00e9",
-    "position": "Attacker",
-    "appearances": 4,
-    "minutes": 217,
-    "goals": 0,
-    "assists": 0,
-    "shots": 4,
-    "shots_on_target": 3
-  },
-  {
-    "id": 38750,
-    "team_id": 746,
-    "name": "B. Brobbey",
-    "position": "Attacker",
-    "appearances": 4,
-    "minutes": 79,
-    "goals": 0,
-    "assists": 1,
-    "shots": 0,
     "shots_on_target": 0
   }
 ]

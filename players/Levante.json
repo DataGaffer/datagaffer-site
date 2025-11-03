@@ -1,33 +1,33 @@
 [
   {
-    "id": 46790,
+    "id": 20817,
     "team_id": 539,
-    "name": "V\u00edctor Garc\u00eda",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 171,
-    "goals": 0,
+    "name": "G. Koyalipou",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 150,
+    "goals": 1,
     "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
+    "shots": 2,
+    "shots_on_target": 2
   },
   {
-    "id": 47225,
+    "id": 46941,
     "team_id": 539,
-    "name": "Brugui",
+    "name": "Unai Elgezabal",
     "position": "Midfielder",
-    "appearances": 10,
-    "minutes": 641,
+    "appearances": 7,
+    "minutes": 630,
     "goals": 0,
-    "assists": 1,
-    "shots": 11,
-    "shots_on_target": 4
+    "assists": 0,
+    "shots": 0,
+    "shots_on_target": 0
   },
   {
     "id": 47467,
     "team_id": 539,
     "name": "Jos\u00e9 Luis Morales",
-    "position": "Attacker",
+    "position": "Midfielder",
     "appearances": 10,
     "minutes": 224,
     "goals": 1,
@@ -48,70 +48,10 @@
     "shots_on_target": 2
   },
   {
-    "id": 106727,
-    "team_id": 539,
-    "name": "Oriol Rey",
-    "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 573,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
-    "id": 182770,
-    "team_id": 539,
-    "name": "Carlos \u00c1lvarez",
-    "position": "Midfielder",
-    "appearances": 10,
-    "minutes": 595,
-    "goals": 2,
-    "assists": 1,
-    "shots": 6,
-    "shots_on_target": 5
-  },
-  {
-    "id": 192032,
-    "team_id": 539,
-    "name": "Iv\u00e1n Romero",
-    "position": "Attacker",
-    "appearances": 9,
-    "minutes": 704,
-    "goals": 4,
-    "assists": 0,
-    "shots": 17,
-    "shots_on_target": 7
-  },
-  {
-    "id": 20817,
-    "team_id": 539,
-    "name": "G. Koyalipou",
-    "position": "Attacker",
-    "appearances": 7,
-    "minutes": 150,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 2
-  },
-  {
-    "id": 125239,
-    "team_id": 539,
-    "name": "K. Arriaga",
-    "position": "Midfielder",
-    "appearances": 7,
-    "minutes": 389,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
-  },
-  {
     "id": 128985,
     "team_id": 539,
     "name": "Iker Losada",
-    "position": "Attacker",
+    "position": "Midfielder",
     "appearances": 3,
     "minutes": 45,
     "goals": 0,
@@ -144,16 +84,16 @@
     "shots_on_target": 0
   },
   {
-    "id": 378284,
+    "id": 182770,
     "team_id": 539,
-    "name": "Etta Eyong",
-    "position": "Attacker",
-    "appearances": 7,
-    "minutes": 549,
-    "goals": 5,
+    "name": "Carlos \u00c1lvarez",
+    "position": "Midfielder",
+    "appearances": 10,
+    "minutes": 595,
+    "goals": 2,
     "assists": 1,
-    "shots": 14,
-    "shots_on_target": 8
+    "shots": 6,
+    "shots_on_target": 5
   },
   {
     "id": 450497,
@@ -166,5 +106,65 @@
     "assists": 0,
     "shots": 0,
     "shots_on_target": 0
+  },
+  {
+    "id": 47225,
+    "team_id": 539,
+    "name": "Brugui",
+    "position": "Midfielder",
+    "appearances": 10,
+    "minutes": 641,
+    "goals": 0,
+    "assists": 1,
+    "shots": 11,
+    "shots_on_target": 4
+  },
+  {
+    "id": 106727,
+    "team_id": 539,
+    "name": "Oriol Rey",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 573,
+    "goals": 0,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 1
+  },
+  {
+    "id": 125239,
+    "team_id": 539,
+    "name": "K. Arriaga",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 389,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 192032,
+    "team_id": 539,
+    "name": "Iv\u00e1n Romero",
+    "position": "Attacker",
+    "appearances": 9,
+    "minutes": 704,
+    "goals": 4,
+    "assists": 0,
+    "shots": 17,
+    "shots_on_target": 7
+  },
+  {
+    "id": 378284,
+    "team_id": 539,
+    "name": "Etta Eyong",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 549,
+    "goals": 5,
+    "assists": 1,
+    "shots": 14,
+    "shots_on_target": 8
   }
 ]

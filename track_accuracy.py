@@ -34,7 +34,7 @@ def find_top_picks(fixtures):
             o = book.get(book_key)
 
             # ✅ Only consider valid decimal odds within realistic range
-            if isinstance(p, (int, float)) and isinstance(o, (int, float)) and 1.6 <= o <= 2.4:
+            if isinstance(p, (int, float)) and isinstance(o, (int, float)) and 1.6 <= o <= 2.3:
                 imp = implied_pct(o)
                 edge = round(p - imp, 1)
 

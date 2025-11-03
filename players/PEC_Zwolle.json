@@ -1,21 +1,9 @@
 [
   {
-    "id": 242,
-    "team_id": 193,
-    "name": "R. Thomas",
-    "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 750,
-    "goals": 0,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 1
-  },
-  {
     "id": 8764,
     "team_id": 193,
     "name": "D. Mbayo",
-    "position": "Midfielder",
+    "position": "Attacker",
     "appearances": 9,
     "minutes": 398,
     "goals": 0,
@@ -84,6 +72,30 @@
     "shots_on_target": 2
   },
   {
+    "id": 163054,
+    "team_id": 193,
+    "name": "S. Shoretire",
+    "position": "Midfielder",
+    "appearances": 7,
+    "minutes": 226,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 353732,
+    "team_id": 193,
+    "name": "Jan Faberski",
+    "position": "Attacker",
+    "appearances": 7,
+    "minutes": 296,
+    "goals": 0,
+    "assists": 1,
+    "shots": 2,
+    "shots_on_target": 0
+  },
+  {
     "id": 425821,
     "team_id": 193,
     "name": "N. Fichtinger",
@@ -93,18 +105,6 @@
     "goals": 0,
     "assists": 1,
     "shots": 0,
-    "shots_on_target": 0
-  },
-  {
-    "id": 474376,
-    "team_id": 193,
-    "name": "G. Reiziger",
-    "position": "Midfielder",
-    "appearances": 5,
-    "minutes": 52,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
     "shots_on_target": 0
   },
   {
@@ -120,15 +120,15 @@
     "shots_on_target": 0
   },
   {
-    "id": 163054,
+    "id": 242,
     "team_id": 193,
-    "name": "S. Shoretire",
-    "position": "Attacker",
-    "appearances": 7,
-    "minutes": 226,
+    "name": "R. Thomas",
+    "position": "Midfielder",
+    "appearances": 9,
+    "minutes": 750,
     "goals": 0,
     "assists": 0,
-    "shots": 1,
+    "shots": 2,
     "shots_on_target": 1
   },
   {
@@ -144,24 +144,24 @@
     "shots_on_target": 0
   },
   {
-    "id": 353732,
-    "team_id": 193,
-    "name": "Jan Faberski",
-    "position": "Attacker",
-    "appearances": 7,
-    "minutes": 296,
-    "goals": 0,
-    "assists": 1,
-    "shots": 2,
-    "shots_on_target": 0
-  },
-  {
     "id": 387342,
     "team_id": 193,
     "name": "D. Voute",
     "position": "Attacker",
     "appearances": 3,
     "minutes": 93,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 0
+  },
+  {
+    "id": 474376,
+    "team_id": 193,
+    "name": "G. Reiziger",
+    "position": "Midfielder",
+    "appearances": 5,
+    "minutes": 52,
     "goals": 0,
     "assists": 0,
     "shots": 1,

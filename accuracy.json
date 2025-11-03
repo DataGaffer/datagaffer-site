@@ -628,5 +628,61 @@
         "result": "Loss"
       }
     ]
+  },
+  {
+    "date": "2025-11-02",
+    "picks": [
+      {
+        "fixture_id": 1382364,
+        "match": "Young Boys vs FC Basel",
+        "pick": "Young Boys o1.5 Goals",
+        "dg_odds": 1.23,
+        "book_odds": 1.72,
+        "edge": 23.5,
+        "league": "Super League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1387796,
+        "match": "Toulouse vs Le Havre",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.36,
+        "book_odds": 2.0,
+        "edge": 23.4,
+        "league": "Ligue 1",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1380962,
+        "match": "Heracles vs PEC Zwolle",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.28,
+        "book_odds": 1.75,
+        "edge": 20.9,
+        "league": "Eredivisie",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1387793,
+        "match": "Nantes vs Metz",
+        "pick": "Nantes o1.5 Goals",
+        "dg_odds": 1.52,
+        "book_odds": 2.0,
+        "edge": 15.8,
+        "league": "Ligue 1",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1377961,
+        "match": "Torino vs Pisa",
+        "pick": "Torino Win",
+        "dg_odds": 1.52,
+        "book_odds": 1.95,
+        "edge": 14.3,
+        "league": "Serie A",
+        "result": "Loss"
+      }
+    ]
   }
+  
 ]

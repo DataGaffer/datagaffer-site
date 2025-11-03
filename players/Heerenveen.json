@@ -1,26 +1,14 @@
 [
   {
-    "id": 37163,
-    "team_id": 210,
-    "name": "D. Vente",
-    "position": "Attacker",
-    "appearances": 10,
-    "minutes": 798,
-    "goals": 5,
-    "assists": 1,
-    "shots": 19,
-    "shots_on_target": 8
-  },
-  {
     "id": 37183,
     "team_id": 210,
     "name": "J. van Overeem",
     "position": "Midfielder",
-    "appearances": 10,
-    "minutes": 900,
+    "appearances": 11,
+    "minutes": 988,
     "goals": 0,
     "assists": 1,
-    "shots": 5,
+    "shots": 6,
     "shots_on_target": 1
   },
   {
@@ -28,72 +16,12 @@
     "team_id": 210,
     "name": "L. Brouwers",
     "position": "Midfielder",
-    "appearances": 9,
-    "minutes": 765,
+    "appearances": 10,
+    "minutes": 855,
     "goals": 1,
     "assists": 2,
-    "shots": 9,
-    "shots_on_target": 2
-  },
-  {
-    "id": 174797,
-    "team_id": 210,
-    "name": "M. Rivera",
-    "position": "Midfielder",
-    "appearances": 10,
-    "minutes": 768,
-    "goals": 0,
-    "assists": 1,
-    "shots": 13,
-    "shots_on_target": 7
-  },
-  {
-    "id": 281662,
-    "team_id": 210,
-    "name": "J. Trenskow",
-    "position": "Midfielder",
-    "appearances": 10,
-    "minutes": 806,
-    "goals": 4,
-    "assists": 1,
-    "shots": 18,
-    "shots_on_target": 13
-  },
-  {
-    "id": 310037,
-    "team_id": 210,
-    "name": "M. Linday",
-    "position": "Midfielder",
-    "appearances": 10,
-    "minutes": 689,
-    "goals": 0,
-    "assists": 0,
-    "shots": 3,
-    "shots_on_target": 0
-  },
-  {
-    "id": 323824,
-    "team_id": 210,
-    "name": "V. Sejk",
-    "position": "Attacker",
-    "appearances": 10,
-    "minutes": 209,
-    "goals": 2,
-    "assists": 1,
-    "shots": 5,
-    "shots_on_target": 2
-  },
-  {
-    "id": 453717,
-    "team_id": 210,
-    "name": "E. G\u00fcrb\u00fcz",
-    "position": "Attacker",
-    "appearances": 5,
-    "minutes": 72,
-    "goals": 0,
-    "assists": 0,
-    "shots": 1,
-    "shots_on_target": 1
+    "shots": 11,
+    "shots_on_target": 4
   },
   {
     "id": 128311,
@@ -106,5 +34,77 @@
     "assists": 1,
     "shots": 10,
     "shots_on_target": 7
+  },
+  {
+    "id": 174797,
+    "team_id": 210,
+    "name": "M. Rivera",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 858,
+    "goals": 0,
+    "assists": 1,
+    "shots": 18,
+    "shots_on_target": 8
+  },
+  {
+    "id": 281662,
+    "team_id": 210,
+    "name": "J. Trenskow",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 874,
+    "goals": 4,
+    "assists": 1,
+    "shots": 18,
+    "shots_on_target": 13
+  },
+  {
+    "id": 310037,
+    "team_id": 210,
+    "name": "M. Linday",
+    "position": "Midfielder",
+    "appearances": 11,
+    "minutes": 697,
+    "goals": 0,
+    "assists": 0,
+    "shots": 3,
+    "shots_on_target": 0
+  },
+  {
+    "id": 323824,
+    "team_id": 210,
+    "name": "V. Sejk",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 299,
+    "goals": 3,
+    "assists": 1,
+    "shots": 7,
+    "shots_on_target": 4
+  },
+  {
+    "id": 453717,
+    "team_id": 210,
+    "name": "E. G\u00fcrb\u00fcz",
+    "position": "Attacker",
+    "appearances": 6,
+    "minutes": 94,
+    "goals": 0,
+    "assists": 0,
+    "shots": 1,
+    "shots_on_target": 1
+  },
+  {
+    "id": 37163,
+    "team_id": 210,
+    "name": "D. Vente",
+    "position": "Attacker",
+    "appearances": 11,
+    "minutes": 880,
+    "goals": 5,
+    "assists": 1,
+    "shots": 19,
+    "shots_on_target": 8
   }
 ]

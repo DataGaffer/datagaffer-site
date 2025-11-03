@@ -12,6 +12,18 @@
     "shots_on_target": 9
   },
   {
+    "id": 36903,
+    "team_id": 202,
+    "name": "M. Seuntjens",
+    "position": "Midfielder",
+    "appearances": 8,
+    "minutes": 105,
+    "goals": 1,
+    "assists": 0,
+    "shots": 2,
+    "shots_on_target": 2
+  },
+  {
     "id": 38822,
     "team_id": 202,
     "name": "T. Oosting",
@@ -22,6 +34,18 @@
     "assists": 0,
     "shots": 5,
     "shots_on_target": 2
+  },
+  {
+    "id": 40298,
+    "team_id": 202,
+    "name": "O. Zawada",
+    "position": "Attacker",
+    "appearances": 5,
+    "minutes": 106,
+    "goals": 1,
+    "assists": 0,
+    "shots": 5,
+    "shots_on_target": 1
   },
   {
     "id": 291505,
@@ -63,7 +87,7 @@
     "id": 392044,
     "team_id": 202,
     "name": "T. van Bergen",
-    "position": "Midfielder",
+    "position": "Attacker",
     "appearances": 10,
     "minutes": 853,
     "goals": 1,
@@ -106,30 +130,6 @@
     "assists": 0,
     "shots": 13,
     "shots_on_target": 10
-  },
-  {
-    "id": 36903,
-    "team_id": 202,
-    "name": "M. Seuntjens",
-    "position": "Midfielder",
-    "appearances": 8,
-    "minutes": 105,
-    "goals": 1,
-    "assists": 0,
-    "shots": 2,
-    "shots_on_target": 2
-  },
-  {
-    "id": 40298,
-    "team_id": 202,
-    "name": "O. Zawada",
-    "position": "Attacker",
-    "appearances": 5,
-    "minutes": 106,
-    "goals": 1,
-    "assists": 0,
-    "shots": 5,
-    "shots_on_target": 1
   },
   {
     "id": 321039,
