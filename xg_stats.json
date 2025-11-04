@@ -594,109 +594,109 @@
     "for": [
       {
         "team": "AZ Alkmaar",
-        "logo": "https://media-4.api-sports.io/football/teams/201.png",
+        "logo": "https://media.api-sports.io/football/teams/201.png",
         "xg_for": "2.01",
         "xg_against": "1.41"
       },
       {
         "team": "Ajax",
-        "logo": "https://media-4.api-sports.io/football/teams/194.png",
+        "logo": "https://media.api-sports.io/football/teams/194.png",
         "xg_for": "1.78",
         "xg_against": "1.48"
       },
       {
         "team": "Excelsior",
-        "logo": "https://media-4.api-sports.io/football/teams/196.png",
+        "logo": "https://media.api-sports.io/football/teams/196.png",
         "xg_for": "1.39",
         "xg_against": "1.97"
       },
       {
         "team": "FC Volendam",
-        "logo": "https://media-4.api-sports.io/football/teams/416.png",
+        "logo": "https://media.api-sports.io/football/teams/416.png",
         "xg_for": "1.17",
         "xg_against": "1.97"
       },
       {
         "team": "Feyenoord",
-        "logo": "https://media-4.api-sports.io/football/teams/209.png",
+        "logo": "https://media.api-sports.io/football/teams/209.png",
         "xg_for": "2.10",
         "xg_against": "0.96"
       },
       {
         "team": "Fortuna Sittard",
-        "logo": "https://media-4.api-sports.io/football/teams/205.png",
+        "logo": "https://media.api-sports.io/football/teams/205.png",
         "xg_for": "1.35",
         "xg_against": "1.69"
       },
       {
         "team": "GO Ahead Eagles",
-        "logo": "https://media-4.api-sports.io/football/teams/410.png",
+        "logo": "https://media.api-sports.io/football/teams/410.png",
         "xg_for": "1.45",
         "xg_against": "1.84"
       },
       {
         "team": "Groningen",
-        "logo": "https://media-4.api-sports.io/football/teams/202.png",
+        "logo": "https://media.api-sports.io/football/teams/202.png",
         "xg_for": "1.60",
         "xg_against": "1.25"
       },
       {
         "team": "Heerenveen",
-        "logo": "https://media-4.api-sports.io/football/teams/210.png",
+        "logo": "https://media.api-sports.io/football/teams/210.png",
         "xg_for": "1.66",
         "xg_against": "1.24"
       },
       {
         "team": "Heracles",
-        "logo": "https://media-4.api-sports.io/football/teams/206.png",
+        "logo": "https://media.api-sports.io/football/teams/206.png",
         "xg_for": "1.25",
         "xg_against": "2.10"
       },
       {
         "team": "NAC Breda",
-        "logo": "https://media-4.api-sports.io/football/teams/203.png",
+        "logo": "https://media.api-sports.io/football/teams/203.png",
         "xg_for": "1.35",
         "xg_against": "1.65"
       },
       {
         "team": "NEC Nijmegen",
-        "logo": "https://media-4.api-sports.io/football/teams/413.png",
+        "logo": "https://media.api-sports.io/football/teams/413.png",
         "xg_for": "1.83",
         "xg_against": "1.26"
       },
       {
         "team": "PEC Zwolle",
-        "logo": "https://media-4.api-sports.io/football/teams/193.png",
+        "logo": "https://media.api-sports.io/football/teams/193.png",
         "xg_for": "0.98",
         "xg_against": "1.96"
       },
       {
         "team": "PSV Eindhoven",
-        "logo": "https://media-4.api-sports.io/football/teams/197.png",
+        "logo": "https://media.api-sports.io/football/teams/197.png",
         "xg_for": "2.17",
         "xg_against": "1.37"
       },
       {
         "team": "Sparta Rotterdam",
-        "logo": "https://media-4.api-sports.io/football/teams/426.png",
+        "logo": "https://media.api-sports.io/football/teams/426.png",
         "xg_for": "1.33",
         "xg_against": "2.07"
       },
       {
         "team": "Telstar",
-        "logo": "https://media-4.api-sports.io/football/teams/427.png",
+        "logo": "https://media.api-sports.io/football/teams/427.png",
         "xg_for": "1.66",
         "xg_against": "1.79"
       },
       {
         "team": "Twente",
-        "logo": "https://media-4.api-sports.io/football/teams/415.png",
+        "logo": "https://media.api-sports.io/football/teams/415.png",
         "xg_for": "1.93",
         "xg_against": "1.21"
       },
       {
         "team": "Utrecht",
-        "logo": "https://media-4.api-sports.io/football/teams/207.png",
+        "logo": "https://media.api-sports.io/football/teams/207.png",
         "xg_for": "1.58",
         "xg_against": "1.38"
       }

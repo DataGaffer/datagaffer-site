@@ -124,7 +124,7 @@ async function loadTopPicks() {
     const book = match.book_odds || {};
     for (const mk of MARKET_MAP) {
       const p = sim[mk.sim], o = book[mk.book];
-      if (typeof p === "number" && typeof o === "number" && o >= 1.65 && o <= 2.4) {
+      if (typeof p === "number" && typeof o === "number" && o >= 1.6 && o <= 2.4) {
   const imp = impliedPct(o);
   const edge = +(p - imp).toFixed(1);
   if (edge > 0 && p >= 55) { // ✅ confident & +EV
@@ -164,7 +164,7 @@ async function loadTopPicks() {
 
   container.innerHTML = filtered.map((p,i)=>`
   <div class="card">
-    <h2>AI Pick #${i+1}</h2>
+    <h2>DG Pick #${i+1}</h2>
     <div class="stat-line"><span class="muted">Match:</span> <span>${p.match}</span></div>
     <div class="stat-line"><span class="muted">Pick:</span> <span><b>${p.pick}</b></span></div>
     <div class="stat-line"><span class="muted">DG Odds:</span> <span>${p.dg_odds}</span></div>

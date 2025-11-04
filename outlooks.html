@@ -456,6 +456,42 @@ h1, h2, h3, h4, h5, h6, p {
   transition: background 0.3s;
 }
 
+#xg-for-performance .outlook-table th:nth-child(1),
+#xg-for-performance .outlook-table td:nth-child(1),
+#xg-against-performance .outlook-table th:nth-child(1),
+#xg-against-performance .outlook-table td:nth-child(1),
+#xg-for-performance .outlook-table th:nth-child(4),
+#xg-for-performance .outlook-table td:nth-child(4),
+#xg-against-performance .outlook-table th:nth-child(4),
+#xg-against-performance .outlook-table td:nth-child(4) {
+  width: 8%;
+}
+
+#xg-for-performance .outlook-table th:nth-child(2),
+#xg-for-performance .outlook-table td:nth-child(2),
+#xg-against-performance .outlook-table th:nth-child(2),
+#xg-against-performance .outlook-table td:nth-child(2),
+#xg-for-performance .outlook-table th:nth-child(5),
+#xg-for-performance .outlook-table td:nth-child(5),
+#xg-against-performance .outlook-table th:nth-child(5),
+#xg-against-performance .outlook-table td:nth-child(5) {
+  width: 25%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#xg-for-performance .outlook-table th:nth-child(3),
+#xg-for-performance .outlook-table td:nth-child(3),
+#xg-against-performance .outlook-table th:nth-child(3),
+#xg-against-performance .outlook-table td:nth-child(3),
+#xg-for-performance .outlook-table th:nth-child(6),
+#xg-for-performance .outlook-table td:nth-child(6),
+#xg-against-performance .outlook-table th:nth-child(6),
+#xg-against-performance .outlook-table td:nth-child(6) {
+  width: 10%;
+}
+
 /* MOBILE: 2 per row with visible spacing and centered */
 @media (max-width: 925px) {
   .toc {
@@ -790,6 +826,8 @@ h1, h2, h3, h4, h5, h6, p {
     <a href="#h2h-form" class="toc-btn">H2H & Form Outlook</a>
     <a href="#top-players" class="toc-btn">Top 5 Player Sims</a>
     <a href="#top-rankings" class="toc-btn">Top 5 Team Rankings</a>
+    <a href="#xg-for-performance" class="toc-btn">xG For Performance</a>
+    <a href="#xg-against-performance" class="toc-btn">xG Against Performance</a>
   </div>
 
   <!-- Sections -->
@@ -1017,6 +1055,52 @@ h1, h2, h3, h4, h5, h6, p {
       <div class="leaderboard"><h3>Under 2.5 %</h3><ul id="rank-under25"></ul></div>
       <div class="leaderboard"><h3>Over 2.5 + BTTS</h3><ul id="rank-combined"></ul></div>
     </div>
+  </div>
+</section>
+
+<section id="xg-for-performance" class="outlook-page">
+  <div class="page-title">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" 
+         alt="DG Logo" class="section-logo">
+    <h2>11: xG For Performance</h2>
+  </div>
+  <div class="page-description">
+    Comparing each team's actual goals scored per match vs expected goals (xG).
+  </div>
+
+  <div class="page-content">
+    <table class="outlook-table">
+      <thead>
+        <tr>
+          <th></th><th>Overperformers</th><th>Diff</th>
+          <th></th><th>Underperformers</th><th>Diff</th>
+        </tr>
+      </thead>
+      <tbody id="xg-for-table"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="xg-against-performance" class="outlook-page">
+  <div class="page-title">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" 
+         alt="DG Logo" class="section-logo">
+    <h2>12: xG Against Performance</h2>
+  </div>
+  <div class="page-description">
+    Comparing each team's actual goals conceded per match vs expected goals conceded (xGA).
+  </div>
+
+  <div class="page-content">
+    <table class="outlook-table">
+      <thead>
+        <tr>
+          <th></th><th>Overperformers</th><th>Diff</th>
+          <th></th><th>Underperformers</th><th>Diff</th>
+        </tr>
+      </thead>
+      <tbody id="xg-against-table"></tbody>
+    </table>
   </div>
 </section>
 
@@ -1386,22 +1470,17 @@ const forcedLogos = {
       list.innerHTML = "";
 
       const unresolved = [];
-      rows.slice(0,5).forEach(entry => {
-        const idStr = entry.id != null ? String(entry.id) : null;
-        const foundById  = idStr && byId.has(idStr);
-        const foundByNm  = byNorm.has(norm(entry.team));
-        if (!foundById && !foundByNm && !forcedLogos[norm(entry.team)]) {
-          unresolved.push({team: entry.team, id: entry.id});
-        }
+      rows.slice(0,5).forEach((entry, i) => {
+  if (!entry) return;
 
-        list.insertAdjacentHTML("beforeend", `
-          <li>
-            ${resolveLogo(entry)}
-            ${entry.team}
-            <span style="margin-left:auto; font-weight:600;">${entry.value}</span>
-          </li>
-        `);
-      });
+  list.insertAdjacentHTML("beforeend", `
+    <li>
+      ${resolveLogo(entry)}
+      ${entry.team}
+      <span style="margin-left:auto; font-weight:600;">${i + 1}</span>
+    </li>
+  `);
+});
 
       if (unresolved.length) {
         console.warn(`[Rankings] Missing logo matches in "${category}":`, unresolved);
@@ -1417,20 +1496,113 @@ const forcedLogos = {
     // --- Combined list ---
     const combinedList = document.getElementById("rank-combined");
     if (combinedList) {
-      combined.slice(0,5).forEach(entry => {
-        combinedList.insertAdjacentHTML("beforeend", `
-          <li>
-            ${resolveLogo(entry)}
-            ${entry.team}
-            <span style="margin-left:auto; font-weight:600;">${entry.value.toFixed(1)}%</span>
-          </li>
-        `);
-      });
+      combined.slice(0,5).forEach((entry, i) => {
+  combinedList.insertAdjacentHTML("beforeend", `
+    <li>
+      ${resolveLogo(entry)}
+      ${entry.team}
+      <span style="margin-left:auto; font-weight:600;">${i + 1}</span>
+    </li>
+  `);
+});
     }
   } catch (e) {
     console.error("Error loading rankings:", e);
   }
 })();
+</script>
+
+<script>
+async function loadXGTables() {
+  const xgRes = await fetch("xg_stats.json");
+  const xg = await xgRes.json();
+
+  const leagues = [
+    xg.premier_league?.for || [],
+    xg.la_liga?.for || [],
+    xg.serie_a?.for || [],
+    xg.bundesliga?.for || [],
+    xg.ligue_1?.for || [],
+    xg.eredivisie?.for || []
+  ];
+
+  const allTeams = leagues.flat();
+
+  async function getActual(team) {
+    const file = `team_stats_api/2025/${team.replace(/\s+/g, "_")}.json`;
+    try {
+      const res = await fetch(file);
+      if (!res.ok) return null;
+      const d = await res.json();
+
+      const matches = (d.home.matches + d.away.matches) || 1;
+      const gf = d.home.goals_for + d.away.goals_for;
+      const ga = d.home.goals_against + d.away.goals_against;
+
+      return {
+        gf_per: +(gf / matches).toFixed(2),
+        ga_per: +(ga / matches).toFixed(2)
+      };
+    } catch { return null; }
+  }
+
+  const rows = [];
+  for (const t of allTeams) {
+    const actual = await getActual(t.team);
+    if (!actual) continue;
+
+    const xgf = parseFloat(t.xg_for);
+    const xga = parseFloat(t.xg_against);
+
+    // ✅ Correct formulas
+    const atk_diff = +(actual.gf_per - xgf).toFixed(2);          // Higher = better
+    const def_diff = +(xga - actual.ga_per).toFixed(2);          // Higher = better
+
+    rows.push({
+      team: t.team,
+      logo: t.logo,
+      atk_diff,
+      def_diff
+    });
+  }
+
+  // ✅ Sorted lists (Top 20)
+  const topAtk  = [...rows].sort((a,b)=>b.atk_diff - a.atk_diff).slice(0,20);
+  const botAtk  = [...rows].sort((a,b)=>a.atk_diff - b.atk_diff).slice(0,20);
+
+  const topDef  = [...rows].sort((a,b)=>b.def_diff - a.def_diff).slice(0,20);
+  const botDef  = [...rows].sort((a,b)=>a.def_diff - b.def_diff).slice(0,20);
+
+  function rowHTML(left, right, type="atk") {
+    const lval = type==="atk" ? left.atk_diff : left.def_diff;
+    const rval = type==="atk" ? right.atk_diff : right.def_diff;
+
+    return `
+      <tr>
+        <td><img src="${left.logo}" class="team-logo"></td>
+        <td>${left.team}</td>
+        <td>${lval}</td>
+        <td><img src="${right.logo}" class="team-logo"></td>
+        <td>${right.team}</td>
+        <td>${rval}</td>
+      </tr>
+    `;
+  }
+
+  // Insert into HTML
+  const xgForBody = document.getElementById("xg-for-table");
+  const xgAgBody  = document.getElementById("xg-against-table");
+
+  for (let i = 0; i < 20; i++) {
+    xgForBody.insertAdjacentHTML("beforeend", rowHTML(topAtk[i], botAtk[i], "atk"));
+  }
+
+  for (let i = 0; i < 20; i++) {
+    xgAgBody.insertAdjacentHTML("beforeend", rowHTML(topDef[i], botDef[i], "def"));
+  }
+}
+
+loadXGTables();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

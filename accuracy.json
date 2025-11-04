@@ -683,6 +683,40 @@
         "result": "Loss"
       }
     ]
+  },
+  {
+    "date": "2025-11-04",
+    "picks": [
+      {
+        "fixture_id": 1451078,
+        "match": "Olympiakos vs PSV",
+        "pick": "PSV o1.5 Goals",
+        "dg_odds": 1.35,
+        "book_odds": 2.1,
+        "edge": 26.7,
+        "league": "UEFA Champions League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1451076,
+        "match": "Tottenham vs Copenhagen",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.4,
+        "book_odds": 1.66,
+        "edge": 11.4,
+        "league": "UEFA Champions League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1451080,
+        "match": "Bodo/Glimt vs Monaco",
+        "pick": "Monaco o1.5 Goals",
+        "dg_odds": 1.7,
+        "book_odds": 2.0,
+        "edge": 8.8,
+        "league": "UEFA Champions League",
+        "result": "Loss"
+      }
+    ]
   }
-  
 ]
