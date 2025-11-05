@@ -2434,6 +2434,101 @@
           "accuracy_score": 88.5
         }
       ]
+    },
+    {
+      "date": "2025-11-05",
+      "matches": [
+        {
+          "date": "2025-11-05",
+          "league": "UEFA Champions League",
+          "match": "Qarabag vs Chelsea",
+          "fixture_id": 1451083,
+          "projected_score": "0.65 - 2.78",
+          "actual_score": "2 - 2",
+          "avg_diff": 1.06,
+          "accuracy_score": 73.5
+        },
+        {
+          "date": "2025-11-05",
+          "league": "UEFA Champions League",
+          "match": "Pafos vs Villarreal",
+          "fixture_id": 1451084,
+          "projected_score": "0.89 - 1.89",
+          "actual_score": "1 - 0",
+          "avg_diff": 1.0,
+          "accuracy_score": 75.0
+        },
+        {
+          "date": "2025-11-05",
+          "league": "UEFA Champions League",
+          "match": "Man City vs Dortmund",
+          "fixture_id": 1451085,
+          "projected_score": "2.07 - 0.97",
+          "actual_score": "4 - 1",
+          "avg_diff": 0.98,
+          "accuracy_score": 75.5
+        },
+        {
+          "date": "2025-11-05",
+          "league": "UEFA Champions League",
+          "match": "Club Brugge vs Barcelona",
+          "fixture_id": 1451086,
+          "projected_score": "1.53 - 2.75",
+          "actual_score": "3 - 3",
+          "avg_diff": 0.86,
+          "accuracy_score": 78.5
+        },
+        {
+          "date": "2025-11-05",
+          "league": "UEFA Champions League",
+          "match": "Ajax vs Galatasaray",
+          "fixture_id": 1451087,
+          "projected_score": "1.39 - 1.73",
+          "actual_score": "0 - 3",
+          "avg_diff": 1.33,
+          "accuracy_score": 66.8
+        },
+        {
+          "date": "2025-11-05",
+          "league": "UEFA Champions League",
+          "match": "Newcastle vs Athletic Club",
+          "fixture_id": 1451088,
+          "projected_score": "2.00 - 0.90",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.45,
+          "accuracy_score": 88.8
+        },
+        {
+          "date": "2025-11-05",
+          "league": "UEFA Champions League",
+          "match": "Benfica vs Leverkusen",
+          "fixture_id": 1451089,
+          "projected_score": "2.61 - 1.48",
+          "actual_score": "0 - 1",
+          "avg_diff": 1.54,
+          "accuracy_score": 61.5
+        },
+        {
+          "date": "2025-11-05",
+          "league": "UEFA Champions League",
+          "match": "Inter vs Kairat",
+          "fixture_id": 1451090,
+          "projected_score": "5.15 - 0.47",
+          "actual_score": "2 - 1",
+          "avg_diff": 1.84,
+          "accuracy_score": 54.0
+        },
+        {
+          "date": "2025-11-05",
+          "league": "UEFA Champions League",
+          "match": "Marseille vs Atalanta",
+          "fixture_id": 1451091,
+          "projected_score": "1.94 - 1.30",
+          "actual_score": "0 - 1",
+          "avg_diff": 1.12,
+          "accuracy_score": 72.0
+        }
+      ]
     }
   ],
   "leagues": [
@@ -2493,12 +2588,12 @@
     },
     {
       "league": "UEFA Champions League",
-      "games_tracked": 27,
-      "dg_score": 70.7,
-      "sim_avg_goals": 3.48,
-      "actual_avg_goals": 3.37,
-      "actual_btts_pct": 48.1,
-      "actual_over25_pct": 63.0
+      "games_tracked": 36,
+      "dg_score": 70.9,
+      "sim_avg_goals": 3.52,
+      "actual_avg_goals": 3.25,
+      "actual_btts_pct": 47.2,
+      "actual_over25_pct": 61.1
     },
     {
       "league": "UEFA Europa League",

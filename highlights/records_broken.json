@@ -1,75 +1,250 @@
 {
   "records": [
     {
-      "type": "Team Record",
-      "description": "Qarabag sets a new personal record low: 0.65 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "type": "League Record",
+      "description": "Nice vs SC Freiburg sets a new UEFA Europa League record low projection (2.54 goals).",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "Team Record",
-      "description": "Pafos sets a new personal record low: 0.85 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "Nice sets a new personal record high: 1.72 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "Team Record",
-      "description": "Borussia Dortmund sets a new personal record high: 0.98 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "SC Freiburg sets a new personal record low: 0.82 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "Team Record",
-      "description": "Club Brugge KV sets a new personal record high: 1.53 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "Sturm Graz sets a new personal record high: 1.11 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "Team Record",
-      "description": "Galatasaray sets a new personal record low: 1.73 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "Nottingham Forest sets a new personal record high: 1.84 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "Team Record",
-      "description": "Benfica sets a new personal record high: 2.61 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "Red Bull Salzburg sets a new personal record high: 2.35 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "Team Record",
-      "description": "Bayer Leverkusen sets a new personal record high: 1.48 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "GO Ahead Eagles sets a new personal record high: 1.34 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
-      "type": "Global Record",
-      "description": "Inter vs Kairat Almaty sets a new all-time highest projection: 5.62 goals.",
-      "date": "2025-11-04"
+      "type": "Team Record",
+      "description": "FC Porto sets a new personal record high: 2.03 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Dinamo Zagreb sets a new personal record high: 1.43 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "League Record",
-      "description": "Inter vs Kairat Almaty sets a new UEFA Champions League record high projection (5.62 goals).",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "FK Crvena Zvezda vs Lille sets a new UEFA Europa League record high projection (4.28 goals).",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "Team Record",
-      "description": "Inter sets a new personal record high: 5.15 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "FK Crvena Zvezda sets a new personal record high: 2.00 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "Team Record",
-      "description": "Kairat Almaty sets a new personal record low: 0.47 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "FC Basel 1893 sets a new personal record high: 2.07 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
     },
     {
       "type": "Team Record",
-      "description": "Atalanta sets a new personal record low: 1.30 projected goals.",
-      "league": "UEFA Champions League",
-      "date": "2025-11-04"
+      "description": "FCSB sets a new personal record high: 1.10 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Malmo FF sets a new personal record high: 1.67 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Panathinaikos sets a new personal record high: 1.14 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "League Record",
+      "description": "FSV Mainz 05 vs Fiorentina sets a new UEFA Europa Conference League record high projection (2.48 goals).",
+      "league": "UEFA Europa Conference League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "FSV Mainz 05 sets a new personal record high: 1.33 projected goals.",
+      "league": "UEFA Europa Conference League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "League Record",
+      "description": "FC Midtjylland vs Celtic sets a new UEFA Europa League record high projection (4.09 goals).",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "FC Midtjylland sets a new personal record low: 2.75 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Celtic sets a new personal record low: 1.34 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "League Record",
+      "description": "Rangers vs AS Roma sets a new UEFA Europa League record low projection (2.30 goals).",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Rangers sets a new personal record low: 0.82 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Plzen sets a new personal record high: 1.51 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Fenerbahce sets a new personal record low: 1.37 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Ferencvarosi TC sets a new personal record high: 2.16 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Ludogorets sets a new personal record high: 1.16 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Bologna sets a new personal record high: 2.93 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Brann sets a new personal record low: 0.76 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "SC Braga sets a new personal record high: 2.21 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Genk sets a new personal record low: 0.88 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Real Betis sets a new personal record high: 1.99 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Lyon sets a new personal record low: 1.13 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "VfB Stuttgart sets a new personal record high: 2.24 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Feyenoord sets a new personal record low: 1.39 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "PAOK sets a new personal record high: 2.64 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "BSC Young Boys sets a new personal record low: 0.91 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Aston Villa sets a new personal record high: 1.86 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Maccabi Tel Aviv sets a new personal record high: 1.04 projected goals.",
+      "league": "UEFA Europa League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "League Record",
+      "description": "Crystal Palace vs AZ Alkmaar sets a new UEFA Europa Conference League record high projection (2.90 goals).",
+      "league": "UEFA Europa Conference League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "Crystal Palace sets a new personal record high: 2.03 projected goals.",
+      "league": "UEFA Europa Conference League",
+      "date": "2025-11-05"
+    },
+    {
+      "type": "Team Record",
+      "description": "AZ Alkmaar sets a new personal record low: 0.87 projected goals.",
+      "league": "UEFA Europa Conference League",
+      "date": "2025-11-05"
     }
   ]
 }

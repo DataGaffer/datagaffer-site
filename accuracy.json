@@ -718,5 +718,40 @@
         "result": "Loss"
       }
     ]
+  },
+  {
+    "date": "2025-11-05",
+    "picks": [
+      {
+        "fixture_id": 1451089,
+        "match": "Benfica vs Leverkusen",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.29,
+        "book_odds": 1.72,
+        "edge": 19.7,
+        "league": "UEFA Champions League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1451091,
+        "match": "Marseille vs Atalanta",
+        "pick": "Marseille o1.5 Goals",
+        "dg_odds": 1.74,
+        "book_odds": 1.83,
+        "edge": 2.8,
+        "league": "UEFA Champions League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1451088,
+        "match": "Newcastle vs Athletic Club",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.8,
+        "book_odds": 1.8,
+        "edge": 0.1,
+        "league": "UEFA Champions League",
+        "result": "Loss"
+      }
+    ]
   }
 ]

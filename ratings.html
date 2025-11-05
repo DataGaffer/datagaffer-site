@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DataGaffer Ratings</title>
+
+<!-- Favicons (optional) -->
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#ffffff" />
+
+<style>
+  :root{
+    --dg-green:#003f2e;
+    --dg-green-2:#00553f;
+    --dg-bg:#f2f4f7;
+    --dg-border:#d0d8d0;
+    --dg-row:#fafafa;
+  }
+
+  html,body{margin:0;padding:0;background:var(--dg-bg);font-family:Arial,Helvetica,sans-serif;color:var(--dg-green)}
+  a{color:inherit;text-decoration:none}
+
+  /* Header */
+  .header{
+    background:var(--dg-green);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    padding:10px 16px;
+  }
+  .header img{
+    height:90px; position:absolute; left:16px; top:0; width:auto;
+  }
+  .header h1{margin:0; font-size:32px; font-weight:700}
+
+  /* Banner */
+  .wrap{max-width:1200px;margin:22px auto;padding:0 12px;box-sizing:border-box}
+  .banner{
+    background:#fff;border:2px solid var(--dg-green);border-radius:6px;
+    padding:10px 12px;text-align:center;font-weight:700;color:var(--dg-green);
+  }
+
+  /* Controls */
+  .controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:14px 0}
+  .controls input,.controls select{
+    padding:8px 10px;border:2px solid var(--dg-green);border-radius:6px;font-size:14px;min-width:180px;background:#fff;color:var(--dg-green);
+  }
+  .count{font-size:13px;opacity:.85;text-align:center;margin-bottom:6px}
+
+  /* Table */
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;background:#fff;border:1px solid var(--dg-border);box-shadow:0 3px 12px rgba(0,0,0,.08)}
+  table{width:100%;min-width:980px;border-collapse:collapse}
+  thead th{
+    position:sticky; top:0; background:var(--dg-green); color:#fff; border:1px solid var(--dg-border);
+    padding:9px 8px; font-size:13px; white-space:nowrap; cursor:pointer; text-align:center;
+  }
+  thead th.group{
+    background:var(--dg-green-2);
+  }
+  thead th small{opacity:.8;font-weight:400}
+  tbody td{
+    border:1px solid var(--dg-border); padding:8px 10px; font-size:13px; text-align:center; background:#fff
+  }
+  tbody tr:nth-child(even) td{background:#f8fbf9}
+  tbody tr:hover td{background:#eef6f2}
+  .num{font-variant-numeric:tabular-nums}
+  .muted{opacity:.7}
+  .left{text-align:left}
+  .rank{font-weight:700}
+  .team-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* ✅ centers everything horizontally */
+  text-align: center;        /* ✅ centers the text */
+  gap: 6px;                  /* tighten spacing for centered look */
+}
+  .team-cell img{height:20px;width:20px;object-fit:contain}
+
+  .pill{
+    display:inline-block;padding:2px 6px;border-radius:10px;border:1px solid var(--dg-border);
+    background:#fff; font-size:11px; margin-left:6px; color:#222
+  }
+
+  /* Sort arrow */
+  th .arrow{margin-left:6px;opacity:.8;font-size:11px}
+
+  /* Custom KenPom-style tooltips */
+th[title] {
+  position: relative;
+}
+
+th[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #003f2e;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 11px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 50;
+}
+
+th[title]:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  z-index: 51;
+}
+
+  /* Mobile tweaks */
+/* Mobile tweaks */
+@media (max-width:900px){
+
+  /* Header */
+  .header img {
+    height:38px;
+  }
+  .header h1 {
+    font-size:17px;
+  }
+
+  /* Banner */
+  .banner {
+    font-size:12px;
+    padding:6px 8px;
+    line-height:1.25;
+  }
+
+  /* Controls */
+  .controls input,
+  .controls select {
+    font-size:12px;
+    padding:5px 7px;
+    min-width:130px;
+  }
+
+  /* Count text */
+  .count {
+    font-size:12px;
+  }
+
+  /* ✅ Major shrink: KenPom-level table sizing */
+  table {
+    min-width: 650px !important;   /* was 820–980 → now MUCH smaller */
+  }
+
+  thead th,
+  tbody td {
+    font-size:10.5px !important;   /* small text */
+    padding:3px 4px !important;     /* tight padding */
+  }
+
+  /* ✅ Shrink logos to KenPom size */
+  .team-cell img {
+    height:12px;
+    width:12px;
+  }
+
+  /* ✅ Shrink columns visually */
+  td, th {
+    white-space:nowrap;
+  }
+
+  /* ✅ Remove tooltips on mobile */
+  th[title]::after,
+  th[title]::before {
+    display:none !important;
+    content:none !important;
+  }
+
+  /* ✅ Keep sorting on tap */
+  th[title] {
+    pointer-events:auto !important;
+  }
+
+  /* ✅ Freeze Rank column */
+.table-wrap table tbody td:nth-child(1) {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 2;
+}
+
+/* ✅ Freeze Team column */
+.table-wrap table tbody td:nth-child(2) {
+  position: sticky;
+  left: 60px; /* width of Rank column */
+  background: white;
+  z-index: 2;
+}
+
+/* ✅ Freeze header labels for Rank + Team */
+.table-wrap table thead th:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+
+.table-wrap table thead th:nth-child(2) {
+  position: sticky;
+  left: 60px;
+  z-index: 3;
+}
+
+/* ✅ Set column widths so nothing shifts */
+.table-wrap table td:nth-child(1),
+.table-wrap table th:nth-child(1) {
+  min-width: 60px;
+  max-width: 60px;
+}
+
+.table-wrap table td:nth-child(2),
+.table-wrap table th:nth-child(2) {
+  min-width: 120px; /* your current team column width */
+  max-width: 120px;
+}
+/* ✅ Match the normal row background so sticky isn't see-through */
+.table-wrap table tbody td:nth-child(1),
+.table-wrap table tbody td:nth-child(2) {
+  background: #fff !important;      /* default row background */
+}
+
+/* ✅ When row is striped (even rows) */
+.table-wrap table tbody tr:nth-child(even) td:nth-child(1),
+.table-wrap table tbody tr:nth-child(even) td:nth-child(2) {
+  background: #f8fbf9 !important;   /* your striped row color */
+}
+.table-wrap table thead th:nth-child(1),
+.table-wrap table thead th:nth-child(2) {
+  background: var(--dg-green) !important; 
+}
+/* ✅ Make ALL sticky header cells opaque */
+.table-wrap table thead th {
+  background: var(--dg-green) !important;
+  z-index: 5 !important;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <a href="dashboard.html" style="display:contents">
+    <img src="https://cdn.prod.website-files.com/682236b4aa8cdb4803142afd/68b8aa71d38f0c8d4c140700_everything-236.png" alt="DG Logo">
+    <h1>DataGaffer.com</h1>
+  </a>
+</div>
+
+<div class="wrap">
+  <div class="banner">DataGaffer Ratings — The Official Power Rankings.
+Every team is graded using our DGRtg formula (ORtg − DRtg), blending goals, xG, defensive strength, and league difficulty. Click any column to sort.</div>
+
+  <!-- Filters -->
+  <div class="controls">
+    <input id="search" type="text" placeholder="Search team or league…" />
+    <select id="leagueFilter">
+      <option value="">All leagues</option>
+    </select>
+  </div>
+  <div class="count" id="rowCount">–</div>
+
+  <!-- Table -->
+  <div class="table-wrap">
+    <table id="dgTable">
+      <thead>
+        <tr>
+          <th data-key="rank" data-type="num">Rank <span class="arrow">▾</span></th>
+          <th data-key="team" class="league">Team</th>
+          <th data-key="league">League</th>
+          <th data-key="DGRtg" data-type="num" title="DataGaffer Rating: ORtg − DRtg. Higher = stronger overall.">DGRtg</th>
+
+          <th data-key="ORtg" data-type="num" title="Offensive Rating: expected goals scored per match, adjusted for league strength.">ORtg</th>
+
+          <th data-key="DRtg" data-type="num" title="Defensive Rating: expected goals conceded per match (lower is better).">DRtg</th>
+          <th class="group" colspan="2">xG Overperformers <small>(“luck” per match)</small></th>
+          <th class="group" colspan="2">xG Underperformers <small>(“bad luck” per match)</small></th>
+          <th data-key="coef" data-type="num">Coef</th>
+        </tr>
+        <tr>
+          <th class="muted">#</th>
+          <th class="muted">—</th>
+          <th class="muted">—</th>
+          <th class="muted">ORtg − DRtg</th>
+          <th class="muted">Attack</th>
+          <th class="muted">Defense</th>
+          <th data-key="luck_offense" data-type="num" title="xG Overperformance: finishing above expected goals.">Off</th>
+<th data-key="luck_defense" data-type="num" title="Defensive overperformance: opponents finishing below expectation.">Def</th>
+
+<th data-key="bad_luck_offense" data-type="num" title="xG Underperformance: finishing below expected goals.">Off</th>
+<th data-key="bad_luck_defense" data-type="num" title="Defensive underperformance: opponents finishing above xG.">Def</th>
+          <th class="muted">—</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+(async function(){
+  // Load ratings + teams (for logos, if you want them)
+  const [ratings, teams] = await Promise.all([
+    fetch('dg_ratings.json').then(r=>r.json()),
+    fetch('teams.json').then(r=>r.json()).catch(()=>[])
+  ]);
+
+  // Build quick logo map by team id
+  const logoById = new Map();
+  (teams||[]).forEach(t=>{
+    if (t && (t.id!==undefined) && t.logo) logoById.set(String(t.id), t.logo);
+  });
+
+  // Utility
+  const num = (x, d=3)=> (x===null||x===undefined||isNaN(+x)) ? '' : (+x).toFixed(d);
+  const tbody = document.querySelector('#dgTable tbody');
+  const search = document.getElementById('search');
+  const leagueFilter = document.getElementById('leagueFilter');
+  const rowCount = document.getElementById('rowCount');
+
+  // Derive country from league string (very rough, tweak as you like)
+  function leagueToCountry(league){
+    if(!league) return '';
+    const l = league.toLowerCase();
+    if (l.includes('premier league') && !l.includes('scottish')) return 'England';
+    if (l.includes('championship')) return 'England';
+    if (l.includes('la liga')) return 'Spain';
+    if (l.includes('bundesliga') && !l.includes('2.')) return 'Germany';
+    if (l.includes('2. bundesliga')) return 'Germany';
+    if (l.includes('serie a')) return 'Italy';
+    if (l.includes('ligue 1')) return 'France';
+    if (l.includes('eredivisie')) return 'Netherlands';
+    if (l.includes('primeira')) return 'Portugal';
+    if (l.includes('pro league') || l.includes('jupiler')) return 'Belgium';
+    if (l.includes('super lig')) return 'Turkey';
+    if (l.includes('super league') && l.includes('swiss')) return 'Switzerland';
+    if (l.includes('austrian')) return 'Austria';
+    if (l.includes('greek')) return 'Greece';
+    if (l.includes('czech')) return 'Czechia';
+    if (l.includes('cypriot') || l.includes('cyprus')) return 'Cyprus';
+    if (l.includes('israeli')) return 'Israel';
+    if (l.includes('scottish')) return 'Scotland';
+    if (l.includes('eliteserien')) return 'Norway';
+    if (l.includes('allsvenskan')) return 'Sweden';
+    if (l.includes('danish') || l.includes('superliga')) return 'Denmark';
+    if (l.includes('polish') || l.includes('ekstraklasa')) return 'Poland';
+    if (l.includes('romanian')) return 'Romania';
+    if (l.includes('hungarian') || l.includes('nb i')) return 'Hungary';
+    if (l.includes('slovak')) return 'Slovakia';
+    if (l.includes('serbian')) return 'Serbia';
+    if (l.includes('bulgarian')) return 'Bulgaria';
+    if (l.includes('azerbaijan')) return 'Azerbaijan';
+    if (l.includes('kazakhstan')) return 'Kazakhstan';
+    if (l.includes('hnl') || l.includes('croatian')) return 'Croatia';
+    if (l.includes('champions league')) return 'UEFA';
+    if (l.includes('europa league')) return 'UEFA';
+    if (l.includes('major league soccer')) return 'USA';
+    return '';
+  }
+
+  // Populate league + country filters
+  const leagues = Array.from(new Set(ratings.map(r=>r.league).filter(Boolean))).sort();
+  leagueFilter.innerHTML += leagues.map(l=>`<option value="${l}">${l}</option>`).join('');
+
+  // Current sort state
+  let sortKey = 'rank';
+  let sortAsc = true; // default: show best first
+
+  function render(){
+    const q = (search.value||'').trim().toLowerCase();
+    const lf = leagueFilter.value;
+
+    // filter
+    let rows = ratings.filter(r=>{
+      const hitQ = !q || r.team.toLowerCase().includes(q) || (r.league||'').toLowerCase().includes(q);
+      const hitL = !lf || r.league === lf;
+      return hitQ && hitL;
+    });
+
+    // sort
+    rows.sort((a,b)=>{
+      const va = a[sortKey], vb = b[sortKey];
+      if (sortKey==='team' || sortKey==='league'){
+        return sortAsc ? String(va).localeCompare(String(vb)) : String(vb).localeCompare(String(va));
+      } else {
+        const na = Number(va)||0, nb = Number(vb)||0;
+        return sortAsc ? na - nb : nb - na;
+      }
+    });
+
+    // rows
+    tbody.innerHTML = rows.map(r=>{
+      const logo = logoById.get(String(r.id));
+      return `
+        <tr>
+  <td class="rank num">${r.rank}</td>
+  <td class="left">
+    <div class="team-cell">
+      ${logo ? `<img src="${logo}" alt="">` : `<span class="muted"> </span>`}
+      <span>${r.team}</span>
+    </div>
+  </td>
+  <td>${r.league || ''}</td>
+  <td class="num">${num(r.DGRtg,3)}</td>
+  <td class="num">${num(r.ORtg,3)}</td>
+  <td class="num">${num(r.DRtg,3)}</td>
+  <td class="num">${num(r.luck_offense,3)}</td>
+  <td class="num">${num(r.luck_defense,3)}</td>
+  <td class="num">${num(r.bad_luck_offense,3)}</td>
+  <td class="num">${num(r.bad_luck_defense,3)}</td>
+  <td class="num">${num(r.coef,3)}</td>
+</tr>
+      `;
+    }).join('');
+
+    rowCount.textContent = `${rows.length} teams shown`;
+  }
+
+  // Header sorting
+  document.querySelectorAll('#dgTable thead th[data-key]').forEach(th=>{
+    th.addEventListener('click',()=>{
+      const key = th.getAttribute('data-key');
+      if (!key) return;
+      if (sortKey===key){ sortAsc = !sortAsc; }
+      else { sortKey = key; sortAsc = (key==='team' || key==='league'); } // alphabetical asc by default
+      document.querySelectorAll('#dgTable thead .arrow').forEach(a=>a.remove());
+      const arrow = document.createElement('span');
+      arrow.className = 'arrow';
+      arrow.textContent = sortAsc ? '▴' : '▾';
+      th.appendChild(arrow);
+      render();
+    });
+  });
+
+  // Filters
+  search.addEventListener('input', render);
+  leagueFilter.addEventListener('change', render);
+
+  // Initial render (sorted by DGRtg via rank)
+  // Ensure rank exists; if not, compute by DGRtg
+  if (!ratings.every(r=>typeof r.rank==='number')){
+    ratings.sort((a,b)=>(b.DGRtg||0)-(a.DGRtg||0));
+    ratings.forEach((r,i)=>r.rank=i+1);
+  }
+  render();
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* --- Supabase setup --- */
+const SUPABASE_URL = "https://qgniftwopmhhcwiatkku.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnbmlmdHdvcG1oaGN3aWF0a2t1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMjc2MzMsImV4cCI6MjA3MzgwMzYzM30.TYHTz4d9bT7OjdEkmu0m5lu-St75BWHOJQd8FLcKm5E";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: { persistSession: true, detectSessionInUrl: true }
+});
+
+/* --- Prevent Safari/Chrome back-button cache bypass --- */
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    console.log("Reloading to bypass Safari back cache");
+    window.location.reload();
+  }
+});
+
+/* --- Inactivity logout (15 minutes) --- */
+const INACTIVITY_LIMIT = 15 * 60 * 1000;
+let inactivityTimer;
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(async () => {
+    console.log("Auto-logout after inactivity");
+    await supabaseClient.auth.signOut();
+    window.location.href = "login.html";
+  }, INACTIVITY_LIMIT);
+}
+["click", "mousemove", "keydown", "scroll", "touchstart"].forEach(evt =>
+  document.addEventListener(evt, resetInactivityTimer)
+);
+resetInactivityTimer();
+
+/* --- Explicit logout handling --- */
+supabaseClient.auth.onAuthStateChange((event) => {
+  if (event === "SIGNED_OUT") {
+    console.log("User signed out → redirecting to login");
+    window.location.href = "login.html";
+  }
+});
+
+/* --- Subscription enforcement --- */
+document.body.style.display = "none"; // hide content until validated
+
+(async () => {
+  const { data: { session }, error } = await supabaseClient.auth.getSession();
+  if (error || !session) {
+    console.warn("No session → redirecting to login");
+    window.location.href = "login.html";
+    return;
+  }
+
+  // --- Try matching by Supabase Auth ID first ---
+  let { data: profile, error: profileError } = await supabaseClient
+    .from("profiles")
+    .select("is_subscribed, plan")
+    .eq("id", session.user.id)
+    .maybeSingle();
+
+  // --- Fallback: try matching by email if profile not found or Stripe-created first ---
+  if ((!profile || profileError) && session.user.email) {
+    const { data: byEmail } = await supabaseClient
+      .from("profiles")
+      .select("is_subscribed, plan")
+      .eq("email", session.user.email.toLowerCase())
+      .maybeSingle();
+    profile = byEmail;
+  }
+
+  // --- Subscription validation ---
+  if (!profile?.is_subscribed) {
+    console.warn("Not subscribed → redirecting to subscribe page");
+    window.location.href = "subscribe.html";
+    return;
+  }
+
+  // ✅ Allow only active monthly/yearly users
+  if (profile.plan === "monthly" || profile.plan === "yearly") {
+    console.log("✅ Active plan:", profile.plan, "→ Showing page");
+    document.body.style.display = "block";
+  } else {
+    console.warn("User has unsupported plan:", profile.plan);
+    window.location.href = "subscribe.html";
+  }
+})();
+</script>
+
+</body>
+</html>
