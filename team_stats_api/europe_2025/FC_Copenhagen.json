@@ -1,0 +1,16 @@
+{
+  "team_id": 400,
+  "season": 2025,
+  "league_id": 2,
+  "league_name": "UEFA Champions League",
+  "home": {
+    "matches": 5,
+    "goals_for": 13,
+    "goals_against": 6
+  },
+  "away": {
+    "matches": 5,
+    "goals_for": 2,
+    "goals_against": 7
+  }
+}

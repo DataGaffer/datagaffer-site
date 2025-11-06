@@ -1,8 +1,9 @@
+# dg_ratings.py
 import json, os
 from typing import Optional
 
 # ============================================================
-# ✅ Safe JSON loader (ALWAYS returns a dictionary or list)
+# ✅ Safe JSON loader
 # ============================================================
 def load_json(path, default=None):
     if default is None:
@@ -18,13 +19,14 @@ def load_json(path, default=None):
 
 
 # ============================================================
-# ✅ CONFIG FILE PATHS
+# ✅ CONFIG PATHS
 # ============================================================
 LEAGUE_COEFS_FILE  = "league_ratings.json"
 TEAMS_FILE         = "teams.json"
 XG_FILE            = "xg_stats.json"
 TEAM_STATS_DIR     = "team_stats"
 API2025_DIR        = "team_stats_api/2025"
+EURO2025_DIR       = "team_stats_api/europe_2025"
 TEAM_BOOSTERS_FILE = "team_boosters.json"
 LEAGUE_ID_MAP_FILE = "league_ids.json"
 OUTPUT_FILE        = "dg_ratings.json"
@@ -38,9 +40,6 @@ teams         = load_json(TEAMS_FILE, [])
 xg_all        = load_json(XG_FILE, {})
 team_boosters = load_json(TEAM_BOOSTERS_FILE, {})
 
-# ------------------------------------------------------------
-# ✅ Load league_id → league_name map
-# ------------------------------------------------------------
 league_id_map_raw = load_json(LEAGUE_ID_MAP_FILE, {})
 league_by_id = {int(v): k for k, v in league_id_map_raw.items()}
 
@@ -66,7 +65,7 @@ def per_match_from_api_block(block: dict):
 
 
 # ============================================================
-# ✅ Build API (2025-only) GF/GA Lookup
+# ✅ Load Domestic API Stats (2025)
 # ============================================================
 def read_api_2025(dir_path: str):
     out = {}
@@ -88,30 +87,53 @@ def read_api_2025(dir_path: str):
         away_gf, away_ga = per_match_from_api_block(data.get("away", {}))
 
         out[str(tid)] = {
-            "home_gf": home_gf,
-            "home_ga": home_ga,
-            "away_gf": away_gf,
-            "away_ga": away_ga,
+            "gf": (data["home"]["goals_for"] + data["away"]["goals_for"]),
+            "ga": (data["home"]["goals_against"] + data["away"]["goals_against"]),
+            "matches": (data["home"]["matches"] + data["away"]["matches"]),
             "league": league_by_id.get(league_id, "Unknown")
         }
 
     return out
 
-
 api_2025 = read_api_2025(API2025_DIR)
 
 
-def api_gf_ga_2025(team_id: str):
-    row = api_2025.get(team_id)
-    if not row:
-        return 0.0, 0.0
-    gf = (row["home_gf"] + row["away_gf"]) / 2
-    ga = (row["home_ga"] + row["away_ga"]) / 2
-    return gf, ga
+# ============================================================
+# ✅ Load European Stats (UCL/UEL)
+# ============================================================
+def read_europe_2025(dir_path: str):
+    out = {}
+    if not os.path.isdir(dir_path):
+        return out
+
+    for fname in os.listdir(dir_path):
+        if not fname.endswith(".json"):
+            continue
+
+        data = load_json(os.path.join(dir_path, fname), {})
+        tid = str(data.get("team_id"))
+        if not tid:
+            continue
+
+        matches_home = data.get("home", {}).get("matches", 0)
+        matches_away = data.get("away", {}).get("matches", 0)
+
+        total_gf = data.get("home", {}).get("goals_for", 0) + data.get("away", {}).get("goals_for", 0)
+        total_ga = data.get("home", {}).get("goals_against", 0) + data.get("away", {}).get("goals_against", 0)
+
+        out[tid] = {
+            "matches": matches_home + matches_away,
+            "gf": total_gf,
+            "ga": total_ga
+        }
+
+    return out
+
+europe_2025 = read_europe_2025(EURO2025_DIR)
 
 
 # ============================================================
-# ✅ Manual Stats Lookup
+# ✅ Manual Fallback Stats
 # ============================================================
 manual_stats = {}
 if os.path.isdir(TEAM_STATS_DIR):
@@ -123,7 +145,6 @@ if os.path.isdir(TEAM_STATS_DIR):
                     tid = t.get("id")
                     if tid is not None:
                         manual_stats[str(tid)] = t
-
 
 def manual_fallback_gf_ga(team_row):
     if "home" in team_row and "away" in team_row:
@@ -138,7 +159,7 @@ def manual_fallback_gf_ga(team_row):
 
 
 # ============================================================
-# ✅ Build XG lookup table
+# ✅ XG Lookup (for luck only — NOT used in ratings)
 # ============================================================
 xg_lookup = {}
 
@@ -146,8 +167,6 @@ for key, section in xg_all.items():
     if isinstance(section, dict) and "for" in section:
         for t in section["for"]:
             nm = norm_name(t.get("team"))
-            if not nm:
-                continue
             xg_lookup[nm] = {
                 "xgf": safe_float(t.get("xg_for")),
                 "xga": safe_float(t.get("xg_against"))
@@ -155,51 +174,75 @@ for key, section in xg_all.items():
 
 
 # ============================================================
-# ✅ Compute Rating for One Team
+# ✅ Compute Rating
 # ============================================================
 def compute_team_rating(team):
     tid = str(team.get("id"))
-    name = team.get("name") or team.get("team") or ""
+    name = team.get("name")
 
     # League detection
     league = api_2025.get(tid, {}).get("league") or team.get("league", "Unknown")
     coef = float(league_coefs.get(league, 1.0))
 
-    # GF/GA (2025-only)
-    gf, ga = api_gf_ga_2025(tid)
+    # --------------------------
+    # ✅ Domestic stats
+    # --------------------------
+    dom = api_2025.get(tid, {})
+    dom_matches = dom.get("matches", 0)
+    dom_gf = dom.get("gf", 0)
+    dom_ga = dom.get("ga", 0)
 
-    if gf == 0 and ga == 0:
+    # --------------------------
+    # ✅ European stats
+    # --------------------------
+    eu = europe_2025.get(tid, {})
+    eu_matches = eu.get("matches", 0)
+    eu_gf = eu.get("gf", 0)
+    eu_ga = eu.get("ga", 0)
+
+    # --------------------------
+    # ✅ Combine stats (Option B)
+    # --------------------------
+    total_matches = dom_matches + eu_matches
+
+    if total_matches > 0:
+        gf = (dom_gf + eu_gf) / total_matches
+        ga = (dom_ga + eu_ga) / total_matches
+    else:
+        # fallback to manual
         mrow = manual_stats.get(tid)
         if mrow:
             gf, ga = manual_fallback_gf_ga(mrow)
+        else:
+            gf = ga = 0.0
 
-    # Expected xG
-    xg_row = xg_lookup.get(norm_name(name), {})
-    # Expected xG still loaded for luck metrics,
-# but NOT used in core ratings.
-    xgf = safe_float(xg_row.get("xgf"), gf)
-    xga = safe_float(xg_row.get("xga"), ga)
+    # --------------------------
+    # ✅ Expected xG (luck only)
+    # --------------------------
+    xr = xg_lookup.get(norm_name(name), {})
+    xgf = safe_float(xr.get("xgf"), gf)
+    xga = safe_float(xr.get("xga"), ga)
 
-# ✅ REAL-WORLD RATINGS (NO xG)
-    offR = gf          # use ACTUAL scoring only
-    defR = ga          # use ACTUAL defending only
-
-    ORtg = offR * coef
-    DRtg = defR / max(coef, 1e-9)
+    # --------------------------
+    # ✅ Real-world ORtg/DRtg
+    # --------------------------
+    ORtg = gf * coef
+    DRtg = ga / max(coef, 1e-9)
     DGR  = ORtg - DRtg
 
-    # ✅ Apply booster multiplier
+    # --------------------------
+    # ✅ Apply booster
+    # --------------------------
     booster = float(team_boosters.get(tid, 1.0))
-    
     ORtg_b = ORtg * booster
     DRtg_b = DRtg / max(booster, 1e-9)
     DGR_b  = ORtg_b - DRtg_b
 
-    # Luck metrics (negative values allowed)
+    # --------------------------
+    # ✅ Luck metrics
+    # --------------------------
     luck_off = gf - xgf
     luck_def = xga - ga
-    bad_off  = xgf - gf
-    bad_def  = ga - xga
 
     return {
         "team": name,
@@ -212,21 +255,25 @@ def compute_team_rating(team):
 
         "gf_per": round(gf, 3),
         "ga_per": round(ga, 3),
+
         "xgf": round(xgf, 3),
         "xga": round(xga, 3),
 
         "luck_offense": round(luck_off, 3),
         "luck_defense": round(luck_def, 3),
-        "bad_luck_offense": round(bad_off, 3),
-        "bad_luck_defense": round(bad_def, 3),
+
+        "bad_luck_offense": round(xgf - gf, 3),
+        "bad_luck_defense": round(ga - xga, 3),
 
         "booster": booster
     }
 
 
-
-
+# ============================================================
+# ✅ Build full table
+# ============================================================
 rows = []
+
 for t in teams:
     try:
         rows.append(compute_team_rating(t))
@@ -238,13 +285,14 @@ for t in teams:
         })
 
 rows = sorted(rows, key=lambda r: r.get("DGRtg", -9999), reverse=True)
+
 for i, r in enumerate(rows, start=1):
     r["rank"] = i
 
 
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(rows, f, ensure_ascii=False, indent=2)
+    json.dump(rows, f, indent=2)
 
 print(f"✅ Wrote {len(rows)} teams → {OUTPUT_FILE}")
 for r in rows[:10]:
-    print(f"{r['rank']:>2}. {r['team']:<25}  DGR={r['DGRtg']}  OR={r['ORtg']}  DR={r['DRtg']}  coef={r['coef']} booster={r['booster']}")
+    print(f"{r['rank']:>2}. {r['team']:<25}  DGR={r['DGRtg']}  OR={r['ORtg']}  DR={r['DRtg']} coef={r['coef']}")

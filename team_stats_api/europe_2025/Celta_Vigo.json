@@ -1,0 +1,16 @@
+{
+  "team_id": 538,
+  "season": 2025,
+  "league_id": 3,
+  "league_name": "UEFA Europa League",
+  "home": {
+    "matches": 2,
+    "goals_for": 5,
+    "goals_against": 2
+  },
+  "away": {
+    "matches": 1,
+    "goals_for": 1,
+    "goals_against": 2
+  }
+}
