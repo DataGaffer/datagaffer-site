@@ -4,7 +4,7 @@ import os
 import requests
 
 # Load league coefficients
-with open("league_uel.json") as f:
+with open("league_coefficients.json") as f:
     league_coefficients = json.load(f)
 
 # Load team-specific boosters (optional)

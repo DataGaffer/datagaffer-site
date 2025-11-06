@@ -753,5 +753,60 @@
         "result": "Loss"
       }
     ]
+  },
+  {
+    "date": "2025-11-06",
+    "picks": [
+      {
+        "fixture_id": 1451219,
+        "match": "FK Crvena vs Lille",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.25,
+        "book_odds": 1.72,
+        "edge": 22.2,
+        "league": "UEFA Europa League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1452157,
+        "match": "Midtjylland vs Celtic",
+        "pick": "Midtjylland o1.5 Goals",
+        "dg_odds": 1.32,
+        "book_odds": 1.83,
+        "edge": 21.3,
+        "league": "UEFA Europa League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1451229,
+        "match": "PAOK vs Young Boys",
+        "pick": "PAOK Win",
+        "dg_odds": 1.34,
+        "book_odds": 1.67,
+        "edge": 14.7,
+        "league": "UEFA Europa League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1451228,
+        "match": "Stuttgart vs Feyenoord",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.43,
+        "book_odds": 1.66,
+        "edge": 9.8,
+        "league": "UEFA Europa League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1451218,
+        "match": "Dinamo vs Celta Vigo",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.61,
+        "book_odds": 1.9,
+        "edge": 9.5,
+        "league": "UEFA Europa League",
+        "result": "Win"
+      }
+    ]
   }
 ]

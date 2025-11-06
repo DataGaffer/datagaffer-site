@@ -2529,6 +2529,211 @@
           "accuracy_score": 72.0
         }
       ]
+    },
+    {
+      "date": "2025-11-06",
+      "matches": [
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Nice vs Freiburg",
+          "fixture_id": 1451214,
+          "projected_score": "1.72 - 0.82",
+          "actual_score": "1 - 3",
+          "avg_diff": 1.45,
+          "accuracy_score": 63.8
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Sturm vs Nottingham",
+          "fixture_id": 1451215,
+          "projected_score": "1.11 - 1.84",
+          "actual_score": "0 - 0",
+          "avg_diff": 1.48,
+          "accuracy_score": 63.0
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Salzburg vs GO Ahead",
+          "fixture_id": 1451216,
+          "projected_score": "2.35 - 1.34",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.85,
+          "accuracy_score": 78.8
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Utrecht vs FC Porto",
+          "fixture_id": 1451217,
+          "projected_score": "1.29 - 2.03",
+          "actual_score": "1 - 1",
+          "avg_diff": 0.66,
+          "accuracy_score": 83.5
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Dinamo vs Celta Vigo",
+          "fixture_id": 1451218,
+          "projected_score": "1.43 - 1.77",
+          "actual_score": "0 - 3",
+          "avg_diff": 1.33,
+          "accuracy_score": 66.8
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "FK Crvena vs Lille",
+          "fixture_id": 1451219,
+          "projected_score": "2.00 - 2.28",
+          "actual_score": "1 - 0",
+          "avg_diff": 1.64,
+          "accuracy_score": 59.0
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "FC Basel vs FCSB",
+          "fixture_id": 1451220,
+          "projected_score": "2.07 - 1.10",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.52,
+          "accuracy_score": 87.0
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Malmo vs Panathinaikos",
+          "fixture_id": 1451221,
+          "projected_score": "1.67 - 1.14",
+          "actual_score": "0 - 1",
+          "avg_diff": 0.9,
+          "accuracy_score": 77.5
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa Conference League",
+          "match": "FSV Mainz vs Fiorentina",
+          "fixture_id": 1451394,
+          "projected_score": "1.33 - 1.15",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.41,
+          "accuracy_score": 89.8
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Midtjylland vs Celtic",
+          "fixture_id": 1452157,
+          "projected_score": "2.75 - 1.34",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.3,
+          "accuracy_score": 92.5
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Rangers vs Roma",
+          "fixture_id": 1451222,
+          "projected_score": "0.82 - 1.48",
+          "actual_score": "0 - 2",
+          "avg_diff": 0.67,
+          "accuracy_score": 83.2
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Plzen vs Fenerbahce",
+          "fixture_id": 1451223,
+          "projected_score": "1.51 - 1.37",
+          "actual_score": "0 - 0",
+          "avg_diff": 1.44,
+          "accuracy_score": 64.0
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Ferencvarosi vs Ludogorets",
+          "fixture_id": 1451224,
+          "projected_score": "2.16 - 1.16",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.5,
+          "accuracy_score": 87.5
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Bologna vs Brann",
+          "fixture_id": 1451225,
+          "projected_score": "2.93 - 0.76",
+          "actual_score": "0 - 0",
+          "avg_diff": 1.85,
+          "accuracy_score": 53.8
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "SC Braga vs Genk",
+          "fixture_id": 1451226,
+          "projected_score": "2.21 - 0.88",
+          "actual_score": "3 - 4",
+          "avg_diff": 1.96,
+          "accuracy_score": 51.0
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Real Betis vs Lyon",
+          "fixture_id": 1451227,
+          "projected_score": "1.99 - 1.13",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.57,
+          "accuracy_score": 85.8
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Stuttgart vs Feyenoord",
+          "fixture_id": 1451228,
+          "projected_score": "2.24 - 1.39",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.82,
+          "accuracy_score": 79.5
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "PAOK vs Young Boys",
+          "fixture_id": 1451229,
+          "projected_score": "2.64 - 0.91",
+          "actual_score": "4 - 0",
+          "avg_diff": 1.14,
+          "accuracy_score": 71.5
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa League",
+          "match": "Aston Villa vs Maccabi Tel Aviv",
+          "fixture_id": 1451230,
+          "projected_score": "1.86 - 1.04",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.59,
+          "accuracy_score": 85.2
+        },
+        {
+          "date": "2025-11-06",
+          "league": "UEFA Europa Conference League",
+          "match": "Crystal Palace vs AZ",
+          "fixture_id": 1451401,
+          "projected_score": "2.03 - 0.87",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.55,
+          "accuracy_score": 86.2
+        }
+      ]
     }
   ],
   "leagues": [
@@ -2597,12 +2802,12 @@
     },
     {
       "league": "UEFA Europa League",
-      "games_tracked": 18,
-      "dg_score": 77.6,
-      "sim_avg_goals": 3.28,
-      "actual_avg_goals": 2.94,
-      "actual_btts_pct": 55.6,
-      "actual_over25_pct": 61.1
+      "games_tracked": 36,
+      "dg_score": 75.8,
+      "sim_avg_goals": 3.26,
+      "actual_avg_goals": 2.69,
+      "actual_btts_pct": 44.4,
+      "actual_over25_pct": 50.0
     },
     {
       "league": "Superliga",
@@ -2673,6 +2878,15 @@
       "dg_score": 98.0,
       "sim_avg_goals": 2.84,
       "actual_avg_goals": 3.0,
+      "actual_btts_pct": 100.0,
+      "actual_over25_pct": 100.0
+    },
+    {
+      "league": "UEFA Europa Conference League",
+      "games_tracked": 2,
+      "dg_score": 88.0,
+      "sim_avg_goals": 2.69,
+      "actual_avg_goals": 3.5,
       "actual_btts_pct": 100.0,
       "actual_over25_pct": 100.0
     }
