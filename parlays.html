@@ -105,7 +105,7 @@
 </div>
 
 <div class="wrap">
-  <div class="banner">Computer generated EV parlays based on our DataGaffer simulations vs Betway odds</div>
+  <div class="banner">Computer generated EV parlays based on our DataGaffer simulations vs Book odds</div>
 
   <!-- Buttons -->
   <div class="buttons">
@@ -255,7 +255,7 @@ function legHTML(l){
     <div class="left"><div class="title">${l.desc}</div><div class="tiny muted">${l.teams}${l.league?` • ${l.league}`:''}</div></div>
     <div class="right">
       <div class="row"><span class="muted">Sim%: </span><span><b>${l.simPct}%</b></span></div>
-      <div class="row"><span class="muted">Bet365:</span><span><b>${l.bookOdds}</b></span></div>
+      <div class="row"><span class="muted">Betway:</span><span><b>${l.bookOdds}</b></span></div>
       <div class="row"><span class="muted">Edge: </span><span class="pill">${l.edge>0?'+':''}${l.edge}%</span></div>
     </div>
   </div>`;
