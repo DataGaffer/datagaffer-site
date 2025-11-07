@@ -1157,6 +1157,99 @@ function applyTopGreenGradient(tableSectionId, colsOneBased, topN = 10) {
 }
 </script>
 
+<script>
+async function loadXGTables() {
+  const xgRes = await fetch("xg_stats.json");
+  const xg = await xgRes.json();
+
+  const leagues = [
+    xg.premier_league?.for || [],
+    xg.la_liga?.for || [],
+    xg.serie_a?.for || [],
+    xg.bundesliga?.for || [],
+    xg.ligue_1?.for || [],
+    xg.eredivisie?.for || []
+  ];
+
+  const allTeams = leagues.flat();
+
+  async function getActual(team) {
+    const file = `team_stats_api/2025/${team.replace(/\s+/g, "_")}.json`;
+    try {
+      const res = await fetch(file);
+      if (!res.ok) return null;
+      const d = await res.json();
+
+      const matches = (d.home.matches + d.away.matches) || 1;
+      const gf = d.home.goals_for + d.away.goals_for;
+      const ga = d.home.goals_against + d.away.goals_against;
+
+      return {
+        gf_per: +(gf / matches).toFixed(2),
+        ga_per: +(ga / matches).toFixed(2)
+      };
+    } catch { return null; }
+  }
+
+  const rows = [];
+  for (const t of allTeams) {
+    const actual = await getActual(t.team);
+    if (!actual) continue;
+
+    const xgf = parseFloat(t.xg_for);
+    const xga = parseFloat(t.xg_against);
+
+    // ✅ Correct formulas
+    const atk_diff = +(actual.gf_per - xgf).toFixed(2);          // Higher = better
+    const def_diff = +(xga - actual.ga_per).toFixed(2);          // Higher = better
+
+    rows.push({
+      team: t.team,
+      logo: t.logo,
+      atk_diff,
+      def_diff
+    });
+  }
+
+  // ✅ Sorted lists (Top 20)
+  const topAtk  = [...rows].sort((a,b)=>b.atk_diff - a.atk_diff).slice(0,20);
+  const botAtk  = [...rows].sort((a,b)=>a.atk_diff - b.atk_diff).slice(0,20);
+
+  const topDef  = [...rows].sort((a,b)=>b.def_diff - a.def_diff).slice(0,20);
+  const botDef  = [...rows].sort((a,b)=>a.def_diff - b.def_diff).slice(0,20);
+
+  function rowHTML(left, right, type="atk") {
+    const lval = type==="atk" ? left.atk_diff : left.def_diff;
+    const rval = type==="atk" ? right.atk_diff : right.def_diff;
+
+    return `
+      <tr>
+        <td><img src="${left.logo}" class="team-logo"></td>
+        <td>${left.team}</td>
+        <td>${lval}</td>
+        <td><img src="${right.logo}" class="team-logo"></td>
+        <td>${right.team}</td>
+        <td>${rval}</td>
+      </tr>
+    `;
+  }
+
+  // Insert into HTML
+  const xgForBody = document.getElementById("xg-for-table");
+  const xgAgBody  = document.getElementById("xg-against-table");
+
+  for (let i = 0; i < 20; i++) {
+    xgForBody.insertAdjacentHTML("beforeend", rowHTML(topAtk[i], botAtk[i], "atk"));
+  }
+
+  for (let i = 0; i < 20; i++) {
+    xgAgBody.insertAdjacentHTML("beforeend", rowHTML(topDef[i], botDef[i], "def"));
+  }
+}
+
+loadXGTables();
+</script>
+
   <script>
     // Fixtures-based sections
     fetch("fixtures.json")
@@ -1510,99 +1603,6 @@ const forcedLogos = {
     console.error("Error loading rankings:", e);
   }
 })();
-</script>
-
-<script>
-async function loadXGTables() {
-  const xgRes = await fetch("xg_stats.json");
-  const xg = await xgRes.json();
-
-  const leagues = [
-    xg.premier_league?.for || [],
-    xg.la_liga?.for || [],
-    xg.serie_a?.for || [],
-    xg.bundesliga?.for || [],
-    xg.ligue_1?.for || [],
-    xg.eredivisie?.for || []
-  ];
-
-  const allTeams = leagues.flat();
-
-  async function getActual(team) {
-    const file = `team_stats_api/2025/${team.replace(/\s+/g, "_")}.json`;
-    try {
-      const res = await fetch(file);
-      if (!res.ok) return null;
-      const d = await res.json();
-
-      const matches = (d.home.matches + d.away.matches) || 1;
-      const gf = d.home.goals_for + d.away.goals_for;
-      const ga = d.home.goals_against + d.away.goals_against;
-
-      return {
-        gf_per: +(gf / matches).toFixed(2),
-        ga_per: +(ga / matches).toFixed(2)
-      };
-    } catch { return null; }
-  }
-
-  const rows = [];
-  for (const t of allTeams) {
-    const actual = await getActual(t.team);
-    if (!actual) continue;
-
-    const xgf = parseFloat(t.xg_for);
-    const xga = parseFloat(t.xg_against);
-
-    // ✅ Correct formulas
-    const atk_diff = +(actual.gf_per - xgf).toFixed(2);          // Higher = better
-    const def_diff = +(xga - actual.ga_per).toFixed(2);          // Higher = better
-
-    rows.push({
-      team: t.team,
-      logo: t.logo,
-      atk_diff,
-      def_diff
-    });
-  }
-
-  // ✅ Sorted lists (Top 20)
-  const topAtk  = [...rows].sort((a,b)=>b.atk_diff - a.atk_diff).slice(0,20);
-  const botAtk  = [...rows].sort((a,b)=>a.atk_diff - b.atk_diff).slice(0,20);
-
-  const topDef  = [...rows].sort((a,b)=>b.def_diff - a.def_diff).slice(0,20);
-  const botDef  = [...rows].sort((a,b)=>a.def_diff - b.def_diff).slice(0,20);
-
-  function rowHTML(left, right, type="atk") {
-    const lval = type==="atk" ? left.atk_diff : left.def_diff;
-    const rval = type==="atk" ? right.atk_diff : right.def_diff;
-
-    return `
-      <tr>
-        <td><img src="${left.logo}" class="team-logo"></td>
-        <td>${left.team}</td>
-        <td>${lval}</td>
-        <td><img src="${right.logo}" class="team-logo"></td>
-        <td>${right.team}</td>
-        <td>${rval}</td>
-      </tr>
-    `;
-  }
-
-  // Insert into HTML
-  const xgForBody = document.getElementById("xg-for-table");
-  const xgAgBody  = document.getElementById("xg-against-table");
-
-  for (let i = 0; i < 20; i++) {
-    xgForBody.insertAdjacentHTML("beforeend", rowHTML(topAtk[i], botAtk[i], "atk"));
-  }
-
-  for (let i = 0; i < 20; i++) {
-    xgAgBody.insertAdjacentHTML("beforeend", rowHTML(topDef[i], botDef[i], "def"));
-  }
-}
-
-loadXGTables();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
