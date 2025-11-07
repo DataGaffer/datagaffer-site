@@ -217,7 +217,7 @@ def compute_team_rating(team):
     # ✅ FINAL GF/GA per match
     if dom_matches > 0 and eu_matches > 0:
         gf = 0.80 * dom_gf_per + 0.20 * eu_gf_per
-        ga = 0.80 * dom_ga_per + 0.20 * eu_ga_per
+        ga = 0.90 * dom_ga_per + 0.10 * eu_ga_per
     else:
         # If no Europe stats, 100% domestic
         gf = dom_gf_per
