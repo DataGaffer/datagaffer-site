@@ -180,7 +180,6 @@ def compute_team_rating(team):
     tid = str(team.get("id"))
     name = team.get("name")
 
-    # League detection
     league = api_2025.get(tid, {}).get("league") or team.get("league", "Unknown")
     coef = float(league_coefs.get(league, 1.0))
 
@@ -193,7 +192,7 @@ def compute_team_rating(team):
     dom_ga = dom.get("ga", 0)
 
     # --------------------------
-    # ✅ European stats
+    # ✅ Europe stats
     # --------------------------
     eu = europe_2025.get(tid, {})
     eu_matches = eu.get("matches", 0)
@@ -201,37 +200,45 @@ def compute_team_rating(team):
     eu_ga = eu.get("ga", 0)
 
     # --------------------------
-    # ✅ Combine stats (Option B)
+    # ✅ Weighted 80% Domestic, 20% Europe
     # --------------------------
-    total_matches = dom_matches + eu_matches
-
-    if total_matches > 0:
-        gf = (dom_gf + eu_gf) / total_matches
-        ga = (dom_ga + eu_ga) / total_matches
+    if dom_matches > 0:
+        dom_gf_per = dom_gf / dom_matches
+        dom_ga_per = dom_ga / dom_matches
     else:
-        # fallback to manual
-        mrow = manual_stats.get(tid)
-        if mrow:
-            gf, ga = manual_fallback_gf_ga(mrow)
-        else:
-            gf = ga = 0.0
+        dom_gf_per = dom_ga_per = 0
+
+    if eu_matches > 0:
+        eu_gf_per = eu_gf / eu_matches
+        eu_ga_per = eu_ga / eu_matches
+    else:
+        eu_gf_per = eu_ga_per = 0
+
+    # ✅ FINAL GF/GA per match
+    if dom_matches > 0 and eu_matches > 0:
+        gf = 0.80 * dom_gf_per + 0.20 * eu_gf_per
+        ga = 0.80 * dom_ga_per + 0.20 * eu_ga_per
+    else:
+        # If no Europe stats, 100% domestic
+        gf = dom_gf_per
+        ga = dom_ga_per
 
     # --------------------------
-    # ✅ Expected xG (luck only)
+    # ✅ xG (luck only)
     # --------------------------
     xr = xg_lookup.get(norm_name(name), {})
     xgf = safe_float(xr.get("xgf"), gf)
     xga = safe_float(xr.get("xga"), ga)
 
     # --------------------------
-    # ✅ Real-world ORtg/DRtg
+    # ✅ Real-world ratings
     # --------------------------
     ORtg = gf * coef
     DRtg = ga / max(coef, 1e-9)
     DGR  = ORtg - DRtg
 
     # --------------------------
-    # ✅ Apply booster
+    # ✅ Booster
     # --------------------------
     booster = float(team_boosters.get(tid, 1.0))
     ORtg_b = ORtg * booster
@@ -239,7 +246,7 @@ def compute_team_rating(team):
     DGR_b  = ORtg_b - DRtg_b
 
     # --------------------------
-    # ✅ Luck metrics
+    # ✅ Luck
     # --------------------------
     luck_off = gf - xgf
     luck_def = xga - ga
