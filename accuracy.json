@@ -863,5 +863,40 @@
         "result": "Loss"
       }
     ]
+  },
+  {
+    "date": "2025-11-08",
+    "picks": [
+      {
+        "fixture_id": 1382370,
+        "match": "Winterthur vs Grasshoppers",
+        "pick": "Winterthur o1.5 Goals",
+        "dg_odds": 1.36,
+        "book_odds": 2.2,
+        "edge": 28.2,
+        "league": "Super League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1380968,
+        "match": "Volendam vs NAC",
+        "pick": "Volendam o1.5 Goals",
+        "dg_odds": 1.44,
+        "book_odds": 2.1,
+        "edge": 21.8,
+        "league": "Eredivisie",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1379078,
+        "match": "West Ham vs Burnley",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.41,
+        "book_odds": 2.0,
+        "edge": 20.7,
+        "league": "Premier League",
+        "result": "Win"
+      }
+    ]
   }
 ]

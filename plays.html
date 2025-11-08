@@ -124,7 +124,7 @@ async function loadTopPicks() {
     const book = match.book_odds || {};
     for (const mk of MARKET_MAP) {
       const p = sim[mk.sim], o = book[mk.book];
-      if (typeof p === "number" && typeof o === "number" && o >= 1.65 && o <= 2.2) {
+      if (typeof p === "number" && typeof o === "number" && o >= 1.7 && o <= 2.3) {
   const imp = impliedPct(o);
   const edge = +(p - imp).toFixed(1);
   if (edge > 0 && p >= 55) { // ✅ confident & +EV
@@ -153,7 +153,7 @@ async function loadTopPicks() {
       uniqueMatches.push(bet.matchId);
       filtered.push(bet);
     }
-    if (filtered.length >= 3) break;
+    if (filtered.length >= 5) break;
   }
 
   const container = document.getElementById("top-picks");

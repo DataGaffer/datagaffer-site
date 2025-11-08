@@ -60,7 +60,7 @@ def find_top_picks(fixtures):
         if p["fixture_id"] not in seen:
             unique.append(p)
             seen.add(p["fixture_id"])
-        if len(unique) >= 5:  # ✅ top 5 same as plays.html
+        if len(unique) >= 3:  # ✅ top 5 same as plays.html
             break
     return unique
 
