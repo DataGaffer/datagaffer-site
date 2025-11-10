@@ -898,5 +898,60 @@
         "result": "Win"
       }
     ]
+  },
+  {
+    "date": "2025-11-09",
+    "picks": [
+      {
+        "fixture_id": 1380973,
+        "match": "NEC vs Groningen",
+        "pick": "NEC o1.5 Goals",
+        "dg_odds": 1.23,
+        "book_odds": 1.8,
+        "edge": 25.9,
+        "league": "Eredivisie",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1400808,
+        "match": "Panathinaikos vs PAOK",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.51,
+        "book_odds": 2.05,
+        "edge": 17.4,
+        "league": "Super League 1",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1380971,
+        "match": "Utrecht vs Ajax",
+        "pick": "Utrecht o1.5 Goals",
+        "dg_odds": 1.54,
+        "book_odds": 2.1,
+        "edge": 17.2,
+        "league": "Eredivisie",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1388392,
+        "match": "Freiburg vs St. Pauli",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.55,
+        "book_odds": 2.0,
+        "edge": 14.6,
+        "league": "Bundesliga",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1379069,
+        "match": "Villa vs Bournemouth",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.57,
+        "book_odds": 1.9,
+        "edge": 11.0,
+        "league": "Premier League",
+        "result": "Win"
+      }
+    ]
   }
 ]

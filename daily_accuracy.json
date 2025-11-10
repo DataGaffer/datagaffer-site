@@ -3074,62 +3074,427 @@
           "accuracy_score": 58.8
         }
       ]
+    },
+    {
+      "date": "2025-11-10",
+      "matches": [
+        {
+          "date": "2025-11-10",
+          "league": "Eredivisie",
+          "match": "Utrecht vs Ajax",
+          "fixture_id": 1380971,
+          "projected_score": "2.21 - 1.69",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.45,
+          "accuracy_score": 88.8
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Serie A",
+          "match": "Atalanta vs Sassuolo",
+          "fixture_id": 1377964,
+          "projected_score": "2.10 - 0.89",
+          "actual_score": "0 - 3",
+          "avg_diff": 2.1,
+          "accuracy_score": 47.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Superliga",
+          "match": "Fredericia vs Viborg",
+          "fixture_id": 1379435,
+          "projected_score": "1.17 - 1.77",
+          "actual_score": "0 - 3",
+          "avg_diff": 1.2,
+          "accuracy_score": 70.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Superliga",
+          "match": "Vejle vs Copenhagen",
+          "fixture_id": 1379438,
+          "projected_score": "1.29 - 2.23",
+          "actual_score": "2 - 0",
+          "avg_diff": 1.47,
+          "accuracy_score": 63.2
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Super League",
+          "match": "FC Basel vs Lugano",
+          "fixture_id": 1382366,
+          "projected_score": "1.96 - 1.12",
+          "actual_score": "0 - 1",
+          "avg_diff": 1.04,
+          "accuracy_score": 74.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "La Liga",
+          "match": "Athletic Club vs Oviedo",
+          "fixture_id": 1390929,
+          "projected_score": "1.85 - 0.90",
+          "actual_score": "1 - 0",
+          "avg_diff": 0.88,
+          "accuracy_score": 78.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Eredivisie",
+          "match": "NEC vs Groningen",
+          "fixture_id": 1380973,
+          "projected_score": "3.07 - 1.18",
+          "actual_score": "2 - 0",
+          "avg_diff": 1.12,
+          "accuracy_score": 72.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Serie A",
+          "match": "Bologna vs Napoli",
+          "fixture_id": 1377965,
+          "projected_score": "1.13 - 0.98",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.93,
+          "accuracy_score": 76.8
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Serie A",
+          "match": "Genoa vs Fiorentina",
+          "fixture_id": 1377967,
+          "projected_score": "0.96 - 1.27",
+          "actual_score": "2 - 2",
+          "avg_diff": 0.89,
+          "accuracy_score": 77.8
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Premier League",
+          "match": "Villa vs Bournemouth",
+          "fixture_id": 1379069,
+          "projected_score": "1.92 - 1.35",
+          "actual_score": "4 - 0",
+          "avg_diff": 1.72,
+          "accuracy_score": 57.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Premier League",
+          "match": "Brentford vs Newcastle",
+          "fixture_id": 1379070,
+          "projected_score": "1.66 - 1.45",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.9,
+          "accuracy_score": 77.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Premier League",
+          "match": "Palace vs Brighton",
+          "fixture_id": 1379072,
+          "projected_score": "1.68 - 1.14",
+          "actual_score": "0 - 0",
+          "avg_diff": 1.41,
+          "accuracy_score": 64.8
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Premier League",
+          "match": "Nottingham vs Leeds",
+          "fixture_id": 1379075,
+          "projected_score": "1.74 - 1.12",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.69,
+          "accuracy_score": 82.8
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Ligue 1",
+          "match": "Lorient vs Toulouse",
+          "fixture_id": 1387799,
+          "projected_score": "1.28 - 1.60",
+          "actual_score": "1 - 1",
+          "avg_diff": 0.44,
+          "accuracy_score": 89.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Bundesliga",
+          "match": "Freiburg vs St. Pauli",
+          "fixture_id": 1388392,
+          "projected_score": "1.94 - 1.39",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.22,
+          "accuracy_score": 94.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Superliga",
+          "match": "Randers vs Midtjylland",
+          "fixture_id": 1379437,
+          "projected_score": "1.03 - 1.38",
+          "actual_score": "0 - 2",
+          "avg_diff": 0.83,
+          "accuracy_score": 79.2
+        },
+        {
+          "date": "2025-11-10",
+          "league": "La Liga",
+          "match": "Rayo Vallecano vs Real Madrid",
+          "fixture_id": 1390936,
+          "projected_score": "1.35 - 1.66",
+          "actual_score": "0 - 0",
+          "avg_diff": 1.5,
+          "accuracy_score": 62.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Super League",
+          "match": "Lausanne vs FC Sion",
+          "fixture_id": 1382367,
+          "projected_score": "2.12 - 1.34",
+          "actual_score": "2 - 2",
+          "avg_diff": 0.39,
+          "accuracy_score": 90.2
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Eredivisie",
+          "match": "AZ vs PSV",
+          "fixture_id": 1380972,
+          "projected_score": "1.65 - 2.41",
+          "actual_score": "1 - 5",
+          "avg_diff": 1.62,
+          "accuracy_score": 59.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Bundesliga",
+          "match": "Sturm Graz vs Salzburg",
+          "fixture_id": 1390096,
+          "projected_score": "1.99 - 1.59",
+          "actual_score": "1 - 1",
+          "avg_diff": 0.79,
+          "accuracy_score": 80.2
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Ligue 1",
+          "match": "Angers vs Auxerre",
+          "fixture_id": 1387797,
+          "projected_score": "1.66 - 0.95",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.65,
+          "accuracy_score": 83.8
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Ligue 1",
+          "match": "Metz vs Nice",
+          "fixture_id": 1387802,
+          "projected_score": "1.17 - 1.27",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.55,
+          "accuracy_score": 86.2
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Ligue 1",
+          "match": "Strasbourg vs Lille",
+          "fixture_id": 1387805,
+          "projected_score": "1.68 - 1.65",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.98,
+          "accuracy_score": 75.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Premier League",
+          "match": "Man City vs Liverpool",
+          "fixture_id": 1379074,
+          "projected_score": "2.22 - 1.60",
+          "actual_score": "3 - 0",
+          "avg_diff": 1.19,
+          "accuracy_score": 70.2
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Bundesliga",
+          "match": "Stuttgart vs Augsburg",
+          "fixture_id": 1388395,
+          "projected_score": "2.18 - 0.77",
+          "actual_score": "3 - 2",
+          "avg_diff": 1.02,
+          "accuracy_score": 74.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Serie A",
+          "match": "Roma vs Udinese",
+          "fixture_id": 1377973,
+          "projected_score": "2.02 - 0.58",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.3,
+          "accuracy_score": 92.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Superliga",
+          "match": "Aarhus vs Sonderjyske",
+          "fixture_id": 1379433,
+          "projected_score": "2.34 - 0.82",
+          "actual_score": "2 - 3",
+          "avg_diff": 1.26,
+          "accuracy_score": 68.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "La Liga",
+          "match": "Mallorca vs Getafe",
+          "fixture_id": 1390935,
+          "projected_score": "1.07 - 1.06",
+          "actual_score": "1 - 0",
+          "avg_diff": 0.57,
+          "accuracy_score": 85.8
+        },
+        {
+          "date": "2025-11-10",
+          "league": "La Liga",
+          "match": "Valencia vs Real Betis",
+          "fixture_id": 1390938,
+          "projected_score": "1.69 - 1.52",
+          "actual_score": "1 - 1",
+          "avg_diff": 0.6,
+          "accuracy_score": 85.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Bundesliga",
+          "match": "Frankfurt vs FSV Mainz",
+          "fixture_id": 1388391,
+          "projected_score": "1.87 - 1.30",
+          "actual_score": "1 - 0",
+          "avg_diff": 1.08,
+          "accuracy_score": 73.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Superliga",
+          "match": "Brondby vs Nordsjaelland",
+          "fixture_id": 1379434,
+          "projected_score": "1.97 - 1.24",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.64,
+          "accuracy_score": 84.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Eredivisie",
+          "match": "GO Ahead vs Feyenoord",
+          "fixture_id": 1380974,
+          "projected_score": "1.32 - 2.82",
+          "actual_score": "2 - 1",
+          "avg_diff": 1.25,
+          "accuracy_score": 68.8
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Super League 1",
+          "match": "Panathinaikos vs PAOK",
+          "fixture_id": 1400808,
+          "projected_score": "1.59 - 1.80",
+          "actual_score": "2 - 1",
+          "avg_diff": 0.6,
+          "accuracy_score": 85.0
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Serie A",
+          "match": "Inter vs Lazio",
+          "fixture_id": 1377968,
+          "projected_score": "2.10 - 0.81",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.46,
+          "accuracy_score": 88.5
+        },
+        {
+          "date": "2025-11-10",
+          "league": "Ligue 1",
+          "match": "Lyon vs PSG",
+          "fixture_id": 1387800,
+          "projected_score": "1.25 - 2.13",
+          "actual_score": "2 - 3",
+          "avg_diff": 0.81,
+          "accuracy_score": 79.8
+        },
+        {
+          "date": "2025-11-10",
+          "league": "La Liga",
+          "match": "Celta vs Barcelona",
+          "fixture_id": 1390931,
+          "projected_score": "1.54 - 2.08",
+          "actual_score": "2 - 4",
+          "avg_diff": 1.19,
+          "accuracy_score": 70.2
+        }
+      ]
     }
   ],
   "leagues": [
     {
       "league": "Eredivisie",
-      "games_tracked": 27,
-      "dg_score": 73.4,
-      "sim_avg_goals": 3.41,
-      "actual_avg_goals": 3.33,
-      "actual_btts_pct": 55.6,
-      "actual_over25_pct": 55.6
+      "games_tracked": 31,
+      "dg_score": 73.3,
+      "sim_avg_goals": 3.5,
+      "actual_avg_goals": 3.35,
+      "actual_btts_pct": 58.1,
+      "actual_over25_pct": 58.1
     },
     {
       "league": "Serie A",
-      "games_tracked": 41,
-      "dg_score": 78.7,
+      "games_tracked": 46,
+      "dg_score": 78.5,
       "sim_avg_goals": 2.59,
-      "actual_avg_goals": 2.1,
-      "actual_btts_pct": 48.8,
-      "actual_over25_pct": 43.9
+      "actual_avg_goals": 2.15,
+      "actual_btts_pct": 45.7,
+      "actual_over25_pct": 43.5
     },
     {
       "league": "La Liga",
-      "games_tracked": 30,
-      "dg_score": 77.5,
-      "sim_avg_goals": 2.73,
-      "actual_avg_goals": 2.43,
-      "actual_btts_pct": 43.3,
-      "actual_over25_pct": 50.0
+      "games_tracked": 35,
+      "dg_score": 77.3,
+      "sim_avg_goals": 2.76,
+      "actual_avg_goals": 2.37,
+      "actual_btts_pct": 42.9,
+      "actual_over25_pct": 45.7
     },
     {
       "league": "Premier League",
-      "games_tracked": 28,
-      "dg_score": 78.6,
-      "sim_avg_goals": 2.97,
-      "actual_avg_goals": 3.04,
-      "actual_btts_pct": 53.6,
-      "actual_over25_pct": 64.3
+      "games_tracked": 33,
+      "dg_score": 77.4,
+      "sim_avg_goals": 3.0,
+      "actual_avg_goals": 3.03,
+      "actual_btts_pct": 51.5,
+      "actual_over25_pct": 66.7
     },
     {
       "league": "Ligue 1",
-      "games_tracked": 36,
-      "dg_score": 72.9,
-      "sim_avg_goals": 3.21,
-      "actual_avg_goals": 2.81,
-      "actual_btts_pct": 44.4,
-      "actual_over25_pct": 50.0
+      "games_tracked": 41,
+      "dg_score": 74.1,
+      "sim_avg_goals": 3.17,
+      "actual_avg_goals": 2.8,
+      "actual_btts_pct": 46.3,
+      "actual_over25_pct": 48.8
     },
     {
       "league": "Bundesliga",
-      "games_tracked": 26,
-      "dg_score": 74.5,
-      "sim_avg_goals": 3.41,
-      "actual_avg_goals": 3.04,
-      "actual_btts_pct": 50.0,
-      "actual_over25_pct": 61.5
+      "games_tracked": 30,
+      "dg_score": 75.3,
+      "sim_avg_goals": 3.39,
+      "actual_avg_goals": 3.0,
+      "actual_btts_pct": 53.3,
+      "actual_over25_pct": 60.0
     },
     {
       "league": "UEFA Champions League",
@@ -3151,12 +3516,12 @@
     },
     {
       "league": "Superliga",
-      "games_tracked": 7,
-      "dg_score": 76.2,
-      "sim_avg_goals": 3.2,
-      "actual_avg_goals": 4.0,
-      "actual_btts_pct": 85.7,
-      "actual_over25_pct": 71.4
+      "games_tracked": 12,
+      "dg_score": 74.9,
+      "sim_avg_goals": 3.14,
+      "actual_avg_goals": 3.5,
+      "actual_btts_pct": 58.3,
+      "actual_over25_pct": 58.3
     },
     {
       "league": "DFB Pokal",
@@ -3205,11 +3570,11 @@
     },
     {
       "league": "Super League",
-      "games_tracked": 6,
-      "dg_score": 61.4,
-      "sim_avg_goals": 3.67,
-      "actual_avg_goals": 2.83,
-      "actual_btts_pct": 33.3,
+      "games_tracked": 8,
+      "dg_score": 66.5,
+      "sim_avg_goals": 3.57,
+      "actual_avg_goals": 2.75,
+      "actual_btts_pct": 37.5,
       "actual_over25_pct": 50.0
     },
     {
@@ -3227,6 +3592,15 @@
       "dg_score": 88.0,
       "sim_avg_goals": 2.69,
       "actual_avg_goals": 3.5,
+      "actual_btts_pct": 100.0,
+      "actual_over25_pct": 100.0
+    },
+    {
+      "league": "Super League 1",
+      "games_tracked": 1,
+      "dg_score": 85.0,
+      "sim_avg_goals": 3.39,
+      "actual_avg_goals": 3.0,
       "actual_btts_pct": 100.0,
       "actual_over25_pct": 100.0
     }

@@ -34,7 +34,7 @@ def find_top_picks(fixtures):
             o = book.get(book_key)
 
             # ✅ Only consider valid decimal odds within realistic range
-            if isinstance(p, (int, float)) and isinstance(o, (int, float)) and 1.6 <= o <= 2.4:
+            if isinstance(p, (int, float)) and isinstance(o, (int, float)) and 1.7 <= o <= 2.3:
                 imp = implied_pct(o)
                 edge = round(p - imp, 1)
 
@@ -60,7 +60,7 @@ def find_top_picks(fixtures):
         if p["fixture_id"] not in seen:
             unique.append(p)
             seen.add(p["fixture_id"])
-        if len(unique) >= 3:  # ✅ top 5 same as plays.html
+        if len(unique) >= 5:  # ✅ top 5 same as plays.html
             break
     return unique
 
