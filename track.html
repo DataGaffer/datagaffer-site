@@ -138,7 +138,7 @@ tr:hover { background: #f1f7f4; }
   margin: 0 auto;
   border: 1px solid #ccd0cc;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 #league-table th, #league-table td {
@@ -166,6 +166,68 @@ tr[style*="background:#003f2e"] td {
   color: #fff !important;
 }
 
+/* --- Top 10 Team Accuracy Table (identical to league table) --- */
+#team-accuracy-banner {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  background: #fff;
+  border: 2px solid #003f2e;
+  border-radius: 6px;
+  padding: 8px 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #003f2e;
+  font-size: 14px;
+  max-width: 780px;        /* NEW → matches league banner */
+  margin-left: auto;       /* centers it */
+  margin-right: auto;
+}
+
+/* Table matches league table exactly */
+#team-accuracy-table {
+  max-width: 780px;        /* same as league table */
+  margin: 0 auto;          /* centers table */
+  border: 1px solid #ccd0cc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 50px;
+}
+
+#team-accuracy-table th,
+#team-accuracy-table td {
+  padding: 6px 8px;
+  font-size: 12.5px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#team-accuracy-table th {
+  background: #003f2e;
+  color: #fff;
+}
+
+#team-accuracy-table td {
+  font-weight: 500;
+  color: #003f2e;
+}
+
+/* Center the flag + league name inside the first column */
+#league-table td.league-cell {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Make the flag look perfectly centered */
+.league-flag {
+  width: 18px;
+  height: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+
 /* ✅ Compact mobile view */
 @media (max-width: 900px) {
   .header img { height: 50px; left: 10px; }
@@ -182,6 +244,22 @@ tr[style*="background:#003f2e"] td {
   }
 
   #league-table th, #league-table td {
+    font-size: 11px;
+    padding: 4px 5px;
+  }
+  #team-accuracy-banner {
+    max-width: 95%;        /* same as league banner on mobile */
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  #team-accuracy-table {
+    max-width: 95%;
+    min-width: 600px;      /* identical to league table */
+  }
+
+  #team-accuracy-table th,
+  #team-accuracy-table td {
     font-size: 11px;
     padding: 4px 5px;
   }
@@ -247,6 +325,30 @@ tr[style*="background:#003f2e"] td {
   </div>
 </div>
 
+<!-- ✅ TOP 10 MOST ACCURATE TEAMS BANNER -->
+<div class="wrap">
+  <div id="team-accuracy-banner" class="banner">
+    Top 10 Most Accurate Teams — based on full match history tracked by DataGaffer.
+  </div>
+
+  <!-- ✅ MATCHED EXACT TABLE WRAPPER (same as league table) -->
+  <div class="table-container">
+    <table class="table" id="team-accuracy-table">
+      <thead>
+        <thead>
+  <tr>
+    <th>Team</th>
+    <th>League</th>
+    <th>Games</th>
+    <th>Avg Diff</th>
+    <th>Accuracy</th>
+  </tr>
+</thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
 <script>
 let allMatches = [];
 let allLeagues = [];
@@ -272,6 +374,7 @@ async function loadAccuracy() {
   const latestMatches = allMatches.filter(m => m.date === latestDate);
   renderTeamTable(latestMatches);
   renderLeagueTable(allLeagues);
+  renderTopTeams(allMatches);
 }
 
 function renderTeamTable(data) {
@@ -352,18 +455,57 @@ function renderTeamTable(data) {
 
 function renderLeagueTable(data) {
   const tbody = document.querySelector("#league-table tbody");
-  tbody.innerHTML = data
-    .map(l => `
+
+  // --- Flag map ---
+  const leagueFlags = {
+    "Eredivisie": "https://flagcdn.com/h20/nl.png",
+    "Serie A": "https://flagcdn.com/h20/it.png",
+    "La Liga": "https://flagcdn.com/h20/es.png",
+    "Premier League": "https://flagcdn.com/h20/gb-eng.png",
+    "Ligue 1": "https://flagcdn.com/h20/fr.png",
+    "Bundesliga": "https://flagcdn.com/h20/de.png",
+    "Superliga": "https://flagcdn.com/h20/dk.png",
+    "DFB Pokal": "https://flagcdn.com/h20/de.png",
+    "DBU Pokalen": "https://flagcdn.com/h20/dk.png",
+    "Eliteserien": "https://flagcdn.com/h20/no.png",
+    "KNVB Beker": "https://flagcdn.com/h20/nl.png",
+    "League Cup": "https://flagcdn.com/h20/gb-eng.png",
+    "Super League": "https://flagcdn.com/h20/ch.png",
+    "Primeira Liga": "https://flagcdn.com/h20/pt.png",
+
+    // UEFA → EU flag
+    "UEFA Champions League": "https://flagcdn.com/h20/eu.png",
+    "UEFA Europa League": "https://flagcdn.com/h20/eu.png",
+    "UEFA Europa Conference League": "https://flagcdn.com/h20/eu.png"
+  };
+
+  // --- Filter: only leagues with 12+ games ---
+  let filtered = data.filter(l => (l.games_tracked || 0) >= 12);
+
+  // --- Sort by DG Score descending ---
+  filtered = filtered.sort((a, b) => {
+    const aScore = parseFloat(String(a.dg_score).replace("%", "")) || 0;
+    const bScore = parseFloat(String(b.dg_score).replace("%", "")) || 0;
+    return bScore - aScore;
+  });
+
+  // --- Build table rows ---
+  tbody.innerHTML = filtered.map(l => {
+    const flag = leagueFlags[l.league] || "";
+    return `
       <tr>
-        <td>${l.league}</td>
+        <td class="league-cell">
+          <img src="${flag}" class="league-flag">
+          ${l.league}
+        </td>
         <td>${l.games_tracked}</td>
         <td><b>${l.dg_score}%</b></td>
         <td>${l.sim_avg_goals}</td>
         <td>${l.actual_avg_goals}</td>
         <td>${l.actual_btts_pct}%</td>
         <td>${l.actual_over25_pct}%</td>
-      </tr>`)
-    .join("");
+      </tr>`;
+  }).join("");
 }
 
 function sortTable(n) {
@@ -404,6 +546,71 @@ function filterMatches() {
   renderTeamTable(filtered);
 }
 
+// -----------------------------
+// TOP 10 MOST ACCURATE TEAMS
+// -----------------------------
+function renderTopTeamsTable() {
+
+  const teamStats = {};
+
+  allMatches.forEach(m => {
+    if (!m.match || !m.league) return;
+
+    const parts = m.match.split(" vs ");
+    if (parts.length !== 2) return;
+
+    const home = parts[0].trim();
+    const away = parts[1].trim();
+
+    [home, away].forEach(team => {
+      if (!teamStats[team]) {
+        teamStats[team] = {
+          team: team,
+          league: m.league,
+          games: 0,
+          totalDiff: 0,
+          totalAccuracy: 0
+        };
+      }
+
+      teamStats[team].games += 1;
+      teamStats[team].totalDiff += parseFloat(m.avg_diff) || 0;
+      teamStats[team].totalAccuracy += parseFloat(m.accuracy_score) || 0;
+    });
+  });
+
+  // Convert to array
+  const rows = Object.values(teamStats)
+    .map(t => ({
+      team: t.team,
+      league: t.league,
+      games: t.games,
+      avgDiff: (t.totalDiff / t.games).toFixed(2),
+      avgAcc: (t.totalAccuracy / t.games).toFixed(1)
+    }))
+    // Only sort teams with at least 3 games (optional)
+    .filter(t => t.games >= 3)
+    // Sort by accuracy descending
+    .sort((a, b) => b.avgAcc - a.avgAcc)
+    .slice(0, 10);
+
+  // Insert into table
+  const tbody = document.querySelector("#team-accuracy-table tbody");
+  tbody.innerHTML = rows
+    .map(r => `
+      <tr>
+         <td>${r.team}</td>
+         <td>${r.league}</td>
+         <td>${r.games}</td>
+         <td>${r.avgDiff}</td>
+         <td><b>${r.avgAcc}%</b></td>
+      </tr>
+    `)
+    .join("");
+}
+
+// Call it AFTER loadAccuracy()
+setTimeout(renderTopTeamsTable, 300);
 
 loadAccuracy();
 </script>
