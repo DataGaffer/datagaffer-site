@@ -550,13 +550,15 @@
           `;
           simCards.appendChild(card);
 
-// ✅ Create heatmap path
+// ✅ Create the heatmap image path
 const heatmapPath = `heatmaps/projected/${slugify(match.home.name)}_vs_${slugify(match.away.name)}.png`;
 
-// ✅ Use an Image() check (works locally + online)
-const img = new Image();
-img.onload = function() {
-  // ✅ Only runs if image exists and loads correctly
+// ✅ Create an image element to test loading
+const imgTest = new Image();
+imgTest.src = heatmapPath;
+
+// ✅ If the image loads successfully, append it under the corresponding card
+imgTest.onload = () => {
   const heatmapDiv = document.createElement('div');
   heatmapDiv.className = 'heatmap-wrapper';
   heatmapDiv.innerHTML = `
@@ -579,18 +581,16 @@ img.onload = function() {
       </div>
     </div>
 
-    <img src="${heatmapPath}"
-         alt="Heat map for ${match.home.name} vs ${match.away.name}"
-         class="heatmap-img"/>
+    <img src="${heatmapPath}" alt="Heat map for ${match.home.name} vs ${match.away.name}" class="heatmap-img"/>
   `;
-  simCards.appendChild(heatmapDiv);
+
+  // ✅ Add directly under its card, not at the end of all
+  card.insertAdjacentElement('afterend', heatmapDiv);
 };
 
-img.onerror = function() {
-  console.log(`ℹ️ No heatmap found for ${match.home.name} vs ${match.away.name}`);
+imgTest.onerror = () => {
+  console.log(`No heatmap for ${match.home.name} vs ${match.away.name}`);
 };
-
-img.src = heatmapPath; // ✅ Trigger the check
 
 // ✅ Keep the rest as-is
 card.setAttribute("data-match-id", `${match.home.id}-${match.away.id}`);
