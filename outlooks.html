@@ -17,6 +17,7 @@
       background: #f2f4f7;
       margin: 0;
       padding: 0;
+      margin-bottom: 50px;
     }
 
   header {
@@ -1158,143 +1159,151 @@ function applyTopGreenGradient(tableSectionId, colsOneBased, topN = 10) {
 </script>
 
   <script>
-    // Fixtures-based sections
-    fetch("fixtures.json")
-      .then(res => res.json())
-      .then(data => {
-        const goalsBody = document.getElementById("expected-goals-body");
-        const cornersBody = document.getElementById("expected-corners-body");
-        const shotsBody = document.getElementById("expected-shots-body");
-        const bttsBody = document.getElementById("btts-body");
-        const over25Body = document.getElementById("over25-body");
-        const over35Body = document.getElementById("over35-body");
-        const under25Body = document.getElementById("under25-body");
-        const teamTotalBody = document.getElementById("team-total-body");
-        const winBody = document.getElementById("win-outlook-body");
+fetch("fixtures.json")
+  .then(res => res.json())
+  .then(data => {
+    let goalsBuf = "";
+    let cornersBuf = "";
+    let shotsBuf = "";
+    let bttsBuf = "";
+    let over25Buf = "";
+    let over35Buf = "";
+    let under25Buf = "";
+    let teamTotalBuf = "";
+    let winBuf = "";
 
-        data.forEach(fix => {
-          const stats = fix.sim_stats;
+    data.forEach(fix => {
+      const stats = fix.sim_stats;
+      if (!stats) return;
 
+      const hLogo = fix.home_logo;
+      const aLogo = fix.away_logo;
 
-          if (stats.xg) {
-            goalsBody.innerHTML += `
-              <tr>
-                <td><img src="${fix.home_logo}" class="team-logo"></td>
-                <td>${fix.home.name}</td>
-                <td>${stats.xg.home}</td>
-                <td>${stats.xg.total}</td>
-                <td>${stats.xg.away}</td>
-                <td>${fix.away.name}</td>
-                <td><img src="${fix.away_logo}" class="team-logo"></td>
-              </tr>`;
-          }
+      if (stats.xg) {
+        goalsBuf += `
+          <tr>
+            <td><img src="${hLogo}" class="team-logo"></td>
+            <td>${fix.home.name}</td>
+            <td>${stats.xg.home}</td>
+            <td>${stats.xg.total}</td>
+            <td>${stats.xg.away}</td>
+            <td>${fix.away.name}</td>
+            <td><img src="${aLogo}" class="team-logo"></td>
+          </tr>`;
+      }
 
-          if (stats.corners) {
-            cornersBody.innerHTML += `
-              <tr>
-                <td><img src="${fix.home_logo}" class="team-logo"></td>
-                <td>${fix.home.name}</td>
-                <td>${stats.corners.home}</td>
-                <td>${stats.corners.total}</td>
-                <td>${stats.corners.away}</td>
-                <td>${fix.away.name}</td>
-                <td><img src="${fix.away_logo}" class="team-logo"></td>
-              </tr>`;
-          }
+      if (stats.corners) {
+        cornersBuf += `
+          <tr>
+            <td><img src="${hLogo}" class="team-logo"></td>
+            <td>${fix.home.name}</td>
+            <td>${stats.corners.home}</td>
+            <td>${stats.corners.total}</td>
+            <td>${stats.corners.away}</td>
+            <td>${fix.away.name}</td>
+            <td><img src="${aLogo}" class="team-logo"></td>
+          </tr>`;
+      }
 
-          if (stats.shots) {
-            shotsBody.innerHTML += `
-              <tr>
-                <td><img src="${fix.home_logo}" class="team-logo"></td>
-                <td>${fix.home.name}</td>
-                <td>${stats.shots.home}</td>
-                <td>${stats.shots.total}</td>
-                <td>${stats.shots.away}</td>
-                <td>${fix.away.name}</td>
-                <td><img src="${fix.away_logo}" class="team-logo"></td>
-              </tr>`;
-          }
+      if (stats.shots) {
+        shotsBuf += `
+          <tr>
+            <td><img src="${hLogo}" class="team-logo"></td>
+            <td>${fix.home.name}</td>
+            <td>${stats.shots.home}</td>
+            <td>${stats.shots.total}</td>
+            <td>${stats.shots.away}</td>
+            <td>${fix.away.name}</td>
+            <td><img src="${aLogo}" class="team-logo"></td>
+          </tr>`;
+      }
 
-          if (stats.percents) {
-            // BTTS
-            bttsBody.innerHTML += `
-              <tr>
-                <td><img src="${fix.home_logo}" class="team-logo"></td>
-                <td>${fix.home.name}</td>
-                <td>${stats.percents.btts_pct}%</td>
-                <td>${fix.away.name}</td>
-                <td><img src="${fix.away_logo}" class="team-logo"></td>
-              </tr>`;
+      if (stats.percents) {
+        const p = stats.percents;
 
-            // Over 2.5
-            over25Body.innerHTML += `
-              <tr>
-                <td><img src="${fix.home_logo}" class="team-logo"></td>
-                <td>${fix.home.name}</td>
-                <td>${stats.percents.over_2_5_pct}%</td>
-                <td>${fix.away.name}</td>
-                <td><img src="${fix.away_logo}" class="team-logo"></td>
-              </tr>`;
+        bttsBuf += `
+          <tr>
+            <td><img src="${hLogo}" class="team-logo"></td>
+            <td>${fix.home.name}</td>
+            <td>${p.btts_pct}%</td>
+            <td>${fix.away.name}</td>
+            <td><img src="${aLogo}" class="team-logo"></td>
+          </tr>`;
 
-              // Over 3.5
-over35Body.innerHTML += `
-  <tr>
-    <td><img src="${fix.home_logo}" class="team-logo"></td>
-    <td>${fix.home.name}</td>
-    <td>${stats.percents.over_3_5_pct}%</td>
-    <td>${fix.away.name}</td>
-    <td><img src="${fix.away_logo}" class="team-logo"></td>
-  </tr>`;
+        over25Buf += `
+          <tr>
+            <td><img src="${hLogo}" class="team-logo"></td>
+            <td>${fix.home.name}</td>
+            <td>${p.over_2_5_pct}%</td>
+            <td>${fix.away.name}</td>
+            <td><img src="${aLogo}" class="team-logo"></td>
+          </tr>`;
 
-// Under 2.5
-under25Body.innerHTML += `
-  <tr>
-    <td><img src="${fix.home_logo}" class="team-logo"></td>
-    <td>${fix.home.name}</td>
-    <td>${stats.percents.under_2_5_pct}%</td>
-    <td>${fix.away.name}</td>
-    <td><img src="${fix.away_logo}" class="team-logo"></td>
-  </tr>`;
+        over35Buf += `
+          <tr>
+            <td><img src="${hLogo}" class="team-logo"></td>
+            <td>${fix.home.name}</td>
+            <td>${p.over_3_5_pct}%</td>
+            <td>${fix.away.name}</td>
+            <td><img src="${aLogo}" class="team-logo"></td>
+          </tr>`;
 
-            // Team Totals
-            teamTotalBody.innerHTML += `
-              <tr>
-                <td><img src="${fix.home_logo}" class="team-logo"></td>
-                <td>${fix.home.name}</td>
-                <td>${stats.percents.home_o1_5_pct}%</td>
-                <td><img src="${fix.away_logo}" class="team-logo"></td>
-                <td>${fix.away.name}</td>
-                <td>${stats.percents.away_o1_5_pct}%</td>
-              </tr>`;
+        under25Buf += `
+          <tr>
+            <td><img src="${hLogo}" class="team-logo"></td>
+            <td>${fix.home.name}</td>
+            <td>${p.under_2_5_pct}%</td>
+            <td>${fix.away.name}</td>
+            <td><img src="${aLogo}" class="team-logo"></td>
+          </tr>`;
 
-            // Win Outlook
-            winBody.innerHTML += `
-              <tr>
-                <td><img src="${fix.home_logo}" class="team-logo"></td>
-                <td>${fix.home.name}</td>
-                <td>${stats.percents.home_win_pct}%</td>
-                <td>${stats.percents.draw_pct}%</td>
-                <td>${stats.percents.away_win_pct}%</td>
-                <td>${fix.away.name}</td>
-                <td><img src="${fix.away_logo}" class="team-logo"></td>
-              </tr>`;
-          }
-        });
+        teamTotalBuf += `
+          <tr>
+            <td><img src="${hLogo}" class="team-logo"></td>
+            <td>${fix.home.name}</td>
+            <td>${p.home_o1_5_pct}%</td>
+            <td><img src="${aLogo}" class="team-logo"></td>
+            <td>${fix.away.name}</td>
+            <td>${p.away_o1_5_pct}%</td>
+          </tr>`;
 
-        
-   // after you've appended all rows:
-    applyTopGreenGradient("expected-goals",   [3,4,5], 15);  // home xG, total xG, away xG
-    applyTopGreenGradient("expected-corners", [3,4,5], 15);  // home, total, away
-    applyTopGreenGradient("expected-shots",   [3,4,5], 15);  // home, total, away
-    applyTopGreenGradient("btts",             [3],     15);  // BTTS %
-    applyTopGreenGradient("over25",           [3],     15);  // Over 2.5 %
-    applyTopGreenGradient("over35", [3], 15);
-    applyTopGreenGradient("under25", [3], 15);
-    applyTopGreenGradient("team-total",       [3,6],   15);  // home o1.5 %, away o1.5 %
-    applyTopGreenGradient("win-outlook",      [3,4,5], 15);  // home win %, draw %, away win %
+        winBuf += `
+          <tr>
+            <td><img src="${hLogo}" class="team-logo"></td>
+            <td>${fix.home.name}</td>
+            <td>${p.home_win_pct}%</td>
+            <td>${p.draw_pct}%</td>
+            <td>${p.away_win_pct}%</td>
+            <td>${fix.away.name}</td>
+            <td><img src="${aLogo}" class="team-logo"></td>
+          </tr>`;
+      }
+    });
 
+    // Insert everything once — FAST
+    document.getElementById("expected-goals-body").innerHTML = goalsBuf;
+    document.getElementById("expected-corners-body").innerHTML = cornersBuf;
+    document.getElementById("expected-shots-body").innerHTML = shotsBuf;
+    document.getElementById("btts-body").innerHTML = bttsBuf;
+    document.getElementById("over25-body").innerHTML = over25Buf;
+    document.getElementById("over35-body").innerHTML = over35Buf;
+    document.getElementById("under25-body").innerHTML = under25Buf;
+    document.getElementById("team-total-body").innerHTML = teamTotalBuf;
+    document.getElementById("win-outlook-body").innerHTML = winBuf;
 
-      });
+    // Keep your top green gradients
+    applyTopGreenGradient("expected-goals",   [3,4,5], 15);
+    applyTopGreenGradient("expected-corners", [3,4,5], 15);
+    applyTopGreenGradient("expected-shots",   [3,4,5], 15);
+    applyTopGreenGradient("btts",             [3],     15);
+    applyTopGreenGradient("over25",           [3],     15);
+    applyTopGreenGradient("over35",           [3],     15);
+    applyTopGreenGradient("under25",          [3],     15);
+    applyTopGreenGradient("team-total",       [3,6],   15);
+    applyTopGreenGradient("win-outlook",      [3,4,5], 15);
+});
+</script>
+<script>
 
     // Player Sims section
 fetch("player_simulations/index.json")

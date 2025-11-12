@@ -170,7 +170,7 @@
     font-size: 10.5px;
   }
 #xgTable th:nth-child(n+2):nth-child(-n+7) {
-  font-size: 7px;
+  font-size: 9px;
 }
 
 
@@ -289,12 +289,12 @@ async function showLeague(league, btn) {
       <thead>
         <tr>
           <th>Team</th>
-          <th onclick="sortTable(1, this)">XG For</th>
-          <th onclick="sortTable(2, this)">Actual</th>
-          <th onclick="sortTable(3, this)">XG Against</th>
-          <th onclick="sortTable(4, this)">Actual</th>
-          <th onclick="sortTable(5, this)">Total XG</th>
-          <th onclick="sortTable(6, this)">Actual Total</th>
+          <th onclick="sortTable(1, this)">xG</th>
+          <th onclick="sortTable(2, this)">GF</th>
+          <th onclick="sortTable(3, this)">xGA</th>
+          <th onclick="sortTable(4, this)">GA</th>
+          <th onclick="sortTable(5, this)">Total xG</th>
+          <th onclick="sortTable(6, this)">Total</th>
         </tr>
       </thead>
       <tbody>${rows.join('')}</tbody>

@@ -4,116 +4,122 @@
       {
         "team": "Arsenal",
         "logo": "https://media.api-sports.io/football/teams/42.png",
-        "xg_for": "1.71",
-        "xg_against": "1.26"
+        "xg_for": "1.76",
+        "xg_against": "0.56"
       },
       {
         "team": "Aston Villa",
         "logo": "https://media.api-sports.io/football/teams/66.png",
-        "xg_for": "1.21",
-        "xg_against": "1.36"
+        "xg_for": "0.85",
+        "xg_against": "1.32"
       },
       {
         "team": "Bournemouth",
         "logo": "https://media.api-sports.io/football/teams/35.png",
-        "xg_for": "1.45",
-        "xg_against": "1.42"
+        "xg_for": "1.22",
+        "xg_against": "1.37"
       },
       {
         "team": "Brentford",
         "logo": "https://media.api-sports.io/football/teams/55.png",
-        "xg_for": "1.24",
-        "xg_against": "1.45"
+        "xg_for": "1.52",
+        "xg_against": "1.23"
       },
       {
         "team": "Brighton",
         "logo": "https://media.api-sports.io/football/teams/51.png",
-        "xg_for": "1.47",
-        "xg_against": "1.27"
+        "xg_for": "1.53",
+        "xg_against": "1.20"
       },
       {
         "team": "Burnley",
         "logo": "https://media.api-sports.io/football/teams/44.png",
-        "xg_for": "0.89",
-        "xg_against": "2.01"
+        "xg_for": "0.75",
+        "xg_against": "2.18"
       },
       {
         "team": "Chelsea",
         "logo": "https://media.api-sports.io/football/teams/49.png",
-        "xg_for": "1.66",
-        "xg_against": "1.17"
+        "xg_for": "1.89",
+        "xg_against": "1.26"
       },
       {
         "team": "Crystal Palace",
         "logo": "https://media.api-sports.io/football/teams/52.png",
-        "xg_for": "1.42",
-        "xg_against": "1.32"
+        "xg_for": "1.75",
+        "xg_against": "1.16"
       },
       {
         "team": "Everton",
         "logo": "https://media.api-sports.io/football/teams/45.png",
-        "xg_for": "1.30",
-        "xg_against": "1.46"
+        "xg_for": "1.34",
+        "xg_against": "1.41"
       },
       {
         "team": "Fulham",
         "logo": "https://media.api-sports.io/football/teams/36.png",
-        "xg_for": "1.29",
-        "xg_against": "1.36"
+        "xg_for": "1.00",
+        "xg_against": "1.34"
       },
       {
         "team": "Leeds",
         "logo": "https://media.api-sports.io/football/teams/63.png",
-        "xg_for": "1.33",
-        "xg_against": "1.25"
+        "xg_for": "1.19",
+        "xg_against": "1.35"
       },
       {
         "team": "Liverpool",
         "logo": "https://media.api-sports.io/football/teams/40.png",
-        "xg_for": "1.71",
-        "xg_against": "1.26"
+        "xg_for": "1.63",
+        "xg_against": "1.27"
       },
       {
         "team": "Manchester City",
         "logo": "https://media.api-sports.io/football/teams/50.png",
-        "xg_for": "1.63",
-        "xg_against": "1.12"
+        "xg_for": "1.77",
+        "xg_against": "0.95"
       },
       {
         "team": "Manchester United",
         "logo": "https://media.api-sports.io/football/teams/33.png",
-        "xg_for": "1.69",
-        "xg_against": "1.36"
+        "xg_for": "1.68",
+        "xg_against": "1.53"
       },
       {
         "team": "Newcastle",
         "logo": "https://media.api-sports.io/football/teams/34.png",
-        "xg_for": "1.54",
-        "xg_against": "1.30"
+        "xg_for": "1.20",
+        "xg_against": "1.04"
       },
       {
         "team": "Nottingham Forest",
         "logo": "https://media.api-sports.io/football/teams/65.png",
-        "xg_for": "1.41",
-        "xg_against": "1.55"
+        "xg_for": "1.27",
+        "xg_against": "1.53"
       },
       {
         "team": "Tottenham",
         "logo": "assets/logos/47.png",
-        "xg_for": "1.19",
+        "xg_for": "1.01",
         "xg_against": "1.38"
+      },
+      {
+        "team": "Sunderland",
+        "logo": "https://media.api-sports.io/football/teams/746.png",
+        "xg_for": "0.95",
+        "xg_against": "1.21"
       },
       {
         "team": "West Ham",
         "logo": "https://media.api-sports.io/football/teams/48.png",
-        "xg_for": "1.22",
-        "xg_against": "1.67"
+        "xg_for": "1.13",
+        "xg_against": "1.53"
       },
       {
         "team": "Wolves",
         "logo": "https://media.api-sports.io/football/teams/39.png",
-        "xg_for": "1.22",
-        "xg_against": "1.50"
+        "xg_for": "0.88",
+        "xg_against": "1.48"
       }
     ]
   },
@@ -122,122 +128,122 @@
       {
         "team": "Alaves",
         "logo": "https://media.api-sports.io/football/teams/542.png",
-        "xg_for": "1.31",
-        "xg_against": "1.24"
+        "xg_for": "1.08",
+        "xg_against": "0.86"
       },
       {
         "team": "Athletic Club",
         "logo": "https://media.api-sports.io/football/teams/531.png",
-        "xg_for": "1.44",
-        "xg_against": "1.09"
+        "xg_for": "1.27",
+        "xg_against": "0.83"
       },
       {
         "team": "Atletico Madrid",
         "logo": "https://media.api-sports.io/football/teams/530.png",
-        "xg_for": "1.60",
-        "xg_against": "1.14"
+        "xg_for": "1.92",
+        "xg_against": "1.04"
       },
       {
         "team": "Barcelona",
         "logo": "https://media.api-sports.io/football/teams/529.png",
-        "xg_for": "2.28",
-        "xg_against": "1.06"
+        "xg_for": "2.19",
+        "xg_against": "1.32"
       },
       {
         "team": "Celta Vigo",
         "logo": "https://media.api-sports.io/football/teams/538.png",
-        "xg_for": "1.40",
-        "xg_against": "1.41"
+        "xg_for": "1.23",
+        "xg_against": "1.46"
       },
       {
         "team": "Elche",
         "logo": "https://media.api-sports.io/football/teams/797.png",
-        "xg_for": "1.28",
-        "xg_against": "1.31"
+        "xg_for": "1.08",
+        "xg_against": "1.28"
       },
       {
         "team": "Espanyol",
         "logo": "https://media.api-sports.io/football/teams/540.png",
-        "xg_for": "1.60",
-        "xg_against": "1.50"
+        "xg_for": "1.74",
+        "xg_against": "1.22"
       },
       {
         "team": "Getafe",
         "logo": "https://media.api-sports.io/football/teams/546.png",
-        "xg_for": "1.02",
-        "xg_against": "1.29"
+        "xg_for": "0.72",
+        "xg_against": "1.02"
       },
       {
         "team": "Girona",
         "logo": "https://media.api-sports.io/football/teams/547.png",
-        "xg_for": "1.13",
+        "xg_for": "1.06",
         "xg_against": "1.85"
       },
       {
         "team": "Levante",
         "logo": "https://media.api-sports.io/football/teams/539.png",
-        "xg_for": "1.23",
-        "xg_against": "1.89"
+        "xg_for": "1.46",
+        "xg_against": "1.74"
       },
       {
         "team": "Mallorca",
         "logo": "https://media.api-sports.io/football/teams/798.png",
-        "xg_for": "1.25",
-        "xg_against": "1.66"
+        "xg_for": "0.95",
+        "xg_against": "1.80"
       },
       {
         "team": "Osasuna",
         "logo": "https://media.api-sports.io/football/teams/727.png",
-        "xg_for": "1.14",
-        "xg_against": "1.59"
+        "xg_for": "1.13",
+        "xg_against": "1.39"
       },
       {
         "team": "Oviedo",
         "logo": "https://media.api-sports.io/football/teams/718.png",
-        "xg_for": "1.01",
-        "xg_against": "2.04"
+        "xg_for": "0.86",
+        "xg_against": "1.86"
       },
       {
         "team": "Rayo Vallecano",
         "logo": "https://media.api-sports.io/football/teams/728.png",
-        "xg_for": "1.43",
-        "xg_against": "1.36"
+        "xg_for": "1.41",
+        "xg_against": "1.42"
       },
       {
         "team": "Real Betis",
         "logo": "https://media.api-sports.io/football/teams/543.png",
-        "xg_for": "1.64",
-        "xg_against": "1.26"
+        "xg_for": "1.46",
+        "xg_against": "0.99"
       },
       {
         "team": "Real Madrid",
         "logo": "https://media.api-sports.io/football/teams/541.png",
-        "xg_for": "2.27",
-        "xg_against": "1.07"
+        "xg_for": "2.29",
+        "xg_against": "1.08"
       },
       {
         "team": "Real Sociedad",
         "logo": "https://media.api-sports.io/football/teams/548.png",
-        "xg_for": "1.50",
-        "xg_against": "1.32"
+        "xg_for": "1.37",
+        "xg_against": "1.30"
       },
       {
         "team": "Sevilla",
         "logo": "https://media.api-sports.io/football/teams/536.png",
-        "xg_for": "1.19",
-        "xg_against": "1.42"
+        "xg_for": "0.98",
+        "xg_against": "1.83"
       },
       {
         "team": "Valencia",
         "logo": "https://media.api-sports.io/football/teams/532.png",
-        "xg_for": "1.09",
-        "xg_against": "1.65"
+        "xg_for": "1.05",
+        "xg_against": "1.54"
       },
       {
         "team": "Villarreal",
         "logo": "https://media.api-sports.io/football/teams/533.png",
-        "xg_for": "1.60",
-        "xg_against": "1.38"
+        "xg_for": "1.76",
+        "xg_against": "1.18"
       }
     ]
   },
@@ -246,122 +252,122 @@
       {
         "team": "AC Milan",
         "logo": "https://media.api-sports.io/football/teams/489.png",
-        "xg_for": "1.54",
-        "xg_against": "1.23"
+        "xg_for": "1.63",
+        "xg_against": "1.16"
       },
       {
         "team": "AS Roma",
         "logo": "https://media.api-sports.io/football/teams/497.png",
-        "xg_for": "1.67",
-        "xg_against": "1.16"
+        "xg_for": "1.32",
+        "xg_against": "1.15"
       },
       {
         "team": "Atalanta",
         "logo": "https://media.api-sports.io/football/teams/499.png",
-        "xg_for": "1.58",
-        "xg_against": "1.26"
+        "xg_for": "1.33",
+        "xg_against": "0.92"
       },
       {
         "team": "Bologna",
         "logo": "https://media.api-sports.io/football/teams/500.png",
-        "xg_for": "1.40",
-        "xg_against": "1.04"
+        "xg_for": "1.29",
+        "xg_against": "0.99"
       },
       {
         "team": "Cagliari",
         "logo": "https://media.api-sports.io/football/teams/490.png",
-        "xg_for": "1.01",
-        "xg_against": "1.57"
+        "xg_for": "0.88",
+        "xg_against": "1.50"
       },
       {
         "team": "Como",
         "logo": "https://media.api-sports.io/football/teams/895.png",
-        "xg_for": "1.47",
-        "xg_against": "1.26"
+        "xg_for": "1.20",
+        "xg_against": "0.94"
       },
       {
         "team": "Cremonese",
         "logo": "https://media.api-sports.io/football/teams/520.png",
-        "xg_for": "0.90",
-        "xg_against": "1.79"
+        "xg_for": "0.92",
+        "xg_against": "1.49"
       },
       {
         "team": "Fiorentina",
         "logo": "https://media.api-sports.io/football/teams/502.png",
-        "xg_for": "1.21",
-        "xg_against": "1.43"
+        "xg_for": "1.40",
+        "xg_against": "1.51"
       },
       {
         "team": "Genoa",
         "logo": "https://media.api-sports.io/football/teams/495.png",
-        "xg_for": "1.25",
-        "xg_against": "1.21"
+        "xg_for": "1.34",
+        "xg_against": "1.16"
       },
       {
         "team": "Inter",
         "logo": "https://media.api-sports.io/football/teams/505.png",
-        "xg_for": "2.03",
-        "xg_against": "1.05"
+        "xg_for": "1.91",
+        "xg_against": "0.81"
       },
       {
         "team": "Juventus",
         "logo": "https://media.api-sports.io/football/teams/496.png",
-        "xg_for": "1.84",
-        "xg_against": "1.18"
+        "xg_for": "1.46",
+        "xg_against": "0.91"
       },
       {
         "team": "Lazio",
         "logo": "https://media.api-sports.io/football/teams/487.png",
-        "xg_for": "1.19",
-        "xg_against": "1.56"
+        "xg_for": "1.05",
+        "xg_against": "1.45"
       },
       {
         "team": "Lecce",
         "logo": "https://media.api-sports.io/football/teams/867.png",
-        "xg_for": "1.11",
-        "xg_against": "1.39"
+        "xg_for": "0.76",
+        "xg_against": "1.19"
       },
       {
         "team": "Napoli",
         "logo": "https://media.api-sports.io/football/teams/492.png",
-        "xg_for": "1.73",
-        "xg_against": "1.11"
+        "xg_for": "1.51",
+        "xg_against": "1.22"
       },
       {
         "team": "Parma",
         "logo": "https://media.api-sports.io/football/teams/523.png",
-        "xg_for": "1.06",
-        "xg_against": "1.55"
+        "xg_for": "0.93",
+        "xg_against": "1.28"
       },
       {
         "team": "Pisa",
         "logo": "https://media.api-sports.io/football/teams/801.png",
         "xg_for": "0.96",
-        "xg_against": "1.73"
+        "xg_against": "1.34"
       },
       {
         "team": "Sassuolo",
         "logo": "https://media.api-sports.io/football/teams/488.png",
-        "xg_for": "1.12",
-        "xg_against": "1.52"
+        "xg_for": "1.14",
+        "xg_against": "1.38"
       },
       {
         "team": "Torino",
         "logo": "https://media.api-sports.io/football/teams/503.png",
-        "xg_for": "1.32",
-        "xg_against": "1.53"
+        "xg_for": "1.06",
+        "xg_against": "1.45"
       },
       {
         "team": "Udinese",
         "logo": "https://media.api-sports.io/football/teams/494.png",
-        "xg_for": "1.30",
-        "xg_against": "1.35"
+        "xg_for": "1.06",
+        "xg_against": "1.20"
       },
       {
         "team": "Verona",
         "logo": "https://media.api-sports.io/football/teams/504.png",
-        "xg_for": "1.45",
-        "xg_against": "1.35"
+        "xg_for": "1.16",
+        "xg_against": "1.18"
       }
     ]
     
@@ -371,110 +377,110 @@
       {
         "team": "1. FC Heidenheim",
         "logo": "https://media.api-sports.io/football/teams/180.png",
-        "xg_for": "1.33",
-        "xg_against": "1.79"
+        "xg_for": "1.21",
+        "xg_against": "1.96"
       },
       {
         "team": "1.FC K\u00f6ln",
         "logo": "https://media.api-sports.io/football/teams/192.png",
-        "xg_for": "1.44",
-        "xg_against": "1.72"
+        "xg_for": "1.57",
+        "xg_against": "1.73"
       },
       {
         "team": "1899 Hoffenheim",
         "logo": "https://media.api-sports.io/football/teams/167.png",
-        "xg_for": "1.53",
-        "xg_against": "1.35"
+        "xg_for": "1.68",
+        "xg_against": "1.56"
       },
       {
         "team": "Bayer Leverkusen",
         "logo": "https://media.api-sports.io/football/teams/168.png",
-        "xg_for": "1.48",
-        "xg_against": "1.44"
+        "xg_for": "1.87",
+        "xg_against": "1.06"
       },
       {
         "team": "Bayern M\u00fcnchen",
         "logo": "https://media.api-sports.io/football/teams/157.png",
-        "xg_for": "2.36",
-        "xg_against": "0.88"
+        "xg_for": "2.67",
+        "xg_against": "0.66"
       },
       {
         "team": "Borussia Dortmund",
         "logo": "https://media.api-sports.io/football/teams/165.png",
-        "xg_for": "1.56",
-        "xg_against": "1.07"
+        "xg_for": "1.51",
+        "xg_against": "0.95"
       },
       {
         "team": "Borussia M\u00f6nchengladbach",
         "logo": "https://media.api-sports.io/football/teams/163.png",
-        "xg_for": "1.40",
-        "xg_against": "1.77"
+        "xg_for": "1.42",
+        "xg_against": "1.67"
       },
       {
         "team": "Eintracht Frankfurt",
         "logo": "https://media.api-sports.io/football/teams/169.png",
-        "xg_for": "1.55",
-        "xg_against": "1.41"
+        "xg_for": "1.53",
+        "xg_against": "1.16"
       },
       {
         "team": "FC Augsburg",
         "logo": "https://media.api-sports.io/football/teams/170.png",
-        "xg_for": "1.28",
-        "xg_against": "1.51"
+        "xg_for": "1.09",
+        "xg_against": "1.98"
       },
       {
         "team": "FC St. Pauli",
         "logo": "https://media.api-sports.io/football/teams/186.png",
-        "xg_for": "1.47",
-        "xg_against": "1.31"
+        "xg_for": "1.01",
+        "xg_against": "1.53"
       },
       {
         "team": "FSV Mainz 05",
         "logo": "https://media.api-sports.io/football/teams/164.png",
-        "xg_for": "1.48",
-        "xg_against": "1.51"
+        "xg_for": "1.27",
+        "xg_against": "1.59"
       },
       {
         "team": "Hamburger SV",
         "logo": "https://media.api-sports.io/football/teams/175.png",
-        "xg_for": "1.50",
-        "xg_against": "1.74"
+        "xg_for": "1.27",
+        "xg_against": "1.63"
       },
       {
         "team": "RB Leipzig",
         "logo": "",
-        "xg_for": "1.64",
-        "xg_against": "1.50"
+        "xg_for": "1.91",
+        "xg_against": "1.49"
       },
       {
         "team": "SC Freiburg",
         "logo": "https://media.api-sports.io/football/teams/160.png",
-        "xg_for": "1.32",
-        "xg_against": "1.37"
+        "xg_for": "1.36",
+        "xg_against": "1.26"
       },
       {
         "team": "Union Berlin",
         "logo": "https://media.api-sports.io/football/teams/182.png",
-        "xg_for": "1.29",
-        "xg_against": "1.66"
+        "xg_for": "1.16",
+        "xg_against": "1.70"
       },
       {
         "team": "VfB Stuttgart",
         "logo": "https://media.api-sports.io/football/teams/172.png",
-        "xg_for": "1.86",
-        "xg_against": "1.41"
+        "xg_for": "1.57",
+        "xg_against": "1.19"
       },
       {
         "team": "VfL Wolfsburg",
         "logo": "https://media.api-sports.io/football/teams/161.png",
-        "xg_for": "1.38",
-        "xg_against": "1.85"
+        "xg_for": "1.24",
+        "xg_against": "1.69"
       },
       {
         "team": "Werder Bremen",
         "logo": "https://media.api-sports.io/football/teams/162.png",
-        "xg_for": "1.29",
-        "xg_against": "1.87"
+        "xg_for": "1.34",
+        "xg_against": "1.88"
       }
     ]
   },
@@ -483,110 +489,110 @@
       {
         "team": "Angers",
         "logo": "https://media.api-sports.io/football/teams/77.png",
-        "xg_for": "0.98",
-        "xg_against": "1.78"
+        "xg_for": "0.95",
+        "xg_against": "1.83"
       },
       {
         "team": "Auxerre",
         "logo": "https://media.api-sports.io/football/teams/108.png",
-        "xg_for": "1.16",
-        "xg_against": "1.40"
+        "xg_for": "0.99",
+        "xg_against": "1.49"
       },
       {
         "team": "Le Havre",
         "logo": "https://media.api-sports.io/football/teams/111.png",
-        "xg_for": "1.25",
-        "xg_against": "1.31"
+        "xg_for": "1.23",
+        "xg_against": "1.19"
       },
       {
         "team": "Lens",
         "logo": "https://media.api-sports.io/football/teams/116.png",
-        "xg_for": "1.39",
-        "xg_against": "1.50"
+        "xg_for": "1.88",
+        "xg_against": "1.62"
       },
       {
         "team": "Lille",
         "logo": "https://media.api-sports.io/football/teams/79.png",
-        "xg_for": "1.88",
-        "xg_against": "1.09"
+        "xg_for": "1.93",
+        "xg_against": "1.34"
       },
       {
         "team": "Lorient",
         "logo": "https://media.api-sports.io/football/teams/97.png",
-        "xg_for": "1.35",
-        "xg_against": "1.35"
+        "xg_for": "1.40",
+        "xg_against": "1.59"
       },
       {
         "team": "Lyon",
         "logo": "https://media.api-sports.io/football/teams/80.png",
-        "xg_for": "1.38",
-        "xg_against": "1.30"
+        "xg_for": "1.58",
+        "xg_against": "1.11"
       },
       {
         "team": "Marseille",
         "logo": "https://media.api-sports.io/football/teams/81.png",
-        "xg_for": "1.65",
-        "xg_against": "1.05"
+        "xg_for": "1.97",
+        "xg_against": "1.04"
       },
       {
         "team": "Metz",
         "logo": "https://media.api-sports.io/football/teams/112.png",
-        "xg_for": "1.01",
-        "xg_against": "1.75"
+        "xg_for": "1.24",
+        "xg_against": "1.99"
       },
       {
         "team": "Monaco",
         "logo": "https://media.api-sports.io/football/teams/91.png",
-        "xg_for": "1.44",
-        "xg_against": "1.30"
+        "xg_for": "2.21",
+        "xg_against": "1.60"
       },
       {
         "team": "Nantes",
         "logo": "https://media.api-sports.io/football/teams/83.png",
-        "xg_for": "1.08",
-        "xg_against": "1.81"
+        "xg_for": "1.24",
+        "xg_against": "1.75"
       },
       {
         "team": "Nice",
         "logo": "https://media.api-sports.io/football/teams/84.png",
-        "xg_for": "1.25",
-        "xg_against": "1.93"
+        "xg_for": "1.17",
+        "xg_against": "1.85"
       },
       {
         "team": "Paris FC",
         "logo": "https://media.api-sports.io/football/teams/114.png",
-        "xg_for": "1.41",
-        "xg_against": "1.24"
+        "xg_for": "1.37",
+        "xg_against": "1.46"
       },
       {
         "team": "Paris Saint Germain",
         "logo": "https://media.api-sports.io/football/teams/85.png",
-        "xg_for": "2.16",
-        "xg_against": "0.91"
+        "xg_for": "1.74",
+        "xg_against": "0.95"
       },
       {
         "team": "Rennes",
         "logo": "https://media.api-sports.io/football/teams/94.png",
-        "xg_for": "1.51",
-        "xg_against": "1.49"
+        "xg_for": "1.44",
+        "xg_against": "1.66"
       },
       {
         "team": "Stade Brestois 29",
         "logo": "https://media.api-sports.io/football/teams/106.png",
-        "xg_for": "1.35",
-        "xg_against": "1.43"
+        "xg_for": "1.48",
+        "xg_against": "1.61"
       },
       {
         "team": "Strasbourg",
         "logo": "https://media.api-sports.io/football/teams/95.png",
-        "xg_for": "1.46",
-        "xg_against": "1.26"
+        "xg_for": "1.94",
+        "xg_against": "1.22"
       },
       {
         "team": "Toulouse",
         "logo": "https://media.api-sports.io/football/teams/96.png",
-        "xg_for": "1.46",
-        "xg_against": "1.25"
+        "xg_for": "1.48",
+        "xg_against": "1.45"
       }
     ]
   },
@@ -595,109 +601,109 @@
       {
         "team": "AZ Alkmaar",
         "logo": "https://media.api-sports.io/football/teams/201.png",
-        "xg_for": "2.01",
-        "xg_against": "1.41"
+        "xg_for": "1.93",
+        "xg_against": "1.44"
       },
       {
         "team": "Ajax",
         "logo": "https://media.api-sports.io/football/teams/194.png",
-        "xg_for": "1.78",
-        "xg_against": "1.48"
+        "xg_for": "1.74",
+        "xg_against": "1.50"
       },
       {
         "team": "Excelsior",
         "logo": "https://media.api-sports.io/football/teams/196.png",
         "xg_for": "1.39",
-        "xg_against": "1.97"
+        "xg_against": "1.93"
       },
       {
         "team": "FC Volendam",
         "logo": "https://media.api-sports.io/football/teams/416.png",
-        "xg_for": "1.17",
-        "xg_against": "1.97"
+        "xg_for": "1.20",
+        "xg_against": "1.91"
       },
       {
         "team": "Feyenoord",
         "logo": "https://media.api-sports.io/football/teams/209.png",
         "xg_for": "2.10",
-        "xg_against": "0.96"
+        "xg_against": "0.98"
       },
       {
         "team": "Fortuna Sittard",
         "logo": "https://media.api-sports.io/football/teams/205.png",
-        "xg_for": "1.35",
-        "xg_against": "1.69"
+        "xg_for": "1.33",
+        "xg_against": "1.73"
       },
       {
         "team": "GO Ahead Eagles",
         "logo": "https://media.api-sports.io/football/teams/410.png",
-        "xg_for": "1.45",
-        "xg_against": "1.84"
+        "xg_for": "1.43",
+        "xg_against": "1.86"
       },
       {
         "team": "Groningen",
         "logo": "https://media.api-sports.io/football/teams/202.png",
-        "xg_for": "1.60",
-        "xg_against": "1.25"
+        "xg_for": "1.56",
+        "xg_against": "1.27"
       },
       {
         "team": "Heerenveen",
         "logo": "https://media.api-sports.io/football/teams/210.png",
-        "xg_for": "1.66",
-        "xg_against": "1.24"
+        "xg_for": "1.71",
+        "xg_against": "1.23"
       },
       {
         "team": "Heracles",
         "logo": "https://media.api-sports.io/football/teams/206.png",
-        "xg_for": "1.25",
-        "xg_against": "2.10"
+        "xg_for": "1.28",
+        "xg_against": "2.04"
       },
       {
         "team": "NAC Breda",
         "logo": "https://media.api-sports.io/football/teams/203.png",
-        "xg_for": "1.35",
-        "xg_against": "1.65"
+        "xg_for": "1.34",
+        "xg_against": "1.63"
       },
       {
         "team": "NEC Nijmegen",
         "logo": "https://media.api-sports.io/football/teams/413.png",
-        "xg_for": "1.83",
-        "xg_against": "1.26"
+        "xg_for": "1.80",
+        "xg_against": "1.25"
       },
       {
         "team": "PEC Zwolle",
         "logo": "https://media.api-sports.io/football/teams/193.png",
-        "xg_for": "0.98",
-        "xg_against": "1.96"
+        "xg_for": "0.99",
+        "xg_against": "1.92"
       },
       {
         "team": "PSV Eindhoven",
         "logo": "https://media.api-sports.io/football/teams/197.png",
-        "xg_for": "2.17",
-        "xg_against": "1.37"
+        "xg_for": "2.13",
+        "xg_against": "1.34"
       },
       {
         "team": "Sparta Rotterdam",
         "logo": "https://media.api-sports.io/football/teams/426.png",
-        "xg_for": "1.33",
-        "xg_against": "2.07"
+        "xg_for": "1.34",
+        "xg_against": "1.99"
       },
       {
         "team": "Telstar",
         "logo": "https://media.api-sports.io/football/teams/427.png",
-        "xg_for": "1.66",
-        "xg_against": "1.79"
+        "xg_for": "1.58",
+        "xg_against": "1.88"
       },
       {
         "team": "Twente",
         "logo": "https://media.api-sports.io/football/teams/415.png",
-        "xg_for": "1.93",
-        "xg_against": "1.21"
+        "xg_for": "2.00",
+        "xg_against": "1.16"
       },
       {
         "team": "Utrecht",
         "logo": "https://media.api-sports.io/football/teams/207.png",
-        "xg_for": "1.58",
+        "xg_for": "1.59",
         "xg_against": "1.38"
       }
     ]
