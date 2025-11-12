@@ -223,7 +223,7 @@
   border: 2px solid #003f2e;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 2px auto;
 }
 .heatmap-center-label {
   display: flex;
@@ -241,6 +241,30 @@
 
 .away-dir {
   color: #e74c3c;
+}
+
+.heatmap-section {
+  margin-top: 4px;         /* minimal space between card and heat map */
+  margin-bottom: 35px;     /* clear separation before next sim card */
+  text-align: center;
+}
+
+.heatmap-narrative {
+  margin-top: 3px;         /* bring text right under the heat map */
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #333;
+  opacity: 0.85;
+}
+.heatmap-section::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  background: #ccc;
+  opacity: 0.8;
+  margin: 20px auto 0 auto;
+  border-radius: 1px;
 }
 
 /* Mobile scaling */
@@ -342,6 +366,49 @@
   .home-dir, .away-dir {
     font-weight: 600;
   }
+
+  /* --- MOBILE HEATMAP + NARRATIVE STYLING --- */
+.heatmap-section {
+  margin-top: 2px !important;
+  margin-bottom: 25px !important;
+}
+
+.heatmap-img {
+  display: block !important;         /* ⬅️ removes inline image spacing */
+  margin: 0 auto 1px auto !important; /* ⬅️ tighten image-to-text gap */
+  width: 92% !important;
+  max-width: 340px !important;
+  border-width: 1.5px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
+.heatmap-narrative {
+  margin-top: 1px !important;
+  margin-bottom: 0px !important; /* nice breathing space before next card */
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  color: #222 !important;
+  text-align: center !important;
+  opacity: 0.9 !important;
+}
+
+
+
+.heatmap-section::after {
+  width: 80% !important;
+  height: 1px !important;
+  background: #003f2e !important; /* faint DataGaffer green */
+  opacity: 0.3 !important;
+  margin: 16px auto 0 auto !important;
+}
+
+/* Tighten wrapper spacing on mobile */
+.heatmap-wrapper {
+  margin-top: 10px !important;
+  margin-bottom: 20px !important; /* tighten area between image + narrative */
+  padding: 0 !important;
+}
 
 
 }
@@ -584,8 +651,59 @@ imgTest.onload = () => {
     <img src="${heatmapPath}" alt="Heat map for ${match.home.name} vs ${match.away.name}" class="heatmap-img"/>
   `;
 
-  // ✅ Add directly under its card, not at the end of all
-  card.insertAdjacentElement('afterend', heatmapDiv);
+// 🔹 Calculate narrative based on xG difference + dominance zone
+const homeXG = parseFloat(match.sim_stats.xg.home);
+const awayXG = parseFloat(match.sim_stats.xg.away);
+const diff = homeXG - awayXG;
+
+let narrative = "";
+
+// Estimate where the home team’s activity is centered
+let possessionFocus = "balanced"; // default
+if (diff > 1.0) {
+  if (homeXG > 2.5) {
+    possessionFocus = "attacking";
+  } else {
+    possessionFocus = "possession";
+  }
+} else if (diff < -1.0) {
+  if (awayXG > 2.5) {
+    possessionFocus = "defensive";
+  } else {
+    possessionFocus = "pressed";
+  }
+}
+
+// 🧠 Narrative selection
+if (diff > 1.0) {
+  if (possessionFocus === "attacking") {
+    narrative = `${match.home.name} are expected to dominate possession and spend long spells in the opposition half.`;
+  } else {
+    narrative = `${match.home.name} are expected to control possession across most areas of the pitch.`;
+  }
+} else if (diff < -1.0) {
+  if (possessionFocus === "defensive") {
+    narrative = `${match.away.name} should control the ball and push ${match.home.name} deep for large periods.`;
+  } else {
+    narrative = `${match.away.name} are likely to have more of the ball but much of it in deeper areas.`;
+  }
+} else {
+  narrative = `This game projects to be fairly balanced, with both sides sharing control in midfield.`;
+}
+
+// 🔹 Create wrapper for heatmap + explanation
+const wrapper = document.createElement('div');
+wrapper.className = 'heatmap-section';
+wrapper.appendChild(heatmapDiv);
+
+// 🔹 Add explanation line below heatmap
+const narrativeEl = document.createElement('div');
+narrativeEl.className = 'heatmap-narrative';
+narrativeEl.innerText = narrative;
+wrapper.appendChild(narrativeEl);
+
+// 🔹 Insert under its respective card
+card.insertAdjacentElement('afterend', wrapper);
 };
 
 imgTest.onerror = () => {

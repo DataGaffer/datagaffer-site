@@ -44,8 +44,8 @@ def draw_pitch(ax):
     ax.axis("off")
 
 # ================ TEAM HEAT ==============
-def generate_team_heat(team_type, xg):
-    """Generate realistic clustered heat pattern"""
+def generate_team_heat(team_type, xg, opponent_xg):
+    """Generate realistic clustered heat pattern with dominance bias"""
     field = np.zeros((68, 105))
 
     # Number of “activity zones”
@@ -60,15 +60,25 @@ def generate_team_heat(team_type, xg):
     field = gaussian_filter(field, sigma=3)
     field /= field.max() if field.max() > 0 else 1
 
-    # Directional weighting (horizontal bias)
-    x_weight = np.linspace(1.4, 0.6, 105) if team_type == "home" else np.linspace(0.6, 1.4, 105)
+    # 🔹 Determine dominance factor (how much stronger this team is)
+    dominance = np.clip((float(xg) - float(opponent_xg)) / 2.5, -0.6, 0.6)
+
+    # 🔹 Adjust directional weighting dynamically
+    if team_type == "home":
+        # More dominant home team → push attacks deeper into opponent half (right side)
+        x_weight = np.linspace(1.2 - dominance, 0.8 + dominance, 105)
+    else:
+        # More dominant away team → push attacks deeper into opponent half (left side)
+        x_weight = np.linspace(0.8 + dominance, 1.2 - dominance, 105)
+
     field *= x_weight
 
-    # xG scaling
+    # 🔹 xG scaling
     scale = np.clip(float(xg) / 2.5, 0.5, 1.6)
     field *= scale
 
     return field
+
 
 # ================ COMBINE MAPS ==============
 def combine_heatmaps(home_map, away_map):
@@ -103,8 +113,8 @@ def generate_match_heatmaps():
             continue
 
         # Generate and merge
-        home_map = generate_team_heat("home", home_xg)
-        away_map = generate_team_heat("away", away_xg)
+        home_map = generate_team_heat("home", home_xg, away_xg)
+        away_map = generate_team_heat("away", away_xg, home_xg)
         combined = combine_heatmaps(home_map, away_map)
 
         fig, ax = plt.subplots(figsize=(8, 5))
