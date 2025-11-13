@@ -1,105 +1,341 @@
 [
   {
-    "fixture_id": 1323343,
+    "fixture_id": 1469290,
     "league": {
-      "id": 32,
-      "name": "World Cup - Qualification Europe"
+      "id": 10,
+      "name": "Friendlies"
     },
     "home": {
-      "id": 1096,
-      "name": "Azerbaijan",
-      "logo": "https://media.api-sports.io/football/teams/1096.png",
+      "id": 17,
+      "name": "South Korea",
+      "logo": "https://media.api-sports.io/football/teams/17.png",
       "winner": null
     },
     "away": {
-      "id": 18,
-      "name": "Iceland",
-      "logo": "https://media.api-sports.io/football/teams/18.png",
+      "id": 2381,
+      "name": "Bolivia",
+      "logo": "https://media.api-sports.io/football/teams/2381.png",
       "winner": null
     },
-    "home_id": 1096,
-    "away_id": 18,
-    "home_logo": "https://media.api-sports.io/football/teams/1096.png",
-    "away_logo": "https://media.api-sports.io/football/teams/18.png",
-    "date": "2025-11-13T17:00:00+00:00",
+    "home_id": 17,
+    "away_id": 2381,
+    "home_logo": "https://media.api-sports.io/football/teams/17.png",
+    "away_logo": "https://media.api-sports.io/football/teams/2381.png",
+    "date": "2025-11-14T11:00:00+00:00",
     "book_odds": {
-      "home_win": 6.0,
-      "draw": 4.2,
-      "away_win": 1.53,
-      "btts": 1.95,
-      "over_2_5": 1.80,
-      "home_o1_5": 4.33,
-      "away_o1_5": 1.61
+      "home_win": 1.28,
+      "draw": 5.0,
+      "away_win": 7.0,
+      "btts": 2.00,
+      "over_2_5": 1.60,
+      "home_o1_5": 1.40,
+      "away_o1_5": 5.00
     },
     "sim_stats": {
       "xg": {
-        "home": "0.80",
-        "away": "3.32",
-        "total": "4.12"
+        "home": "1.48",
+        "away": "0.68",
+        "total": "2.16"
       },
       "corners": {
-        "home": "3.5",
-        "away": "6.9",
-        "total": "10.4"
+        "home": "5.0",
+        "away": "3.8",
+        "total": "8.7"
       },
       "shots": {
-        "home": "10.0",
-        "away": "15.0",
-        "total": "25.0"
+        "home": "14.6",
+        "away": "11.8",
+        "total": "26.5"
       },
       "percents": {
-        "home_win_pct": 5.2,
-        "draw_pct": 9.7,
-        "away_win_pct": 85.1,
-        "over_2_5_pct": 77.1,
-        "btts_pct": 53.6,
-        "home_o1_5_pct": 19.0,
-        "away_o1_5_pct": 84.4
+        "home_win_pct": 56.5,
+        "draw_pct": 26.3,
+        "away_win_pct": 17.2,
+        "over_2_5_pct": 36.5,
+        "btts_pct": 37.8,
+        "home_o1_5_pct": 43.7,
+        "away_o1_5_pct": 14.9
       }
     }
   },
   {
-    "fixture_id": 1323344,
+    "fixture_id": 1323348,
     "league": {
       "id": 32,
       "name": "World Cup - Qualification Europe"
     },
     "home": {
-      "id": 1094,
-      "name": "Armenia",
-      "logo": "https://media.api-sports.io/football/teams/1094.png",
+      "id": 1099,
+      "name": "Finland",
+      "logo": "https://media.api-sports.io/football/teams/1099.png",
       "winner": null
     },
     "away": {
-      "id": 769,
-      "name": "Hungary",
-      "logo": "https://media.api-sports.io/football/teams/769.png",
+      "id": 1112,
+      "name": "Malta",
+      "logo": "https://media.api-sports.io/football/teams/1112.png",
       "winner": null
     },
-    "home_id": 1094,
-    "away_id": 769,
-    "home_logo": "https://media.api-sports.io/football/teams/1094.png",
-    "away_logo": "https://media.api-sports.io/football/teams/769.png",
-    "date": "2025-11-13T17:00:00+00:00",
+    "home_id": 1099,
+    "away_id": 1112,
+    "home_logo": "https://media.api-sports.io/football/teams/1099.png",
+    "away_logo": "https://media.api-sports.io/football/teams/1112.png",
+    "date": "2025-11-14T17:00:00+00:00",
     "book_odds": {
-      "home_win": 5.75,
-      "draw": 4.2,
-      "away_win": 1.55,
-      "btts": 1.80,
-      "over_2_5": 1.72,
-      "home_o1_5": 3.75,
+      "home_win": 1.22,
+      "draw": 6.25,
+      "away_win": 12.0,
+      "btts": 2.37,
+      "over_2_5": 1.66,
+      "home_o1_5": 1.36,
+      "away_o1_5": 8.00
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "2.14",
+        "away": "0.61",
+        "total": "2.75"
+      },
+      "corners": {
+        "home": "4.0",
+        "away": "4.5",
+        "total": "8.6"
+      },
+      "shots": {
+        "home": "13.0",
+        "away": "14.1",
+        "total": "27.1"
+      },
+      "percents": {
+        "home_win_pct": 72.7,
+        "draw_pct": 18.0,
+        "away_win_pct": 9.3,
+        "over_2_5_pct": 51.9,
+        "btts_pct": 40.2,
+        "home_o1_5_pct": 63.2,
+        "away_o1_5_pct": 12.4
+      }
+    }
+  },
+  {
+    "fixture_id": 1323349,
+    "league": {
+      "id": 32,
+      "name": "World Cup - Qualification Europe"
+    },
+    "home": {
+      "id": 773,
+      "name": "Slovakia",
+      "logo": "https://media.api-sports.io/football/teams/773.png",
+      "winner": null
+    },
+    "away": {
+      "id": 771,
+      "name": "Northern Ireland",
+      "logo": "https://media.api-sports.io/football/teams/771.png",
+      "winner": null
+    },
+    "home_id": 773,
+    "away_id": 771,
+    "home_logo": "https://media.api-sports.io/football/teams/773.png",
+    "away_logo": "https://media.api-sports.io/football/teams/771.png",
+    "date": "2025-11-14T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 1.91,
+      "draw": 3.1,
+      "away_win": 4.75,
+      "btts": 2.20,
+      "over_2_5": 2.50,
+      "home_o1_5": 2.25,
+      "away_o1_5": 4.50
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.26",
+        "away": "1.18",
+        "total": "2.44"
+      },
+      "corners": {
+        "home": "4.9",
+        "away": "4.4",
+        "total": "9.3"
+      },
+      "shots": {
+        "home": "14.3",
+        "away": "11.0",
+        "total": "25.3"
+      },
+      "percents": {
+        "home_win_pct": 38.6,
+        "draw_pct": 26.9,
+        "away_win_pct": 34.4,
+        "over_2_5_pct": 44.4,
+        "btts_pct": 49.0,
+        "home_o1_5_pct": 36.2,
+        "away_o1_5_pct": 32.8
+      }
+    }
+  },
+  {
+    "fixture_id": 1323350,
+    "league": {
+      "id": 32,
+      "name": "World Cup - Qualification Europe"
+    },
+    "home": {
+      "id": 1093,
+      "name": "Gibraltar",
+      "logo": "https://media.api-sports.io/football/teams/1093.png",
+      "winner": null
+    },
+    "away": {
+      "id": 1109,
+      "name": "Montenegro",
+      "logo": "https://media.api-sports.io/football/teams/1109.png",
+      "winner": null
+    },
+    "home_id": 1093,
+    "away_id": 1109,
+    "home_logo": "https://media.api-sports.io/football/teams/1093.png",
+    "away_logo": "https://media.api-sports.io/football/teams/1109.png",
+    "date": "2025-11-14T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 13.0,
+      "draw": 7.0,
+      "away_win": 1.2,
+      "btts": 2.50,
+      "over_2_5": 1.65,
+      "home_o1_5": 8.00,
+      "away_o1_5": 1.36
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.11",
+        "away": "2.39",
+        "total": "3.50"
+      },
+      "corners": {
+        "home": "4.3",
+        "away": "5.2",
+        "total": "9.5"
+      },
+      "shots": {
+        "home": "11.0",
+        "away": "15.5",
+        "total": "26.5"
+      },
+      "percents": {
+        "home_win_pct": 16.2,
+        "draw_pct": 18.4,
+        "away_win_pct": 65.5,
+        "over_2_5_pct": 67.8,
+        "btts_pct": 60.5,
+        "home_o1_5_pct": 30.4,
+        "away_o1_5_pct": 68.9
+      }
+    }
+  },
+  {
+    "fixture_id": 1366314,
+    "league": {
+      "id": 32,
+      "name": "World Cup - Qualification Europe"
+    },
+    "home": {
+      "id": 1102,
+      "name": "Luxembourg",
+      "logo": "https://media.api-sports.io/football/teams/1102.png",
+      "winner": null
+    },
+    "away": {
+      "id": 25,
+      "name": "Germany",
+      "logo": "https://media.api-sports.io/football/teams/25.png",
+      "winner": null
+    },
+    "home_id": 1102,
+    "away_id": 25,
+    "home_logo": "https://media.api-sports.io/football/teams/1102.png",
+    "away_logo": "https://media.api-sports.io/football/teams/25.png",
+    "date": "2025-11-14T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 26.0,
+      "draw": 12.0,
+      "away_win": 1.07,
+      "btts": 2.62,
+      "over_2_5": 1.30,
+      "home_o1_5": 11.00,
+      "away_o1_5": 1.12
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "0.42",
+        "away": "2.86",
+        "total": "3.28"
+      },
+      "corners": {
+        "home": "3.9",
+        "away": "5.5",
+        "total": "9.4"
+      },
+      "shots": {
+        "home": "11.5",
+        "away": "14.3",
+        "total": "25.8"
+      },
+      "percents": {
+        "home_win_pct": 3.1,
+        "draw_pct": 9.9,
+        "away_win_pct": 87.0,
+        "over_2_5_pct": 63.4,
+        "btts_pct": 32.8,
+        "home_o1_5_pct": 6.5,
+        "away_o1_5_pct": 77.7
+      }
+    }
+  },
+  {
+    "fixture_id": 1366315,
+    "league": {
+      "id": 32,
+      "name": "World Cup - Qualification Europe"
+    },
+    "home": {
+      "id": 24,
+      "name": "Poland",
+      "logo": "https://media.api-sports.io/football/teams/24.png",
+      "winner": null
+    },
+    "away": {
+      "id": 1118,
+      "name": "Netherlands",
+      "logo": "https://media.api-sports.io/football/teams/1118.png",
+      "winner": null
+    },
+    "home_id": 24,
+    "away_id": 1118,
+    "home_logo": "https://media.api-sports.io/football/teams/24.png",
+    "away_logo": "https://media.api-sports.io/football/teams/1118.png",
+    "date": "2025-11-14T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 5.0,
+      "draw": 3.9,
+      "away_win": 1.67,
+      "btts": 1.70,
+      "over_2_5": 1.66,
+      "home_o1_5": 3.40,
       "away_o1_5": 1.61
     },
     "sim_stats": {
       "xg": {
-        "home": "1.15",
-        "away": "2.06",
-        "total": "3.21"
+        "home": "1.26",
+        "away": "1.81",
+        "total": "3.07"
       },
       "corners": {
-        "home": "3.1",
-        "away": "3.4",
-        "total": "6.4"
+        "home": "4.8",
+        "away": "4.8",
+        "total": "9.6"
       },
       "shots": {
         "home": "12.0",
@@ -107,427 +343,72 @@
         "total": "25.5"
       },
       "percents": {
-        "home_win_pct": 20.5,
-        "draw_pct": 21.5,
-        "away_win_pct": 58.1,
-        "over_2_5_pct": 62.2,
-        "btts_pct": 59.3,
-        "home_o1_5_pct": 32.4,
-        "away_o1_5_pct": 60.9
+        "home_win_pct": 27.0,
+        "draw_pct": 22.2,
+        "away_win_pct": 50.8,
+        "over_2_5_pct": 59.5,
+        "btts_pct": 59.4,
+        "home_o1_5_pct": 35.8,
+        "away_o1_5_pct": 54.1
       }
     }
   },
   {
-    "fixture_id": 1323345,
+    "fixture_id": 1366316,
     "league": {
       "id": 32,
       "name": "World Cup - Qualification Europe"
     },
     "home": {
-      "id": 1090,
-      "name": "Norway",
-      "logo": "https://media.api-sports.io/football/teams/1090.png",
+      "id": 3,
+      "name": "Croatia",
+      "logo": "https://media.api-sports.io/football/teams/3.png",
       "winner": null
     },
     "away": {
-      "id": 1101,
-      "name": "Estonia",
-      "logo": "https://media.api-sports.io/football/teams/1101.png",
+      "id": 1098,
+      "name": "Faroe Islands",
+      "logo": "https://media.api-sports.io/football/teams/1098.png",
       "winner": null
     },
-    "home_id": 1090,
-    "away_id": 1101,
-    "home_logo": "https://media.api-sports.io/football/teams/1090.png",
-    "away_logo": "https://media.api-sports.io/football/teams/1101.png",
-    "date": "2025-11-13T17:00:00+00:00",
+    "home_id": 3,
+    "away_id": 1098,
+    "home_logo": "https://media.api-sports.io/football/teams/3.png",
+    "away_logo": "https://media.api-sports.io/football/teams/1098.png",
+    "date": "2025-11-14T19:45:00+00:00",
     "book_odds": {
-      "home_win": 1.02,
-      "draw": 21.0,
-      "away_win": 41.0,
-      "btts": 3.25,
-      "over_2_5": 1.14,
-      "home_o1_5": 1.05,
-      "away_o1_5": 15.00
-    },
-    "sim_stats": {
-      "xg": {
-        "home": "2.51",
-        "away": "0.65",
-        "total": "3.16"
-      },
-      "corners": {
-        "home": "5.5",
-        "away": "3.1",
-        "total": "8.6"
-      },
-      "shots": {
-        "home": "19.4",
-        "away": "9.7",
-        "total": "29.0"
-      },
-      "percents": {
-        "home_win_pct": 77.7,
-        "draw_pct": 14.6,
-        "away_win_pct": 7.7,
-        "over_2_5_pct": 61.4,
-        "btts_pct": 43.8,
-        "home_o1_5_pct": 71.6,
-        "away_o1_5_pct": 14.2
-      }
-    }
-  },
-  {
-    "fixture_id": 1323346,
-    "league": {
-      "id": 32,
-      "name": "World Cup - Qualification Europe"
-    },
-    "home": {
-      "id": 1110,
-      "name": "Andorra",
-      "logo": "https://media.api-sports.io/football/teams/1110.png",
-      "winner": null
-    },
-    "away": {
-      "id": 778,
-      "name": "Albania",
-      "logo": "https://media.api-sports.io/football/teams/778.png",
-      "winner": null
-    },
-    "home_id": 1110,
-    "away_id": 778,
-    "home_logo": "https://media.api-sports.io/football/teams/1110.png",
-    "away_logo": "https://media.api-sports.io/football/teams/778.png",
-    "date": "2025-11-13T19:45:00+00:00",
-    "book_odds": {
-      "home_win": 15.0,
-      "draw": 5.75,
-      "away_win": 1.22,
-      "btts": 3.25,
-      "over_2_5": 2.00,
-      "home_o1_5": 13.00,
-      "away_o1_5": 1.44
-    },
-    "sim_stats": {
-      "xg": {
-        "home": "0.55",
-        "away": "1.67",
-        "total": "2.22"
-      },
-      "corners": {
-        "home": "2.3",
-        "away": "4.6",
-        "total": "6.8"
-      },
-      "shots": {
-        "home": "8.0",
-        "away": "12.4",
-        "total": "20.4"
-      },
-      "percents": {
-        "home_win_pct": 12.2,
-        "draw_pct": 23.2,
-        "away_win_pct": 64.6,
-        "over_2_5_pct": 38.5,
-        "btts_pct": 33.7,
-        "home_o1_5_pct": 10.8,
-        "away_o1_5_pct": 49.6
-      }
-    }
-  },
-  {
-    "fixture_id": 1323347,
-    "league": {
-      "id": 32,
-      "name": "World Cup - Qualification Europe"
-    },
-    "home": {
-      "id": 10,
-      "name": "England",
-      "logo": "https://media.api-sports.io/football/teams/10.png",
-      "winner": null
-    },
-    "away": {
-      "id": 14,
-      "name": "Serbia",
-      "logo": "https://media.api-sports.io/football/teams/14.png",
-      "winner": null
-    },
-    "home_id": 10,
-    "away_id": 14,
-    "home_logo": "https://media.api-sports.io/football/teams/10.png",
-    "away_logo": "https://media.api-sports.io/football/teams/14.png",
-    "date": "2025-11-13T19:45:00+00:00",
-    "book_odds": {
-      "home_win": 1.3,
-      "draw": 5.25,
-      "away_win": 11.0,
+      "home_win": 1.11,
+      "draw": 10.0,
+      "away_win": 19.0,
       "btts": 3.00,
-      "over_2_5": 2.00,
-      "home_o1_5": 13.00,
-      "away_o1_5": 1.50
+      "over_2_5": 1.53,
+      "home_o1_5": 1.25,
+      "away_o1_5": 13.00
     },
     "sim_stats": {
       "xg": {
-        "home": "2.38",
-        "away": "0.51",
-        "total": "2.89"
-      },
-      "corners": {
-        "home": "6.7",
-        "away": "3.9",
-        "total": "10.7"
-      },
-      "shots": {
-        "home": "15.1",
-        "away": "10.3",
-        "total": "25.4"
-      },
-      "percents": {
-        "home_win_pct": 79.0,
-        "draw_pct": 14.8,
-        "away_win_pct": 6.2,
-        "over_2_5_pct": 54.9,
-        "btts_pct": 36.0,
-        "home_o1_5_pct": 68.4,
-        "away_o1_5_pct": 8.9
-      }
-    }
-  },
-  {
-    "fixture_id": 1366311,
-    "league": {
-      "id": 32,
-      "name": "World Cup - Qualification Europe"
-    },
-    "home": {
-      "id": 2,
-      "name": "France",
-      "logo": "https://media.api-sports.io/football/teams/2.png",
-      "winner": null
-    },
-    "away": {
-      "id": 772,
-      "name": "Ukraine",
-      "logo": "https://media.api-sports.io/football/teams/772.png",
-      "winner": null
-    },
-    "home_id": 2,
-    "away_id": 772,
-    "home_logo": "https://media.api-sports.io/football/teams/2.png",
-    "away_logo": "https://media.api-sports.io/football/teams/772.png",
-    "date": "2025-11-13T19:45:00+00:00",
-    "book_odds": {
-      "home_win": 1.17,
-      "draw": 7.0,
-      "away_win": 17.0,
-      "btts": 2.37,
-      "over_2_5": 1.57,
-      "home_o1_5": 1.28,
-      "away_o1_5": 9.00
-    },
-    "sim_stats": {
-      "xg": {
-        "home": "2.15",
-        "away": "0.99",
-        "total": "3.14"
-      },
-      "corners": {
-        "home": "4.3",
-        "away": "3.6",
-        "total": "7.9"
-      },
-      "shots": {
-        "home": "17.5",
-        "away": "10.7",
-        "total": "28.2"
-      },
-      "percents": {
-        "home_win_pct": 64.1,
-        "draw_pct": 19.5,
-        "away_win_pct": 16.4,
-        "over_2_5_pct": 61.0,
-        "btts_pct": 55.4,
-        "home_o1_5_pct": 63.2,
-        "away_o1_5_pct": 26.3
-      }
-    }
-  },
-  {
-    "fixture_id": 1366312,
-    "league": {
-      "id": 32,
-      "name": "World Cup - Qualification Europe"
-    },
-    "home": {
-      "id": 776,
-      "name": "Rep. Of Ireland",
-      "logo": "https://media.api-sports.io/football/teams/776.png",
-      "winner": null
-    },
-    "away": {
-      "id": 27,
-      "name": "Portugal",
-      "logo": "https://media.api-sports.io/football/teams/27.png",
-      "winner": null
-    },
-    "home_id": 776,
-    "away_id": 27,
-    "home_logo": "https://media.api-sports.io/football/teams/776.png",
-    "away_logo": "https://media.api-sports.io/football/teams/27.png",
-    "date": "2025-11-13T19:45:00+00:00",
-    "book_odds": {
-      "home_win": 8.5,
-      "draw": 5.25,
-      "away_win": 1.33,
-      "btts": 2.00,
-      "over_2_5": 1.66,
-      "home_o1_5": 5.50,
-      "away_o1_5": 1.44
-    },
-    "sim_stats": {
-      "xg": {
-        "home": "0.96",
-        "away": "2.09",
-        "total": "3.05"
-      },
-      "corners": {
-        "home": "3.3",
-        "away": "5.1",
-        "total": "8.4"
-      },
-      "shots": {
-        "home": "11.2",
-        "away": "18.9",
-        "total": "30.1"
-      },
-      "percents": {
-        "home_win_pct": 16.3,
-        "draw_pct": 19.9,
-        "away_win_pct": 63.8,
-        "over_2_5_pct": 58.8,
-        "btts_pct": 53.8,
-        "home_o1_5_pct": 25.0,
-        "away_o1_5_pct": 62.3
-      }
-    }
-  },
-  {
-    "fixture_id": 1366313,
-    "league": {
-      "id": 32,
-      "name": "World Cup - Qualification Europe"
-    },
-    "home": {
-      "id": 1114,
-      "name": "Moldova",
-      "logo": "https://media.api-sports.io/football/teams/1114.png",
-      "winner": null
-    },
-    "away": {
-      "id": 768,
-      "name": "Italy",
-      "logo": "https://media.api-sports.io/football/teams/768.png",
-      "winner": null
-    },
-    "home_id": 1114,
-    "away_id": 768,
-    "home_logo": "https://media.api-sports.io/football/teams/1114.png",
-    "away_logo": "https://media.api-sports.io/football/teams/768.png",
-    "date": "2025-11-13T19:45:00+00:00",
-    "book_odds": {
-      "home_win": 34.0,
-      "draw": 19.0,
-      "away_win": 1.03,
-      "btts": 4.00,
-      "over_2_5": 1.33,
-      "home_o1_5": 23.00,
-      "away_o1_5": 1.12
-    },
-    "sim_stats": {
-      "xg": {
-        "home": "0.81",
-        "away": "3.79",
-        "total": "4.60"
+        "home": "1.62",
+        "away": "0.50",
+        "total": "2.12"
       },
       "corners": {
         "home": "4.7",
-        "away": "5.6",
-        "total": "10.2"
+        "away": "3.1",
+        "total": "7.9"
       },
       "shots": {
-        "home": "11.5",
-        "away": "18.5",
-        "total": "30.0"
+        "home": "15.5",
+        "away": "10.4",
+        "total": "25.9"
       },
       "percents": {
-        "home_win_pct": 3.7,
-        "draw_pct": 7.6,
-        "away_win_pct": 88.6,
-        "over_2_5_pct": 83.9,
-        "btts_pct": 54.6,
-        "home_o1_5_pct": 19.1,
-        "away_o1_5_pct": 89.1
-      }
-    }
-  },
-
-  {
-    "fixture_id": 1457377,
-    "league": {
-      "id": 10,
-      "name": "Friendlies"
-    },
-    "home": {
-      "id": 5529,
-      "name": "Canada",
-      "logo": "https://media.api-sports.io/football/teams/5529.png",
-      "winner": null
-    },
-    "away": {
-      "id": 2382,
-      "name": "Ecuador",
-      "logo": "https://media.api-sports.io/football/teams/2382.png",
-      "winner": null
-    },
-    "home_id": 5529,
-    "away_id": 2382,
-    "home_logo": "https://media.api-sports.io/football/teams/5529.png",
-    "away_logo": "https://media.api-sports.io/football/teams/2382.png",
-    "date": "2025-11-14T00:30:00+00:00",
-    "book_odds": {
-      "home_win": 2.55,
-      "draw": 3.0,
-      "away_win": 2.7,
-      "btts": 2.00,
-      "over_2_5": 2.35,
-      "home_o1_5": 3.00,
-      "away_o1_5": 3.00
-    },
-    "sim_stats": {
-      "xg": {
-        "home": "1.40",
-        "away": "0.89",
-        "total": "2.29"
-      },
-      "corners": {
-        "home": "4.8",
-        "away": "3.9",
-        "total": "8.7"
-      },
-      "shots": {
-        "home": "12.0",
-        "away": "10.3",
-        "total": "22.3"
-      },
-      "percents": {
-        "home_win_pct": 48.5,
-        "draw_pct": 27.5,
-        "away_win_pct": 24.0,
-        "over_2_5_pct": 39.4,
-        "btts_pct": 44.3,
-        "home_o1_5_pct": 40.8,
-        "away_o1_5_pct": 22.4
+        "home_win_pct": 65.3,
+        "draw_pct": 23.7,
+        "away_win_pct": 11.0,
+        "over_2_5_pct": 35.2,
+        "btts_pct": 31.4,
+        "home_o1_5_pct": 48.4,
+        "away_o1_5_pct": 8.9
       }
     }
   }

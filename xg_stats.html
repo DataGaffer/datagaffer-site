@@ -16,8 +16,8 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f2f4f7; color: #003f2e; }
 
-    header {
-      background: #003f2e;
+    header { 
+      background: #003f2e; 
       color: white;
       text-align: center;
       padding: 15px;
@@ -123,6 +123,222 @@
   font-weight: bold;
 }
 
+/* ============================
+   UNIVERSAL CENTERING & LAYOUT
+   ============================ */
+
+.xg-buttons,
+.xg-controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================
+   XG PAGE BUTTONS (TOP ROW)
+   ============================ */
+
+.xg-buttons {
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.xg-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #003f2e;
+  border-radius: 4px;
+  background: white;
+  color: #003f2e;
+  font-weight: 500;
+}
+
+.xg-buttons button:hover {
+  background: #003f2e;
+  color: white;
+}
+
+.xg-buttons button.active {
+  background: #003f2e;
+  color: white;
+  font-weight: bold;
+}
+
+/* ============================
+   SEARCH + LEAGUE DROPDOWN
+   ============================ */
+
+.xg-controls {
+  gap: 12px;
+  margin: 20px 0;
+}
+
+/* Make search and dropdown IDENTICAL size */
+#teamSearch,
+#leagueSelect {
+  width: 200px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 15px;
+  color: #003f2e;
+  background: white;
+  border: 2px solid #003f2e;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 !important;
+}
+
+/* Dropdown center alignment */
+#leagueSelect {
+  text-align-last: center;
+}
+
+#leagueSelect option {
+  text-align: center;
+}
+
+/* ===============================
+   XG CHART SECTION STYLING
+   =============================== */
+
+#chart-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#chart-container h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #003f2e;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+#chartGoals,
+#chartAgainst {
+  width: 100% !important;
+  max-height: 500px;
+  margin: 0 auto 40px auto;
+}
+
+/* Add white card background */
+.chart-card {
+  background: #fff;
+  border: 2px solid #003f2e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ==========================================
+   PERFECT MOBILE CHART STYLING (≤ 768px)
+========================================== */
+/* Mobile layout — fixes centering & sizing */
+/* MOBILE CHART LAYOUT */
+/* MOBILE FIX — remove the white space under charts */
+@media (max-width: 768px) {
+
+  #chart-container {
+    width: 96% !important;
+    margin: 10px auto !important;
+    padding: 0 !important;
+  }
+
+  .chart-card {
+    width: 100%;
+    padding: 6px !important;
+    border-radius: 3;
+    border: 0;
+    background: #ffffff;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    height: auto !important;
+  }
+
+  .chart-card h2 {
+    font-size: 18px !important;
+    margin: 0 0 4px 0 !important;
+    text-align: center;
+    color: #003f2e;
+  }
+
+  .chart-card canvas {
+    width: 100% !important;
+    height: 340px !important;  /* ← PERFECT size */
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* ============================
+   MOBILE (<= 925px)
+   ============================ */
+
+@media (max-width: 925px) {
+  .xg-buttons {
+    margin: 20px 0;
+  }
+
+  .xg-buttons button {
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+    margin: 0 4px !important;
+  }
+}
+
+/* ============================
+   MOBILE (<= 768px)
+   Keep inputs side-by-side
+   ============================ */
+
+@media (max-width: 768px) {
+
+  .xg-controls {
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px auto 15xpx;
+  }
+
+  #teamSearch,
+  #leagueSelect {
+    width: 42% !important;
+    height: 30px !important;
+    padding: 6px 8px !important;
+    font-size: 13px !important;
+  }
+
+  #leagueSelect {
+    text-align-last: center !important;
+  }
+}
+
+/* ============================
+   MOBILE (<= 900px)
+   Slight dropdown reduction
+   ============================ */
+
+@media (max-width: 900px) {
+  #leagueSelect {
+    font-size: 13px;
+    padding: 5px 8px;
+    min-width: 160px;
+  }
+}
+
+
+
+
   @media (max-width: 925px) {
  body { overflow-x: hidden; }
 
@@ -196,25 +412,158 @@
 
 <div class="banner">Expected Goals vs Actual Team Performance — 2025 Season</div>
 
-<div class="buttons">
-  <button onclick="showLeague('premier_league', this)">Premier League</button>
-  <button onclick="showLeague('la_liga', this)">La Liga</button>
-  <button onclick="showLeague('serie_a', this)">Serie A</button>
-  <button onclick="showLeague('bundesliga', this)">Bundesliga</button>
-  <button onclick="showLeague('ligue_1', this)">Ligue 1</button>
-  <button onclick="showLeague('eredivisie', this)">Eredivisie</button>
+<div class="xg-buttons">
+  <button id="chartsBtn" class="active">xG Charts</button>
+  <button id="statsBtn">Team Stats</button>
 </div>
 
-<div id="table-container"></div>
+<!-- Controls Wrapper -->
+<div class="xg-controls">
+
+  <!-- Search Bar -->
+  <input 
+    type="text" 
+    id="teamSearch" 
+    placeholder="Search team…"
+  />
+
+  <!-- League Dropdown -->
+  <select id="leagueSelect">
+    <option value="all">All Teams</option>
+    <option value="premier_league" selected>Premier League</option>
+    <option value="la_liga">La Liga</option>
+    <option value="serie_a">Serie A</option>
+    <option value="bundesliga">Bundesliga</option>
+    <option value="ligue_1">Ligue 1</option>
+    <option value="eredivisie">Eredivisie</option>
+  </select>
+
+</div>
+
+<!-- ⭐ CHARTS SHOW BY DEFAULT ⭐ -->
+<div id="chart-container" style="display:block;">
+
+   <div class="chart-card">
+       <h2>xG vs Actual Goals</h2>
+       <canvas id="chartGoals"></canvas>
+   </div>
+
+   <div class="chart-card">
+       <h2>xGA vs Actual GA</h2>
+       <canvas id="chartAgainst"></canvas>
+   </div>
+
+</div>
+
+<!-- ⭐ TABLE HIDDEN BY DEFAULT ⭐ -->
+<div id="table-container" style="display:none;"></div>
 
 <script>
-  let xgData = {};
-  let sortConfig = { column: null, asc: false };
+let xgData = {};
+let sortConfig = { column: null, asc: false };
+// ⭐ Holds the active chart data so search bar can filter it
+let currentChartData = [];
 
-  async function loadData() {
-    const res = await fetch('xg_stats.json');
-    xgData = await res.json();
+// ⭐ Master loader – MUST run before any charts/tables ⭐
+async function initXG() {
+    try {
+        const res = await fetch("xg_stats.json");
+        xgData = await res.json();
+
+        // Set default league
+        document.getElementById("leagueSelect").value = "premier_league";
+
+        // Load charts first (charts page default)
+        await loadChartsForLeague("premier_league");
+    } catch (err) {
+        console.error("Error loading xg_stats.json:", err);
+    }
+}
+
+// Run immediately on page load
+initXG();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- League Select -->
+<script>
+document.getElementById("leagueSelect").addEventListener("change", function () {
+  const league = this.value;
+
+  // ⭐ RESET SEARCH BOX
+  const search = document.getElementById("teamSearch");
+  search.value = "";
+
+  // ⭐ If charts were filtered → reset with full league data
+  if (document.getElementById("chart-container").style.display !== "none") {
+      loadChartsForLeague(league);
+  } 
+  // Table mode
+  else {
+      showLeague(league, null);
   }
+});
+</script>
+
+<!-- Team Search -->
+<script>
+// Team Search
+document.getElementById("teamSearch").addEventListener("input", function () {
+  const term = this.value.toLowerCase();
+
+  // If table is visible → search the table
+  if (document.getElementById("table-container").style.display !== "none") {
+      const rows = document.querySelectorAll("#xgTable tbody tr");
+      rows.forEach(row => {
+        const team = row.cells[0].innerText.toLowerCase();
+        row.style.display = team.includes(term) ? "" : "none";
+      });
+  }
+
+  // ⭐ If charts are visible → filter charts
+  if (document.getElementById("chart-container").style.display !== "none") {
+      filterChartTeams(term);
+  }
+});
+</script>
+
+<!-- ⭐ BUTTON TOGGLE LOGIC ⭐ -->
+<script>
+const chartsBtn = document.querySelectorAll(".xg-buttons button")[0];
+const statsBtn  = document.querySelectorAll(".xg-buttons button")[1];
+
+chartsBtn.addEventListener("click", () => {
+
+    // ⭐ RESET SEARCH BAR
+    const search = document.getElementById("teamSearch");
+    search.value = "";
+
+    chartsBtn.classList.add("active");
+    statsBtn.classList.remove("active");
+
+    document.getElementById("chart-container").style.display = "block";
+    document.getElementById("table-container").style.display = "none";
+
+    loadChartsForLeague(document.getElementById("leagueSelect").value);
+});
+
+statsBtn.addEventListener("click", () => {
+
+    // ⭐ RESET SEARCH BAR
+    const search = document.getElementById("teamSearch");
+    search.value = "";
+
+    statsBtn.classList.add("active");
+    chartsBtn.classList.remove("active");
+
+    document.getElementById("chart-container").style.display = "none";
+    document.getElementById("table-container").style.display = "block";
+
+    showLeague(document.getElementById("leagueSelect").value, null);
+});
+</script>
+
+<script>
 
   async function fetchActuals(team) {
   try {
@@ -247,8 +596,17 @@
 }
 
 async function showLeague(league, btn) {
-  document.querySelectorAll('.buttons button').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+  if (league === "all") {
+  const leagues = Object.keys(xgData);
+  let combined = [];
+
+  leagues.forEach(l => {
+    if (xgData[l]?.for) combined.push(...xgData[l].for);
+  });
+
+  // Override leagueTeams with merged list
+  xgData["all"] = { for: combined };
+}
 
   const leagueTeams = xgData[league]?.for || [];
   if (!leagueTeams.length) {
@@ -333,8 +691,242 @@ async function showLeague(league, btn) {
   rows.forEach(row => row.cells[colIndex].classList.add("sorted-col"));
   header.classList.add("active-header");
 }
+</script>
 
-  loadData().then(() => showLeague('premier_league', document.querySelector('.buttons button')));
+<script>
+// GLOBAL chart instances so we can destroy+rebuild
+let chartGoalsInstance = null;
+let chartAgainstInstance = null;
+
+// Load xg_stats.json into memory
+async function loadXGData() {
+    const response = await fetch("xg_stats.json");
+    return await response.json();
+}
+
+// Build dataset for selected league
+async function buildChartData(league) {
+    const xgData = await loadXGData();
+
+    // Build ALL teams if "all" selected
+    let teams = [];
+    if (league === "all") {
+        for (const lg of Object.keys(xgData)) {
+            teams.push(...xgData[lg].for);
+        }
+    } else {
+        teams = xgData[league]?.for || [];
+    }
+
+    // Build data points (with fetching actual stats)
+    const points = [];
+    for (const team of teams) {
+        const actual = await fetchActuals(team.team);
+
+        points.push({
+            team: team.team,
+            logo: team.logo?.replace("media-4.api-sports.io", "media.api-sports.io"),
+            xg_for: parseFloat(team.xg_for),
+            goals_for: parseFloat(actual.goals_for),
+            xg_against: parseFloat(team.xg_against),
+            goals_against: parseFloat(actual.goals_against)
+        });
+    }
+
+    return points;
+}
+
+// Load & draw charts
+async function loadChartsForLeague(league) {
+
+    currentChartData = await buildChartData(league);
+    const data = currentChartData;
+
+    const maxXGFor   = Math.max(...data.map(p => p.xg_for)) + 0.4;
+    const maxGF      = Math.max(...data.map(p => p.goals_for)) + 0.4;
+
+    const maxXGA     = Math.max(...data.map(p => p.xg_against)) + 0.4;
+    const maxGA      = Math.max(...data.map(p => p.goals_against)) + 0.4;
+
+    if (chartGoalsInstance) chartGoalsInstance.destroy();
+    if (chartAgainstInstance) chartAgainstInstance.destroy();
+
+    const ctx1 = document.getElementById("chartGoals").getContext("2d");
+
+    chartGoalsInstance = new Chart(ctx1, {
+    type: "scatter",
+    data: {
+        datasets: data.map(team => ({
+            label: team.team,
+            data: [{ x: team.xg_for, y: team.goals_for }],
+            pointStyle: createLogoImage(team.logo),
+            pointRadius: 14,
+        }))
+    },
+    options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    layout: {
+    padding: { top: 0, bottom: 15, left: 5, right: 0 }
+},
+
+
+    scales: {
+        x: {
+            title: { 
+                display: true,
+                text: "xG For",
+                padding: 0,
+                font: { size: window.innerWidth < 600 ? 10 : 14 }
+            },
+            ticks: { 
+                padding: 0,  // ← removes Chart.js bottom padding
+                font: { size: window.innerWidth < 600 ? 10 : 14 }
+            },
+            grid: { 
+                lineWidth: window.innerWidth < 600 ? 0.4 : 1 
+            }
+        },
+
+        y: {
+            title: { 
+                display: true,
+                text: "Actual Goals",
+                padding: 0,
+                font: { size: window.innerWidth < 600 ? 10 : 14 }
+            },
+            ticks: { 
+                padding: 0,  // ← removes extra left padding
+                font: { size: window.innerWidth < 600 ? 10 : 14 }
+            },
+            grid: { 
+                lineWidth: window.innerWidth < 600 ? 0.4 : 1 
+            }
+        }
+    },
+
+    plugins: {
+        legend: { display: false }
+    }
+}
+});
+
+    const ctx2 = document.getElementById("chartAgainst").getContext("2d");
+
+    chartAgainstInstance = new Chart(ctx2, {
+    type: "scatter",
+    data: {
+        datasets: data.map(team => ({
+            label: team.team,
+            data: [{ x: team.xg_against, y: team.goals_against }],
+            pointStyle: createLogoImage(team.logo),
+            pointRadius: 14,
+        }))
+    },
+    options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    layout: {
+        padding: { top: 0, bottom: 15, left: 5, right: 0 }
+    },
+
+    scales: {
+        x: {
+            title: { 
+                display: true, 
+                text: "xGA",
+                padding: 0,
+                font: { size: window.innerWidth < 600 ? 10 : 14 }
+            },
+            ticks: { 
+                padding: 0,
+                font: { size: window.innerWidth < 600 ? 10 : 14 }
+            },
+            grid: { 
+                lineWidth: window.innerWidth < 600 ? 0.4 : 1 
+            }
+        },
+
+        y: {
+            title: { 
+                display: true, 
+                text: "Actual GA",
+                padding: 0,
+                font: { size: window.innerWidth < 600 ? 10 : 14 }
+            },
+            ticks: { 
+                padding: 0,
+                font: { size: window.innerWidth < 600 ? 10 : 14 }
+            },
+            grid: { 
+                lineWidth: window.innerWidth < 600 ? 0.4 : 1 
+            }
+        }
+    },
+
+    plugins: {
+        legend: { display: false }
+    }
+}
+});
+}
+
+function createLogoImage(url) {
+    const img = new Image();
+    img.src = url;
+
+    // Desktop vs mobile logo size
+    let size = window.innerWidth < 600 ? 18 : 34;
+
+    img.width = size;
+    img.height = size;
+
+    return img;
+
+}
+// ⭐ FILTER CHART TEAMS
+function filterChartTeams(term) {
+    if (!currentChartData.length) return;
+
+    const filtered =
+        term.trim() === ""
+            ? currentChartData
+            : currentChartData.filter(team =>
+                team.team.toLowerCase().includes(term)
+            );
+
+    updateChartViews(filtered);
+}
+
+// ⭐ UPDATE BOTH CHARTS WHEN FILTERED
+function updateChartViews(filteredData) {
+
+    // Update xG chart
+    chartGoalsInstance.data.datasets = filteredData.map(team => ({
+        label: team.team,
+        data: [{ x: team.xg_for, y: team.goals_for }],
+        pointStyle: createLogoImage(team.logo),
+        pointRadius: 14
+    }));
+    chartGoalsInstance.update();
+
+    // Update xGA chart
+    chartAgainstInstance.data.datasets = filteredData.map(team => ({
+        label: team.team,
+        data: [{ x: team.xg_against, y: team.goals_against }],
+        pointStyle: createLogoImage(team.logo),
+        pointRadius: 14
+    }));
+    chartAgainstInstance.update();
+}
+
+// Load charts on page load
+window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("leagueSelect").value = "premier_league";
+loadChartsForLeague("premier_league");
+});
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

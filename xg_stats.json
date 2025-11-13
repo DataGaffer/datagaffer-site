@@ -69,7 +69,7 @@
       },
       {
         "team": "Liverpool",
-        "logo": "https://media.api-sports.io/football/teams/40.png",
+        "logo": "assets/logos/40.png",
         "xg_for": "1.63",
         "xg_against": "1.27"
       },
@@ -448,7 +448,7 @@
       },
       {
         "team": "RB Leipzig",
-        "logo": "",
+        "logo": "assets/logos/173.png",
         "xg_for": "1.91",
         "xg_against": "1.49"
       },

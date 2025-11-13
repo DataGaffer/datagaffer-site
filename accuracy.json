@@ -1,110 +1,5 @@
 [
   {
-    "date": "2025-10-12",
-    "picks": [
-      {
-        "fixture_id": 1400027,
-        "match": "Mexico vs Colombia",
-        "pick": "Over 2.5 Goals",
-        "dg_odds": 1.47,
-        "book_odds": 2.3,
-        "edge": 24.5,
-        "league": "Friendlies",
-        "result": "Win"
-      },
-      {
-        "fixture_id": 1323331,
-        "match": "Romania vs Austria",
-        "pick": "BTTS Yes",
-        "dg_odds": 1.59,
-        "book_odds": 1.8,
-        "edge": 7.1,
-        "league": "World Cup - Qualification Europe",
-        "result": "Loss"
-      },
-      {
-        "fixture_id": 1351556,
-        "match": "Malta vs Bosnia",
-        "pick": "Bosnia o1.5 Goals",
-        "dg_odds": 1.7,
-        "book_odds": 1.83,
-        "edge": 4.3,
-        "league": "World Cup - Qualification Europe",
-        "result": "Win"
-      }
-    ]
-  },
-  {
-    "date": "2025-10-13",
-    "picks": [
-      {
-        "fixture_id": 1323333,
-        "match": "Slovenia vs Switzerland",
-        "pick": "Switzerland o1.5 Goals",
-        "dg_odds": 1.46,
-        "book_odds": 1.83,
-        "edge": 13.8,
-        "league": "Friendlies",
-        "result": "Loss"
-      },
-      {
-        "fixture_id": 1323337,
-        "match": "Wales vs Belgium",
-        "pick": "Over 2.5 Goals",
-        "dg_odds": 1.42,
-        "book_odds": 1.85,
-        "edge": 16.3,
-        "league": "World Cup - Qualification Europe",
-        "result": "Win"
-      },
-      {
-        "fixture_id": 1366307,
-        "match": "Iceland vs France",
-        "pick": "BTTS Yes",
-        "dg_odds": 1.51,
-        "book_odds": 1.95,
-        "edge": 15.0,
-        "league": "World Cup - Qualification Europe",
-        "result": "Win"
-      }
-    ]
-  },
-  {
-    "date": "2025-10-15",
-    "picks": [
-      {
-        "fixture_id": 1366310,
-        "match": "Italy vs Israel",
-        "pick": "BTTS Yes",
-        "dg_odds": 1.29,
-        "book_odds": 1.95,
-        "edge": 26.3,
-        "league": "World Cup - Qualification Europe",
-        "result": "Loss"
-      },
-      {
-        "fixture_id": 1323339,
-        "match": "Rep. Of Ireland vs Armenia",
-        "pick": "BTTS Yes",
-        "dg_odds": 1.46,
-        "book_odds": 2.05,
-        "edge": 19.6,
-        "league": "World Cup - Qualification Europe",
-        "result": "Loss"
-      },
-      {
-        "fixture_id": 1323340,
-        "match": "Estonia vs Moldova",
-        "pick": "Over 2.5 Goals",
-        "dg_odds": 1.59,
-        "book_odds": 2.25,
-        "edge": 18.4,
-        "league": "World Cup - Qualification Europe",
-        "result": "Loss"
-      }
-    ]
-  },
-  {
     "date": "2025-10-17",
     "picks": [
       {
@@ -954,4 +849,5 @@
       }
     ]
   }
+  
 ]
