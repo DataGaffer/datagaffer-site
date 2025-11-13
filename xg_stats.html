@@ -565,34 +565,57 @@ statsBtn.addEventListener("click", () => {
 
 <script>
 
-  async function fetchActuals(team) {
-  try {
-    // ✅ Convert spaces to underscores (and encode safely)
-    const safeTeam = encodeURIComponent(team.replace(/\s+/g, "_"));
-    const res = await fetch(`team_stats_api/2025/${safeTeam}.json`);
+  // ⭐ GLOBAL CACHE (stores results after first fetch)
+let actualCache = {};
 
-    if (!res.ok) {
-      console.warn(`Missing stats file for ${team}`);
-      return { goals_for: 0, goals_against: 0 };
+async function fetchActuals(team) {
+    try {
+        // Return instantly if already cached
+        if (actualCache[team]) {
+            return actualCache[team];
+        }
+
+        // Convert spaces → underscores
+        const safeTeam = encodeURIComponent(team.replace(/\s+/g, "_"));
+        const res = await fetch(`team_stats_api/2025/${safeTeam}.json`);
+
+        // Missing file fallback
+        if (!res.ok) {
+            console.warn(`Missing stats file for ${team}`);
+            const fallback = { goals_for: 0, goals_against: 0 };
+            actualCache[team] = fallback;   // store fallback too
+            return fallback;
+        }
+
+        // Parse JSON
+        const data = await res.json();
+
+        const homeMatches = data.home?.matches || 0;
+        const awayMatches = data.away?.matches || 0;
+        const totalMatches = homeMatches + awayMatches || 1;
+
+        const goals_for_total =
+            (data.home?.goals_for || 0) + (data.away?.goals_for || 0);
+
+        const goals_against_total =
+            (data.home?.goals_against || 0) + (data.away?.goals_against || 0);
+
+        const result = {
+            goals_for: (goals_for_total / totalMatches).toFixed(2),
+            goals_against: (goals_against_total / totalMatches).toFixed(2)
+        };
+
+        // ⭐ Store in cache so it's instant next time
+        actualCache[team] = result;
+
+        return result;
+
+    } catch (err) {
+        console.error(`Error fetching stats for ${team}:`, err);
+        const errorFallback = { goals_for: 0, goals_against: 0 };
+        actualCache[team] = errorFallback;  // cache fallback
+        return errorFallback;
     }
-
-    const data = await res.json();
-    const homeMatches = data.home?.matches || 0;
-    const awayMatches = data.away?.matches || 0;
-    const totalMatches = homeMatches + awayMatches || 1;
-
-    const goals_for_total = (data.home?.goals_for || 0) + (data.away?.goals_for || 0);
-    const goals_against_total = (data.home?.goals_against || 0) + (data.away?.goals_against || 0);
-
-    // ✅ Convert totals to per-match averages
-    const goals_for = (goals_for_total / totalMatches).toFixed(2);
-    const goals_against = (goals_against_total / totalMatches).toFixed(2);
-
-    return { goals_for, goals_against };
-  } catch (err) {
-    console.error(`Error fetching ${team}:`, err);
-    return { goals_for: 0, goals_against: 0 };
-  }
 }
 
 async function showLeague(league, btn) {
