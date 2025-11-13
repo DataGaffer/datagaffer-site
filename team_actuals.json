@@ -1,0 +1,738 @@
+{
+  "Monaco": {
+    "goals_for": 2.0,
+    "goals_against": 1.75
+  },
+  "Bayer Leverkusen": {
+    "goals_for": 2.4,
+    "goals_against": 1.4
+  },
+  "Nantes": {
+    "goals_for": 0.92,
+    "goals_against": 1.5
+  },
+  "Maccabi Tel Aviv": {
+    "goals_for": 2.44,
+    "goals_against": 1.11
+  },
+  "Galatasaray": {
+    "goals_for": 2.08,
+    "goals_against": 0.5
+  },
+  "Sassuolo": {
+    "goals_for": 1.27,
+    "goals_against": 1.09
+  },
+  "Stade Brestois 29": {
+    "goals_for": 1.17,
+    "goals_against": 1.75
+  },
+  "FC Porto": {
+    "goals_for": 2.3,
+    "goals_against": 0.3
+  },
+  "Sevilla": {
+    "goals_for": 1.5,
+    "goals_against": 1.58
+  },
+  "FC Nordsjaelland": {
+    "goals_for": 1.27,
+    "goals_against": 1.73
+  },
+  "Olympiakos Piraeus": {
+    "goals_for": 2.3,
+    "goals_against": 0.7
+  },
+  "Chelsea": {
+    "goals_for": 1.91,
+    "goals_against": 1.0
+  },
+  "Real Madrid": {
+    "goals_for": 2.17,
+    "goals_against": 0.83
+  },
+  "Lecce": {
+    "goals_for": 0.73,
+    "goals_against": 1.27
+  },
+  "Randers FC": {
+    "goals_for": 1.07,
+    "goals_against": 1.47
+  },
+  "NAC Breda": {
+    "goals_for": 1.25,
+    "goals_against": 1.75
+  },
+  "AZ Alkmaar": {
+    "goals_for": 2.08,
+    "goals_against": 1.5
+  },
+  "Minnesota United FC": {
+    "goals_for": 1.65,
+    "goals_against": 1.15
+  },
+  "Espanyol": {
+    "goals_for": 1.25,
+    "goals_against": 1.25
+  },
+  "Elche": {
+    "goals_for": 1.08,
+    "goals_against": 1.17
+  },
+  "Cremonese": {
+    "goals_for": 1.09,
+    "goals_against": 1.18
+  },
+  "Metz": {
+    "goals_for": 1.0,
+    "goals_against": 2.25
+  },
+  "Manchester City": {
+    "goals_for": 2.09,
+    "goals_against": 0.73
+  },
+  "Villarreal": {
+    "goals_for": 2.0,
+    "goals_against": 0.83
+  },
+  "FC Basel 1893": {
+    "goals_for": 1.69,
+    "goals_against": 1.23
+  },
+  "Athletic Club": {
+    "goals_for": 1.0,
+    "goals_against": 1.08
+  },
+  "Ferencvarosi TC": {
+    "goals_for": 2.25,
+    "goals_against": 1.08
+  },
+  "Bournemouth": {
+    "goals_for": 1.55,
+    "goals_against": 1.64
+  },
+  "Cagliari": {
+    "goals_for": 0.82,
+    "goals_against": 1.27
+  },
+  "1. FC Heidenheim": {
+    "goals_for": 0.8,
+    "goals_against": 2.3
+  },
+  "FSV Mainz 05": {
+    "goals_for": 1.11,
+    "goals_against": 1.89
+  },
+  "Brentford": {
+    "goals_for": 1.55,
+    "goals_against": 1.55
+  },
+  "Seattle Sounders": {
+    "goals_for": 1.71,
+    "goals_against": 1.41
+  },
+  "Malmo FF": {
+    "goals_for": 1.53,
+    "goals_against": 1.1
+  },
+  "Atalanta": {
+    "goals_for": 1.18,
+    "goals_against": 1.0
+  },
+  "SC Paderborn 07": {
+    "goals_for": 1.7,
+    "goals_against": 0.9
+  },
+  "Philadelphia Union": {
+    "goals_for": 1.68,
+    "goals_against": 1.03
+  },
+  "Ludogorets": {
+    "goals_for": 1.71,
+    "goals_against": 0.86
+  },
+  "Osasuna": {
+    "goals_for": 0.75,
+    "goals_against": 1.08
+  },
+  "Viborg": {
+    "goals_for": 1.4,
+    "goals_against": 1.47
+  },
+  "Rangers": {
+    "goals_for": 1.36,
+    "goals_against": 0.91
+  },
+  "Portland Timbers": {
+    "goals_for": 1.26,
+    "goals_against": 1.4
+  },
+  "Ajax": {
+    "goals_for": 1.83,
+    "goals_against": 1.42
+  },
+  "Sturm Graz": {
+    "goals_for": 1.75,
+    "goals_against": 1.08
+  },
+  "NEC Nijmegen": {
+    "goals_for": 2.42,
+    "goals_against": 1.67
+  },
+  "1899 Hoffenheim": {
+    "goals_for": 2.1,
+    "goals_against": 1.6
+  },
+  "FC Z\u00fcrich": {
+    "goals_for": 1.46,
+    "goals_against": 1.92
+  },
+  "AC Milan": {
+    "goals_for": 1.55,
+    "goals_against": 0.82
+  },
+  "Angers": {
+    "goals_for": 0.83,
+    "goals_against": 1.25
+  },
+  "Girona": {
+    "goals_for": 0.92,
+    "goals_against": 2.0
+  },
+  "Marseille": {
+    "goals_for": 2.33,
+    "goals_against": 0.92
+  },
+  "Lyon": {
+    "goals_for": 1.45,
+    "goals_against": 1.09
+  },
+  "Borussia Dortmund": {
+    "goals_for": 1.6,
+    "goals_against": 0.7
+  },
+  "Plzen": {
+    "goals_for": 1.87,
+    "goals_against": 1.27
+  },
+  "Dinamo Zagreb": {
+    "goals_for": 1.92,
+    "goals_against": 0.92
+  },
+  "FCSB": {
+    "goals_for": 1.5,
+    "goals_against": 1.44
+  },
+  "Oviedo": {
+    "goals_for": 0.58,
+    "goals_against": 1.67
+  },
+  "Rennes": {
+    "goals_for": 1.58,
+    "goals_against": 1.42
+  },
+  "FC Lugano": {
+    "goals_for": 1.42,
+    "goals_against": 1.42
+  },
+  "Burnley": {
+    "goals_for": 1.27,
+    "goals_against": 2.0
+  },
+  "FC Luzern": {
+    "goals_for": 2.0,
+    "goals_against": 1.69
+  },
+  "Sonderjyske": {
+    "goals_for": 1.6,
+    "goals_against": 1.47
+  },
+  "FK Crvena Zvezda": {
+    "goals_for": 3.36,
+    "goals_against": 0.93
+  },
+  "Union Berlin": {
+    "goals_for": 1.3,
+    "goals_against": 1.7
+  },
+  "Brann": {
+    "goals_for": 1.86,
+    "goals_against": 1.46
+  },
+  "Twente": {
+    "goals_for": 1.67,
+    "goals_against": 1.5
+  },
+  "Alaves": {
+    "goals_for": 0.92,
+    "goals_against": 0.92
+  },
+  "Manchester United": {
+    "goals_for": 1.73,
+    "goals_against": 1.64
+  },
+  "Excelsior": {
+    "goals_for": 0.92,
+    "goals_against": 1.92
+  },
+  "Aarhus": {
+    "goals_for": 2.0,
+    "goals_against": 1.13
+  },
+  "FC Midtjylland": {
+    "goals_for": 2.53,
+    "goals_against": 1.07
+  },
+  "Rayo Vallecano": {
+    "goals_for": 1.0,
+    "goals_against": 1.17
+  },
+  "VfB Stuttgart": {
+    "goals_for": 1.7,
+    "goals_against": 1.2
+  },
+  "FC St. Pauli": {
+    "goals_for": 0.9,
+    "goals_against": 2.0
+  },
+  "FC St. Gallen": {
+    "goals_for": 2.17,
+    "goals_against": 1.42
+  },
+  "West Ham": {
+    "goals_for": 1.18,
+    "goals_against": 2.09
+  },
+  "Slavia Praha": {
+    "goals_for": 1.93,
+    "goals_against": 0.73
+  },
+  "FC Dallas": {
+    "goals_for": 1.53,
+    "goals_against": 1.62
+  },
+  "1.FC K\u00f6ln": {
+    "goals_for": 1.7,
+    "goals_against": 1.5
+  },
+  "VfL Bochum": {
+    "goals_for": 1.2,
+    "goals_against": 1.8
+  },
+  "Kairat Almaty": {
+    "goals_for": 2.04,
+    "goals_against": 0.73
+  },
+  "Sunderland": {
+    "goals_for": 1.27,
+    "goals_against": 0.91
+  },
+  "Red Bull Salzburg": {
+    "goals_for": 2.23,
+    "goals_against": 1.23
+  },
+  "Udinese": {
+    "goals_for": 1.09,
+    "goals_against": 1.55
+  },
+  "Levante": {
+    "goals_for": 1.33,
+    "goals_against": 1.92
+  },
+  "Le Havre": {
+    "goals_for": 1.08,
+    "goals_against": 1.42
+  },
+  "Everton": {
+    "goals_for": 1.09,
+    "goals_against": 1.18
+  },
+  "PEC Zwolle": {
+    "goals_for": 1.17,
+    "goals_against": 2.25
+  },
+  "SC Freiburg": {
+    "goals_for": 1.3,
+    "goals_against": 1.4
+  },
+  "Fenerbahce": {
+    "goals_for": 2.08,
+    "goals_against": 0.83
+  },
+  "San Diego": {
+    "goals_for": 1.88,
+    "goals_against": 1.21
+  },
+  "Odense": {
+    "goals_for": 1.73,
+    "goals_against": 2.4
+  },
+  "Torino": {
+    "goals_for": 0.91,
+    "goals_against": 1.45
+  },
+  "FC Fredericia": {
+    "goals_for": 1.2,
+    "goals_against": 2.33
+  },
+  "Celta Vigo": {
+    "goals_for": 1.25,
+    "goals_against": 1.5
+  },
+  "Verona": {
+    "goals_for": 0.55,
+    "goals_against": 1.45
+  },
+  "Sporting CP": {
+    "goals_for": 2.45,
+    "goals_against": 0.55
+  },
+  "Fulham": {
+    "goals_for": 1.09,
+    "goals_against": 1.45
+  },
+  "Vancouver Whitecaps": {
+    "goals_for": 1.94,
+    "goals_against": 1.12
+  },
+  "Borussia M\u00f6nchengladbach": {
+    "goals_for": 1.3,
+    "goals_against": 1.9
+  },
+  "PSV Eindhoven": {
+    "goals_for": 3.33,
+    "goals_against": 1.42
+  },
+  "FC Thun": {
+    "goals_for": 2.0,
+    "goals_against": 1.08
+  },
+  "FC Augsburg": {
+    "goals_for": 1.4,
+    "goals_against": 2.4
+  },
+  "Bologna": {
+    "goals_for": 1.64,
+    "goals_against": 0.73
+  },
+  "Paris FC": {
+    "goals_for": 1.5,
+    "goals_against": 1.75
+  },
+  "RB Leipzig": {
+    "goals_for": 2.0,
+    "goals_against": 1.3
+  },
+  "Arsenal": {
+    "goals_for": 1.82,
+    "goals_against": 0.45
+  },
+  "Brondby": {
+    "goals_for": 1.93,
+    "goals_against": 1.0
+  },
+  "FC Volendam": {
+    "goals_for": 1.33,
+    "goals_against": 1.67
+  },
+  "Napoli": {
+    "goals_for": 1.45,
+    "goals_against": 0.91
+  },
+  "Aston Villa": {
+    "goals_for": 1.18,
+    "goals_against": 0.91
+  },
+  "Pafos": {
+    "goals_for": 1.9,
+    "goals_against": 0.7
+  },
+  "Genk": {
+    "goals_for": 1.36,
+    "goals_against": 1.29
+  },
+  "Pisa": {
+    "goals_for": 0.73,
+    "goals_against": 1.27
+  },
+  "Newcastle": {
+    "goals_for": 1.0,
+    "goals_against": 1.27
+  },
+  "FC Winterthur": {
+    "goals_for": 1.23,
+    "goals_against": 2.77
+  },
+  "Werder Bremen": {
+    "goals_for": 1.5,
+    "goals_against": 1.8
+  },
+  "Brighton": {
+    "goals_for": 1.55,
+    "goals_against": 1.36
+  },
+  "Vejle": {
+    "goals_for": 1.07,
+    "goals_against": 1.73
+  },
+  "Silkeborg": {
+    "goals_for": 1.47,
+    "goals_against": 1.93
+  },
+  "Los Angeles FC": {
+    "goals_for": 1.91,
+    "goals_against": 1.18
+  },
+  "Liverpool": {
+    "goals_for": 1.64,
+    "goals_against": 1.55
+  },
+  "Fortuna Sittard": {
+    "goals_for": 1.5,
+    "goals_against": 1.67
+  },
+  "Bayern M\u00fcnchen": {
+    "goals_for": 3.5,
+    "goals_against": 0.6
+  },
+  "Atletico Madrid": {
+    "goals_for": 2.0,
+    "goals_against": 0.92
+  },
+  "Fiorentina": {
+    "goals_for": 0.82,
+    "goals_against": 1.64
+  },
+  "Eintracht Frankfurt": {
+    "goals_for": 2.3,
+    "goals_against": 1.9
+  },
+  "Qarabag": {
+    "goals_for": 1.7,
+    "goals_against": 0.3
+  },
+  "FC Copenhagen": {
+    "goals_for": 1.93,
+    "goals_against": 1.47
+  },
+  "Groningen": {
+    "goals_for": 1.42,
+    "goals_against": 1.42
+  },
+  "Utrecht": {
+    "goals_for": 1.83,
+    "goals_against": 1.33
+  },
+  "Telstar": {
+    "goals_for": 1.17,
+    "goals_against": 1.75
+  },
+  "Heracles": {
+    "goals_for": 1.42,
+    "goals_against": 2.75
+  },
+  "Panathinaikos": {
+    "goals_for": 1.33,
+    "goals_against": 1.0
+  },
+  "Nice": {
+    "goals_for": 1.42,
+    "goals_against": 1.5
+  },
+  "Wolves": {
+    "goals_for": 0.64,
+    "goals_against": 2.27
+  },
+  "Auxerre": {
+    "goals_for": 0.58,
+    "goals_against": 1.58
+  },
+  "SC Braga": {
+    "goals_for": 1.73,
+    "goals_against": 1.0
+  },
+  "GO Ahead Eagles": {
+    "goals_for": 1.58,
+    "goals_against": 1.5
+  },
+  "Leeds": {
+    "goals_for": 0.91,
+    "goals_against": 1.82
+  },
+  "Columbus Crew": {
+    "goals_for": 1.62,
+    "goals_against": 1.5
+  },
+  "VfL Wolfsburg": {
+    "goals_for": 1.2,
+    "goals_against": 1.8
+  },
+  "Paris Saint Germain": {
+    "goals_for": 2.0,
+    "goals_against": 0.92
+  },
+  "BSC Young Boys": {
+    "goals_for": 1.92,
+    "goals_against": 1.77
+  },
+  "Feyenoord": {
+    "goals_for": 2.58,
+    "goals_against": 1.0
+  },
+  "Parma": {
+    "goals_for": 0.64,
+    "goals_against": 1.27
+  },
+  "Lausanne": {
+    "goals_for": 1.92,
+    "goals_against": 1.62
+  },
+  "Mallorca": {
+    "goals_for": 1.0,
+    "goals_against": 1.5
+  },
+  "Juventus": {
+    "goals_for": 1.27,
+    "goals_against": 0.91
+  },
+  "Bodo Glimt": {
+    "goals_for": 2.79,
+    "goals_against": 0.96
+  },
+  "FC Cincinnati": {
+    "goals_for": 1.53,
+    "goals_against": 1.18
+  },
+  "Grasshoppers": {
+    "goals_for": 1.38,
+    "goals_against": 2.08
+  },
+  "Lazio": {
+    "goals_for": 1.18,
+    "goals_against": 0.82
+  },
+  "Servette FC": {
+    "goals_for": 1.54,
+    "goals_against": 1.92
+  },
+  "Real Sociedad": {
+    "goals_for": 1.17,
+    "goals_against": 1.42
+  },
+  "Benfica": {
+    "goals_for": 2.1,
+    "goals_against": 0.4
+  },
+  "Club Brugge KV": {
+    "goals_for": 1.5,
+    "goals_against": 0.93
+  },
+  "Sparta Rotterdam": {
+    "goals_for": 1.17,
+    "goals_against": 2.0
+  },
+  "Lille": {
+    "goals_for": 1.92,
+    "goals_against": 1.25
+  },
+  "New York City FC": {
+    "goals_for": 1.47,
+    "goals_against": 1.29
+  },
+  "Union St. Gilloise": {
+    "goals_for": 2.07,
+    "goals_against": 0.57
+  },
+  "Nashville SC": {
+    "goals_for": 1.69,
+    "goals_against": 1.37
+  },
+  "Barcelona": {
+    "goals_for": 2.55,
+    "goals_against": 1.18
+  },
+  "Toulouse": {
+    "goals_for": 1.5,
+    "goals_against": 1.33
+  },
+  "Valencia": {
+    "goals_for": 0.92,
+    "goals_against": 1.75
+  },
+  "Como": {
+    "goals_for": 1.09,
+    "goals_against": 0.55
+  },
+  "Real Betis": {
+    "goals_for": 1.58,
+    "goals_against": 1.08
+  },
+  "Genoa": {
+    "goals_for": 0.73,
+    "goals_against": 1.45
+  },
+  "FC Sion": {
+    "goals_for": 1.54,
+    "goals_against": 1.31
+  },
+  "Nottingham Forest": {
+    "goals_for": 0.91,
+    "goals_against": 1.82
+  },
+  "Lorient": {
+    "goals_for": 1.17,
+    "goals_against": 2.17
+  },
+  "Hamburger SV": {
+    "goals_for": 0.9,
+    "goals_against": 1.6
+  },
+  "AS Roma": {
+    "goals_for": 1.09,
+    "goals_against": 0.45
+  },
+  "Celtic": {
+    "goals_for": 1.82,
+    "goals_against": 0.73
+  },
+  "Tottenham": {
+    "goals_for": 1.73,
+    "goals_against": 0.91
+  },
+  "PAOK": {
+    "goals_for": 2.0,
+    "goals_against": 0.7
+  },
+  "Inter": {
+    "goals_for": 2.36,
+    "goals_against": 1.09
+  },
+  "Karlsruher SC": {
+    "goals_for": 1.7,
+    "goals_against": 1.3
+  },
+  "Crystal Palace": {
+    "goals_for": 1.27,
+    "goals_against": 0.82
+  },
+  "Getafe": {
+    "goals_for": 1.0,
+    "goals_against": 1.17
+  },
+  "Heerenveen": {
+    "goals_for": 1.58,
+    "goals_against": 1.75
+  },
+  "Charlotte": {
+    "goals_for": 1.62,
+    "goals_against": 1.35
+  },
+  "Lens": {
+    "goals_for": 1.75,
+    "goals_against": 0.92
+  },
+  "Strasbourg": {
+    "goals_for": 2.0,
+    "goals_against": 1.33
+  }
+}

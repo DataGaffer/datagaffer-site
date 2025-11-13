@@ -474,7 +474,8 @@ async function initXG() {
         document.getElementById("leagueSelect").value = "premier_league";
 
         // Load charts first (charts page default)
-        await loadChartsForLeague("premier_league");
+        await loadActualData();                       // ⭐ load actual goals first
+await loadChartsForLeague("premier_league");  // then render fast charts
     } catch (err) {
         console.error("Error loading xg_stats.json:", err);
     }
@@ -565,57 +566,16 @@ statsBtn.addEventListener("click", () => {
 
 <script>
 
-  // ⭐ GLOBAL CACHE (stores results after first fetch)
-let actualCache = {};
+// ⭐ NEW — LOAD PRECOMPUTED ACTUAL GOALS (instant)
+let actualData = {};
 
-async function fetchActuals(team) {
-    try {
-        // Return instantly if already cached
-        if (actualCache[team]) {
-            return actualCache[team];
-        }
+async function loadActualData() {
+    const res = await fetch("team_actuals.json");
+    actualData = await res.json();
+}
 
-        // Convert spaces → underscores
-        const safeTeam = encodeURIComponent(team.replace(/\s+/g, "_"));
-        const res = await fetch(`team_stats_api/2025/${safeTeam}.json`);
-
-        // Missing file fallback
-        if (!res.ok) {
-            console.warn(`Missing stats file for ${team}`);
-            const fallback = { goals_for: 0, goals_against: 0 };
-            actualCache[team] = fallback;   // store fallback too
-            return fallback;
-        }
-
-        // Parse JSON
-        const data = await res.json();
-
-        const homeMatches = data.home?.matches || 0;
-        const awayMatches = data.away?.matches || 0;
-        const totalMatches = homeMatches + awayMatches || 1;
-
-        const goals_for_total =
-            (data.home?.goals_for || 0) + (data.away?.goals_for || 0);
-
-        const goals_against_total =
-            (data.home?.goals_against || 0) + (data.away?.goals_against || 0);
-
-        const result = {
-            goals_for: (goals_for_total / totalMatches).toFixed(2),
-            goals_against: (goals_against_total / totalMatches).toFixed(2)
-        };
-
-        // ⭐ Store in cache so it's instant next time
-        actualCache[team] = result;
-
-        return result;
-
-    } catch (err) {
-        console.error(`Error fetching stats for ${team}:`, err);
-        const errorFallback = { goals_for: 0, goals_against: 0 };
-        actualCache[team] = errorFallback;  // cache fallback
-        return errorFallback;
-    }
+function getActual(team) {
+    return actualData[team] || { goals_for: 0, goals_against: 0 };
 }
 
 async function showLeague(league, btn) {
@@ -640,7 +600,7 @@ async function showLeague(league, btn) {
 
   const rows = await Promise.all(
     leagueTeams.map(async t => {
-      const actual = await fetchActuals(t.team);
+      const actual = getActual(t.team);
       const xgf = parseFloat(t.xg_for || 0);
       const xga = parseFloat(t.xg_against || 0);
       const totalXG = (xgf + xga).toFixed(2);
@@ -744,7 +704,7 @@ async function buildChartData(league) {
     // Build data points (with fetching actual stats)
     const points = [];
     for (const team of teams) {
-        const actual = await fetchActuals(team.team);
+        const actual = getActual(team.team);
 
         points.push({
             team: team.team,
