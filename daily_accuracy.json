@@ -3524,6 +3524,81 @@
           "accuracy_score": 67.5
         }
       ]
+    },
+    {
+      "date": "2025-11-14",
+      "matches": [
+        {
+          "date": "2025-11-14",
+          "league": "Friendlies",
+          "match": "South Korea vs Bolivia",
+          "fixture_id": 1469290,
+          "projected_score": "1.48 - 0.68",
+          "actual_score": "2 - 0",
+          "avg_diff": 0.6,
+          "accuracy_score": 85.0
+        },
+        {
+          "date": "2025-11-14",
+          "league": "World Cup - Qualification Europe",
+          "match": "Finland vs Malta",
+          "fixture_id": 1323348,
+          "projected_score": "2.14 - 0.61",
+          "actual_score": "0 - 1",
+          "avg_diff": 1.27,
+          "accuracy_score": 68.2
+        },
+        {
+          "date": "2025-11-14",
+          "league": "World Cup - Qualification Europe",
+          "match": "Slovakia vs Northern Ireland",
+          "fixture_id": 1323349,
+          "projected_score": "1.26 - 1.18",
+          "actual_score": "1 - 0",
+          "avg_diff": 0.72,
+          "accuracy_score": 82.0
+        },
+        {
+          "date": "2025-11-14",
+          "league": "World Cup - Qualification Europe",
+          "match": "Gibraltar vs Montenegro",
+          "fixture_id": 1323350,
+          "projected_score": "1.11 - 2.39",
+          "actual_score": "1 - 2",
+          "avg_diff": 0.25,
+          "accuracy_score": 93.8
+        },
+        {
+          "date": "2025-11-14",
+          "league": "World Cup - Qualification Europe",
+          "match": "Luxembourg vs Germany",
+          "fixture_id": 1366314,
+          "projected_score": "0.42 - 2.86",
+          "actual_score": "0 - 2",
+          "avg_diff": 0.64,
+          "accuracy_score": 84.0
+        },
+        {
+          "date": "2025-11-14",
+          "league": "World Cup - Qualification Europe",
+          "match": "Poland vs Netherlands",
+          "fixture_id": 1366315,
+          "projected_score": "1.26 - 1.81",
+          "actual_score": "1 - 1",
+          "avg_diff": 0.54,
+          "accuracy_score": 86.5
+        },
+        {
+          "date": "2025-11-14",
+          "league": "World Cup - Qualification Europe",
+          "match": "Croatia vs Faroe Islands",
+          "fixture_id": 1366316,
+          "projected_score": "1.62 - 0.50",
+          "actual_score": "3 - 1",
+          "avg_diff": 0.94,
+          "accuracy_score": 76.5
+        }
+      ]
     }
   ],
   "leagues": [
@@ -3691,12 +3766,21 @@
     },
     {
       "league": "World Cup - Qualification Europe",
-      "games_tracked": 8,
-      "dg_score": 73.7,
-      "sim_avg_goals": 3.3,
-      "actual_avg_goals": 2.38,
-      "actual_btts_pct": 12.5,
-      "actual_over25_pct": 25.0
+      "games_tracked": 14,
+      "dg_score": 77.2,
+      "sim_avg_goals": 3.11,
+      "actual_avg_goals": 2.29,
+      "actual_btts_pct": 28.6,
+      "actual_over25_pct": 28.6
+    },
+    {
+      "league": "Friendlies",
+      "games_tracked": 1,
+      "dg_score": 85.0,
+      "sim_avg_goals": 2.16,
+      "actual_avg_goals": 2.0,
+      "actual_btts_pct": 0.0,
+      "actual_over25_pct": 0.0
     }
   ]
 }
