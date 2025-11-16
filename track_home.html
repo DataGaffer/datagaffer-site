@@ -328,7 +328,7 @@ tr[style*="background:#003f2e"] td {
 <!-- ✅ TOP 10 MOST ACCURATE TEAMS BANNER -->
 <div class="wrap">
   <div id="team-accuracy-banner" class="banner">
-    Top 10 Most Accurate Teams — based on full match history tracked by DataGaffer.
+    Top 20 Most Accurate Teams — based on full match history tracked by DataGaffer.
   </div>
 
   <!-- ✅ MATCHED EXACT TABLE WRAPPER (same as league table) -->
@@ -592,7 +592,7 @@ function renderTopTeamsTable() {
     .filter(t => t.games >= 3)
     // Sort by accuracy descending
     .sort((a, b) => b.avgAcc - a.avgAcc)
-    .slice(0, 10);
+    .slice(0, 20);
 
   // Insert into table
   const tbody = document.querySelector("#team-accuracy-table tbody");
