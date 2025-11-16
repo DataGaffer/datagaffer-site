@@ -272,9 +272,9 @@
 
 /* Mobile scaling */
 @media (max-width: 600px) {
-  .heatmap-img { width: 90%; max-width: 350px; }
-  .team-name { font-size: 12px; }
-  .heatmap-logo { height: 30px; }
+  .heatmap-img { width: 90%; max-width: 300px; }
+  .team-name { font-size: 10px; }
+  .heatmap-logo { height: 20px; }
 }
 
     /* --- Mobile adjustments --- */
@@ -344,16 +344,16 @@
 
   /* Shrink heatmap header elements */
   .heatmap-header {
-    gap: 40px; /* bring logos closer on smaller screens */
+    gap: 30px; /* bring logos closer on smaller screens */
     margin-bottom: 4px;
   }
 
   .heatmap-logo {
-    height: 28px; /* slightly smaller logos */
+    height: 20px; /* slightly smaller logos */
   }
 
   .team-name {
-    font-size: 11px; /* smaller team names */
+    font-size: 10px; /* smaller team names */
   }
 
   .color-indicator {
@@ -380,16 +380,17 @@
   display: block !important;         /* ⬅️ removes inline image spacing */
   margin: 0 auto 1px auto !important; /* ⬅️ tighten image-to-text gap */
   width: 92% !important;
-  max-width: 340px !important;
+  max-width: 300px !important;
   border-width: 1.5px !important;
   border-radius: 8px !important;
   box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+  height: 170px;
 }
 
 .heatmap-narrative {
   margin-top: 1px !important;
   margin-bottom: 0px !important; /* nice breathing space before next card */
-  font-size: 12px !important;
+  font-size: 10px !important;
   line-height: 1.4 !important;
   color: #222 !important;
   text-align: center !important;
@@ -403,13 +404,13 @@
   height: 1px !important;
   background: #003f2e !important; /* faint DataGaffer green */
   opacity: 0.3 !important;
-  margin: 16px auto 0 auto !important;
+  margin: 10px auto 0 auto !important;
 }
 
 /* Tighten wrapper spacing on mobile */
 .heatmap-wrapper {
   margin-top: 10px !important;
-  margin-bottom: 20px !important; /* tighten area between image + narrative */
+  margin-bottom: 10px !important; /* tighten area between image + narrative */
   padding: 0 !important;
 }
 
