@@ -3799,6 +3799,71 @@
           "accuracy_score": 80.0
         }
       ]
+    },
+    {
+      "date": "2025-11-17",
+      "matches": [
+        {
+          "date": "2025-11-17",
+          "league": "Friendlies",
+          "match": "Finland vs Andorra",
+          "fixture_id": 1352906,
+          "projected_score": "1.57 - 0.90",
+          "actual_score": "4 - 0",
+          "avg_diff": 1.66,
+          "accuracy_score": 58.5
+        },
+        {
+          "date": "2025-11-17",
+          "league": "World Cup - Qualification Europe",
+          "match": "Northern Ireland vs Luxembourg",
+          "fixture_id": 1323364,
+          "projected_score": "2.17 - 0.76",
+          "actual_score": "1 - 0",
+          "avg_diff": 0.96,
+          "accuracy_score": 76.0
+        },
+        {
+          "date": "2025-11-17",
+          "league": "World Cup - Qualification Europe",
+          "match": "Malta vs Poland",
+          "fixture_id": 1323365,
+          "projected_score": "0.44 - 1.96",
+          "actual_score": "2 - 3",
+          "avg_diff": 1.3,
+          "accuracy_score": 67.5
+        },
+        {
+          "date": "2025-11-17",
+          "league": "World Cup - Qualification Europe",
+          "match": "Germany vs Slovakia",
+          "fixture_id": 1366322,
+          "projected_score": "1.43 - 0.98",
+          "actual_score": "6 - 0",
+          "avg_diff": 2.78,
+          "accuracy_score": 30.5
+        },
+        {
+          "date": "2025-11-17",
+          "league": "World Cup - Qualification Europe",
+          "match": "Netherlands vs Lithuania",
+          "fixture_id": 1366323,
+          "projected_score": "3.65 - 0.40",
+          "actual_score": "4 - 0",
+          "avg_diff": 0.38,
+          "accuracy_score": 90.5
+        },
+        {
+          "date": "2025-11-17",
+          "league": "World Cup - Qualification Europe",
+          "match": "Montenegro vs Croatia",
+          "fixture_id": 1366324,
+          "projected_score": "0.56 - 2.88",
+          "actual_score": "2 - 3",
+          "avg_diff": 0.78,
+          "accuracy_score": 80.5
+        }
+      ]
     }
   ],
   "leagues": [
@@ -3966,21 +4031,21 @@
     },
     {
       "league": "World Cup - Qualification Europe",
-      "games_tracked": 31,
-      "dg_score": 74.7,
-      "sim_avg_goals": 3.16,
-      "actual_avg_goals": 3.03,
-      "actual_btts_pct": 45.2,
-      "actual_over25_pct": 45.2
+      "games_tracked": 36,
+      "dg_score": 73.9,
+      "sim_avg_goals": 3.14,
+      "actual_avg_goals": 3.19,
+      "actual_btts_pct": 44.4,
+      "actual_over25_pct": 50.0
     },
     {
       "league": "Friendlies",
-      "games_tracked": 3,
-      "dg_score": 78.9,
-      "sim_avg_goals": 2.27,
-      "actual_avg_goals": 1.67,
-      "actual_btts_pct": 33.3,
-      "actual_over25_pct": 33.3
+      "games_tracked": 4,
+      "dg_score": 73.8,
+      "sim_avg_goals": 2.32,
+      "actual_avg_goals": 2.25,
+      "actual_btts_pct": 25.0,
+      "actual_over25_pct": 50.0
     }
   ]
 }
