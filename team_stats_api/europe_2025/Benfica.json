@@ -4,13 +4,13 @@
   "league_id": 2,
   "league_name": "UEFA Champions League",
   "home": {
-    "matches": 4,
-    "goals_for": 5,
+    "matches": 2,
+    "goals_for": 2,
     "goals_against": 4
   },
   "away": {
-    "matches": 4,
-    "goals_for": 2,
+    "matches": 2,
+    "goals_for": 0,
     "goals_against": 4
   }
 }

@@ -5,48 +5,48 @@
       "id": 405,
       "rank": 1,
       "value": "44.8%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "PSV Eindhoven",
       "id": 197,
       "rank": 2,
       "value": "43.7%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Eintracht Frankfurt",
       "id": 169,
       "rank": 3,
       "value": "43.7%",
-      "change": 2,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Luzern",
       "id": 644,
       "rank": 4,
       "value": "41.9%",
-      "change": 12,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "NEC Nijmegen",
       "id": 413,
       "rank": 5,
       "value": "41.8%",
-      "change": 3,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "1899 Hoffenheim",
       "id": 167,
       "rank": 6,
       "value": "41.2%",
-      "change": 4,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Heracles",
@@ -54,79 +54,79 @@
       "rank": 7,
       "value": "41.1%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Lausanne",
       "id": 1014,
       "rank": 8,
       "value": "40.6%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Monaco",
       "id": 91,
       "rank": 9,
       "value": "40.6%",
-      "change": 6,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Winterthur",
       "id": 2180,
       "rank": 10,
       "value": "40.5%",
-      "change": 5,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Bayer Leverkusen",
       "id": 168,
       "rank": 11,
       "value": "40.2%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC St. Gallen",
       "id": 1011,
       "rank": 12,
       "value": "40.1%",
-      "change": 18,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "BSC Young Boys",
       "id": 565,
       "rank": 13,
       "value": "40.0%",
-      "change": 6,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Servette FC",
       "id": 2184,
       "rank": 14,
       "value": "39.9%",
-      "change": 8,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Grasshoppers",
       "id": 1013,
       "rank": 15,
       "value": "39.2%",
-      "change": 2,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Silkeborg",
       "id": 2073,
       "rank": 16,
       "value": "39.2%",
-      "change": 8,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Z\u00fcrich",
@@ -134,7 +134,7 @@
       "rank": 17,
       "value": "39.1%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "AZ Alkmaar",
@@ -142,23 +142,23 @@
       "rank": 18,
       "value": "38.7%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Werder Bremen",
       "id": 162,
       "rank": 19,
       "value": "38.6%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Barcelona",
       "id": 529,
       "rank": 20,
       "value": "38.3%",
-      "change": 3,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Augsburg",
@@ -166,39 +166,39 @@
       "rank": 21,
       "value": "38.3%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "FC Fredericia",
       "id": 2061,
       "rank": 22,
       "value": "38.2%",
-      "change": 5,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Paris FC",
       "id": 114,
       "rank": 23,
       "value": "38.2%",
-      "change": 12,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Twente",
       "id": 415,
       "rank": 24,
       "value": "38.0%",
-      "change": 10,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Heerenveen",
       "id": 210,
       "rank": 25,
       "value": "37.9%",
-      "change": 5,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "1.FC K\u00f6ln",
@@ -206,7 +206,7 @@
       "rank": 26,
       "value": "37.8%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Liverpool",
@@ -214,7 +214,7 @@
       "rank": 27,
       "value": "37.7%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Borussia M\u00f6nchengladbach",
@@ -222,15 +222,15 @@
       "rank": 28,
       "value": "37.7%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "FC Copenhagen",
       "id": 400,
       "rank": 29,
       "value": "37.6%",
-      "change": 2,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Levante",
@@ -238,7 +238,7 @@
       "rank": 30,
       "value": "37.6%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "FC Midtjylland",
@@ -1341,72 +1341,72 @@
       "id": 405,
       "rank": 3,
       "value": "137.8%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Bayern M\u00fcnchen",
       "id": 157,
       "rank": 4,
       "value": "134.2%",
-      "change": 3,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Winterthur",
       "id": 2180,
       "rank": 5,
       "value": "133.3%",
-      "change": 2,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Eintracht Frankfurt",
       "id": 169,
       "rank": 6,
       "value": "131.5%",
-      "change": 2,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Heracles",
       "id": 206,
       "rank": 7,
       "value": "128.1%",
-      "change": 9,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "NEC Nijmegen",
       "id": 413,
       "rank": 8,
       "value": "124.4%",
-      "change": 2,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Barcelona",
       "id": 529,
       "rank": 9,
       "value": "124.1%",
-      "change": 1,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Luzern",
       "id": 644,
       "rank": 10,
       "value": "123.1%",
-      "change": 20,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Bayer Leverkusen",
       "id": 168,
       "rank": 11,
       "value": "122.5%",
-      "change": 6,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Bodo Glimt",
@@ -1421,56 +1421,56 @@
       "id": 167,
       "rank": 13,
       "value": "119.9%",
-      "change": 8,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC St. Gallen",
       "id": 1011,
       "rank": 14,
       "value": "119.4%",
-      "change": 8,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Monaco",
       "id": 91,
       "rank": 15,
       "value": "118.1%",
-      "change": 5,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Lausanne",
       "id": 1014,
       "rank": 16,
       "value": "117.9%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Fredericia",
       "id": 2061,
       "rank": 17,
       "value": "117.8%",
-      "change": 3,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Feyenoord",
       "id": 209,
       "rank": 18,
       "value": "117.1%",
-      "change": 3,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Midtjylland",
       "id": 397,
       "rank": 19,
       "value": "117.1%",
-      "change": 10,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Maccabi Tel Aviv",
@@ -1478,31 +1478,31 @@
       "rank": 20,
       "value": "116.6%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Grasshoppers",
       "id": 1013,
       "rank": 21,
       "value": "115.4%",
-      "change": 3,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Servette FC",
       "id": 2184,
       "rank": 22,
       "value": "115.4%",
-      "change": 12,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "BSC Young Boys",
       "id": 565,
       "rank": 23,
       "value": "114.8%",
-      "change": 10,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Augsburg",
@@ -1510,15 +1510,15 @@
       "rank": 24,
       "value": "114.0%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Silkeborg",
       "id": 2073,
       "rank": 25,
       "value": "113.3%",
-      "change": 14,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Z\u00fcrich",
@@ -1526,7 +1526,7 @@
       "rank": 26,
       "value": "112.8%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "AZ Alkmaar",
@@ -1534,7 +1534,7 @@
       "rank": 27,
       "value": "112.8%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Marseille",
@@ -1542,23 +1542,23 @@
       "rank": 28,
       "value": "111.4%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Lorient",
       "id": 97,
       "rank": 29,
       "value": "111.1%",
-      "change": 10,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Inter",
       "id": 505,
       "rank": 30,
       "value": "110.6%",
-      "change": 4,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Werder Bremen",
@@ -2653,8 +2653,8 @@
       "id": 895,
       "rank": 2,
       "value": "35.2%",
-      "change": 4,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Alaves",
@@ -2669,104 +2669,104 @@
       "id": 801,
       "rank": 4,
       "value": "33.3%",
-      "change": 3,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Lecce",
       "id": 867,
       "rank": 5,
       "value": "31.0%",
-      "change": 15,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Osasuna",
       "id": 727,
       "rank": 6,
       "value": "30.9%",
-      "change": 8,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Getafe",
       "id": 546,
       "rank": 7,
       "value": "30.2%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Athletic Club",
       "id": 531,
       "rank": 8,
       "value": "29.5%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Parma",
       "id": 523,
       "rank": 9,
       "value": "28.6%",
-      "change": 7,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Sunderland",
       "id": 746,
       "rank": 10,
       "value": "27.3%",
-      "change": 6,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Verona",
       "id": 504,
       "rank": 11,
       "value": "27.0%",
-      "change": 11,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Rayo Vallecano",
       "id": 728,
       "rank": 12,
       "value": "26.8%",
-      "change": 11,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Genoa",
       "id": 495,
       "rank": 13,
       "value": "26.5%",
-      "change": 8,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Angers",
       "id": 77,
       "rank": 14,
       "value": "26.4%",
-      "change": 5,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Cagliari",
       "id": 490,
       "rank": 15,
       "value": "25.9%",
-      "change": 14,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Elche",
       "id": 797,
       "rank": 16,
       "value": "25.0%",
-      "change": 8,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Oviedo",
@@ -2774,7 +2774,7 @@
       "rank": 17,
       "value": "25.0%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Juventus",
@@ -2782,15 +2782,15 @@
       "rank": 18,
       "value": "24.6%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Lazio",
       "id": 487,
       "rank": 19,
       "value": "24.4%",
-      "change": 4,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Crystal Palace",
@@ -2798,7 +2798,7 @@
       "rank": 20,
       "value": "24.4%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Everton",
@@ -2814,55 +2814,55 @@
       "rank": 22,
       "value": "24.2%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Qarabag",
       "id": 556,
       "rank": 23,
       "value": "24.2%",
-      "change": 6,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Torino",
       "id": 503,
       "rank": 24,
       "value": "22.7%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Aston Villa",
       "id": 66,
       "rank": 25,
       "value": "22.5%",
-      "change": 14,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Panathinaikos",
       "id": 617,
       "rank": 26,
       "value": "22.4%",
-      "change": 10,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Napoli",
       "id": 492,
       "rank": 27,
       "value": "22.2%",
-      "change": 3,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Sassuolo",
       "id": 488,
       "rank": 28,
       "value": "21.2%",
-      "change": 16,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Mallorca",
@@ -2870,7 +2870,7 @@
       "rank": 29,
       "value": "20.9%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Auxerre",
@@ -2878,7 +2878,7 @@
       "rank": 30,
       "value": "20.3%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Arsenal",
@@ -3997,88 +3997,88 @@
       "id": 529,
       "rank": 5,
       "value": "129.4%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Sporting CP",
       "id": 228,
       "rank": 6,
       "value": "124.7%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Feyenoord",
       "id": 209,
       "rank": 7,
       "value": "123.9%",
-      "change": 2,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Maccabi Tel Aviv",
       "id": 604,
       "rank": 8,
       "value": "120.6%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Midtjylland",
       "id": 397,
       "rank": 9,
       "value": "118.7%",
-      "change": 1,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Bayer Leverkusen",
       "id": 168,
       "rank": 10,
       "value": "115.8%",
-      "change": 17,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Marseille",
       "id": 81,
       "rank": 11,
       "value": "114.3%",
-      "change": 5,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Inter",
       "id": 505,
       "rank": 12,
       "value": "113.9%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Paris Saint Germain",
       "id": 85,
       "rank": 13,
       "value": "110.6%",
-      "change": 6,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Benfica",
       "id": 211,
       "rank": 14,
       "value": "110.6%",
-      "change": 3,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Eintracht Frankfurt",
       "id": 169,
       "rank": 15,
       "value": "110.5%",
-      "change": 3,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Fenerbahce",
@@ -4086,15 +4086,15 @@
       "rank": 16,
       "value": "110.4%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Galatasaray",
       "id": 645,
       "rank": 17,
       "value": "110.0%",
-      "change": 6,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Porto",
@@ -4109,8 +4109,8 @@
       "id": 1011,
       "rank": 19,
       "value": "108.3%",
-      "change": 5,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Celtic",
@@ -4118,7 +4118,7 @@
       "rank": 20,
       "value": "107.8%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Ferencvarosi TC",
@@ -4141,24 +4141,24 @@
       "id": 413,
       "rank": 23,
       "value": "107.3%",
-      "change": 13,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Real Madrid",
       "id": 541,
       "rank": 24,
       "value": "106.6%",
-      "change": 9,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Red Bull Salzburg",
       "id": 571,
       "rank": 25,
       "value": "102.9%",
-      "change": 3,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Manchester City",
@@ -4166,7 +4166,7 @@
       "rank": 26,
       "value": "101.6%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Slavia Praha",
@@ -4174,15 +4174,15 @@
       "rank": 27,
       "value": "100.7%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "AZ Alkmaar",
       "id": 201,
       "rank": 28,
       "value": "100.0%",
-      "change": 4,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Luzern",
@@ -4190,7 +4190,7 @@
       "rank": 29,
       "value": "100.0%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "Aarhus",
@@ -4198,7 +4198,7 @@
       "rank": 30,
       "value": "100.0%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "FC Thun",
@@ -5285,40 +5285,40 @@
       "id": 556,
       "rank": 1,
       "value": "83.8%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Bayern M\u00fcnchen",
       "id": 157,
       "rank": 2,
       "value": "82.6%",
-      "change": 1,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "FC Porto",
       "id": 212,
       "rank": 3,
       "value": "82.1%",
-      "change": 1,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Benfica",
       "id": 211,
       "rank": 4,
       "value": "80.8%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Sporting CP",
       "id": 228,
       "rank": 5,
       "value": "80.1%",
-      "change": 1,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Galatasaray",
@@ -5341,40 +5341,40 @@
       "id": 1393,
       "rank": 8,
       "value": "76.5%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Arsenal",
       "id": 42,
       "rank": 9,
       "value": "75.6%",
-      "change": 1,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Olympiakos Piraeus",
       "id": 553,
       "rank": 10,
       "value": "75.6%",
-      "change": 2,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Celtic",
       "id": 247,
       "rank": 11,
       "value": "75.1%",
-      "change": 6,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Slavia Praha",
       "id": 560,
       "rank": 12,
       "value": "75.1%",
-      "change": 1,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Pafos",
@@ -5389,112 +5389,112 @@
       "id": 327,
       "rank": 14,
       "value": "73.0%",
-      "change": 4,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Kairat Almaty",
       "id": 664,
       "rank": 15,
       "value": "71.2%",
-      "change": 4,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Fenerbahce",
       "id": 611,
       "rank": 16,
       "value": "70.9%",
-      "change": 2,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "PSV Eindhoven",
       "id": 197,
       "rank": 17,
       "value": "70.8%",
-      "change": 6,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Real Madrid",
       "id": 541,
       "rank": 18,
       "value": "70.7%",
-      "change": 3,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Feyenoord",
       "id": 209,
       "rank": 19,
       "value": "70.5%",
-      "change": 4,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Manchester City",
       "id": 50,
       "rank": 20,
       "value": "70.3%",
-      "change": 7,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "PAOK",
       "id": 619,
       "rank": 21,
       "value": "70.3%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Paris Saint Germain",
       "id": 85,
       "rank": 22,
       "value": "69.9%",
-      "change": 2,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Barcelona",
       "id": 529,
       "rank": 23,
       "value": "69.5%",
-      "change": 1,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Ludogorets",
       "id": 566,
       "rank": 24,
       "value": "69.5%",
-      "change": 8,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Maccabi Tel Aviv",
       "id": 604,
       "rank": 25,
       "value": "68.9%",
-      "change": 16,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Atletico Madrid",
       "id": 530,
       "rank": 26,
       "value": "68.8%",
-      "change": 1,
-      "direction": "down"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Inter",
       "id": 505,
       "rank": 27,
       "value": "68.7%",
-      "change": 3,
-      "direction": "up"
+      "change": 0,
+      "direction": "same"
     },
     {
       "team": "Marseille",
@@ -5502,7 +5502,7 @@
       "rank": 28,
       "value": "68.4%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "FC Midtjylland",
@@ -5518,7 +5518,7 @@
       "rank": 30,
       "value": "67.5%",
       "change": 0,
-      "direction": "new"
+      "direction": "same"
     },
     {
       "team": "AS Roma",

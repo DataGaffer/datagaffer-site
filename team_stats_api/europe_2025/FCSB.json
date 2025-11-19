@@ -2,15 +2,15 @@
   "team_id": 559,
   "season": 2025,
   "league_id": 2,
-  "league_name": "UEFA Champions League",
+  "league_name": "UEFA Europa League",
   "home": {
     "matches": 2,
-    "goals_for": 4,
+    "goals_for": 1,
     "goals_against": 3
   },
   "away": {
     "matches": 2,
-    "goals_for": 1,
+    "goals_for": 2,
     "goals_against": 3
   }
 }

@@ -131,12 +131,13 @@
       background: #ffffff;
       border: 1px solid #eee;
       border-radius: 8px;
-      padding: 15px;
+      padding: 10px;
       text-align: center;
-      margin: 10px auto;
+      margin: 0px auto;
       width: fit-content;
-      max-width: 70%;
-      border: 2px solid #000000;
+      max-width: 80%;
+      border: 1px solid #000000;
+      margin-top: 25px;
     }
     .projected-score-box .title {
       font-weight: bold;
@@ -270,6 +271,122 @@
 .explanation .hm-home { color:#059669; font-weight:700; }
 .explanation .hm-away { color:#e74c3c; font-weight:700; }
 
+.goal-table-wrapper {
+  width: 85%;
+  margin: 15px auto;
+  border: 1px solid #000000;
+  border-radius: 0px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+/* Top row (like the baseball “Total Runs” line labels) */
+.goal-table-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background: #e3e3e3;
+  border-bottom: 1px solid #000000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 0;
+}
+
+/* Bottom row with values */
+.goal-table-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.goal-table-row div {
+  padding: 8px 0;
+  border-right: 1px solid #000000;
+}
+
+.goal-table-row div:last-child {
+  border-right: none;
+}
+
+.goal-table-title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.goal-green {
+  background: rgba(0, 180, 0, 0.25);
+  font-weight: 600;
+}
+
+.goal-red {
+  background: rgba(255, 0, 0, 0.25);
+  font-weight: 600;
+}
+
+.goal-white {
+  background: #ffffff;
+}
+
+.goal-gray {
+  background: #f5f5f5;
+}
+
+.goal-table-title {
+  width: 100%;
+  text-align: center !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ============================= */
+/* 📱 MOBILE VERSION (max 600px) */
+/* ============================= */
+@media (max-width: 600px) {
+
+  .goal-table-wrapper {
+    width: 95% !important;
+    margin: 12px auto !important;
+    border-width: 1px !important;
+  }
+
+  .goal-table-title {
+    font-size: 12px !important;
+    margin-top: 8px !important;
+    margin-bottom: 2px !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+
+  .goal-table-header {
+    font-size: 12px !important;
+    padding: 4px 0 !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+
+  .goal-table-row {
+    font-size: 12px !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+
+  .goal-table-row div {
+    padding: 5px 0 !important;
+    border-right: 1px solid #000000 !important;
+  }
+
+  .goal-table-row div:last-child {
+    border-right: none !important;
+  }
+}
+
 /* Mobile scaling */
 @media (max-width: 600px) {
   .heatmap-img { width: 90%; max-width: 300px; }
@@ -330,11 +447,11 @@
 
   .projected-score-box { 
     max-width: 85% !important; 
-    padding: 8px !important; 
+    padding: 5px !important; 
     margin: 8px auto 2px auto !important; /* ⬅️ force center */
   }
   .projected-score-box .title {
-  font-size: 14px !important;   /* ⬅️ smaller title */
+  font-size: 11px !important;   /* ⬅️ smaller title */
   margin-bottom: 6px !important;
 }
   .projected-score { 
@@ -601,22 +718,81 @@
               </div>
             </div>
 
-            <!-- Game Total -->
-            <div class="center-row">Game Total (o2.5)</div>
-            <div class="center-stats">
-              <div class="sim">${sim.over_2_5_pct ?? 'N/A'}% (${toOdds(sim.over_2_5_pct)})</div>
-              <div class="book">Betway: ${book.over_2_5 ?? 'N/A'}</div>
-            </div>
+            <!-- Game Total + BTTS -->
+<div class="sim-row">
+  <div class="side">
+    <div>Game Total (o2.5)</div>
+    <div class="sim">${sim.over_2_5_pct ?? 'N/A'}% (${toOdds(sim.over_2_5_pct)})</div>
+    <div class="book">Betway: ${book.over_2_5 ?? 'N/A'}</div>
+  </div>
 
-            <!-- BTTS -->
-            <div class="center-row">Both Teams To Score</div>
-            <div class="center-stats">
-              <div class="sim">${sim.btts_pct ?? 'N/A'}% (${toOdds(sim.btts_pct)})</div>
-              <div class="book">Betway: ${book.btts ?? 'N/A'}</div>
-            </div>
+  <div class="label">Totals</div>
+
+  <div class="side">
+    <div>Both Teams To Score</div>
+    <div class="sim">${sim.btts_pct ?? 'N/A'}% (${toOdds(sim.btts_pct)})</div>
+    <div class="book">Betway: ${book.btts ?? 'N/A'}</div>
+  </div>
+</div>
+
+${(() => {
+  const totalXG = parseFloat(match.sim_stats.xg.total);
+
+  // Poisson-based probabilities
+  const p05 = Math.round(probAtLeast(1, totalXG) * 100);
+  const p15 = Math.round(probAtLeast(2, totalXG) * 100);
+  const p25 = Math.round(probAtLeast(3, totalXG) * 100); // 2.5+
+  const p35 = Math.round(probAtLeast(4, totalXG) * 100); // 3.5+
+  const p45 = Math.round(probAtLeast(5, totalXG) * 100);
+  const p55 = Math.round(probAtLeast(6, totalXG) * 100);
+
+  // Get book odds
+  const o25 = match.book_odds?.over_2_5 || null;
+  const o35 = match.book_odds?.over_3_5 || null;
+
+  // Convert odds → implied percentage
+  const book25 = o25 ? (100 / o25) : null;
+  const book35 = o35 ? (100 / o35) : null;
+
+  // Color logic comparing sim% vs implied%
+  function colorCell(simPct, impliedPct) {
+    if (!impliedPct) return ""; // no color
+    if (simPct > impliedPct) return "background:#b7ffb7;"; // GREEN
+    if (simPct < impliedPct) return "background:#ffb7b7;"; // RED
+    return "";
+  }
+
+  return `
+    <div class="goal-table-title">Total Goals %</div>
+
+    <div class="goal-table-wrapper">
+      <div class="goal-table-header">
+        <div>0.5+</div>
+        <div>1.5+</div>
+        <div>2.5+</div>
+        <div>3.5+</div>
+        <div>4.5+</div>
+        <div>5.5+</div>
+      </div>
+
+      <div class="goal-table-row">
+        <div>${p05}%</div>
+        <div>${p15}%</div>
+
+        <div style="${colorCell(p25, book25)}">${p25}%</div>
+        <div style="${colorCell(p35, book35)}">${p35}%</div>
+
+        <div>${p45}%</div>
+        <div>${p55}%</div>
+      </div>
+    </div>
+  `;
+})()}
+
+
+
 
             <div class="projected-score-box">
-  <div class="title">Projected Score</div>
   <div class="projected-score">
     ${match.home.name} ${match.sim_stats.xg.home} vs ${match.sim_stats.xg.away} ${match.away.name}
   </div>
@@ -662,6 +838,14 @@ imgTest.onload = () => {
 const homeXG = parseFloat(match.sim_stats.xg.home);
 const awayXG = parseFloat(match.sim_stats.xg.away);
 const diff = homeXG - awayXG;
+const totalXG = parseFloat(match.sim_stats.xg.total);
+
+const p05 = Math.round(probAtLeast(1, totalXG) * 100);
+const p15 = Math.round(probAtLeast(2, totalXG) * 100);
+const p25 = Math.round(probAtLeast(3, totalXG) * 100);
+const p35 = Math.round(probAtLeast(4, totalXG) * 100);
+const p45 = Math.round(probAtLeast(5, totalXG) * 100);
+const p55 = Math.round(probAtLeast(6, totalXG) * 100);
 
 let narrative = "";
 
@@ -726,6 +910,25 @@ colorizeTeamHeaders(card);
         });
       });
   }
+
+  function factorial(n) {
+  let r = 1;
+  for (let i = 2; i <= n; i++) r *= i;
+  return r;
+}
+
+function poissonPMF(k, lambda) {
+  return Math.exp(-lambda) * Math.pow(lambda, k) / factorial(k);
+}
+
+function probAtLeast(n, lambda) {
+  if (n <= 0) return 1;
+  let cdf = 0;
+  for (let k = 0; k <= n - 1; k++) {
+    cdf += poissonPMF(k, lambda);
+  }
+  return 1 - cdf;
+}
 
   // Initial load
   renderSimCards();
