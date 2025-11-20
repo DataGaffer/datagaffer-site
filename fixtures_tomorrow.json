@@ -1,1 +1,254 @@
-[]
+[
+  {
+    "fixture_id": 1379442,
+    "league": {
+      "id": 119,
+      "name": "Superliga"
+    },
+    "home": {
+      "id": 2073,
+      "name": "Silkeborg",
+      "logo": "https://media.api-sports.io/football/teams/2073.png",
+      "winner": null
+    },
+    "away": {
+      "id": 406,
+      "name": "Aarhus",
+      "logo": "https://media.api-sports.io/football/teams/406.png",
+      "winner": null
+    },
+    "home_id": 2073,
+    "away_id": 406,
+    "home_logo": "https://media.api-sports.io/football/teams/2073.png",
+    "away_logo": "https://media.api-sports.io/football/teams/406.png",
+    "date": "2025-11-21T18:00:00+00:00",
+    "book_odds": {
+      "home_win": 3.9,
+      "draw": 3.9,
+      "away_win": 1.8,
+      "btts": null,
+      "over_2_5": null,
+      "over_3_5": null,
+      "under_2_5": null,
+      "home_o1_5": null,
+      "away_o1_5": null
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.37",
+        "away": "1.74",
+        "total": "3.11"
+      },
+      "corners": {
+        "home": "5.1",
+        "away": "4.4",
+        "total": "9.5"
+      },
+      "shots": {
+        "home": "13.2",
+        "away": "14.9",
+        "total": "28.1"
+      },
+      "percents": {
+        "home_win_pct": 30.4,
+        "draw_pct": 22.6,
+        "away_win_pct": 47.0,
+        "over_2_5_pct": 60.4,
+        "over_3_5_pct": 37.8,
+        "under_2_5_pct": 39.6,
+        "btts_pct": 61.3,
+        "home_o1_5_pct": 39.7,
+        "away_o1_5_pct": 52.0
+      }
+    }
+  },
+  {
+    "fixture_id": 1388403,
+    "league": {
+      "id": 78,
+      "name": "Bundesliga"
+    },
+    "home": {
+      "id": 164,
+      "name": "FSV Mainz 05",
+      "logo": "https://media.api-sports.io/football/teams/164.png",
+      "winner": null
+    },
+    "away": {
+      "id": 167,
+      "name": "1899 Hoffenheim",
+      "logo": "https://media.api-sports.io/football/teams/167.png",
+      "winner": null
+    },
+    "home_id": 164,
+    "away_id": 167,
+    "home_logo": "https://media.api-sports.io/football/teams/164.png",
+    "away_logo": "https://media.api-sports.io/football/teams/167.png",
+    "date": "2025-11-21T19:30:00+00:00",
+    "book_odds": {
+      "home_win": 2.5,
+      "draw": 3.6,
+      "away_win": 2.62,
+      "btts": null,
+      "over_2_5": null,
+      "over_3_5": null,
+      "under_2_5": null,
+      "home_o1_5": null,
+      "away_o1_5": null
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.66",
+        "away": "1.35",
+        "total": "3.01"
+      },
+      "corners": {
+        "home": "5.2",
+        "away": "4.2",
+        "total": "9.4"
+      },
+      "shots": {
+        "home": "14.3",
+        "away": "12.5",
+        "total": "26.8"
+      },
+      "percents": {
+        "home_win_pct": 44.6,
+        "draw_pct": 23.9,
+        "away_win_pct": 31.6,
+        "over_2_5_pct": 57.9,
+        "over_3_5_pct": 35.6,
+        "under_2_5_pct": 42.1,
+        "btts_pct": 60.1,
+        "home_o1_5_pct": 49.6,
+        "away_o1_5_pct": 39.4
+      }
+    }
+  },
+  {
+    "fixture_id": 1387811,
+    "league": {
+      "id": 61,
+      "name": "Ligue 1"
+    },
+    "home": {
+      "id": 84,
+      "name": "Nice",
+      "logo": "https://media.api-sports.io/football/teams/84.png",
+      "winner": null
+    },
+    "away": {
+      "id": 81,
+      "name": "Marseille",
+      "logo": "https://media.api-sports.io/football/teams/81.png",
+      "winner": null
+    },
+    "home_id": 84,
+    "away_id": 81,
+    "home_logo": "https://media.api-sports.io/football/teams/84.png",
+    "away_logo": "https://media.api-sports.io/football/teams/81.png",
+    "date": "2025-11-21T19:45:00+00:00",
+    "book_odds": {
+      "home_win": 3.9,
+      "draw": 3.7,
+      "away_win": 1.9,
+      "btts": null,
+      "over_2_5": null,
+      "over_3_5": null,
+      "under_2_5": null,
+      "home_o1_5": null,
+      "away_o1_5": null
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.66",
+        "away": "0.99",
+        "total": "2.65"
+      },
+      "corners": {
+        "home": "4.7",
+        "away": "4.6",
+        "total": "9.3"
+      },
+      "shots": {
+        "home": "13.7",
+        "away": "13.2",
+        "total": "26.9"
+      },
+      "percents": {
+        "home_win_pct": 53.1,
+        "draw_pct": 24.3,
+        "away_win_pct": 22.6,
+        "over_2_5_pct": 49.6,
+        "over_3_5_pct": 27.6,
+        "under_2_5_pct": 50.4,
+        "btts_pct": 51.1,
+        "home_o1_5_pct": 49.4,
+        "away_o1_5_pct": 26.2
+      }
+    }
+  },
+  {
+    "fixture_id": 1390947,
+    "league": {
+      "id": 140,
+      "name": "La Liga"
+    },
+    "home": {
+      "id": 532,
+      "name": "Valencia",
+      "logo": "https://media.api-sports.io/football/teams/532.png",
+      "winner": null
+    },
+    "away": {
+      "id": 539,
+      "name": "Levante",
+      "logo": "https://media.api-sports.io/football/teams/539.png",
+      "winner": null
+    },
+    "home_id": 532,
+    "away_id": 539,
+    "home_logo": "https://media.api-sports.io/football/teams/532.png",
+    "away_logo": "https://media.api-sports.io/football/teams/539.png",
+    "date": "2025-11-21T20:00:00+00:00",
+    "book_odds": {
+      "home_win": 2.1,
+      "draw": 3.4,
+      "away_win": 3.4,
+      "btts": null,
+      "over_2_5": null,
+      "over_3_5": null,
+      "under_2_5": null,
+      "home_o1_5": null,
+      "away_o1_5": null
+    },
+    "sim_stats": {
+      "xg": {
+        "home": "1.54",
+        "away": "1.02",
+        "total": "2.56"
+      },
+      "corners": {
+        "home": "6.5",
+        "away": "3.4",
+        "total": "10.0"
+      },
+      "shots": {
+        "home": "15.2",
+        "away": "8.9",
+        "total": "24.2"
+      },
+      "percents": {
+        "home_win_pct": 49.1,
+        "draw_pct": 25.5,
+        "away_win_pct": 25.4,
+        "over_2_5_pct": 46.9,
+        "over_3_5_pct": 25.6,
+        "under_2_5_pct": 53.1,
+        "btts_pct": 49.5,
+        "home_o1_5_pct": 45.7,
+        "away_o1_5_pct": 27.6
+      }
+    }
+  }
+]
