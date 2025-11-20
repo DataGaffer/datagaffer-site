@@ -69,7 +69,7 @@ def get_blended_goals(team_id, side, stat_type):
     val_2024 = api_stats_2024.get(team_id, {}).get(side, {}).get(stat_type, None)
 
     if val_2025 is not None and val_2024 is not None:
-        return 0.7 * val_2025 + 0.3 * val_2024
+        return 0.8 * val_2025 + 0.2 * val_2024
     elif val_2025 is not None:
         return val_2025
     elif val_2024 is not None:

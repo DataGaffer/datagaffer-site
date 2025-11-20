@@ -23,7 +23,7 @@ PLAYER_STATS_LAST_SEASON = "players_2024" # last season
 SIM_OUTPUT_FOLDER = "player_simulations"
 os.makedirs(SIM_OUTPUT_FOLDER, exist_ok=True)
 
-SIMULATIONS = 5000
+SIMULATIONS = 10000
 
 # thresholds
 MIN_APPS_CURRENT = 2
@@ -47,8 +47,8 @@ def blend_stats(curr, prev):
     blended = {}
     for key in ["appearances", "minutes", "goals", "assists", "shots", "shots_on_target"]:
         blended[key] = int(round(
-            (curr.get(key, 0) or 0) * 0.5 +
-            (prev.get(key, 0) or 0) * 0.5
+            (curr.get(key, 0) or 0) * 0.7 +
+            (prev.get(key, 0) or 0) * 0.3
         ))
     return {**curr, **blended}
 
