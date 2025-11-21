@@ -555,21 +555,77 @@ let currentChartData = [];
 // ⭐ Master loader – MUST run before any charts/tables ⭐
 async function initXG() {
     try {
-        const res = await fetch("xg_stats.json");
-        xgData = await res.json();
+        // Load everything first
+        const [xgRes, actualRes] = await Promise.all([
+            fetch("xg_stats.json"),
+            fetch("team_actuals.json")
+        ]);
 
-        // Set default league
-        document.getElementById("leagueSelect").value = "all";
+        xgData = await xgRes.json();
+        actualData = await actualRes.json();
 
-        // Load charts first (charts page default)
-        await loadActualData();                       // ⭐ load actual goals first
-await loadChartsForLeague("all");  // then render fast charts
+        console.log("XG + Actuals Loaded");
+
+        // NOW that all data is loaded, activate buttons
+        projBtn.onclick = () => {
+            projBtn.classList.add("active");
+            chartsBtn.classList.remove("active");
+            statsBtn.classList.remove("active");
+
+            document.getElementById("chart-container").style.display = "none";
+            document.getElementById("table-container").style.display = "none";
+            document.getElementById("projected-container").style.display = "block";
+
+            loadProjectedScores(
+                document.getElementById("leagueSelect").value,
+                document.getElementById("teamSearch").value
+            );
+        };
+
+        chartsBtn.onclick = () => {
+            chartsBtn.classList.add("active");
+            projBtn.classList.remove("active");
+            statsBtn.classList.remove("active");
+
+            document.getElementById("chart-container").style.display = "block";
+            document.getElementById("table-container").style.display = "none";
+            document.getElementById("projected-container").style.display = "none";
+
+            loadChartsForLeague(document.getElementById("leagueSelect").value);
+        };
+
+        statsBtn.onclick = () => {
+            statsBtn.classList.add("active");
+            projBtn.classList.remove("active");
+            chartsBtn.classList.remove("active");
+
+            document.getElementById("chart-container").style.display = "none";
+            document.getElementById("table-container").style.display = "block";
+            document.getElementById("projected-container").style.display = "none";
+
+            showLeague(document.getElementById("leagueSelect").value, null);
+        };
+
+        // Default load AFTER data
+        // Default to Matchups view
+projBtn.classList.add("active");
+chartsBtn.classList.remove("active");
+statsBtn.classList.remove("active");
+
+document.getElementById("chart-container").style.display = "none";
+document.getElementById("table-container").style.display = "none";
+document.getElementById("projected-container").style.display = "block";
+
+loadProjectedScores(
+    document.getElementById("leagueSelect").value,
+    document.getElementById("teamSearch").value
+);
+
     } catch (err) {
-        console.error("Error loading xg_stats.json:", err);
+        console.error("Error loading datasets:", err);
     }
 }
 
-// Run immediately on page load
 initXG();
 </script>
 
@@ -1207,20 +1263,6 @@ function updateChartViews(filteredData) {
     chartAgainstInstance.update();
 }
 
-window.addEventListener("DOMContentLoaded", async () => {
-    projBtn.classList.add("active");
-    chartsBtn.classList.remove("active");
-    statsBtn.classList.remove("active");
-
-    document.getElementById("chart-container").style.display = "none";
-    document.getElementById("table-container").style.display = "none";
-    document.getElementById("projected-container").style.display = "block";
-
-    await loadProjectedScores(
-    document.getElementById("leagueSelect").value,
-    document.getElementById("teamSearch").value
-);  // Load projected scores immediately
-});
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

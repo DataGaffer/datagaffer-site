@@ -95,7 +95,11 @@ def get_form_stats(team_id):
 
 
 def get_h2h_stats(home_id, away_id):
-    """Fetch last 10 H2H meetings with extended metrics."""
+    """
+    Fetch last 10 H2H meetings and compute stats PER TEAM:
+    - home_id = fixture home team (e.g. PSG)
+    - away_id = fixture away team (e.g. Le Havre)
+    """
     url = f"https://v3.football.api-sports.io/fixtures/headtohead?h2h={home_id}-{away_id}&last=10"
     try:
         r = requests.get(url, headers=headers, timeout=10)
@@ -103,16 +107,44 @@ def get_h2h_stats(home_id, away_id):
         if not data:
             return {}
 
-        total = len(data)
+        total = 0
+        home_team_goals = away_team_goals = 0   # per team (fixture home/away)
         home_wins = away_wins = draws = 0
-        home_goals = away_goals = 0
         over_1_5 = over_2_5 = over_3_5 = btts = 0
 
         for m in data:
+            match_home_id = m["teams"]["home"]["id"]
+            match_away_id = m["teams"]["away"]["id"]
             hg = m["goals"]["home"] or 0
             ag = m["goals"]["away"] or 0
-            home_goals += hg
-            away_goals += ag
+
+            # Only count matches between these two teams
+            if {match_home_id, match_away_id} != {home_id, away_id}:
+                continue
+
+            total += 1
+
+            # --- assign goals & result per TEAM, not "home side" ---
+            if match_home_id == home_id and match_away_id == away_id:
+                # fixture home team was home in this match
+                home_team_goals += hg
+                away_team_goals += ag
+                if hg > ag:
+                    home_wins += 1
+                elif ag > hg:
+                    away_wins += 1
+                else:
+                    draws += 1
+            elif match_home_id == away_id and match_away_id == home_id:
+                # fixture home team was AWAY in this match
+                away_team_goals += hg
+                home_team_goals += ag
+                if hg > ag:
+                    away_wins += 1
+                elif ag > hg:
+                    home_wins += 1
+                else:
+                    draws += 1
 
             total_goals = hg + ag
             if total_goals > 1:
@@ -124,27 +156,23 @@ def get_h2h_stats(home_id, away_id):
             if hg > 0 and ag > 0:
                 btts += 1
 
-            if hg > ag:
-                home_wins += 1
-            elif hg < ag:
-                away_wins += 1
-            else:
-                draws += 1
+        if total == 0:
+            return {}
 
         return {
-    "matches": total,
-    "home_team_id": home_id,   # ← add this
-    "away_team_id": away_id,   # ← add this
-    "home_wins": home_wins,
-    "away_wins": away_wins,
-    "draws": draws,
-    "avg_home_goals": round(home_goals / total, 2),
-    "avg_away_goals": round(away_goals / total, 2),
-    "over_1_5_pct": round(over_1_5 / total * 100, 1),
-    "over_2_5_pct": round(over_2_5 / total * 100, 1),
-    "over_3_5_pct": round(over_3_5 / total * 100, 1),
-    "btts_pct": round(btts / total * 100, 1),
-}
+            "matches": total,
+            "home_team_id": home_id,   # fixture home
+            "away_team_id": away_id,   # fixture away
+            "home_wins": home_wins,
+            "away_wins": away_wins,
+            "draws": draws,
+            "avg_home_goals": round(home_team_goals / total, 2),
+            "avg_away_goals": round(away_team_goals / total, 2),
+            "over_1_5_pct": round(over_1_5 / total * 100, 1),
+            "over_2_5_pct": round(over_2_5 / total * 100, 1),
+            "over_3_5_pct": round(over_3_5 / total * 100, 1),
+            "btts_pct": round(btts / total * 100, 1),
+        }
 
     except Exception as e:
         print(f"⚠️ Error fetching H2H for {home_id}-{away_id}: {e}")

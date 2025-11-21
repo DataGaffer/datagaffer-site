@@ -221,31 +221,15 @@ function renderCards(fixtures) {
 
   fixtures.forEach(match => {
     const sim = match.sim_stats || {};
-    const perc = sim.percents || {};
-    const book = match.book_odds || {};
-    const h2h = match.h2h || {};
+const perc = sim.percents || {};
+const book = match.book_odds || {};
+const h2h = match.h2h || {};
 
-// ⭐ DEBUG — SEE WHAT THE DATA ACTUALLY IS
-console.log("DEBUG H2H CHECK", {
-    fixtureHome: match.home?.name,
-    fixtureHomeID: match.home?.id,
-    fixtureAway: match.away?.name,
-    fixtureAwayID: match.away?.id,
-    h2hHomeID: h2h.home_team_id,
-    h2hAwayID: h2h.away_team_id,
-    avg_home_goals: h2h.avg_home_goals,
-    avg_away_goals: h2h.avg_away_goals
-});
+// ✅ Clean, no swapping needed anymore
+const h2hHome = h2h.avg_home_goals || 0;
+const h2hAway = h2h.avg_away_goals || 0;
 
-// --- Will swap data after debug
-let h2hHome = h2h.avg_home_goals || 0;
-let h2hAway = h2h.avg_away_goals || 0;
-
-// Only swap if Python output includes these IDs
-// If H2H lists the opposite team as "home", swap the averages
-if (match.home.id !== h2h.home_team_id) {
-    [h2hHome, h2hAway] = [h2hAway, h2hHome];
-}
+// (delete ALL old debug + swap code)
 
     const colorForm = form => form.split("").map(c => {
       if (c === "W") return `<span class="win">${c}</span>`;
