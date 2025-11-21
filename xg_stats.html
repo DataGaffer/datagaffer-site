@@ -42,7 +42,7 @@
       background: #ffffff;
       padding: 10px;
       border: 2px solid #003f2e;
-      width: 60%;
+      width: 40%;
       border-radius: 4px;
       font-weight: 600;
     }
@@ -239,6 +239,83 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* =============================
+   MATCH PROJECTIONS TABLE STYLE
+   (Copied from projections.html)
+   ============================= */
+
+.proj-table {
+  width: 85%;
+  max-width: 950px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  font-size: 18px;
+  line-height: 1.0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  margin-bottom: 40px;
+}
+
+.proj-table th, .proj-table td {
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.proj-table th {
+  background: #003f2e;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.proj-table img {
+  width: 30px;
+  height: 30px;
+}
+
+.proj-row:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* Fix Home Team + Away Team column widths */
+.proj-table td:nth-child(2),
+.proj-table th:nth-child(2),
+.proj-table td:nth-child(6),
+.proj-table th:nth-child(6) {
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 925px) {
+  .proj-table {
+    width: 95% !important;
+    font-size: 12px !important;
+  }
+
+  .proj-table th, .proj-table td {
+    padding: 4px !important;
+    font-size: 12px !important;
+  }
+
+  .proj-table img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .proj-table td:nth-child(2),
+  .proj-table th:nth-child(2),
+  .proj-table td:nth-child(6),
+  .proj-table th:nth-child(6) {
+    width: 22% !important;
+  }
+}
+
 /* ==========================================
    PERFECT MOBILE CHART STYLING (≤ 768px)
 ========================================== */
@@ -410,9 +487,19 @@
   </a>
 </div>
 
-<div class="banner">Expected Goals vs Actual Team Performance — 2025 Season</div>
+<div class="banner">
+  <strong>Matchups • xG Charts • Team Stats</strong><br>
+  <span style="font-size: 0.75em; opacity: 0.85;">
+    Use the buttons below to switch views:<br>
+    <b>Matchups</b> shows DataGaffer’s predicted xG for every matchup,<br>
+    <b>xG Charts</b> show actual goals vs expected goals for all teams,<br>
+    <b>Team Stats</b> shows xG, xGA, goals, and combined totals for each club.
+  </span>
+</div>
+
 
 <div class="xg-buttons">
+  <button id="projBtn">Matchups</button>
   <button id="chartsBtn" class="active">xG Charts</button>
   <button id="statsBtn">Team Stats</button>
 </div>
@@ -429,8 +516,8 @@
 
   <!-- League Dropdown -->
   <select id="leagueSelect">
-    <option value="all">All Teams</option>
-    <option value="premier_league" selected>Premier League</option>
+    <option value="all" selected>All Teams</option>
+    <option value="premier_league">Premier League</option>
     <option value="la_liga">La Liga</option>
     <option value="serie_a">Serie A</option>
     <option value="bundesliga">Bundesliga</option>
@@ -457,6 +544,7 @@
 
 <!-- ⭐ TABLE HIDDEN BY DEFAULT ⭐ -->
 <div id="table-container" style="display:none;"></div>
+<div id="projected-container" style="display:none;"></div>
 
 <script>
 let xgData = {};
@@ -471,11 +559,11 @@ async function initXG() {
         xgData = await res.json();
 
         // Set default league
-        document.getElementById("leagueSelect").value = "premier_league";
+        document.getElementById("leagueSelect").value = "all";
 
         // Load charts first (charts page default)
         await loadActualData();                       // ⭐ load actual goals first
-await loadChartsForLeague("premier_league");  // then render fast charts
+await loadChartsForLeague("all");  // then render fast charts
     } catch (err) {
         console.error("Error loading xg_stats.json:", err);
     }
@@ -503,6 +591,12 @@ document.getElementById("leagueSelect").addEventListener("change", function () {
   else {
       showLeague(league, null);
   }
+  if (document.getElementById("projected-container").style.display !== "none") {
+    loadProjectedScores(
+        league,
+        document.getElementById("teamSearch").value
+    );
+}
 });
 </script>
 
@@ -525,40 +619,77 @@ document.getElementById("teamSearch").addEventListener("input", function () {
   if (document.getElementById("chart-container").style.display !== "none") {
       filterChartTeams(term);
   }
+  if (document.getElementById("projected-container").style.display !== "none") {
+    loadProjectedScores(
+        document.getElementById("leagueSelect").value,
+        this.value
+    );
+}
+});
+</script>
+
+<script>
+
+projBtn.addEventListener("click", () => {
+    projBtn.classList.add("active");
+    chartsBtn.classList.remove("active");
+    statsBtn.classList.remove("active");
+
+    document.getElementById("chart-container").style.display = "none";
+    document.getElementById("table-container").style.display = "none";
+    document.getElementById("projected-container").style.display = "block";
+
+        loadProjectedScores(
+        document.getElementById("leagueSelect").value,
+        document.getElementById("teamSearch").value
+    );
 });
 </script>
 
 <!-- ⭐ BUTTON TOGGLE LOGIC ⭐ -->
 <script>
-const chartsBtn = document.querySelectorAll(".xg-buttons button")[0];
-const statsBtn  = document.querySelectorAll(".xg-buttons button")[1];
+const projBtn  = document.querySelectorAll(".xg-buttons button")[0];
+const chartsBtn = document.querySelectorAll(".xg-buttons button")[1];
+const statsBtn  = document.querySelectorAll(".xg-buttons button")[2];
 
+// ---------------- PROJECTED SCORES BUTTON ----------------
+projBtn.addEventListener("click", () => {
+    projBtn.classList.add("active");
+    chartsBtn.classList.remove("active");
+    statsBtn.classList.remove("active");
+
+    document.getElementById("chart-container").style.display = "none";
+    document.getElementById("table-container").style.display = "none";
+    document.getElementById("projected-container").style.display = "block";
+
+    loadProjectedScores(
+    document.getElementById("leagueSelect").value,
+    document.getElementById("teamSearch").value
+);
+});
+
+// ---------------- XG CHARTS BUTTON ----------------
 chartsBtn.addEventListener("click", () => {
-
-    // ⭐ RESET SEARCH BAR
-    const search = document.getElementById("teamSearch");
-    search.value = "";
-
     chartsBtn.classList.add("active");
+    projBtn.classList.remove("active");
     statsBtn.classList.remove("active");
 
     document.getElementById("chart-container").style.display = "block";
     document.getElementById("table-container").style.display = "none";
+    document.getElementById("projected-container").style.display = "none";
 
     loadChartsForLeague(document.getElementById("leagueSelect").value);
 });
 
+// ---------------- TEAM STATS BUTTON ----------------
 statsBtn.addEventListener("click", () => {
-
-    // ⭐ RESET SEARCH BAR
-    const search = document.getElementById("teamSearch");
-    search.value = "";
-
     statsBtn.classList.add("active");
+    projBtn.classList.remove("active");
     chartsBtn.classList.remove("active");
 
     document.getElementById("chart-container").style.display = "none";
     document.getElementById("table-container").style.display = "block";
+    document.getElementById("projected-container").style.display = "none";
 
     showLeague(document.getElementById("leagueSelect").value, null);
 });
@@ -717,6 +848,177 @@ async function buildChartData(league) {
     }
 
     return points;
+}
+
+// ⭐ League name mapping (dropdown → fixtures.json)
+const leagueMap = {
+    "premier_league": "Premier League",
+    "la_liga": "La Liga",
+    "bundesliga": "Bundesliga",
+    "serie_a": "Serie A",
+    "ligue_1": "Ligue 1",
+    "eredivisie": "Eredivisie",
+    "all": "all"
+};
+
+async function loadProjectedScores(selectedLeague = null, searchTerm = "") {
+    const projBox = document.getElementById("projected-container");
+    projBox.innerHTML = "<p style='text-align:center;'>Loading…</p>";
+
+    let fixtures = await fetch("fixtures.json").then(r => r.json());
+    const xgStats = await fetch("xg_stats.json").then(r => r.json());
+
+    // League filter using leagueMap
+    if (selectedLeague && selectedLeague !== "all") {
+        const mapped = leagueMap[selectedLeague] || selectedLeague;
+        fixtures = fixtures.filter(f =>
+            f.league &&
+            f.league.name &&
+            f.league.name.toLowerCase() === mapped.toLowerCase()
+        );
+    }
+
+    // Search filter
+    if (searchTerm.trim() !== "") {
+        const s = searchTerm.toLowerCase();
+        fixtures = fixtures.filter(f =>
+            f.home.name.toLowerCase().includes(s) ||
+            f.away.name.toLowerCase().includes(s)
+        );
+    }
+
+    // Build xG lookup map
+    // Build xG lookup map — MATCH BY TEAM ID FROM LOGO
+const xgMap = {};
+Object.values(xgStats).forEach(league => {
+    league.for.forEach(t => {
+        const idMatch = t.logo.match(/\/(\d+)\.png$/);
+        if (!idMatch) return;
+
+        const teamID = idMatch[1];
+
+        xgMap[teamID] = {
+            xgf: parseFloat(t.xg_for),
+            xga: parseFloat(t.xg_against),
+            logo: t.logo
+        };
+    });
+});
+
+    // Build projected score rows (NO SORTING – keep fixtures.json order)
+    let rows = fixtures.map(match => {
+        // Extract IDs from fixture logos
+const homeID = match.home.logo.match(/\/(\d+)\.png$/)?.[1];
+const awayID = match.away.logo.match(/\/(\d+)\.png$/)?.[1];
+
+const h = xgMap[homeID];
+const a = xgMap[awayID];
+
+if (!h || !a) return null;
+
+const home = match.home.name;
+const away = match.away.name;
+
+        const homeProj = (h.xgf + a.xga) / 2;
+        const awayProj = (a.xgf + h.xga) / 2;
+
+        return {
+            home,
+            away,
+            homeLogo: h.logo,
+            awayLogo: a.logo,
+            homeProj,
+            awayProj,
+            total: homeProj + awayProj
+        };
+    }).filter(Boolean);
+
+    // -----------------------------
+    // ⭐ COMBINED GRADIENT SCALE
+    // -----------------------------
+    const allXG = rows.flatMap(r => [r.homeProj, r.awayProj]).filter(v => !isNaN(v));
+    const sortedXG = [...allXG].sort((a, b) => a - b);
+    // Total xG scale (separate from home/away)
+const allTotals = rows.map(r => r.total);
+const sortedTotals = [...allTotals].sort((a, b) => a - b);
+
+
+    // GRADIENT COLOR FUNCTIONS
+    function colorFromRatio(r, start, end) {
+        r = Math.max(0, Math.min(1, r));
+        const rr = Math.round(start.r + (end.r - start.r) * r);
+        const gg = Math.round(start.g + (end.g - start.g) * r);
+        const bb = Math.round(start.b + (end.b - start.b) * r);
+        return `rgb(${rr},${gg},${bb})`;
+    }
+
+    function getRankBasedGradient(value, sortedValues) {
+        if (!sortedValues.length) return "white";
+
+        const idx = sortedValues.indexOf(value);
+        const t = idx / (sortedValues.length - 1);
+
+        if (t < 0.5) {
+            const r = t / 0.5;  // red → white
+            return `rgb(255, ${255 * r}, ${255 * r})`;
+        } else {
+            const g = (t - 0.5) / 0.5; // white → green
+            return `rgb(${255 * (1 - g)}, 255, ${255 * (1 - g)})`;
+        }
+    }
+
+    // -----------------------------
+    // ⭐ BUILD HTML ROWS
+    // -----------------------------
+    const htmlRows = rows.map(r => `
+        <tr>
+            <td><img src="${r.homeLogo}" width="28"></td>
+            <td>${r.home}</td>
+
+            <!-- HOME xG -->
+            <td class="gradient-cell"
+                style="background:${getRankBasedGradient(r.homeProj, sortedXG)}; color:#000;">
+                ${r.homeProj.toFixed(2)}
+            </td>
+
+            <td class="gradient-cell"
+    style="background:${getRankBasedGradient(r.total, sortedTotals)}; color:#000;">
+    <strong>${r.total.toFixed(2)}</strong>
+</td>
+
+
+            <!-- AWAY xG -->
+            <td class="gradient-cell"
+                style="background:${getRankBasedGradient(r.awayProj, sortedXG)}; color:#000;">
+                ${r.awayProj.toFixed(2)}
+            </td>
+
+            <td>${r.away}</td>
+            <td><img src="${r.awayLogo}" width="28"></td>
+        </tr>
+    `).join("");
+
+
+    // -----------------------------
+    // ⭐ FINAL TABLE OUTPUT
+    // -----------------------------
+    projBox.innerHTML = `
+        <table style="width:90%; margin:25px auto; background:white; border-collapse:collapse;
+                      font-size:18px; border:1px solid #ccc;" class="proj-table">
+            <thead>
+                <tr style="background:#003f2e; color:white;">
+                    <th></th>
+                    <th>Home</th>
+                    <th>xG</th>
+                    <th>Total</th>
+                    <th>xG</th>
+                    <th>Away</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>${htmlRows}</tbody>
+        </table>
+    `;
 }
 
 // Load & draw charts
@@ -905,10 +1207,19 @@ function updateChartViews(filteredData) {
     chartAgainstInstance.update();
 }
 
-// Load charts on page load
-window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("leagueSelect").value = "premier_league";
-loadChartsForLeague("premier_league");
+window.addEventListener("DOMContentLoaded", async () => {
+    projBtn.classList.add("active");
+    chartsBtn.classList.remove("active");
+    statsBtn.classList.remove("active");
+
+    document.getElementById("chart-container").style.display = "none";
+    document.getElementById("table-container").style.display = "none";
+    document.getElementById("projected-container").style.display = "block";
+
+    await loadProjectedScores(
+    document.getElementById("leagueSelect").value,
+    document.getElementById("teamSearch").value
+);  // Load projected scores immediately
 });
 </script>
 

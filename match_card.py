@@ -132,17 +132,19 @@ def get_h2h_stats(home_id, away_id):
                 draws += 1
 
         return {
-            "matches": total,
-            "home_wins": home_wins,
-            "away_wins": away_wins,
-            "draws": draws,
-            "avg_home_goals": round(home_goals / total, 2),
-            "avg_away_goals": round(away_goals / total, 2),
-            "over_1_5_pct": round(over_1_5 / total * 100, 1),
-            "over_2_5_pct": round(over_2_5 / total * 100, 1),
-            "over_3_5_pct": round(over_3_5 / total * 100, 1),
-            "btts_pct": round(btts / total * 100, 1),
-        }
+    "matches": total,
+    "home_team_id": home_id,   # ← add this
+    "away_team_id": away_id,   # ← add this
+    "home_wins": home_wins,
+    "away_wins": away_wins,
+    "draws": draws,
+    "avg_home_goals": round(home_goals / total, 2),
+    "avg_away_goals": round(away_goals / total, 2),
+    "over_1_5_pct": round(over_1_5 / total * 100, 1),
+    "over_2_5_pct": round(over_2_5 / total * 100, 1),
+    "over_3_5_pct": round(over_3_5 / total * 100, 1),
+    "btts_pct": round(btts / total * 100, 1),
+}
 
     except Exception as e:
         print(f"⚠️ Error fetching H2H for {home_id}-{away_id}: {e}")
@@ -174,6 +176,11 @@ def main():
     "away_name": away["name"],
     "home_logo": home["logo"],
     "away_logo": away["logo"],
+
+    # ✅ Required for H2H alignment in HTML
+    "home_team_id": home_id,
+    "away_team_id": away_id,
+
     "home_form_goals": home_form.get("avg_goals", 0),
     "away_form_goals": away_form.get("avg_goals", 0),
     "home_form_last5": home_form.get("form", ""),
@@ -182,14 +189,16 @@ def main():
     "away_form_win": away_form.get("win_pct", 0),
     "home_form_o15": home_form.get("over_1_5_pct", 0),
     "away_form_o15": away_form.get("over_1_5_pct", 0),
-    "home_form_o25": home_form.get("over_2_5_pct", 0),   # ✅ NEW
-    "away_form_o25": away_form.get("over_2_5_pct", 0),   # ✅ NEW
+    "home_form_o25": home_form.get("over_2_5_pct", 0),
+    "away_form_o25": away_form.get("over_2_5_pct", 0),
     "home_form_o35": home_form.get("over_3_5_pct", 0),
     "away_form_o35": away_form.get("over_3_5_pct", 0),
     "home_form_btts": home_form.get("btts_pct", 0),
     "away_form_btts": away_form.get("btts_pct", 0),
     "home_form_clean": home_form.get("clean_sheets_pct", 0),
     "away_form_clean": away_form.get("clean_sheets_pct", 0),
+
+    # Already includes home_team_id/away_team_id inside h2h itself
     "h2h": h2h,
 })
 

@@ -198,7 +198,7 @@ async function loadFixtures() {
     const fx = fixtureList.find(f =>
       f.home?.name === formMatch.home_name && f.away?.name === formMatch.away_name
     );
-    return { ...formMatch, ...fx };
+    return { ...fx, ...formMatch };
   });
 
   renderCards(allFixtures);
@@ -224,6 +224,28 @@ function renderCards(fixtures) {
     const perc = sim.percents || {};
     const book = match.book_odds || {};
     const h2h = match.h2h || {};
+
+// ⭐ DEBUG — SEE WHAT THE DATA ACTUALLY IS
+console.log("DEBUG H2H CHECK", {
+    fixtureHome: match.home?.name,
+    fixtureHomeID: match.home?.id,
+    fixtureAway: match.away?.name,
+    fixtureAwayID: match.away?.id,
+    h2hHomeID: h2h.home_team_id,
+    h2hAwayID: h2h.away_team_id,
+    avg_home_goals: h2h.avg_home_goals,
+    avg_away_goals: h2h.avg_away_goals
+});
+
+// --- Will swap data after debug
+let h2hHome = h2h.avg_home_goals || 0;
+let h2hAway = h2h.avg_away_goals || 0;
+
+// Only swap if Python output includes these IDs
+// If H2H lists the opposite team as "home", swap the averages
+if (match.home.id !== h2h.home_team_id) {
+    [h2hHome, h2hAway] = [h2hAway, h2hHome];
+}
 
     const colorForm = form => form.split("").map(c => {
       if (c === "W") return `<span class="win">${c}</span>`;
@@ -292,7 +314,7 @@ function renderCards(fixtures) {
   <div>Over 1.5: ${h2h.over_1_5_pct || 0}%</div><div>Over 2.5: ${h2h.over_2_5_pct || 0}%</div>
   <div>Over 3.5: ${h2h.over_3_5_pct || 0}%</div><div>BTTS: ${h2h.btts_pct || 0}%</div>
   <div style="grid-column: span 2; text-align:center; font-weight:600;">
-  Avg Goals: ${(h2h.avg_home_goals || 0).toFixed(2)} | ${(h2h.avg_away_goals || 0).toFixed(2)}
+  Avg Goals: ${h2hHome.toFixed(2)} | ${h2hAway.toFixed(2)}
 </div>
 </div>
         </div>
