@@ -766,23 +766,25 @@ function getActual(team) {
 }
 
 async function showLeague(league, btn) {
+
+  let leagueTeams = [];
+
   if (league === "all") {
-  const leagues = Object.keys(xgData);
-  let combined = [];
+      // Build combined list WITHOUT modifying xgData
+      Object.keys(xgData).forEach(l => {
+          if (xgData[l]?.for) {
+              leagueTeams.push(...xgData[l].for);
+          }
+      });
 
-  leagues.forEach(l => {
-    if (xgData[l]?.for) combined.push(...xgData[l].for);
-  });
+  } else {
+      leagueTeams = xgData[league]?.for || [];
+  }
 
-  // Override leagueTeams with merged list
-  xgData["all"] = { for: combined };
-}
-
-  const leagueTeams = xgData[league]?.for || [];
   if (!leagueTeams.length) {
-    document.getElementById('table-container').innerHTML =
-      `<p style="text-align:center; font-size:18px; color:#555;">No data found for this league.</p>`;
-    return;
+      document.getElementById('table-container').innerHTML =
+        `<p style="text-align:center; font-size:18px; color:#555;">No data found for this league.</p>`;
+      return;
   }
 
   const rows = await Promise.all(

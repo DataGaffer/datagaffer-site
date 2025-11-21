@@ -121,9 +121,9 @@
     "num_matches": 5
   },
   "home_36_746": {
-    "book_home_win": 2.15,
+    "book_home_win": 2.1,
     "book_draw": 3.25,
-    "book_away_win": 3.7,
+    "book_away_win": 3.75,
     "home_wins": 1,
     "away_wins": 3,
     "draws": 1,
@@ -154,9 +154,9 @@
     "num_matches": 4
   },
   "home_529_531": {
-    "book_home_win": 1.42,
-    "book_draw": 5.25,
-    "book_away_win": 6.0,
+    "book_home_win": 1.36,
+    "book_draw": 5.5,
+    "book_away_win": 7.0,
     "home_wins": 4,
     "away_wins": 0,
     "draws": 0,

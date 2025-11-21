@@ -4009,6 +4009,51 @@
           "accuracy_score": 81.5
         }
       ]
+    },
+    {
+      "date": "2025-11-21",
+      "matches": [
+        {
+          "date": "2025-11-21",
+          "league": "Superliga",
+          "match": "Silkeborg vs Aarhus",
+          "fixture_id": 1379442,
+          "projected_score": "1.37 - 1.74",
+          "actual_score": "0 - 2",
+          "avg_diff": 0.82,
+          "accuracy_score": 79.5
+        },
+        {
+          "date": "2025-11-21",
+          "league": "Bundesliga",
+          "match": "FSV Mainz vs Hoffenheim",
+          "fixture_id": 1388403,
+          "projected_score": "1.66 - 1.35",
+          "actual_score": "1 - 1",
+          "avg_diff": 0.51,
+          "accuracy_score": 87.2
+        },
+        {
+          "date": "2025-11-21",
+          "league": "Ligue 1",
+          "match": "Nice vs Marseille",
+          "fixture_id": 1387811,
+          "projected_score": "1.66 - 0.99",
+          "actual_score": "1 - 5",
+          "avg_diff": 2.33,
+          "accuracy_score": 41.8
+        },
+        {
+          "date": "2025-11-21",
+          "league": "La Liga",
+          "match": "Valencia vs Levante",
+          "fixture_id": 1390947,
+          "projected_score": "1.54 - 1.02",
+          "actual_score": "1 - 0",
+          "avg_diff": 0.78,
+          "accuracy_score": 80.5
+        }
+      ]
     }
   ],
   "leagues": [
@@ -4032,12 +4077,12 @@
     },
     {
       "league": "La Liga",
-      "games_tracked": 35,
-      "dg_score": 77.3,
-      "sim_avg_goals": 2.76,
-      "actual_avg_goals": 2.37,
-      "actual_btts_pct": 42.9,
-      "actual_over25_pct": 45.7
+      "games_tracked": 36,
+      "dg_score": 77.4,
+      "sim_avg_goals": 2.75,
+      "actual_avg_goals": 2.33,
+      "actual_btts_pct": 41.7,
+      "actual_over25_pct": 44.4
     },
     {
       "league": "Premier League",
@@ -4050,21 +4095,21 @@
     },
     {
       "league": "Ligue 1",
-      "games_tracked": 41,
-      "dg_score": 74.1,
-      "sim_avg_goals": 3.17,
-      "actual_avg_goals": 2.8,
-      "actual_btts_pct": 46.3,
-      "actual_over25_pct": 48.8
+      "games_tracked": 42,
+      "dg_score": 73.4,
+      "sim_avg_goals": 3.16,
+      "actual_avg_goals": 2.88,
+      "actual_btts_pct": 47.6,
+      "actual_over25_pct": 50.0
     },
     {
       "league": "Bundesliga",
-      "games_tracked": 30,
-      "dg_score": 75.3,
-      "sim_avg_goals": 3.39,
-      "actual_avg_goals": 3.0,
-      "actual_btts_pct": 53.3,
-      "actual_over25_pct": 60.0
+      "games_tracked": 31,
+      "dg_score": 75.7,
+      "sim_avg_goals": 3.38,
+      "actual_avg_goals": 2.97,
+      "actual_btts_pct": 54.8,
+      "actual_over25_pct": 58.1
     },
     {
       "league": "UEFA Champions League",
@@ -4086,12 +4131,12 @@
     },
     {
       "league": "Superliga",
-      "games_tracked": 12,
-      "dg_score": 74.9,
+      "games_tracked": 13,
+      "dg_score": 75.2,
       "sim_avg_goals": 3.14,
-      "actual_avg_goals": 3.5,
-      "actual_btts_pct": 58.3,
-      "actual_over25_pct": 58.3
+      "actual_avg_goals": 3.38,
+      "actual_btts_pct": 53.8,
+      "actual_over25_pct": 53.8
     },
     {
       "league": "DFB Pokal",
