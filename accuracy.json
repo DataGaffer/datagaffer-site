@@ -848,6 +848,60 @@
         "result": "Win"
       }
     ]
+  },
+  {
+    "date": "2025-11-22",
+    "picks": [
+      {
+        "fixture_id": 1380980,
+        "match": "Heracles vs GO Ahead",
+        "pick": "Heracles o1.5 Goals",
+        "dg_odds": 1.53,
+        "book_odds": 2.0,
+        "edge": 15.2,
+        "league": "Eredivisie",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1382373,
+        "match": "Luzern vs Servette",
+        "pick": "Luzern o1.5 Goals",
+        "dg_odds": 1.5,
+        "book_odds": 1.9,
+        "edge": 14.2,
+        "league": "Super League",
+        "result": "Win"
+      },
+      {
+        "fixture_id": 1379082,
+        "match": "Burnley vs Chelsea",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.45,
+        "book_odds": 1.8,
+        "edge": 13.3,
+        "league": "Premier League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1379088,
+        "match": "Wolves vs Palace",
+        "pick": "Over 2.5 Goals",
+        "dg_odds": 1.59,
+        "book_odds": 2.0,
+        "edge": 12.8,
+        "league": "Premier League",
+        "result": "Loss"
+      },
+      {
+        "fixture_id": 1388401,
+        "match": "K\u00f6ln vs Frankfurt",
+        "pick": "K\u00f6ln o1.5 Goals",
+        "dg_odds": 1.72,
+        "book_odds": 2.1,
+        "edge": 10.4,
+        "league": "Bundesliga",
+        "result": "Win"
+      }
+    ]
   }
-  
 ]
