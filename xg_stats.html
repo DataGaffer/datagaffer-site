@@ -1064,19 +1064,54 @@ const sortedTotals = [...allTotals].sort((a, b) => a - b);
         <table style="width:90%; margin:25px auto; background:white; border-collapse:collapse;
                       font-size:18px; border:1px solid #ccc;" class="proj-table">
             <thead>
-                <tr style="background:#003f2e; color:white;">
-                    <th></th>
-                    <th>Home</th>
-                    <th>xG</th>
-                    <th>Total</th>
-                    <th>xG</th>
-                    <th>Away</th>
-                    <th></th>
-                </tr>
-            </thead>
+    <tr style="background:#003f2e; color:white;">
+        <th></th>
+        <th>Home</th>
+        <th onclick="sortProjected(2)" style="cursor:pointer;">xG</th>
+        <th onclick="sortProjected(3)" style="cursor:pointer;">Total</th>
+        <th onclick="sortProjected(4)" style="cursor:pointer;">xG</th>
+        <th>Away</th>
+        <th></th>
+    </tr>
+</thead>
             <tbody>${htmlRows}</tbody>
         </table>
     `;
+}
+// ⭐ SORT MATCHUPS TABLE — descending first + yellow header
+function sortProjected(colIndex) {
+    const table = document.querySelector(".proj-table");
+    if (!table) return;
+
+    const tbody = table.querySelector("tbody");
+    let rows = Array.from(tbody.querySelectorAll("tr"));
+
+    // Toggle direction
+    const asc = (sortConfig.column === colIndex) ? !sortConfig.asc : false;
+    sortConfig = { column: colIndex, asc };
+
+    // Numeric sort
+    rows.sort((a, b) => {
+        const aVal = parseFloat(a.children[colIndex].innerText) || 0;
+        const bVal = parseFloat(b.children[colIndex].innerText) || 0;
+        return asc ? aVal - bVal : bVal - aVal;
+    });
+
+    // Re-append rows
+    rows.forEach(r => tbody.appendChild(r));
+
+    // ⭐ Reset ALL headers to dark green
+    document.querySelectorAll(".proj-table th").forEach(th => {
+        th.style.background = "#003f2e";
+        th.style.color = "white";
+    });
+
+    // ⭐ Highlight clicked header yellow (same style as H2H / Projections)
+    const header = document.querySelector(`.proj-table th:nth-child(${colIndex + 1})`);
+    if (header) {
+        header.style.background = "#fcff55";   // yellow
+        header.style.color = "black";
+    }
 }
 
 // Load & draw charts

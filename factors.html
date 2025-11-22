@@ -61,7 +61,7 @@
 
     .toggle-buttons button {
       background: #ffffff;
-      color: #004d26;
+      color: #003f2e;
       border: none;
       padding: 10px 16px;
       margin: 4px;
@@ -74,7 +74,7 @@
     }
 
     .toggle-buttons button.active {
-      background: #004d26;
+      background: #003f2e;
       color: white;
       box-shadow: 0 0 6px rgba(0,0,0,0.25);
     }
@@ -136,11 +136,216 @@
     .L { color: #cc0000; }
     small { display: block; font-size: 10px; color: #666; margin-top: 2px; }
 
+
+    .clean-table th, .clean-table td {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+.clean-table td.highlight-col {
+  background-color: #fff7a8 !important;
+}
+
+.sorted-col {
+  background: #fffacd !important;   /* pale yellow */
+  font-weight: bold;
+}
+
+.active-header {
+  background: #fcff55 !important;   /* bright yellow */
+  color: black !important;
+}
+
+#formTable {
+  width: 85%;
+  max-width: 950px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  font-size: 18px;
+  line-height: 1.0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  margin-bottom: 40px;
+}
+
+#formTable th, #formTable td {
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#formTable th {
+  background: #003f2e;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Column widths: 1 & 4 wide / 2 & 3 narrow */
+#formTable th:nth-child(1), #formTable td:nth-child(1),
+#formTable th:nth-child(4), #formTable td:nth-child(4) {
+  width: 26%;
+}
+
+#formTable th:nth-child(2), #formTable td:nth-child(2),
+#formTable th:nth-child(3), #formTable td:nth-child(3) {
+  width: 24%;
+}
+
+/* Sorting highlight */
+#formTable .sorted-col {
+  background: #fffacd !important;
+  font-weight: bold;
+}
+
+#formTable .active-header {
+  background: #fcff55 !important;
+  color: black !important;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* Mobile */
+@media (max-width: 925px) {
+  #formTable { width: 95% !important; font-size: 12px !important; }
+  #formTable th, #formTable td {
+    padding: 4px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ---------------- MATCH PROJECTIONS TABLE CLONE FOR H2H ---------------- */
+#h2hTable {
+  width: 50%;
+  max-width: 400px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  font-size: 18px;
+  line-height: 1.0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  margin-bottom: 40px;
+}
+
+#h2hTable th, #h2hTable td {
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-weight: normal;
+}
+
+#h2hTable th {
+  background: #003f2e;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#h2hTable tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+#h2hTable .sorted-col {
+  background: #fffacd !important;
+  font-weight: bold;
+}
+
+#h2hTable .active-header {
+  background: #fcff55 !important;
+  color: black !important;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* ---------------------------------------------------
+   NEW COLUMN WIDTH RULES (MATCHES PROJECTIONS TABLE)
+   --------------------------------------------------- */
+
+/* Wide: Home Team (col 1) */
+#h2hTable th:nth-child(1),
+#h2hTable td:nth-child(1) {
+  width: 20%;
+}
+
+/* Narrow numeric columns: col 2, 3, 4 */
+#h2hTable th:nth-child(2),
+#h2hTable th:nth-child(3),
+#h2hTable th:nth-child(4),
+#h2hTable td:nth-child(2),
+#h2hTable td:nth-child(3),
+#h2hTable td:nth-child(4) {
+  width: 8%;
+}
+
+/* Wide: Away Team (col 5) */
+#h2hTable th:nth-child(5),
+#h2hTable td:nth-child(5) {
+  width: 20%;
+}
+@media (min-width: 926px) {
+  #h2hTable {
+    width: 85%;        /* or 90%, or 70% — whatever you want */
+    max-width: 1000px; /* increase/decrease */
+  }
+
+  #h2hTable th:nth-child(1),
+  #h2hTable td:nth-child(1),
+  #h2hTable th:nth-child(5),
+  #h2hTable td:nth-child(5) {
+    width: 250px;      /* wider Home/Away team columns */
+  }
+
+  #h2hTable th:nth-child(2),
+  #h2hTable td:nth-child(2),
+  #h2hTable th:nth-child(3),
+  #h2hTable td:nth-child(3),
+  #h2hTable th:nth-child(4),
+  #h2hTable td:nth-child(4) {
+    width: 80px;       /* narrow the middle three columns */
+  }
+}
+
+/* ----- MOBILE VERSION (optional but recommended) ----- */
+@media (max-width: 925px) {
+  #h2hTable {
+    width: 95% !important;
+    font-size: 12px !important;
+    margin-bottom: 25px;
+    table-layout: fixed;
+    line-height: 15px;
+  }
+
+  #h2hTable th, #h2hTable td {
+    padding: 4px !important;
+    font-size: 12px !important;
+    word-wrap: break-word;
+  }
+
+  /* Mobile: slightly adjust widths */
+  #h2hTable th:nth-child(1),
+  #h2hTable td:nth-child(1),
+  #h2hTable th:nth-child(5),
+  #h2hTable td:nth-child(5) {
+    width: 30% !important;
+  }
+
+  #h2hTable th:nth-child(2),
+  #h2hTable th:nth-child(3),
+  #h2hTable th:nth-child(4),
+  #h2hTable td:nth-child(2),
+  #h2hTable td:nth-child(3),
+  #h2hTable td:nth-child(4) {
+    width: 15% !important;
+  }
+}
+
+
     /* --- Desktop: make table more compact like other pages --- */
 @media (min-width: 901px) {
   table {
-    width: 65% !important;          /* narrower, matches your Projections layout */
-    max-width: 950px !important;
+    width: 50% !important;          /* narrower, matches your Projections layout */
+    max-width: 750px !important;
     margin: 25px auto 40px auto !important;
     font-size: 15px !important;
   }
@@ -198,140 +403,168 @@
   </div>
 
   <section id="h2hSection" class="table-section active">
-    <table id="h2h-table">
-      <thead>
-        <tr>
-          <th>Matchup</th>
-          <th>Home</th>
-          <th>Away</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody><tr><td colspan="4">Loading...</td></tr></tbody>
-    </table>
-  </section>
+  <table id="h2hTable">
+    <thead>
+      <tr>
+        <th>Home Team</th>
+        <th class="sortable" onclick="sortH2H(1, this)">H2H</th>
+        <th class="sortable" onclick="sortH2H(2, this)">Total</th>
+        <th class="sortable" onclick="sortH2H(3, this)">H2H</th>
+        <th>Away Team</th>
+      </tr>
+    </thead>
+    <tbody id="h2hBody"></tbody>
+  </table>
+</section>
 
   <section id="formSection" class="table-section">
-    <table id="form-table">
-      <thead>
-        <tr>
-          <th>Matchup</th>
-          <th>Home</th>
-          <th>Away</th>
-        </tr>
-      </thead>
-      <tbody><tr><td colspan="3">Loading...</td></tr></tbody>
-    </table>
-  </section>
+  <table id="formTable">
+    <thead>
+      <tr>
+        <th>Home Team</th>
+        <th>Home Form</th>
+        <th>Away Form</th>
+        <th>Away Team</th>
+      </tr>
+    </thead>
+    <tbody id="formBody">
+      <tr><td colspan="4">Loading...</td></tr>
+    </tbody>
+  </table>
+</section>
 
-  <script>
-  document.getElementById("btnH2H").addEventListener("click", () => showTable("h2h"));
-  document.getElementById("btnForm").addEventListener("click", () => showTable("form"));
+ <script>
+/* ---------------- BUTTON SWITCHING ---------------- */
+document.getElementById("btnH2H").addEventListener("click", () => showTable("h2h"));
+document.getElementById("btnForm").addEventListener("click", () => showTable("form"));
 
-  function showTable(type) {
-    document.querySelectorAll(".table-section").forEach(t => t.classList.remove("active"));
-    document.querySelectorAll(".toggle-buttons button").forEach(b => b.classList.remove("active"));
+function showTable(type) {
+  document.querySelectorAll(".table-section").forEach(t => t.classList.remove("active"));
+  document.querySelectorAll(".toggle-buttons button").forEach(b => b.classList.remove("active"));
 
-    if (type === "h2h") {
-      document.getElementById("h2hSection").classList.add("active");
-      document.getElementById("btnH2H").classList.add("active");
-    } else {
-      document.getElementById("formSection").classList.add("active");
-      document.getElementById("btnForm").classList.add("active");
-    }
+  if (type === "h2h") {
+    document.getElementById("h2hSection").classList.add("active");
+    document.getElementById("btnH2H").classList.add("active");
+  } else {
+    document.getElementById("formSection").classList.add("active");
+    document.getElementById("btnForm").classList.add("active");
   }
+}
 
-  async function loadTables() {
+/* ---------------- LOAD TABLE DATA ---------------- */
+async function loadTables() {
   try {
     const res = await fetch("h2h_form_combined.json");
     const json = await res.json();
     const data = Array.isArray(json) ? json : json.matches;
 
-    const h2hBody = document.querySelector("#h2h-table tbody");
-    const formBody = document.querySelector("#form-table tbody");
+    const h2hBody = document.getElementById("h2hBody");
+    const formBody = document.getElementById("formBody");
+
     h2hBody.innerHTML = "";
     formBody.innerHTML = "";
 
-    data.forEach(match => {
-      h2hBody.innerHTML += `
+    /* ---------------- BUILD H2H TABLE ---------------- */
+    h2hBody.innerHTML = data.map(m => {
+      const hg = m.h2h?.avg_home_goals ?? "-";
+      const ag = m.h2h?.avg_away_goals ?? "-";
+      const total = (hg !== "-" && ag !== "-") ? (hg + ag).toFixed(2) : "-";
+
+      return `
         <tr>
-          <td class="match-cell">${match.home_name} vs ${match.away_name}</td>
-          <td>${match.h2h?.avg_home_goals ?? "-"}</td>
-          <td>${match.h2h?.avg_away_goals ?? "-"}</td>
-          <td>${match.h2h?.avg_home_goals && match.h2h?.avg_away_goals
-            ? ((match.h2h.avg_home_goals + match.h2h.avg_away_goals).toFixed(2))
-            : "-"}</td>
+          <td>${m.home_name}</td>
+          <td>${hg}</td>
+          <td>${total}</td>
+          <td>${ag}</td>
+          <td>${m.away_name}</td>
         </tr>`;
+    }).join("");
 
-      const formatForm = str =>
-        [...(str || "")].map(c => `<span class="${c}">${c}</span>`).join("");
+    /* ---------------- BUILD FORM TABLE ---------------- */
+    const formatForm = s =>
+      [...(s || "")].map(c => `<span class="${c}">${c}</span>`).join("");
 
-      formBody.innerHTML += `
-        <tr>
-          <td class="match-cell">${match.home_name} vs ${match.away_name}</td>
-          <td class="form-cell">${formatForm(match.home_form_last5)}<small>${match.home_form_goals ?? "-"} GPG</small></td>
-          <td class="form-cell">${formatForm(match.away_form_last5)}<small>${match.away_form_goals ?? "-"} GPG</small></td>
-        </tr>`;
-    });
+    formBody.innerHTML = data.map(m => `
+      <tr>
+        <td>${m.home_name}</td>
+        <td class="form-cell">${formatForm(m.home_form_last5)} <small>${m.home_form_goals ?? "-"} GPG</small></td>
+        <td class="form-cell">${formatForm(m.away_form_last5)} <small>${m.away_form_goals ?? "-"} GPG</small></td>
+        <td>${m.away_name}</td>
+      </tr>
+    `).join("");
 
-    const searchInput = document.getElementById("searchInput");
-    searchInput.addEventListener("input", () => {
+    /* SEARCH */
+    document.getElementById("searchInput").addEventListener("input", () => {
       const filter = searchInput.value.toLowerCase();
       document.querySelectorAll("tbody tr").forEach(row => {
-        row.style.display = row.textContent.toLowerCase().includes(filter)
-          ? ""
-          : "none";
+        row.style.display = row.textContent.toLowerCase().includes(filter) ? "" : "none";
       });
     });
 
-    setupSorting(document.getElementById("h2h-table"));
-    setupSorting(document.getElementById("form-table"));
+    /* Enable sorting on BOTH tables */
+    setupSorting("h2hTable", true);   // numeric
+    setupSorting("formTable", false); // alphabetical + form
 
   } catch (err) {
     console.error("Error loading JSON:", err);
   }
 }
 
+/* ---------------- SHARED SORTING (works for H2H & Form) ---------------- */
+let sortState = {};
 
-  let sortDirection = {};
+function setupSorting(tableId, numericMode) {
+  const table = document.getElementById(tableId);
+  const headers = table.querySelectorAll("th");
 
-  function setupSorting(table) {
-    const headers = table.querySelectorAll("th");
-    headers.forEach((th, index) => {
-      th.addEventListener("click", () => sortTable(index, table));
-    });
-  }
+  headers.forEach((th, columnIndex) => {
+    th.addEventListener("click", () =>
+      sortColumn(tableId, columnIndex, th, numericMode)
+    );
+  });
+}
 
-  function sortTable(columnIndex, table) {
-    const tbody = table.querySelector("tbody");
-    const rows = Array.from(tbody.querySelectorAll("tr"));
-    const isNumeric = columnIndex > 0;
-    const currentDir = sortDirection[columnIndex] || "asc";
-    const nextDir = currentDir === "asc" ? "desc" : "asc";
-    sortDirection[columnIndex] = nextDir;
+function sortColumn(tableId, colIndex, header, numericMode) {
+  const table = document.getElementById(tableId);
+  const tbody = table.querySelector("tbody");
+  let rows = Array.from(tbody.querySelectorAll("tr"));
 
-    rows.sort((a, b) => {
-      const x = a.children[columnIndex].innerText.replace(/[^\d.-]/g, "") || a.children[columnIndex].innerText;
-      const y = b.children[columnIndex].innerText.replace(/[^\d.-]/g, "") || b.children[columnIndex].innerText;
-      if (isNumeric) {
-        const numX = parseFloat(x) || 0;
-        const numY = parseFloat(y) || 0;
-        return nextDir === "asc" ? numX - numY : numY - numX;
-      } else {
-        return nextDir === "asc" ? x.localeCompare(y) : y.localeCompare(x);
-      }
-    });
+  sortState[tableId] ??= {};
+  // default = DESCENDING (best first)
+if (sortState[tableId][colIndex] === undefined) {
+    sortState[tableId][colIndex] = false;  // false = descending
+} else {
+    sortState[tableId][colIndex] = !sortState[tableId][colIndex]; 
+}
+const asc = sortState[tableId][colIndex];
 
-    tbody.innerHTML = "";
-    rows.forEach(r => tbody.appendChild(r));
+  rows.sort((a, b) => {
+    let A = a.children[colIndex].innerText.trim();
+    let B = b.children[colIndex].innerText.trim();
 
-    table.querySelectorAll("td").forEach(cell => cell.classList.remove("highlight-col"));
-    tbody.querySelectorAll(`td:nth-child(${columnIndex + 1})`)
-         .forEach(cell => cell.classList.add("highlight-col"));
-  }
+    if (numericMode) {
+      const nA = parseFloat(A) || 0;
+      const nB = parseFloat(B) || 0;
+      return asc ? nA - nB : nB - nA;
+    } else {
+      return asc ? A.localeCompare(B) : B.localeCompare(A);
+    }
+  });
 
-  loadTables();
-  </script>
+  tbody.innerHTML = "";
+  rows.forEach(r => tbody.appendChild(r));
+
+  /* Highlight */
+  table.querySelectorAll("td").forEach(td => td.classList.remove("sorted-col"));
+  table.querySelectorAll("th").forEach(th => th.classList.remove("active-header"));
+
+  rows.forEach(r => r.children[colIndex].classList.add("sorted-col"));
+  header.classList.add("active-header");
+}
+
+/* ---------------- INITIAL LOAD ---------------- */
+loadTables();
+</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
