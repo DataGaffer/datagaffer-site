@@ -1,9 +1,0 @@
-# Don't upload secrets
-.env
-
-# Don't upload Python caches
-__pycache__/
-*.pyc
-
-# Don't upload virtual environments
-venv/
